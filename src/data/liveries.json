@@ -2238,89 +2238,95 @@
       "confidence": "high"
     },
     "F2004": {
-      "base": "#d8140f",
+      "base": "#d10a12",
       "finish": "gloss",
       "zones": {
+        "frontWing": "#ffffff",
         "rearWing": "#ffffff",
-        "frontWing": "#f4f4f4",
-        "wheels": "#b8b8b8",
+        "wheels": "#b8bcc2",
         "floor": "#1a1a1a"
       },
       "stripes": [
         {
           "zone": "engineCover",
           "color": "#ffffff",
-          "note": "large white Marlboro panel on the engine-cover fin behind the airbox"
+          "note": "large white Marlboro-chevron panel on the upper engine cover/fin behind the airbox (black 'Marlboro' on it at tobacco-permitted races, blank white otherwise)"
         },
         {
           "zone": "sidepods",
           "color": "#ffffff",
-          "note": "white bargeboard wedge low at the sidepod front with a red pinstripe"
+          "note": "white flash on the lower leading edge of the sidepod / turning-vane area, with a thin red pinstripe"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "white upper panel on each rear-wing endplate carrying Shell/Bridgestone/AMD"
         }
       ],
       "raceNumbers": {
         "michael_schumacher": 1
       },
-      "numberNote": "Schumacher #1 all season.",
+      "numberNote": "Schumacher #1 all of 2004 (Barrichello #2). Small white digit on the rear of the nose top.",
       "numberSlot": "noseTop",
       "shield": [
-        "cockpitSide",
-        "noseSide"
+        "sidepodSide"
       ],
       "decals": [
         {
           "slot": "engineCoverSide",
           "text": "Marlboro",
-          "color": "#111111",
+          "color": "#000000",
           "background": "#ffffff"
         },
         {
           "slot": "rearWingTop",
           "text": "Marlboro",
-          "color": "#111111",
+          "color": "#000000",
           "background": "#ffffff"
         },
         {
           "slot": "sidepodSide",
-          "text": "vodafone",
+          "text": "Vodafone",
           "color": "#ffffff",
-          "background": "#e60000"
+          "background": null
         },
         {
           "slot": "sidepodSide",
           "text": "Shell",
           "color": "#dd1d21",
-          "background": "#fbce07"
+          "background": "#ffd500"
         },
         {
           "slot": "frontWingEndplate",
-          "text": "vodafone",
-          "color": "#ffffff",
-          "background": null
-        },
-        {
-          "slot": "cockpitSide",
-          "text": "vodafone",
+          "text": "Vodafone",
           "color": "#ffffff",
           "background": null
         },
         {
           "slot": "rearWingEndplate",
-          "text": "V-Power",
+          "text": "Shell V-Power",
           "color": "#dd1d21",
           "background": "#ffffff"
         },
         {
           "slot": "rearWingEndplate",
           "text": "AMD",
-          "color": "#111111",
+          "color": "#000000",
           "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Fiat",
+          "color": "#ffffff",
+          "background": "#1c3f94"
         }
       ],
-      "tobaccoNote": "Marlboro wordmark on engine-cover fin and rear-wing top at 14 of 18 rounds; removed (plain white panels, e.g. Indianapolis photo) at the Canadian, French, British and United States GPs. Chose Marlboro version. At Spa a 700th-GP logo was carried behind the seat and on the sidepods.",
+      "tobaccoNote": "Black 'Marlboro' on the white engine-cover chevron and on the white rear-wing upper element at most rounds: Marlboro was used except in Canada, France, Britain and the USA, so 14 of 18 races. A Monza 2004 photo confirms it. The chevron was blank white at the 4 banned races (Indianapolis 2004 photo). Chose the Marlboro wordmark. Rear-wing endplates carried Shell V-Power, Bridgestone, AMD and Vodafone.",
       "sources": [
         "https://en.wikipedia.org/wiki/Ferrari_F2004",
-        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_2004.jpg"
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_2004.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fale_F1_Monza_2004_43.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fale_F1_Monza_2004_29.jpg"
       ],
       "confidence": "high"
     },
@@ -2504,43 +2510,48 @@
       "confidence": "high"
     },
     "248 F1": {
-      "base": "#d8140f",
+      "base": "#d10a12",
       "finish": "gloss",
       "zones": {
+        "frontWing": "#ffffff",
         "rearWing": "#ffffff",
-        "frontWing": "#e8e8e8",
-        "wheels": "#a9a9a9",
+        "wheels": "#9a9ea4",
         "floor": "#1a1a1a"
       },
       "stripes": [
         {
           "zone": "engineCover",
           "color": "#ffffff",
-          "note": "white panel on the engine-cover fin behind the airbox (blank where Marlboro was banned)"
+          "note": "white panel on the upper engine cover/fin carrying red vertical 'barcode' bars at most rounds"
         },
         {
           "zone": "rearWing",
-          "color": "#dd1d1d",
-          "note": "row of red bars/teeth along the white rear-wing top in no-tobacco races"
+          "color": "#d10a12",
+          "note": "red barcode bars across the white rear-wing upper element"
         },
         {
-          "zone": "noseTop",
+          "zone": "sidepods",
           "color": "#ffffff",
-          "note": "white barcode-like bars on the nose top ahead of the cockpit in no-tobacco races"
+          "note": "white flash on the lower leading edge of the sidepod/turning vane with a red pinstripe"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "white upper panel on the rear-wing endplates (Shell V-Power, Bridgestone, AMD)"
         }
       ],
       "raceNumbers": {
         "michael_schumacher": 5
       },
-      "numberNote": "Schumacher #5 (Massa #6); number in black on a white oval on the nose top.",
+      "numberNote": "Schumacher #5, Massa #6 (Ferrari were 3rd in the 2005 constructors'). The number was a black digit on a white disc on the nose top (Monaco 2006 photo).",
       "numberSlot": "noseTop",
       "shield": [
-        "cockpitSide"
+        "sidepodSide"
       ],
       "decals": [
         {
-          "slot": "cockpitSide",
-          "text": "vodafone",
+          "slot": "sidepodSide",
+          "text": "Vodafone",
           "color": "#ffffff",
           "background": null
         },
@@ -2548,91 +2559,99 @@
           "slot": "sidepodSide",
           "text": "Shell",
           "color": "#dd1d21",
-          "background": "#fbce07"
+          "background": "#ffd500"
         },
         {
           "slot": "frontWingEndplate",
-          "text": "vodafone",
+          "text": "Vodafone",
           "color": "#ffffff",
           "background": null
         },
         {
-          "slot": "noseSide",
-          "text": "vodafone",
-          "color": "#ffffff",
-          "background": null
-        },
-        {
-          "slot": "noseTop",
-          "text": "FIAT",
+          "slot": "sidepodSide",
+          "text": "Acer",
           "color": "#ffffff",
           "background": null
         },
         {
           "slot": "rearWingEndplate",
-          "text": "V-Power",
+          "text": "Shell V-Power",
           "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Bridgestone",
+          "color": "#000000",
           "background": "#ffffff"
         },
         {
           "slot": "rearWingEndplate",
           "text": "AMD",
-          "color": "#111111",
+          "color": "#000000",
           "background": "#ffffff"
         },
         {
-          "slot": "noseTop",
-          "text": "Shell",
-          "color": "#dd1d21",
-          "background": "#fbce07"
+          "slot": "engineCoverSide",
+          "text": "Fiat",
+          "color": "#ffffff",
+          "background": null
         }
       ],
-      "tobaccoNote": "Marlboro wordmarks were shown only at 6 of 18 rounds (Bahrain, Malaysia, Australia, Monaco, China, Japan); removed at San Marino, Europe, Spain, Britain, Canada, USA, France, Germany, Hungary, Turkey, Italy and Brazil, where the white panels were left blank or carried red/white bars. Chose the no-wordmark version (most rounds, as in the Brazil photo).",
+      "tobaccoNote": "The Marlboro wordmark (black on the white engine cover and rear-wing top, and on the nose) appeared only where allowed: Bahrain, Malaysia, Australia, Monaco, China and Japan (6 races). At the other 12 rounds (San Marino, Europe, Spain, Britain, Canada, USA, France, Germany, Hungary, Turkey, Italy, Brazil) a red-on-white barcode replaced it (Hungary, Britain and Indianapolis 2006 photos). Chose the barcode, which raced at most rounds. Martini joined in 2006, but photos did not confirm where its logo sat, so it is left out.",
       "sources": [
         "https://en.wikipedia.org/wiki/Ferrari_248_F1",
-        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_248F1_2006_Brazil.jpg"
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Hungaroring_2006.jpg",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_-_Ferrari_248_F1_-_Monaco_Grand_Prix.jpg",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Australia_2006.jpg",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2006_Britain.jpg",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2006_Indianapolis.jpg"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     "F2007": {
-      "base": "#e8200e",
+      "base": "#bb0e16",
       "finish": "gloss",
       "zones": {
-        "rearWing": "#ffffff",
-        "wheels": "#2a2a2a",
+        "wheels": "#2e2f33",
         "floor": "#1a1a1a"
       },
       "stripes": [
         {
           "zone": "engineCover",
           "color": "#ffffff",
-          "note": "white 'barcode' (vertical white bars on red) on the engine-cover fin behind the airbox"
+          "note": "small white barcode (white bars on red) high on the engine-cover fin"
         },
         {
           "zone": "rearWing",
-          "color": "#dd1d1d",
-          "note": "red barcode bars across the white rear-wing top"
+          "color": "#ffffff",
+          "note": "white barcode bars across the top of the red rear-wing upper element"
         },
         {
-          "zone": "sidepods",
+          "zone": "cockpitSurround",
           "color": "#ffffff",
-          "note": "thin white pinstripes low along the sidepod flanks"
+          "note": "thin white barcode strip along the top edge of the monocoque ahead of the cockpit"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "white sponsor boxes (Shell V-Power, Bridgestone, AMD) on red endplates"
         }
       ],
       "raceNumbers": {
         "raikkonen": 6
       },
-      "numberNote": "Raikkonen #6 (Massa #5) in his title-winning season.",
+      "numberNote": "Raikkonen #6, Massa #5 (Ferrari were 2nd in the 2006 constructors'). Small white number on the nose top.",
       "numberSlot": "noseTop",
       "shield": [
-        "cockpitSide"
+        "sidepodSide"
       ],
       "decals": [
         {
           "slot": "sidepodSide",
           "text": "Shell",
           "color": "#dd1d21",
-          "background": "#fbce07"
+          "background": "#ffd500"
         },
         {
           "slot": "frontWingEndplate",
@@ -2641,47 +2660,50 @@
           "background": null
         },
         {
+          "slot": "sidepodSide",
+          "text": "Acer",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Mubadala",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
           "slot": "rearWingEndplate",
-          "text": "V-Power",
+          "text": "Shell V-Power",
           "color": "#dd1d21",
           "background": "#ffffff"
         },
         {
           "slot": "rearWingEndplate",
           "text": "Bridgestone",
-          "color": "#ffffff",
-          "background": null
+          "color": "#000000",
+          "background": "#ffffff"
         },
         {
           "slot": "rearWingEndplate",
           "text": "AMD",
-          "color": "#111111",
+          "color": "#000000",
           "background": "#ffffff"
         },
         {
-          "slot": "sidepodSide",
-          "text": "acer",
+          "slot": "engineCoverSide",
+          "text": "Fiat",
           "color": "#ffffff",
           "background": null
-        },
-        {
-          "slot": "noseSide",
-          "text": "FIAT",
-          "color": "#ffffff",
-          "background": null
-        },
-        {
-          "slot": "noseTop",
-          "text": "Shell",
-          "color": "#dd1d21",
-          "background": "#fbce07"
         }
       ],
-      "tobaccoNote": "Red/white barcode on engine-cover fin and rear-wing top at most rounds; actual Marlboro wordmarks only at Bahrain, Monaco and China. Chose the barcode version. Vodafone had left for McLaren; noticeably less white than 2000-06.",
+      "tobaccoNote": "The Marlboro wordmark was shown openly only at Bahrain, Monaco and China (3 of 17 races). A white barcode on the engine cover and rear wing ran at the other 14, so chose the barcode. Colour: the first 4 rounds used a lighter, more orange 'Marlboro' red (about #e0261e, seen in a Malaysia 2007 photo). From Monaco onward (13 of 17 races, including the title-deciding Brazil race) the car used a darker metallic red, which is the base here. Vodafone had left for McLaren, and Alice (Telecom Italia) took its place on the front-wing endplates.",
       "sources": [
         "https://en.wikipedia.org/wiki/Ferrari_F2007",
-        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_2007_Britain_2.jpg",
-        "https://f1colours.sebpatrick.co.uk/news/barcode-battlers/"
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_2007_Malaysia.jpg",
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_2007_Belgium.jpg",
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_won_2007_Brazil_GP_side.jpg",
+        "https://commons.wikimedia.org/wiki/File:2007_Monaco_Grand_Prix_-_Kimi_Raikkonen_at_Anthony_Nogh%C3%A8s.jpg",
+        "https://formula143.org/2020/10/15/2007-ferrari-f2007-raikkonen/"
       ],
       "confidence": "high"
     },
@@ -2857,45 +2879,54 @@
       "confidence": "high"
     },
     "F10": {
-      "base": "#dc1a10",
+      "base": "#c8121c",
       "finish": "gloss",
       "zones": {
+        "frontWing": "#ffffff",
         "rearWing": "#ffffff",
-        "rearWingEndplates": "#ffffff",
-        "frontWing": "#eeeeee",
-        "wheels": "#b0b0b0",
+        "wheels": "#a8acb2",
         "floor": "#1a1a1a"
       },
       "stripes": [
         {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "upper half of each rear-wing endplate white (Shell V-Power, Santander), lower half red (AMD, black Etihad Airways box)"
+        },
+        {
           "zone": "engineCover",
           "color": "#ffffff",
-          "note": "large white panel on the engine-cover fin; carried a red/white/black barcode at the first four rounds, a plain white rectangle from Spain onwards"
+          "note": "thin white rectangular outline on the red engine-cover fin (replaced the barcode from Spain onward)"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white lower bargeboard/sidepod-front panel"
         }
       ],
       "raceNumbers": {
         "alonso": 8
       },
-      "numberNote": "Alonso #8 (Massa #7); white number on the nose top.",
+      "numberNote": "Alonso #8, Massa #7. Small white number on the nose top.",
       "numberSlot": "noseTop",
       "shield": [
-        "cockpitSide"
+        "sidepodSide"
       ],
       "decals": [
         {
           "slot": "rearWingTop",
           "text": "Santander",
-          "color": "#ffffff",
-          "background": "#dd0000"
-        },
-        {
-          "slot": "rearWingEndplate",
-          "text": "Santander",
-          "color": "#dd0000",
+          "color": "#ec0000",
           "background": "#ffffff"
         },
         {
-          "slot": "cockpitSide",
+          "slot": "sidepodSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
           "text": "Santander",
           "color": "#ffffff",
           "background": null
@@ -2904,13 +2935,7 @@
           "slot": "sidepodSide",
           "text": "Shell",
           "color": "#dd1d21",
-          "background": "#fbce07"
-        },
-        {
-          "slot": "sidepodSide",
-          "text": "acer",
-          "color": "#ffffff",
-          "background": null
+          "background": "#ffd500"
         },
         {
           "slot": "noseSide",
@@ -2919,25 +2944,37 @@
           "background": null
         },
         {
-          "slot": "rearWingEndplate",
-          "text": "AMD",
-          "color": "#111111",
-          "background": "#ffffff"
-        },
-        {
-          "slot": "noseSide",
-          "text": "FIAT",
+          "slot": "sidepodSide",
+          "text": "Acer",
           "color": "#ffffff",
           "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Etihad Airways",
+          "color": "#ffffff",
+          "background": "#000000"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#000000",
+          "background": "#ffffff"
         }
       ],
-      "tobaccoNote": "Barcode on the engine cover only at the first four rounds (Bahrain, Australia, Malaysia, China); removed from the Spanish GP onwards and replaced by a plain white rectangle. Chose the plain-white version (15 of 19 rounds). Santander (new partner) on rear wing.",
+      "tobaccoNote": "A barcode (white panel with red bars on the engine-cover fin) ran at the first 4 rounds (Bahrain, Australia, Malaysia, China). From the Spanish GP on (15 of 19 rounds) it was replaced by plain red with a white box outline, after the controversy over subliminal advertising. Chose the post-Spain plain red with the white outline. No Marlboro wordmark raced. The new sponsor Santander (red and white) brought white front and rear wings. Turkey 2010 carried an '800 GP' logo on the engine cover.",
       "sources": [
         "https://en.wikipedia.org/wiki/Ferrari_F10",
-        "https://commons.wikimedia.org/wiki/File:Ferrari_Bahrain_2010.jpg",
-        "https://www.grandprix.com/news/ferrari-removes-barcode-livery.html"
+        "https://www.racefans.net/2010/01/28/ferrari-2010-f1-car-pictures/",
+        "https://www.racefans.net/2010/05/06/ferrari-change-marlboro-barcode-design/",
+        "https://adamcooperf1.com/2010/05/06/ferrari-drops-its-barcode-livery/",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2010_Bahrain.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2010_Spain.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2010_Europe.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F10_rear_wing_2017_Museo_Fernando_Alonso.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F10_front-right_2017_Museo_Fernando_Alonso.jpg"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     "Ferrari 150° Italia": {
       "base": "#d00c14",
