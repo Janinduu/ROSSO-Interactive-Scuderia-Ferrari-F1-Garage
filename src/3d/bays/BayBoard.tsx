@@ -82,6 +82,7 @@ export function BayBoard({
       chapter,
       portrait: media.portrait,
       focal: record?.focalPoint ?? [0.5, 0.3],
+      zoom: record?.zoom,
       emblem: media.emblem,
       state,
     });

@@ -1,0 +1,326 @@
+{
+  "ascari": {
+    "src": "/portraits/ascari.jpg",
+    "alt": "Alberto Ascari in an open-collared shirt, surrounded by winner's flowers after winning the 1952 Dutch Grand Prix at Zandvoort for Ferrari",
+    "credit": {
+      "creator": "Joop van Bilsen / Anefo",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins,_Bestanddeelnr_905-2688_(cropped).jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribution": "Photo: Joop van Bilsen / Anefo / Wikimedia Commons, CC0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins%2C_Bestanddeelnr_905-2688_%28cropped%29.jpg"
+    },
+    "year": 1952,
+    "ferrariContext": "period",
+    "focalPoint": [
+      0.55,
+      0.35
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "fangio": {
+    "src": "/portraits/fangio.jpg",
+    "alt": "Juan Manuel Fangio in a leather racing helmet with goggles pushed up, face streaked with track grime, around 1952",
+    "credit": {
+      "creator": "Unknown author",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_(circa_1952).jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "attribution": "Photo: Unknown author / Wikimedia Commons, Public domain",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/Juan_Manuel_Fangio_%28circa_1952%29.jpg"
+    },
+    "year": 1952,
+    "ferrariContext": "none",
+    "focalPoint": [
+      0.52,
+      0.44
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "hawthorn": {
+    "src": "/portraits/hawthorn.jpg",
+    "alt": "Mike Hawthorn in a helmet, seated in a red Ferrari surrounded by mechanics at the 500 Miglia di Monza, 29 June 1958",
+    "credit": {
+      "creator": "Peter Coltrin",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:1958-06-29_500_Miglia_Monza_Ferrari_312_Hawthorne.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "attribution": "Photo: Peter Coltrin / Wikimedia Commons, Public domain",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/1958-06-29_500_Miglia_Monza_Ferrari_312_Hawthorne.jpg"
+    },
+    "year": 1958,
+    "ferrariContext": "car",
+    "focalPoint": [
+      0.52,
+      0.3
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "phil_hill": {
+    "src": "/portraits/phil_hill.jpg",
+    "alt": "El Gráfico magazine cover showing Phil Hill (left, in helmet) and Cliff Allison with victory garlands after winning the 1960 1000 km of Buenos Aires for Ferrari",
+    "credit": {
+      "creator": "El Gráfico",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phil_Hill_y_Cliff_Allison_-_El_Gr%C3%A1fico_2107.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "attribution": "Photo: El Gráfico / Wikimedia Commons, Public domain",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Phil_Hill_y_Cliff_Allison_-_El_Gr%C3%A1fico_2107.jpg"
+    },
+    "year": 1960,
+    "ferrariContext": "period",
+    "focalPoint": [
+      0.28,
+      0.2
+    ],
+    "downloaded": "2026-09-24",
+    "zoom": 1.4
+  },
+  "surtees": {
+    "src": "/portraits/surtees.jpg",
+    "alt": "John Surtees in a quilted jacket, smiling beside his new Ferrari during practice for the 1964 Dutch Grand Prix at Zandvoort",
+    "credit": {
+      "creator": "Harry Pot / Anefo",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Training_Grand_Prix_te_Zandvoort,_John_Surtees_bij_zijn_nieuwe_wagen,_Bestanddeelnr_916-4625_(cropped).jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribution": "Photo: Harry Pot / Anefo / Wikimedia Commons, CC0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Training_Grand_Prix_te_Zandvoort%2C_John_Surtees_bij_zijn_nieuwe_wagen%2C_Bestanddeelnr_916-4625_%28cropped%29.jpg"
+    },
+    "year": 1964,
+    "ferrariContext": "car",
+    "focalPoint": [
+      0.6,
+      0.18
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "lauda": {
+    "src": "/portraits/lauda.jpg",
+    "alt": "Niki Lauda in Ferrari racing overalls with Ferrari and sponsor patches during practice for the 1975 Dutch Grand Prix at Zandvoort",
+    "credit": {
+      "creator": "Bert Verhoeff for Anefo",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niki_Lauda,_Bestanddeelnr_928-0040.jpg",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "attribution": "Photo: Bert Verhoeff for Anefo / Wikimedia Commons, CC0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Niki_Lauda%2C_Bestanddeelnr_928-0040.jpg"
+    },
+    "year": 1975,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.46,
+      0.33
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "gilles_villeneuve": {
+    "src": "/portraits/gilles_villeneuve.jpg",
+    "alt": "Gilles Villeneuve in white racing overalls sitting on the sidepod of his Ferrari 312T4 (No. 12) at Imola in 1979",
+    "credit": {
+      "creator": "ideogibs",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_1979_Imola.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "attribution": "Photo: ideogibs / Wikimedia Commons, CC BY-SA 2.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/Gilles_Villeneuve_1979_Imola.jpg"
+    },
+    "year": 1979,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.27,
+      0.14
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "scheckter": {
+    "src": "/portraits/scheckter.jpg",
+    "alt": "Jody Scheckter in white Ferrari racing overalls at the 1979 Monaco Grand Prix, which he won",
+    "credit": {
+      "creator": "PH1 John Lucas, U.S. Navy",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_during_the_1979_Monaco_Grand_Prix.jpg",
+      "license": "Public domain",
+      "licenseUrl": null,
+      "attribution": "Photo: PH1 John Lucas, U.S. Navy / Wikimedia Commons, Public domain",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jody_Scheckter_during_the_1979_Monaco_Grand_Prix.jpg"
+    },
+    "year": 1979,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.5,
+      0.24
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "mansell": {
+    "src": "/portraits/mansell.jpg",
+    "alt": "Nigel Mansell in red Ferrari overalls and a cap, waving on the podium after finishing third at the 1989 Belgian Grand Prix, Spa-Francorchamps",
+    "credit": {
+      "creator": "madagascarica from Verneuil Grand, France",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nigel_Mansell_1989_Belgian_GP_podium.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "attribution": "Photo: madagascarica from Verneuil Grand, France / Wikimedia Commons, CC BY 2.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Nigel_Mansell_1989_Belgian_GP_podium.jpg"
+    },
+    "year": 1989,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.53,
+      0.33
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "prost": {
+    "src": "/portraits/prost.jpg",
+    "alt": "Alain Prost, helmet on and visor raised, seated in his Ferrari 641 (No. 1) at the 1990 United States Grand Prix in Phoenix",
+    "credit": {
+      "creator": "Stuart Seeger from College Station, Texas, USA",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alain_Prost,_1990_USA_GP_Phoenix.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "attribution": "Photo: Stuart Seeger from College Station, Texas, USA / Wikimedia Commons, CC BY 2.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Alain_Prost%2C_1990_USA_GP_Phoenix.jpg"
+    },
+    "year": 1990,
+    "ferrariContext": "car",
+    "focalPoint": [
+      0.47,
+      0.34
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "michael_schumacher": {
+    "src": "/portraits/michael_schumacher.jpg",
+    "alt": "Michael Schumacher in red-and-white Ferrari racing overalls and cap at the 2005 United States Grand Prix, Indianapolis",
+    "credit": {
+      "creator": "Original: Ryosuke Yagi / Derivative work: Danyele",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_after_2005_United_States_GP_(20413937)_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "attribution": "Photo: Original: Ryosuke Yagi / Derivative work: Danyele / Wikimedia Commons, CC BY 2.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Michael_Schumacher_after_2005_United_States_GP_%2820413937%29_%28cropped%29.jpg"
+    },
+    "year": 2005,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.45,
+      0.16
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "raikkonen": {
+    "src": "/portraits/raikkonen.jpg",
+    "alt": "Kimi Räikkönen in Ferrari racing overalls on the podium at the 2007 British Grand Prix, Silverstone",
+    "credit": {
+      "creator": "Vtornet",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_(cropped).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "attribution": "Photo: Vtornet / Wikimedia Commons, CC BY-SA 3.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Kimi_Raikkonen_%28cropped%29.jpg"
+    },
+    "year": 2007,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.47,
+      0.15
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "alonso": {
+    "src": "/portraits/alonso.jpg",
+    "alt": "Fernando Alonso in a Ferrari team jacket and cap, waving to the crowd at the 2011 Canadian Grand Prix",
+    "credit": {
+      "creator": "Mark McArdle",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AlonsoCanada2011.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "attribution": "Photo: Mark McArdle / Wikimedia Commons, CC BY-SA 2.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/AlonsoCanada2011.jpg"
+    },
+    "year": 2011,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.48,
+      0.4
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "vettel": {
+    "src": "/portraits/vettel.jpg",
+    "alt": "Sebastian Vettel in Ferrari racing overalls, fist raised on the podium after winning the 2015 Malaysian Grand Prix",
+    "credit": {
+      "creator": "Morio",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_2015_Malaysia_podium_1.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 4.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Sebastian_Vettel_2015_Malaysia_podium_1.jpg"
+    },
+    "year": 2015,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.6,
+      0.31
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "sainz": {
+    "src": "/portraits/sainz.jpg",
+    "alt": "Carlos Sainz in Ferrari team kit and cap giving a thumbs-up at a driver event ahead of the 2022 Austrian Grand Prix",
+    "credit": {
+      "creator": "Dorian Schuster (XaviYuahanda)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Formula1Gabelhofen2022_(04).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "attribution": "Photo: Dorian Schuster (XaviYuahanda) / Wikimedia Commons, CC BY-SA 4.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Formula1Gabelhofen2022_%2804%29.jpg"
+    },
+    "year": 2022,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.49,
+      0.24
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "leclerc": {
+    "src": "/portraits/leclerc.jpg",
+    "alt": "Charles Leclerc in Ferrari racing overalls on the podium at the 2024 Dutch Grand Prix, Zandvoort",
+    "credit": {
+      "creator": "Steffen Prößdorf",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024-08-25_Motorsport,_Formel_1,_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "attribution": "Photo: Steffen Prößdorf / Wikimedia Commons, CC BY-SA 4.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/2024-08-25_Motorsport%2C_Formel_1%2C_Gro%C3%9Fer_Preis_der_Niederlande_2024_STP_3978_by_Stepro.jpg"
+    },
+    "year": 2024,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.73,
+      0.17
+    ],
+    "downloaded": "2026-09-24"
+  },
+  "hamilton": {
+    "src": "/portraits/hamilton.jpg",
+    "alt": "Lewis Hamilton in a red Ferrari team hoodie, cap and sunglasses on the fan-zone stage at the 2025 Japanese Grand Prix, Suzuka",
+    "credit": {
+      "creator": "Liauzh",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_Fanzone_Stage_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "attribution": "Photo: Liauzh / Wikimedia Commons, CC BY-SA 4.0",
+      "originalFileUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/2025_Japan_GP_-_Ferrari_-_Lewis_Hamilton_-_Fanzone_Stage_%28cropped%29.jpg"
+    },
+    "year": 2025,
+    "ferrariContext": "suit",
+    "focalPoint": [
+      0.5,
+      0.21
+    ],
+    "downloaded": "2026-09-24"
+  }
+}

@@ -118,6 +118,6 @@ Add a server/serverless endpoint that retrieves this sourced archive, validates 
 
 ## Credits and disclaimer
 
-Geometry, garage and interface: original project work. Icons: [Lucide](https://lucide.dev/license), ISC. Typography: [Barlow](https://github.com/jpt/barlow), SIL Open Font License, bundled via Fontsource. Source data: Jolpica / Ergast. Historical source links are references, not an endorsement or a licence to reuse source-site images.
+Geometry, garage, abstract helmets and interface: original project work. Driver portraits: Wikimedia Commons, each under its own licence (public domain, CC0, CC BY or CC BY-SA); the creator, licence and source page for every photo are recorded in `src/data/portraits.json` and shown under Sources & credits. Portraits shown in greyscale or cropped are adaptations of those files. No team logo is distributed; an owner may add one locally at `src/assets/brand/team-emblem.svg` (git-ignored). Icons: [Lucide](https://lucide.dev/license), ISC. Typography: [Barlow](https://github.com/jpt/barlow), SIL Open Font License, bundled via Fontsource. Source data: Jolpica / Ergast. Historical source links are references, not an endorsement or a licence to reuse source-site images.
 
 ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.

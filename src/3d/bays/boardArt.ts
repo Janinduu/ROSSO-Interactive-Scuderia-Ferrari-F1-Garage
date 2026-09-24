@@ -61,6 +61,7 @@ function drawPortrait(
   driver: Driver,
   portrait: HTMLImageElement | null,
   focal: [number, number],
+  zoom: number,
   state: BayState,
   x: number,
   y: number,
@@ -75,7 +76,7 @@ function drawPortrait(
   ctx.fillRect(x, y, w, h);
   if (portrait) {
     // Cover-crop around the face, keeping it in the upper third of the frame.
-    const scale = Math.max(w / portrait.width, h / portrait.height);
+    const scale = Math.max(w / portrait.width, h / portrait.height) * zoom;
     const sw = w / scale;
     const sh = h / scale;
     const sx = Math.min(
@@ -144,6 +145,7 @@ export function drawBoard(
     chapter,
     portrait,
     focal,
+    zoom = 1,
     emblem,
     state,
   }: {
@@ -151,6 +153,7 @@ export function drawBoard(
     chapter: number;
     portrait: HTMLImageElement | null;
     focal: [number, number];
+    zoom?: number;
     emblem: HTMLImageElement | null;
     state: BayState;
   },
@@ -169,7 +172,7 @@ export function drawBoard(
   ctx.fillStyle = state === "selected" ? "#d3323a" : "#4a1c20";
   ctx.fillRect(0, 0, W, 5);
 
-  drawPortrait(ctx, driver, portrait, focal, state, 28, 30, 272, 452);
+  drawPortrait(ctx, driver, portrait, focal, zoom, state, 28, 30, 272, 452);
 
   const x0 = 336;
   const right = W - 36;
@@ -209,14 +212,14 @@ export function drawBoard(
   tracking(ctx, 0);
   ctx.font = `400 50px ${HEADING}`;
   ctx.fillStyle = "#d5d0c8";
-  ctx.fillText(first, x0 - 2, 128);
-  let size = 112;
+  ctx.fillText(first, x0 - 2, 118);
+  let size = 104;
   do {
     ctx.font = `600 ${size}px ${HEADING}`;
     size -= 4;
   } while (ctx.measureText(last).width > width - (emblem ? 96 : 0) && size > 60);
   ctx.fillStyle = "#f4f0e9";
-  ctx.fillText(last, x0 - 4, 216);
+  ctx.fillText(last, x0 - 4, 222);
 
   ctx.font = `500 22px ${BODY}`;
   tracking(ctx, 2.5);

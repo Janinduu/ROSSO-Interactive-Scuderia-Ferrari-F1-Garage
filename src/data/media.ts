@@ -14,6 +14,8 @@ export interface DriverPortrait {
   credit: MediaCredit;
   /** Face centre as fractions of width/height, used when cropping. */
   focalPoint?: [number, number];
+  /** Extra crop beyond cover-fit, e.g. to trim a magazine masthead. */
+  zoom?: number;
   year?: number | null;
   ferrariContext?: "suit" | "car" | "period" | "none";
   downloaded?: string;

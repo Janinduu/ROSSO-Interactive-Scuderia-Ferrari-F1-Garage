@@ -42,6 +42,23 @@ type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
 const disclaimer =
   "ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.";
 const pad = (n: number) => String(n).padStart(2, "0");
+// A credited driver photo for HTML views (directory, 2D archive).
+function Portrait({ driverId, className }: { driverId: string; className: string }) {
+  const p = getPortrait(driverId);
+  if (!p) return null;
+  const [fx, fy] = p.focalPoint ?? [0.5, 0.3];
+  return (
+    <img
+      className={className}
+      src={p.src}
+      alt={p.alt}
+      title={p.credit.attribution}
+      loading="lazy"
+      decoding="async"
+      style={{ objectPosition: `${fx * 100}% ${fy * 100}%` }}
+    />
+  );
+}
 function App() {
   const {
     entered,
@@ -109,6 +126,7 @@ function App() {
   const fallback = (
     <div className="flat-scene">
       <div className="flat-ring" />
+      <Portrait driverId={driver.id} className="flat-portrait" />
       <span className="eyebrow">THE DESIGN ARCHIVE</span>
       <strong>{story?.car ?? driver.importantCars[0]}</strong>
       <span>
@@ -601,6 +619,7 @@ function App() {
                 onClick={() => selectDriver(drivers.indexOf(d))}
               >
                 <span className="driver-number">{d.number}</span>
+                <Portrait driverId={d.id} className="directory-portrait" />
                 <div>
                   <span className="eyebrow">{d.era}</span>
                   <h3>{d.name}</h3>
