@@ -12,11 +12,13 @@ import {
   MeshStandardMaterial,
   Object3D,
   RingGeometry,
-  SphereGeometry,
 } from "three";
 import type { BufferGeometry as Geometry, InstancedMesh, Material } from "three";
 import { drivers, eras } from "../../data/drivers";
-import { helmetPalette } from "../../data/helmets";
+import { helmetDesignFor } from "../../data/helmetDesigns";
+import Helmet from "../helmets/Helmet";
+import { useCameraStore } from "../camera/cameraStore";
+import { poses } from "../camera/poses";
 import { bayX } from "../camera/poses";
 import { BayBoard, ChapterMarker } from "./BayBoard";
 import { WallSign, useWallSignTextures } from "./WallSign";
@@ -34,8 +36,8 @@ interface Placement {
 const BOARD_RANGE = 3;
 /** Front-right of the plinth, clear of the car from the usual viewpoint. */
 const PEDESTAL: V3 = [3.75, 0, 1.5];
-const HELMET_R = 0.25;
-const HELMET_Y = 1.08 + HELMET_R * 0.77;
+const HELMET_R = 0.24;
+const HELMET_Y = 1.09 + HELMET_R * 0.84;
 /** Turn the helmets' visors towards the visitor's usual viewpoint. */
 const HELMET_TURN = 0.93;
 
@@ -66,12 +68,6 @@ function useBayKit() {
         plate: new CylinderGeometry(0.27, 0.27, 0.03, 32),
         glow: new RingGeometry(0.34, 0.4, 48),
         threshold: new BoxGeometry(0.035, 0.012, 11),
-        shell: new SphereGeometry(HELMET_R, 32, 20, 0, Math.PI * 2, 0, Math.PI * 0.78),
-        visor: new SphereGeometry(HELMET_R * 1.012, 24, 6, -0.95, 1.9, Math.PI * 0.4, Math.PI * 0.2),
-        band: new SphereGeometry(HELMET_R * 1.006, 32, 2, 0, Math.PI * 2, Math.PI * 0.3, Math.PI * 0.05),
-        crownFront: new SphereGeometry(HELMET_R * 1.009, 4, 12, -0.14, 0.28, 0, Math.PI * 0.4),
-        crownBack: new SphereGeometry(HELMET_R * 1.009, 4, 12, Math.PI - 0.14, 0.28, 0, Math.PI * 0.4),
-        chin: new CylinderGeometry(HELMET_R * 0.66, HELMET_R * 0.6, 0.05, 32),
       },
       mat: {
         wall: standard("#1d2024", 0.55, 0.48),
@@ -87,9 +83,6 @@ function useBayKit() {
         plate: standard("#4a4d52", 0.85, 0.25),
         glow: basic("#ffffff"),
         threshold: basic("#9e2830"),
-        paint: standard("#ffffff", 0.15, 0.28),
-        visor: standard("#0c0d0f", 0.6, 0.12),
-        chin: standard("#111214", 0.3, 0.6),
         outline: new LineBasicMaterial({ color: "#7a2a31" }),
       },
     };
@@ -207,6 +200,14 @@ export default function Corridor({
     if (e.delta > 6 || i === current) return;
     onSelect(i);
   };
+  // In the current bay the helmet is an exhibit in itself: bring the camera
+  // close (spec §9.3). Elsewhere it is another way into that bay.
+  const helmetClick = (i: number) => (e: ThreeEvent<MouseEvent>) => {
+    e.stopPropagation();
+    if (e.delta > 6) return;
+    if (i !== current) onSelect(i);
+    else useCameraStore.getState().go(poses.helmet(i));
+  };
   const byInstance =
     <E extends ThreeEvent<PointerEvent> | ThreeEvent<MouseEvent>>(
       handler: (i: number) => (e: E) => void,
@@ -247,30 +248,6 @@ export default function Corridor({
     // The layout depends only on the fixed driver list.
     [],
   );
-
-  const helmets = useMemo(() => {
-    const place = (color?: string) =>
-      drivers.map((_, i) => ({
-        p: at(i, [PEDESTAL[0], HELMET_Y, PEDESTAL[2]]),
-        r: [0, HELMET_TURN, 0] as V3,
-        s: [1.12, 1, 1] as V3,
-        color,
-      }));
-    const palette = drivers.map((d) => helmetPalette(d.flag));
-    const painted = (key: "shell" | "band" | "crown") =>
-      place().map((p, i) => ({ ...p, color: palette[i][key] }));
-    return {
-      shell: painted("shell"),
-      band: painted("band"),
-      crown: painted("crown"),
-      plain: place(),
-      chin: drivers.map((_, i) => ({
-        p: at(i, [PEDESTAL[0], HELMET_Y - HELMET_R * 0.77, PEDESTAL[2]]),
-        r: [0, HELMET_TURN, 0] as V3,
-        s: [1.12, 1, 1] as V3,
-      })),
-    };
-  }, []);
 
   const glow = useMemo(
     () =>
@@ -326,12 +303,6 @@ export default function Corridor({
       <Instances geometry={geo.pedestal} material={mat.pedestal} items={s.pedestal} {...bayHandlers} />
       <Instances geometry={geo.plate} material={mat.plate} items={s.plate} />
       <Instances geometry={geo.glow} material={mat.glow} items={glow} />
-      <Instances geometry={geo.shell} material={mat.paint} items={helmets.shell} {...bayHandlers} />
-      <Instances geometry={geo.band} material={mat.paint} items={helmets.band} />
-      <Instances geometry={geo.crownFront} material={mat.paint} items={helmets.crown} />
-      <Instances geometry={geo.crownBack} material={mat.paint} items={helmets.crown} />
-      <Instances geometry={geo.visor} material={mat.visor} items={helmets.plain} />
-      <Instances geometry={geo.chin} material={mat.chin} items={helmets.chin} />
       <lineSegments geometry={outlines} material={mat.outline} />
       {chapterStarts.map((i) => (
         <ChapterMarker
@@ -353,6 +324,18 @@ export default function Corridor({
               onClick={click(i)}
             />
             {signs && <WallSign textures={signs} state={stateOf(i)} />}
+            <group
+              position={[PEDESTAL[0], HELMET_Y, PEDESTAL[2]]}
+              rotation={[0, HELMET_TURN, 0]}
+              scale={HELMET_R}
+            >
+              <Helmet
+                design={helmetDesignFor(d)}
+                onPointerOver={over(i)}
+                onPointerOut={out(i)}
+                onClick={helmetClick(i)}
+              />
+            </group>
           </group>
         ) : null,
       )}

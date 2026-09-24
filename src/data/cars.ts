@@ -40,12 +40,25 @@ const tweaks: Record<string, Partial<CarSpec>> = {
 };
 
 // Researched, sourced mapping (optional until the research pack is reviewed).
-type ResearchedYears = Record<string, Record<string, { primary: string }>>;
+interface CarSource {
+  title: string;
+  publisher: string;
+  url: string;
+}
+type ResearchedYears = Record<string, Record<string, { primary: string; sourceIds?: string[] }>> & {
+  _sources?: Record<string, CarSource>;
+};
 const researchFiles = import.meta.glob<ResearchedYears>("./carsByYear.json", {
   eager: true,
   import: "default",
 });
 const researched: ResearchedYears = Object.values(researchFiles)[0] ?? {};
+
+/** Sources for the car named in a driver's season. */
+export function carSourcesFor(driver: Driver, year: number): CarSource[] {
+  const ids = researched[driver.id]?.[String(year)]?.sourceIds ?? [];
+  return ids.map((id) => researched._sources?.[id]).filter((s): s is CarSource => !!s);
+}
 
 /** The official car name for a driver's season, or null if not yet sourced. */
 export function carNameFor(driver: Driver, year: number): string | null {

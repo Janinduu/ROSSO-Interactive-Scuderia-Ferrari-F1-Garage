@@ -31,7 +31,8 @@ import Modal from "./components/Modal";
 import SceneBoundary from "./components/SceneBoundary";
 import { usePreferences } from "./hooks/usePreferences";
 import { getPortrait } from "./data/media";
-import { resolveCar } from "./data/cars";
+import { carSourcesFor, resolveCar } from "./data/cars";
+import { helmetDesignFor } from "./data/helmetDesigns";
 import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
@@ -249,6 +250,7 @@ function App() {
                     onFailure={() => prefs.setFlat(true)}
                     onSelectDriver={selectDriver}
                     car={car}
+                    helmet={helmetDesignFor(driver)}
                   />
                 </Suspense>
               </SceneBoundary>
@@ -774,6 +776,21 @@ function App() {
               Jolpica · dataset documentation <ExternalLink size={14} />
             </a>
           </div>
+          {carSourcesFor(driver, year).length > 0 && (
+            <>
+              <h3>
+                {year} car · {car.officialName}
+              </h3>
+              <div className="source-list">
+                {carSourcesFor(driver, year).map((s) => (
+                  <a key={s.url} href={s.url} target="_blank" rel="noreferrer">
+                    {s.publisher} · {s.title}
+                    <ExternalLink size={14} />
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
           {portrait && (
             <>
               <h3>Portrait</h3>

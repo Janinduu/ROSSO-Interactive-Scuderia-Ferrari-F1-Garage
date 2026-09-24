@@ -5,6 +5,7 @@ import { Vector3 } from "three";
 import CarModel from "../3d/cars/CarModel";
 import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
 import type { ResolvedCar } from "../data/cars";
+import type { HelmetDesign } from "../3d/helmets/helmetArt";
 import Corridor from "../3d/bays/Corridor";
 import CameraDirector from "../3d/camera/CameraDirector";
 import { useCameraStore } from "../3d/camera/cameraStore";
@@ -21,8 +22,10 @@ function Set({
   reduced,
   onSelectDriver,
   car,
+  helmet,
 }: {
   car: ResolvedCar;
+  helmet: HelmetDesign;
   bay: number;
   high: boolean;
   landing: boolean;
@@ -65,7 +68,7 @@ function Set({
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
       {/* Slightly larger than life so the car holds the plinth. */}
       <group position={[x, 0.02, 0]} scale={CAR_SCALE}>
-        <CarModel key={car.id} spec={car.spec} />
+        <CarModel key={car.id} spec={car.spec} helmet={helmet} />
       </group>
       <ContactShadows
         key={`${bay}-${high}`}
@@ -99,6 +102,7 @@ export default function Garage(props: {
   onFailure: () => void;
   onSelectDriver: (index: number) => void;
   car: ResolvedCar;
+  helmet: HelmetDesign;
 }) {
   const [ready, setReady] = useState(false);
   const { available, anchorList } = useMemo(() => {

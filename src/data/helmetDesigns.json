@@ -1,0 +1,1104 @@
+{
+  "ascari": {
+    "year": 1952,
+    "helmetType": "open-face",
+    "description": "A plain sky-blue ('azzurro') pudding-basin shell worn with brown leather ear flaps and period goggles; Ascari considered the light-blue helmet his lucky charm.",
+    "base": "#4fb0dc",
+    "visorSurround": "#5a3b28",
+    "visorTint": "goggles",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.56,
+        "v1": 0.63,
+        "color": "#c8ad7f"
+      },
+      {
+        "shape": "band",
+        "v0": 0.93,
+        "v1": 1,
+        "color": "#5a3b28"
+      }
+    ],
+    "sources": [
+      "https://simanaitissays.com/2025/05/25/fate-and-an-f1-hero/",
+      "https://sportscardigest.com/ascari-ferrari-the-lost-years/",
+      "https://commons.wikimedia.org/wiki/File:Alberto_Ascari_Halbschale_1953_neu.png",
+      "https://commons.wikimedia.org/wiki/File:Alberto_Ascari_helmet_and_racing_goggles_Museo_Ferrari.jpg"
+    ],
+    "confidence": "medium",
+    "notes": "The light-blue colour is well documented: it was his 'lucky' helmet, and he died in 1955 wearing Castellotti's borrowed white one. The exact hue is an estimate between the Commons 1953 drawing (#0aa0cc) and period descriptions of 'sky blue'. The Museo Ferrari displays a white Ascari helmet, which is not the iconic one. The tan band is the goggle strap, and the brown rim stands in for the leather ear flaps; both are optional."
+  },
+  "fangio": {
+    "year": 1956,
+    "helmetType": "open-face",
+    "description": "A plain brown linen-and-shellac helmet with a short brown peak, worn over a white cloth liner with goggles; no painted graphics.",
+    "base": "#7d4f2c",
+    "visorSurround": "#2b2b2b",
+    "visorTint": "goggles",
+    "layers": [
+      {
+        "shape": "crown",
+        "v1": 0.18,
+        "color": "#8a5a34"
+      },
+      {
+        "shape": "band",
+        "v0": 0.9,
+        "v1": 1,
+        "color": "#e6e0cf"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_helmet_and_racing_goggles_Museo_Ferrari.jpg",
+      "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_-_El_Gr%C3%A1fico_1849.jpg",
+      "https://commons.wikimedia.org/wiki/File:Fangio_pit_stop_Nurburgring_1957.jpg",
+      "https://collectorstudio.com/product/1955-7-juan-manuel-fangio-replica-helmet/"
+    ],
+    "confidence": "medium",
+    "notes": "The Museo Ferrari helmet (1950s, brown with a peak) and a 1954-55 El Grafico colour cover both show a plain tan/brown peaked helmet, and a 1957 photo caption says he wore a 'dark helmet'. I found no photo firmly dated 1956, and one replica seller describes a cream 1955-57 helmet, so the colour is unconfirmed. The peak (brim) over the eyes can't be expressed in this vocabulary. The crown layer is only a slightly lighter wear highlight. The white rim is the cloth liner/ear flaps showing below the shell.",
+    "peak": "#6a4224"
+  },
+  "hawthorn": {
+    "year": 1958,
+    "helmetType": "open-face",
+    "description": "A dark green shell with a wide white leather brow band and peak that carries a large clear rain shield across the face.",
+    "base": "#22683a",
+    "visorSurround": "#f2efe6",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.6,
+        "v1": 0.76,
+        "color": "#f2efe6"
+      },
+      {
+        "shape": "band",
+        "v0": 0.76,
+        "v1": 0.8,
+        "color": "#6b5a4a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.93,
+        "v1": 1,
+        "color": "#3a3a2e"
+      }
+    ],
+    "sources": [
+      "https://www.ferrari.com/en-BQ/history/moments/1958/elegant-champion/more",
+      "https://commons.wikimedia.org/wiki/File:Mike_Hawthorn_helmet_with_rain_visor_Museo_Ferrari.jpg",
+      "https://commons.wikimedia.org/wiki/File:Mike_Hawthorn_Halbschale_Regenvisier_1958.png",
+      "https://cars.bonhams.com/auction/24876/lot/166/a-herbert-johnson-racing-helmet-formerly-the-property-of-1958-world-drivers-champion-mike-hawthorn-1950s/"
+    ],
+    "confidence": "high",
+    "notes": "Ferrari's history page calls the green helmet with white rain shield his trademark, and the Museo Ferrari example matches. The 'visor' is a big clear drop-down shield hanging from the white peak, not goggles; he also wore goggles at times. A Bonhams lot shows another black Hawthorn helmet, so he didn't always wear green. The brown band is the strap/fixing rail below the white band.",
+    "peak": "#f1efe8"
+  },
+  "phil_hill": {
+    "year": 1961,
+    "helmetType": "open-face",
+    "description": "A plain off-white open-face Bell shell with a small white peak and black leather ear flaps, worn with goggles.",
+    "base": "#ece8dc",
+    "visorSurround": "#3a3a3a",
+    "visorTint": "goggles",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.58,
+        "v1": 0.64,
+        "color": "#2a2a2a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.9,
+        "v1": 1,
+        "color": "#1f1f1f"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Phil_Hill_Helm_Halbschale_mit_Schild_1961.png",
+      "https://commons.wikimedia.org/wiki/File:Phil_Hill_helmet_and_racing_goggles_left_Museo_Ferrari.jpg",
+      "https://www.thehenryford.org/collections-and-research/digital-collections/artifact/124567"
+    ],
+    "confidence": "medium",
+    "notes": "The Commons 1961 drawing and the Museo Ferrari example (late 1950s) both show an unpainted white/off-white shell. The Henry Ford holds a 1961 race-worn helmet, but I couldn't read its catalogue text. The small orange Bell maker's decal on the brow is a brand mark, so it's omitted. The dark band at v 0.58-0.64 is the goggle strap. The peak can't be expressed.",
+    "peak": "#e4dfd2"
+  },
+  "surtees": {
+    "year": 1964,
+    "helmetType": "open-face",
+    "description": "A white open-face helmet with a short white peak and one mid-blue band running round the shell from the peak fixings at the brow to low on the back.",
+    "base": "#f1f3ef",
+    "visorSurround": "#2d2d33",
+    "visorTint": "goggles",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.44,
+        "v1": 0.5,
+        "color": "#1f5bd0"
+      },
+      {
+        "shape": "band",
+        "v0": 0.94,
+        "v1": 1,
+        "color": "#2d2d33"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:John_Surtees_Jethelm_1964.png",
+      "https://triplecrownmodelstore.com/products/john-surtees-helmet-1-5-1964-centauria",
+      "https://www.grandprixmodels.com/MAGPV26-John-Surtees-Helmet-F1-1964-15-Display.aspx",
+      "https://commons.wikimedia.org/wiki/File:John_Surtees_helmet_and_racing_goggles_Museo_Ferrari.jpg"
+    ],
+    "confidence": "medium",
+    "notes": "The Commons 1964 drawing and the Centauria/Spark 1:5 Ferrari helmet-collection model agree on a white shell with one blue band. In reality the band slopes: it sits at about v 0.38 at the front (by the peak strap) and drops to about v 0.58 at the back. A constant-v band is an approximation; a painter that supports tilt should use it. The Museo Ferrari's 1960s Surtees helmet is white with black tape repairs and no blue band, so designs varied. The peak can't be expressed."
+  },
+  "lauda": {
+    "year": 1975,
+    "helmetType": "full-face",
+    "description": "A plain bright red Bell Star full-face helmet with 'NIKI LAUDA' in bold white letters on both sides; a red sponsor strip across the top of the clear visor and a round bank logo on the chin are the only other marks.",
+    "base": "#d8261e",
+    "visorSurround": "#2a2a2a",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.47,
+        "size": 0.07,
+        "text": "NIKI",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.56,
+        "size": 0.07,
+        "text": "LAUDA",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.47,
+        "size": 0.07,
+        "text": "NIKI",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.56,
+        "size": 0.07,
+        "text": "LAUDA",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "band",
+        "v0": 0.95,
+        "v1": 1,
+        "color": "#2a2a2a"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Niki_Lauda_helmet_Museo_Ferrari.jpg",
+      "https://commons.wikimedia.org/wiki/File:Niki_Lauda_Integralhelm_1975.png",
+      "https://www.artofhelmets.com/products/niki-lauda-1975-full-size-1-1-replica-helmet-1",
+      "https://www.formulaworldshop.com/products/niki-lauda-signed-1975-full-scale-replica-helmet"
+    ],
+    "confidence": "high",
+    "notes": "Replica makers describe the 1975 helmet as 'plain red with his full name written on both sides'. The Museo Ferrari Bell example has faded to orange; red is the as-raced colour. Sponsors omitted: the Marlboro strip on the visor (with a small NIKI LAUDA in white) and the round black-and-white Raiffeisen logo on the chin. The Commons drawing shows the later AGV (1976); the Bell version has the same layout."
+  },
+  "gilles_villeneuve": {
+    "year": 1979,
+    "helmetType": "full-face",
+    "description": "An orange-red helmet with a near-black navy cap over the top and forehead, a stylised outlined 'V' on each side and at the back, and a black horizontal band with a thin red pinstripe running round the helmet at eye level.",
+    "base": "#e2401f",
+    "visorSurround": "#121826",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "crown",
+        "v1": 0.18,
+        "color": "#121826"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.22,
+        "v0": 0,
+        "v1": 0.36,
+        "color": "#121826"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.33,
+        "size": 0.14,
+        "text": "V",
+        "color": "#121826"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.33,
+        "size": 0.14,
+        "text": "V",
+        "color": "#121826"
+      },
+      {
+        "shape": "text",
+        "u": 0.5,
+        "v": 0.33,
+        "size": 0.14,
+        "text": "V",
+        "color": "#121826"
+      },
+      {
+        "shape": "band",
+        "v0": 0.5,
+        "v1": 0.57,
+        "color": "#121826"
+      },
+      {
+        "shape": "band",
+        "v0": 0.525,
+        "v1": 0.537,
+        "color": "#e2401f"
+      },
+      {
+        "shape": "band",
+        "v0": 0.6,
+        "v1": 0.612,
+        "color": "#121826"
+      },
+      {
+        "shape": "band",
+        "v0": 0.95,
+        "v1": 1,
+        "color": "#121826"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_helmet_Museo_Ferrari.jpg",
+      "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_Integralhelm_1979.png",
+      "https://www.motorsportmagazine.com/articles/single-seaters/jacques-villeneuve-i-watched-my-father-gilles-draw-his-helmet-design-in-our-motorhome/",
+      "https://www.cmhelmets.com/product/gilles-villeneuve-1979-f1-replica-helmet-full-size/"
+    ],
+    "confidence": "medium",
+    "notes": "Jacques Villeneuve says Gilles specified the blue as 'very deep, almost black' and the orange as 'very deep, but not red', so it reads as black and red-orange. The real 'V's are thin dark outlines, a tall angular V joined to the horizontal band, not solid letters; solid text 'V' is a stand-in. The top cap has a notched edge. Sponsors omitted: a white box with dark text on each side at eye level, a red-on-white strip on the visor, and a big red-on-white panel on the chin."
+  },
+  "scheckter": {
+    "year": 1979,
+    "helmetType": "full-face",
+    "description": "A white helmet with a broad yellow band round the middle (at eye level), edged top and bottom with a thin navy line, and 'JODY' in big black letters on the lower white part of each side.",
+    "base": "#f4f4f2",
+    "visorSurround": "#1a1a1a",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.28,
+        "v1": 0.305,
+        "color": "#1d2a5c"
+      },
+      {
+        "shape": "band",
+        "v0": 0.305,
+        "v1": 0.58,
+        "color": "#f2c230"
+      },
+      {
+        "shape": "band",
+        "v0": 0.58,
+        "v1": 0.6,
+        "color": "#1d2a5c"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.74,
+        "size": 0.09,
+        "text": "JODY",
+        "color": "#151515"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.74,
+        "size": 0.09,
+        "text": "JODY",
+        "color": "#151515"
+      },
+      {
+        "shape": "band",
+        "v0": 0.95,
+        "v1": 1,
+        "color": "#1a1a1a"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_helmet_Museo_Ferrari.jpg",
+      "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_Integralhelm_1979.png",
+      "https://www.cmhelmets.com/product/jody-scheckter-1979-world-champion-vintage-retro-f1-replica-helmet-full-size/",
+      "https://motorsportmemorabilia.com/product/jody-scheckter-ferrari-1979-replica-world-champion-helmet/"
+    ],
+    "confidence": "high",
+    "notes": "Replicas describe it as 'white with a yellow stripe around the helmet outlined with black', with 'Jody' on each side. The Museo Ferrari example shows the outline as dark navy. A navy-and-white chewing-gum sponsor strip dominates the top of the clear visor and repeats on the chin; omitted."
+  },
+  "mansell": {
+    "year": 1989,
+    "helmetType": "full-face",
+    "description": "A white helmet with Union Jack-style graphics: navy-blue triangles at the upper and lower back, red horizontal stripes across the sides, and red-and-white arrows that meet at the back and point forward to the visor.",
+    "base": "#f5f5f5",
+    "visorSurround": "#222222",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.3,
+        "v0": 0.1,
+        "v1": 0.34,
+        "color": "#1c2f8a"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.3,
+        "v0": 0.66,
+        "v1": 0.94,
+        "color": "#1c2f8a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.36,
+        "v1": 0.4,
+        "color": "#c8102e"
+      },
+      {
+        "shape": "band",
+        "v0": 0.6,
+        "v1": 0.64,
+        "color": "#c8102e"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.05,
+        "v0": 0,
+        "v1": 1,
+        "color": "#c8102e"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.12,
+        "v0": 0,
+        "v1": 0.28,
+        "color": "#c8102e"
+      },
+      {
+        "shape": "chevron",
+        "v": 0.3,
+        "depth": 0.1,
+        "thickness": 0.03,
+        "color": "#c8102e"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.74,
+        "size": 0.045,
+        "text": "MANSELL",
+        "color": "#111111"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.74,
+        "size": 0.045,
+        "text": "MANSELL",
+        "color": "#111111"
+      },
+      {
+        "shape": "band",
+        "v0": 0.95,
+        "v1": 1,
+        "color": "#333333"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Nigel_Mansell_Ferrari_Integralhelm.png",
+      "https://www.cmhelmets.com/product/nigel-mansell-1989-1990-f1-replica-helmet-full-size/",
+      "https://cars.bonhams.com/auction/31235/lot/116/a-replica-nigel-mansell-circa-19891990-helmet-by-arai-signed-to-visor/"
+    ],
+    "confidence": "medium",
+    "notes": "Replica text: white front around the visor, blue area at the back, and white-and-red arrows on the sides that join at the back and point to the visor, plus a white band round the top that carries the Marlboro lettering. The diagonal Union Jack arrows can only be approximated with this vocabulary (back stripe + chevron). A small Union Jack on the lower right side (not expressible as a 3-stripe flag) and his script signature are simplified to text. Sponsors omitted: Marlboro lettering along the top band and chin, and a red Marlboro strip with a Ferrari shield on the visor."
+  },
+  "prost": {
+    "year": 1990,
+    "helmetType": "full-face",
+    "description": "A white helmet with a denim-blue lower front wrapping round the visor and chin, angular blue arrow shapes along the sides and back, and thin red pinstripes, in the French colours.",
+    "base": "#f2f2f2",
+    "visorSurround": "#222222",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.3,
+        "v0": 0.34,
+        "v1": 1,
+        "color": "#3558a8"
+      },
+      {
+        "shape": "band",
+        "v0": 0.47,
+        "v1": 0.52,
+        "color": "#3558a8"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.14,
+        "v0": 0.1,
+        "v1": 0.3,
+        "color": "#3558a8"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.12,
+        "v0": 0.84,
+        "v1": 1,
+        "color": "#3558a8"
+      },
+      {
+        "shape": "band",
+        "v0": 0.2,
+        "v1": 0.21,
+        "color": "#d42a2a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.27,
+        "v1": 0.28,
+        "color": "#d42a2a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.8,
+        "v1": 0.83,
+        "color": "#d42a2a"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.75,
+        "size": 0.04,
+        "text": "ALAIN PROST",
+        "color": "#111111"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.75,
+        "size": 0.04,
+        "text": "ALAIN PROST",
+        "color": "#111111"
+      },
+      {
+        "shape": "band",
+        "v0": 0.95,
+        "v1": 1,
+        "color": "#222222"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Helmet-Integral-Alain-Prost-1984-1991-byRundvald.png",
+      "https://commons.wikimedia.org/wiki/File:Alain_Prost_1991_United_States_GP.jpg",
+      "https://www.cmhelmets.com/product/alain-prost-1990-f1-replica-helmet-full-size/",
+      "https://cars.bonhams.com/auction/30209/lot/6/alain-prosts-1990-italian-grand-prix-helmet-worn-to-2nd-place-by-arai-2/"
+    ],
+    "confidence": "medium",
+    "notes": "Michel Raimon's layout was used from 1984 to 1991. For his first Ferrari season (1990) Prost swapped his usual admiral blue for a lighter 'denim' blue, so #3558a8 is an estimate. The angular arrow shapes are approximated with bands and stripes. Sponsors omitted: a Marlboro strip across the top of the visor and Marlboro lettering on the chin."
+  },
+  "michael_schumacher": {
+    "year": 2004,
+    "helmetType": "full-face",
+    "description": "An almost all-over Ferrari-red helmet with faint white stars across the top, thin white pinstripes framing the forehead and chin panels, and a black panel around the eye port; worn with a gold iridium visor.",
+    "base": "#e8401c",
+    "visorSurround": "#111111",
+    "visorTint": "iridium-gold",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.235,
+        "v1": 0.245,
+        "color": "#ffffff"
+      },
+      {
+        "shape": "band",
+        "v0": 0.345,
+        "v1": 0.355,
+        "color": "#ffffff"
+      },
+      {
+        "shape": "band",
+        "v0": 0.655,
+        "v1": 0.665,
+        "color": "#ffffff"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.16,
+        "width": 0.14,
+        "v0": 0.36,
+        "v1": 0.62,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.84,
+        "width": 0.14,
+        "v0": 0.36,
+        "v1": 0.62,
+        "color": "#111111"
+      },
+      {
+        "shape": "star",
+        "u": 0,
+        "v": 0.08,
+        "size": 0.04,
+        "color": "#f6d2c8"
+      },
+      {
+        "shape": "star",
+        "u": 0.14,
+        "v": 0.12,
+        "size": 0.035,
+        "color": "#f6d2c8"
+      },
+      {
+        "shape": "star",
+        "u": 0.36,
+        "v": 0.12,
+        "size": 0.035,
+        "color": "#f6d2c8"
+      },
+      {
+        "shape": "star",
+        "u": 0.5,
+        "v": 0.08,
+        "size": 0.04,
+        "color": "#f6d2c8"
+      },
+      {
+        "shape": "star",
+        "u": 0.64,
+        "v": 0.12,
+        "size": 0.035,
+        "color": "#f6d2c8"
+      },
+      {
+        "shape": "star",
+        "u": 0.86,
+        "v": 0.12,
+        "size": 0.035,
+        "color": "#f6d2c8"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Integralhelm_2004.jpg",
+      "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2005_helmet_front-right_2019_Michael_Schumacher_Private_Collection.jpg",
+      "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2002_helmet_front-right1_2019_Michael_Schumacher_Private_Collection.jpg",
+      "https://au.motorsport.com/f1/news/gallery-michael-schumacher-s-f1-helmets-939422/3039765/"
+    ],
+    "confidence": "high",
+    "notes": "From Monaco 2000 his base was all red, and the old blue top with stars became a red top with faint pale stars. The stars are subtle and pale: use low contrast or partial opacity. Sponsors dominate the look: white Marlboro lettering across the forehead band, a white chevron-roof Marlboro panel on the chin, a white box on each side, and a red strip across the visor top. His white script 'MS' signature sits on the lower sides. The one-off Monza 2004 helmet in Italian green, white and red was a special and isn't used."
+  },
+  "raikkonen": {
+    "year": 2007,
+    "helmetType": "full-face",
+    "description": "A split design: white at the front and upper sides, black over the back and lower edge, with sharp orange-red swooshes and pinstripes on the sides that sweep forward toward the visor.",
+    "base": "#f4f4f4",
+    "visorSurround": "#111111",
+    "visorTint": "dark",
+    "layers": [
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.5,
+        "v0": 0,
+        "v1": 1,
+        "color": "#111111"
+      },
+      {
+        "shape": "band",
+        "v0": 0.8,
+        "v1": 1,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.2,
+        "v0": 0.62,
+        "v1": 0.8,
+        "color": "#f4f4f4"
+      },
+      {
+        "shape": "band",
+        "v0": 0.25,
+        "v1": 0.265,
+        "color": "#e8442a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.5,
+        "v1": 0.555,
+        "color": "#e8442a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.64,
+        "v1": 0.655,
+        "color": "#e8442a"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.2,
+        "v0": 0.4,
+        "v1": 0.47,
+        "color": "#e8442a"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.22,
+        "color": "#e8442a"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Kimi_R%C3%A4ikk%C3%B6nen_Integralhelm_2007neu.png",
+      "https://www.cmhelmets.com/product/kimi-raikkonen-2007-f1-replica-helmet-full-size/",
+      "https://livecarmodel.com/products/1-5-spark-2007-formula-1-kimi-raikkonen-6-ferrari-f2007-helmet-model.html"
+    ],
+    "confidence": "medium",
+    "notes": "CM Helmets: 'The front is predominantly white, while the back and the top of the helmet are painted in black. Orange sections on the sides with silver lines superimposed, two Iceman inscriptions on each side.' The Commons drawing shows the accent as orange-red. 'Iceman' is a nickname in red outline script on the lower sides; left out because the text rule covers name/number only. It could be added as text. Thin silver lines and fine graphics (his insignia on top, a white-line prancing horse on the back) are omitted. Sponsors omitted: barcode-style graphics on the forehead and chin, a white logo box on the sides, and a red visor strip."
+  },
+  "alonso": {
+    "year": 2012,
+    "helmetType": "full-face",
+    "description": "A light-blue top over bold yellow, red and dark-blue bands that sweep round the sides and back, with a yellow chin, in his Spanish/Asturian colours; worn with a blue iridium visor.",
+    "base": "#1f8fd6",
+    "visorSurround": "#1b2f9e",
+    "visorTint": "iridium-blue",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.34,
+        "v1": 0.44,
+        "color": "#f5c518"
+      },
+      {
+        "shape": "band",
+        "v0": 0.44,
+        "v1": 0.5,
+        "color": "#e03a2a"
+      },
+      {
+        "shape": "band",
+        "v0": 0.5,
+        "v1": 0.53,
+        "color": "#1b2f9e"
+      },
+      {
+        "shape": "band",
+        "v0": 0.53,
+        "v1": 0.66,
+        "color": "#f5c518"
+      },
+      {
+        "shape": "band",
+        "v0": 0.66,
+        "v1": 0.7,
+        "color": "#1b2f9e"
+      },
+      {
+        "shape": "band",
+        "v0": 0.7,
+        "v1": 0.84,
+        "color": "#1f8fd6"
+      },
+      {
+        "shape": "band",
+        "v0": 0.84,
+        "v1": 1,
+        "color": "#1b2f9e"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.26,
+        "v0": 0.56,
+        "v1": 0.9,
+        "color": "#f5c518"
+      },
+      {
+        "shape": "crown",
+        "v1": 0.12,
+        "color": "#1b6fc2"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.3,
+        "color": "#1b2f9e"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2012_helmet_2017_Museo_Fernando_Alonso.jpg"
+    ],
+    "confidence": "high",
+    "notes": "Based on the 2012 race helmet displayed at the Museo Fernando Alonso. In reality the bands slope up from the back toward the visor, and there are thin white and silver pinstripes between the colours. A large red Santander box on each lower side dominates the side view and is omitted. His small 'FA' logo and Asturian cross are left out. The top has a silver/grey arrow graphic."
+  },
+  "vettel": {
+    "year": 2018,
+    "helmetType": "full-face",
+    "description": "A mostly white helmet with a German-flag stripe (gold, red, black) running over the top from front to back and repeated down the chin, and his number 5 drawn in thin gold outline on the side.",
+    "base": "#f5f5f3",
+    "visorSurround": "#1a1a1a",
+    "visorTint": "clear",
+    "layers": [
+      {
+        "shape": "stripe",
+        "u": 0.965,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.34,
+        "color": "#f2c200"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.34,
+        "color": "#dd0000"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.035,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.34,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.535,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.92,
+        "color": "#f2c200"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.92,
+        "color": "#dd0000"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.465,
+        "width": 0.03,
+        "v0": 0,
+        "v1": 0.92,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.965,
+        "width": 0.03,
+        "v0": 0.62,
+        "v1": 1,
+        "color": "#f2c200"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.03,
+        "v0": 0.62,
+        "v1": 1,
+        "color": "#dd0000"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.035,
+        "width": 0.03,
+        "v0": 0.62,
+        "v1": 1,
+        "color": "#111111"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.55,
+        "size": 0.2,
+        "text": "5",
+        "color": "#c9a64a"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_Helmet_2017.jpg",
+      "https://www.racefans.net/2022/11/20/sebastian-vettels-formula-1-career-in-helmets/",
+      "https://www.cmhelmets.com/product/sebastian-vettel-2018-bahrein-gp-f1-replica-helmet-full-size/"
+    ],
+    "confidence": "medium",
+    "notes": "From 2017-18 FIA rules allowed one special design a season, and Vettel's base design was white with 'the German flag across the helmet, from the chin to the back', a prancing horse on the left and his number on the right in gold-plated lines. The layout is based on a photo of his 2017 Ferrari helmet, which 2018 closely follows; I didn't find a clear photo of the 2018 base helmet. The flag stripes fade into each other with a gradient. The '5' is a thin outline, not a solid numeral. Sponsors omitted: a red Santander panel on the lower sides and white logo panels on the brow and upper sides."
+  },
+  "sainz": {
+    "year": 2022,
+    "helmetType": "full-face",
+    "description": "A Ferrari-red helmet with a gloss-black top and forehead and bold angled yellow blocks across the back and sides that form a stylised Spanish flag, with a large '55' on the rear flanks and a dark-red lower edge.",
+    "base": "#d71920",
+    "visorSurround": "#111111",
+    "visorTint": "dark",
+    "layers": [
+      {
+        "shape": "crown",
+        "v1": 0.28,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.2,
+        "v0": 0.28,
+        "v1": 0.4,
+        "color": "#111111"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.42,
+        "v0": 0.36,
+        "v1": 0.52,
+        "color": "#f7c600"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.3,
+        "v0": 0.62,
+        "v1": 0.72,
+        "color": "#f7c600"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.2,
+        "v0": 0.62,
+        "v1": 0.7,
+        "color": "#111111"
+      },
+      {
+        "shape": "text",
+        "u": 0.36,
+        "v": 0.45,
+        "size": 0.1,
+        "text": "55",
+        "color": "#d9a400"
+      },
+      {
+        "shape": "text",
+        "u": 0.64,
+        "v": 0.45,
+        "size": 0.1,
+        "text": "55",
+        "color": "#d9a400"
+      },
+      {
+        "shape": "text",
+        "u": 0.3,
+        "v": 0.58,
+        "size": 0.025,
+        "text": "CARLOS SAINZ",
+        "color": "#7a0c10"
+      },
+      {
+        "shape": "band",
+        "v0": 0.86,
+        "v1": 1,
+        "color": "#7a0c10"
+      }
+    ],
+    "sources": [
+      "https://www.cmhelmets.com/product/carlos-sainz-2023-f1-replica-helmet-full-size/",
+      "https://www.cmhelmets.com/product/carlos-sainz-2021-f1-replica-helmet/",
+      "https://www.cmhelmets.com/blog/best-carlos-sainz-helmets/",
+      "https://scuderiafans.com/in-pictures-carlos-sainz-new-ferrari-helmet-design-for-2022-f1-season/"
+    ],
+    "confidence": "medium",
+    "notes": "I couldn't get a clean image of the 2022 base helmet. The design is interpolated from replicas of his 2021 (matte) and 2023 (gloss) Ferrari helmets, which share the same black-red-yellow layout; sources say 2022 was the gloss version. The yellow shapes are really forward-slanting parallelogram slashes, approximated with stripes. Sponsors omitted: white lettering across the black top, a black visor strip, and a white oval on the chin."
+  },
+  "leclerc": {
+    "year": 2024,
+    "helmetType": "full-face",
+    "description": "A metallic Ferrari-red helmet with darker wine-red panels over the top, back and sides, a thin white centre stripe over the crown, white pinstripe outlines, and a large white '16' on each side; worn with a gold/orange iridium visor.",
+    "base": "#d4141c",
+    "visorSurround": "#2a0a0e",
+    "visorTint": "iridium-gold",
+    "layers": [
+      {
+        "shape": "crown",
+        "v1": 0.22,
+        "color": "#7e1426"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.3,
+        "v0": 0.2,
+        "v1": 0.8,
+        "color": "#7e1426"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.015,
+        "v0": 0,
+        "v1": 0.3,
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "stripe",
+        "u": 0.5,
+        "width": 0.015,
+        "v0": 0,
+        "v1": 0.3,
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "band",
+        "v0": 0.22,
+        "v1": 0.23,
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "band",
+        "v0": 0.72,
+        "v1": 0.73,
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.52,
+        "size": 0.16,
+        "text": "16",
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.52,
+        "size": 0.16,
+        "text": "16",
+        "color": "#f5f5f5"
+      },
+      {
+        "shape": "text",
+        "u": 0.3,
+        "v": 0.8,
+        "size": 0.035,
+        "text": "LECLERC",
+        "color": "#e8b8b8"
+      },
+      {
+        "shape": "band",
+        "v0": 0.94,
+        "v1": 1,
+        "color": "#5a0d18"
+      }
+    ],
+    "sources": [
+      "https://www.cmhelmets.com/product/charles-leclerc-2024-f1-replica-helmet-full-size/",
+      "https://www.bellcollectibles.com/p/charles-leclerc-2024-f1-season/",
+      "https://store.ferrari.com/en-be/cavallino/collectibles/replica-and-scale-models/helmets/2024-charles-leclerc-helmet-in-11-scale-F1342f09.html"
+    ],
+    "confidence": "medium",
+    "notes": "CM Helmets: the 2024 design follows 2022-23 but adds 'three big sections painted in wine red: the back, sides and the top'. Colours come from replica photos. The '16' is a big angular numeral that runs back from the eye port, and the white pinstripes form angular panels, not simple rings. Sponsors omitted: a yellow Ferrari shield on the forehead, a red visor strip, white lettering across the brow and sides, and small white chin logos. Leclerc often wore one-off race specials (Monaco, Miami, Monza); this is the season base design."
+  },
+  "hamilton": {
+    "year": 2025,
+    "helmetType": "full-face",
+    "description": "A bright Modena-yellow helmet, the colour of his earliest karting helmets, with thin red pinstripes and angular red lines on the top and chin, and his number 44 on the top.",
+    "base": "#f2d51c",
+    "visorSurround": "#111111",
+    "visorTint": "dark",
+    "layers": [
+      {
+        "shape": "band",
+        "v0": 0.28,
+        "v1": 0.292,
+        "color": "#d7261e"
+      },
+      {
+        "shape": "chevron",
+        "v": 0.14,
+        "depth": 0.08,
+        "thickness": 0.012,
+        "color": "#d7261e"
+      },
+      {
+        "shape": "text",
+        "u": 0.5,
+        "v": 0.12,
+        "size": 0.08,
+        "text": "44",
+        "color": "#d7261e"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.12,
+        "v0": 0.6,
+        "v1": 0.66,
+        "color": "#d7261e"
+      },
+      {
+        "shape": "band",
+        "v0": 0.72,
+        "v1": 0.732,
+        "color": "#d7261e"
+      },
+      {
+        "shape": "band",
+        "v0": 0.9,
+        "v1": 0.91,
+        "color": "#d7261e"
+      }
+    ],
+    "sources": [
+      "https://commons.wikimedia.org/wiki/File:Signed_Lewis_Hamilton_2025_Ferrari_helmet_at_at_Culture_Kings_Melbourne_(028A8256).jpg",
+      "https://www.the-race.com/formula-1/lewis-hamilton-ferrari-f1-helmet-design/",
+      "https://www.planetf1.com/news/lewis-hamilton-ferrari-yellow-helmet-design-origin",
+      "https://www.motorsportweek.com/2025/01/22/lewis-hamilton-revives-original-helmet-design-on-ferrari-f1-debut/"
+    ],
+    "confidence": "high",
+    "notes": "Unveiled 22 January 2025 for his Ferrari debut: a Modena-yellow base with red lines, the Ferrari horse on the front, his wings logo and #44 on the top. He wore many race specials during 2025; this is the launch/base design. Sponsors omitted: a yellow-and-white logo strip across the visor top and white/black logos on the chin. The Ferrari shield on the forehead is a brand mark and is left out."
+  }
+}

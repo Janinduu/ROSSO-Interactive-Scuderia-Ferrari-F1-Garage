@@ -5,31 +5,19 @@ import {
   CylinderGeometry,
   MeshPhysicalMaterial,
   MeshStandardMaterial,
-  PMREMGenerator,
   Quaternion,
   Vector3,
 } from "three";
-import type { BufferGeometry, Material, Texture, WebGLRenderer } from "three";
+import type { BufferGeometry, Material, Texture } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { studioEnvironment } from "../studio";
 import { aerofoil, loft, tube, tyre } from "./geometry";
 import type { Ring } from "./geometry";
 import type { CarSpec, WingSpec } from "./families";
+import Helmet from "../helmets/Helmet";
+import type { HelmetDesign } from "../helmets/helmetArt";
 
 type V3 = [number, number, number];
-
-// One studio environment per renderer, for paint and metal reflections only.
-const environments = new WeakMap<WebGLRenderer, Texture>();
-function studioEnvironment(gl: WebGLRenderer) {
-  let env = environments.get(gl);
-  if (!env) {
-    const pmrem = new PMREMGenerator(gl);
-    env = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-    pmrem.dispose();
-    environments.set(gl, env);
-  }
-  return env;
-}
 
 function useMaterials(env: Texture) {
   const mats = useMemo(() => {
@@ -64,7 +52,6 @@ function useMaterials(env: Texture) {
       brake: std("#2a2a2c", 0.6, 0.3),
       caliper: std("#8a1b20", 0.4, 0.5),
       helmet: std("#e9e5dc", 0.3, 0.2, 0.8),
-      visor: std("#0b0c0e", 0.08, 0.6, 1.2),
       glass: new MeshPhysicalMaterial({
         color: "#cfd8df",
         roughness: 0.05,
@@ -305,7 +292,7 @@ function Suspension({ spec, mats }: { spec: CarSpec; mats: Mats }) {
 // A historically informed procedural car assembled from an era CarSpec.
 // Component groups use the node names from spec §11.1 so the exploded view
 // can move them independently.
-export default function CarModel({ spec }: { spec: CarSpec }) {
+export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: HelmetDesign }) {
   const { gl } = useThree();
   const env = useMemo(() => studioEnvironment(gl), [gl]);
   const mats = useMaterials(env);
@@ -445,12 +432,15 @@ export default function CarModel({ spec }: { spec: CarSpec }) {
         </group>
         {/* Driver's helmet. */}
         <group position={[spec.driver.x, spec.driver.y, 0]}>
-          <mesh material={mats.helmet} castShadow>
-            <sphereGeometry args={[0.12, 24, 16]} />
-          </mesh>
-          <mesh material={mats.visor} rotation={[0, 0, 0]}>
-            <sphereGeometry args={[0.122, 20, 6, Math.PI * 0.7, Math.PI * 0.6, Math.PI * 0.4, Math.PI * 0.2]} />
-          </mesh>
+          {helmet ? (
+            <group scale={0.125}>
+              <Helmet design={helmet} />
+            </group>
+          ) : (
+            <mesh material={mats.helmet} castShadow>
+              <sphereGeometry args={[0.12, 24, 16]} />
+            </mesh>
+          )}
         </group>
         {spec.windscreen && (
           <Box

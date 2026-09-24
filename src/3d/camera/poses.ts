@@ -34,6 +34,8 @@ export const poses = {
   identity: (bay: number) => relative(bay, [-1.2, 2.9, 4.6], [0, 2.3, -3.7]),
   /** Low three-quarter front view of the car. */
   carReveal: (bay: number) => relative(bay, [-5.2, 1.2, 4.4], [0.2, 0.5, 0]),
+  /** Close on the helmet pedestal (front-right of the plinth). */
+  helmet: (bay: number) => relative(bay, [2.0, 1.75, 3.4], [3.75, 1.3, 1.5]),
   /** Close study of one component, approached from its end of the car. */
   part: (bay: number, part: readonly number[]) => {
     const rear = part[0] > 0.5;
