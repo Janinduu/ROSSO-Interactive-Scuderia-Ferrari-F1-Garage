@@ -1,280 +1,437 @@
 {
   "cars": {
     "125 F1": {
-      "base": "#b3141b",
+      "base": "#a8151c",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "wheels": "#c4c4c4"
       },
       "stripes": [],
-      "numberSlot": "sidepodSide",
-      "shield": [
-        "noseTop"
-      ],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1950)",
       "raceNumbers": {
         "ascari": 40
       },
-      "numberNote": "Numbers assigned per race. Ascari #40 at Monaco 1950 (2nd place). White numerals painted directly on the body: tail/cockpit sides and nose cowl.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/1950_Monaco_Grand_Prix",
-        "https://en.wikipedia.org/wiki/1950_Formula_One_season"
-      ],
-      "confidence": "medium"
-    },
-    "275 F1": {
-      "base": "#b3141b",
-      "finish": "gloss",
-      "zones": {
-        "wheels": "#c8c8c8"
+      "numberNote": "Monaco GP 1950 (2nd, Ferrari's first World Championship race): #40, painted plain white on both sides of the tail, across the top of the tail and on the nose above the grille. Ascari also raced the 125 at the Swiss GP 1950 as #18.",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
       },
-      "stripes": [],
-      "numberSlot": "sidepodSide",
       "shield": [
-        "noseTop"
+        "noseSide"
       ],
       "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1950)",
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres.",
+      "notes": "Plain dark rosso corsa, Borrani wire wheels with polished alloy rims, chrome eggcrate grille. Only a tiny yellow shield on the nose flank beside the grille.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1950_Monaco_Grand_Prix",
+        "https://www.gpreplicas.org/50s-era/ferrari-125-f1/gp162/",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/330216"
+      ],
+      "confidence": "high"
+    },
+    "275 F1": {
+      "base": "#a8151c",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c4c4c4"
+      },
+      "stripes": [],
       "raceNumbers": {
         "ascari": 4
       },
-      "numberNote": "Numbers assigned per race. Ascari #4 at the 1950 Belgian GP (the car's only race for him). White numerals painted on body sides and nose.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/1950_Belgian_Grand_Prix",
-        "https://en.wikipedia.org/wiki/1950_Formula_One_season"
-      ],
-      "confidence": "low"
-    },
-    "375 F1": {
-      "base": "#b3141b",
-      "finish": "gloss",
-      "zones": {
-        "wheels": "#c8c8c8"
+      "numberNote": "Belgian GP 1950 at Spa (5th): #4, plain white on both sides of the tail, top of the tail and low on the nose sides. The 275 used the same body as the 125.",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
       },
-      "stripes": [],
-      "numberSlot": "sidepodSide",
       "shield": [
-        "noseTop"
+        "noseSide"
       ],
       "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1950-51)",
-      "raceNumbers": {
-        "ascari": 2
-      },
-      "numberNote": "Numbers assigned per race; main season 1951. Ascari #2 winning the 1951 Italian GP at Monza; #71 winning the 1951 German GP (teammates 72-74). He first drove the 375 at Monza 1950. White numerals painted directly on the body sides and nose.",
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres.",
+      "notes": "Same look as the 125 F1: plain dark rosso corsa, wire wheels, no nose band.",
       "sources": [
-        "https://en.wikipedia.org/wiki/1951_Italian_Grand_Prix",
-        "https://en.wikipedia.org/wiki/1951_German_Grand_Prix",
-        "https://en.wikipedia.org/wiki/1951_Formula_One_season"
+        "https://en.wikipedia.org/wiki/1950_Belgian_Grand_Prix",
+        "https://www.gpreplicas.org/50s-era/ferrari-125-f1/gp162/"
       ],
       "confidence": "medium"
     },
-    "375 Indianapolis": {
-      "base": "#b3141b",
+    "375 F1": {
+      "base": "#a8151c",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "nose": "#3a78c9",
+        "wheels": "#c4c4c4"
       },
-      "stripes": [],
-      "numberSlot": "sidepodSide",
+      "stripes": [
+        {
+          "zone": "nose",
+          "color": "#3a78c9",
+          "note": "blue identification band around the nose and grille surround at Monza 1951 (Ascari's colour, to match his blue helmet)"
+        }
+      ],
+      "raceNumbers": {
+        "ascari": 2
+      },
+      "numberNote": "Chosen race: Italian GP 1951 at Monza, Ascari won as #2 (large white numbers on the tail sides and top, plus the nose sides and top). Other 1951 races: German GP win #71 (Nurburgring). 1950 Italian GP (secondary car): Ascari started #16, retired, then took over Serafini's #48 to finish 2nd.",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
       "shield": [
-        "noseTop"
+        "noseSide"
       ],
       "decals": [],
-      "tobaccoNote": "none",
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres.",
+      "notes": "Ferrari used coloured nose bands on and off in 1951 to identify drivers (Ascari blue, Gonzalez yellow, Villoresi white, Taruffi green). There were no bands at the 1951 British GP.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1951_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1950_Italian_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:1951-09-16_Monza_WINNER_Ferrari_375_Ascari.jpg",
+        "https://www.gpreplicas.org/50s-era/ferrari-375/gp175/",
+        "https://forums.autosport.com/topic/63774-ferrari-nose-colours/",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/366443"
+      ],
+      "confidence": "high"
+    },
+    "375 Indianapolis": {
+      "base": "#b3171d",
+      "finish": "gloss",
+      "zones": {
+        "nose": "#7fb0dd",
+        "wheels": "#c4c4c4"
+      },
+      "stripes": [
+        {
+          "zone": "nose",
+          "color": "#7fb0dd",
+          "note": "pale blue ring around the nose air intake"
+        }
+      ],
       "raceNumbers": {
         "ascari": 12
       },
-      "numberNote": "Ascari #12 at the 1952 Indianapolis 500 (works entry; retired, broken wheel after 40 laps). White #12 on the body sides and nose. The three privately sold sister cars wore different liveries (e.g. the Grant Piston Ring Special); this entry describes Ascari's red works car.",
+      "numberNote": "Indianapolis 500 1952: #12, large white numbers on the nose sides and tail sides.",
+      "numberSlot": "noseSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Ferrari Special",
+          "color": "#f3efe4",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Firestone tyres (Indy).",
+      "notes": "'Ferrari Special' was the entry name, painted in white script on the bonnet/cowl sides. It is not a sponsor.",
       "sources": [
         "https://en.wikipedia.org/wiki/1952_Indianapolis_500",
-        "https://www.goodwood.com/grr/event-coverage/goodwood-revival/ferraris-distinctive-indy-500-racer/",
-        "https://www.spotmodel.com/product_info.php?products_id=54362&language=en"
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/621008",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/222263"
       ],
-      "confidence": "low"
+      "confidence": "high"
     },
     "500 F2": {
-      "base": "#b3141b",
+      "base": "#ad161d",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "wheels": "#c4c4c4"
       },
       "stripes": [],
-      "numberSlot": "sidepodSide",
-      "shield": [
-        "noseTop"
-      ],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1952-53)",
       "raceNumbers": {
         "ascari": 101,
         "hawthorn": 16
       },
-      "numberNote": "Numbers assigned per race. Ascari #101 at the 1952 German GP (win that clinched his first title); #10 at the 1953 French GP. Hawthorn #16 winning the 1953 French GP at Reims. White numerals painted directly on the body sides and nose.",
+      "numberNote": "Ascari's main season is 1952. He won the German GP at the Nurburgring as #101 to clinch his first title (white numbers on the tail sides and top). Ascari 1952: French #8, British #15, German #101, Dutch #2, Italian #12. Ascari 1953: Argentine #10, French #10, British #5, Swiss #46 (clinched the title). Hawthorn 1953: won the French GP at Reims as #16 (white numbers painted straight on the nose top and the tail). At the British GP 1953 he was #8, with a black number on a white roundel on the nose (the British GP used roundels).",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres.",
+      "notes": "Plain rosso corsa with no nose band at the chosen races. Yellow shield on the scuttle sides beside the cockpit.",
       "sources": [
         "https://en.wikipedia.org/wiki/1952_German_Grand_Prix",
         "https://en.wikipedia.org/wiki/1953_French_Grand_Prix",
-        "https://en.wikipedia.org/wiki/Ferrari_Tipo_500"
+        "https://en.wikipedia.org/wiki/1953_Swiss_Grand_Prix",
+        "https://www.gpreplicas.org/50s-era/ferrari-500-f2/gp1233/",
+        "https://www.gpreplicas.org/50s-era/ferrari-500-f2/gp81/",
+        "https://library.revsinstitute.org/french-grand-prix/431474",
+        "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Finish_Askari,_Bestanddeelnr_905-2691.jpg"
       ],
-      "confidence": "medium"
+      "confidence": "high"
     },
     "625 F1": {
-      "base": "#b3141b",
+      "base": "#ad161d",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "wheels": "#c4c4c4"
       },
       "stripes": [],
-      "numberSlot": "sidepodSide",
-      "shield": [
-        "noseTop"
-      ],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1954)",
       "raceNumbers": {
         "ascari": 34,
         "hawthorn": 40
       },
-      "numberNote": "Numbers assigned per race. Italian GP 1954: Ascari #34 (his only 1954 Ferrari start, retired) and Hawthorn #40 (2nd). Hawthorn also drove a 625 at the 1955 British GP (shared with Castellotti). White numerals on body sides and nose.",
+      "numberNote": "Hawthorn's main season is 1954. He was 2nd in the Italian GP at Monza as #40 (white numbers painted straight on the nose sides and the tail). Ascari's one-off Ferrari drive at Monza 1954 was #34. Other Hawthorn 1954 races: British GP #11 (2nd, black-on-white roundels), Swiss GP #22. Hawthorn 1955 (secondary car): British GP at Aintree #16, shared with Castellotti, with black-on-white roundels on the nose.",
+      "numberSlot": "noseSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres in 1954.",
+      "notes": "Plain rosso corsa. At the 1954 French GP the Ferraris had driver-colour noses (Hawthorn green), but Monza photos show no band.",
       "sources": [
-        "https://en.wikipedia.org/wiki/1954_Italian_Grand_Prix"
+        "https://en.wikipedia.org/wiki/1954_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1954_British_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1955_British_Grand_Prix",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/338004",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/326691",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/438443",
+        "https://www.gpreplicas.org/50s-era/ferrari-625/gp152/"
       ],
       "confidence": "medium"
     },
     "553 F1": {
-      "base": "#b3141b",
+      "base": "#ad161d",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "wheels": "#c4c4c4"
       },
       "stripes": [],
-      "numberSlot": "sidepodSide",
-      "shield": [
-        "noseTop"
-      ],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1954)",
       "raceNumbers": {
         "hawthorn": 38
       },
-      "numberNote": "Numbers assigned per race. Hawthorn #38 winning the 1954 Spanish GP at Pedralbes. The 'Squalo' has wide pannier-style sidepods; white numerals on the sidepod/body sides and nose.",
+      "numberNote": "Spanish GP 1954 at Pedralbes, Hawthorn won as #38: large white numbers straight on the nose sides and top and on the tail sides and top. Hawthorn also raced a 553 at the French GP 1954 as #6, reportedly with a green identification nose.",
+      "numberSlot": "noseSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres.",
+      "notes": "Plain rosso corsa 'Squalo' with no nose band in Spain.",
       "sources": [
-        "https://en.wikipedia.org/wiki/1954_Spanish_Grand_Prix"
+        "https://en.wikipedia.org/wiki/1954_Spanish_Grand_Prix",
+        "https://www.gpreplicas.org/50s-era/ferrari-553/gp161/",
+        "https://forums.autosport.com/topic/63774-ferrari-nose-colours/",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/415156"
       ],
       "confidence": "medium"
     },
     "555 F1": {
-      "base": "#b3141b",
+      "base": "#ad161d",
       "finish": "gloss",
       "zones": {
-        "wheels": "#c8c8c8"
+        "nose": "#f2c200",
+        "wheels": "#c4c4c4"
       },
-      "stripes": [],
-      "numberSlot": "sidepodSide",
-      "shield": [
-        "noseTop"
+      "stripes": [
+        {
+          "zone": "nose",
+          "color": "#f2c200",
+          "note": "yellow identification nose tip"
+        }
       ],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1955)",
       "raceNumbers": {
         "hawthorn": 2
       },
-      "numberNote": "Numbers assigned per race. Hawthorn #2 at the 1955 Dutch GP. White numerals on the sidepod/body sides and nose.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/1955_Dutch_Grand_Prix"
-      ],
-      "confidence": "low"
-    },
-    "D50": {
-      "base": "#b3141b",
-      "finish": "gloss",
-      "zones": {
-        "wheels": "#c8c8c8"
+      "numberNote": "Dutch GP 1955 at Zandvoort, Hawthorn was 7th as #2: a black number on a white roundel on the tail sides and top. Italian GP 1955 at Monza: #6 (retired, gearbox; Englebert tyres by then).",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#111111",
+        "background": "#ffffff",
+        "roundel": true
       },
-      "stripes": [],
-      "numberSlot": "sidepodSide",
       "shield": [
-        "noseTop"
+        "cockpitSide"
       ],
       "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1956)",
-      "raceNumbers": {
-        "fangio": 1
-      },
-      "numberNote": "Numbers assigned per race. Fangio #1 winning the 1956 German GP at the Nurburgring; at the title-deciding Italian GP he was entered in #22 but finished 2nd in Collins' car (#26). White numerals on the nose and the faired side pannier tanks.",
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Pirelli tyres at Zandvoort; Englebert by Monza 1955.",
+      "notes": "The yellow nose and black #2 on white come from the Tecnomodel and Brumm replicas of this car. A forum post suggests Brumm's attribution might mix it up with Gonzalez's similar 1954 French GP 553, so treat it with care.",
       "sources": [
-        "https://en.wikipedia.org/wiki/1956_German_Grand_Prix"
+        "https://en.wikipedia.org/wiki/1955_Dutch_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1955_Italian_Grand_Prix",
+        "https://www.hlj.com/1-18-scale-ferrari-f1-555-supersqualo-dutch-gp-1955-2-mike-hawthorn-temtm18-243c",
+        "https://www.ebay.co.uk/p/1308018409",
+        "https://forums.autosport.com/topic/63774-ferrari-nose-colours/"
       ],
       "confidence": "medium"
     },
-    "801 F1": {
+    "D50": {
+      "base": "#b5171e",
       "finish": "gloss",
-      "stripes": [],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1957)",
-      "base": "#b3141b",
       "zones": {
-        "wheels": "#c8c8c8"
+        "nose": "#4a90d9",
+        "wheels": "#c4c4c4"
       },
+      "stripes": [
+        {
+          "zone": "nose",
+          "color": "#4a90d9",
+          "note": "light blue nose tip (Argentine colours), German GP 1956"
+        },
+        {
+          "zone": "noseTop",
+          "color": "#f5c400",
+          "note": "yellow band just behind the blue nose tip"
+        }
+      ],
+      "raceNumbers": {
+        "fangio": 1
+      },
+      "numberNote": "Chosen race: German GP 1956 at the Nurburgring, Fangio won from pole as #1 in a long-nose car. A narrow white '1' was painted straight on the nose top and on the pannier sidepods. Fangio 1956: Argentine #34 (Musso's car, win), Monaco #20 then Collins's #26, Belgian #2, French #10, British #1 (win; black 1 on a white roundel, plain red nose), German #1 (win), Italian #22, then Collins's #26 (2nd, title clinched).",
       "numberSlot": "sidepodSide",
+      "numberStyle": {
+        "color": "#ffffff",
+        "background": null,
+        "roundel": false
+      },
       "shield": [
-        "noseTop"
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Englebert tyres.",
+      "notes": "Lancia-Ferrari D50 with pannier fuel tanks between the wheels. Each race had different driver identification colours. The blue and yellow nose was specific to Fangio at the Nurburgring.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1956_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1956_British_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1956_Italian_Grand_Prix",
+        "https://www.cmc-modelcarshop.de/en/CMC-New-pre-order-2018/CMC-Ferrari-D50-1956-long-nose-GP-Germany-1-Fangio.html",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/425653",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/454326",
+        "https://www.gpreplicas.org/50s-era/ferrari-lancia-d50/gp080/",
+        "https://forums.autosport.com/topic/63774-ferrari-nose-colours/"
+      ],
+      "confidence": "high"
+    },
+    "801 F1": {
+      "base": "#b5171e",
+      "finish": "gloss",
+      "zones": {
+        "nose": "#5aa6e0",
+        "wheels": "#c4c4c4"
+      },
+      "stripes": [
+        {
+          "zone": "nose",
+          "color": "#5aa6e0",
+          "note": "light blue identification nose band"
+        }
       ],
       "raceNumbers": {
         "hawthorn": 8
       },
-      "numberNote": "Numbers assigned per race. Hawthorn #8 at the 1957 German GP (2nd behind Fangio's famous charge). White numerals on nose and body/pannier sides.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/1957_German_Grand_Prix"
-      ],
-      "confidence": "low"
-    },
-    "246 F1": {
-      "finish": "gloss",
-      "stripes": [],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1958)",
-      "base": "#b3141b",
-      "zones": {
-        "wheels": "#c8c8c8"
+      "numberNote": "German GP 1957 at the Nurburgring, Hawthorn was 2nd as #8: black numbers on white roundels on the nose top, tail sides and tail top. Other 1957 races: French #14 (4th), British #10 (3rd).",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#111111",
+        "background": "#ffffff",
+        "roundel": true
       },
-      "numberSlot": "sidepodSide",
       "shield": [
-        "noseTop"
+        "cockpitSide"
       ],
-      "raceNumbers": {
-        "hawthorn": 6,
-        "phil_hill": 4
-      },
-      "numberNote": "Numbers assigned per race. Moroccan GP 1958 (title decider): Hawthorn #6 (2nd, clinched the championship), Phil Hill #4 (3rd). Hawthorn wore #3 at the 1958 German GP. White numerals on the nose and body sides.",
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Englebert tyres.",
+      "notes": "The light blue nose comes from the GP Replicas model of this car; contemporary black-and-white photos cannot confirm the colour. Collins's #7 sister car had a different nose.",
       "sources": [
-        "https://en.wikipedia.org/wiki/1958_Moroccan_Grand_Prix",
-        "https://en.wikipedia.org/wiki/1958_German_Grand_Prix"
+        "https://en.wikipedia.org/wiki/1957_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1957_British_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1957_French_Grand_Prix",
+        "https://www.gpreplicas.org/50s-era/ferrari-801/gp166/",
+        "https://commons.wikimedia.org/wiki/File:Hawthorn_and_Collins_Ferraris_Nurburgring_1957.jpg"
       ],
       "confidence": "medium"
     },
-    "Dino 156 F2": {
+    "246 F1": {
+      "base": "#b5171e",
       "finish": "gloss",
-      "stripes": [],
-      "decals": [],
-      "tobaccoNote": "none (no sponsorship in 1958)",
-      "base": "#b3141b",
       "zones": {
-        "wheels": "#c8c8c8"
+        "wheels": "#c4c4c4"
       },
-      "numberSlot": "sidepodSide",
+      "stripes": [],
+      "raceNumbers": {
+        "hawthorn": 6,
+        "phil_hill": 18
+      },
+      "numberNote": "Hawthorn won the 1958 title at the Moroccan GP, finishing 2nd as #6: black number on a white roundel on the tail sides and top, and on the nose top. Phil Hill was 3rd with fastest lap at the Italian GP at Monza as #18 (his first 246 start). At Morocco he was #4. Other Hawthorn 1958 numbers: Monaco #38, Dutch #5, French #4 (win), British #2, German #3, Italian #14.",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#111111",
+        "background": "#ffffff",
+        "roundel": true
+      },
       "shield": [
-        "noseTop"
+        "cockpitSide"
       ],
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Englebert tyres.",
+      "notes": "Plain rosso corsa Dino 246 with no nose band at Morocco. Photos show black-on-white roundels throughout 1958.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1958_Moroccan_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1958_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1958_French_Grand_Prix",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/422496",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/447593",
+        "https://www.gpreplicas.org/50s-era/ferrari-246/gp88/"
+      ],
+      "confidence": "high"
+    },
+    "Dino 156 F2": {
+      "base": "#b5171e",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c4c4c4"
+      },
+      "stripes": [],
       "raceNumbers": {
         "phil_hill": 23
       },
-      "numberNote": "Phil Hill #23 in the Formula 2 class of the 1958 German GP (his F1 World Championship debut race for Ferrari). White numerals on nose and body sides.",
-      "sources": [
-        "https://en.wikipedia.org/wiki/1958_German_Grand_Prix"
+      "numberNote": "German GP 1958, F2 class at the Nurburgring: Phil Hill was #23 (9th overall), a black number on a white roundel on the tail sides and on the nose top.",
+      "numberSlot": "engineCoverSide",
+      "numberStyle": {
+        "color": "#111111",
+        "background": "#ffffff",
+        "roundel": true
+      },
+      "shield": [
+        "cockpitSide"
       ],
-      "confidence": "low"
+      "decals": [],
+      "tobaccoNote": "none - no tobacco (or any commercial) branding in this era; works Ferraris carried no sponsor decals on the bodywork. Tyre maker names appeared only on the tyre sidewalls. Englebert tyres.",
+      "notes": "Plain rosso corsa. Small yellow shield on the scuttle sides, Borrani wire wheels.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1958_German_Grand_Prix",
+        "https://cdm17257.contentdm.oclc.org/digital/collection/p17257coll1/id/267830",
+        "https://www.goodingco.com/lot/photograph-of-phil-hill-driving-the-ferrari-156-dino-f2-at-the-1958-german-grand-prix-mounted/"
+      ],
+      "confidence": "high"
     },
     "256 F1": {
       "base": "#c21d19",
