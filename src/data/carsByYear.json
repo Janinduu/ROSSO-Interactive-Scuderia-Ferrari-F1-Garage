@@ -850,6 +850,14 @@
         "formula1-sf-25-launch"
       ],
       "note": ""
+    },
+    "2026": {
+      "primary": "SF-26",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-26"
+      ],
+      "note": ""
     }
   },
   "hamilton": {
@@ -863,6 +871,14 @@
         "formula1-sf-25-launch"
       ],
       "note": "Hamilton's first Ferrari season."
+    },
+    "2026": {
+      "primary": "SF-26",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-26"
+      ],
+      "note": ""
     }
   },
   "_sources": {
@@ -1975,6 +1991,12 @@
       "publisher": "Wikipedia",
       "url": "https://en.wikipedia.org/wiki/Ferrari_F2004",
       "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf-26": {
+      "title": "SF-26",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf-26",
+      "accessedAt": "2026-09-25"
     }
   },
   "_cars": {
@@ -2569,6 +2591,12 @@
       "sourceIds": [
         "ferrari-sf-25",
         "formula1-sf-25-launch"
+      ]
+    },
+    "SF-26": {
+      "year": 2026,
+      "sourceIds": [
+        "ferrari-sf-26"
       ]
     }
   }

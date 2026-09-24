@@ -1,0 +1,4514 @@
+{
+  "cars": {
+    "125 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1950)",
+      "raceNumbers": {
+        "ascari": 40
+      },
+      "numberNote": "Numbers assigned per race. Ascari #40 at Monaco 1950 (2nd place). White numerals painted directly on the body: tail/cockpit sides and nose cowl.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1950_Monaco_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1950_Formula_One_season"
+      ],
+      "confidence": "medium"
+    },
+    "275 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1950)",
+      "raceNumbers": {
+        "ascari": 4
+      },
+      "numberNote": "Numbers assigned per race. Ascari #4 at the 1950 Belgian GP (the car's only race for him). White numerals painted on body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1950_Belgian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1950_Formula_One_season"
+      ],
+      "confidence": "low"
+    },
+    "375 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1950-51)",
+      "raceNumbers": {
+        "ascari": 2
+      },
+      "numberNote": "Numbers assigned per race; main season 1951. Ascari #2 winning the 1951 Italian GP at Monza; #71 winning the 1951 German GP (teammates 72-74). He first drove the 375 at Monza 1950. White numerals painted directly on the body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1951_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1951_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1951_Formula_One_season"
+      ],
+      "confidence": "medium"
+    },
+    "375 Indianapolis": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none",
+      "raceNumbers": {
+        "ascari": 12
+      },
+      "numberNote": "Ascari #12 at the 1952 Indianapolis 500 (works entry; retired, broken wheel after 40 laps). White #12 on the body sides and nose. The three privately sold sister cars wore different liveries (e.g. the Grant Piston Ring Special); this entry describes Ascari's red works car.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1952_Indianapolis_500",
+        "https://www.goodwood.com/grr/event-coverage/goodwood-revival/ferraris-distinctive-indy-500-racer/",
+        "https://www.spotmodel.com/product_info.php?products_id=54362&language=en"
+      ],
+      "confidence": "low"
+    },
+    "500 F2": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1952-53)",
+      "raceNumbers": {
+        "ascari": 101,
+        "hawthorn": 16
+      },
+      "numberNote": "Numbers assigned per race. Ascari #101 at the 1952 German GP (win that clinched his first title); #10 at the 1953 French GP. Hawthorn #16 winning the 1953 French GP at Reims. White numerals painted directly on the body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1952_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1953_French_Grand_Prix",
+        "https://en.wikipedia.org/wiki/Ferrari_Tipo_500"
+      ],
+      "confidence": "medium"
+    },
+    "625 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1954)",
+      "raceNumbers": {
+        "ascari": 34,
+        "hawthorn": 40
+      },
+      "numberNote": "Numbers assigned per race. Italian GP 1954: Ascari #34 (his only 1954 Ferrari start, retired) and Hawthorn #40 (2nd). Hawthorn also drove a 625 at the 1955 British GP (shared with Castellotti). White numerals on body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1954_Italian_Grand_Prix"
+      ],
+      "confidence": "medium"
+    },
+    "553 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1954)",
+      "raceNumbers": {
+        "hawthorn": 38
+      },
+      "numberNote": "Numbers assigned per race. Hawthorn #38 winning the 1954 Spanish GP at Pedralbes. The 'Squalo' has wide pannier-style sidepods; white numerals on the sidepod/body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1954_Spanish_Grand_Prix"
+      ],
+      "confidence": "medium"
+    },
+    "555 F1": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1955)",
+      "raceNumbers": {
+        "hawthorn": 2
+      },
+      "numberNote": "Numbers assigned per race. Hawthorn #2 at the 1955 Dutch GP. White numerals on the sidepod/body sides and nose.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1955_Dutch_Grand_Prix"
+      ],
+      "confidence": "low"
+    },
+    "D50": {
+      "base": "#b3141b",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "stripes": [],
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1956)",
+      "raceNumbers": {
+        "fangio": 1
+      },
+      "numberNote": "Numbers assigned per race. Fangio #1 winning the 1956 German GP at the Nurburgring; at the title-deciding Italian GP he was entered in #22 but finished 2nd in Collins' car (#26). White numerals on the nose and the faired side pannier tanks.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1956_German_Grand_Prix"
+      ],
+      "confidence": "medium"
+    },
+    "801 F1": {
+      "finish": "gloss",
+      "stripes": [],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1957)",
+      "base": "#b3141b",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "raceNumbers": {
+        "hawthorn": 8
+      },
+      "numberNote": "Numbers assigned per race. Hawthorn #8 at the 1957 German GP (2nd behind Fangio's famous charge). White numerals on nose and body/pannier sides.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1957_German_Grand_Prix"
+      ],
+      "confidence": "low"
+    },
+    "246 F1": {
+      "finish": "gloss",
+      "stripes": [],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1958)",
+      "base": "#b3141b",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "raceNumbers": {
+        "hawthorn": 6,
+        "phil_hill": 4
+      },
+      "numberNote": "Numbers assigned per race. Moroccan GP 1958 (title decider): Hawthorn #6 (2nd, clinched the championship), Phil Hill #4 (3rd). Hawthorn wore #3 at the 1958 German GP. White numerals on the nose and body sides.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1958_Moroccan_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1958_German_Grand_Prix"
+      ],
+      "confidence": "medium"
+    },
+    "Dino 156 F2": {
+      "finish": "gloss",
+      "stripes": [],
+      "decals": [],
+      "tobaccoNote": "none (no sponsorship in 1958)",
+      "base": "#b3141b",
+      "zones": {
+        "wheels": "#c8c8c8"
+      },
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "noseTop"
+      ],
+      "raceNumbers": {
+        "phil_hill": 23
+      },
+      "numberNote": "Phil Hill #23 in the Formula 2 class of the 1958 German GP (his F1 World Championship debut race for Ferrari). White numerals on nose and body sides.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1958_German_Grand_Prix"
+      ],
+      "confidence": "low"
+    },
+    "256 F1": {
+      "base": "#c21d19",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c9c9c4"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "phil_hill": 26
+      },
+      "numberNote": "Numbers were assigned per race by the organisers. Phil Hill 1959: French GP (Reims) #26, 2nd place (the number used here); Italian GP (Monza) #32, 2nd. 1960: Italian GP (Monza) #20, his win in the front-engined Dino 246. Period cars mostly had large white numerals painted straight onto the red nose top and body sides. The Ferrari museum car shows a black number on a white roundel, which some events used.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsor or tobacco branding in 1959-60; plain rosso corsa with a small yellow scudetto on the nose and scuttle side, and silver Borrani wire wheels).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_246_F1",
+        "https://en.wikipedia.org/wiki/1959_French_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1959_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1960_Italian_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_246_F1_front-left_Enzo_Ferrari_Museum.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_246_Dino_at_Goodwood_Revival_2012.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "156 F1": {
+      "base": "#c9261c",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c9c9c4"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "phil_hill": 2
+      },
+      "numberNote": "Numbers were assigned per race. Phil Hill 1961: Italian GP (Monza, where he clinched the title) #2, the number used here. 1962: Dutch GP #1 (3rd place). Large white numerals were painted straight onto the red, on top of the sharknose and on the body sides behind the cockpit.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (1961-62 cars carried no sponsor names; Dunlop tyres and Shell fuel were not shown as body decals. The only marking is a small yellow scudetto on the nose tip and on the flank ahead of the cockpit. Wheels are silver Borrani wire wheels.)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_156_F1",
+        "https://en.wikipedia.org/wiki/1961_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1962_Dutch_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_156_Sharknose.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_Tipo_156_Sharknose_(1961)_Solitude_Revival_2019_IMG_1607.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "156 F1-63": {
+      "base": "#cc271d",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#bfc2c4"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "surtees": 7
+      },
+      "numberNote": "Numbers were assigned per race. Surtees 1963: German GP (Nurburgring, his win) #7, the number used here; Dutch GP #2. White numerals were painted straight onto the red nose top and body sides. By mid-1963 the car ran light-coloured cast alloy wheels rather than wire wheels.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsor names on the bodywork; Dunlop tyres and Shell fuel only; small scudetto on the nose).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_156_F1",
+        "https://en.wikipedia.org/wiki/1963_German_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:John_Surtees_and_Richie_Ginther_at_the_1963_Dutch_Grand_Prix.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "158 F1": {
+      "base": "#d12a1f",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#8fd0dc"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "surtees": 2
+      },
+      "numberNote": "Numbers were assigned per race. Surtees 1964: Italian GP (Monza, his win in the red works car) #2, the number used here; German GP win #7; Mexican GP #7 (title decider). 1965: South African GP #1. Large white numerals were painted on the nose top and on the body side beside the cockpit. NART: at the 1964 US and Mexican GPs the car was entered by Luigi Chinetti's North American Racing Team in US colours (white with blue lengthwise stripes), in protest against the ACI/FIA. This entry describes the red works car used for the rest of 1964 and in 1965.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (no sponsor names on the body; Dunlop tyres and Shell fuel only). The red works car ran turquoise/pale-blue cast magnesium wheels, as seen on the Ferrari museum car and Surtees' own Goodwood car and described in model literature.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_158",
+        "https://en.wikipedia.org/wiki/1964_Italian_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1964_German_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1964_Mexican_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1965_South_African_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_158_F1_1964.jpg",
+        "https://commons.wikimedia.org/wiki/File:John_Surtees_Ferrari_158_at_Goodwood_2014_001.jpg",
+        "https://www.f1technical.net/forum/viewtopic.php?t=20168",
+        "https://www.diecastlegends.com/editorial-surtees-ferrari"
+      ],
+      "confidence": "medium"
+    },
+    "512 F1": {
+      "base": "#d12a1f",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#8fd0dc"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "surtees": 1
+      },
+      "numberNote": "Surtees raced the flat-12 1512/512 F1 from the 1965 British GP onward. British GP (Silverstone, 3rd place, the car's best result) #1, the number used here; Italian GP 1965 #8. White numerals were painted on the nose top and body sides. In 1964 the 1512 ran in NART white/blue at Watkins Glen and Mexico (Bandini).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (same plain red works livery as the 158, with pale blue/turquoise magnesium wheels and no sponsor names).",
+      "sources": [
+        "https://www.goodwood.com/grr/f1/doug-nye-ferrari-1512--driven-by-surtees-rodriguez-bandini...-and-me",
+        "https://formula143.org/2021/08/07/1965-ferrari-512-surtees-2/",
+        "https://en.wikipedia.org/wiki/1965_British_Grand_Prix",
+        "https://en.wikipedia.org/wiki/1965_Italian_Grand_Prix",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_1512_(35681758636).jpg"
+      ],
+      "confidence": "medium"
+    },
+    "312 F1-66": {
+      "base": "#cc2a1f",
+      "finish": "gloss",
+      "zones": {
+        "wheels": "#c8a45e"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "surtees": 6
+      },
+      "numberNote": "Numbers were assigned per race. Surtees 1966: Belgian GP (Spa, pole, fastest lap and win) #6. White numerals were painted on the nose top and on the body side beside the cockpit. He left Ferrari in mid-1966.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseTop",
+        "cockpitSide"
+      ],
+      "decals": [],
+      "tobaccoNote": "none (plain rosso corsa with no sponsor names; Dunlop tyres early in 1966, later Firestone; Shell fuel). Wheels are gold/bronze cast magnesium, as seen in a colour photo of the 1966 312 F1-66 at Monza. Later 1967 cars wore small Shell/Firestone/Magneti Marelli decals, but those are not used here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/1966_Belgian_Grand_Prix",
+        "https://www.spotmodel.com/product_info.php?products_id=60925&language=en",
+        "https://commons.wikimedia.org/wiki/File:1966_Italian_GP_-_Ludovico_Scarfiotti%27s_Ferrari_312_F1-66.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312_-_001.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "312 B3-74": {
+      "base": "#dd2418",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#c4c6c8",
+        "rearWing": "#e9e9e6",
+        "wheels": "#c9a24a"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "thin white pinstripes along the cockpit rim and the upper and lower body/sidepod edges"
+        },
+        {
+          "zone": "airbox",
+          "color": "#ffffff",
+          "note": "white band around the top of the tall red airbox (green-white-red tricolore band in some photos), with a small scudetto"
+        }
+      ],
+      "raceNumbers": {
+        "lauda": 12
+      },
+      "numberNote": "Fixed numbers: Lauda #12 in 1974. He also used #12 in the B3 at the first two races of 1975 (Argentina, Brazil). Black numerals sit on a white rounded-corner square on the sidepod sides and on the nose.",
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingEndplate",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Heuer",
+          "color": "#d42a1f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Arexons",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none (no tobacco on the car. Lauda's personal Marlboro patch was on his helmet/overalls only. The car was all red with white pinstripes, not a white body. The white is only the rear wing top and the airbox band. No Fiat logos yet; they first appeared in 1977.)",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Niki_Lauda_Ferrari_Brands_Hatch_1974.jpg",
+        "https://commons.wikimedia.org/wiki/File:Niki_Lauda_1974_Watkins_Glen.jpg",
+        "https://commons.wikimedia.org/wiki/File:Lauda_at_1974_Dutch_Grand_Prix_(3).jpg",
+        "https://commons.wikimedia.org/wiki/File:Goodwood_Festival_of_Speed_-_2011_-_Ferrari_312_B3_(6647653089).jpg",
+        "https://savageonwheels.com/2021/09/21/die-cast-gp-replicas-ferrari-312-b3/"
+      ],
+      "confidence": "medium"
+    },
+    "312 T": {
+      "base": "#d6281f",
+      "finish": "gloss",
+      "zones": {
+        "airbox": "#f4f3ee",
+        "engineCover": "#f4f3ee",
+        "frontWing": "#c5c9cd",
+        "rearWing": "#c5c9cd",
+        "wheels": "#b8964a"
+      },
+      "stripes": [
+        {
+          "zone": "airbox",
+          "color": "#1f8f3a",
+          "note": "Italian tricolour (green-white-red) stripe across the top of the white airbox"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "thin white pinstripe along the upper sidepod/body line"
+        }
+      ],
+      "raceNumbers": {
+        "lauda": 12
+      },
+      "numberNote": "Lauda #12 in 1975. He also raced the 312 T as reigning champion #1 at the first three 1976 rounds (Brazil, South Africa, US West). Black numerals on white panels with thin red outline, on the nose and on the airbox sides.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide"
+      ],
+      "decals": [
+        {
+          "slot": "cockpitSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1d4f9c"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Goodyear",
+          "color": "#1a1a1a",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Heuer",
+          "color": "#d6281f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "SKF",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Brembo",
+          "color": "#d6281f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ferodo",
+          "color": "#d6281f",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none. Aluminium wings are unpainted; 'Niki Lauda' was written in script on the cockpit side. FIAT box seen on the preserved car; Wikipedia's 312T article says Fiat logos first appeared in 1977, so FIAT may be a later addition (kept because it is on the preserved Lauda car).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312T_1975.jpg",
+        "https://rossoautomobili.com/blogs/magazine/scuderia-ferrari-monza-2025-livery-details",
+        "https://autos.yahoo.com/people-and-culture/articles/ferrari-race-1975-inspired-livery-192500510.html",
+        "https://en.wikipedia.org/wiki/Ferrari_312T"
+      ],
+      "confidence": "high"
+    },
+    "312 T2": {
+      "base": "#e0231a",
+      "finish": "gloss",
+      "zones": {
+        "noseTop": "#f4f4f2",
+        "cockpitSurround": "#f4f4f2",
+        "airbox": "#f4f4f2",
+        "frontWing": "#c4c6c8",
+        "rearWing": "#d6d7d6",
+        "wheels": "#bdbdb6"
+      },
+      "stripes": [
+        {
+          "zone": "cockpitSurround",
+          "color": "#1f8a3c",
+          "note": "green-white-red tricolore stripe running along each side of the cockpit, from the nose to the white roll-hoop fairing"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white panel/pinstripe along the lower sidepod"
+        }
+      ],
+      "raceNumbers": {
+        "lauda": 1,
+        "gilles_villeneuve": 21
+      },
+      "numberNote": "Fixed numbers. Lauda #1 in 1976 (the car's main season) and #11 in 1977. Villeneuve #21 at his 1977 Ferrari debut races (Canada, Japan) and #12 in the T2 at the first two races of 1978 (Argentina, Brazil). Black numerals sit on the white nose-tip panel.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#111111",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "Heuer",
+          "color": "#d42a1f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "SKF",
+          "color": "#1a1a1a",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Arexons",
+          "color": "#1a1a1a",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none (no tobacco on the car. Marlboro was a personal helmet sponsor for Lauda and Villeneuve only.) The 1976 main-season car had no Fiat logo. Wikipedia says Fiat logos first appeared on a Ferrari F1 car on the 1977 T2B, so the 1977 Lauda #11 and Villeneuve #21 cars also carried a blue Fiat badge. Tyres were Goodyear in 1976-77; the T2s used at the start of 1978 ran on Michelin.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:LaudaNiki19760731Ferrari312T2.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312T2_Niki_Lauda_1976_noBG.jpg",
+        "https://en.wikipedia.org/wiki/Ferrari_312T",
+        "https://reviews.ipmsusa.org/review/ferrari-312t2-1976-monaco-gp-winner",
+        "https://www.spotmodel.com/product_info.php?products_id=6314&language=en"
+      ],
+      "confidence": "high"
+    },
+    "312 T3": {
+      "base": "#d6281f",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#c5c9cd",
+        "rearWing": "#c5c9cd",
+        "rearWingEndplates": "#c5c9cd",
+        "wheels": "#9ea3a8"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "broad white band along the lower sidepod carrying the small sponsor stickers"
+        },
+        {
+          "zone": "noseTop",
+          "color": "#ffffff",
+          "note": "white areas / pinstripe on the nose"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white panel with black stripes on the engine cover behind the roll hoop"
+        }
+      ],
+      "raceNumbers": {
+        "gilles_villeneuve": 12,
+        "scheckter": 11
+      },
+      "numberNote": "Villeneuve #12 in 1978 (and #12 in the T3 at Argentina/Brazil 1979). Scheckter #11 in the T3 at Argentina/Brazil 1979. Reutemann (not in our list) was #11 in 1978.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide"
+      ],
+      "decals": [
+        {
+          "slot": "cockpitSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1d4f9c"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Michelin",
+          "color": "#1a3c8f",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Champion",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Brembo",
+          "color": "#d6281f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "SKF",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Speedline",
+          "color": "#111111",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Carlos_Reutemann_Walkins_Glen_Ferrari_1978.jpg",
+        "https://www.formula1.com/en/latest/article/ferrari-red-white-livery-good-omen.1Qkmh6963FJr2aXZK0dRzg",
+        "https://www.spotmodel.com/product_info.php?products_id=6353&language=en"
+      ],
+      "confidence": "medium"
+    },
+    "312 T4": {
+      "base": "#e0231a",
+      "finish": "gloss",
+      "zones": {
+        "airbox": "#f4f4f2",
+        "frontWing": "#c8cacb",
+        "rearWing": "#c8cacb",
+        "wheels": "#c2c2bc"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white rear section of the sidepod carrying the red race number, and a white band along the bottom of the sidepod/skirt carrying the small sponsor names"
+        },
+        {
+          "zone": "noseTop",
+          "color": "#ffffff",
+          "note": "thin white pinstripe outlining the wide nose/wing-body edge"
+        }
+      ],
+      "raceNumbers": {
+        "scheckter": 11,
+        "gilles_villeneuve": 12
+      },
+      "numberNote": "Fixed numbers in 1979: Scheckter #11 (world champion) and Villeneuve #12. White outlined numerals on the nose top. Red numerals on the white rear panel of each sidepod.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Michelin",
+          "color": "#2a3a9a",
+          "background": "#f2d200"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Heuer",
+          "color": "#d42a1f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Fiat",
+          "color": "#ffffff",
+          "background": "#1e4da1"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Arexons",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Brembo",
+          "color": "#d42a1f",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none (no tobacco on the car; Marlboro appeared only on Villeneuve's helmet).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312T4_-_Jody_Scheckter_at_the_1979_Belgian_Grand_Prix,_Zolder_(51632958993).jpg",
+        "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve,_Monaco_1979.jpg",
+        "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_1979_Imola.jpg",
+        "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_in_his_Ferrari_312T4_Formula_1_car_at_CarFest_South_2015_(43139280474).jpg"
+      ],
+      "confidence": "high"
+    },
+    "312 T5": {
+      "base": "#df2419",
+      "finish": "gloss",
+      "zones": {
+        "airbox": "#f4f4f2",
+        "frontWing": "#c8cacb",
+        "rearWing": "#c8cacb",
+        "wheels": "#c2c2bc"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white rear section of the sidepod carrying the red race number, a white pinstripe along the sidepod top, and a white lower band with the small sponsor names"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#1f8a3c",
+          "note": "thin green-white-red tricolore line along the cockpit and engine-cover shoulder"
+        }
+      ],
+      "raceNumbers": {
+        "scheckter": 1,
+        "gilles_villeneuve": 2
+      },
+      "numberNote": "Fixed numbers in 1980: Scheckter #1 (reigning champion), Villeneuve #2. White outlined numerals on the nose top. Red numerals on the white rear sidepod panel.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Michelin",
+          "color": "#2a3a9a",
+          "background": "#f2d200"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f2cf00"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Fiat",
+          "color": "#ffffff",
+          "background": "#1e4da1"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Longines",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Arexons",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Olivetti",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none (no tobacco on the car).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312T5_Gilles_Villeneuve_2010_Canada_2.jpg",
+        "https://commons.wikimedia.org/wiki/File:1980_Ferrari_312_T5_Museo_Nazionale_dell%27Automobile_Torino.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_312_T5.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "126 CK": {
+      "base": "#d6281f",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#c5c9cd",
+        "rearWing": "#c5c9cd",
+        "wheels": "#c9ccd0"
+      },
+      "stripes": [
+        {
+          "zone": "cockpitSurround",
+          "color": "#1f8f3a",
+          "note": "tricolour pinstripe running back from the cockpit side"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "thin white pinstripe along the lower sidepod"
+        }
+      ],
+      "raceNumbers": {
+        "gilles_villeneuve": 27
+      },
+      "numberNote": "Villeneuve #27 (Pironi #28) in 1981. Large white numerals on the nose top; also on the Agip panel of the rear wing endplate.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide"
+      ],
+      "decals": [
+        {
+          "slot": "cockpitSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1d4f9c"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Longines",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Michelin",
+          "color": "#1a3c8f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none (Marlboro did not appear on the Ferrari race cars until 1984)",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ferrari_126_CK.jpg",
+        "https://en.wikipedia.org/wiki/Ferrari_126C",
+        "https://en.wikipedia.org/wiki/Formula_One_sponsorship_liveries"
+      ],
+      "confidence": "medium"
+    },
+    "126 C2": {
+      "base": "#d6281f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#c5c9cd",
+        "frontWing": "#c5c9cd",
+        "wheels": "#c9ccd0"
+      },
+      "stripes": [
+        {
+          "zone": "cockpitSurround",
+          "color": "#1f8f3a",
+          "note": "tricolour pinstripe on the cockpit side"
+        }
+      ],
+      "raceNumbers": {
+        "gilles_villeneuve": 27
+      },
+      "numberNote": "Villeneuve #27 (Pironi #28) in 1982; large white numerals on the nose top.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide"
+      ],
+      "decals": [
+        {
+          "slot": "cockpitSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1d4f9c"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#111111",
+          "background": "#f5d000"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#1a1a1a",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Longines",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Magneti Marelli",
+          "color": "#1a2f6b",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Grand_Prix_op_Zandvoort_autos_onderweg,_Bestanddeelnr_253-8755.jpg",
+        "https://en.wikipedia.org/wiki/Ferrari_126C",
+        "https://en.wikipedia.org/wiki/Formula_One_sponsorship_liveries"
+      ],
+      "confidence": "medium"
+    },
+    "F1-89": {
+      "base": "#d6201c",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#1c1c1c",
+        "rearWingEndplates": "#1c1c1c",
+        "frontWing": "#1c1c1c",
+        "frontWingEndplates": "#1c1c1c",
+        "wheels": "#2a2a2a",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "mansell": 27
+      },
+      "numberNote": "Fixed number for 1989: Mansell #27 (Berger #28). Large white number on the nose top just ahead of the front suspension, repeated in white on the black rear-wing endplates below a white Agip panel.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1f3f96"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffd200"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Marlboro",
+          "color": "#d6201c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "EniChem",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Marlboro appeared only as a small white panel with red 'Marlboro' wordmark on the cockpit sides (under the driver's name) and a small one on the nose; there was no large tobacco graphic on the 1989 car. I found no evidence of it being removed at particular races, so it is shown for the whole season. The car's biggest graphics were Fiat (blue box on the engine cover), Agip (yellow badge on the sidepod) and Goodyear on the wings.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_640",
+        "https://commons.wikimedia.org/wiki/File:Nigel_Mansell_1989_Belgian_GP_3.jpg",
+        "https://www.stonemodelcar.com/products/ferrari-f1-640-f1-89-27-nigel-mansell-brazil-gp-winner-1989-gp-replicas-1-18-with-driver",
+        "https://www.spotmodel.com/product_info.php?products_id=4850&language=en",
+        "https://rmsothebys.com/auctions/mc22/lots/r0007-1989-ferrari-640/"
+      ],
+      "confidence": "high"
+    },
+    "F1-90": {
+      "base": "#d6201c",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#1c1c1c",
+        "rearWingEndplates": "#1c1c1c",
+        "frontWing": "#1c1c1c",
+        "frontWingEndplates": "#1c1c1c",
+        "wheels": "#2a2a2a",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "frontWingEndplates",
+          "color": "#ffd200",
+          "note": "yellow flashes on the tips of the front-wing endplates and flaps"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffd200",
+          "note": "yellow flash at the top of the black rear-wing endplates, above the Agip box"
+        }
+      ],
+      "raceNumbers": {
+        "prost": 1,
+        "mansell": 2
+      },
+      "numberNote": "Fixed numbers for 1990: Prost #1 (reigning champion), Mansell #2. White number on the nose top, repeated in white on the rear-wing endplates.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1f3f96"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffd200"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Marlboro",
+          "color": "#d6201c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffd200"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "digital",
+          "color": "#ffffff",
+          "background": "#1c1c1c"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Marlboro",
+          "color": "#d6201c",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "Marlboro appeared only as small white panels with the red wordmark: on the cockpit sides (under the driver's name) and at the base of the nose ahead of the cockpit. This matches the Canadian GP photo and the GP Replicas and Amalgam replicas. I found no race where it was removed, so it is shown for the whole season.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_641",
+        "https://commons.wikimedia.org/wiki/File:Alain_Prost_1990_Canada.jpg",
+        "https://www.stonemodelcar.com/products/ferrari-f1-90-641-2-1-alain-prost-british-winner-1990-gp-replicas-1-12-gp12-22e",
+        "https://www.amalgamcollection.com/products/ferrari-f1-90-641-2-prost",
+        "https://dmodelkits.store/products/decals-ferrari-641-2-f1-90-full-sponsor-f1-1991"
+      ],
+      "confidence": "high"
+    },
+    "F1-91": {
+      "base": "#d9261c",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#1c1c1c",
+        "rearWingEndplates": "#1c1c1c",
+        "frontWing": "#1c1c1c",
+        "frontWingEndplates": "#1c1c1c",
+        "wheels": "#2a2a2a",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "frontWingEndplates",
+          "color": "#ffd200",
+          "note": "yellow tips on the front-wing flaps and endplates"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffd200",
+          "note": "yellow flash at the top of the rear-wing endplates"
+        }
+      ],
+      "raceNumbers": {
+        "prost": 27
+      },
+      "numberNote": "Fixed number for 1991: Prost #27 (Alesi #28). White number on the nose top and on the rear-wing endplates. Prost drove the 642 for the first 6 rounds (USA to Mexico) and the 643 from the French GP to Japan. He was dropped before Australia, where Gianni Morbidelli drove car #27. The livery was essentially the same on both cars. This entry describes the 643, which ran at most of Prost's races (9 of 15).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1f3f96"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffd200"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Pioneer",
+          "color": "#1f3f96",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Marlboro",
+          "color": "#d9261c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Agip",
+          "color": "#1a1a1a",
+          "background": "#ffd200"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Marlboro appeared as a small white chevron ('roof') shaped panel with the red wordmark on the cockpit/engine-cover sides, plus small wordmarks on the nose. In the 1991 French GP photo the white chevron appears to carry no wordmark, so it may have been blanked at that race. The rest of the season used the wordmark, and that version is shown here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_642",
+        "https://en.wikipedia.org/wiki/Ferrari_643",
+        "https://commons.wikimedia.org/wiki/File:Prost_monaco91.jpg",
+        "https://commons.wikimedia.org/wiki/File:1991_Ferrari_643.jpg",
+        "https://looksmartmodels.com/product/ferrari-642-monaco-gp-1991-a-prost-5th-place-scale-118/",
+        "https://looksmartmodels.com/product/ferrari-643-french-gp-1991-a-prost-2nd-place-scale-118/",
+        "https://collectorstudio.com/product/1-8-1991-ferrari-643-as-driven-by-alain-prost-jean-alesi/"
+      ],
+      "confidence": "high"
+    },
+    "F310": {
+      "base": "#dc1a14",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#1c1c1c",
+        "rearWingEndplates": "#1c1c1c",
+        "frontWing": "#1c1c1c",
+        "frontWingEndplates": "#1c1c1c",
+        "wheels": "#b8963e",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "frontWing",
+          "color": "#ffffff",
+          "note": "white strip along the front-wing main plane carrying the Shell name"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Fixed number for 1996: Schumacher #1 (reigning champion), Irvine #2. White number on the nose side near the tip, also on the rear-wing endplate. The car ran a low nose for rounds 1-7 and a raised nose from round 8.",
+      "numberSlot": "noseSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Asprey",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Pioneer",
+          "color": "#ffffff",
+          "background": "#1f4fa0"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Telecom Italia",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "At most rounds there was a large white 'Marlboro' wordmark on the engine-cover sides (Imola 1996 photo), 'Marlboro' on a white panel on the rear-wing top flap, and a small wordmark on the cockpit side. At tobacco-restricted races the names became white 'barcode' bars: the German GP photo shows barcode stripes on the engine cover. McLaren likewise dropped Marlboro at France, Britain, Germany and the European GP, so the ban probably covered about 4 rounds. The wordmark version is shown because it ran at most races. Surviving museum cars (such as Beaulieu) wear the barcode version.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F310",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_F310",
+        "https://commons.wikimedia.org/wiki/File:Eddie_Irvine_-_Imola_1996_(2).jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F310_Michael_Schumacher_1996_German_Grand_Prix.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F310_front-left_National_Motor_Museum,_Beaulieu.jpg",
+        "https://en.wikipedia.org/wiki/McLaren_MP4/11",
+        "https://www.revilomodelcars.com/products/gp-replicas-1-18-scale-ferrari-f310-2-1996-1-schumacher-italian-gp-winner"
+      ],
+      "confidence": "high"
+    },
+    "F310 B": {
+      "base": "#dc1a14",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#1c1c1c",
+        "wheels": "#b8963e",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "large white chevron ('Marlboro roof') panel on each side of the engine cover behind the airbox, carrying the red Marlboro wordmark"
+        },
+        {
+          "zone": "rearWing",
+          "color": "#ffffff",
+          "note": "white chevron on the upper rear-wing flap"
+        },
+        {
+          "zone": "frontWing",
+          "color": "#ffffff",
+          "note": "white strip along the front-wing main plane carrying the Shell name"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 5
+      },
+      "numberNote": "Fixed number for 1997: Schumacher #5, Irvine #6 (Williams had #3/#4 after winning the 1996 constructors' title). Black number on the sidepod flank behind the Shell/Asprey logos and on the nose side.",
+      "numberSlot": "sidepodSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#dc1a14",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Asprey",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Pioneer",
+          "color": "#ffffff",
+          "background": "#1f4fa0"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Telecom Italia",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Marlboro",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Goodyear",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "At most rounds the red 'Marlboro' wordmark sat in the white chevron on the engine-cover sides (Monza 1997 photo), with a white 'Marlboro' on the cockpit sides and the nose top. At tobacco-restricted races the chevron carried white 'barcode' bars instead: the German GP photo and RaceFans confirm this for 1997 Germany, and it probably also applied at France, Britain and the European GP, as with McLaren. The wordmark version is shown because it ran at most rounds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F310B",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_1997_Italy_(cropped).jpg",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_1997.jpg",
+        "https://www.carmodel.com/minichamps/510971805/1-18/ferrari/f1-f310b-n-5-season-1997-michael-schumacher/8422",
+        "https://www.racefans.net/2010/05/04/criticism-of-ferrari-marlboro-barcode-prompts-outburst-from-montezemolo/"
+      ],
+      "confidence": "high"
+    },
+    "F300": {
+      "base": "#e0140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#f5f5f5",
+        "frontWing": "#f5f5f5",
+        "wheels": "#c8c8c8",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white chevron ('Marlboro roof') panel on each side of the engine cover behind the airbox, carrying the red Marlboro wordmark"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 3
+      },
+      "numberNote": "Fixed number for 1998: Schumacher #3, Irvine #4 (Williams #1/#2). Small black number on the nose side near the tip and on the rear-wing endplates.",
+      "numberSlot": "noseSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "noseTop",
+          "text": "Marlboro",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#e0140f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Asprey",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Telecom Italia",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "At most rounds there was a large white 'Marlboro' wordmark along the nose top, a red wordmark in the white chevron on the engine-cover sides, a black 'Marlboro' on the white upper rear wing, and a small wordmark on the cockpit side. At tobacco-restricted races (France, Britain, Germany and similar) the names were removed or replaced by barcode bars, which left the plain white chevron and white rear wing seen on the museum car. The wordmark version is shown because it ran at most rounds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F300",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F300_front-right1_2019_Michael_Schumacher_Private_Collection.jpg",
+        "https://www.stonemodelcar.com/products/ferrari-f1-f300-3-michael-schumacher-italy-monza-gp-winner-1998-1-18-gp-replicas-with-decal"
+      ],
+      "confidence": "high"
+    },
+    "F399": {
+      "base": "#e2201b",
+      "finish": "gloss",
+      "zones": {
+        "floor": "#111111",
+        "frontWing": "#1a1a1a",
+        "wheels": "#c9ccd0"
+      },
+      "stripes": [
+        {
+          "zone": "frontWing",
+          "color": "#ffffff",
+          "note": "white lower strip on the black front wing carrying Shell"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 3
+      },
+      "numberNote": "Schumacher #3 in 1999 (Irvine #4). Black-outlined white numeral on the nose top.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#d6281f",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#d6281f",
+          "background": "#f7d117"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "FedEx",
+          "color": "#4d148c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Bridgestone",
+          "color": "#ffffff",
+          "background": "#111111"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#1d4f9c"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Tic Tac",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmark on the airbox sides and rear wing at most rounds; barcode/white panels at tobacco-restricted races (France, Britain, Germany), and 'Ferrari Formula One' replaced Marlboro at the 1999 Belgian GP. Chose the wordmark.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_1999_Canada.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F399.jpg",
+        "https://en.wikipedia.org/wiki/Formula_One_sponsorship_liveries",
+        "https://en.wikipedia.org/wiki/Ferrari_F399"
+      ],
+      "confidence": "medium"
+    },
+    "F1-2000": {
+      "base": "#e0140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#f5f5f5",
+        "frontWing": "#f5f5f5",
+        "wheels": "#c8c8c8",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white chevron ('Marlboro roof') panel on each side of the engine cover behind the airbox, carrying the Marlboro wordmark"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "upper/trailing part of the rear-wing endplates white, continuing the white rear wing; lower part red with sponsor logos"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 3
+      },
+      "numberNote": "Fixed number for 2000: Schumacher #3, Barrichello #4 (McLaren #1/#2). Black number on the nose top ahead of the Shell pecten and on the rear-wing endplates.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "tic tac",
+          "color": "#ffffff",
+          "background": "#1e8a3c"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "FedEx",
+          "color": "#4d148c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "TIM",
+          "color": "#ffffff",
+          "background": "#0a2f7a"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "At most rounds (Belgium 2000 photo; GP Replicas Suzuka model with its Marlboro sheet) there was a black 'Marlboro' across the white rear wing and in the white engine-cover chevron, plus white wordmarks on the nose top and cockpit side. At tobacco-restricted races (France, Britain, Germany and similar) these were blanked or replaced by barcode bars, and the white chevron and white rear wing stayed. The wordmark version is shown because it ran at most rounds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F1-2000",
+        "https://commons.wikimedia.org/wiki/File:Rubens_Barrichello_2000_Belgian.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F1-2000_front.jpg",
+        "https://www.stonemodelcar.com/products/ferrari-f1-f1-2000-3-michael-schumacher-japan-gp-2000-world-champion-1-18-gp-replicas-with-driver-decal"
+      ],
+      "confidence": "high"
+    },
+    "F2001": {
+      "base": "#e0140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#f5f5f5",
+        "frontWing": "#f5f5f5",
+        "wheels": "#c8c8c8",
+        "floor": "#1c1c1c"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white chevron ('Marlboro roof') panel on each side of the engine cover behind the airbox"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#ffffff",
+          "note": "upper part of the rear-wing endplates white, continuing the white rear wing; lower part red with Shell/Bridgestone/Magneti Marelli/GE"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Fixed number for 2001: Schumacher #1, Barrichello #2. Black number on the nose top and on the rear-wing endplates. Schumacher also raced an F2001 as #1 at the first two rounds of 2002 (Australia, which he won, and Malaysia) before the F2002 arrived. For those races the car carried Vodafone logos as the new title partner.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "tic tac",
+          "color": "#ffffff",
+          "background": "#1e8a3c"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "FedEx",
+          "color": "#4d148c",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "TIM",
+          "color": "#ffffff",
+          "background": "#0a2f7a"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Magneti Marelli",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Bridgestone",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "At most 2001 rounds there was a black 'Marlboro' across the white rear wing and in the white engine-cover chevron, plus white wordmarks on the nose top and cockpit side (GP Replicas Monaco 2001 model and its Marlboro decal sheet). At tobacco-restricted races (France, Britain, Germany and similar) these became barcode bars: a Commons photo of Schumacher in the F2001 shows barcode stripes across the rear wing. The wordmark version is shown because it ran at most rounds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2001",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher,_Ferrari_F2001_(8968595731)_(cropped).jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F2001_front-right_Museo_Ferrari.jpg",
+        "https://www.stonemodelcar.com/products/ferrari-f1-f2001-1-michael-schumacher-monaco-gp-winner-2001-world-champion-1-18-gp-replicas-gp168a-decal"
+      ],
+      "confidence": "high"
+    },
+    "F2002": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#f4f4f4",
+        "wheels": "#b8b8b8",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white Marlboro panel covering the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white bargeboard/turning-vane wedge low on the sidepod leading edge with a thin red line"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Schumacher #1 in 2002 (from Brazil) and #1 again when the F2002 raced the first four rounds of 2003. Number shown in black on the top of the nose near the front suspension.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide",
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": "#e60000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#0b3a8c"
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmark on engine-cover fin and rear-wing top at most rounds; removed (plain white) at the British, French and United States GPs. Chose Marlboro version. Vodafone became major sponsor in 2002 (roundel on sidepods, wordmark on cockpit side and front-wing endplates).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2002",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F2002_front-right_Museo_Ferrari.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F2003-GA": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#f4f4f4",
+        "wheels": "#b8b8b8",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "large white Marlboro panel on the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white bargeboard wedge low at the sidepod front with a red pinstripe"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Schumacher #1 in 2003 (F2003-GA from the Spanish GP onwards).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide",
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": "#e60000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmark on engine-cover fin and rear-wing top at most rounds; removed (plain white panels, as in the Silverstone photo) at the French, British and United States GPs. Chose Marlboro version. Olympus joined as a new sponsor in 2003 (small decals).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2003-GA",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2003_Silverstone_(cropped).jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F2003-GA_in_Suzuka.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F2004": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#f4f4f4",
+        "wheels": "#b8b8b8",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "large white Marlboro panel on the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white bargeboard wedge low at the sidepod front with a red pinstripe"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Schumacher #1 all season.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide",
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": "#e60000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmark on engine-cover fin and rear-wing top at 14 of 18 rounds; removed (plain white panels, e.g. Indianapolis photo) at the Canadian, French, British and United States GPs. Chose Marlboro version. At Spa a 700th-GP logo was carried behind the seat and on the sidepods.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2004",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_2004.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F2004 M": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#f4f4f4",
+        "wheels": "#b8b8b8",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white Marlboro panel on the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white bargeboard wedge low at the sidepod front"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Raced only at the 2005 Australian and Malaysian GPs; Schumacher #1.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide",
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": "#e60000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": "#0b3a8c"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "Both of its races (Australia, Malaysia 2005) allowed tobacco branding: Marlboro wordmark on engine-cover fin and rear-wing top (as seen in Jerez testing photo).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2004",
+        "https://commons.wikimedia.org/wiki/File:Schumacherjerez.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "F2005": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#f4f4f4",
+        "wheels": "#b8b8b8",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "large white Marlboro 'chevron' panel on the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "noseTop",
+          "color": "#ffffff",
+          "note": "white strip along the nose top carrying the Marlboro wordmark"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "white bargeboard wedge low at the sidepod front with a red pinstripe"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 1
+      },
+      "numberNote": "Schumacher #1 all season (F2005 from Bahrain onwards).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide",
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": "#e60000"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Marlboro",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmark (black on white) on engine-cover fin, rear-wing top and nose top at 12 of 19 rounds; removed at the Canadian, United States, French, British, Turkish, Italian and Belgian GPs. Chose the Marlboro version (most rounds). Bahrain: black-tipped nose in mourning for Pope John Paul II.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2005",
+        "https://commons.wikimedia.org/wiki/File:MichaelSchumacherHO2005.jpg"
+      ],
+      "confidence": "high"
+    },
+    "248 F1": {
+      "base": "#d8140f",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "frontWing": "#e8e8e8",
+        "wheels": "#a9a9a9",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white panel on the engine-cover fin behind the airbox (blank where Marlboro was banned)"
+        },
+        {
+          "zone": "rearWing",
+          "color": "#dd1d1d",
+          "note": "row of red bars/teeth along the white rear-wing top in no-tobacco races"
+        },
+        {
+          "zone": "noseTop",
+          "color": "#ffffff",
+          "note": "white barcode-like bars on the nose top ahead of the cockpit in no-tobacco races"
+        }
+      ],
+      "raceNumbers": {
+        "michael_schumacher": 5
+      },
+      "numberNote": "Schumacher #5 (Massa #6); number in black on a white oval on the nose top.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "cockpitSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "vodafone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        }
+      ],
+      "tobaccoNote": "Marlboro wordmarks were shown only at 6 of 18 rounds (Bahrain, Malaysia, Australia, Monaco, China, Japan); removed at San Marino, Europe, Spain, Britain, Canada, USA, France, Germany, Hungary, Turkey, Italy and Brazil, where the white panels were left blank or carried red/white bars. Chose the no-wordmark version (most rounds, as in the Brazil photo).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_248_F1",
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Ferrari_248F1_2006_Brazil.jpg"
+      ],
+      "confidence": "medium"
+    },
+    "F2007": {
+      "base": "#e8200e",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "wheels": "#2a2a2a",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white 'barcode' (vertical white bars on red) on the engine-cover fin behind the airbox"
+        },
+        {
+          "zone": "rearWing",
+          "color": "#dd1d1d",
+          "note": "red barcode bars across the white rear-wing top"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "thin white pinstripes low along the sidepod flanks"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 6
+      },
+      "numberNote": "Raikkonen #6 (Massa #5) in his title-winning season.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Alice",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Bridgestone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "acer",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        }
+      ],
+      "tobaccoNote": "Red/white barcode on engine-cover fin and rear-wing top at most rounds; actual Marlboro wordmarks only at Bahrain, Monaco and China. Chose the barcode version. Vodafone had left for McLaren; noticeably less white than 2000-06.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2007",
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_2007_Britain_2.jpg",
+        "https://f1colours.sebpatrick.co.uk/news/barcode-battlers/"
+      ],
+      "confidence": "high"
+    },
+    "F2008": {
+      "base": "#e01c0e",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "wheels": "#2a2a2a",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white panel on the engine-cover fin with red vertical 'barcode' bars"
+        },
+        {
+          "zone": "rearWing",
+          "color": "#dd1d1d",
+          "note": "red barcode bars across the white rear-wing top"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 1
+      },
+      "numberNote": "Raikkonen #1 as reigning champion (Massa #2).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Alice",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Mubadala",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Alice",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Bridgestone",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Barcode only (white/red bars on engine-cover fin and rear-wing top) at every round; per Wikipedia the Marlboro name was never shown in a 2008 race. Etihad Airways on the back of the rear wing; small Martini logos (blanked in France).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2008",
+        "https://commons.wikimedia.org/wiki/File:Luca_Badoer_2008_test.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F60": {
+      "base": "#e01c0e",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "wheels": "#2a2a2a",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "white barcode panel (red vertical bars, more Marlboro-chevron shaped) on the engine-cover fin"
+        },
+        {
+          "zone": "rearWing",
+          "color": "#dd1d1d",
+          "note": "red barcode bars across the white rear-wing top"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 4
+      },
+      "numberNote": "Raikkonen #4 (Massa #3); white number on the nose top.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Alice",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Mubadala",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Alice",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#dd1d21",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Barcode on engine-cover fin and rear-wing top at all rounds (2009 pattern evolved to look more like the Marlboro chevron); no Marlboro wordmark.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F60",
+        "https://commons.wikimedia.org/wiki/File:Raikkonen_Spain_2009.jpg",
+        "https://f1colours.sebpatrick.co.uk/news/barcode-battlers/"
+      ],
+      "confidence": "high"
+    },
+    "F10": {
+      "base": "#dc1a10",
+      "finish": "gloss",
+      "zones": {
+        "rearWing": "#ffffff",
+        "rearWingEndplates": "#ffffff",
+        "frontWing": "#eeeeee",
+        "wheels": "#b0b0b0",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#ffffff",
+          "note": "large white panel on the engine-cover fin; carried a red/white/black barcode at the first four rounds, a plain white rectangle from Spain onwards"
+        }
+      ],
+      "raceNumbers": {
+        "alonso": 8
+      },
+      "numberNote": "Alonso #8 (Massa #7); white number on the nose top.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": "#dd0000"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Santander",
+          "color": "#dd0000",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "acer",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Mubadala",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#111111",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Barcode on the engine cover only at the first four rounds (Bahrain, Australia, Malaysia, China); removed from the Spanish GP onwards and replaced by a plain white rectangle. Chose the plain-white version (15 of 19 rounds). Santander (new partner) on rear wing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F10",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_Bahrain_2010.jpg",
+        "https://www.grandprix.com/news/ferrari-removes-barcode-livery.html"
+      ],
+      "confidence": "medium"
+    },
+    "Ferrari 150° Italia": {
+      "base": "#d00c14",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#f2f2f2",
+        "rearWing": "#f2f2f2",
+        "rearWingEndplates": "#f2f2f2",
+        "wheels": "#9c9c9c",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "rearWingEndplates",
+          "color": "#d00c14",
+          "note": "lower half of each rear wing endplate red (AMD / TATA / ferrari.com area), upper half white (V-Power / Santander)"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white swept triangular panel on the engine-cover flank behind the airbox carrying the 'Scuderia Ferrari' logo (replaced the Marlboro barcode)"
+        }
+      ],
+      "raceNumbers": {
+        "alonso": 5
+      },
+      "numberNote": "Small white #5 near the nose tip; Massa #6. Numbers were very small in this era.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "acer",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Ferrari World Abu Dhabi",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "FIAT",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none visible. Philip Morris still sponsored the team (entered as 'Scuderia Ferrari Marlboro' for rounds 1-8, then 'Scuderia Ferrari'), but the 2010 white barcode was dropped and replaced by the white 'Scuderia Ferrari' logo panel on the engine cover, so no tobacco-derived marks on the car all season. Chose: no tobacco decal.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_150%C2%BA_Italia",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_150°_Italia_of_Fernando_Alonso",
+        "https://commons.wikimedia.org/wiki/File:F_Alonso_Monza_2011.jpg",
+        "https://commons.wikimedia.org/wiki/File:2011_Malaysian_GP_-_Alonso.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2011_Malaysia_FP1.jpg",
+        "https://commons.wikimedia.org/wiki/File:2011_Spanish_GP_-_Ferrari_illegal_wing.jpg",
+        "https://commons.wikimedia.org/wiki/File:2011_Spanish_GP_Friday_01.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F150_Fernando_Alonso_Singapore_2011.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F2012": {
+      "base": "#cc0e16",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#f2f2f2",
+        "rearWing": "#f2f2f2",
+        "rearWingEndplates": "#f2f2f2",
+        "wheels": "#9c9c9c",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "rearWingEndplates",
+          "color": "#cc0e16",
+          "note": "lower part of each rear wing endplate red (AMD / Mahle / ferrari.com), upper part white (V-Power / Santander)"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white swept triangular panel on the engine-cover flank carrying the 'Scuderia Ferrari' logo"
+        }
+      ],
+      "raceNumbers": {
+        "alonso": 5
+      },
+      "numberNote": "White #5 on the top of the stepped nose near the tip; Massa #6.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "acer",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "AMD",
+          "color": "#1a1a1a",
+          "background": "#ffffff"
+        }
+      ],
+      "tobaccoNote": "none. Philip Morris remained a (hidden) partner but no Marlboro wordmark, chevron or barcode appeared on the car; chose plain design all season.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F2012",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_F2012_of_Fernando_Alonso",
+        "https://commons.wikimedia.org/wiki/File:2012_Canadian_Grand_Prix_Fernando_Alonso_Ferrari_F2012-01.jpg",
+        "https://commons.wikimedia.org/wiki/File:2012_German_Grand_Prix_Fernando_Alonso.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_British_GP_2012.jpg",
+        "https://commons.wikimedia.org/wiki/File:2012_Japan_GP_-_Fernando_Alonso.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_USA_GP_2012.jpg",
+        "https://commons.wikimedia.org/wiki/File:2012_Italian_GP_-_Ferrari_detail.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F138": {
+      "base": "#cc1016",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#f2f2f2",
+        "rearWing": "#f2f2f2",
+        "rearWingEndplates": "#f2f2f2",
+        "wheels": "#9c9c9c",
+        "floor": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "rearWingEndplates",
+          "color": "#cc1016",
+          "note": "lower part of each rear wing endplate red (OMR / Mahle), upper part white (V-Power / Santander)"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white swept triangular panel on the engine-cover flank with the 'Scuderia Ferrari' logo"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#f2f2f2",
+          "note": "thin white band along the lower edge of the sidepod (carries small infor / SKF logos)"
+        }
+      ],
+      "raceNumbers": {
+        "alonso": 3
+      },
+      "numberNote": "Small white #3 on the nose top near the tip; Massa #4.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none. No Marlboro wordmark or barcode on the car at any round; chose plain design.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F138",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_F138_of_Fernando_Alonso",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Belgium_2013_Nr._3_Alonso.jpg",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2013_Malaysia_FP2.jpg"
+      ],
+      "confidence": "high"
+    },
+    "F14 T": {
+      "base": "#cc1616",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#f2f2f2",
+        "rearWing": "#f2f2f2",
+        "floor": "#1a1a1a",
+        "wheels": "#a8a8a8"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#1c1c1c",
+          "note": "rear half of the engine cover and the lower rear sidepods black, divided from the red by a diagonal line"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#009246",
+          "note": "thin Italian tricolour (green/white/red) line along the red/black boundary"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#f2f2f2",
+          "note": "white horizontal band across the red endplate carrying V-Power / Santander; endplate inner faces black"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white swept panel with 'Scuderia Ferrari' logo on engine-cover flank ahead of the black section"
+        }
+      ],
+      "raceNumbers": {
+        "alonso": 14,
+        "raikkonen": 7
+      },
+      "numberNote": "First year of permanent personal numbers: large white numerals on the nose top (Alonso 14, Raikkonen 7), smaller repeat on the engine cover.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Weichai",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none. No Marlboro branding or barcode at any round; chose plain design.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F14_T",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_F14_T_of_Fernando_Alonso",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_F14_T_of_Kimi_Räikkönen",
+        "https://commons.wikimedia.org/wiki/File:Fernando_Alonso_2014_British_GP_001.jpg",
+        "https://commons.wikimedia.org/wiki/File:Alonso_2014_Monaco_Grand_Prix.jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F14_T_Kimi_Raikkonen_2014_F1_Chinese_GP.jpg",
+        "https://commons.wikimedia.org/wiki/File:Kimi_Räikkönen_2014_British_GP_001.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF15-T": {
+      "base": "#d40a14",
+      "finish": "gloss",
+      "zones": {
+        "floor": "#1a1a1a",
+        "rearWing": "#f4f4f4",
+        "wheels": "#8e9092"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f4f4f4",
+          "note": "white swept panel on the engine-cover flank behind the airbox, with the shield and 'Scuderia Ferrari'"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#f4f4f4",
+          "note": "white panel on endplate carrying V-Power / Santander / OMR / Mahle"
+        }
+      ],
+      "raceNumbers": {
+        "vettel": 5,
+        "raikkonen": 7
+      },
+      "numberNote": "Vettel #5, Raikkonen #7. White numeral on the nose side, just ahead of the front suspension.",
+      "numberSlot": "noseSide",
+      "shield": [
+        "cockpitSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#fbce07",
+          "background": null
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#d40a14",
+          "background": "#f4f4f4"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Claro",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#d40a14",
+          "background": "#f4f4f4"
+        }
+      ],
+      "tobaccoNote": "none - no Marlboro or barcode branding on the car in 2015.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF15-T",
+        "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_2015_Malaysia_FP2_3.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF16-H": {
+      "base": "#dc1a1a",
+      "finish": "gloss",
+      "zones": {
+        "cockpitSurround": "#f2f2f2",
+        "airbox": "#f2f2f2",
+        "frontWing": "#f2f2f2",
+        "floor": "#1a1a1a",
+        "wheels": "#b5a882"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white area running from the cockpit rim over the airbox/roll hoop and back along the upper engine cover (312T / F93A tribute), with 'Scuderia Ferrari' shield panel"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#f2f2f2",
+          "note": "thin white band along the lower edge of the sidepod sweeping up at the front"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#f2f2f2",
+          "note": "white band on the red endplate carrying V-Power / Santander"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 7,
+        "vettel": 5
+      },
+      "numberNote": "White numerals on the nose top (Vettel 5, Raikkonen 7).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none on the car. Wikipedia notes Marlboro (Philip Morris) remained a key sponsor, but no Marlboro wordmark, chevron or barcode was displayed; chose plain design.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF16-H",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_SF16-H_of_Sebastian_Vettel",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_SF16-H_-_Sebastian_Vettel_-_2016_Monaco_F1_GP.jpg",
+        "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_2016_Malaysia_FP2_1.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF70H": {
+      "base": "#e01e1a",
+      "finish": "gloss",
+      "zones": {
+        "frontWing": "#f2f2f2",
+        "floor": "#1a1a1a",
+        "wheels": "#b5a882"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white upper 'shark fin' of the engine cover with Italian tricolour along its top edge and the race number in a white panel"
+        },
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white swept panel with 'Scuderia Ferrari' logo behind the airbox"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#f2f2f2",
+          "note": "white panel on upper rear of the red endplate carrying V-Power / Santander / Mahle"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 7,
+        "vettel": 5
+      },
+      "numberNote": "Black numeral on a white panel on the nose top (Vettel 5, Raikkonen 7), repeated larger on the white engine-cover fin as newly required in 2017.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide",
+        "engineCoverSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "Santander",
+          "color": "#e2001a",
+          "background": "#f2f2f2"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none on the car; Philip Morris partnership unbranded. Chose plain design. (At Monza a '70 1947-2017' anniversary logo was added to the engine cover.)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF70H",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_SF70H_of_Sebastian_Vettel",
+        "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_2017_Malaysia_FP1_1.jpg",
+        "https://commons.wikimedia.org/wiki/File:Vettel_Ferrari_Monza_2017.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF71H": {
+      "base": "#e2211c",
+      "finish": "gloss",
+      "zones": {
+        "floor": "#1a1a1a",
+        "wheels": "#b5a882"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "white top edge of the engine-cover fin with Italian tricolour stripe, ending in the chevron-shaped white number panel"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#1c1c1c",
+          "note": "lower sidepod undercut / floor edges black"
+        }
+      ],
+      "raceNumbers": {
+        "raikkonen": 7,
+        "vettel": 5
+      },
+      "numberNote": "Black numeral on white panel on the nose top and in a white chevron-shaped panel on the engine-cover fin (Vettel 5, Raikkonen 7).",
+      "numberSlot": "noseTop",
+      "shield": [
+        "noseSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Lenovo",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Singha",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Rounds 1-16 raced with no tobacco wordmark (only the chevron-shaped number panel on the engine-cover fin, widely read as a hidden Marlboro reference). 'Mission Winnow' (Philip Morris) logos added from the Japanese GP (rounds 17-21, 5 races). Chose the non-Mission Winnow livery as it raced at most rounds.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF71H",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_SF71H_of_Sebastian_Vettel",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2018_Nr._5_Vettel.jpg",
+        "https://commons.wikimedia.org/wiki/File:2018_Spanish_Grand_Prix_Vettel_(1).jpg",
+        "https://commons.wikimedia.org/wiki/File:Hidden_Marlboro_sponsorship_on_the_Ferrari_SF71H_(cropped).jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF90": {
+      "base": "#d4121c",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "wheels": "#b8b8b8"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#161616",
+          "note": "black (carbon-look) panel on the rear upper engine cover/shark fin carrying the white race number; black trim replaced the SF71H's white"
+        }
+      ],
+      "raceNumbers": {
+        "vettel": 5,
+        "leclerc": 16
+      },
+      "numberNote": "Large white digits with black outline on the nose (upper side) and white on the black shark-fin panel of the engine cover.",
+      "numberSlot": "noseTop",
+      "shield": [
+        "sidepodSide",
+        "rearWingEndplate",
+        "frontWingEndplate"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "90 Years",
+          "color": "#161616",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Lenovo",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Philip Morris 'Mission Winnow' (black wordmark on rear wing, front wing endplates and nose/cockpit side, plus a black slashed 'MW' graphic on the engine cover fin) ran at only 10 of 21 rounds (Bahrain-Monaco, rounds 2-6, and Japan-Abu Dhabi, rounds 17-21). At 11 rounds (Australia, and Canada through Russia) it was replaced by Ferrari's black '90 Years' anniversary logo. Chose the majority no-Mission-Winnow spec with the '90 Years' logo (as on Leclerc's car at Austria 2019).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF90",
+        "https://www.racefans.net/2019/10/07/mission-winnow-name-returns-to-ferrari/",
+        "https://www.motorsport.com/f1/news/ferrari-ducati-mission-winnow-removed/4477401/",
+        "https://www.planetf1.com/features/ferrari-liveries-turbo-hybrid-era",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2019_Nr._16_Leclerc_1.jpg",
+        "https://commons.wikimedia.org/wiki/File:2019_Chinese_Grand_Prix_Vettel_(46702439085).jpg",
+        "https://commons.wikimedia.org/wiki/File:2019_Japanese_Grand_Prix_Charles_Leclerc_(49054956397).jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF1000": {
+      "base": "#d4141c",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "wheels": "#b8b8b8"
+      },
+      "stripes": [],
+      "raceNumbers": {
+        "vettel": 5,
+        "leclerc": 16
+      },
+      "numberNote": "White digits on the engine cover (the SF90's black engine-cover panel was deleted and the number moved there) and white on the nose top.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "rearWingEndplate",
+        "frontWingEndplate"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "noseTop",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Hublot",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "Mahle",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "noseTop",
+          "text": "Pirelli",
+          "color": "#000000",
+          "background": "#fdd100"
+        }
+      ],
+      "tobaccoNote": "Launched and tested with black 'Mission Winnow' wordmarks (rear wing mainplane, front wing endplates) and a black 'MW' graphic on the engine cover, but Mission Winnow appeared at none of the 17 races of 2020 (removed after a Codacons complaint in Italy); the rear wing top raced plain red. Chose the no-tobacco race spec. The burgundy 1000th-GP livery at Mugello (Tuscan GP) was a one-off and is not described here.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF1000",
+        "https://www.racefans.net/2021/01/14/ferraris-mission-winnow-branding-could-return-following-2020-absence/",
+        "https://www.planetf1.com/features/ferrari-liveries-turbo-hybrid-era",
+        "https://diecastsociety.com/first-look-loksmart-ferrari-sf1000-austrian-gp-2020-leclerc/",
+        "https://commons.wikimedia.org/wiki/File:Charles_Leclerc-Ferrari_SF1000_(1).jpg",
+        "https://commons.wikimedia.org/wiki/File:2020_F1_Pre-Season_Testing_Catalonia_(49629584371).jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF21": {
+      "base": "#cf151d",
+      "finish": "matte",
+      "zones": {
+        "engineCover": "#8a1420",
+        "rearWing": "#6a0f1a",
+        "rearWingEndplates": "#6a0f1a",
+        "floor": "#141414",
+        "wheels": "#3a3a3a"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#8a1420",
+          "note": "red fades into burgundy (the Mugello 1000th-GP colour) from the rear half of the sidepods back through the engine cover to the rear wing"
+        }
+      ],
+      "raceNumbers": {
+        "sainz": 55,
+        "leclerc": 16
+      },
+      "numberNote": "White digits on the burgundy rear engine cover in front of the rear wing, and white on the nose top.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "rearWingEndplate"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "UPS",
+          "color": "#ffb500",
+          "background": "#351c15"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Mission Winnow",
+          "color": "#3fd13a",
+          "background": null
+        },
+        {
+          "slot": "noseSide",
+          "text": "Kaspersky",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "AWS",
+          "color": "#ffffff",
+          "background": "#141414"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Richard Mille",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "Philip Morris 'Mission Winnow' returned as a bright green 'MW' logo on the engine cover (plus 'missionwinnow.com' on the front wing endplates). Entered as Scuderia (Ferrari) Mission Winnow at 13 of 22 rounds (1-6, Russia, and USA-Abu Dhabi); logos removed at 9 rounds (France to Italy, plus Turkey). Chose the majority spec WITH the green Mission Winnow logo.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF21",
+        "https://www.racefans.net/2021/06/18/mission-winnow-logos-removed-from-ferraris-cars-again/",
+        "https://www.autosport.com/f1/news/mission-winnow-logos-removed-from-ferrari-f1-cars-for-european-races/6581095/",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2021_Nr._16_Leclerc_(side).jpg",
+        "https://commons.wikimedia.org/wiki/File:Saint_SF21_before_race_USGP_2021.jpg",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2021_Nr._55_Sainz_(corner).jpg"
+      ],
+      "confidence": "high"
+    },
+    "F1-75": {
+      "base": "#d20a11",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "frontWing": "#1a1a1a",
+        "frontWingEndplates": "#1a1a1a",
+        "rearWing": "#1a1a1a",
+        "rearWingEndplates": "#1a1a1a",
+        "wheels": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#141414",
+          "note": "black lower sidepods/undercut blending into the black floor; red upper body"
+        }
+      ],
+      "raceNumbers": {
+        "sainz": 55,
+        "leclerc": 16
+      },
+      "numberNote": "Black digits with white outline on the rear engine cover; also on the nose.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ceva",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "AWS",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Snapdragon",
+          "color": "#ffffff",
+          "background": "#141414"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Richard Mille",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        }
+      ],
+      "tobaccoNote": "none - Mission Winnow logos were dropped for 2022 and did not appear on the F1-75 at any round. Monza ran a one-off yellow-accent 75th-anniversary livery (not described).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_F1-75",
+        "https://www.racefans.net/2022/02/18/racefans-round-up-18-02-5/",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2022_Nr._16_Leclerc_(side).jpg",
+        "https://commons.wikimedia.org/wiki/File:Ferrari_F1-75_in_Melbourne.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF-23": {
+      "base": "#cc0e17",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "frontWing": "#1a1a1a",
+        "frontWingEndplates": "#1a1a1a",
+        "rearWing": "#1a1a1a",
+        "wheels": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#1a1a1a",
+          "note": "black/carbon top of the engine cover shark fin running back to the rear wing"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#141414",
+          "note": "black lower sidepods and undercut"
+        }
+      ],
+      "raceNumbers": {
+        "sainz": 55,
+        "leclerc": 16
+      },
+      "numberNote": "White digits on the rear engine cover (on the black fin edge) and on the nose side.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingTop",
+          "text": "Ferrari",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ceva Logistics",
+          "color": "#ffffff",
+          "background": "#2a2a2a"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "AWS",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Richard Mille",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": null
+        }
+      ],
+      "tobaccoNote": "none - no Mission Winnow or other tobacco branding in 2023. Monza (Le Mans-win tribute) and Las Vegas special liveries were one-offs and are not described.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF-23",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2023_Nr._16_(1).jpg",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2023_Nr._55_(2).jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF-24": {
+      "base": "#dc0c17",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "frontWingEndplates": "#1a1a1a",
+        "rearWingEndplates": "#1a1a1a",
+        "wheels": "#d40f1b"
+      },
+      "stripes": [
+        {
+          "zone": "sidepods",
+          "color": "#ffd100",
+          "note": "thin yellow stripe sweeping from in front of the cockpit diagonally down the sidepod and back along the engine cover"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#ffffff",
+          "note": "thin white stripe running parallel beside the yellow one"
+        },
+        {
+          "zone": "floor",
+          "color": "#141414",
+          "note": "black lower sidepods/undercut"
+        }
+      ],
+      "raceNumbers": {
+        "sainz": 55,
+        "leclerc": 16
+      },
+      "numberNote": "Yellow-gold digits with white outline on the rear engine cover; also on the nose. (Bearman drove #38 at Saudi Arabia as a stand-in; not in our driver list.)",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "HP",
+          "color": "#ffffff",
+          "background": "#0096d6"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "Santander",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ceva",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Peroni",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "VGW Play",
+          "color": "#ffffff",
+          "background": "#141414"
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "AWS",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        }
+      ],
+      "tobaccoNote": "none. HP became title partner from Miami (round 6 of 24), so HP logos (engine cover, nose, rear wing replacing the 'Ferrari' lettering) were on the car at 19 of 24 rounds; chose the post-Miami HP spec. Peroni was replaced by 'Tifosi 0.0'/'Italia 0.0' in Saudi Arabia/Qatar. Miami (blue accents) and Monza special liveries not described.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF-24",
+        "https://www.racefans.net/2024/04/24/ferrari-announces-hewlett-packard-as-new-title-sponsor-from-miami-gp/",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2024_Nr._16_Leclerc_(side).jpg",
+        "https://commons.wikimedia.org/wiki/File:SF-24_at_the_Japanese_GP.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF-25": {
+      "base": "#b5121b",
+      "finish": "matte",
+      "zones": {
+        "floor": "#141414",
+        "frontWing": "#1a1a1a",
+        "frontWingEndplates": "#1a1a1a",
+        "rearWing": "#f2f2f2",
+        "rearWingEndplates": "#1a1a1a",
+        "wheels": "#c8102e"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f2f2f2",
+          "note": "large white band across the engine cover behind the airbox, carrying the HP logo"
+        },
+        {
+          "zone": "sidepods",
+          "color": "#141414",
+          "note": "black/carbon lower sidepods and undercut"
+        }
+      ],
+      "raceNumbers": {
+        "leclerc": 16,
+        "hamilton": 44
+      },
+      "numberNote": "White digits on the rear engine cover and on the nose side.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "sidepodSide",
+        "noseTop"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "HP",
+          "color": "#ffffff",
+          "background": "#0096d6"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#dd1d21",
+          "background": "#fbce07"
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "UniCredit",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ray-Ban",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "IBM",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ceva",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Peroni",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "AWS",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        }
+      ],
+      "tobaccoNote": "none. Santander left after 2024; UniCredit took its engine-cover/nose/front-wing spots. Rear wing top is white with HP logos. Peroni was replaced by 'Italia 0.0' at Saudi Arabia/Qatar/Abu Dhabi. Miami (HP-heavy), Monaco (Shell 75), Monza (312T tribute) and Las Vegas specials not described.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ferrari_SF-25",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._16_Leclerc.jpg",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2025_Nr._44_Hamilton.jpg",
+        "https://commons.wikimedia.org/wiki/File:2025_Japan_GP_-_Ferrari_-_SF-25_-_Thursday.jpg"
+      ],
+      "confidence": "high"
+    },
+    "SF-26": {
+      "base": "#dc1018",
+      "finish": "gloss",
+      "zones": {
+        "airbox": "#f4f4f4",
+        "cockpitSurround": "#f4f4f4",
+        "floor": "#1a1a1a",
+        "frontWing": "#1a1a1a",
+        "rearWing": "#1a1a1a",
+        "rearWingEndplates": "#1a1a1a",
+        "wheels": "#1a1a1a"
+      },
+      "stripes": [
+        {
+          "zone": "engineCover",
+          "color": "#f4f4f4",
+          "note": "large white area wrapping the airbox, halo/cockpit surround and front half of the engine cover (312 T-inspired), with a jagged edge where it meets the red rear half"
+        },
+        {
+          "zone": "rearWingEndplates",
+          "color": "#009246",
+          "note": "small green-white-red tricolour along the top edge of the black endplate"
+        }
+      ],
+      "raceNumbers": {
+        "leclerc": 16,
+        "hamilton": 44
+      },
+      "numberNote": "Leclerc #16, Hamilton #44. White numerals on the red rear section of the engine cover and on the nose top.",
+      "numberSlot": "engineCoverSide",
+      "shield": [
+        "cockpitSide"
+      ],
+      "decals": [
+        {
+          "slot": "engineCoverSide",
+          "text": "HP",
+          "color": "#0096d6",
+          "background": "#ffffff"
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Shell",
+          "color": "#fbce07",
+          "background": null
+        },
+        {
+          "slot": "engineCoverSide",
+          "text": "UniCredit",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "sidepodSide",
+          "text": "Ceva Logistics",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "Richard Mille",
+          "color": "#ffffff",
+          "background": null
+        },
+        {
+          "slot": "frontWingEndplate",
+          "text": "UniCredit",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        },
+        {
+          "slot": "rearWingEndplate",
+          "text": "V-Power",
+          "color": "#ffffff",
+          "background": "#1a1a1a"
+        },
+        {
+          "slot": "cockpitSide",
+          "text": "IBM",
+          "color": "#1a1a1a",
+          "background": "#f4f4f4"
+        }
+      ],
+      "tobaccoNote": "none - no tobacco branding on the SF-26 (a 'ZYN' nicotine-pouch logo appears small near the cockpit on some photos; not included).",
+      "sources": [
+        "https://www.ferrari.com/en-EN/formula1/sf-26",
+        "https://en.wikipedia.org/wiki/Ferrari_SF-26",
+        "https://www.motorsportmagazine.com/articles/single-seaters/f1/2026-ferrari-f1-car-launch/",
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2026_Nr._44_Hamilton_(1).jpg",
+        "https://commons.wikimedia.org/wiki/File:2026_Chinese_GP_-_Ferrari_-_Charles_Leclerc_-_Qualifying.jpg"
+      ],
+      "confidence": "high"
+    }
+  },
+  "suits": {
+    "ascari": {
+      "year": 1952,
+      "base": "#8fb3dc",
+      "accents": [
+        {
+          "area": "legs",
+          "color": "#4d6f9e"
+        }
+      ],
+      "style": "polo-and-trousers",
+      "notes": "No overalls: a short-sleeved collared polo shirt in his 'lucky' light blue, worn with blue trousers (the legs accent here is the trouser colour), plus his light blue helmet. Motor Sport's article on his personal effects names the 'lucky blue polo shirt' and 'lucky blue trousers', and Motor Sport also calls blue shirts his signature. A 1953 Zandvoort winner's photo (black and white) shows the collared, buttoned polo. No sponsor patches. The shirt shade is a best estimate. The trouser shade is less certain: sources only say 'blue', so it may have been lighter or greyer. Confidence: high for the garment and light blue shirt, medium for the trouser shade.",
+      "sources": [
+        "https://www.motorsportmagazine.com/archive/article/february-2023/98/ascaris-crown-jewels/",
+        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/",
+        "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins,_Bestanddeelnr_905-2687.jpg"
+      ]
+    },
+    "fangio": {
+      "year": 1956,
+      "base": "#d3e2f1",
+      "accents": [
+        {
+          "area": "legs",
+          "color": "#bfa57a"
+        }
+      ],
+      "style": "polo-and-trousers",
+      "notes": "No overalls. Fangio raced in Suixtil clothing (an Argentine brand): short-sleeved shirts or polos with slacks, and the Suixtil name was sometimes on the slacks. El Grafico colour covers from 1954-55 show a pale blue short-sleeved button shirt with khaki or tan trousers. Another shows white trousers with a brown shirt. The legs accent here is the trouser colour. I found no dated colour photo from the 1956 Lancia-Ferrari season, so pale blue/white shirt with khaki trousers is taken from his typical outfit of 1954-57. Velocetoday also says he wore light blue trousers with white or yellow Suixtil polos in 1949. No team patches. Confidence: medium-low on the exact 1956 colours. The garment type is certain.",
+      "sources": [
+        "https://velocetoday.com/fangio-suixtil-and-modena-1957/",
+        "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_-_El_Gr%C3%A1fico_1849.jpg",
+        "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_-_El_Gr%C3%A1fico_1875.jpg",
+        "https://www.edwardquinn.com/photos/miscellaneous/monaco-grand-prix/monaco-grand-prix-1956/?photo_id=23735"
+      ]
+    },
+    "hawthorn": {
+      "year": 1958,
+      "base": "#2f4a37",
+      "accents": [
+        {
+          "area": "collar",
+          "color": "#f4f4f0"
+        },
+        {
+          "area": "legs",
+          "color": "#ecebe3"
+        }
+      ],
+      "style": "polo-and-trousers",
+      "notes": "His race 'uniform' was a dark green, waist-length zip windcheater jacket (Baracuta-style cotton; forum discussion suggests a Baracuta G35) over a white shirt with his trademark spotted bow tie, which earned him the French nickname 'Le Papillon'. He wore white trousers or white overalls below. The base colour is the green jacket. The collar accent is the white shirt collar and bow tie area, and the legs accent is the white trousers. No sponsor patches. Ferrari.com, formula1.com and an eyewitness at the 1958 Nurburgring (quoted on the Autosport Nostalgia Forum) all agree on green jacket, white shirt and bow tie. The bow tie was usually dark with white spots. Confidence: high for the jacket, shirt and bow tie. Medium for the exact green and for the trousers.",
+      "sources": [
+        "https://www.ferrari.com/en-EN/magazine/articles/mike-hawthorn-ferrari-first-british-champion",
+        "https://www.formula1.com/en/information/drivers-hall-of-fame-mike-hawthorn.1ZhSmpnVlO7Pb8peo23YVd",
+        "https://forums.autosport.com/topic/201735-mike-hawthorns-green-jacket/",
+        "https://revivalvintage.co.uk/blogs/news/mike-hawthorn-steal-his-style-for-goodwood-revival",
+        "https://www.24h-lemans.com/en/news/the-stunning-life-and-legacy-of-mike-hawthorn-58367"
+      ]
+    },
+    "phil_hill": {
+      "year": 1961,
+      "base": "#a8c3de",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Light blue ('azzurro') cotton overalls: one piece with a stand collar, breast pocket and belt, and a small embroidered Dunlop logo on the chest and hip (Ferrari ran Dunlop tyres). Motor Sport and period discussion say Ferrari drivers and mechanics of the 1950s-60s wore this light blue, and GPHelmet's 1961 replica is pale blue Dunlop overalls. I found no dated 1961 colour photo to confirm this myself; the Commons photos from 1961 Zandvoort are black and white and show only the helmet. Confidence: medium.",
+      "sources": [
+        "https://gphelmet.com/products/phil-hill-1961-racing-suit-replica-ferrari-f1",
+        "https://www.f1technical.net/forum/viewtopic.php?t=20168",
+        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/"
+      ]
+    },
+    "surtees": {
+      "year": 1964,
+      "base": "#9fbcda",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Light blue cotton overalls, probably Les Leston, with an embroidered Dunlop logo above the breast pocket. Motor Sport names Surtees as one of the Ferrari drivers 'synonymous with blue overalls'. A Bonhams lot (Surtees's own Les Leston two-piece overalls, embroidered 'World Champion 1964', worn in 1965) confirms the maker and the Dunlop logos, but its text gives no colour. For the last two races (Watkins Glen and Mexico) the car ran in NART blue and white; there is no evidence he changed overalls for them. He often wore a dark quilted jacket over them in the paddock. Confidence: medium.",
+      "sources": [
+        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/",
+        "https://cars.bonhams.com/auction/21906/lot/230/john-surtees-signed-world-champion-1964-les-leston-two-piece-race-overalls-offered-on-behalf-of-the-henry-surtees-foundation/",
+        "https://cars.bonhams.com/auction/24878/lot/60/a-pair-of-les-leston-dunlop-cotton-race-overalls-1960s-4/",
+        "https://www.f1technical.net/forum/viewtopic.php?t=20168"
+      ]
+    },
+    "lauda": {
+      "year": 1975,
+      "base": "#d4302a",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Red fireproof Nomex overalls with a red collar. On the chest are yellow Ferrari shield and Agip patches, a Heuer shield, a Goodyear patch and a name patch. The colour photo from the 1975 Italian GP podium (title win) shows an all-red suit with yellow patches on the chest and no white panels. The 'Rush' costume, an OMP red suit labelled 'Niki Lauda Ferrari 1975', carries Ferrari, Goodyear, Heuer and Agip logos. Replicas of his 1976 suit add white shoulder and arm bands and a Parmalat patch; those belong to 1976, not 1975. Motor Sport says Lauda was also linked with Ferrari blue overalls, probably from 1974 or testing. Confidence: medium-high for red, medium for the patch list.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:1975_Italian_GP_-_The_new_F1_Drivers%27_World_Champion_Niki_Lauda_on_the_podium.jpg",
+        "https://cars.bonhams.com/auction/21274/lot/242/a-niki-lauda-helmet-and-race-suit-costume-as-worn-in-the-film-rush/",
+        "https://gphelmet.com/products/copy-of-michael-schumacher-2012-racing-suit-team-mercedes-benz-f1"
+      ]
+    },
+    "gilles_villeneuve": {
+      "year": 1979,
+      "base": "#f3f3ef",
+      "accents": [],
+      "style": "overalls",
+      "notes": "He wore two different suits in 1979. From the French GP at Dijon (the famous duel with Arnoux) to the end of the season, including Zandvoort, Monza and his Watkins Glen win, he raced in a new white/silver Simpson Nomex suit, which only came in white. Motorsport.com reports this, and Peter Windsor saw him in 'a brand new pair of silver Simpsons' at a 1979 Fiorano test. Before France (Kyalami and Long Beach wins, Zolder, Monaco) he wore a red suit (about #d0312d) with white stripes down the arms and legs; a Zolder 1979 parade photo shows it. Patches on both suits: a Marlboro World Championship Team chevron, Michelin, Champion, Agip, a Ferrari shield, Heuer, his personal sponsors Giacobazzi and Smeg in large letters on the chest, Labatt on the shoulder and back, and his embroidered name. Base colour is set to white for the Dijon-to-Watkins Glen part of the season. Confidence: medium on which suit to show, since it changed mid-season.",
+      "sources": [
+        "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
+        "https://peterwindsor.com/2012/01/08/a-ferrari-day/",
+        "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_and_Mario_Andretti_during_the_drivers_parade_at_the_1979_Belgian_Grand_Prix,_Zolder_(54701629880).jpg",
+        "https://hofcollection.com/products/1978-gilles-villeneuve-ferrari-used-suit",
+        "https://gphelmet.com/products/copy-of-fernando-alonso-2011-racing-suit-replica-equipo-ferrari-f1"
+      ]
+    },
+    "scheckter": {
+      "year": 1979,
+      "base": "#f2f2ee",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Not red. Early in 1979 he wore suits in the colours of his personal sponsor, Brooklyn chewing gum. Peter Windsor saw 'blue Brooklyn chewing gum overalls' at a spring test. The dated colour photo from the 1979 Monaco GP (a race he won) shows a white suit with a red diagonal band across the chest, 'Brooklyn Chewing Gum' in dark navy letters, a Ferrari shield and an Agip patch. From mid-season he switched to the same white Simpson Nomex suit as Villeneuve and wore it for the rest of the year, including the title-winning Monza race (Motorsport.com). The red chest band does not fit any allowed accent area, so accents are empty. Confidence: medium-high for white, medium for the exact details.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_during_the_1979_Monaco_Grand_Prix.jpg",
+        "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
+        "https://peterwindsor.com/2012/01/08/a-ferrari-day/"
+      ]
+    },
+    "mansell": {
+      "year": 1989,
+      "base": "#c8202a",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Plain red OMP Nomex overalls with fine white quilting stitch lines and white knitted cuffs. There are no white panels, and no Marlboro chevron panel on the suit itself. Chest patches: a white Marlboro chevron-logo patch with the name above it on the right breast, and Ferrari shield, Agip and Goodyear on the left. There are small Marlboro patches on both upper arms, Marlboro across the back, and a red belt with his name and Union Jack. A Bonhams lot of his 1989 OMP suit lists Marlboro, Goodyear and Agip patches. His 1990 Estoril suit, in red Nomex III, has the same layout. Confidence: high.",
+      "sources": [
+        "https://cars.bonhams.com/auction/14018/lot/331/a-nigel-mansell-racing-suit/",
+        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/",
+        "https://gphelmet.com/products/nigel-mansell-1991-racing-suit-replica-ferrari-f1"
+      ]
+    },
+    "prost": {
+      "year": 1990,
+      "base": "#c8202a",
+      "accents": [],
+      "style": "overalls",
+      "notes": "The same style as Mansell's: plain red Nomex overalls with white quilting stitch lines, white cuffs and no white body panels. On the right chest is a white 'A. PROST / Marlboro World Championship Team' chevron patch; on the left are Ferrari shield, Agip and Goodyear patches. There are Marlboro patches on both upper arms and Marlboro on the back, and a red belt with 'Alain Prost' and the French flag. Mansell's 1990 race-worn OMP suit (Bonhams) confirms the red suit and the Ferrari, Marlboro, Agip and Goodyear patches; Prost's own layout comes from GPHelmet's replica. Confidence: high.",
+      "sources": [
+        "https://gphelmet.com/products/alain-prost-1990-racing-suit-replica-ferrari-f1",
+        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/"
+      ]
+    },
+    "michael_schumacher": {
+      "year": 2004,
+      "base": "#d7141a",
+      "accents": [],
+      "style": "overalls",
+      "notes": "Red OMP suit with a fine white quilting grid. Its main feature is a large white Marlboro chevron panel across the mid-chest. The Marlboro wordmark appeared where tobacco advertising was allowed; elsewhere the white chevron shape stayed with the wording removed. Upper chest: Vodafone, Shell, Bridgestone and a Ferrari shield with Marlboro. I did not confirm the sponsor logos on the arms. There is a white Marlboro box on the back, and his name and German flag at the waist. RM Sotheby's sold a 2004 Hungarian GP OMP suit, but the lot text gives no colours; the layout comes from a replica image. The white chest chevron does not fit any allowed accent area, so accents are empty. Confidence: medium-high.",
+      "sources": [
+        "https://rmsothebys.com/auctions/ml25/lots/n0001-2004-michael-schumacher-ferrari-formula-1-omp-racing-suit/",
+        "https://gphelmet.com/products/copy-of-michael-schumacher-2001-racing-suit-team-ferrari-f1"
+      ]
+    },
+    "raikkonen": {
+      "year": 2007,
+      "base": "#e2170f",
+      "accents": [
+        {
+          "area": "sides",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "notes": "Red Puma suit, with Puma supplying the team from 2007, and diamond quilting. White panels run down the sides of the torso and outer legs and along the underside of the arms, edged with thin white lines around the shoulders. On the chest: Shell and Bridgestone patches, a Ferrari shield with a thin green/white/red stripe running down from it, and small Marlboro logos on the chest and collar. Marlboro is on the upper back, and his name and Finnish flag are at the waist. The 2007 Brazil GP winner's photo shows the white underside of his sleeve when he waves. The design comes from a 2008 replica and a forum description ('the bit around Kimi's shoulder with the white outline'); the 2007 suit may differ slightly. Confidence: medium-high.",
+      "sources": [
+        "https://gphelmet.com/products/copy-of-kimi-raikkonen-2005-racing-suit-team-mc-laren-f1",
+        "https://forums.autosport.com/topic/103031-kimis-quick-change-alpinestars-vs-puma/",
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_won_2007_Brazil_GP.jpg"
+      ]
+    },
+    "alonso": {
+      "year": 2012,
+      "base": "#d9131b",
+      "accents": [
+        {
+          "area": "sides",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "notes": "Red Puma suit with white panels down the torso sides and under the arms. A white band across the chest carries the red Santander logo. Upper chest: Shell and UPS patches (UPS may be a 2013 addition; not confirmed for 2012) and a white Scuderia Ferrari shield. A thin green/white/red stripe runs down the sides of the legs. Kaspersky is on the shoulders, with his name and Spanish flag at the waist. I did not find a dated 2012 suit photo or auction text; this is taken from 2011 and 2013 replicas of the same design family, so small details may differ. Confidence: medium.",
+      "sources": [
+        "https://gphelmet.com/products/copy-of-fernando-alonso-2010-mono-replica-equipo-ferrari-f1",
+        "https://gphelmet.com/products/copy-of-fernando-alonso-2011-mono-replica-equipo-ferrari-f1"
+      ]
+    },
+    "vettel": {
+      "year": 2018,
+      "base": "#e2231a",
+      "accents": [
+        {
+          "area": "sides",
+          "color": "#ffffff"
+        },
+        {
+          "area": "shoulders",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "notes": "Ferrari red Puma suit with white panels on the sides of the torso and the inner arms. Thin white stripes run over the shoulders (Kaspersky shoulder band), and white/red/green pinstripes run down the legs. There is a yellow Prancing Horse shield on the left chest and top of the back, and Shell and UPS patches on the right chest. The arms carry Ray-Ban, Hublot, Weichai, Singha, Alfa Romeo, Pirelli and Lenovo. His name and German flag are at the waist, with a circled 5 on the left leg. The chest had no big sponsor panel, since Santander had left. Mission Winnow branding appeared only from the Japanese GP in October. HOF Collection sold a race-worn 2018 suit and describes it this way. Confidence: high.",
+      "sources": [
+        "https://hofcollection.com/products/2018-sebastian-vettel-scuderia-ferrari-race-worn-suit"
+      ]
+    },
+    "sainz": {
+      "year": 2022,
+      "base": "#d70f16",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#1b1b1b"
+        }
+      ],
+      "style": "overalls",
+      "notes": "Red Puma suit with a black shoulder yoke and black upper arms, and one thin white horizontal stripe across the chest. Shell and V-Power (VELAS) are on the right chest, Santander and Ceva on the left, with a yellow Ferrari shield at the collar. Snapdragon, AWS, Palantir and Richard Mille are on the arms. Other patches include #essereFerrari, and his name and flag are at the waist. In Sainz's own words at the 2024 suit launch, 'the black is gone', which confirms that 2022-23 suits used black. Confidence: high.",
+      "sources": [
+        "https://gphelmet.com/products/charles-leclerc-2022-racing-suit-ferrari-f1",
+        "https://scuderiafans.com/ferrari-officially-reveal-racing-suits-for-2024-f1-lots-of-white-on-back-of-undershirt/",
+        "https://commons.wikimedia.org/wiki/File:Carlos_Sainz_%26_Charles_Leclerc,_British_GP_2022_(52382794165).jpg"
+      ]
+    },
+    "leclerc": {
+      "year": 2024,
+      "base": "#e8261c",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#ffffff"
+        },
+        {
+          "area": "legs",
+          "color": "#ffcc00"
+        }
+      ],
+      "style": "overalls",
+      "notes": "An all-red Puma suit with no black. Paired thin white and Giallo Modena yellow pinstripes form a U-shaped yoke across the chest and shoulders, run down the outer arms and down the legs. Both accents are really the same white and yellow pair: the shoulders accent is white and the legs accent is yellow. Shell and VGW Play are on the right chest, Santander and Ceva on the left, with a yellow Ferrari shield. The arms carry DXC Technology, AWS, Richard Mille, Peroni and others. His name is in white with number 16 at the waist. Special one-off suits were worn in a few races: an azzurro-blue-themed suit for Miami and a black, carbon-fibre-themed suit for Monza. Confidence: high.",
+      "sources": [
+        "https://scuderiafans.com/ferrari-officially-reveal-racing-suits-for-2024-f1-lots-of-white-on-back-of-undershirt/",
+        "https://www.motorsport.com/f1/news/what-ferrari-and-pumas-latest-collection-could-tell-us-about-ferraris-2024-f1-livery/10574209/",
+        "https://gphelmet.com/products/charles-leclerc-2024-racing-suit-ferrari-f1",
+        "https://lustermagazine.com/2024/08/29/ferrari-unveils-sleek-black-race-suits-for-monza-grand-prix/"
+      ]
+    },
+    "hamilton": {
+      "year": 2025,
+      "base": "#c9161d",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "notes": "Red Puma suit, a slightly deeper red than 2024, with 'sleek white lines' (Puma's words). A white line runs across the upper chest and shoulders, and there are white bands above the red knitted cuffs. Large blue-and-white HP roundels are on the chest and stomach; Shell and VGW Play are on the right chest, and UniCredit, Ceva, IBM and a yellow Ferrari shield are also on the chest. DXC Technology, Ray-Ban, AWS, Pirelli and Richard Mille are on the arms. His name and number 44 with a Union Jack are at the waist, and his name is on the back. One-off suits: all-white at Miami, a 1975 Lauda-style tribute at Monza and a special Las Vegas suit. Confidence: high for the season suit; exact line placement is from the replica image.",
+      "sources": [
+        "https://about.puma.com/en/newsroom/product-and-brand-news/2025/27-01-2025-first-look-lewis-hamilton-and-charles-leclerc",
+        "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
+        "https://gphelmet.com/products/lewis-hamilton-2025-racing-suit-ferrari-f1"
+      ]
+    }
+  }
+}

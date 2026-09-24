@@ -16,6 +16,9 @@ import type { Ring } from "./geometry";
 import type { CarSpec, WingSpec } from "./families";
 import Helmet from "../helmets/Helmet";
 import type { HelmetDesign } from "../helmets/helmetArt";
+import type { ReactNode } from "react";
+import type { Livery } from "../../data/liveries";
+import { Decal, useLiveryMaterials, useSlotTextures } from "./livery";
 
 type V3 = [number, number, number];
 
@@ -105,6 +108,30 @@ function Box({ size, position, rotation, material, cast = true }: {
   );
 }
 
+/** A painted stripe that follows the top line of a lofted body. */
+function SpineStripe({ rings, width, material }: { rings: Ring[]; width: number; material: Material }) {
+  return (
+    <group>
+      {rings.slice(0, -1).map((a, i) => {
+        const b = rings[i + 1];
+        const ya = a.y + a.h + 0.003;
+        const yb = b.y + b.h + 0.003;
+        const len = Math.hypot(b.x - a.x, yb - ya);
+        return (
+          <Box
+            key={i}
+            size={[len + 0.004, 0.008, Math.min(width, a.w * 1.2, b.w * 1.2)]}
+            position={[(a.x + b.x) / 2, (ya + yb) / 2, 0]}
+            rotation={[0, 0, Math.atan2(yb - ya, b.x - a.x)]}
+            material={material}
+            cast={false}
+          />
+        );
+      })}
+    </group>
+  );
+}
+
 /** Geometry is created per spec and disposed when the car changes. */
 function useGeometry<T extends Record<string, BufferGeometry | null>>(build: () => T, deps: unknown[]) {
   const g = useMemo(build, deps);
@@ -118,11 +145,15 @@ function Wing({
   material,
   name,
   plateBottom,
+  plateMaterial,
+  decals,
 }: {
   wing: WingSpec;
   mats: Mats;
   material: Material;
   name: string;
+  plateMaterial?: Material;
+  decals?: (plate: { length: number; height: number; y: number; x: number }) => ReactNode;
   /** Absolute height the endplates extend down to (rear wings). */
   plateBottom?: number;
 }) {
@@ -166,7 +197,7 @@ function Wing({
           <Box
             size={[plateLength, plateHeight, 0.012]}
             position={[plateLength / 2 - wing.chord / 2, plateY, (side * wing.span) / 2]}
-            material={mats.carbon}
+            material={plateMaterial ?? mats.carbon}
           />
           {wing.sweepUp && (
             <Box
@@ -178,11 +209,24 @@ function Wing({
           )}
         </group>
       ))}
+      {decals?.({ length: plateLength, height: plateHeight, y: plateY, x: plateLength / 2 - wing.chord / 2 })}
     </group>
   );
 }
 
-function Wheel({ spec, front, side, mats }: { spec: CarSpec; front: boolean; side: 1 | -1; mats: Mats }) {
+function Wheel({
+  spec,
+  front,
+  side,
+  mats,
+  rimOverride,
+}: {
+  spec: CarSpec;
+  front: boolean;
+  side: 1 | -1;
+  mats: Mats;
+  rimOverride?: Material | null;
+}) {
   const t = front ? spec.tyreF : spec.tyreR;
   const geos = useGeometry(() => {
     const spokes: BufferGeometry[] = [];
@@ -211,7 +255,8 @@ function Wheel({ spec, front, side, mats }: { spec: CarSpec; front: boolean; sid
   const x = front ? spec.frontAxle : spec.rearAxle;
   const z = side * (front ? spec.trackF : spec.trackR);
   const outer = (side * t.w) / 2;
-  const rimMat = spec.rim === "wire" ? mats.chrome : spec.rim === "cast" ? mats.rim : mats.graphite;
+  const rimMat =
+    rimOverride ?? (spec.rim === "wire" ? mats.chrome : spec.rim === "cast" ? mats.rim : mats.graphite);
   const label = `${front ? "f" : "r"}${side < 0 ? "r" : "l"}`;
   return (
     <group position={[x, t.r, z]}>
@@ -319,10 +364,26 @@ function EngineBlock({ spec, mats }: { spec: CarSpec; mats: Mats }) {
 // A historically informed procedural car assembled from an era CarSpec.
 // Component groups use the node names from spec §11.1 so the exploded view
 // can move them independently.
-export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: HelmetDesign }) {
+export default function CarModel({
+  spec,
+  helmet,
+  livery,
+  number = null,
+}: {
+  spec: CarSpec;
+  helmet?: HelmetDesign;
+  livery: Livery;
+  number?: number | null;
+}) {
   const { gl } = useThree();
   const env = useMemo(() => studioEnvironment(gl), [gl]);
   const mats = useMaterials(env);
+  const lm = useLiveryMaterials(env, livery);
+  // Before the 1980s numbers were painted in white roundels.
+  const roundel = spec.family === "front50s" || spec.family === "rear60s" || spec.family === "wing70s";
+  const tex = useSlotTextures(livery, number, roundel);
+  const stripe = (zone: "noseTop" | "engineCover" | "airbox") =>
+    livery.stripes?.find((st) => st.zone === zone)?.color;
 
   const pods = spec.pods;
   const geos = useGeometry(() => {
@@ -396,27 +457,52 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
   const cockpitMid = (spec.cockpit.x0 + spec.cockpit.x1) / 2;
   const cockpitWidth = widthAt(spec.tub, cockpitMid).w * 0.72;
   const nose = widthAt(spec.tub, spec.frontWing ? spec.frontWing.x + 0.3 : tubFront.x);
-  const paint = mats.paint;
-  const wingPaint = spec.accent === "wing" ? mats.carbon : paint;
+  const paint = lm.base;
+  const wingDefault = spec.accent === "wing" ? mats.carbon : paint;
+  const frontWingPaint = lm.zone("frontWing") ?? wingDefault;
+  const rearWingPaint = lm.zone("rearWing") ?? wingDefault;
+  const noseColor = lm.zone("nose");
+
+  // Decal placements, derived from the body so they fit every era.
+  const noseX = spec.tub[Math.min(2, spec.tub.length - 1)].x;
+  const noseRing = widthAt(spec.tub, noseX);
+  const noseTopX = (spec.tub[1].x + spec.tub[3].x) / 2;
+  const noseTopRing = widthAt(spec.tub, noseTopX);
+  const top = (x: number) => {
+    const r = widthAt(spec.tub, x);
+    return r.y + r.h;
+  };
+  const noseTilt = Math.atan2(top(noseTopX + 0.2) - top(noseTopX - 0.2), 0.4);
+  const cockpitSideX = spec.cockpit.x0 - 0.32;
+  const cockpitRing = widthAt(spec.tub, cockpitSideX);
+  const coverX = spec.cover ? spec.cover[2].x : spec.rearAxle - 0.7;
+  const coverRing = spec.cover ? widthAt(spec.cover, coverX) : widthAt(spec.tub, coverX);
+  const sides = [1, -1] as const;
+  const face = (side: number) => (side > 0 ? "left" : "right");
 
   return (
     <group name="car_root">
       <group name="chassis">
         <mesh geometry={geos.tub} material={paint} castShadow receiveShadow />
-        {spec.accent === "nose" && (
-          <mesh position={[tubFront.x + 0.1, tubFront.y, 0]} scale={[0.12, tubFront.h * 1.3, tubFront.w * 1.3]} material={mats.accent}>
+        {noseColor && (
+          <mesh position={[tubFront.x + 0.1, tubFront.y, 0]} scale={[0.12, tubFront.h * 1.3, tubFront.w * 1.3]} material={noseColor}>
             <sphereGeometry args={[1, 16, 10]} />
           </mesh>
         )}
-        {spec.accent === "stripe" && (
-          <Box
-            size={[spec.cockpit.x0 - tubFront.x, 0.012, 0.12]}
-            position={[(spec.cockpit.x0 + tubFront.x) / 2, widthAt(spec.tub, spec.cockpit.x0 - 0.6).y + widthAt(spec.tub, spec.cockpit.x0 - 0.6).h - 0.005, 0]}
-            rotation={[0, 0, -0.08]}
-            material={mats.accent}
-            cast={false}
+        {stripe("noseTop") && (
+          <SpineStripe
+            rings={spec.tub.filter((r) => r.x <= spec.cockpit.x0 - 0.05)}
+            width={0.12}
+            material={lm.paint(stripe("noseTop")!)}
           />
         )}
+        <Decal texture={tex.noseTop} slot="noseTop" height={Math.min(noseTopRing.w * 1.3, 0.26)} position={[noseTopX, top(noseTopX) + 0.006, 0]} facing="up" tilt={noseTilt} />
+        {sides.map((side) => (
+          <group key={side}>
+            <Decal texture={tex.noseSide} slot="noseSide" height={Math.min(noseRing.h * 1.1, 0.2)} position={[noseX, noseRing.y, side * (noseRing.w + 0.006)]} facing={face(side)} />
+            <Decal texture={tex.cockpitSide} slot="cockpitSide" height={Math.min(cockpitRing.h * 0.8, 0.17)} position={[cockpitSideX, cockpitRing.y + cockpitRing.h * 0.1, side * (cockpitRing.w + 0.006)]} facing={face(side)} />
+          </group>
+        ))}
         {spec.grille !== "none" &&
           (spec.grille === "oval"
             ? [0]
@@ -428,7 +514,7 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
               </mesh>
             </group>
           ))}
-        {spec.roundels &&
+        {spec.roundels && (number == null || livery.numberSlot === "none") &&
           [-1, 1].map((side) => {
             const at = widthAt(spec.tub, spec.cockpit.x0 - 0.55);
             return (
@@ -496,7 +582,13 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
 
       {geos.cover && spec.cover && (
         <group name="engine_cover">
-          <mesh geometry={geos.cover} material={paint} castShadow />
+          <mesh geometry={geos.cover} material={lm.zone("engineCover") ?? paint} castShadow />
+          {stripe("engineCover") && (
+            <SpineStripe rings={spec.cover} width={0.07} material={lm.paint(stripe("engineCover")!)} />
+          )}
+          {sides.map((side) => (
+            <Decal key={side} texture={tex.engineCoverSide} slot="engineCoverSide" height={Math.min(coverRing.h * 1.2, 0.2)} position={[coverX, coverRing.y, side * (coverRing.w + 0.006)]} facing={face(side)} />
+          ))}
           <mesh position={[spec.cover[0].x - 0.004, spec.cover[0].y, 0]} rotation={[0, -Math.PI / 2, 0]} scale={[spec.cover[0].w * 0.8, spec.cover[0].h * 0.8, 1]} material={mats.dark}>
             <circleGeometry args={[1, 24]} />
           </mesh>
@@ -513,12 +605,12 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
 
       {spec.airbox === "tall" && (
         <group name="airbox" position={[spec.driver.x + 0.36, 0.86, 0]}>
-          <mesh rotation={[0, Math.PI / 4, 0]} scale={[1, 1, 1]} material={paint} castShadow>
+          <mesh rotation={[0, Math.PI / 4, 0]} scale={[1, 1, 1]} material={lm.zone("airbox") ?? paint} castShadow>
             <cylinderGeometry args={[0.36, 0.18, 0.62, 4]} />
           </mesh>
           <Box size={[0.012, 0.16, 0.34]} position={[-0.2, 0.2, 0]} rotation={[0, 0, 0.3]} material={mats.dark} cast={false} />
-          {spec.accent === "stripe" && (
-            <Box size={[0.36, 0.04, 0.52]} position={[0.02, 0.24, 0]} material={mats.accent} cast={false} />
+          {stripe("airbox") && (
+            <Box size={[0.36, 0.04, 0.52]} position={[0.02, 0.24, 0]} material={lm.paint(stripe("airbox")!)} cast={false} />
           )}
         </group>
       )}
@@ -553,7 +645,8 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
         <>
           {([[geos.podL, 1], [geos.podR, -1]] as const).map(([g, side]) => (
             <group key={side} name={side > 0 ? "sidepod_left" : "sidepod_right"}>
-              <mesh geometry={g} material={paint} castShadow />
+              <mesh geometry={g} material={lm.zone("sidepods") ?? paint} castShadow />
+              <Decal texture={tex.sidepodSide} slot="sidepodSide" height={Math.min(pods.h * 1.1, 0.24)} position={[pods.x0 + (pods.x1 - pods.x0) * 0.38, pods.y, side * (pods.z + pods.w * 0.97 + 0.006)]} facing={face(side)} />
               <mesh position={[pods.x0 - 0.003, pods.y, side * pods.z]} rotation={[0, -Math.PI / 2, 0]} scale={[pods.w * 0.7, pods.h * 0.7, 1]} material={mats.dark}>
                 <circleGeometry args={[1, 20]} />
               </mesh>
@@ -591,7 +684,18 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
 
       {spec.frontWing && (
         <>
-          <Wing wing={spec.frontWing} mats={mats} material={wingPaint} name="front_wing" />
+          <Wing
+            wing={spec.frontWing}
+            mats={mats}
+            material={frontWingPaint}
+            plateMaterial={lm.zone("frontWingEndplates") ?? undefined}
+            name="front_wing"
+            decals={(plate) =>
+              sides.map((side) => (
+                <Decal key={side} texture={tex.frontWingEndplate} slot="frontWingEndplate" height={Math.min(plate.height * 0.55, plate.length / 2.8)} position={[plate.x, plate.y, side * (spec.frontWing!.span / 2 + 0.009)]} facing={face(side)} />
+              ))
+            }
+          />
           {spec.wingPillars && (
             <group name="front_wing_supports">
               {[-1, 1].map((side) => (
@@ -612,7 +716,16 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
           <Wing
             wing={spec.rearWing}
             mats={mats}
-            material={wingPaint}
+            material={rearWingPaint}
+            plateMaterial={lm.zone("rearWingEndplates") ?? undefined}
+            decals={(plate) => (
+              <>
+                {sides.map((side) => (
+                  <Decal key={side} texture={tex.rearWingEndplate} slot="rearWingEndplate" height={Math.min(plate.height * 0.35, plate.length / 2.4)} position={[plate.x, 0.02, side * (spec.rearWing!.span / 2 + 0.009)]} facing={face(side)} />
+                ))}
+                <Decal texture={tex.rearWingTop} slot="rearWingTop" height={Math.min(spec.rearWing!.chord * 0.7, (spec.rearWing!.span * 0.9) / 4.5)} position={[spec.rearWing!.chord * 0.05, spec.rearWing!.chord * 0.09, 0]} facing="back" />
+              </>
+            )}
             name="rear_wing"
             plateBottom={spec.rearPylon === "endplate" ? 0.3 : undefined}
           />
@@ -633,7 +746,7 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
 
       {spec.floor && (
         <group name="floor">
-          <Box size={[spec.floor.x1 - spec.floor.x0, 0.022, spec.floor.w * 2]} position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.06, 0]} material={mats.carbon} />
+          <Box size={[spec.floor.x1 - spec.floor.x0, 0.022, spec.floor.w * 2]} position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.06, 0]} material={lm.zone("floor") ?? mats.carbon} />
           <Box size={[spec.floor.x1 - spec.floor.x0 - 0.3, 0.012, 0.3]} position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.043, 0]} material={mats.brake} cast={false} />
         </group>
       )}
@@ -658,7 +771,7 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
 
       {([true, false] as const).flatMap((front) =>
         ([-1, 1] as const).map((side) => (
-          <Wheel key={`${front}-${side}`} spec={spec} front={front} side={side} mats={mats} />
+          <Wheel key={`${front}-${side}`} spec={spec} front={front} side={side} mats={mats} rimOverride={lm.rim} />
         )),
       )}
       <Suspension spec={spec} mats={mats} />

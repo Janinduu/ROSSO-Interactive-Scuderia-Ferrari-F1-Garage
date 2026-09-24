@@ -12,7 +12,8 @@ export type FamilyId =
   | "v10"
   | "hybrid14"
   | "wide17"
-  | "ground22";
+  | "ground22"
+  | "active26";
 
 export interface WingSpec {
   x: number;
@@ -48,7 +49,15 @@ export interface CarSpec {
   rearWing: WingSpec | null;
   beamWing: number | null;
   rearPylon: "central" | "endplate";
-  pods: { x0: number; x1: number; z: number; w: number; y: number; h: number; n: number } | null;
+  pods: {
+    x0: number;
+    x1: number;
+    z: number;
+    w: number;
+    y: number;
+    h: number;
+    n: number;
+  } | null;
   panniers: boolean;
   floor: { x0: number; x1: number; w: number } | null;
   diffuser: { x0: number; x1: number; w: number; rise: number } | null;
@@ -83,7 +92,7 @@ const base = {
   accent: "none" as const,
 };
 
-export const families: Record<FamilyId, CarSpec> = {
+const eraFamilies: Record<Exclude<FamilyId, "active26">, CarSpec> = {
   front50s: {
     ...base,
     family: "front50s",
@@ -180,8 +189,22 @@ export const families: Record<FamilyId, CarSpec> = {
     airbox: "tall",
     engineFront: false,
     exposedEngine: { x0: 0.5, x1: 1.45, w: 0.3, h: 0.14, y: 0.3 },
-    frontWing: { x: -1.72, y: 0.3, span: 1.55, chord: 0.42, elements: 1, endplate: 0.12 },
-    rearWing: { x: 1.78, y: 1.0, span: 1.1, chord: 0.45, elements: 1, endplate: 0.34 },
+    frontWing: {
+      x: -1.72,
+      y: 0.3,
+      span: 1.55,
+      chord: 0.42,
+      elements: 1,
+      endplate: 0.12,
+    },
+    rearWing: {
+      x: 1.78,
+      y: 1.0,
+      span: 1.1,
+      chord: 0.45,
+      elements: 1,
+      endplate: 0.34,
+    },
     rearPylon: "central",
     pods: { x0: -0.25, x1: 0.55, z: 0.5, w: 0.14, y: 0.33, h: 0.13, n: 4 },
     floor: null,
@@ -224,8 +247,22 @@ export const families: Record<FamilyId, CarSpec> = {
     ],
     airbox: "hoop",
     engineFront: false,
-    frontWing: { x: -1.98, y: 0.13, span: 1.55, chord: 0.32, elements: 2, endplate: 0.18 },
-    rearWing: { x: 1.92, y: 0.95, span: 0.95, chord: 0.38, elements: 2, endplate: 0.55 },
+    frontWing: {
+      x: -1.98,
+      y: 0.13,
+      span: 1.55,
+      chord: 0.32,
+      elements: 2,
+      endplate: 0.18,
+    },
+    rearWing: {
+      x: 1.92,
+      y: 0.95,
+      span: 0.95,
+      chord: 0.38,
+      elements: 2,
+      endplate: 0.55,
+    },
     beamWing: 0.45,
     pods: { x0: -0.6, x1: 1.3, z: 0.45, w: 0.2, y: 0.3, h: 0.17, n: 3 },
     floor: { x0: -0.8, x1: 1.5, w: 0.7 },
@@ -269,9 +306,23 @@ export const families: Record<FamilyId, CarSpec> = {
     ],
     airbox: "hoop",
     engineFront: false,
-    frontWing: { x: -2.1, y: 0.1, span: 1.6, chord: 0.3, elements: 2, endplate: 0.22 },
+    frontWing: {
+      x: -2.1,
+      y: 0.1,
+      span: 1.6,
+      chord: 0.3,
+      elements: 2,
+      endplate: 0.22,
+    },
     wingPillars: true,
-    rearWing: { x: 1.95, y: 0.92, span: 0.9, chord: 0.3, elements: 2, endplate: 0.55 },
+    rearWing: {
+      x: 1.95,
+      y: 0.92,
+      span: 0.9,
+      chord: 0.3,
+      elements: 2,
+      endplate: 0.55,
+    },
     beamWing: 0.42,
     pods: { x0: -0.55, x1: 1.35, z: 0.46, w: 0.16, y: 0.37, h: 0.19, n: 3 },
     floor: { x0: -0.9, x1: 1.55, w: 0.7 },
@@ -317,9 +368,23 @@ export const families: Record<FamilyId, CarSpec> = {
     ],
     airbox: "hoop",
     engineFront: false,
-    frontWing: { x: -2.35, y: 0.09, span: 1.65, chord: 0.36, elements: 3, endplate: 0.26 },
+    frontWing: {
+      x: -2.35,
+      y: 0.09,
+      span: 1.65,
+      chord: 0.36,
+      elements: 3,
+      endplate: 0.26,
+    },
     wingPillars: true,
-    rearWing: { x: 2.02, y: 1.0, span: 0.75, chord: 0.35, elements: 2, endplate: 0.6 },
+    rearWing: {
+      x: 2.02,
+      y: 1.0,
+      span: 0.75,
+      chord: 0.35,
+      elements: 2,
+      endplate: 0.6,
+    },
     pods: { x0: -0.7, x1: 1.25, z: 0.47, w: 0.17, y: 0.4, h: 0.19, n: 3 },
     floor: { x0: -1.1, x1: 1.7, w: 0.7 },
     diffuser: { x0: 1.4, x1: 2.1, w: 0.5, rise: 0.17 },
@@ -363,9 +428,23 @@ export const families: Record<FamilyId, CarSpec> = {
     ],
     airbox: "hoop",
     engineFront: false,
-    frontWing: { x: -2.55, y: 0.09, span: 1.8, chord: 0.38, elements: 4, endplate: 0.3 },
+    frontWing: {
+      x: -2.55,
+      y: 0.09,
+      span: 1.8,
+      chord: 0.38,
+      elements: 4,
+      endplate: 0.3,
+    },
     wingPillars: true,
-    rearWing: { x: 2.12, y: 0.92, span: 1.0, chord: 0.4, elements: 2, endplate: 0.5 },
+    rearWing: {
+      x: 2.12,
+      y: 0.92,
+      span: 1.0,
+      chord: 0.4,
+      elements: 2,
+      endplate: 0.5,
+    },
     beamWing: 0.5,
     pods: { x0: -0.8, x1: 1.3, z: 0.5, w: 0.17, y: 0.42, h: 0.18, n: 3 },
     floor: { x0: -1.2, x1: 1.8, w: 0.8 },
@@ -412,8 +491,23 @@ export const families: Record<FamilyId, CarSpec> = {
     ],
     airbox: "hoop",
     engineFront: false,
-    frontWing: { x: -2.5, y: 0.1, span: 1.9, chord: 0.45, elements: 4, endplate: 0.26, sweepUp: 0.12 },
-    rearWing: { x: 2.05, y: 0.95, span: 1.0, chord: 0.42, elements: 2, endplate: 0.45 },
+    frontWing: {
+      x: -2.5,
+      y: 0.1,
+      span: 1.9,
+      chord: 0.45,
+      elements: 4,
+      endplate: 0.26,
+      sweepUp: 0.12,
+    },
+    rearWing: {
+      x: 2.05,
+      y: 0.95,
+      span: 1.0,
+      chord: 0.42,
+      elements: 2,
+      endplate: 0.45,
+    },
     beamWing: 0.55,
     pods: { x0: -0.7, x1: 1.35, z: 0.55, w: 0.22, y: 0.42, h: 0.2, n: 3 },
     floor: { x0: -1.0, x1: 1.9, w: 0.9 },
@@ -426,6 +520,42 @@ export const families: Record<FamilyId, CarSpec> = {
   },
 };
 
+// 2026 rules: a shorter, narrower car with narrower tyres and movable wings.
+export const families: Record<FamilyId, CarSpec> = {
+  ...eraFamilies,
+  active26: {
+    ...eraFamilies.ground22,
+    family: "active26",
+    familyLabel: "Active-aero era car, 2026 regulations",
+    frontAxle: -1.85,
+    rearAxle: 1.55,
+    trackF: 0.76,
+    trackR: 0.74,
+    tyreF: { r: 0.36, w: 0.285 },
+    tyreR: { r: 0.36, w: 0.37 },
+    frontWing: {
+      x: -2.35,
+      y: 0.1,
+      span: 1.8,
+      chord: 0.42,
+      elements: 3,
+      endplate: 0.22,
+    },
+    rearWing: {
+      x: 1.95,
+      y: 0.95,
+      span: 0.95,
+      chord: 0.4,
+      elements: 2,
+      endplate: 0.45,
+    },
+    beamWing: null,
+    floor: { x0: -0.9, x1: 1.8, w: 0.82 },
+    diffuser: { x0: 1.4, x1: 2.05, w: 0.55, rise: 0.22 },
+    wheelCovers: false,
+  },
+};
+
 /** The family whose architecture matches a championship year. */
 export function familyForYear(year: number): FamilyId {
   if (year <= 1960) return "front50s";
@@ -435,20 +565,28 @@ export function familyForYear(year: number): FamilyId {
   if (year <= 2008) return "v10";
   if (year <= 2016) return "hybrid14";
   if (year <= 2021) return "wide17";
-  return "ground22";
+  if (year <= 2025) return "ground22";
+  return "active26";
 }
 
 /**
  * Regulation-driven details within a family: grooved dry tyres (1998–2008),
  * the halo (2018 onwards), the 1961–62 twin-nostril nose.
  */
-export function specForYear(family: FamilyId, year: number, tweaks: Partial<CarSpec> = {}): CarSpec {
+export function specForYear(
+  family: FamilyId,
+  year: number,
+  tweaks: Partial<CarSpec> = {},
+): CarSpec {
   const spec = families[family];
   return {
     ...spec,
     grooved: year >= 1998 && year <= 2008,
     halo: year >= 2018,
-    grille: family === "rear60s" && (year === 1961 || year === 1962) ? "twin" : spec.grille,
+    grille:
+      family === "rear60s" && (year === 1961 || year === 1962)
+        ? "twin"
+        : spec.grille,
     // The beam wing was absent from 2014 until the 2022 rules.
     beamWing: year >= 2014 && year <= 2021 ? null : spec.beamWing,
     ...tweaks,

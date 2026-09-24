@@ -1,7 +1,7 @@
 {
   "ascari": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/ascari/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1950,
@@ -182,7 +182,7 @@
   },
   "fangio": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/fangio/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1956,
@@ -231,7 +231,7 @@
   },
   "hawthorn": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/hawthorn/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1953,
@@ -452,7 +452,7 @@
   },
   "phil_hill": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/phil_hill/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1958,
@@ -653,7 +653,7 @@
   },
   "surtees": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/surtees/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1963,
@@ -841,7 +841,7 @@
   },
   "lauda": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/lauda/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1974,
@@ -1167,9 +1167,398 @@
       }
     ]
   },
+  "gilles_villeneuve": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/gilles_villeneuve/constructors/ferrari/results/",
+    "cutoff": "2026-09-25",
+    "seasons": [
+      {
+        "year": 1977,
+        "entries": 2,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Canadian Grand Prix",
+            "position": "12",
+            "date": "1977-10-09"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1977-10-23"
+          }
+        ]
+      },
+      {
+        "year": 1978,
+        "entries": 16,
+        "wins": 1,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "8",
+            "date": "1978-01-15"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1978-01-29"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1978-03-04"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1978-04-02"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1978-05-07"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1978-05-21"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "10",
+            "date": "1978-06-04"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "9",
+            "date": "1978-06-17"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "12",
+            "date": "1978-07-02"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1978-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "8",
+            "date": "1978-07-30"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "1978-08-13"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "6",
+            "date": "1978-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "7",
+            "date": "1978-09-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1978-10-01"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "1978-10-08"
+          }
+        ]
+      },
+      {
+        "year": 1979,
+        "entries": 15,
+        "wins": 3,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1979-01-21"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "5",
+            "date": "1979-02-04"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "1",
+            "date": "1979-03-03"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "1",
+            "date": "1979-04-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "7",
+            "date": "1979-04-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "7",
+            "date": "1979-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1979-05-27"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1979-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "14",
+            "date": "1979-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "8",
+            "date": "1979-07-29"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "1979-08-12"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "1979-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1979-09-09"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "1979-09-30"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "1979-10-07"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "entries": 14,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1980-01-13"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "16",
+            "date": "1980-01-27"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1980-03-01"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1980-03-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "1980-05-04"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "5",
+            "date": "1980-05-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "8",
+            "date": "1980-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1980-07-13"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "6",
+            "date": "1980-08-10"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "8",
+            "date": "1980-08-17"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "7",
+            "date": "1980-08-31"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1980-09-14"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "1980-09-28"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1980-10-05"
+          }
+        ]
+      },
+      {
+        "year": 1981,
+        "entries": 15,
+        "wins": 2,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1981-03-15"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1981-03-29"
+          },
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1981-04-12"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "7",
+            "date": "1981-05-03"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1981-05-17"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1981-05-31"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1981-06-21"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1981-07-05"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1981-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "10",
+            "date": "1981-08-02"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "1981-08-16"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "1981-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1981-09-13"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "3",
+            "date": "1981-09-27"
+          },
+          {
+            "name": "Caesars Palace Grand Prix",
+            "position": "D",
+            "date": "1981-10-17"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "entries": 5,
+        "wins": 0,
+        "podiums": 1,
+        "races": [
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1982-01-23"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1982-03-21"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "D",
+            "date": "1982-04-04"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "1982-04-25"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "W",
+            "date": "1982-05-09"
+          }
+        ]
+      }
+    ]
+  },
   "scheckter": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/scheckter/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1979,
@@ -1331,7 +1720,7 @@
   },
   "mansell": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/mansell/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1989,
@@ -1508,7 +1897,7 @@
   },
   "prost": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/prost/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1990,
@@ -1685,7 +2074,7 @@
   },
   "michael_schumacher": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/michael_schumacher/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 1996,
@@ -2684,7 +3073,7 @@
   },
   "raikkonen": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/raikkonen/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2007,
@@ -3514,7 +3903,7 @@
   },
   "alonso": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/alonso/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2010,
@@ -4040,7 +4429,7 @@
   },
   "vettel": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/vettel/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2015,
@@ -4689,7 +5078,7 @@
   },
   "sainz": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/sainz/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2021,
@@ -5172,7 +5561,7 @@
   },
   "leclerc": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/leclerc/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2019,
@@ -5989,12 +6378,90 @@
             "date": "2025-12-07"
           }
         ]
+      },
+      {
+        "year": 2026,
+        "entries": 14,
+        "wins": 1,
+        "podiums": 4,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "3",
+            "date": "2026-03-08"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "4",
+            "date": "2026-03-15"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2026-03-29"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "8",
+            "date": "2026-05-03"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "4",
+            "date": "2026-05-24"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "2026-06-07"
+          },
+          {
+            "name": "Barcelona Grand Prix",
+            "position": "15",
+            "date": "2026-06-14"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "8",
+            "date": "2026-06-28"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2026-07-05"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "2026-07-19"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2026-07-26"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "5",
+            "date": "2026-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "2026-09-06"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "2026-09-13"
+          }
+        ]
       }
     ]
   },
   "hamilton": {
     "source": "https://api.jolpi.ca/ergast/f1/drivers/hamilton/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
+    "cutoff": "2026-09-25",
     "seasons": [
       {
         "year": 2025,
@@ -6123,393 +6590,82 @@
             "date": "2025-12-07"
           }
         ]
-      }
-    ]
-  },
-  "gilles_villeneuve": {
-    "source": "https://api.jolpi.ca/ergast/f1/drivers/gilles_villeneuve/constructors/ferrari/results/",
-    "cutoff": "2025-12-31",
-    "seasons": [
+      },
       {
-        "year": 1977,
-        "entries": 2,
-        "wins": 0,
-        "podiums": 0,
+        "year": 2026,
+        "entries": 14,
+        "wins": 1,
+        "podiums": 5,
         "races": [
           {
-            "name": "Canadian Grand Prix",
-            "position": "12",
-            "date": "1977-10-09"
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2026-03-08"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2026-03-15"
           },
           {
             "name": "Japanese Grand Prix",
-            "position": "R",
-            "date": "1977-10-23"
-          }
-        ]
-      },
-      {
-        "year": 1978,
-        "entries": 16,
-        "wins": 1,
-        "podiums": 2,
-        "races": [
-          {
-            "name": "Argentine Grand Prix",
-            "position": "8",
-            "date": "1978-01-15"
+            "position": "6",
+            "date": "2026-03-29"
           },
           {
-            "name": "Brazilian Grand Prix",
-            "position": "R",
-            "date": "1978-01-29"
+            "name": "Miami Grand Prix",
+            "position": "6",
+            "date": "2026-05-03"
           },
           {
-            "name": "South African Grand Prix",
-            "position": "R",
-            "date": "1978-03-04"
-          },
-          {
-            "name": "United States Grand Prix West",
-            "position": "R",
-            "date": "1978-04-02"
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2026-05-24"
           },
           {
             "name": "Monaco Grand Prix",
-            "position": "R",
-            "date": "1978-05-07"
+            "position": "2",
+            "date": "2026-06-07"
+          },
+          {
+            "name": "Barcelona Grand Prix",
+            "position": "1",
+            "date": "2026-06-14"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "5",
+            "date": "2026-06-28"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2026-07-05"
           },
           {
             "name": "Belgian Grand Prix",
             "position": "4",
-            "date": "1978-05-21"
+            "date": "2026-07-19"
           },
           {
-            "name": "Spanish Grand Prix",
-            "position": "10",
-            "date": "1978-06-04"
-          },
-          {
-            "name": "Swedish Grand Prix",
-            "position": "9",
-            "date": "1978-06-17"
-          },
-          {
-            "name": "French Grand Prix",
-            "position": "12",
-            "date": "1978-07-02"
-          },
-          {
-            "name": "British Grand Prix",
-            "position": "R",
-            "date": "1978-07-16"
-          },
-          {
-            "name": "German Grand Prix",
-            "position": "8",
-            "date": "1978-07-30"
-          },
-          {
-            "name": "Austrian Grand Prix",
-            "position": "3",
-            "date": "1978-08-13"
+            "name": "Hungarian Grand Prix",
+            "position": "5",
+            "date": "2026-07-26"
           },
           {
             "name": "Dutch Grand Prix",
-            "position": "6",
-            "date": "1978-08-27"
-          },
-          {
-            "name": "Italian Grand Prix",
-            "position": "7",
-            "date": "1978-09-10"
-          },
-          {
-            "name": "United States Grand Prix",
-            "position": "R",
-            "date": "1978-10-01"
-          },
-          {
-            "name": "Canadian Grand Prix",
-            "position": "1",
-            "date": "1978-10-08"
-          }
-        ]
-      },
-      {
-        "year": 1979,
-        "entries": 15,
-        "wins": 3,
-        "podiums": 7,
-        "races": [
-          {
-            "name": "Argentine Grand Prix",
-            "position": "R",
-            "date": "1979-01-21"
-          },
-          {
-            "name": "Brazilian Grand Prix",
-            "position": "5",
-            "date": "1979-02-04"
-          },
-          {
-            "name": "South African Grand Prix",
-            "position": "1",
-            "date": "1979-03-03"
-          },
-          {
-            "name": "United States Grand Prix West",
-            "position": "1",
-            "date": "1979-04-08"
-          },
-          {
-            "name": "Spanish Grand Prix",
-            "position": "7",
-            "date": "1979-04-29"
-          },
-          {
-            "name": "Belgian Grand Prix",
-            "position": "7",
-            "date": "1979-05-13"
-          },
-          {
-            "name": "Monaco Grand Prix",
-            "position": "R",
-            "date": "1979-05-27"
-          },
-          {
-            "name": "French Grand Prix",
-            "position": "2",
-            "date": "1979-07-01"
-          },
-          {
-            "name": "British Grand Prix",
-            "position": "14",
-            "date": "1979-07-14"
-          },
-          {
-            "name": "German Grand Prix",
-            "position": "8",
-            "date": "1979-07-29"
-          },
-          {
-            "name": "Austrian Grand Prix",
-            "position": "2",
-            "date": "1979-08-12"
-          },
-          {
-            "name": "Dutch Grand Prix",
-            "position": "R",
-            "date": "1979-08-26"
-          },
-          {
-            "name": "Italian Grand Prix",
-            "position": "2",
-            "date": "1979-09-09"
-          },
-          {
-            "name": "Canadian Grand Prix",
-            "position": "2",
-            "date": "1979-09-30"
-          },
-          {
-            "name": "United States Grand Prix",
-            "position": "1",
-            "date": "1979-10-07"
-          }
-        ]
-      },
-      {
-        "year": 1980,
-        "entries": 14,
-        "wins": 0,
-        "podiums": 0,
-        "races": [
-          {
-            "name": "Argentine Grand Prix",
-            "position": "R",
-            "date": "1980-01-13"
-          },
-          {
-            "name": "Brazilian Grand Prix",
-            "position": "16",
-            "date": "1980-01-27"
-          },
-          {
-            "name": "South African Grand Prix",
-            "position": "R",
-            "date": "1980-03-01"
-          },
-          {
-            "name": "United States Grand Prix West",
-            "position": "R",
-            "date": "1980-03-30"
-          },
-          {
-            "name": "Belgian Grand Prix",
-            "position": "6",
-            "date": "1980-05-04"
-          },
-          {
-            "name": "Monaco Grand Prix",
-            "position": "5",
-            "date": "1980-05-18"
-          },
-          {
-            "name": "French Grand Prix",
-            "position": "8",
-            "date": "1980-06-29"
-          },
-          {
-            "name": "British Grand Prix",
-            "position": "R",
-            "date": "1980-07-13"
-          },
-          {
-            "name": "German Grand Prix",
-            "position": "6",
-            "date": "1980-08-10"
-          },
-          {
-            "name": "Austrian Grand Prix",
-            "position": "8",
-            "date": "1980-08-17"
-          },
-          {
-            "name": "Dutch Grand Prix",
-            "position": "7",
-            "date": "1980-08-31"
-          },
-          {
-            "name": "Italian Grand Prix",
-            "position": "R",
-            "date": "1980-09-14"
-          },
-          {
-            "name": "Canadian Grand Prix",
-            "position": "5",
-            "date": "1980-09-28"
-          },
-          {
-            "name": "United States Grand Prix",
-            "position": "R",
-            "date": "1980-10-05"
-          }
-        ]
-      },
-      {
-        "year": 1981,
-        "entries": 15,
-        "wins": 2,
-        "podiums": 3,
-        "races": [
-          {
-            "name": "United States Grand Prix West",
-            "position": "R",
-            "date": "1981-03-15"
-          },
-          {
-            "name": "Brazilian Grand Prix",
-            "position": "R",
-            "date": "1981-03-29"
-          },
-          {
-            "name": "Argentine Grand Prix",
-            "position": "R",
-            "date": "1981-04-12"
-          },
-          {
-            "name": "San Marino Grand Prix",
-            "position": "7",
-            "date": "1981-05-03"
-          },
-          {
-            "name": "Belgian Grand Prix",
             "position": "4",
-            "date": "1981-05-17"
-          },
-          {
-            "name": "Monaco Grand Prix",
-            "position": "1",
-            "date": "1981-05-31"
-          },
-          {
-            "name": "Spanish Grand Prix",
-            "position": "1",
-            "date": "1981-06-21"
-          },
-          {
-            "name": "French Grand Prix",
-            "position": "R",
-            "date": "1981-07-05"
-          },
-          {
-            "name": "British Grand Prix",
-            "position": "R",
-            "date": "1981-07-18"
-          },
-          {
-            "name": "German Grand Prix",
-            "position": "10",
-            "date": "1981-08-02"
-          },
-          {
-            "name": "Austrian Grand Prix",
-            "position": "R",
-            "date": "1981-08-16"
-          },
-          {
-            "name": "Dutch Grand Prix",
-            "position": "R",
-            "date": "1981-08-30"
+            "date": "2026-08-23"
           },
           {
             "name": "Italian Grand Prix",
+            "position": "6",
+            "date": "2026-09-06"
+          },
+          {
+            "name": "Spanish Grand Prix",
             "position": "R",
-            "date": "1981-09-13"
-          },
-          {
-            "name": "Canadian Grand Prix",
-            "position": "3",
-            "date": "1981-09-27"
-          },
-          {
-            "name": "Caesars Palace Grand Prix",
-            "position": "D",
-            "date": "1981-10-17"
-          }
-        ]
-      },
-      {
-        "year": 1982,
-        "entries": 5,
-        "wins": 0,
-        "podiums": 1,
-        "races": [
-          {
-            "name": "South African Grand Prix",
-            "position": "R",
-            "date": "1982-01-23"
-          },
-          {
-            "name": "Brazilian Grand Prix",
-            "position": "R",
-            "date": "1982-03-21"
-          },
-          {
-            "name": "United States Grand Prix West",
-            "position": "D",
-            "date": "1982-04-04"
-          },
-          {
-            "name": "San Marino Grand Prix",
-            "position": "2",
-            "date": "1982-04-25"
-          },
-          {
-            "name": "Belgian Grand Prix",
-            "position": "W",
-            "date": "1982-05-09"
+            "date": "2026-09-13"
           }
         ]
       }

@@ -2711,3 +2711,19 @@ footer > button {
 .experience:has(.engineering-panel) .car-label {
   display: none;
 }
+/* World titles (all teams) under the Ferrari stats; Ferrari years in gold. */
+.title-runs {
+  margin: 12px 0 0;
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  letter-spacing: 0.3px;
+}
+.title-runs .ferrari {
+  color: #d6b46e;
+}
+.title-runs-label {
+  color: var(--text-2);
+}
+.data-note {
+  text-align: left;
+}

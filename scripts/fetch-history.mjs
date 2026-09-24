@@ -1,5 +1,8 @@
 // Offline, reproducible editorial import. No API requests are made by visitors.
 import { writeFile, mkdir } from "node:fs/promises";
+// Results are imported up to this date. Update it deliberately, together with
+// the UI note, tests and README, when refreshing the snapshot.
+const CUTOFF = process.env.ROSSO_CUTOFF ?? "2026-09-25";
 const ids = [
   "ascari",
   "fangio",
@@ -29,7 +32,7 @@ for (const id of ids) {
     let json;
     for (let attempt = 0; attempt < 4; attempt++) {
       const res = await fetch(url, {
-        headers: { "User-Agent": "RossoFanArchive/1.0" },
+        headers: { "User-Agent": "RossoFanArchive/1.0 (github.com/Janinduu)" },
       });
       if (res.ok) {
         json = await res.json();
@@ -46,7 +49,7 @@ for (const id of ids) {
     await new Promise((r) => setTimeout(r, 400));
   }
   const seasons = {};
-  for (const race of races.filter((r) => Number(r.season) <= 2025)) {
+  for (const race of races.filter((r) => r.date <= CUTOFF)) {
     const y = race.season;
     seasons[y] ??= {
       year: Number(y),
@@ -69,7 +72,7 @@ for (const id of ids) {
   }
   history[id] = {
     source: `https://api.jolpi.ca/ergast/f1/drivers/${id}/constructors/ferrari/results/`,
-    cutoff: "2025-12-31",
+    cutoff: CUTOFF,
     seasons: Object.values(seasons),
   };
   console.log(

@@ -5,6 +5,10 @@ const data = JSON.parse(
   await readFile(new URL("../src/data/history.json", import.meta.url)),
 );
 const total = (id, key) => data[id].seasons.reduce((n, s) => n + s[key], 0);
+const CUTOFF = "2026-09-25";
+const stats = JSON.parse(
+  await readFile(new URL("../src/data/careerStats.json", import.meta.url)),
+);
 test("Ferrari-only aggregates reconcile with the independently published core exhibits", () => {
   for (const [id, wins, podiums] of [
     ["michael_schumacher", 72, 116],
@@ -20,7 +24,7 @@ test("The complete 17-driver archive is populated and frozen at the declared cut
   assert.equal(Object.keys(data).length, 17);
   for (const [id, d] of Object.entries(data)) {
     assert.ok(d.seasons.length > 0, id);
-    assert.equal(d.cutoff, "2025-12-31");
+    assert.equal(d.cutoff, CUTOFF);
     assert.ok(
       d.source.includes(`/drivers/${id}/constructors/ferrari/results/`),
     );
@@ -29,7 +33,7 @@ test("The complete 17-driver archive is populated and frozen at the declared cut
       d.seasons.map((s) => s.year).sort((a, b) => a - b),
     );
     for (const s of d.seasons) {
-      assert.ok(s.year <= 2025);
+      assert.ok(s.races.every((r) => r.date <= CUTOFF));
       assert.ok(s.races.length > 0);
       assert.equal(s.entries, s.races.length);
       assert.equal(s.wins, s.races.filter((r) => r.position === "1").length);
@@ -57,11 +61,42 @@ test("Schumacher season results and interrupted Ferrari careers retain historica
   );
   assert.equal(data.ascari.seasons.at(-1).year, 1954);
 });
-test("Present-day snapshot does not mix Hamilton sprint wins or other-team titles into GP wins", () => {
+test("Present-day data counts Grand Prix results only, never sprints or other teams", () => {
+  const season = (id, y) => data[id].seasons.find((s) => s.year === y);
   assert.deepEqual(
     data.hamilton.seasons.map((s) => s.year),
-    [2025],
+    [2025, 2026],
   );
-  assert.equal(total("hamilton", "wins"), 0);
-  assert.equal(total("leclerc", "wins"), 8);
+  // The 2025 China sprint win must not appear as a Grand Prix win.
+  assert.equal(season("hamilton", 2025).wins, 0);
+  // First Grand Prix win for Ferrari: Barcelona, 14 June 2026.
+  const firstWin = data.hamilton.seasons
+    .flatMap((s) => s.races)
+    .find((r) => r.position === "1");
+  assert.equal(firstWin.date, "2026-06-14");
+  assert.equal(
+    data.leclerc.seasons
+      .filter((s) => s.year <= 2025)
+      .reduce((n, s) => n + s.wins, 0),
+    8,
+  );
+});
+
+test("Career stats cover all 17 drivers and agree with the Ferrari record", () => {
+  assert.equal(Object.keys(stats.drivers).length, 17);
+  const ferrariTitles = {
+    ascari: [1952, 1953], fangio: [1956], hawthorn: [1958], phil_hill: [1961],
+    surtees: [1964], lauda: [1975, 1977], scheckter: [1979],
+    michael_schumacher: [2000, 2001, 2002, 2003, 2004], raikkonen: [2007],
+  };
+  for (const [id, s] of Object.entries(stats.drivers)) {
+    const ferrari = (s.careerTitles ?? [])
+      .filter((t) => t.team === "Ferrari")
+      .map((t) => t.year);
+    assert.deepEqual(ferrari, ferrariTitles[id] ?? [], id + " Ferrari titles");
+    assert.ok(Number.isInteger(s.polesWithFerrari), id + " poles");
+    for (const src of s.sourceIds ?? []) assert.ok(stats.sources[src], id + " source " + src);
+  }
+  assert.equal(stats.drivers.michael_schumacher.polesWithFerrari, 58);
+  assert.equal(stats.drivers.hamilton.careerTitles.length, 7);
 });

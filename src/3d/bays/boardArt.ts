@@ -1,5 +1,6 @@
 import type { Driver } from "../../data/drivers";
 import { drawFlag } from "./flags";
+import { careerTitles } from "../../data/careerStats";
 
 // 2D artwork for the bay boards and chapter markers, painted into canvas
 // textures. Kept separate from React so the layout can be tuned in one place.
@@ -231,15 +232,26 @@ export function drawBoard(
     .slice(0, 2)
     .forEach((line, i) => ctx.fillText(line, x0, 338 + i * 42));
 
-  if (driver.championshipsWithFerrari.length) {
-    ctx.font = `500 19px ${BODY}`;
+  const titles = careerTitles(driver.id);
+  if (titles.length) {
+    // Ferrari titles in gold, titles won with other teams in silver.
+    let size = 19;
+    const label = "WORLD CHAMPION  ";
+    const years = titles.map((t, i) => `${t.year}${i < titles.length - 1 ? " · " : ""}`);
     tracking(ctx, 2.5);
-    ctx.fillStyle = "#c4a86f";
-    ctx.fillText(
-      `WORLD CHAMPION  ${driver.championshipsWithFerrari.join(" · ")}`,
-      x0,
-      436,
-    );
+    do {
+      ctx.font = `500 ${size}px ${BODY}`;
+      size -= 1;
+    } while (ctx.measureText(label + years.join("")).width > width && size > 13);
+    let cx = x0;
+    ctx.fillStyle = "#a9adb0";
+    ctx.fillText(label, cx, 436);
+    cx += ctx.measureText(label).width;
+    titles.forEach((t, i) => {
+      ctx.fillStyle = t.team === "Ferrari" ? "#d6b46e" : "#8f9498";
+      ctx.fillText(years[i], cx, 436);
+      cx += ctx.measureText(years[i]).width;
+    });
   }
 
   ctx.textAlign = "right";

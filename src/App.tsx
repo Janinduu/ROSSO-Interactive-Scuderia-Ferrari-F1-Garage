@@ -35,6 +35,8 @@ import { usePreferences } from "./hooks/usePreferences";
 import { getPortrait } from "./data/media";
 import { carSourcesFor, resolveCar } from "./data/cars";
 import { helmetDesignFor } from "./data/helmetDesigns";
+import { suitFor } from "./data/liveries";
+import { careerTitles, statSources, titleRuns } from "./data/careerStats";
 import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
@@ -46,6 +48,12 @@ type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
 const disclaimer =
   "ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.";
 const pad = (n: number) => String(n).padStart(2, "0");
+const formatCutoff = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 // A credited driver photo for HTML views (directory, 2D archive).
 function Portrait({ driverId, className }: { driverId: string; className: string }) {
   const p = getPortrait(driverId);
@@ -260,6 +268,7 @@ function App() {
                     onSelectDriver={selectDriver}
                     car={car}
                     helmet={helmetDesignFor(driver)}
+                    suit={suitFor(driver.id)}
                   />
                 </Suspense>
               </SceneBoundary>
@@ -396,29 +405,41 @@ function App() {
                     <span>WINS</span>
                   </div>
                   <div>
-                    <strong>{totals.podiums}</strong>
+                    <strong>{pad(totals.podiums)}</strong>
                     <span>PODIUMS</span>
                   </div>
                   <div>
-                    <strong>{driver.polesWithFerrari ?? "—"}</strong>
+                    <strong>
+                      {driver.polesWithFerrari == null ? "—" : pad(driver.polesWithFerrari)}
+                    </strong>
                     <span>POLES</span>
                   </div>
                   <div>
-                    <strong>
-                      {pad(driver.championshipsWithFerrari.length)}
-                    </strong>
+                    <strong>{pad(careerTitles(driver.id).length)}</strong>
                     <span>TITLES</span>
                   </div>
                 </div>
+                {titleRuns(driver.id).length > 0 && (
+                  <p className="title-runs">
+                    <span className="title-runs-label">World champion </span>
+                    {titleRuns(driver.id).map((r, i) => (
+                      <span key={r.from} className={r.team === "Ferrari" ? "ferrari" : ""}>
+                        {i > 0 && " · "}
+                        {r.from === r.to ? r.from : `${r.from}–${r.to}`} {r.team}
+                      </span>
+                    ))}
+                  </p>
+                )}
                 <button
                   className="data-note"
                   onClick={() => setDialog("sources")}
                 >
-                  FERRARI GRAND PRIX RESULTS ONLY <ArrowUpRight size={11} />
+                  WITH FERRARI · TITLES: WHOLE CAREER{" "}
+                  <ArrowUpRight size={11} />
                 </button>
                 {driver.era === "Present day" && (
                   <p className="snapshot-note">
-                    Completed-2025 snapshot · excludes sprints
+                    Data to {formatCutoff(history.cutoff)} · excludes sprints
                   </p>
                 )}
                 <div
@@ -784,15 +805,16 @@ function App() {
           <h3>{driver.name} · Ferrari period</h3>
           <p>
             Grand Prix wins and podiums are calculated from Ferrari-constructor
-            race results in the Jolpica / Ergast archive, frozen through 31
-            December 2025. They exclude sprint results and results for other
-            teams.
+            race results in the Jolpica / Ergast archive, imported up to{" "}
+            {formatCutoff(history.cutoff)}. They exclude sprint results and
+            results for other teams.
           </p>
           <p>
             Race entries ({totals.entries}) include non-starts and are not
-            labelled race starts. Shared drives count once per Grand Prix. Pole
-            figures are shown only where separately sourced; a dash means not
-            yet verified, never zero.
+            labelled race starts. Shared drives count once per Grand Prix. Pole figures count Grands Prix started from pole with Ferrari, as
+            published by Formula 1 and cross-checked against the results
+            archive. World titles cover the driver's whole career, with the
+            team named for each.
           </p>
           <div className="source-list">
             <a href={history.source} target="_blank" rel="noreferrer">
@@ -811,6 +833,15 @@ function App() {
             >
               Jolpica · dataset documentation <ExternalLink size={14} />
             </a>
+          </div>
+          <h3>Poles and world titles</h3>
+          <div className="source-list">
+            {statSources(driver.id).map((s) => (
+              <a key={s.url} href={s.url} target="_blank" rel="noreferrer">
+                {s.publisher} · {s.title}
+                <ExternalLink size={14} />
+              </a>
+            ))}
           </div>
           {carSourcesFor(driver, year).length > 0 && (
             <>

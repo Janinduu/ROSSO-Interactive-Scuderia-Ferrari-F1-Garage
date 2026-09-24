@@ -2,6 +2,8 @@ import { familyForYear, specForYear } from "../3d/cars/families";
 import type { CarSpec, FamilyId } from "../3d/cars/families";
 import type { Driver } from "./drivers";
 import { seasonStory } from "./drivers";
+import { liveryFor } from "./liveries";
+import type { Livery } from "./liveries";
 
 // Car registry (spec §10, §23.3). Maps a driver's season to a car name and to a
 // procedural representation, and states honestly how accurate that is.
@@ -22,6 +24,9 @@ export interface ResolvedCar {
   representationType: RepresentationType;
   /** Short honest label shown under the car name. */
   accuracyLabel: string;
+  livery: Livery;
+  /** The driver's race number on this car, when researched. */
+  raceNumber: number | null;
 }
 
 const normalise = (name: string) => name.toLowerCase().replace(/[\s-]/g, "");
@@ -75,7 +80,10 @@ export function resolveCar(driver: Driver, year: number): ResolvedCar {
   const heroFamily = key ? heroes[key] : undefined;
   const family = heroFamily ?? familyForYear(year);
   const spec = specForYear(family, year, key ? tweaks[key] : undefined);
+  const livery = liveryFor(officialName, family);
   return {
+    livery,
+    raceNumber: livery.raceNumbers?.[driver.id] ?? null,
     id: `${key ?? family}-${year}`,
     officialName,
     year,

@@ -1,4 +1,5 @@
 import historyData from "./history.json";
+import { careerFor, currentSeasonFor, CURRENT_SEASON } from "./careerStats";
 
 export interface Season {
   year: number;
@@ -333,14 +334,19 @@ export const drivers: Driver[] = [
     6,
     "17",
     "The next chapter begins.",
-    "Hamilton joined Ferrari in 2025, beginning a new chapter alongside Charles Leclerc. This exhibit uses completed-2025 Grand Prix data; sprint results are deliberately separate.",
+    "Hamilton joined Ferrari in 2025, beginning a new chapter alongside Charles Leclerc. His first Grand Prix victory in red came at the 2026 Barcelona Grand Prix. Sprint results are counted separately from Grand Prix results.",
     [],
     ["SF-25"],
-    ["2025 Chinese Grand Prix weekend · sprint victory"],
+    ["2025 Chinese Grand Prix weekend · sprint victory", "2026 Barcelona Grand Prix · first Ferrari Grand Prix win"],
     2025,
   ),
 ];
-drivers[10].polesWithFerrari = 58;
+// Ferrari pole counts, researched and cross-checked in careerStats.json.
+for (const driver of drivers)
+  driver.polesWithFerrari = careerFor(driver.id).polesWithFerrari ?? null;
+// Present-day bays open on the season in progress.
+for (const driver of drivers)
+  if (currentSeasonFor(driver.id)) driver.defaultYear = CURRENT_SEASON;
 drivers[10].sources.push(
   { label: "Ferrari · Michael Schumacher", url: hero("michael-schumacher") },
   {
@@ -364,7 +370,6 @@ drivers[5].sources.push({
   label: "Ferrari · Lauda and the 312 T",
   url: "https://www.ferrari.com/en-CA/magazine/articles/ferrari-victories-the-1975-monaco-grand-prix",
 });
-drivers[13].polesWithFerrari = 12;
 drivers[13].sources.push({
   label: "Ferrari · Vettel’s six seasons",
   url: "https://www.ferrari.com/en-BE/formula1/articles/2020-abu-dhabi-grand-prix-preview",
@@ -471,8 +476,26 @@ export const schumacherSeasons: Record<
       "Seven victories brought one more title challenge. A final Ferrari win in China and a determined drive in Brazil closed eleven unforgettable seasons.",
   },
 };
+const ordinal = (n: number) =>
+  n + (["th", "st", "nd", "rd"][n % 100 > 10 && n % 100 < 14 ? 0 : n % 10] ?? "th");
+
 export function seasonStory(driver: Driver, year: number) {
   if (driver.id === "michael_schumacher") return schumacherSeasons[year];
+  const current = year === CURRENT_SEASON ? currentSeasonFor(driver.id) : undefined;
+  if (current?.moments?.length)
+    return {
+      car: current.car?.replace(/^Ferrari\s+/, "") ?? "Season archive",
+      title: current.wins?.length ? "A season in progress." : "The season so far.",
+      // Lead with the season's victory, then the championship picture.
+      story: [
+        current.moments.find((m) => /^Won /.test(m)) ?? current.moments[0],
+        current.championshipPosition
+          ? `${ordinal(current.championshipPosition)} in the drivers' championship on ${current.championshipPoints} points after the race of ${new Date(`${current.positionAsOf}T12:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long" })}.`
+          : "",
+      ]
+        .filter(Boolean)
+        .join(" "),
+    };
   const editorial = extraSeasons[driver.id]?.[year];
   if (editorial) return editorial;
   const s = getHistory(driver.id).seasons.find((x) => x.year === year);

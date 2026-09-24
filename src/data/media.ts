@@ -90,3 +90,10 @@ const emblemFiles = import.meta.glob<string>(
 );
 export const teamEmblemSrc: string | null =
   Object.values(emblemFiles)[0] ?? null;
+
+// Optional team shield for car liveries, installed locally like the emblem.
+const shieldFiles = import.meta.glob<string>(
+  "../assets/brand/team-shield.{svg,png,webp}",
+  { eager: true, import: "default", query: "?url" },
+);
+export const teamShieldSrc: string | null = Object.values(shieldFiles)[0] ?? null;
