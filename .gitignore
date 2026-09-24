@@ -3,3 +3,6 @@ dist/
 *.tsbuildinfo
 .env*
 .sites-runtime/
+
+# Trademarked or restricted brand assets are kept local (see src/data/media.ts).
+src/assets/brand/

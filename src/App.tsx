@@ -4,6 +4,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ChevronRight,
+  ChevronLeft,
   Grid2X2,
   SlidersHorizontal,
   RotateCcw,
@@ -30,6 +31,7 @@ import { parts } from "./data/engineering";
 import Modal from "./components/Modal";
 import SceneBoundary from "./components/SceneBoundary";
 import { usePreferences } from "./hooks/usePreferences";
+import { getPortrait } from "./data/media";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
@@ -71,6 +73,9 @@ function App() {
   const totals = getTotals(driver.id);
   const story = seasonStory(driver, year);
   const activePart = parts.find((p) => p.id === part);
+  const portrait = getPortrait(driver.id);
+  const previousIndex = (index + drivers.length - 1) % drivers.length;
+  const nextIndex = (index + 1) % drivers.length;
   const titleRef = useRef<HTMLHeadingElement>(null);
   function selectDriver(i: number) {
     stopTour();
@@ -222,6 +227,7 @@ function App() {
                     explore={!prefs.mobile}
                     reduced={prefs.reduced}
                     onFailure={() => prefs.setFlat(true)}
+                    onSelectDriver={selectDriver}
                   />
                 </Suspense>
               </SceneBoundary>
@@ -299,10 +305,33 @@ function App() {
                 >
                   <ArrowLeft size={13} /> THE GARAGE
                 </button>
-                <span>
-                  {driver.era.toUpperCase()}{" "}
-                  <span className="small-red">/</span> BAY {driver.number}
-                </span>
+                <nav className="bay-stepper" aria-label="Move between driver bays">
+                  <button
+                    onClick={() => selectDriver(previousIndex)}
+                    aria-label={`Previous bay: ${drivers[previousIndex].name}`}
+                  >
+                    <ChevronLeft size={18} />
+                    <span className="bay-stepper-name">
+                      {drivers[previousIndex].name.split(" ").at(-1)}
+                    </span>
+                  </button>
+                  <span className="bay-stepper-current" aria-live="polite">
+                    <strong>
+                      BAY {driver.number}
+                      <span> / {pad(drivers.length)}</span>
+                    </strong>
+                    <span className="bay-stepper-era">{driver.era}</span>
+                  </span>
+                  <button
+                    onClick={() => selectDriver(nextIndex)}
+                    aria-label={`Next bay: ${drivers[nextIndex].name}`}
+                  >
+                    <span className="bay-stepper-name">
+                      {drivers[nextIndex].name.split(" ").at(-1)}
+                    </span>
+                    <ChevronRight size={18} />
+                  </button>
+                </nav>
                 <button
                   className="directory-link"
                   onClick={() => setDialog("directory")}
@@ -722,12 +751,25 @@ function App() {
               Jolpica · dataset documentation <ExternalLink size={14} />
             </a>
           </div>
+          {portrait && (
+            <>
+              <h3>Portrait</h3>
+              <div className="source-list">
+                <a href={portrait.credit.sourceUrl} target="_blank" rel="noreferrer">
+                  {portrait.credit.attribution}
+                  <ExternalLink size={14} />
+                </a>
+              </div>
+            </>
+          )}
           <h3>Asset credits</h3>
           <p>
-            Car and garage: original procedural geometry. Icons: Lucide (ISC).
-            Typography: locally bundled Barlow and Barlow Condensed (SIL Open
-            Font License). No copyrighted photography, Ferrari logos or
-            third-party car models are included.
+            Car, garage and helmets: original procedural geometry; helmets are
+            abstract studies in national colours, not replicas. Icons: Lucide
+            (ISC). Typography: locally bundled Barlow and Barlow Condensed (SIL
+            Open Font License). Driver portraits come from Wikimedia Commons
+            under the licence credited for each. No Ferrari logos or
+            third-party car models are distributed with the project.
           </p>
           <p className="fine-print">
             Schumacher, Lauda and Vettel have editorial season-by-season

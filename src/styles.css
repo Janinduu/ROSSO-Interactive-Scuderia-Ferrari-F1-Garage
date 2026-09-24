@@ -2504,3 +2504,129 @@ footer > button {
     z-index: 20;
   }
 }
+/* ------------------------------------------------------------------
+   Bay stepper: previous / next driver, always in view at the top.
+   ------------------------------------------------------------------ */
+.bay-stepper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bay-stepper > button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--hit);
+  padding: 0 12px;
+  border: 1px solid #ffffff1a;
+  font-size: var(--fs-sm);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-2);
+  background: #141619b3;
+}
+.bay-stepper > button:hover {
+  border-color: var(--red);
+  color: var(--text-1);
+}
+.bay-stepper > button svg {
+  color: var(--red);
+}
+.bay-stepper-current {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  min-height: 48px;
+  padding: 4px 14px;
+  line-height: 1.25;
+  background: #141619e6;
+  border: 1px solid #ffffff14;
+}
+.bay-stepper > button {
+  min-height: 48px;
+  background: #141619e6;
+}
+.bay-stepper-current strong {
+  font-family: var(--heading);
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-1);
+}
+.bay-stepper-current strong span {
+  color: var(--text-3);
+}
+.bay-stepper-era {
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.garage-topline {
+  min-height: 72px;
+}
+@media (max-width: 1100px) {
+  .bay-stepper-name {
+    display: none;
+  }
+  .bay-stepper-current {
+    min-width: 130px;
+  }
+}
+@media (max-width: 760px) {
+  .garage-topline {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  .bay-stepper {
+    position: static;
+    transform: none;
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .bay-stepper > button {
+    width: var(--hit);
+    padding: 0;
+    justify-content: center;
+  }
+  .garage-topline > span {
+    display: none;
+  }
+}
+/* Simplified flags for the remaining nationalities. */
+.flag-GB {
+  background:
+    linear-gradient(#b12a34, #b12a34) center / 100% 22% no-repeat,
+    linear-gradient(#b12a34, #b12a34) center / 18% 100% no-repeat,
+    linear-gradient(#e1dfd8, #e1dfd8) center / 100% 40% no-repeat,
+    linear-gradient(#e1dfd8, #e1dfd8) center / 32% 100% no-repeat,
+    #22336b;
+}
+.flag-FI {
+  background:
+    linear-gradient(#2c5aa0, #2c5aa0) center / 100% 26% no-repeat,
+    linear-gradient(#2c5aa0, #2c5aa0) 32% 0 / 18% 100% no-repeat,
+    #e1dfd8;
+}
+.flag-AR {
+  background: linear-gradient(#74acdf 33%, #e1dfd8 33% 66%, #74acdf 66%);
+}
+.flag-US {
+  background:
+    linear-gradient(#22336b, #22336b) 0 0 / 42% 54% no-repeat,
+    repeating-linear-gradient(#b12a34 0 1.57px, #e1dfd8 1.57px 3.14px);
+}
+.flag-CA {
+  background: linear-gradient(90deg, #b12a34 25%, #e1dfd8 25% 75%, #b12a34 75%);
+}
+.flag-ZA {
+  background:
+    linear-gradient(#1f6b45, #1f6b45) center / 100% 26% no-repeat,
+    linear-gradient(#b12a34 50%, #22336b 50%);
+}

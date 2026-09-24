@@ -1,8 +1,9 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ContactShadows } from "@react-three/drei";
-import { CanvasTexture, Vector3, SRGBColorSpace } from "three";
+import { Vector3 } from "three";
 import Car from "./Car";
+import Corridor from "../3d/bays/Corridor";
 import CameraDirector from "../3d/camera/CameraDirector";
 import { useCameraStore } from "../3d/camera/cameraStore";
 import { bayX } from "../3d/camera/poses";
@@ -10,36 +11,6 @@ import { parts } from "../data/engineering";
 import type { PartId } from "../data/engineering";
 import type { Driver } from "../data/drivers";
 
-function WallLabel({
-  text,
-  position,
-}: {
-  text: string;
-  position: [number, number, number];
-}) {
-  const texture = useMemo(() => {
-    const c = document.createElement("canvas");
-    c.width = 1024;
-    c.height = 256;
-    const ctx = c.getContext("2d")!;
-    ctx.fillStyle = "#d4d2cb";
-    ctx.font = "500 65px Arial";
-    ctx.textAlign = "center";
-    ctx.fillText(text.toUpperCase(), 512, 140);
-    ctx.fillStyle = "#a1242b";
-    ctx.fillRect(432, 193, 160, 3);
-    const t = new CanvasTexture(c);
-    t.colorSpace = SRGBColorSpace;
-    return t;
-  }, [text]);
-  useEffect(() => () => texture.dispose(), [texture]);
-  return (
-    <mesh position={position}>
-      <planeGeometry args={[5, 1.25]} />
-      <meshBasicMaterial map={texture} transparent depthWrite={false} />
-    </mesh>
-  );
-}
 function Set({
   bay,
   driver,
@@ -47,6 +18,7 @@ function Set({
   landing,
   explore,
   reduced,
+  onSelectDriver,
 }: {
   bay: number;
   driver: Driver;
@@ -54,6 +26,7 @@ function Set({
   landing: boolean;
   explore: boolean;
   reduced: boolean;
+  onSelectDriver: (index: number) => void;
 }) {
   const x = bayX(bay);
   return (
@@ -62,6 +35,7 @@ function Set({
       <fog attach="fog" args={["#101112", 13, 36]} />
       <ambientLight intensity={0.8} />
       <hemisphereLight args={["#e3e5eb", "#303039", 1.8]} />
+      {/* The selected bay is lit; the rest of the corridor falls back. */}
       <directionalLight
         position={[x - 3, 7, 5]}
         intensity={3.5}
@@ -85,76 +59,8 @@ function Set({
         color="#dce8ff"
         distance={12}
       />
-      <mesh
-        position={[x, -0.1, 0]}
-        rotation={[-Math.PI / 2, 0, 0]}
-        receiveShadow
-      >
-        <planeGeometry args={[90, 45]} />
-        <meshStandardMaterial
-          color="#24262a"
-          metalness={high ? 0.65 : 0.3}
-          roughness={high ? 0.32 : 0.68}
-        />
-      </mesh>
-      {[-1, 0, 1].map((i) => (
-        <group key={i} position={[bayX(bay + i), 0, 0]}>
-          <mesh position={[0, 2.5, -4]}>
-            <boxGeometry args={[8.92, 5, 0.2]} />
-            <meshStandardMaterial
-              color="#1d2024"
-              metalness={0.55}
-              roughness={0.48}
-            />
-          </mesh>
-          {[-4.4, 4.4].map((a) => (
-            <mesh key={a} position={[a, 2.5, -3.85]}>
-              <boxGeometry args={[0.13, 5, 0.3]} />
-              <meshStandardMaterial
-                color="#34363b"
-                metalness={0.6}
-                roughness={0.4}
-              />
-            </mesh>
-          ))}
-          {[1, 2, 3, 4].map((y) => (
-            <mesh key={y} position={[0, y, -3.86]}>
-              <boxGeometry args={[8.7, 0.014, 0.025]} />
-              <meshBasicMaterial color="#36383b" />
-            </mesh>
-          ))}
-          <mesh position={[0, 0.02, -2.5]}>
-            <boxGeometry args={[7.8, 0.025, 0.024]} />
-            <meshBasicMaterial color="#be252e" />
-          </mesh>
-          {[-3.9, 3.9].map((z) => (
-            <mesh key={z} position={[z, 0.015, 0]}>
-              <boxGeometry args={[0.025, 0.015, 5]} />
-              <meshBasicMaterial color="#733137" />
-            </mesh>
-          ))}
-          <mesh position={[0, 4.7, 0]}>
-            <boxGeometry args={[6.4, 0.025, 0.16]} />
-            <meshBasicMaterial color="#eeeae0" />
-          </mesh>
-          <mesh position={[0, 4.7, -2.3]}>
-            <boxGeometry args={[6.4, 0.025, 0.12]} />
-            <meshBasicMaterial color="#aaa9a0" />
-          </mesh>
-          <mesh position={[0, 0.015, 0]}>
-            <cylinderGeometry args={[3.15, 3.15, 0.025, 72]} />
-            <meshStandardMaterial
-              color="#33353a"
-              roughness={0.6}
-              metalness={0.35}
-            />
-          </mesh>
-        </group>
-      ))}
-      <WallLabel
-        text={landing ? "Passione. Senza fine." : driver.name}
-        position={[x, 2.85, -3.72]}
-      />
+      <Corridor current={bay} onSelect={onSelectDriver} />
+      {/* Only the selected bay holds a detailed car (spec §11.3). */}
       <group position={[x, 0.04, 0]}>
         <Car era={driver.model} />
       </group>
@@ -188,6 +94,7 @@ export default function Garage(props: {
   explore: boolean;
   reduced: boolean;
   onFailure: () => void;
+  onSelectDriver: (index: number) => void;
 }) {
   const [ready, setReady] = useState(false);
   const markers = useRef<(HTMLButtonElement | null)[]>([]);

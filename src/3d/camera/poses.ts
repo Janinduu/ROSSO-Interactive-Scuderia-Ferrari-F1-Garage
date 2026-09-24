@@ -22,7 +22,7 @@ export const poses = {
   /** Wide cinematic framing behind the landing copy. */
   landing: (bay: number) => relative(bay, [-6.5, 2.9, 8.3], [0, 0.5, 0]),
   /** Default driver-focus framing of the plinth. */
-  bay: (bay: number) => relative(bay, [-5.9, 3.2, 7.3], [0, 0.5, 0]),
+  bay: (bay: number) => relative(bay, [-6.3, 3.3, 8], [0.2, 0.95, -0.4]),
   /** Slightly closer and higher for technical study (spec §15.1). */
   // Panned so the car sits left of the component panel.
   engineering: (bay: number) => relative(bay, [-4.2, 3.8, 7], [1.2, 0.4, 0.85]),
