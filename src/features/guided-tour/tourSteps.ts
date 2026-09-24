@@ -7,6 +7,8 @@ import {
   seasonStory,
 } from "../../data/drivers";
 import { parts } from "../../data/engineering";
+import { resolveCar } from "../../data/cars";
+import { anchorsFor } from "../../3d/cars/anchors";
 import type { PartId } from "../../data/engineering";
 import { SCHUMACHER_INDEX } from "../../stores/museumStore";
 import type { Section } from "../../stores/museumStore";
@@ -126,7 +128,7 @@ export function buildSchumacherTour(): TourStepDefinition[] {
       kicker: "The machine",
       title: diffuser.name,
       narration: `${diffuser.text} (General principle; the exact design varies by era.)`,
-      camera: poses.part(bay, diffuser.position),
+      camera: poses.part(bay, anchorsFor(resolveCar(driver, year).spec).diffuser ?? diffuser.position),
       scene: { ...base, section: "engineering", part: "diffuser" },
       showStory: true,
       allowSkip: true,

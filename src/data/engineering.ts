@@ -18,7 +18,7 @@ export const parts = [
     name: "Tyres",
     category: "MECHANICAL GRIP",
     position: [-1.55, 0.5, 1.03],
-    text: "The only contact with the track. Temperature, pressure and compound affect grip, wear and the driver’s confidence. This original model uses generic slick tyres rather than a licensed tyre design.",
+    text: "The only contact with the track. Temperature, pressure and compound affect grip, wear and the driver’s confidence. The tyres on these original models are generic, not a licensed tyre design.",
   },
   {
     id: "brakes",
@@ -32,7 +32,7 @@ export const parts = [
     name: "Power unit",
     category: "PROPULSION",
     position: [0.9, 1, 0],
-    text: "The engine sits behind the driver. Its architecture depends on the era: the Schumacher years included naturally aspirated V10s and, in 2006, a V8; modern cars combine combustion and electrical energy.",
+    text: "Where the engine sits and how it is built depend on the era. Ferrari’s 1950s Grand Prix cars carried it ahead of the driver; later cars place it behind. The Schumacher years included naturally aspirated V10s and, in 2006, a V8; modern cars combine combustion and electrical energy.",
   },
   {
     id: "steering",

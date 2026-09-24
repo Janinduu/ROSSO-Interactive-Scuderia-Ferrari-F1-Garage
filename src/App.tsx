@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -25,13 +25,14 @@ import {
   eras,
   getHistory,
   getTotals,
-  seasonStory,
 } from "./data/drivers";
 import { parts } from "./data/engineering";
 import Modal from "./components/Modal";
 import SceneBoundary from "./components/SceneBoundary";
 import { usePreferences } from "./hooks/usePreferences";
 import { getPortrait } from "./data/media";
+import { resolveCar } from "./data/cars";
+import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
@@ -88,8 +89,12 @@ function App() {
   const driver = drivers[index];
   const history = getHistory(driver.id);
   const totals = getTotals(driver.id);
-  const story = seasonStory(driver, year);
-  const activePart = parts.find((p) => p.id === part);
+  const car = useMemo(() => resolveCar(driver, year), [driver, year]);
+  const availableParts = useMemo(() => {
+    const anchors = anchorsFor(car.spec);
+    return parts.filter((p) => anchors[p.id]);
+  }, [car]);
+  const activePart = availableParts.find((p) => p.id === part);
   const portrait = getPortrait(driver.id);
   const previousIndex = (index + drivers.length - 1) % drivers.length;
   const nextIndex = (index + 1) % drivers.length;
@@ -114,6 +119,10 @@ function App() {
     setTimeout(() => titleRef.current?.focus({ preventScroll: true }), 50);
   }
   useEffect(() => {
+    if (section === "engineering" && part && !availableParts.some((p) => p.id === part))
+      setPart(availableParts[0]?.id ?? null);
+  }, [section, part, availableParts, setPart]);
+  useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setFocusMode(false);
@@ -128,15 +137,8 @@ function App() {
       <div className="flat-ring" />
       <Portrait driverId={driver.id} className="flat-portrait" />
       <span className="eyebrow">THE DESIGN ARCHIVE</span>
-      <strong>{story?.car ?? driver.importantCars[0]}</strong>
-      <span>
-        Original car study ·{" "}
-        {driver.model === "v10"
-          ? "V10 / V8 era"
-          : driver.model === "classic"
-            ? "Classic era"
-            : "Modern era"}
-      </span>
+      <strong>{car.officialName ?? car.spec.familyLabel}</strong>
+      <span>{car.accuracyLabel}</span>
       <p>
         2D archive mode. Every driver story, season and engineering explanation
         remains available.
@@ -246,6 +248,7 @@ function App() {
                     reduced={prefs.reduced}
                     onFailure={() => prefs.setFlat(true)}
                     onSelectDriver={selectDriver}
+                    car={car}
                   />
                 </Suspense>
               </SceneBoundary>
@@ -430,8 +433,8 @@ function App() {
               </div>
               <div className="car-label">
                 <span className="eyebrow">{year} / CAR STUDY</span>
-                <h2>{story?.car ?? driver.importantCars[0]}</h2>
-                <span>Original geometry · era-inspired interpretation</span>
+                <h2>{car.officialName ?? car.spec.familyLabel}</h2>
+                <span>{car.accuracyLabel}</span>
               </div>
               <div className="scene-tools">
                 <span>
@@ -462,16 +465,17 @@ function App() {
               {section === "engineering" && (
                 <div className="engineering-panel">
                   <div className="eyebrow">
-                    EXPLORE THE MACHINE <span>09 COMPONENTS</span>
+                    EXPLORE THE MACHINE{" "}
+                    <span>{pad(availableParts.length)} COMPONENTS</span>
                   </div>
                   <div className="part-list">
-                    {parts.map((p, i) => (
+                    {availableParts.map((p) => (
                       <button
                         key={p.id}
                         className={part === p.id ? "active" : ""}
                         onClick={() => setPart(p.id)}
                       >
-                        <span>{pad(i + 1)}</span>
+                        <span>{pad(parts.indexOf(p) + 1)}</span>
                         {p.name}
                         <Plus size={12} />
                       </button>

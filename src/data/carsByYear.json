@@ -1,0 +1,2575 @@
+{
+  "ascari": {
+    "1950": {
+      "primary": "125 F1",
+      "others": [
+        "275 F1",
+        "375 F1"
+      ],
+      "sourceIds": [
+        "ferrari-275-f1",
+        "ferrari-375-f1",
+        "ferrari-year-1950",
+        "statsf1-1950",
+        "ferrari-1000-gp-monaco-1950"
+      ],
+      "note": "125 F1 at Monaco and Switzerland; 275 F1 at Belgium; 375 F1 debuted at Monza (Ascari finished 2nd after taking over Serafini's car). Ferrari has no standalone 125 F1 page; the name is from Ferrari's 275 F1 page and 1950 Monaco feature."
+    },
+    "1951": {
+      "primary": "375 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-375-f1",
+        "ferrari-year-1951",
+        "statsf1-1951"
+      ],
+      "note": ""
+    },
+    "1952": {
+      "primary": "500 F2",
+      "others": [
+        "375 Indianapolis"
+      ],
+      "sourceIds": [
+        "ferrari-500-f2",
+        "ferrari-375-indianapolis",
+        "ferrari-year-1952",
+        "statsf1-1952"
+      ],
+      "note": "500 F2 in all six European Grands Prix (Formula 2 rules); 375 Indianapolis at the Indianapolis 500 (retired, broken wheel)."
+    },
+    "1953": {
+      "primary": "500 F2",
+      "others": [],
+      "sourceIds": [
+        "ferrari-500-f2",
+        "ferrari-year-1953",
+        "statsf1-1953"
+      ],
+      "note": ""
+    },
+    "1954": {
+      "primary": "625 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-625-f1",
+        "ferrari-year-1954",
+        "statsf1-1954"
+      ],
+      "note": "Ascari's only 1954 Ferrari start was the Italian GP at Monza (on loan from Lancia); his other 1954 starts were for Maserati and Lancia."
+    }
+  },
+  "fangio": {
+    "1956": {
+      "primary": "D50",
+      "others": [],
+      "sourceIds": [
+        "ferrari-d50",
+        "ferrari-year-1956",
+        "statsf1-1956"
+      ],
+      "note": "Ferrari names the car 'D50'; commonly called 'Lancia-Ferrari D50' (statsf1/Wikipedia also use D50/D50A). Designed for Lancia by Jano, modified by Ferrari for 1956."
+    }
+  },
+  "hawthorn": {
+    "1953": {
+      "primary": "500 F2",
+      "others": [],
+      "sourceIds": [
+        "ferrari-500-f2",
+        "ferrari-year-1953",
+        "statsf1-1953"
+      ],
+      "note": ""
+    },
+    "1954": {
+      "primary": "625 F1",
+      "others": [
+        "553 F1"
+      ],
+      "sourceIds": [
+        "ferrari-625-f1",
+        "ferrari-553-f1",
+        "ferrari-year-1954",
+        "statsf1-1954"
+      ],
+      "note": "625 F1 in six races; 553 F1 ('Squalo') at the French GP and at the Spanish GP, which he won."
+    },
+    "1955": {
+      "primary": "555 F1",
+      "others": [
+        "625 F1"
+      ],
+      "sourceIds": [
+        "ferrari-555-f1",
+        "ferrari-625-f1",
+        "ferrari-year-1955",
+        "statsf1-1955"
+      ],
+      "note": "Started 1955 with Vanwall; for Ferrari drove the 555 F1 ('Supersqualo') in the Netherlands and Italy and a 625 F1 at the British GP (shared with Castellotti)."
+    },
+    "1957": {
+      "primary": "801 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-801-f1",
+        "ferrari-year-1957",
+        "statsf1-1957",
+        "wikipedia-ferrari-801",
+        "wikipedia-1957-season"
+      ],
+      "note": "Ferrari and Wikipedia say the 801 raced from the 1957 Argentine GP; statsf1 lists Hawthorn's car as a D50 for Argentina and Monaco. Commonly called 'Lancia-Ferrari 801'."
+    },
+    "1958": {
+      "primary": "246 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-246-f1",
+        "ferrari-year-1958",
+        "statsf1-1958"
+      ],
+      "note": "Also known as 'Dino 246' (statsf1: D246)."
+    }
+  },
+  "phil_hill": {
+    "1958": {
+      "primary": "246 F1",
+      "others": [
+        "Dino 156 F2"
+      ],
+      "sourceIds": [
+        "ferrari-246-f1",
+        "ferrari-dino-156-f2",
+        "ferrari-year-1958",
+        "statsf1-1958"
+      ],
+      "note": "Drove a Maserati 250F (Bonnier's) at the French GP, not a Ferrari. For Ferrari: Dino 156 F2 in the Formula 2 class at the German GP, then 246 F1 at Italy and Morocco."
+    },
+    "1959": {
+      "primary": "256 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-256-f1",
+        "ferrari-year-1959",
+        "statsf1-1959"
+      ],
+      "note": "Ferrari calls the 2.5-litre 1959 car '256 F1'; statsf1 and Wikipedia file it as 'Dino 246' / D246."
+    },
+    "1960": {
+      "primary": "256 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-256-f1",
+        "ferrari-year-1960",
+        "statsf1-1960",
+        "ferrari-246-p-f1"
+      ],
+      "note": "Front-engined car. Ferrari says 1960 began 'still with the 256 F1'; statsf1 lists Hill's car as D246 all season and Wikipedia also calls it the 246 F1. The rear-engined 246 P F1 raced in 1960 (Ginther, Monaco), not by Hill."
+    },
+    "1961": {
+      "primary": "156 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-156-f1",
+        "ferrari-year-1961",
+        "statsf1-1961"
+      ],
+      "note": ""
+    },
+    "1962": {
+      "primary": "156 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-156-f1",
+        "ferrari-year-1962",
+        "statsf1-1962"
+      ],
+      "note": "Ferrari: the same 156 F1 was used again in 1962. Hill's US GP entry was with Porsche, not Ferrari."
+    }
+  },
+  "surtees": {
+    "1963": {
+      "primary": "156 F1-63",
+      "others": [],
+      "sourceIds": [
+        "ferrari-156-f1-63",
+        "ferrari-year-1963",
+        "statsf1-1963"
+      ],
+      "note": "statsf1 lists the 1963 '156 Aero' monocoque version at Italy, Mexico and South Africa; Ferrari names both versions 156 F1-63. Also written '156/63'."
+    },
+    "1964": {
+      "primary": "158 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-158-f1",
+        "ferrari-year-1964",
+        "statsf1-1964"
+      ],
+      "note": "158 F1 in every race, including the US and Mexican GPs entered by North American Racing Team. Ferrari's 512 F1 (flat-12, often called '1512') was raced by Bandini that year."
+    },
+    "1965": {
+      "primary": "158 F1",
+      "others": [
+        "512 F1"
+      ],
+      "sourceIds": [
+        "ferrari-158-f1",
+        "ferrari-512-f1",
+        "ferrari-year-1965",
+        "statsf1-1965"
+      ],
+      "note": "Even split: 158 F1 for rounds 1-4 (South Africa, Monaco, Belgium, France) and 512 F1 for rounds 5-8 (Britain, Netherlands, Germany, Italy). Missed the last two races after being injured. 158 F1 is listed first because it started the season and scored more points. The 512 F1 is often called '1512'."
+    },
+    "1966": {
+      "primary": "312 F1-66",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-f1-66",
+        "ferrari-year-1966",
+        "statsf1-1966"
+      ],
+      "note": "Raced the 312 F1-66 in his two 1966 Ferrari starts (Monaco and Belgium, which he won), then left for Cooper. Often written 'Ferrari 312' (1966)."
+    }
+  },
+  "lauda": {
+    "1974": {
+      "primary": "312 B3-74",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-b3-74",
+        "ferrari-year-1974",
+        "statsf1-1974"
+      ],
+      "note": "Often written '312B3' (statsf1: 312B3-74)."
+    },
+    "1975": {
+      "primary": "312 T",
+      "others": [
+        "312 B3-74"
+      ],
+      "sourceIds": [
+        "ferrari-312-t",
+        "ferrari-312-b3-74",
+        "ferrari-year-1975",
+        "statsf1-1975"
+      ],
+      "note": "312 B3-74 in Argentina and Brazil; 312 T from the South African GP onwards."
+    },
+    "1976": {
+      "primary": "312 T2",
+      "others": [
+        "312 T"
+      ],
+      "sourceIds": [
+        "ferrari-312-t2",
+        "ferrari-312-t",
+        "ferrari-year-1976",
+        "statsf1-1976"
+      ],
+      "note": "312 T for the first three races (Brazil, South Africa, US West); 312 T2 from the Spanish GP onwards."
+    },
+    "1977": {
+      "primary": "312 T2",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-t2",
+        "ferrari-year-1977",
+        "statsf1-1977"
+      ],
+      "note": ""
+    }
+  },
+  "gilles_villeneuve": {
+    "1977": {
+      "primary": "312 T2",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-t2",
+        "ferrari-year-1977",
+        "statsf1-1977"
+      ],
+      "note": "Took over Lauda's car for the last two races (Canada, Japan)."
+    },
+    "1978": {
+      "primary": "312 T3",
+      "others": [
+        "312 T2"
+      ],
+      "sourceIds": [
+        "ferrari-312-t3",
+        "ferrari-312-t2",
+        "ferrari-year-1978",
+        "statsf1-1978"
+      ],
+      "note": "A modified 312 T2 in Argentina and Brazil; 312 T3 from the South African GP onwards."
+    },
+    "1979": {
+      "primary": "312 T4",
+      "others": [
+        "312 T3"
+      ],
+      "sourceIds": [
+        "ferrari-312-t4",
+        "ferrari-312-t3",
+        "ferrari-year-1979",
+        "statsf1-1979"
+      ],
+      "note": "312 T3 in Argentina and Brazil; 312 T4 from the South African GP onwards."
+    },
+    "1980": {
+      "primary": "312 T5",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-t5",
+        "ferrari-year-1980",
+        "statsf1-1980"
+      ],
+      "note": "The 126 C turbo appeared in practice but did not race in 1980."
+    },
+    "1981": {
+      "primary": "126 CK",
+      "others": [],
+      "sourceIds": [
+        "ferrari-126-ck",
+        "ferrari-year-1981",
+        "statsf1-1981",
+        "ferrari-126-c2"
+      ],
+      "note": "Ferrari names the twin-turbo car '126 CK'; the Comprex-supercharged 126 CX was tested but dropped. Often written '126C' or '126CK'."
+    },
+    "1982": {
+      "primary": "126 C2",
+      "others": [],
+      "sourceIds": [
+        "ferrari-126-c2",
+        "ferrari-year-1982",
+        "statsf1-1982"
+      ],
+      "note": "Raced until his fatal accident in qualifying for the Belgian GP (Zolder, 8 May 1982)."
+    }
+  },
+  "scheckter": {
+    "1979": {
+      "primary": "312 T4",
+      "others": [
+        "312 T3"
+      ],
+      "sourceIds": [
+        "ferrari-312-t4",
+        "ferrari-312-t3",
+        "ferrari-year-1979",
+        "statsf1-1979"
+      ],
+      "note": "312 T3 in Argentina and Brazil; 312 T4 from the South African GP onwards."
+    },
+    "1980": {
+      "primary": "312 T5",
+      "others": [],
+      "sourceIds": [
+        "ferrari-312-t5",
+        "ferrari-year-1980",
+        "statsf1-1980"
+      ],
+      "note": ""
+    }
+  },
+  "mansell": {
+    "1989": {
+      "primary": "F1-89",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-89",
+        "ferrari-year-1989",
+        "statsf1-1989"
+      ],
+      "note": "Project/type number 640; widely called 'Ferrari 640'."
+    },
+    "1990": {
+      "primary": "F1-90",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-90",
+        "ferrari-year-1990",
+        "statsf1-1990"
+      ],
+      "note": "Type 641 (later 641/2); widely called 'Ferrari 641'."
+    }
+  },
+  "prost": {
+    "1990": {
+      "primary": "F1-90",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-90",
+        "ferrari-year-1990",
+        "statsf1-1990"
+      ],
+      "note": "Type 641 (later 641/2); widely called 'Ferrari 641'."
+    },
+    "1991": {
+      "primary": "F1-91",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-91",
+        "ferrari-year-1991",
+        "statsf1-1991",
+        "wikipedia-ferrari-642",
+        "wikipedia-ferrari-643"
+      ],
+      "note": "Ferrari names the 1991 car F1-91: project 642 for the first six races, replaced from the French GP by project 643 (higher nose). Wikipedia has separate '642' and '643' articles. Prost was replaced for the final race."
+    }
+  },
+  "michael_schumacher": {
+    "1996": {
+      "primary": "F310",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f310",
+        "ferrari-year-1996",
+        "statsf1-1996"
+      ],
+      "note": ""
+    },
+    "1997": {
+      "primary": "F310 B",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f310-b",
+        "ferrari-year-1997",
+        "statsf1-1997"
+      ],
+      "note": "Ferrari writes 'F310 B'; commonly 'F310B'."
+    },
+    "1998": {
+      "primary": "F300",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f300",
+        "ferrari-year-1998",
+        "statsf1-1998"
+      ],
+      "note": ""
+    },
+    "1999": {
+      "primary": "F399",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f399",
+        "ferrari-year-1999",
+        "statsf1-1999"
+      ],
+      "note": ""
+    },
+    "2000": {
+      "primary": "F1-2000",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-2000",
+        "ferrari-year-2000",
+        "statsf1-2000"
+      ],
+      "note": ""
+    },
+    "2001": {
+      "primary": "F2001",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f2001",
+        "ferrari-year-2001",
+        "statsf1-2001"
+      ],
+      "note": ""
+    },
+    "2002": {
+      "primary": "F2002",
+      "others": [
+        "F2001"
+      ],
+      "sourceIds": [
+        "ferrari-f2002",
+        "ferrari-f2001",
+        "ferrari-year-2002",
+        "statsf1-2002"
+      ],
+      "note": "Updated F2001 (sometimes 'F2001B') in Australia and Malaysia; F2002 from the Brazilian GP onwards."
+    },
+    "2003": {
+      "primary": "F2003-GA",
+      "others": [
+        "F2002"
+      ],
+      "sourceIds": [
+        "ferrari-f2003-ga",
+        "ferrari-f2002",
+        "ferrari-year-2003",
+        "statsf1-2003"
+      ],
+      "note": "F2002 for the first four races; F2003-GA from the Spanish GP onwards. 'GA' honours Gianni Agnelli. Ferrari writes it as 'F2003-GA', 'F2003 - GA' and 'F2003 GA'."
+    },
+    "2004": {
+      "primary": "F2004",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f2004",
+        "ferrari-year-2004",
+        "statsf1-2004"
+      ],
+      "note": ""
+    },
+    "2005": {
+      "primary": "F2005",
+      "others": [
+        "F2004 M"
+      ],
+      "sourceIds": [
+        "ferrari-f2005",
+        "ferrari-year-2005",
+        "statsf1-2005",
+        "wikipedia-ferrari-f2004"
+      ],
+      "note": "Interim F2004 M in Australia and Malaysia; F2005 from the Bahrain GP onwards (Ferrari). Ferrari writes 'F2004 M'; commonly 'F2004M'."
+    },
+    "2006": {
+      "primary": "248 F1",
+      "others": [],
+      "sourceIds": [
+        "ferrari-248-f1",
+        "ferrari-year-2006",
+        "statsf1-2006"
+      ],
+      "note": ""
+    }
+  },
+  "raikkonen": {
+    "2007": {
+      "primary": "F2007",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f2007",
+        "ferrari-year-2007",
+        "statsf1-2007"
+      ],
+      "note": ""
+    },
+    "2008": {
+      "primary": "F2008",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f2008",
+        "ferrari-year-2008",
+        "statsf1-2008"
+      ],
+      "note": ""
+    },
+    "2009": {
+      "primary": "F60",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f60",
+        "ferrari-year-2009",
+        "statsf1-2009"
+      ],
+      "note": ""
+    },
+    "2014": {
+      "primary": "F14 T",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f14-t",
+        "ferrari-year-2014",
+        "statsf1-2014"
+      ],
+      "note": "Ferrari writes 'F14 T' (the SF15-T page also says 'F14-T')."
+    },
+    "2015": {
+      "primary": "SF15-T",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf15-t",
+        "ferrari-year-2015",
+        "statsf1-2015"
+      ],
+      "note": "Ferrari writes both 'SF15-T' and 'SF15 T'."
+    },
+    "2016": {
+      "primary": "SF16-H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf16-h",
+        "ferrari-year-2016",
+        "statsf1-2016"
+      ],
+      "note": ""
+    },
+    "2017": {
+      "primary": "SF70H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf70h",
+        "ferrari-year-2017",
+        "statsf1-2017"
+      ],
+      "note": ""
+    },
+    "2018": {
+      "primary": "SF71H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf71h",
+        "ferrari-year-2018",
+        "statsf1-2018"
+      ],
+      "note": ""
+    }
+  },
+  "alonso": {
+    "2010": {
+      "primary": "F10",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f10",
+        "ferrari-year-2010",
+        "statsf1-2010"
+      ],
+      "note": ""
+    },
+    "2011": {
+      "primary": "Ferrari 150° Italia",
+      "others": [],
+      "sourceIds": [
+        "ferrari-ferrari-150-italia",
+        "ferrari-year-2011",
+        "statsf1-2011"
+      ],
+      "note": "Launched as 'F150th Italia' and renamed; Ferrari's history pages also say 'F150° Italia'."
+    },
+    "2012": {
+      "primary": "F2012",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f2012",
+        "ferrari-year-2012",
+        "statsf1-2012"
+      ],
+      "note": ""
+    },
+    "2013": {
+      "primary": "F138",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f138",
+        "ferrari-year-2013",
+        "statsf1-2013"
+      ],
+      "note": ""
+    },
+    "2014": {
+      "primary": "F14 T",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f14-t",
+        "ferrari-year-2014",
+        "statsf1-2014"
+      ],
+      "note": "Ferrari writes 'F14 T' (the SF15-T page also says 'F14-T')."
+    }
+  },
+  "vettel": {
+    "2015": {
+      "primary": "SF15-T",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf15-t",
+        "ferrari-year-2015",
+        "statsf1-2015"
+      ],
+      "note": "Ferrari writes both 'SF15-T' and 'SF15 T'."
+    },
+    "2016": {
+      "primary": "SF16-H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf16-h",
+        "ferrari-year-2016",
+        "statsf1-2016"
+      ],
+      "note": ""
+    },
+    "2017": {
+      "primary": "SF70H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf70h",
+        "ferrari-year-2017",
+        "statsf1-2017"
+      ],
+      "note": ""
+    },
+    "2018": {
+      "primary": "SF71H",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf71h",
+        "ferrari-year-2018",
+        "statsf1-2018"
+      ],
+      "note": ""
+    },
+    "2019": {
+      "primary": "SF90",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf90",
+        "ferrari-year-2019",
+        "statsf1-2019"
+      ],
+      "note": ""
+    },
+    "2020": {
+      "primary": "SF1000",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf1000",
+        "ferrari-year-2020",
+        "statsf1-2020"
+      ],
+      "note": "Named for Ferrari's 1000th Formula 1 Grand Prix (Mugello 2020)."
+    }
+  },
+  "sainz": {
+    "2021": {
+      "primary": "SF21",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf21",
+        "ferrari-year-2021",
+        "statsf1-2021"
+      ],
+      "note": ""
+    },
+    "2022": {
+      "primary": "F1-75",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-75",
+        "ferrari-year-2022",
+        "statsf1-2022"
+      ],
+      "note": ""
+    },
+    "2023": {
+      "primary": "SF-23",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-23",
+        "ferrari-year-2023",
+        "statsf1-2023"
+      ],
+      "note": ""
+    },
+    "2024": {
+      "primary": "SF-24",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-24",
+        "ferrari-year-2024",
+        "statsf1-2024"
+      ],
+      "note": ""
+    }
+  },
+  "leclerc": {
+    "2019": {
+      "primary": "SF90",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf90",
+        "ferrari-year-2019",
+        "statsf1-2019"
+      ],
+      "note": ""
+    },
+    "2020": {
+      "primary": "SF1000",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf1000",
+        "ferrari-year-2020",
+        "statsf1-2020"
+      ],
+      "note": "Named for Ferrari's 1000th Formula 1 Grand Prix (Mugello 2020)."
+    },
+    "2021": {
+      "primary": "SF21",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf21",
+        "ferrari-year-2021",
+        "statsf1-2021"
+      ],
+      "note": ""
+    },
+    "2022": {
+      "primary": "F1-75",
+      "others": [],
+      "sourceIds": [
+        "ferrari-f1-75",
+        "ferrari-year-2022",
+        "statsf1-2022"
+      ],
+      "note": ""
+    },
+    "2023": {
+      "primary": "SF-23",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-23",
+        "ferrari-year-2023",
+        "statsf1-2023"
+      ],
+      "note": ""
+    },
+    "2024": {
+      "primary": "SF-24",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-24",
+        "ferrari-year-2024",
+        "statsf1-2024"
+      ],
+      "note": ""
+    },
+    "2025": {
+      "primary": "SF-25",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-25",
+        "ferrari-year-2025",
+        "statsf1-2025",
+        "formula1-sf-25-launch"
+      ],
+      "note": ""
+    }
+  },
+  "hamilton": {
+    "2025": {
+      "primary": "SF-25",
+      "others": [],
+      "sourceIds": [
+        "ferrari-sf-25",
+        "ferrari-year-2025",
+        "statsf1-2025",
+        "formula1-sf-25-launch"
+      ],
+      "note": "Hamilton's first Ferrari season."
+    }
+  },
+  "_sources": {
+    "ferrari-1000-gp-monaco-1950": {
+      "title": "Ferrari 100x1000: 1950 Monaco GP",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/1000-gp-monaco-1950",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-126-c2": {
+      "title": "126 C2",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/126-c2",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-126-ck": {
+      "title": "126 CK",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/126-ck",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-156-f1": {
+      "title": "156 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/156-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-156-f1-63": {
+      "title": "156 F1-63",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/156-f1-63",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-158-f1": {
+      "title": "158 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/158-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-246-f1": {
+      "title": "246 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/246-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-246-p-f1": {
+      "title": "246 P F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/246-p-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-248-f1": {
+      "title": "248 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/248-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-256-f1": {
+      "title": "256 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/256-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-275-f1": {
+      "title": "275 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/275-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-b3-74": {
+      "title": "312 B3-74",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-b3-74",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-f1-66": {
+      "title": "312 F1-66",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-f1-66",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-t": {
+      "title": "312 T",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-t2": {
+      "title": "312 T2",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t2",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-t3": {
+      "title": "312 T3",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t3",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-t4": {
+      "title": "312 T4",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t4",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-312-t5": {
+      "title": "312 T5",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t5",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-375-f1": {
+      "title": "375 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/375-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-375-indianapolis": {
+      "title": "375 Indianapolis",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/375-indianapolis",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-500-f2": {
+      "title": "500 F2",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/500-f2",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-512-f1": {
+      "title": "512 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/512-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-553-f1": {
+      "title": "553 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/553-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-555-f1": {
+      "title": "555 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/555-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-625-f1": {
+      "title": "625 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/625-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-801-f1": {
+      "title": "801 F1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/801-f1",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-d50": {
+      "title": "D50",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/d50",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-dino-156-f2": {
+      "title": "Dino 156 F2",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/dino-156-f2",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f1-2000": {
+      "title": "F1-2000",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-2000",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f1-75": {
+      "title": "F1-75",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-75",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f1-89": {
+      "title": "F1-89",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-89",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f1-90": {
+      "title": "F1-90",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-90",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f1-91": {
+      "title": "F1-91",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-91",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f10": {
+      "title": "F10",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f10",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f138": {
+      "title": "F138",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f138",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f14-t": {
+      "title": "F14 T",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f14-t",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2001": {
+      "title": "F2001",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2001",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2002": {
+      "title": "F2002",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2002",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2003-ga": {
+      "title": "F2003-GA",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2003-ga",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2004": {
+      "title": "F2004",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2004",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2005": {
+      "title": "F2005",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2005",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2007": {
+      "title": "F2007",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2007",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2008": {
+      "title": "F2008",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2008",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f2012": {
+      "title": "F2012",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2012",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f300": {
+      "title": "F300",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f300",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f310": {
+      "title": "F310",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f310",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f310-b": {
+      "title": "F310 B",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f310-b",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f399": {
+      "title": "F399",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f399",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-f60": {
+      "title": "F60",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/f60",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-ferrari-150-italia": {
+      "title": "Ferrari 150° Italia",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/ferrari-150-italia",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf-23": {
+      "title": "SF-23",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf-23",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf-24": {
+      "title": "SF-24",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf-24",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf-25": {
+      "title": "SF-25",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf-25",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf1000": {
+      "title": "SF1000",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf1000",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf15-t": {
+      "title": "SF15-T",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf15-t",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf16-h": {
+      "title": "SF16-H",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf16-h",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf21": {
+      "title": "SF21",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf21",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf70h": {
+      "title": "SF70H",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf70h",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf71h": {
+      "title": "SF71H",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf71h",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-sf90": {
+      "title": "SF90",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/sf90",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1950": {
+      "title": "1950 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1950",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1951": {
+      "title": "1951 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1951",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1952": {
+      "title": "1952 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1952",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1953": {
+      "title": "1953 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1953",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1954": {
+      "title": "1954 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1954",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1955": {
+      "title": "1955 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1955",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1956": {
+      "title": "1956 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1956",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1957": {
+      "title": "1957 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1957",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1958": {
+      "title": "1958 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1958",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1959": {
+      "title": "1959 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1959",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1960": {
+      "title": "1960 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1960",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1961": {
+      "title": "1961 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1961",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1962": {
+      "title": "1962 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1962",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1963": {
+      "title": "1963 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1963",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1964": {
+      "title": "1964 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1964",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1965": {
+      "title": "1965 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1965",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1966": {
+      "title": "1966 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1966",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1974": {
+      "title": "1974 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1974",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1975": {
+      "title": "1975 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1975",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1976": {
+      "title": "1976 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1976",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1977": {
+      "title": "1977 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1977",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1978": {
+      "title": "1978 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1978",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1979": {
+      "title": "1979 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1979",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1980": {
+      "title": "1980 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1980",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1981": {
+      "title": "1981 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1981",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1982": {
+      "title": "1982 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1982",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1989": {
+      "title": "1989 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1989",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1990": {
+      "title": "1990 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1990",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1991": {
+      "title": "1991 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1991",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1996": {
+      "title": "1996 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1996",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1997": {
+      "title": "1997 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1997",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1998": {
+      "title": "1998 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1998",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-1999": {
+      "title": "1999 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1999",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2000": {
+      "title": "2000 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2000",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2001": {
+      "title": "2001 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2001",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2002": {
+      "title": "2002 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2002",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2003": {
+      "title": "2003 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2003",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2004": {
+      "title": "2004 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2004",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2005": {
+      "title": "2005 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2005",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2006": {
+      "title": "2006 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2006",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2007": {
+      "title": "2007 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2007",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2008": {
+      "title": "2008 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2008",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2009": {
+      "title": "2009 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2009",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2010": {
+      "title": "2010 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2010",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2011": {
+      "title": "2011 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2011",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2012": {
+      "title": "2012 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2012",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2013": {
+      "title": "2013 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2013",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2014": {
+      "title": "2014 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2014",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2015": {
+      "title": "2015 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2015",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2016": {
+      "title": "2016 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2016",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2017": {
+      "title": "2017 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2017",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2018": {
+      "title": "2018 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2018",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2019": {
+      "title": "2019 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2019",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2020": {
+      "title": "2020 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2020",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2021": {
+      "title": "2021 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2021",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2022": {
+      "title": "2022 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2022",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2023": {
+      "title": "2023 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2023",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2024": {
+      "title": "2024 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2024",
+      "accessedAt": "2026-09-24"
+    },
+    "ferrari-year-2025": {
+      "title": "2025 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2025",
+      "accessedAt": "2026-09-24"
+    },
+    "formula1-sf-25-launch": {
+      "title": "FIRST LOOK: Ferrari unveil new 2025 car after SF-25 livery reveal during F1 75 Live",
+      "publisher": "Formula 1",
+      "url": "https://www.formula1.com/en/latest/article/first-look-ferrari-unveil-new-2025-car-after-sf-25-livery-reveal-during-f1.1IvvOTzHsJr2KsZoPPJNjE",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1950": {
+      "title": "1950 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1950.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1951": {
+      "title": "1951 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1951.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1952": {
+      "title": "1952 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1952.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1953": {
+      "title": "1953 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1953.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1954": {
+      "title": "1954 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1954.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1955": {
+      "title": "1955 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1955.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1956": {
+      "title": "1956 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1956.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1957": {
+      "title": "1957 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1957.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1958": {
+      "title": "1958 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1958.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1959": {
+      "title": "1959 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1959.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1960": {
+      "title": "1960 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1960.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1961": {
+      "title": "1961 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1961.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1962": {
+      "title": "1962 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1962.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1963": {
+      "title": "1963 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1963.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1964": {
+      "title": "1964 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1964.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1965": {
+      "title": "1965 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1965.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1966": {
+      "title": "1966 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1966.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1974": {
+      "title": "1974 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1974.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1975": {
+      "title": "1975 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1975.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1976": {
+      "title": "1976 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1976.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1977": {
+      "title": "1977 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1977.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1978": {
+      "title": "1978 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1978.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1979": {
+      "title": "1979 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1979.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1980": {
+      "title": "1980 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1980.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1981": {
+      "title": "1981 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1981.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1982": {
+      "title": "1982 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1982.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1989": {
+      "title": "1989 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1989.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1990": {
+      "title": "1990 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1990.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1991": {
+      "title": "1991 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1991.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1996": {
+      "title": "1996 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1996.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1997": {
+      "title": "1997 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1997.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1998": {
+      "title": "1998 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1998.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-1999": {
+      "title": "1999 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/1999.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2000": {
+      "title": "2000 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2000.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2001": {
+      "title": "2001 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2001.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2002": {
+      "title": "2002 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2002.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2003": {
+      "title": "2003 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2003.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2004": {
+      "title": "2004 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2004.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2005": {
+      "title": "2005 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2005.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2006": {
+      "title": "2006 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2006.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2007": {
+      "title": "2007 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2007.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2008": {
+      "title": "2008 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2008.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2009": {
+      "title": "2009 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2009.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2010": {
+      "title": "2010 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2010.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2011": {
+      "title": "2011 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2011.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2012": {
+      "title": "2012 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2012.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2013": {
+      "title": "2013 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2013.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2014": {
+      "title": "2014 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2014.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2015": {
+      "title": "2015 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2015.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2016": {
+      "title": "2016 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2016.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2017": {
+      "title": "2017 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2017.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2018": {
+      "title": "2018 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2018.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2019": {
+      "title": "2019 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2019.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2020": {
+      "title": "2020 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2020.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2021": {
+      "title": "2021 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2021.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2022": {
+      "title": "2022 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2022.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2023": {
+      "title": "2023 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2023.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2024": {
+      "title": "2024 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2024.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "statsf1-2025": {
+      "title": "2025 season - race entrants (per Grand Prix)",
+      "publisher": "STATS F1",
+      "url": "https://www.statsf1.com/en/2025.aspx",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-1957-season": {
+      "title": "1957 Formula One season",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/1957_Formula_One_season",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-ferrari-125-f1": {
+      "title": "Ferrari 125 F1",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_125_F1",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-ferrari-642": {
+      "title": "Ferrari 642",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_642",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-ferrari-643": {
+      "title": "Ferrari 643",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_643",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-ferrari-801": {
+      "title": "Ferrari 801",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_801",
+      "accessedAt": "2026-09-24"
+    },
+    "wikipedia-ferrari-f2004": {
+      "title": "Ferrari F2004 (incl. F2004M)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2004",
+      "accessedAt": "2026-09-24"
+    }
+  },
+  "_cars": {
+    "125 F1": {
+      "year": 1950,
+      "engine": "1.5 V12, supercharged",
+      "notes": "Ferrari's first World Championship car; Ascari finished 2nd on its championship debut at Monaco 1950.",
+      "sourceIds": [
+        "ferrari-1000-gp-monaco-1950",
+        "wikipedia-ferrari-125-f1",
+        "ferrari-275-f1"
+      ]
+    },
+    "275 F1": {
+      "year": 1950,
+      "engine": "3.3 V12 (60°), naturally aspirated",
+      "notes": "First unsupercharged Lampredi V12, raced from the 1950 Belgian GP at Spa.",
+      "sourceIds": [
+        "ferrari-275-f1"
+      ]
+    },
+    "375 F1": {
+      "year": 1950,
+      "engine": "4.5 V12 (60°), naturally aspirated",
+      "notes": "Lampredi V12 at the 4.5-litre limit; gave Ferrari its first World Championship win (Silverstone 1951).",
+      "sourceIds": [
+        "ferrari-375-f1"
+      ]
+    },
+    "375 Indianapolis": {
+      "year": 1952,
+      "engine": "4.4 V12 (60°)",
+      "notes": "375 F1 modified for the Indianapolis 500; Ascari retired with a broken wheel.",
+      "sourceIds": [
+        "ferrari-375-indianapolis"
+      ]
+    },
+    "500 F2": {
+      "year": 1952,
+      "engine": "2.0 inline-4",
+      "notes": "Lampredi four-cylinder F2 car; Ascari won the 1952 and 1953 titles in it.",
+      "aliases": [
+        "Tipo 500",
+        "500"
+      ],
+      "sourceIds": [
+        "ferrari-500-f2"
+      ]
+    },
+    "625 F1": {
+      "year": 1954,
+      "engine": "2.5 inline-4",
+      "notes": "2.5-litre version of the Lampredi four-cylinder design, used when the 1954 rules began.",
+      "aliases": [
+        "625"
+      ],
+      "sourceIds": [
+        "ferrari-625-f1"
+      ]
+    },
+    "553 F1": {
+      "year": 1954,
+      "engine": "2.5 inline-4",
+      "notes": "Short-stroke engine; journalists nicknamed its rounded bodywork the 'shark'.",
+      "sourceIds": [
+        "ferrari-553-f1"
+      ]
+    },
+    "555 F1": {
+      "year": 1955,
+      "engine": "2.5 inline-4",
+      "notes": "Evolution of the 553 with coil-spring front suspension; known as 'Supersqualo' (Super shark).",
+      "aliases": [
+        "555 Supersqualo"
+      ],
+      "sourceIds": [
+        "ferrari-555-f1"
+      ]
+    },
+    "D50": {
+      "year": 1956,
+      "engine": "2.5 V8 (90°)",
+      "notes": "Lancia design by Jano, taken over by Ferrari; side pontoons first held fuel, later only faired the wheels.",
+      "aliases": [
+        "Lancia-Ferrari D50",
+        "D50A"
+      ],
+      "sourceIds": [
+        "ferrari-d50"
+      ]
+    },
+    "801 F1": {
+      "year": 1957,
+      "engine": "2.5 V8 (90°)",
+      "notes": "Ferrari evolution of the D50 with a new tubular chassis and conventional bodywork; name means 8 cylinders, Formula 1.",
+      "aliases": [
+        "Lancia-Ferrari 801",
+        "801"
+      ],
+      "sourceIds": [
+        "ferrari-801-f1"
+      ]
+    },
+    "246 F1": {
+      "year": 1958,
+      "engine": "2.4 V6 (65°)",
+      "notes": "Dino V6 derived from the F2 project; name = 2.4 litres, 6 cylinders. Hawthorn's 1958 title car.",
+      "aliases": [
+        "Dino 246",
+        "D246"
+      ],
+      "sourceIds": [
+        "ferrari-246-f1"
+      ]
+    },
+    "Dino 156 F2": {
+      "year": 1958,
+      "engine": "1.5 V6 (65°)",
+      "notes": "Formula 2 car with the first Dino V6; raced in the F2 class of the 1958 German GP.",
+      "aliases": [
+        "D156 (F2)",
+        "156 F2"
+      ],
+      "sourceIds": [
+        "ferrari-dino-156-f2"
+      ]
+    },
+    "256 F1": {
+      "year": 1959,
+      "engine": "2.5 V6 (65°)",
+      "notes": "V6 enlarged to 2.5 litres; disc brakes adopted. Still front-engined as rear-engined British cars took over.",
+      "aliases": [
+        "Dino 256",
+        "Dino 246 (1959-60, per statsf1/Wikipedia)"
+      ],
+      "sourceIds": [
+        "ferrari-256-f1"
+      ]
+    },
+    "156 F1": {
+      "year": 1961,
+      "engine": "1.5 V6 (120°)",
+      "notes": "Rear-engined; 120° V6 lowered the centre of gravity; slender nose with two angled air intakes. Won the 1961 drivers' and constructors' titles.",
+      "sourceIds": [
+        "ferrari-156-f1"
+      ]
+    },
+    "156 F1-63": {
+      "year": 1963,
+      "engine": "1.5 V6 (120°), direct injection",
+      "notes": "Semi-monocoque chassis and Bosch direct fuel injection.",
+      "aliases": [
+        "156/63",
+        "156 Aero"
+      ],
+      "sourceIds": [
+        "ferrari-156-f1-63"
+      ]
+    },
+    "158 F1": {
+      "year": 1964,
+      "engine": "1.5 V8 (90°)",
+      "notes": "Brought the V8 back to Ferrari; Surtees' 1964 title car.",
+      "aliases": [
+        "158"
+      ],
+      "sourceIds": [
+        "ferrari-158-f1"
+      ]
+    },
+    "512 F1": {
+      "year": 1964,
+      "engine": "1.5 flat-12",
+      "notes": "Flat-12 engine; debuted at the 1964 US GP with Bandini.",
+      "aliases": [
+        "1512"
+      ],
+      "sourceIds": [
+        "ferrari-512-f1"
+      ]
+    },
+    "312 F1-66": {
+      "year": 1966,
+      "engine": "3.0 V12 (60°)",
+      "notes": "Ferrari's first car for the 3-litre rules.",
+      "aliases": [
+        "312 (1966)"
+      ],
+      "sourceIds": [
+        "ferrari-312-f1-66"
+      ]
+    },
+    "312 B3-74": {
+      "year": 1974,
+      "engine": "3.0 flat-12",
+      "notes": "Forghieri redesign with shorter wheelbase and side radiators; took 10 poles in 1974.",
+      "aliases": [
+        "312B3"
+      ],
+      "sourceIds": [
+        "ferrari-312-b3-74"
+      ]
+    },
+    "312 T": {
+      "year": 1975,
+      "engine": "3.0 flat-12",
+      "notes": "'T' = transverse gearbox; Lauda's 1975 title car.",
+      "aliases": [
+        "312T"
+      ],
+      "sourceIds": [
+        "ferrari-312-t"
+      ]
+    },
+    "312 T2": {
+      "year": 1976,
+      "engine": "3.0 flat-12",
+      "notes": "Periscope airbox banned; NACA cockpit-side intakes. Lauda's 1977 title car.",
+      "aliases": [
+        "312T2"
+      ],
+      "sourceIds": [
+        "ferrari-312-t2",
+        "ferrari-year-1977"
+      ]
+    },
+    "312 T3": {
+      "year": 1978,
+      "engine": "3.0 flat-12",
+      "notes": "Wide bodywork for Michelin radial tyres; used from the 1978 South African GP.",
+      "aliases": [
+        "312T3"
+      ],
+      "sourceIds": [
+        "ferrari-312-t3"
+      ]
+    },
+    "312 T4": {
+      "year": 1979,
+      "engine": "3.0 flat-12",
+      "notes": "Ground-effect evolution of the T series; Scheckter's 1979 title car.",
+      "aliases": [
+        "312T4"
+      ],
+      "sourceIds": [
+        "ferrari-312-t4"
+      ]
+    },
+    "312 T5": {
+      "year": 1980,
+      "engine": "3.0 flat-12",
+      "notes": "Last naturally aspirated flat-12 Ferrari F1 car.",
+      "aliases": [
+        "312T5"
+      ],
+      "sourceIds": [
+        "ferrari-312-t5"
+      ]
+    },
+    "126 CK": {
+      "year": 1981,
+      "engine": "1.5 V6 (120°), twin-turbo",
+      "notes": "First Ferrari turbo car to race; the Comprex '126 CX' version was dropped.",
+      "aliases": [
+        "126C",
+        "126CK"
+      ],
+      "sourceIds": [
+        "ferrari-126-ck"
+      ]
+    },
+    "126 C2": {
+      "year": 1982,
+      "engine": "1.5 V6 (120°), twin-turbo",
+      "notes": "Postlethwaite composite chassis, lighter and stiffer; won the 1982 constructors' title.",
+      "aliases": [
+        "126C2"
+      ],
+      "sourceIds": [
+        "ferrari-126-c2"
+      ]
+    },
+    "F1-89": {
+      "year": 1989,
+      "engine": "3.5 V12 (65°)",
+      "notes": "Barnard design; first F1 car with a semi-automatic, steering-wheel-paddle 7-speed gearbox.",
+      "aliases": [
+        "640"
+      ],
+      "sourceIds": [
+        "ferrari-f1-89"
+      ]
+    },
+    "F1-90": {
+      "year": 1990,
+      "engine": "3.5 V12 (65°)",
+      "notes": "Evolution of the 640; Prost's five wins included Ferrari's 100th F1 victory.",
+      "aliases": [
+        "641",
+        "641/2"
+      ],
+      "sourceIds": [
+        "ferrari-f1-90"
+      ]
+    },
+    "F1-91": {
+      "year": 1991,
+      "engine": "3.5 V12 (65°)",
+      "notes": "Project 642, replaced from the French GP by project 643 with a higher nose.",
+      "aliases": [
+        "642",
+        "643"
+      ],
+      "sourceIds": [
+        "ferrari-f1-91",
+        "ferrari-year-1991",
+        "wikipedia-ferrari-642",
+        "wikipedia-ferrari-643"
+      ]
+    },
+    "F310": {
+      "year": 1996,
+      "engine": "3.0 V10 (75°)",
+      "notes": "Ferrari's first V10 F1 car (3 litres, 10 cylinders).",
+      "sourceIds": [
+        "ferrari-f310"
+      ]
+    },
+    "F310 B": {
+      "year": 1997,
+      "engine": "3.0 V10 (75°)",
+      "notes": "Narrower, more conventional development of the F310; Barnard's last Ferrari.",
+      "aliases": [
+        "F310B"
+      ],
+      "sourceIds": [
+        "ferrari-f310-b"
+      ]
+    },
+    "F300": {
+      "year": 1998,
+      "engine": "3.0 V10",
+      "notes": "Byrne design for the narrow-track, grooved-tyre rules; Tipo 047 engine with an 80° vee (page text; its spec table says 90°).",
+      "sourceIds": [
+        "ferrari-f300"
+      ]
+    },
+    "F399": {
+      "year": 1999,
+      "engine": "3.0 V10 (80°)",
+      "notes": "Won the 1999 constructors' title.",
+      "sourceIds": [
+        "ferrari-f399"
+      ]
+    },
+    "F1-2000": {
+      "year": 2000,
+      "engine": "3.0 V10 (90°)",
+      "notes": "High nose; new 90° V10. Schumacher's first Ferrari title.",
+      "sourceIds": [
+        "ferrari-f1-2000"
+      ]
+    },
+    "F2001": {
+      "year": 2001,
+      "engine": "3.0 V10 (90°)",
+      "notes": "Nicknamed the 'anteater' for its nose dropping to the front wing; won both 2001 titles.",
+      "sourceIds": [
+        "ferrari-f2001"
+      ]
+    },
+    "F2002": {
+      "year": 2002,
+      "engine": "3.0 V10 (90°)",
+      "notes": "15 wins from 17 races; new 051 engine and fused-titanium gearbox.",
+      "sourceIds": [
+        "ferrari-f2002"
+      ]
+    },
+    "F2003-GA": {
+      "year": 2003,
+      "engine": "3.0 V10 (90°)",
+      "notes": "Named in honour of Gianni Agnelli.",
+      "aliases": [
+        "F2003 GA",
+        "F2003 - GA"
+      ],
+      "sourceIds": [
+        "ferrari-f2003-ga"
+      ]
+    },
+    "F2004": {
+      "year": 2004,
+      "engine": "3.0 V10 (90°)",
+      "notes": "Type 655 with the 053 engine; 15 wins from 18 races.",
+      "sourceIds": [
+        "ferrari-f2004"
+      ]
+    },
+    "F2004 M": {
+      "year": 2004,
+      "engine": "3.0 V10",
+      "notes": "F2004 modified for the 2005 rules, used for the first two races of 2005.",
+      "aliases": [
+        "F2004M"
+      ],
+      "sourceIds": [
+        "ferrari-f2005",
+        "ferrari-year-2005",
+        "wikipedia-ferrari-f2004"
+      ]
+    },
+    "F2005": {
+      "year": 2005,
+      "engine": "3.0 V10 (90°)",
+      "notes": "Type 656 with the 055 engine.",
+      "sourceIds": [
+        "ferrari-f2005"
+      ]
+    },
+    "248 F1": {
+      "year": 2006,
+      "engine": "2.4 V8 (90°)",
+      "notes": "Name = 2.4 litres, 8 cylinders; Ferrari's first V8 since the 1964 158 F1.",
+      "sourceIds": [
+        "ferrari-248-f1"
+      ]
+    },
+    "F2007": {
+      "year": 2007,
+      "engine": "2.4 V8 (90°)",
+      "notes": "Type 658; long wheelbase. Räikkönen's title car.",
+      "sourceIds": [
+        "ferrari-f2007",
+        "ferrari-year-2007"
+      ]
+    },
+    "F2008": {
+      "year": 2008,
+      "engine": "2.4 V8 (90°)",
+      "notes": "Type 659; first year of the standard control unit, so no traction control.",
+      "sourceIds": [
+        "ferrari-f2008"
+      ]
+    },
+    "F60": {
+      "year": 2009,
+      "engine": "2.4 V8 + KERS",
+      "notes": "Named for Ferrari's 60th F1 season; had KERS.",
+      "sourceIds": [
+        "ferrari-f60"
+      ]
+    },
+    "F10": {
+      "year": 2010,
+      "engine": "2.4 V8",
+      "notes": "Type 661; designed for the double diffuser and the refuelling ban.",
+      "sourceIds": [
+        "ferrari-f10"
+      ]
+    },
+    "Ferrari 150° Italia": {
+      "year": 2011,
+      "engine": "2.4 V8 + KERS",
+      "notes": "Named for the 150th anniversary of Italian unification.",
+      "aliases": [
+        "F150° Italia",
+        "F150th Italia"
+      ],
+      "sourceIds": [
+        "ferrari-ferrari-150-italia"
+      ]
+    },
+    "F2012": {
+      "year": 2012,
+      "engine": "2.4 V8",
+      "notes": "Pull-rod suspension front and rear; stepped nose.",
+      "sourceIds": [
+        "ferrari-f2012"
+      ]
+    },
+    "F138": {
+      "year": 2013,
+      "engine": "2.4 V8",
+      "notes": "Name = 2013 + V8; the V8's last season.",
+      "sourceIds": [
+        "ferrari-f138"
+      ]
+    },
+    "F14 T": {
+      "year": 2014,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "First turbo-hybrid Ferrari; 'T' for turbo.",
+      "aliases": [
+        "F14-T"
+      ],
+      "sourceIds": [
+        "ferrari-f14-t",
+        "ferrari-year-2014"
+      ]
+    },
+    "SF15-T": {
+      "year": 2015,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Lower nose under the 2015 rules.",
+      "aliases": [
+        "SF15 T"
+      ],
+      "sourceIds": [
+        "ferrari-sf15-t"
+      ]
+    },
+    "SF16-H": {
+      "year": 2016,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Short nose; pushrod front suspension replaced pull-rod.",
+      "sourceIds": [
+        "ferrari-sf16-h"
+      ]
+    },
+    "SF70H": {
+      "year": 2017,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Built for the wider, higher-downforce 2017 rules; the name marks Ferrari's 70th anniversary.",
+      "sourceIds": [
+        "ferrari-sf70h",
+        "ferrari-year-2017"
+      ]
+    },
+    "SF71H": {
+      "year": 2018,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Project 669; first Ferrari with the halo.",
+      "sourceIds": [
+        "ferrari-sf71h"
+      ]
+    },
+    "SF90": {
+      "year": 2019,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Raced in the Scuderia's 90th-anniversary season; narrower engine cover and 2019-rules front and rear wings.",
+      "sourceIds": [
+        "ferrari-sf90",
+        "ferrari-year-2019"
+      ]
+    },
+    "SF1000": {
+      "year": 2020,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Named for Ferrari's 1000th F1 Grand Prix (Mugello 2020).",
+      "sourceIds": [
+        "ferrari-sf1000",
+        "ferrari-year-2020"
+      ]
+    },
+    "SF21": {
+      "year": 2021,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Evolution of the SF1000 on a carried-over chassis; new engine.",
+      "sourceIds": [
+        "ferrari-sf21"
+      ]
+    },
+    "F1-75": {
+      "year": 2022,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "First ground-effect car of the 2022 rules; marks Ferrari's 75th anniversary.",
+      "sourceIds": [
+        "ferrari-f1-75"
+      ]
+    },
+    "SF-23": {
+      "year": 2023,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Evolution of the F1-75; kept its scalloped sidepods.",
+      "sourceIds": [
+        "ferrari-sf-23"
+      ]
+    },
+    "SF-24": {
+      "year": 2024,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "Third ground-effect car; yellow and white livery details.",
+      "sourceIds": [
+        "ferrari-sf-24"
+      ]
+    },
+    "SF-25": {
+      "year": 2025,
+      "engine": "1.6 V6 turbo hybrid",
+      "notes": "71st Ferrari F1 car; darker matte red with a white band. Hamilton's first Ferrari.",
+      "sourceIds": [
+        "ferrari-sf-25",
+        "formula1-sf-25-launch"
+      ]
+    }
+  }
+}

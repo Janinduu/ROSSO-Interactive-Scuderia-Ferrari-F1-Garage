@@ -2,7 +2,9 @@ import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ContactShadows } from "@react-three/drei";
 import { Vector3 } from "three";
-import Car from "./Car";
+import CarModel from "../3d/cars/CarModel";
+import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
+import type { ResolvedCar } from "../data/cars";
 import Corridor from "../3d/bays/Corridor";
 import CameraDirector from "../3d/camera/CameraDirector";
 import { useCameraStore } from "../3d/camera/cameraStore";
@@ -13,15 +15,15 @@ import type { Driver } from "../data/drivers";
 
 function Set({
   bay,
-  driver,
   high,
   landing,
   explore,
   reduced,
   onSelectDriver,
+  car,
 }: {
+  car: ResolvedCar;
   bay: number;
-  driver: Driver;
   high: boolean;
   landing: boolean;
   explore: boolean;
@@ -61,8 +63,9 @@ function Set({
       />
       <Corridor current={bay} onSelect={onSelectDriver} />
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
-      <group position={[x, 0.04, 0]}>
-        <Car era={driver.model} />
+      {/* Slightly larger than life so the car holds the plinth. */}
+      <group position={[x, 0.02, 0]} scale={CAR_SCALE}>
+        <CarModel key={car.id} spec={car.spec} />
       </group>
       <ContactShadows
         key={`${bay}-${high}`}
@@ -95,8 +98,14 @@ export default function Garage(props: {
   reduced: boolean;
   onFailure: () => void;
   onSelectDriver: (index: number) => void;
+  car: ResolvedCar;
 }) {
   const [ready, setReady] = useState(false);
+  const { available, anchorList } = useMemo(() => {
+    const anchors = anchorsFor(props.car.spec);
+    const available = parts.filter((p) => anchors[p.id]);
+    return { available, anchorList: available.map((p) => anchors[p.id]!) };
+  }, [props.car.spec]);
   const markers = useRef<(HTMLButtonElement | null)[]>([]);
   return (
     <div
@@ -134,6 +143,7 @@ export default function Garage(props: {
           markers={markers}
           bay={props.bay}
           visible={props.engineering}
+          anchors={anchorList}
         />
         <Suspense fallback={null}>
           <Set {...props} />
@@ -141,7 +151,7 @@ export default function Garage(props: {
       </Canvas>
       {props.engineering && (
         <div className="hotspot-layer">
-          {parts.map((p, i) => (
+          {available.map((p, i) => (
             <button
               key={p.id}
               ref={(el) => {
@@ -151,7 +161,7 @@ export default function Garage(props: {
               aria-label={`Inspect ${p.name}`}
               onClick={() => props.onPart(p.id)}
             >
-              {String(i + 1).padStart(2, "0")}
+              {String(parts.indexOf(p) + 1).padStart(2, "0")}
             </button>
           ))}
         </div>
@@ -176,24 +186,24 @@ function ProjectHotspots({
   markers,
   bay,
   visible,
+  anchors,
 }: {
   markers: { current: (HTMLButtonElement | null)[] };
   bay: number;
   visible: boolean;
+  anchors: [number, number, number][];
 }) {
   const { invalidate } = useThree();
   useEffect(() => {
     invalidate();
-  }, [visible, bay, invalidate]);
+  }, [visible, bay, anchors, invalidate]);
   const point = useMemo(() => new Vector3(), []);
   useFrame(({ camera, size }) => {
     if (!visible) return;
-    parts.forEach((p, i) => {
+    anchors.forEach((a, i) => {
       const marker = markers.current[i];
       if (!marker) return;
-      point
-        .set(p.position[0] + bayX(bay), p.position[1] + 0.04, p.position[2])
-        .project(camera);
+      point.set(a[0] + bayX(bay), a[1] + 0.02, a[2]).project(camera);
       marker.style.left = `${(point.x * 0.5 + 0.5) * size.width}px`;
       marker.style.top = `${(-point.y * 0.5 + 0.5) * size.height}px`;
       marker.style.visibility =
