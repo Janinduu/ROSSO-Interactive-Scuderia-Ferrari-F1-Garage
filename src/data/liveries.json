@@ -4443,253 +4443,211 @@
   "suits": {
     "ascari": {
       "year": 1952,
-      "base": "#8fb3dc",
-      "accents": [
-        {
-          "area": "legs",
-          "color": "#4d6f9e"
-        }
-      ],
+      "base": "#9ec3e6",
+      "accents": [],
       "style": "polo-and-trousers",
-      "notes": "No overalls: a short-sleeved collared polo shirt in his 'lucky' light blue, worn with blue trousers (the legs accent here is the trouser colour), plus his light blue helmet. Motor Sport's article on his personal effects names the 'lucky blue polo shirt' and 'lucky blue trousers', and Motor Sport also calls blue shirts his signature. A 1953 Zandvoort winner's photo (black and white) shows the collared, buttoned polo. No sponsor patches. The shirt shade is a best estimate. The trouser shade is less certain: sources only say 'blue', so it may have been lighter or greyer. Confidence: high for the garment and light blue shirt, medium for the trouser shade.",
+      "extras": [
+        "pale blue helmet #9ec3e6",
+        "goggles"
+      ],
+      "notes": "Ascari raced in his 'lucky' pale blue (azzurro) short-sleeved polo shirt and matching pale blue trousers, with a pale blue Herbert Johnson helmet. Ferrari says he chose the light blue later called Azzurro La Plata. Period photos (1952, Modena) show a light polo and light trousers.",
       "sources": [
         "https://www.motorsportmagazine.com/archive/article/february-2023/98/ascaris-crown-jewels/",
-        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/",
-        "https://commons.wikimedia.org/wiki/File:Grote_Prijs_Nederlandse_autoraces_Zandvoort._Winnaar_Askari_en_Z._K._M._de_Prins,_Bestanddeelnr_905-2687.jpg"
-      ]
+        "https://www.racefans.net/2024/04/23/ferrari-to-run-part-blue-anniversary-heritage-livery-at-miami-grand-prix/",
+        "https://commons.wikimedia.org/wiki/Category:Alberto_Ascari_in_1952"
+      ],
+      "confidence": "high"
     },
     "fangio": {
       "year": 1956,
-      "base": "#d3e2f1",
-      "accents": [
-        {
-          "area": "legs",
-          "color": "#bfa57a"
-        }
-      ],
+      "base": "#ecd66a",
+      "trousers": "#a9c6e0",
+      "accents": [],
       "style": "polo-and-trousers",
-      "notes": "No overalls. Fangio raced in Suixtil clothing (an Argentine brand): short-sleeved shirts or polos with slacks, and the Suixtil name was sometimes on the slacks. El Grafico colour covers from 1954-55 show a pale blue short-sleeved button shirt with khaki or tan trousers. Another shows white trousers with a brown shirt. The legs accent here is the trouser colour. I found no dated colour photo from the 1956 Lancia-Ferrari season, so pale blue/white shirt with khaki trousers is taken from his typical outfit of 1954-57. Velocetoday also says he wore light blue trousers with white or yellow Suixtil polos in 1949. No team patches. Confidence: medium-low on the exact 1956 colours. The garment type is certain.",
+      "extras": [
+        "goggles"
+      ],
+      "notes": "Fangio raced in Suixtil clothing: short-sleeved polo shirts (yellow, or white) with light blue trousers. This is documented for his European debut, and he kept the Suixtil polo-and-slacks look through 1957. The only 1956 Ferrari photos found (Monaco, Edward Quinn) are black and white, so the exact 1956 shirt colour is not confirmed. A white shirt (#f2f0e8) is an acceptable alternative.",
       "sources": [
         "https://velocetoday.com/fangio-suixtil-and-modena-1957/",
-        "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_-_El_Gr%C3%A1fico_1849.jpg",
-        "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_-_El_Gr%C3%A1fico_1875.jpg",
-        "https://www.edwardquinn.com/photos/miscellaneous/monaco-grand-prix/monaco-grand-prix-1956/?photo_id=23735"
-      ]
+        "https://www.edwardquinn.com/photos/details/?photo_id=23706"
+      ],
+      "confidence": "low"
     },
     "hawthorn": {
       "year": 1958,
-      "base": "#2f4a37",
+      "base": "#2f5a3a",
+      "trousers": "#eeeae0",
       "accents": [
         {
           "area": "collar",
-          "color": "#f4f4f0"
-        },
-        {
-          "area": "legs",
-          "color": "#ecebe3"
+          "color": "#ffffff"
         }
       ],
       "style": "polo-and-trousers",
-      "notes": "His race 'uniform' was a dark green, waist-length zip windcheater jacket (Baracuta-style cotton; forum discussion suggests a Baracuta G35) over a white shirt with his trademark spotted bow tie, which earned him the French nickname 'Le Papillon'. He wore white trousers or white overalls below. The base colour is the green jacket. The collar accent is the white shirt collar and bow tie area, and the legs accent is the white trousers. No sponsor patches. Ferrari.com, formula1.com and an eyewitness at the 1958 Nurburgring (quoted on the Autosport Nostalgia Forum) all agree on green jacket, white shirt and bow tie. The bow tie was usually dark with white spots. Confidence: high for the jacket, shirt and bow tie. Medium for the exact green and for the trousers.",
+      "extras": [
+        "bow tie (polka-dot, dark with white spots) #1b2a4e",
+        "white shirt #ffffff",
+        "green helmet"
+      ],
+      "notes": "Not a race suit. Hawthorn always raced in a green waist-length cotton windcheater jacket over a white shirt, with his trademark polka-dot bow tie. The French nicknamed him 'Le Papillon'. His lower half was light: white overalls or pale trousers. The base colour is the green jacket. The white shirt collar shows at the neck. The bow tie's exact colour varied.",
       "sources": [
-        "https://www.ferrari.com/en-EN/magazine/articles/mike-hawthorn-ferrari-first-british-champion",
-        "https://www.formula1.com/en/information/drivers-hall-of-fame-mike-hawthorn.1ZhSmpnVlO7Pb8peo23YVd",
-        "https://forums.autosport.com/topic/201735-mike-hawthorns-green-jacket/",
+        "https://www.24h-lemans.com/en/news/the-stunning-life-and-legacy-of-mike-hawthorn-58367",
         "https://revivalvintage.co.uk/blogs/news/mike-hawthorn-steal-his-style-for-goodwood-revival",
-        "https://www.24h-lemans.com/en/news/the-stunning-life-and-legacy-of-mike-hawthorn-58367"
-      ]
+        "https://www.edwardquinn.com/photos/details/?photo_id=23863",
+        "https://www.ferrari.com/en-EN/magazine/articles/mike-hawthorn-ferrari-first-british-champion"
+      ],
+      "confidence": "medium"
     },
     "phil_hill": {
       "year": 1961,
-      "base": "#a8c3de",
+      "base": "#a7c4dd",
       "accents": [],
       "style": "overalls",
-      "notes": "Light blue ('azzurro') cotton overalls: one piece with a stand collar, breast pocket and belt, and a small embroidered Dunlop logo on the chest and hip (Ferrari ran Dunlop tyres). Motor Sport and period discussion say Ferrari drivers and mechanics of the 1950s-60s wore this light blue, and GPHelmet's 1961 replica is pale blue Dunlop overalls. I found no dated 1961 colour photo to confirm this myself; the Commons photos from 1961 Zandvoort are black and white and show only the helmet. Confidence: medium.",
+      "extras": [
+        "white helmet",
+        "goggles"
+      ],
+      "notes": "Light cotton overalls in Ferrari's light blue/grey. A signed 1960s Scuderia Ferrari Sala Sport overall in light blue/grey exists. Ferrari says light blue overalls were the team tradition from Ascari to Surtees. The 1961 photos on Commons are black and white, so the colour is inferred, not confirmed.",
       "sources": [
-        "https://gphelmet.com/products/phil-hill-1961-racing-suit-replica-ferrari-f1",
-        "https://www.f1technical.net/forum/viewtopic.php?t=20168",
-        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/"
-      ]
+        "https://hofcollection.com/products/1960s-phil-hill-signed-original-scuderia-ferrari-mechanic-overalls",
+        "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/",
+        "https://commons.wikimedia.org/wiki/Category:Ferrari_156_of_Phil_Hill_in_1961"
+      ],
+      "confidence": "low"
     },
     "surtees": {
       "year": 1964,
-      "base": "#9fbcda",
+      "base": "#9fbfdc",
       "accents": [],
       "style": "overalls",
-      "notes": "Light blue cotton overalls, probably Les Leston, with an embroidered Dunlop logo above the breast pocket. Motor Sport names Surtees as one of the Ferrari drivers 'synonymous with blue overalls'. A Bonhams lot (Surtees's own Les Leston two-piece overalls, embroidered 'World Champion 1964', worn in 1965) confirms the maker and the Dunlop logos, but its text gives no colour. For the last two races (Watkins Glen and Mexico) the car ran in NART blue and white; there is no evidence he changed overalls for them. He often wore a dark quilted jacket over them in the paddock. Confidence: medium.",
+      "extras": [],
+      "notes": "Light blue (Azzurro La Plata) cotton overalls. Ferrari and Motor Sport both name Surtees as a Ferrari driver who raced in blue overalls. His championship-era Les Leston racewear was a two-piece jacket and trousers. The car was blue and white (NART) only at the last two races of 1964; the overalls stayed light blue.",
       "sources": [
+        "https://www.racefans.net/2024/04/23/ferrari-to-run-part-blue-anniversary-heritage-livery-at-miami-grand-prix/",
         "https://www.motorsportmagazine.com/articles/history/blue-yellow-and-green-when-ferrari-didnt-race-in-red/",
-        "https://cars.bonhams.com/auction/21906/lot/230/john-surtees-signed-world-champion-1964-les-leston-two-piece-race-overalls-offered-on-behalf-of-the-henry-surtees-foundation/",
-        "https://cars.bonhams.com/auction/24878/lot/60/a-pair-of-les-leston-dunlop-cotton-race-overalls-1960s-4/",
-        "https://www.f1technical.net/forum/viewtopic.php?t=20168"
-      ]
+        "https://cars.bonhams.com/auction/21906/lot/230/john-surtees-signed-world-champion-1964-les-leston-two-piece-race-overalls-offered-on-behalf-of-the-henry-surtees-foundation/"
+      ],
+      "confidence": "medium"
     },
     "lauda": {
       "year": 1975,
-      "base": "#d4302a",
+      "base": "#cc1f1a",
       "accents": [],
       "style": "overalls",
-      "notes": "Red fireproof Nomex overalls with a red collar. On the chest are yellow Ferrari shield and Agip patches, a Heuer shield, a Goodyear patch and a name patch. The colour photo from the 1975 Italian GP podium (title win) shows an all-red suit with yellow patches on the chest and no white panels. The 'Rush' costume, an OMP red suit labelled 'Niki Lauda Ferrari 1975', carries Ferrari, Goodyear, Heuer and Agip logos. Replicas of his 1976 suit add white shoulder and arm bands and a Parmalat patch; those belong to 1976, not 1975. Motor Sport says Lauda was also linked with Ferrari blue overalls, probably from 1974 or testing. Confidence: medium-high for red, medium for the patch list.",
+      "extras": [],
+      "notes": "Quilted red fireproof overalls. Ferrari's 2025 Monza tribute suits, 'styled on those worn by Lauda' in 1975, were predominantly red. The 1975 team jackets were navy blue with red and white stripes; that was team kit, not the race suit. Lauda wore light blue overalls in his first Ferrari year, 1974, so do not use 1974 photos. The 1976 and film-replica suits are red.",
       "sources": [
-        "https://commons.wikimedia.org/wiki/File:1975_Italian_GP_-_The_new_F1_Drivers%27_World_Champion_Niki_Lauda_on_the_podium.jpg",
-        "https://cars.bonhams.com/auction/21274/lot/242/a-niki-lauda-helmet-and-race-suit-costume-as-worn-in-the-film-rush/",
-        "https://gphelmet.com/products/copy-of-michael-schumacher-2012-racing-suit-team-mercedes-benz-f1"
-      ]
+        "https://scuderiafans.com/f1-official-charles-leclerc-and-lewis-hamilton-reveal-special-ferrari-race-suit-for-monza-photos/",
+        "https://www.racefans.net/2025/09/03/ferrari-reveals-special-monza-livery-paying-tribute-to-laudas-first-championship-win/",
+        "https://www.racefans.net/2024/04/23/ferrari-to-run-part-blue-anniversary-heritage-livery-at-miami-grand-prix/",
+        "https://commons.wikimedia.org/wiki/Category:Niki_Lauda_in_1975"
+      ],
+      "confidence": "medium"
     },
     "gilles_villeneuve": {
       "year": 1979,
-      "base": "#f3f3ef",
+      "base": "#f3f1ea",
       "accents": [],
       "style": "overalls",
-      "notes": "He wore two different suits in 1979. From the French GP at Dijon (the famous duel with Arnoux) to the end of the season, including Zandvoort, Monza and his Watkins Glen win, he raced in a new white/silver Simpson Nomex suit, which only came in white. Motorsport.com reports this, and Peter Windsor saw him in 'a brand new pair of silver Simpsons' at a 1979 Fiorano test. Before France (Kyalami and Long Beach wins, Zolder, Monaco) he wore a red suit (about #d0312d) with white stripes down the arms and legs; a Zolder 1979 parade photo shows it. Patches on both suits: a Marlboro World Championship Team chevron, Michelin, Champion, Agip, a Ferrari shield, Heuer, his personal sponsors Giacobazzi and Smeg in large letters on the chest, Labatt on the shoulder and back, and his embroidered name. Base colour is set to white for the Dijon-to-Watkins Glen part of the season. Confidence: medium on which suit to show, since it changed mid-season.",
+      "extras": [],
+      "notes": "From the 1979 French GP (Dijon) onward, Villeneuve wore an all-white Simpson Nomex suit, which only came in white. Earlier in 1979, like his 1978 suit, it was red with white detailing. White is the look of the Dijon duel and the Imola 1979 photo.",
       "sources": [
         "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
-        "https://peterwindsor.com/2012/01/08/a-ferrari-day/",
-        "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_and_Mario_Andretti_during_the_drivers_parade_at_the_1979_Belgian_Grand_Prix,_Zolder_(54701629880).jpg",
-        "https://hofcollection.com/products/1978-gilles-villeneuve-ferrari-used-suit",
-        "https://gphelmet.com/products/copy-of-fernando-alonso-2011-racing-suit-replica-equipo-ferrari-f1"
-      ]
+        "https://commons.wikimedia.org/wiki/File:Gilles_Villeneuve_imola_1979_(cropped).jpg",
+        "https://cars.bonhams.com/auction/23593/lot/157/a-set-of-gilles-villeneuve-1978-ferrari-overalls-by-lineasport/"
+      ],
+      "confidence": "high"
     },
     "scheckter": {
       "year": 1979,
-      "base": "#f2f2ee",
+      "base": "#f3f1ea",
       "accents": [],
       "style": "overalls",
-      "notes": "Not red. Early in 1979 he wore suits in the colours of his personal sponsor, Brooklyn chewing gum. Peter Windsor saw 'blue Brooklyn chewing gum overalls' at a spring test. The dated colour photo from the 1979 Monaco GP (a race he won) shows a white suit with a red diagonal band across the chest, 'Brooklyn Chewing Gum' in dark navy letters, a Ferrari shield and an Agip patch. From mid-season he switched to the same white Simpson Nomex suit as Villeneuve and wore it for the rest of the year, including the title-winning Monza race (Motorsport.com). The red chest band does not fit any allowed accent area, so accents are empty. Confidence: medium-high for white, medium for the exact details.",
+      "extras": [],
+      "notes": "White overalls all year. Early 1979, including his Belgium and Monaco wins, the suit was white with a red diagonal chest band and blue lettering in his personal sponsor's colours. After Villeneuve's switch he also wore the all-white Simpson Nomex suit, including at Monza where he won the title. Recorded here as all-white. For the Monaco version, add a red #d0202a chest stripe.",
       "sources": [
-        "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_during_the_1979_Monaco_Grand_Prix.jpg",
         "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
-        "https://peterwindsor.com/2012/01/08/a-ferrari-day/"
-      ]
+        "https://commons.wikimedia.org/wiki/File:Jody_Scheckter_during_the_1979_Monaco_Grand_Prix.jpg"
+      ],
+      "confidence": "high"
     },
     "mansell": {
       "year": 1989,
-      "base": "#c8202a",
+      "base": "#d40000",
       "accents": [],
       "style": "overalls",
-      "notes": "Plain red OMP Nomex overalls with fine white quilting stitch lines and white knitted cuffs. There are no white panels, and no Marlboro chevron panel on the suit itself. Chest patches: a white Marlboro chevron-logo patch with the name above it on the right breast, and Ferrari shield, Agip and Goodyear on the left. There are small Marlboro patches on both upper arms, Marlboro across the back, and a red belt with his name and Union Jack. A Bonhams lot of his 1989 OMP suit lists Marlboro, Goodyear and Agip patches. His 1990 Estoril suit, in red Nomex III, has the same layout. Confidence: high.",
+      "extras": [],
+      "notes": "Plain Ferrari-red fireproof overalls with a red collar, carrying only white and yellow sponsor patches. No large colour panels. Confirmed by the 1989 Belgian GP podium photo.",
       "sources": [
-        "https://cars.bonhams.com/auction/14018/lot/331/a-nigel-mansell-racing-suit/",
-        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/",
-        "https://gphelmet.com/products/nigel-mansell-1991-racing-suit-replica-ferrari-f1"
-      ]
+        "https://commons.wikimedia.org/wiki/File:Nigel_Mansell_1989_Belgian_GP_podium.jpg",
+        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/"
+      ],
+      "confidence": "high"
     },
     "prost": {
       "year": 1990,
-      "base": "#c8202a",
+      "base": "#d40000",
       "accents": [],
       "style": "overalls",
-      "notes": "The same style as Mansell's: plain red Nomex overalls with white quilting stitch lines, white cuffs and no white body panels. On the right chest is a white 'A. PROST / Marlboro World Championship Team' chevron patch; on the left are Ferrari shield, Agip and Goodyear patches. There are Marlboro patches on both upper arms and Marlboro on the back, and a red belt with 'Alain Prost' and the French flag. Mansell's 1990 race-worn OMP suit (Bonhams) confirms the red suit and the Ferrari, Marlboro, Agip and Goodyear patches; Prost's own layout comes from GPHelmet's replica. Confidence: high.",
+      "extras": [],
+      "notes": "Plain red OMP Nomex overalls, the same team issue as his teammate Mansell's 1990 suit (Bonhams: 'overalls by OMP in red'), with a name belt and only sponsor patches.",
       "sources": [
-        "https://gphelmet.com/products/alain-prost-1990-racing-suit-replica-ferrari-f1",
-        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/"
-      ]
+        "https://cars.bonhams.com/auction/20143/lot/99/nigel-mansells-1990-british-grand-prix-ferrari-race-overalls/",
+        "https://commons.wikimedia.org/wiki/Category:Alain_Prost_in_1990"
+      ],
+      "confidence": "high"
     },
     "michael_schumacher": {
       "year": 2004,
-      "base": "#d7141a",
-      "accents": [],
+      "base": "#d40000",
+      "accents": [
+        {
+          "area": "belt",
+          "color": "#ffffff"
+        }
+      ],
       "style": "overalls",
-      "notes": "Red OMP suit with a fine white quilting grid. Its main feature is a large white Marlboro chevron panel across the mid-chest. The Marlboro wordmark appeared where tobacco advertising was allowed; elsewhere the white chevron shape stayed with the wording removed. Upper chest: Vodafone, Shell, Bridgestone and a Ferrari shield with Marlboro. I did not confirm the sponsor logos on the arms. There is a white Marlboro box on the back, and his name and German flag at the waist. RM Sotheby's sold a 2004 Hungarian GP OMP suit, but the lot text gives no colours; the layout comes from a replica image. The white chest chevron does not fit any allowed accent area, so accents are empty. Confidence: medium-high.",
+      "extras": [
+        "gloves #d40000 (white palms)"
+      ],
+      "notes": "Red OMP suit. A white panel sits across the waist/belt area and white patches on the chest; otherwise the suit is red. Gloves are red with white palms. The white placement is taken from photos, not a written description.",
       "sources": [
         "https://rmsothebys.com/auctions/ml25/lots/n0001-2004-michael-schumacher-ferrari-formula-1-omp-racing-suit/",
-        "https://gphelmet.com/products/copy-of-michael-schumacher-2001-racing-suit-team-ferrari-f1"
-      ]
+        "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_win_2004.jpg",
+        "https://commons.wikimedia.org/wiki/Category:Michael_Schumacher_in_2004"
+      ],
+      "confidence": "medium"
     },
     "raikkonen": {
       "year": 2007,
-      "base": "#e2170f",
+      "base": "#d40000",
       "accents": [
         {
           "area": "sides",
-          "color": "#ffffff"
-        }
-      ],
-      "style": "overalls",
-      "notes": "Red Puma suit, with Puma supplying the team from 2007, and diamond quilting. White panels run down the sides of the torso and outer legs and along the underside of the arms, edged with thin white lines around the shoulders. On the chest: Shell and Bridgestone patches, a Ferrari shield with a thin green/white/red stripe running down from it, and small Marlboro logos on the chest and collar. Marlboro is on the upper back, and his name and Finnish flag are at the waist. The 2007 Brazil GP winner's photo shows the white underside of his sleeve when he waves. The design comes from a 2008 replica and a forum description ('the bit around Kimi's shoulder with the white outline'); the 2007 suit may differ slightly. Confidence: medium-high.",
-      "sources": [
-        "https://gphelmet.com/products/copy-of-kimi-raikkonen-2005-racing-suit-team-mc-laren-f1",
-        "https://forums.autosport.com/topic/103031-kimis-quick-change-alpinestars-vs-puma/",
-        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_won_2007_Brazil_GP.jpg"
-      ]
-    },
-    "alonso": {
-      "year": 2012,
-      "base": "#d9131b",
-      "accents": [
-        {
-          "area": "sides",
-          "color": "#ffffff"
-        }
-      ],
-      "style": "overalls",
-      "notes": "Red Puma suit with white panels down the torso sides and under the arms. A white band across the chest carries the red Santander logo. Upper chest: Shell and UPS patches (UPS may be a 2013 addition; not confirmed for 2012) and a white Scuderia Ferrari shield. A thin green/white/red stripe runs down the sides of the legs. Kaspersky is on the shoulders, with his name and Spanish flag at the waist. I did not find a dated 2012 suit photo or auction text; this is taken from 2011 and 2013 replicas of the same design family, so small details may differ. Confidence: medium.",
-      "sources": [
-        "https://gphelmet.com/products/copy-of-fernando-alonso-2010-mono-replica-equipo-ferrari-f1",
-        "https://gphelmet.com/products/copy-of-fernando-alonso-2011-mono-replica-equipo-ferrari-f1"
-      ]
-    },
-    "vettel": {
-      "year": 2018,
-      "base": "#e2231a",
-      "accents": [
-        {
-          "area": "sides",
-          "color": "#ffffff"
-        },
-        {
-          "area": "shoulders",
-          "color": "#ffffff"
-        }
-      ],
-      "style": "overalls",
-      "notes": "Ferrari red Puma suit with white panels on the sides of the torso and the inner arms. Thin white stripes run over the shoulders (Kaspersky shoulder band), and white/red/green pinstripes run down the legs. There is a yellow Prancing Horse shield on the left chest and top of the back, and Shell and UPS patches on the right chest. The arms carry Ray-Ban, Hublot, Weichai, Singha, Alfa Romeo, Pirelli and Lenovo. His name and German flag are at the waist, with a circled 5 on the left leg. The chest had no big sponsor panel, since Santander had left. Mission Winnow branding appeared only from the Japanese GP in October. HOF Collection sold a race-worn 2018 suit and describes it this way. Confidence: high.",
-      "sources": [
-        "https://hofcollection.com/products/2018-sebastian-vettel-scuderia-ferrari-race-worn-suit"
-      ]
-    },
-    "sainz": {
-      "year": 2022,
-      "base": "#d70f16",
-      "accents": [
-        {
-          "area": "shoulders",
-          "color": "#1b1b1b"
-        }
-      ],
-      "style": "overalls",
-      "notes": "Red Puma suit with a black shoulder yoke and black upper arms, and one thin white horizontal stripe across the chest. Shell and V-Power (VELAS) are on the right chest, Santander and Ceva on the left, with a yellow Ferrari shield at the collar. Snapdragon, AWS, Palantir and Richard Mille are on the arms. Other patches include #essereFerrari, and his name and flag are at the waist. In Sainz's own words at the 2024 suit launch, 'the black is gone', which confirms that 2022-23 suits used black. Confidence: high.",
-      "sources": [
-        "https://gphelmet.com/products/charles-leclerc-2022-racing-suit-ferrari-f1",
-        "https://scuderiafans.com/ferrari-officially-reveal-racing-suits-for-2024-f1-lots-of-white-on-back-of-undershirt/",
-        "https://commons.wikimedia.org/wiki/File:Carlos_Sainz_%26_Charles_Leclerc,_British_GP_2022_(52382794165).jpg"
-      ]
-    },
-    "leclerc": {
-      "year": 2024,
-      "base": "#e8261c",
-      "accents": [
-        {
-          "area": "shoulders",
           "color": "#ffffff"
         },
         {
           "area": "legs",
-          "color": "#ffcc00"
+          "color": "#ffffff"
         }
       ],
       "style": "overalls",
-      "notes": "An all-red Puma suit with no black. Paired thin white and Giallo Modena yellow pinstripes form a U-shaped yoke across the chest and shoulders, run down the outer arms and down the legs. Both accents are really the same white and yellow pair: the shoulders accent is white and the legs accent is yellow. Shell and VGW Play are on the right chest, Santander and Ceva on the left, with a yellow Ferrari shield. The arms carry DXC Technology, AWS, Richard Mille, Peroni and others. His name is in white with number 16 at the waist. Special one-off suits were worn in a few races: an azzurro-blue-themed suit for Miami and a black, carbon-fibre-themed suit for Monza. Confidence: high.",
+      "extras": [
+        "white cuffs",
+        "red boots"
+      ],
+      "notes": "Red suit with broad white stripes down the torso sides and outer legs, white cuffs and a small tricolour stripe on the chest. The Commons photo in the 2007 category may be from 2008, but the design was the same in both years.",
       "sources": [
-        "https://scuderiafans.com/ferrari-officially-reveal-racing-suits-for-2024-f1-lots-of-white-on-back-of-undershirt/",
-        "https://www.motorsport.com/f1/news/what-ferrari-and-pumas-latest-collection-could-tell-us-about-ferraris-2024-f1-livery/10574209/",
-        "https://gphelmet.com/products/charles-leclerc-2024-racing-suit-ferrari-f1",
-        "https://lustermagazine.com/2024/08/29/ferrari-unveils-sleek-black-race-suits-for-monza-grand-prix/"
-      ]
+        "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen.jpg",
+        "https://commons.wikimedia.org/wiki/File:2007_Bahrain_GP_podium.jpg",
+        "https://rmsothebys.com/en/auctions/ff07/ferrari---leggenda-e-passione/lots/l132/194096"
+      ],
+      "confidence": "medium"
     },
-    "hamilton": {
-      "year": 2025,
-      "base": "#c9161d",
+    "alonso": {
+      "year": 2012,
+      "base": "#d40000",
       "accents": [
         {
           "area": "shoulders",
@@ -4697,12 +4655,97 @@
         }
       ],
       "style": "overalls",
-      "notes": "Red Puma suit, a slightly deeper red than 2024, with 'sleek white lines' (Puma's words). A white line runs across the upper chest and shoulders, and there are white bands above the red knitted cuffs. Large blue-and-white HP roundels are on the chest and stomach; Shell and VGW Play are on the right chest, and UniCredit, Ceva, IBM and a yellow Ferrari shield are also on the chest. DXC Technology, Ray-Ban, AWS, Pirelli and Richard Mille are on the arms. His name and number 44 with a Union Jack are at the waist, and his name is on the back. One-off suits: all-white at Miami, a 1975 Lauda-style tribute at Monza and a special Las Vegas suit. Confidence: high for the season suit; exact line placement is from the replica image.",
+      "extras": [],
+      "notes": "Mostly red suit with a white panel across the upper back and shoulders. The white placement comes from the 2012 Italian GP podium photo; no written description was found.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:2012_Italian_GP_-_Champagne.jpg",
+        "https://rmsothebys.com/auctions/tc25/lots/n0265-2012-fernando-alonso-scuderia-ferrari-formula-1-racing-suit/"
+      ],
+      "confidence": "medium"
+    },
+    "vettel": {
+      "year": 2018,
+      "base": "#dc0000",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "extras": [],
+      "notes": "Puma suit, essentially all red, with thin white piping lines running over the shoulders and down the upper sleeves. No black panels.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2018_Vettel_after_Qualifying.jpg",
+        "https://commons.wikimedia.org/wiki/Category:Sebastian_Vettel_in_2018"
+      ],
+      "confidence": "medium"
+    },
+    "sainz": {
+      "year": 2022,
+      "base": "#dc0000",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#1a1a1a"
+        }
+      ],
+      "style": "overalls",
+      "extras": [],
+      "notes": "Red Puma suit with a black yoke across the shoulders, upper chest and upper sleeves, and a thin white line across the chest below the yoke. Sainz and Leclerc wore the same design (2022 Austrian GP podium photo).",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2022_Podium_Race_Winner_Leclerc.jpg",
+        "https://commons.wikimedia.org/wiki/Category:Charles_Leclerc_in_2022"
+      ],
+      "confidence": "high"
+    },
+    "leclerc": {
+      "year": 2024,
+      "base": "#dc0000",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#fff200"
+        },
+        {
+          "area": "sides",
+          "color": "#ffffff"
+        },
+        {
+          "area": "legs",
+          "color": "#fff200"
+        }
+      ],
+      "style": "overalls",
+      "extras": [],
+      "notes": "Red Puma suit with paired yellow and white pinstripes. They run over the shoulders and down the arms, curve across the chest and sides, and run down the outer legs. Taken from the 2024 Dutch GP podium photo. Exceptions: at Miami 2024 the drivers wore blue suits, and at Monaco 2023 he wore a one-off white suit.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Category:Charles_Leclerc_in_2024",
+        "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/"
+      ],
+      "confidence": "high"
+    },
+    "hamilton": {
+      "year": 2025,
+      "base": "#dc0000",
+      "accents": [
+        {
+          "area": "shoulders",
+          "color": "#ffffff"
+        },
+        {
+          "area": "sides",
+          "color": "#ffffff"
+        }
+      ],
+      "style": "overalls",
+      "extras": [],
+      "notes": "Puma describes a 'classic red base' with 'sleek white lines'. No verified close-up was found to fix exactly where the lines sit; shoulders and sides are assumed from the 2024 layout. At Monza 2025 there was a one-off Lauda-tribute suit (red, blue undersuit, white gloves).",
       "sources": [
         "https://about.puma.com/en/newsroom/product-and-brand-news/2025/27-01-2025-first-look-lewis-hamilton-and-charles-leclerc",
-        "https://www.motorsport.com/f1/news/ferrari-brings-back-all-white-race-suit-as-puma-create-new-f1-fashion/10717923/",
-        "https://gphelmet.com/products/lewis-hamilton-2025-racing-suit-ferrari-f1"
-      ]
+        "https://scuderiafans.com/f1-official-charles-leclerc-and-lewis-hamilton-reveal-special-ferrari-race-suit-for-monza-photos/"
+      ],
+      "confidence": "medium"
     }
   }
 }
