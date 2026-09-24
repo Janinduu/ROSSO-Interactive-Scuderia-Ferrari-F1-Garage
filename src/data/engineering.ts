@@ -1,0 +1,66 @@
+export const parts = [
+  {
+    id: "front-wing",
+    name: "Front wing",
+    category: "AERODYNAMICS",
+    position: [-2.35, 0.38, 0],
+    text: "The first surface to meet the air. Its inverted aerofoil sections generate downforce at the front axle, while shaping the flow around the front tyres and towards the rest of the car.",
+  },
+  {
+    id: "rear-wing",
+    name: "Rear wing",
+    category: "AERODYNAMICS",
+    position: [2.15, 1.35, 0],
+    text: "The rear wing pushes the rear tyres into the track for traction and stability. More wing angle generally brings more grip in corners, but also more drag on the straights. Systems vary by racing era.",
+  },
+  {
+    id: "tyres",
+    name: "Tyres",
+    category: "MECHANICAL GRIP",
+    position: [-1.55, 0.5, 1.03],
+    text: "The only contact with the track. Temperature, pressure and compound affect grip, wear and the driver’s confidence. This original model uses generic slick tyres rather than a licensed tyre design.",
+  },
+  {
+    id: "brakes",
+    name: "Brakes",
+    category: "DECELERATION",
+    position: [1.45, 0.5, 1.05],
+    text: "Carbon brake discs and pads convert the car’s kinetic energy into heat. Cooling ducts keep the system within its operating range. Too cold or too hot, and braking performance suffers.",
+  },
+  {
+    id: "power-unit",
+    name: "Power unit",
+    category: "PROPULSION",
+    position: [0.9, 1, 0],
+    text: "The engine sits behind the driver. Its architecture depends on the era: the Schumacher years included naturally aspirated V10s and, in 2006, a V8; modern cars combine combustion and electrical energy.",
+  },
+  {
+    id: "steering",
+    name: "Steering wheel",
+    category: "DRIVER INTERFACE",
+    position: [-0.5, 0.85, 0],
+    text: "A compact command centre. The driver steers while changing settings, communicating with the team and reading essential information. The available controls depend on the car and regulations.",
+  },
+  {
+    id: "floor",
+    name: "Floor",
+    category: "UNDERBODY AERODYNAMICS",
+    position: [0.1, 0.17, 1],
+    text: "Air travelling under the car can create a low-pressure region, pulling the car towards the track. Ride height and floor geometry are crucial; the exact designs have changed dramatically across eras.",
+  },
+  {
+    id: "diffuser",
+    name: "Diffuser",
+    category: "AIRFLOW EXPANSION",
+    position: [2.05, 0.28, 0.6],
+    text: "At the rear of the floor, the diffuser lets the underbody airflow expand and recover pressure. It works with the rest of the floor to generate downforce efficiently.",
+  },
+  {
+    id: "sidepods",
+    name: "Sidepods",
+    category: "COOLING & AIRFLOW",
+    position: [0.25, 0.55, 0.7],
+    text: "Sidepods package cooling systems and guide air towards the rear of the car. Their inlets, undercuts and outer surfaces balance cooling needs with aerodynamic performance.",
+  },
+] as const;
+export type PartId = (typeof parts)[number]["id"];

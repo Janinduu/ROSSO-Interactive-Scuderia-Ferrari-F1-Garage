@@ -1,0 +1,6518 @@
+{
+  "ascari": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/ascari/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1950,
+        "entries": 4,
+        "wins": 0,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "1950-05-21"
+          },
+          {
+            "name": "Swiss Grand Prix",
+            "position": "R",
+            "date": "1950-06-04"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "5",
+            "date": "1950-06-18"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1950-09-03"
+          }
+        ]
+      },
+      {
+        "year": 1951,
+        "entries": 7,
+        "wins": 2,
+        "podiums": 4,
+        "races": [
+          {
+            "name": "Swiss Grand Prix",
+            "position": "6",
+            "date": "1951-05-27"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "1951-06-17"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1951-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1951-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1951-07-29"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1951-09-16"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "1951-10-28"
+          }
+        ]
+      },
+      {
+        "year": 1952,
+        "entries": 7,
+        "wins": 6,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Indianapolis 500",
+            "position": "R",
+            "date": "1952-05-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1952-06-22"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1952-07-06"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1952-07-19"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1952-08-03"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "1",
+            "date": "1952-08-17"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1952-09-07"
+          }
+        ]
+      },
+      {
+        "year": 1953,
+        "entries": 8,
+        "wins": 5,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "1",
+            "date": "1953-01-18"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "1",
+            "date": "1953-06-07"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1953-06-21"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "4",
+            "date": "1953-07-05"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1953-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "8",
+            "date": "1953-08-02"
+          },
+          {
+            "name": "Swiss Grand Prix",
+            "position": "1",
+            "date": "1953-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1953-09-13"
+          }
+        ]
+      },
+      {
+        "year": 1954,
+        "entries": 1,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1954-09-05"
+          }
+        ]
+      }
+    ]
+  },
+  "fangio": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/fangio/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1956,
+        "entries": 7,
+        "wins": 3,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "1",
+            "date": "1956-01-22"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "1956-05-13"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1956-06-03"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "4",
+            "date": "1956-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1956-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1956-08-05"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1956-09-02"
+          }
+        ]
+      }
+    ]
+  },
+  "hawthorn": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/hawthorn/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1953,
+        "entries": 8,
+        "wins": 1,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "4",
+            "date": "1953-01-18"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "4",
+            "date": "1953-06-07"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "1953-06-21"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1953-07-05"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "5",
+            "date": "1953-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "1953-08-02"
+          },
+          {
+            "name": "Swiss Grand Prix",
+            "position": "3",
+            "date": "1953-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "1953-09-13"
+          }
+        ]
+      },
+      {
+        "year": 1954,
+        "entries": 8,
+        "wins": 1,
+        "podiums": 4,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "D",
+            "date": "1954-01-17"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1954-06-20"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1954-07-04"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1954-07-17"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "2",
+            "date": "1954-08-01"
+          },
+          {
+            "name": "Swiss Grand Prix",
+            "position": "R",
+            "date": "1954-08-22"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1954-09-05"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1954-10-24"
+          }
+        ]
+      },
+      {
+        "year": 1955,
+        "entries": 3,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Dutch Grand Prix",
+            "position": "7",
+            "date": "1955-06-19"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "6",
+            "date": "1955-07-16"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "10",
+            "date": "1955-09-11"
+          }
+        ]
+      },
+      {
+        "year": 1957,
+        "entries": 6,
+        "wins": 0,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1957-01-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1957-05-19"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "4",
+            "date": "1957-07-07"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "1957-07-20"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "2",
+            "date": "1957-08-04"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "6",
+            "date": "1957-09-08"
+          }
+        ]
+      },
+      {
+        "year": 1958,
+        "entries": 10,
+        "wins": 1,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "3",
+            "date": "1958-01-19"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1958-05-18"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "5",
+            "date": "1958-05-26"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "1958-06-15"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1958-07-06"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1958-07-19"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1958-08-03"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "2",
+            "date": "1958-08-24"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1958-09-07"
+          },
+          {
+            "name": "Moroccan Grand Prix",
+            "position": "2",
+            "date": "1958-10-19"
+          }
+        ]
+      }
+    ]
+  },
+  "phil_hill": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/phil_hill/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1958,
+        "entries": 3,
+        "wins": 0,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "German Grand Prix",
+            "position": "9",
+            "date": "1958-08-03"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "1958-09-07"
+          },
+          {
+            "name": "Moroccan Grand Prix",
+            "position": "3",
+            "date": "1958-10-19"
+          }
+        ]
+      },
+      {
+        "year": 1959,
+        "entries": 7,
+        "wins": 0,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "1959-05-10"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "6",
+            "date": "1959-05-31"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1959-07-05"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "1959-08-02"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "R",
+            "date": "1959-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1959-09-13"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1959-12-12"
+          }
+        ]
+      },
+      {
+        "year": 1960,
+        "entries": 8,
+        "wins": 1,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "8",
+            "date": "1960-02-07"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "1960-05-29"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "1960-06-06"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1960-06-19"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "12",
+            "date": "1960-07-03"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "7",
+            "date": "1960-07-16"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "R",
+            "date": "1960-08-14"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1960-09-04"
+          }
+        ]
+      },
+      {
+        "year": 1961,
+        "entries": 7,
+        "wins": 2,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "1961-05-14"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "2",
+            "date": "1961-05-22"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1961-06-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "9",
+            "date": "1961-07-02"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1961-07-15"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "1961-08-06"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1961-09-10"
+          }
+        ]
+      },
+      {
+        "year": 1962,
+        "entries": 6,
+        "wins": 0,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Dutch Grand Prix",
+            "position": "3",
+            "date": "1962-05-20"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "1962-06-03"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "1962-06-17"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1962-07-21"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1962-08-05"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "11",
+            "date": "1962-09-16"
+          }
+        ]
+      }
+    ]
+  },
+  "surtees": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/surtees/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1963,
+        "entries": 10,
+        "wins": 1,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "1963-05-26"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1963-06-09"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "3",
+            "date": "1963-06-23"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1963-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1963-07-20"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1963-08-04"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1963-09-08"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "9",
+            "date": "1963-10-06"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "D",
+            "date": "1963-10-27"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1963-12-28"
+          }
+        ]
+      },
+      {
+        "year": 1964,
+        "entries": 10,
+        "wins": 2,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1964-05-10"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "2",
+            "date": "1964-05-24"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1964-06-14"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1964-06-28"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "1964-07-11"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1964-08-02"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "1964-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1964-09-06"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "1964-10-04"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "2",
+            "date": "1964-10-25"
+          }
+        ]
+      },
+      {
+        "year": 1965,
+        "entries": 8,
+        "wins": 0,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "South African Grand Prix",
+            "position": "2",
+            "date": "1965-01-01"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "1965-05-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1965-06-13"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "3",
+            "date": "1965-06-27"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "1965-07-10"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "7",
+            "date": "1965-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1965-08-01"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1965-09-12"
+          }
+        ]
+      },
+      {
+        "year": 1966,
+        "entries": 2,
+        "wins": 1,
+        "podiums": 1,
+        "races": [
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1966-05-22"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1966-06-12"
+          }
+        ]
+      }
+    ]
+  },
+  "lauda": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/lauda/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1974,
+        "entries": 15,
+        "wins": 2,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "2",
+            "date": "1974-01-13"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1974-01-27"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "16",
+            "date": "1974-03-30"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1974-04-28"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "1974-05-12"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1974-05-26"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "R",
+            "date": "1974-06-09"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "1",
+            "date": "1974-06-23"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1974-07-07"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "5",
+            "date": "1974-07-20"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1974-08-04"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "1974-08-18"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1974-09-08"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "1974-09-22"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1974-10-06"
+          }
+        ]
+      },
+      {
+        "year": 1975,
+        "entries": 14,
+        "wins": 5,
+        "podiums": 8,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "6",
+            "date": "1975-01-12"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "5",
+            "date": "1975-01-26"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "5",
+            "date": "1975-03-01"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "1975-04-27"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1975-05-11"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1975-05-25"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "1",
+            "date": "1975-06-08"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "2",
+            "date": "1975-06-22"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1975-07-06"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "8",
+            "date": "1975-07-19"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "1975-08-03"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "6",
+            "date": "1975-08-17"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "1975-09-07"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "1975-10-05"
+          }
+        ]
+      },
+      {
+        "year": 1976,
+        "entries": 14,
+        "wins": 5,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "1976-01-25"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "1",
+            "date": "1976-03-06"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "2",
+            "date": "1976-03-28"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "1976-05-02"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1976-05-16"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1976-05-30"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "3",
+            "date": "1976-06-13"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1976-07-04"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1976-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1976-08-01"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "1976-09-12"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "8",
+            "date": "1976-10-03"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "1976-10-10"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "W",
+            "date": "1976-10-24"
+          }
+        ]
+      },
+      {
+        "year": 1977,
+        "entries": 15,
+        "wins": 3,
+        "podiums": 10,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1977-01-09"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "1977-01-23"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "1",
+            "date": "1977-03-05"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "2",
+            "date": "1977-04-03"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "1977-05-08"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "1977-05-22"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "1977-06-05"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "R",
+            "date": "1977-06-19"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "5",
+            "date": "1977-07-03"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1977-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "1977-07-31"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "1977-08-14"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "1",
+            "date": "1977-08-28"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1977-09-11"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "1977-10-02"
+          }
+        ]
+      }
+    ]
+  },
+  "scheckter": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/scheckter/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1979,
+        "entries": 15,
+        "wins": 3,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1979-01-21"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "6",
+            "date": "1979-02-04"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "2",
+            "date": "1979-03-03"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "2",
+            "date": "1979-04-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "1979-04-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1979-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1979-05-27"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "7",
+            "date": "1979-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "5",
+            "date": "1979-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "4",
+            "date": "1979-07-29"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "4",
+            "date": "1979-08-12"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "2",
+            "date": "1979-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1979-09-09"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "4",
+            "date": "1979-09-30"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1979-10-07"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "entries": 13,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1980-01-13"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1980-01-27"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1980-03-01"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "5",
+            "date": "1980-03-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "8",
+            "date": "1980-05-04"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1980-05-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "12",
+            "date": "1980-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "10",
+            "date": "1980-07-13"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "13",
+            "date": "1980-08-10"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "13",
+            "date": "1980-08-17"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "9",
+            "date": "1980-08-31"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "8",
+            "date": "1980-09-14"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "11",
+            "date": "1980-10-05"
+          }
+        ]
+      }
+    ]
+  },
+  "mansell": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/mansell/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1989,
+        "entries": 15,
+        "wins": 2,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "1989-03-26"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "R",
+            "date": "1989-04-23"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1989-05-07"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "R",
+            "date": "1989-05-28"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1989-06-04"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "D",
+            "date": "1989-06-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1989-07-09"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "1989-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "1989-07-30"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "1989-08-13"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "1989-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1989-09-10"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "D",
+            "date": "1989-09-24"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1989-10-22"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "1989-11-05"
+          }
+        ]
+      },
+      {
+        "year": 1990,
+        "entries": 16,
+        "wins": 1,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1990-03-11"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "1990-03-25"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "R",
+            "date": "1990-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1990-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "3",
+            "date": "1990-06-10"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "2",
+            "date": "1990-06-24"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "18",
+            "date": "1990-07-08"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1990-07-15"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1990-07-29"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "17",
+            "date": "1990-08-12"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1990-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "1990-09-09"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "1",
+            "date": "1990-09-23"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "1990-09-30"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1990-10-21"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "2",
+            "date": "1990-11-04"
+          }
+        ]
+      }
+    ]
+  },
+  "prost": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/prost/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1990,
+        "entries": 16,
+        "wins": 5,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1990-03-11"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "1990-03-25"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "4",
+            "date": "1990-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1990-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "1990-06-10"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "1",
+            "date": "1990-06-24"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1990-07-08"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1990-07-15"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "4",
+            "date": "1990-07-29"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "R",
+            "date": "1990-08-12"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "1990-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1990-09-09"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "3",
+            "date": "1990-09-23"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1990-09-30"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1990-10-21"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "3",
+            "date": "1990-11-04"
+          }
+        ]
+      },
+      {
+        "year": 1991,
+        "entries": 15,
+        "wins": 0,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "1991-03-10"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "1991-03-24"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "W",
+            "date": "1991-04-28"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "5",
+            "date": "1991-05-12"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "1991-06-02"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "R",
+            "date": "1991-06-16"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1991-07-07"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "1991-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "1991-07-28"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "R",
+            "date": "1991-08-11"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1991-08-25"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "1991-09-08"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "R",
+            "date": "1991-09-22"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "1991-09-29"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "1991-10-20"
+          }
+        ]
+      }
+    ]
+  },
+  "michael_schumacher": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/michael_schumacher/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1996,
+        "entries": 16,
+        "wins": 3,
+        "podiums": 8,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "1996-03-10"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "1996-03-31"
+          },
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1996-04-07"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "2",
+            "date": "1996-04-28"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "1996-05-05"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1996-05-19"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1996-06-02"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "1996-06-16"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "W",
+            "date": "1996-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1996-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "4",
+            "date": "1996-07-28"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "9",
+            "date": "1996-08-11"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1996-08-25"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1996-09-08"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "3",
+            "date": "1996-09-22"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "2",
+            "date": "1996-10-13"
+          }
+        ]
+      },
+      {
+        "year": 1997,
+        "entries": 17,
+        "wins": 5,
+        "podiums": 8,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "2",
+            "date": "1997-03-09"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "5",
+            "date": "1997-03-30"
+          },
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1997-04-13"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "1997-04-27"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1997-05-11"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "1997-05-25"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "1997-06-15"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1997-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1997-07-13"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "2",
+            "date": "1997-07-27"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "1997-08-10"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "1997-08-24"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "6",
+            "date": "1997-09-07"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "6",
+            "date": "1997-09-21"
+          },
+          {
+            "name": "Luxembourg Grand Prix",
+            "position": "R",
+            "date": "1997-09-28"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "1",
+            "date": "1997-10-12"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "R",
+            "date": "1997-10-26"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "entries": 16,
+        "wins": 6,
+        "podiums": 11,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "1998-03-08"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "1998-03-29"
+          },
+          {
+            "name": "Argentine Grand Prix",
+            "position": "1",
+            "date": "1998-04-12"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "1998-04-26"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "3",
+            "date": "1998-05-10"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "10",
+            "date": "1998-05-24"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "1998-06-07"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "1998-06-28"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "1998-07-12"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "1998-07-26"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "5",
+            "date": "1998-08-02"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "1998-08-16"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "1998-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "1998-09-13"
+          },
+          {
+            "name": "Luxembourg Grand Prix",
+            "position": "2",
+            "date": "1998-09-27"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1998-11-01"
+          }
+        ]
+      },
+      {
+        "year": 1999,
+        "entries": 10,
+        "wins": 2,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "8",
+            "date": "1999-03-07"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "2",
+            "date": "1999-04-11"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "1999-05-02"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1999-05-16"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "3",
+            "date": "1999-05-30"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "1999-06-13"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "5",
+            "date": "1999-06-27"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1999-07-11"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "2",
+            "date": "1999-10-17"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "2",
+            "date": "1999-10-31"
+          }
+        ]
+      },
+      {
+        "year": 2000,
+        "entries": 17,
+        "wins": 9,
+        "podiums": 12,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2000-03-12"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "2000-03-26"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "2000-04-09"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2000-04-23"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2000-05-07"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "1",
+            "date": "2000-05-21"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "2000-06-04"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "2000-06-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "2000-07-02"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "2000-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "2000-07-30"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2000-08-13"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "2000-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2000-09-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2000-09-24"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "1",
+            "date": "2000-10-08"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2000-10-22"
+          }
+        ]
+      },
+      {
+        "year": 2001,
+        "entries": 17,
+        "wins": 9,
+        "podiums": 14,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2001-03-04"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2001-03-18"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "2",
+            "date": "2001-04-01"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "R",
+            "date": "2001-04-15"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2001-04-29"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2001-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "2001-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2001-06-10"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "1",
+            "date": "2001-06-24"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "2001-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "2001-07-15"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "2001-07-29"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "2001-08-19"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2001-09-02"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2001-09-16"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "2001-09-30"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "1",
+            "date": "2001-10-14"
+          }
+        ]
+      },
+      {
+        "year": 2002,
+        "entries": 17,
+        "wins": 11,
+        "podiums": 17,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2002-03-03"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "3",
+            "date": "2002-03-17"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "2002-03-31"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "2002-04-14"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2002-04-28"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "1",
+            "date": "2002-05-12"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2002-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "2002-06-09"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "2",
+            "date": "2002-06-23"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2002-07-07"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "2002-07-21"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "2002-07-28"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2002-08-18"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2002-09-01"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2002-09-15"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "2002-09-29"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "1",
+            "date": "2002-10-13"
+          }
+        ]
+      },
+      {
+        "year": 2003,
+        "entries": 16,
+        "wins": 6,
+        "podiums": 8,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2003-03-09"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "6",
+            "date": "2003-03-23"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "2003-04-06"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "2003-04-20"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2003-05-04"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "1",
+            "date": "2003-05-18"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "2003-06-01"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "2003-06-15"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "5",
+            "date": "2003-06-29"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "3",
+            "date": "2003-07-06"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "4",
+            "date": "2003-07-20"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "7",
+            "date": "2003-08-03"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "8",
+            "date": "2003-08-24"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2003-09-14"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2003-09-28"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "8",
+            "date": "2003-10-12"
+          }
+        ]
+      },
+      {
+        "year": 2004,
+        "entries": 18,
+        "wins": 13,
+        "podiums": 15,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2004-03-07"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2004-03-21"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "1",
+            "date": "2004-04-04"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "2004-04-25"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2004-05-09"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "2004-05-23"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "1",
+            "date": "2004-05-30"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "2004-06-13"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2004-06-20"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "2004-07-04"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2004-07-11"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "2004-07-25"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "2004-08-15"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "2004-08-29"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2004-09-12"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "12",
+            "date": "2004-09-26"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "1",
+            "date": "2004-10-10"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "7",
+            "date": "2004-10-24"
+          }
+        ]
+      },
+      {
+        "year": 2005,
+        "entries": 19,
+        "wins": 1,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2005-03-06"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "7",
+            "date": "2005-03-20"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "R",
+            "date": "2005-04-03"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "2005-04-24"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2005-05-08"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "7",
+            "date": "2005-05-22"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "5",
+            "date": "2005-05-29"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2005-06-12"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2005-06-19"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "3",
+            "date": "2005-07-03"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "6",
+            "date": "2005-07-10"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "5",
+            "date": "2005-07-24"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2005-07-31"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "R",
+            "date": "2005-08-21"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "10",
+            "date": "2005-09-04"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "2005-09-11"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "2005-09-25"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "7",
+            "date": "2005-10-09"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "R",
+            "date": "2005-10-16"
+          }
+        ]
+      },
+      {
+        "year": 2006,
+        "entries": 18,
+        "wins": 7,
+        "podiums": 12,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "2",
+            "date": "2006-03-12"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "6",
+            "date": "2006-03-19"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2006-04-02"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "1",
+            "date": "2006-04-23"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "1",
+            "date": "2006-05-07"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "2006-05-14"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "5",
+            "date": "2006-05-28"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "2006-06-11"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2006-06-25"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2006-07-02"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "2006-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "2006-07-30"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "8",
+            "date": "2006-08-06"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "3",
+            "date": "2006-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2006-09-10"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "1",
+            "date": "2006-10-01"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "2006-10-08"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "2006-10-22"
+          }
+        ]
+      }
+    ]
+  },
+  "raikkonen": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/raikkonen/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2007,
+        "entries": 17,
+        "wins": 6,
+        "podiums": 12,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2007-03-18"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "3",
+            "date": "2007-04-08"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "3",
+            "date": "2007-04-15"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2007-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "8",
+            "date": "2007-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2007-06-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2007-06-17"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "1",
+            "date": "2007-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2007-07-08"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "R",
+            "date": "2007-07-22"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2007-08-05"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "2",
+            "date": "2007-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2007-09-09"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2007-09-16"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2007-09-30"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "1",
+            "date": "2007-10-07"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "2007-10-21"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "entries": 18,
+        "wins": 2,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "8",
+            "date": "2008-03-16"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2008-03-23"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "2",
+            "date": "2008-04-06"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2008-04-27"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "3",
+            "date": "2008-05-11"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "9",
+            "date": "2008-05-25"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "2008-06-08"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "2008-06-22"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "4",
+            "date": "2008-07-06"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "6",
+            "date": "2008-07-20"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "3",
+            "date": "2008-08-03"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "R",
+            "date": "2008-08-24"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "18",
+            "date": "2008-09-07"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "9",
+            "date": "2008-09-14"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "15",
+            "date": "2008-09-28"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2008-10-12"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2008-10-19"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2008-11-02"
+          }
+        ]
+      },
+      {
+        "year": 2009,
+        "entries": 17,
+        "wins": 1,
+        "podiums": 5,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "15",
+            "date": "2009-03-29"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "14",
+            "date": "2009-04-05"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "10",
+            "date": "2009-04-19"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "6",
+            "date": "2009-04-26"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2009-05-10"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "2009-05-24"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "9",
+            "date": "2009-06-07"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "8",
+            "date": "2009-06-21"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "2009-07-12"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2009-07-26"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "3",
+            "date": "2009-08-23"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2009-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2009-09-13"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "10",
+            "date": "2009-09-27"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2009-10-04"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "6",
+            "date": "2009-10-18"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "12",
+            "date": "2009-11-01"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "entries": 19,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "7",
+            "date": "2014-03-16"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "12",
+            "date": "2014-03-30"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "10",
+            "date": "2014-04-06"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "8",
+            "date": "2014-04-20"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "7",
+            "date": "2014-05-11"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "12",
+            "date": "2014-05-25"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "10",
+            "date": "2014-06-08"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "10",
+            "date": "2014-06-22"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "2014-07-06"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "11",
+            "date": "2014-07-20"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "6",
+            "date": "2014-07-27"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "2014-08-24"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "9",
+            "date": "2014-09-07"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "8",
+            "date": "2014-09-21"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "12",
+            "date": "2014-10-05"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "9",
+            "date": "2014-10-12"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "13",
+            "date": "2014-11-02"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "7",
+            "date": "2014-11-09"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "10",
+            "date": "2014-11-23"
+          }
+        ]
+      },
+      {
+        "year": 2015,
+        "entries": 19,
+        "wins": 0,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2015-03-15"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "4",
+            "date": "2015-03-29"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "4",
+            "date": "2015-04-12"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "2",
+            "date": "2015-04-19"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2015-05-10"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "6",
+            "date": "2015-05-24"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "4",
+            "date": "2015-06-07"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "2015-06-21"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "8",
+            "date": "2015-07-05"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "R",
+            "date": "2015-07-26"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "7",
+            "date": "2015-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "5",
+            "date": "2015-09-06"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "3",
+            "date": "2015-09-20"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2015-09-27"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "8",
+            "date": "2015-10-11"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "2015-10-25"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "R",
+            "date": "2015-11-01"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "2015-11-15"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2015-11-29"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "entries": 21,
+        "wins": 0,
+        "podiums": 4,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2016-03-20"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "2",
+            "date": "2016-04-03"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "5",
+            "date": "2016-04-17"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "3",
+            "date": "2016-05-01"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "2016-05-15"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "2016-05-29"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "6",
+            "date": "2016-06-12"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "4",
+            "date": "2016-06-19"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "2016-07-03"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "5",
+            "date": "2016-07-10"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "6",
+            "date": "2016-07-24"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "6",
+            "date": "2016-07-31"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "9",
+            "date": "2016-08-28"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2016-09-04"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "4",
+            "date": "2016-09-18"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "4",
+            "date": "2016-10-02"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "5",
+            "date": "2016-10-09"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "2016-10-23"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "6",
+            "date": "2016-10-30"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "2016-11-13"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "6",
+            "date": "2016-11-27"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "entries": 20,
+        "wins": 0,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2017-03-26"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "5",
+            "date": "2017-04-09"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "4",
+            "date": "2017-04-16"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "3",
+            "date": "2017-04-30"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2017-05-14"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2017-05-28"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "7",
+            "date": "2017-06-11"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "14",
+            "date": "2017-06-25"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "5",
+            "date": "2017-07-09"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2017-07-16"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2017-07-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "2017-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "5",
+            "date": "2017-09-03"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "R",
+            "date": "2017-09-17"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "R",
+            "date": "2017-10-01"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "5",
+            "date": "2017-10-08"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2017-10-22"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "3",
+            "date": "2017-10-29"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2017-11-12"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "4",
+            "date": "2017-11-26"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "entries": 21,
+        "wins": 1,
+        "podiums": 12,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "3",
+            "date": "2018-03-25"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "R",
+            "date": "2018-04-08"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2018-04-15"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "2",
+            "date": "2018-04-29"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2018-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "2018-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "6",
+            "date": "2018-06-10"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "3",
+            "date": "2018-06-24"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2018-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2018-07-08"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "3",
+            "date": "2018-07-22"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "3",
+            "date": "2018-07-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "2018-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2018-09-02"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "5",
+            "date": "2018-09-16"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "4",
+            "date": "2018-09-30"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "5",
+            "date": "2018-10-07"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2018-10-21"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "3",
+            "date": "2018-10-28"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2018-11-11"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "R",
+            "date": "2018-11-25"
+          }
+        ]
+      }
+    ]
+  },
+  "alonso": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/alonso/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2010,
+        "entries": 19,
+        "wins": 5,
+        "podiums": 10,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "1",
+            "date": "2010-03-14"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2010-03-28"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "13",
+            "date": "2010-04-04"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "4",
+            "date": "2010-04-18"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "2010-05-09"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "6",
+            "date": "2010-05-16"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "8",
+            "date": "2010-05-30"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "3",
+            "date": "2010-06-13"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "8",
+            "date": "2010-06-27"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "14",
+            "date": "2010-07-11"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "2010-07-25"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2010-08-01"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "2010-08-29"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2010-09-12"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "1",
+            "date": "2010-09-26"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2010-10-10"
+          },
+          {
+            "name": "Korean Grand Prix",
+            "position": "1",
+            "date": "2010-10-24"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2010-11-07"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "7",
+            "date": "2010-11-14"
+          }
+        ]
+      },
+      {
+        "year": 2011,
+        "entries": 19,
+        "wins": 1,
+        "podiums": 10,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2011-03-27"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "6",
+            "date": "2011-04-10"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "7",
+            "date": "2011-04-17"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "3",
+            "date": "2011-05-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2011-05-22"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2011-05-29"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "2011-06-12"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "2",
+            "date": "2011-06-26"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2011-07-10"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "2",
+            "date": "2011-07-24"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "3",
+            "date": "2011-07-31"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "2011-08-28"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2011-09-11"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "4",
+            "date": "2011-09-25"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "2",
+            "date": "2011-10-09"
+          },
+          {
+            "name": "Korean Grand Prix",
+            "position": "5",
+            "date": "2011-10-16"
+          },
+          {
+            "name": "Indian Grand Prix",
+            "position": "3",
+            "date": "2011-10-30"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2011-11-13"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "4",
+            "date": "2011-11-27"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "entries": 20,
+        "wins": 3,
+        "podiums": 13,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "5",
+            "date": "2012-03-18"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2012-03-25"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "9",
+            "date": "2012-04-15"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "7",
+            "date": "2012-04-22"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "2012-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "2012-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2012-06-10"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "1",
+            "date": "2012-06-24"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "2012-07-08"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "1",
+            "date": "2012-07-22"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "5",
+            "date": "2012-07-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "2012-09-02"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2012-09-09"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "3",
+            "date": "2012-09-23"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "2012-10-07"
+          },
+          {
+            "name": "Korean Grand Prix",
+            "position": "3",
+            "date": "2012-10-14"
+          },
+          {
+            "name": "Indian Grand Prix",
+            "position": "2",
+            "date": "2012-10-28"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2012-11-04"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2012-11-18"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "2",
+            "date": "2012-11-25"
+          }
+        ]
+      },
+      {
+        "year": 2013,
+        "entries": 19,
+        "wins": 2,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "2",
+            "date": "2013-03-17"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "R",
+            "date": "2013-03-24"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "1",
+            "date": "2013-04-14"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "8",
+            "date": "2013-04-21"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "2013-05-12"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "7",
+            "date": "2013-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2013-06-09"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2013-06-30"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "4",
+            "date": "2013-07-07"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "5",
+            "date": "2013-07-28"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "2013-08-25"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2013-09-08"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "2",
+            "date": "2013-09-22"
+          },
+          {
+            "name": "Korean Grand Prix",
+            "position": "6",
+            "date": "2013-10-06"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2013-10-13"
+          },
+          {
+            "name": "Indian Grand Prix",
+            "position": "11",
+            "date": "2013-10-27"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "5",
+            "date": "2013-11-03"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "5",
+            "date": "2013-11-17"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2013-11-24"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "entries": 19,
+        "wins": 0,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2014-03-16"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "4",
+            "date": "2014-03-30"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "9",
+            "date": "2014-04-06"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2014-04-20"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "6",
+            "date": "2014-05-11"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "2014-05-25"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "6",
+            "date": "2014-06-08"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "5",
+            "date": "2014-06-22"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "6",
+            "date": "2014-07-06"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "5",
+            "date": "2014-07-20"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2014-07-27"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "7",
+            "date": "2014-08-24"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "2014-09-07"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "4",
+            "date": "2014-09-21"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "2014-10-05"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "6",
+            "date": "2014-10-12"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "6",
+            "date": "2014-11-02"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "6",
+            "date": "2014-11-09"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "9",
+            "date": "2014-11-23"
+          }
+        ]
+      }
+    ]
+  },
+  "vettel": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/vettel/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2015,
+        "entries": 19,
+        "wins": 3,
+        "podiums": 13,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "3",
+            "date": "2015-03-15"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "1",
+            "date": "2015-03-29"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2015-04-12"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "5",
+            "date": "2015-04-19"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "3",
+            "date": "2015-05-10"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2015-05-24"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2015-06-07"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "4",
+            "date": "2015-06-21"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2015-07-05"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "2015-07-26"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "12",
+            "date": "2015-08-23"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2015-09-06"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "1",
+            "date": "2015-09-20"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2015-09-27"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "2",
+            "date": "2015-10-11"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2015-10-25"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "R",
+            "date": "2015-11-01"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "3",
+            "date": "2015-11-15"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "4",
+            "date": "2015-11-29"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "entries": 21,
+        "wins": 0,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "3",
+            "date": "2016-03-20"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "W",
+            "date": "2016-04-03"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "2",
+            "date": "2016-04-17"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "R",
+            "date": "2016-05-01"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "3",
+            "date": "2016-05-15"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "2016-05-29"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2016-06-12"
+          },
+          {
+            "name": "European Grand Prix",
+            "position": "2",
+            "date": "2016-06-19"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "2016-07-03"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "9",
+            "date": "2016-07-10"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2016-07-24"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "5",
+            "date": "2016-07-31"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "2016-08-28"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2016-09-04"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "5",
+            "date": "2016-09-18"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "R",
+            "date": "2016-10-02"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2016-10-09"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2016-10-23"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "5",
+            "date": "2016-10-30"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "5",
+            "date": "2016-11-13"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2016-11-27"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "entries": 20,
+        "wins": 5,
+        "podiums": 13,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2017-03-26"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "2",
+            "date": "2017-04-09"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "1",
+            "date": "2017-04-16"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "2",
+            "date": "2017-04-30"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "2",
+            "date": "2017-05-14"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "2017-05-28"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "4",
+            "date": "2017-06-11"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "4",
+            "date": "2017-06-25"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2017-07-09"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "7",
+            "date": "2017-07-16"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "1",
+            "date": "2017-07-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "2",
+            "date": "2017-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2017-09-03"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "R",
+            "date": "2017-09-17"
+          },
+          {
+            "name": "Malaysian Grand Prix",
+            "position": "4",
+            "date": "2017-10-01"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "2017-10-08"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "2017-10-22"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "4",
+            "date": "2017-10-29"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "1",
+            "date": "2017-11-12"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2017-11-26"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "entries": 21,
+        "wins": 5,
+        "podiums": 12,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2018-03-25"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "1",
+            "date": "2018-04-08"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "8",
+            "date": "2018-04-15"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "4",
+            "date": "2018-04-29"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "2018-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2018-05-27"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "2018-06-10"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "5",
+            "date": "2018-06-24"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "2018-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2018-07-08"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "2018-07-22"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "2",
+            "date": "2018-07-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2018-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2018-09-02"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "3",
+            "date": "2018-09-16"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "3",
+            "date": "2018-09-30"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "6",
+            "date": "2018-10-07"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2018-10-21"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "2",
+            "date": "2018-10-28"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "6",
+            "date": "2018-11-11"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2018-11-25"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "entries": 21,
+        "wins": 1,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "4",
+            "date": "2019-03-17"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "5",
+            "date": "2019-03-31"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "3",
+            "date": "2019-04-14"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "3",
+            "date": "2019-04-28"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "2019-05-12"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2019-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2019-06-09"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "5",
+            "date": "2019-06-23"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "4",
+            "date": "2019-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "16",
+            "date": "2019-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "2",
+            "date": "2019-07-28"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "3",
+            "date": "2019-08-04"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "2019-09-01"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "13",
+            "date": "2019-09-08"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "1",
+            "date": "2019-09-22"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "R",
+            "date": "2019-09-29"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "2",
+            "date": "2019-10-13"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "2",
+            "date": "2019-10-27"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "2019-11-03"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "17",
+            "date": "2019-11-17"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "5",
+            "date": "2019-12-01"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "entries": 17,
+        "wins": 0,
+        "podiums": 1,
+        "races": [
+          {
+            "name": "Austrian Grand Prix",
+            "position": "10",
+            "date": "2020-07-05"
+          },
+          {
+            "name": "Styrian Grand Prix",
+            "position": "R",
+            "date": "2020-07-12"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "6",
+            "date": "2020-07-19"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "10",
+            "date": "2020-08-02"
+          },
+          {
+            "name": "70th Anniversary Grand Prix",
+            "position": "12",
+            "date": "2020-08-09"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "7",
+            "date": "2020-08-16"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "13",
+            "date": "2020-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "2020-09-06"
+          },
+          {
+            "name": "Tuscan Grand Prix",
+            "position": "10",
+            "date": "2020-09-13"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "13",
+            "date": "2020-09-27"
+          },
+          {
+            "name": "Eifel Grand Prix",
+            "position": "11",
+            "date": "2020-10-11"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "10",
+            "date": "2020-10-25"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "12",
+            "date": "2020-11-01"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "3",
+            "date": "2020-11-15"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "13",
+            "date": "2020-11-29"
+          },
+          {
+            "name": "Sakhir Grand Prix",
+            "position": "12",
+            "date": "2020-12-06"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "14",
+            "date": "2020-12-13"
+          }
+        ]
+      }
+    ]
+  },
+  "sainz": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/sainz/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2021,
+        "entries": 22,
+        "wins": 0,
+        "podiums": 4,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "8",
+            "date": "2021-03-28"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "5",
+            "date": "2021-04-18"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "11",
+            "date": "2021-05-02"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "7",
+            "date": "2021-05-09"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2021-05-23"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "8",
+            "date": "2021-06-06"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "11",
+            "date": "2021-06-20"
+          },
+          {
+            "name": "Styrian Grand Prix",
+            "position": "6",
+            "date": "2021-06-27"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "5",
+            "date": "2021-07-04"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "6",
+            "date": "2021-07-18"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "3",
+            "date": "2021-08-01"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "10",
+            "date": "2021-08-29"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "7",
+            "date": "2021-09-05"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "6",
+            "date": "2021-09-12"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "3",
+            "date": "2021-09-26"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "8",
+            "date": "2021-10-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "7",
+            "date": "2021-10-24"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "6",
+            "date": "2021-11-07"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "6",
+            "date": "2021-11-14"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "7",
+            "date": "2021-11-21"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "8",
+            "date": "2021-12-05"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2021-12-12"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "entries": 22,
+        "wins": 1,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "2",
+            "date": "2022-03-20"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "3",
+            "date": "2022-03-27"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2022-04-10"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "R",
+            "date": "2022-04-24"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "3",
+            "date": "2022-05-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "2022-05-22"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2022-05-29"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "R",
+            "date": "2022-06-12"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "2022-06-19"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "1",
+            "date": "2022-07-03"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "2022-07-10"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "5",
+            "date": "2022-07-24"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2022-07-31"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "2022-08-28"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "8",
+            "date": "2022-09-04"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2022-09-11"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "3",
+            "date": "2022-10-02"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "2022-10-09"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "2022-10-23"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "5",
+            "date": "2022-10-30"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "3",
+            "date": "2022-11-13"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "4",
+            "date": "2022-11-20"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "entries": 22,
+        "wins": 1,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "4",
+            "date": "2023-03-05"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "6",
+            "date": "2023-03-19"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "12",
+            "date": "2023-04-02"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "5",
+            "date": "2023-04-30"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "5",
+            "date": "2023-05-07"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "8",
+            "date": "2023-05-28"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2023-06-04"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2023-06-18"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "6",
+            "date": "2023-07-02"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "10",
+            "date": "2023-07-09"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "8",
+            "date": "2023-07-23"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "R",
+            "date": "2023-07-30"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "5",
+            "date": "2023-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "3",
+            "date": "2023-09-03"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "1",
+            "date": "2023-09-17"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "6",
+            "date": "2023-09-24"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "W",
+            "date": "2023-10-08"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2023-10-22"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "4",
+            "date": "2023-10-29"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "6",
+            "date": "2023-11-05"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "6",
+            "date": "2023-11-19"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "18",
+            "date": "2023-11-26"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "entries": 23,
+        "wins": 2,
+        "podiums": 9,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "3",
+            "date": "2024-03-02"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2024-03-24"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2024-04-07"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "5",
+            "date": "2024-04-21"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "5",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "5",
+            "date": "2024-05-19"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "3",
+            "date": "2024-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "2024-06-09"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "6",
+            "date": "2024-06-23"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "2024-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "5",
+            "date": "2024-07-07"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "6",
+            "date": "2024-07-21"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "2024-07-28"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "5",
+            "date": "2024-08-25"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2024-09-01"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "18",
+            "date": "2024-09-15"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "7",
+            "date": "2024-09-22"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "2",
+            "date": "2024-10-20"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "1",
+            "date": "2024-10-27"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "R",
+            "date": "2024-11-03"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "3",
+            "date": "2024-11-23"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "6",
+            "date": "2024-12-01"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2024-12-08"
+          }
+        ]
+      }
+    ]
+  },
+  "leclerc": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/leclerc/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2019,
+        "entries": 21,
+        "wins": 2,
+        "podiums": 10,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "5",
+            "date": "2019-03-17"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "3",
+            "date": "2019-03-31"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "5",
+            "date": "2019-04-14"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "5",
+            "date": "2019-04-28"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2019-05-12"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "2019-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "3",
+            "date": "2019-06-09"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "3",
+            "date": "2019-06-23"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2019-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2019-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "R",
+            "date": "2019-07-28"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2019-08-04"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "1",
+            "date": "2019-09-01"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2019-09-08"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "2",
+            "date": "2019-09-22"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "3",
+            "date": "2019-09-29"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "6",
+            "date": "2019-10-13"
+          },
+          {
+            "name": "Mexican Grand Prix",
+            "position": "4",
+            "date": "2019-10-27"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2019-11-03"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "18",
+            "date": "2019-11-17"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2019-12-01"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "entries": 17,
+        "wins": 0,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2020-07-05"
+          },
+          {
+            "name": "Styrian Grand Prix",
+            "position": "R",
+            "date": "2020-07-12"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "11",
+            "date": "2020-07-19"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "3",
+            "date": "2020-08-02"
+          },
+          {
+            "name": "70th Anniversary Grand Prix",
+            "position": "4",
+            "date": "2020-08-09"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2020-08-16"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "14",
+            "date": "2020-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "2020-09-06"
+          },
+          {
+            "name": "Tuscan Grand Prix",
+            "position": "8",
+            "date": "2020-09-13"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "6",
+            "date": "2020-09-27"
+          },
+          {
+            "name": "Eifel Grand Prix",
+            "position": "7",
+            "date": "2020-10-11"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "4",
+            "date": "2020-10-25"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "5",
+            "date": "2020-11-01"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "4",
+            "date": "2020-11-15"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "10",
+            "date": "2020-11-29"
+          },
+          {
+            "name": "Sakhir Grand Prix",
+            "position": "R",
+            "date": "2020-12-06"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "13",
+            "date": "2020-12-13"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "entries": 22,
+        "wins": 0,
+        "podiums": 1,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "6",
+            "date": "2021-03-28"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "4",
+            "date": "2021-04-18"
+          },
+          {
+            "name": "Portuguese Grand Prix",
+            "position": "6",
+            "date": "2021-05-02"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "4",
+            "date": "2021-05-09"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "W",
+            "date": "2021-05-23"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "4",
+            "date": "2021-06-06"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "16",
+            "date": "2021-06-20"
+          },
+          {
+            "name": "Styrian Grand Prix",
+            "position": "7",
+            "date": "2021-06-27"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "8",
+            "date": "2021-07-04"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "2",
+            "date": "2021-07-18"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "R",
+            "date": "2021-08-01"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "8",
+            "date": "2021-08-29"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "5",
+            "date": "2021-09-05"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2021-09-12"
+          },
+          {
+            "name": "Russian Grand Prix",
+            "position": "15",
+            "date": "2021-09-26"
+          },
+          {
+            "name": "Turkish Grand Prix",
+            "position": "4",
+            "date": "2021-10-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2021-10-24"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "5",
+            "date": "2021-11-07"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "5",
+            "date": "2021-11-14"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "8",
+            "date": "2021-11-21"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "7",
+            "date": "2021-12-05"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "10",
+            "date": "2021-12-12"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "entries": 22,
+        "wins": 3,
+        "podiums": 11,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "1",
+            "date": "2022-03-20"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "2",
+            "date": "2022-03-27"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "1",
+            "date": "2022-04-10"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "6",
+            "date": "2022-04-24"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "2",
+            "date": "2022-05-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "R",
+            "date": "2022-05-22"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "4",
+            "date": "2022-05-29"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "R",
+            "date": "2022-06-12"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2022-06-19"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "4",
+            "date": "2022-07-03"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "1",
+            "date": "2022-07-10"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "2022-07-24"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "6",
+            "date": "2022-07-31"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "2022-08-28"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "3",
+            "date": "2022-09-04"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "2022-09-11"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "2",
+            "date": "2022-10-02"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "3",
+            "date": "2022-10-09"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2022-10-23"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "6",
+            "date": "2022-10-30"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "4",
+            "date": "2022-11-13"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2022-11-20"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "entries": 22,
+        "wins": 0,
+        "podiums": 6,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "R",
+            "date": "2023-03-05"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "7",
+            "date": "2023-03-19"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "R",
+            "date": "2023-04-02"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "3",
+            "date": "2023-04-30"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "7",
+            "date": "2023-05-07"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "6",
+            "date": "2023-05-28"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "11",
+            "date": "2023-06-04"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "4",
+            "date": "2023-06-18"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "2023-07-02"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "9",
+            "date": "2023-07-09"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "7",
+            "date": "2023-07-23"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "2023-07-30"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "2023-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2023-09-03"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "4",
+            "date": "2023-09-17"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2023-09-24"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "5",
+            "date": "2023-10-08"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "20",
+            "date": "2023-10-22"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "3",
+            "date": "2023-10-29"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "W",
+            "date": "2023-11-05"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "2",
+            "date": "2023-11-19"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "2",
+            "date": "2023-11-26"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "entries": 24,
+        "wins": 3,
+        "podiums": 13,
+        "races": [
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "4",
+            "date": "2024-03-02"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "3",
+            "date": "2024-03-09"
+          },
+          {
+            "name": "Australian Grand Prix",
+            "position": "2",
+            "date": "2024-03-24"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2024-04-07"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "4",
+            "date": "2024-04-21"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "3",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "3",
+            "date": "2024-05-19"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "2024-05-26"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "R",
+            "date": "2024-06-09"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "5",
+            "date": "2024-06-23"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "11",
+            "date": "2024-06-30"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "14",
+            "date": "2024-07-07"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2024-07-21"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "2024-07-28"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "3",
+            "date": "2024-08-25"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "1",
+            "date": "2024-09-01"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "2",
+            "date": "2024-09-15"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "5",
+            "date": "2024-09-22"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "2024-10-20"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "3",
+            "date": "2024-10-27"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "5",
+            "date": "2024-11-03"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "4",
+            "date": "2024-11-23"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "2",
+            "date": "2024-12-01"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "3",
+            "date": "2024-12-08"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "entries": 24,
+        "wins": 0,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "8",
+            "date": "2025-03-16"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "D",
+            "date": "2025-03-23"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "4",
+            "date": "2025-04-06"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "4",
+            "date": "2025-04-13"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "3",
+            "date": "2025-04-20"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "7",
+            "date": "2025-05-04"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "6",
+            "date": "2025-05-18"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "2",
+            "date": "2025-05-25"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "3",
+            "date": "2025-06-01"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "2025-06-15"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "2025-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "14",
+            "date": "2025-07-06"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "3",
+            "date": "2025-07-27"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "4",
+            "date": "2025-08-03"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "2025-08-31"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "4",
+            "date": "2025-09-07"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "9",
+            "date": "2025-09-21"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "6",
+            "date": "2025-10-05"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "3",
+            "date": "2025-10-19"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "2",
+            "date": "2025-10-26"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "R",
+            "date": "2025-11-09"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "4",
+            "date": "2025-11-23"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "8",
+            "date": "2025-11-30"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "4",
+            "date": "2025-12-07"
+          }
+        ]
+      }
+    ]
+  },
+  "hamilton": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/hamilton/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 2025,
+        "entries": 24,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Australian Grand Prix",
+            "position": "10",
+            "date": "2025-03-16"
+          },
+          {
+            "name": "Chinese Grand Prix",
+            "position": "D",
+            "date": "2025-03-23"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "7",
+            "date": "2025-04-06"
+          },
+          {
+            "name": "Bahrain Grand Prix",
+            "position": "5",
+            "date": "2025-04-13"
+          },
+          {
+            "name": "Saudi Arabian Grand Prix",
+            "position": "7",
+            "date": "2025-04-20"
+          },
+          {
+            "name": "Miami Grand Prix",
+            "position": "8",
+            "date": "2025-05-04"
+          },
+          {
+            "name": "Emilia Romagna Grand Prix",
+            "position": "4",
+            "date": "2025-05-18"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "5",
+            "date": "2025-05-25"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "6",
+            "date": "2025-06-01"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "6",
+            "date": "2025-06-15"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "4",
+            "date": "2025-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "4",
+            "date": "2025-07-06"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "7",
+            "date": "2025-07-27"
+          },
+          {
+            "name": "Hungarian Grand Prix",
+            "position": "12",
+            "date": "2025-08-03"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "2025-08-31"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "6",
+            "date": "2025-09-07"
+          },
+          {
+            "name": "Azerbaijan Grand Prix",
+            "position": "8",
+            "date": "2025-09-21"
+          },
+          {
+            "name": "Singapore Grand Prix",
+            "position": "8",
+            "date": "2025-10-05"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "4",
+            "date": "2025-10-19"
+          },
+          {
+            "name": "Mexico City Grand Prix",
+            "position": "8",
+            "date": "2025-10-26"
+          },
+          {
+            "name": "São Paulo Grand Prix",
+            "position": "R",
+            "date": "2025-11-09"
+          },
+          {
+            "name": "Las Vegas Grand Prix",
+            "position": "8",
+            "date": "2025-11-23"
+          },
+          {
+            "name": "Qatar Grand Prix",
+            "position": "12",
+            "date": "2025-11-30"
+          },
+          {
+            "name": "Abu Dhabi Grand Prix",
+            "position": "8",
+            "date": "2025-12-07"
+          }
+        ]
+      }
+    ]
+  },
+  "gilles_villeneuve": {
+    "source": "https://api.jolpi.ca/ergast/f1/drivers/gilles_villeneuve/constructors/ferrari/results/",
+    "cutoff": "2025-12-31",
+    "seasons": [
+      {
+        "year": 1977,
+        "entries": 2,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Canadian Grand Prix",
+            "position": "12",
+            "date": "1977-10-09"
+          },
+          {
+            "name": "Japanese Grand Prix",
+            "position": "R",
+            "date": "1977-10-23"
+          }
+        ]
+      },
+      {
+        "year": 1978,
+        "entries": 16,
+        "wins": 1,
+        "podiums": 2,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "8",
+            "date": "1978-01-15"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1978-01-29"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1978-03-04"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1978-04-02"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1978-05-07"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1978-05-21"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "10",
+            "date": "1978-06-04"
+          },
+          {
+            "name": "Swedish Grand Prix",
+            "position": "9",
+            "date": "1978-06-17"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "12",
+            "date": "1978-07-02"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1978-07-16"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "8",
+            "date": "1978-07-30"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "3",
+            "date": "1978-08-13"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "6",
+            "date": "1978-08-27"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "7",
+            "date": "1978-09-10"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1978-10-01"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "1",
+            "date": "1978-10-08"
+          }
+        ]
+      },
+      {
+        "year": 1979,
+        "entries": 15,
+        "wins": 3,
+        "podiums": 7,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1979-01-21"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "5",
+            "date": "1979-02-04"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "1",
+            "date": "1979-03-03"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "1",
+            "date": "1979-04-08"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "7",
+            "date": "1979-04-29"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "7",
+            "date": "1979-05-13"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "R",
+            "date": "1979-05-27"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "2",
+            "date": "1979-07-01"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "14",
+            "date": "1979-07-14"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "8",
+            "date": "1979-07-29"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "2",
+            "date": "1979-08-12"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "1979-08-26"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "2",
+            "date": "1979-09-09"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "2",
+            "date": "1979-09-30"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "1",
+            "date": "1979-10-07"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "entries": 14,
+        "wins": 0,
+        "podiums": 0,
+        "races": [
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1980-01-13"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "16",
+            "date": "1980-01-27"
+          },
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1980-03-01"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1980-03-30"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "6",
+            "date": "1980-05-04"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "5",
+            "date": "1980-05-18"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "8",
+            "date": "1980-06-29"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1980-07-13"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "6",
+            "date": "1980-08-10"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "8",
+            "date": "1980-08-17"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "7",
+            "date": "1980-08-31"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1980-09-14"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "5",
+            "date": "1980-09-28"
+          },
+          {
+            "name": "United States Grand Prix",
+            "position": "R",
+            "date": "1980-10-05"
+          }
+        ]
+      },
+      {
+        "year": 1981,
+        "entries": 15,
+        "wins": 2,
+        "podiums": 3,
+        "races": [
+          {
+            "name": "United States Grand Prix West",
+            "position": "R",
+            "date": "1981-03-15"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1981-03-29"
+          },
+          {
+            "name": "Argentine Grand Prix",
+            "position": "R",
+            "date": "1981-04-12"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "7",
+            "date": "1981-05-03"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "4",
+            "date": "1981-05-17"
+          },
+          {
+            "name": "Monaco Grand Prix",
+            "position": "1",
+            "date": "1981-05-31"
+          },
+          {
+            "name": "Spanish Grand Prix",
+            "position": "1",
+            "date": "1981-06-21"
+          },
+          {
+            "name": "French Grand Prix",
+            "position": "R",
+            "date": "1981-07-05"
+          },
+          {
+            "name": "British Grand Prix",
+            "position": "R",
+            "date": "1981-07-18"
+          },
+          {
+            "name": "German Grand Prix",
+            "position": "10",
+            "date": "1981-08-02"
+          },
+          {
+            "name": "Austrian Grand Prix",
+            "position": "R",
+            "date": "1981-08-16"
+          },
+          {
+            "name": "Dutch Grand Prix",
+            "position": "R",
+            "date": "1981-08-30"
+          },
+          {
+            "name": "Italian Grand Prix",
+            "position": "R",
+            "date": "1981-09-13"
+          },
+          {
+            "name": "Canadian Grand Prix",
+            "position": "3",
+            "date": "1981-09-27"
+          },
+          {
+            "name": "Caesars Palace Grand Prix",
+            "position": "D",
+            "date": "1981-10-17"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "entries": 5,
+        "wins": 0,
+        "podiums": 1,
+        "races": [
+          {
+            "name": "South African Grand Prix",
+            "position": "R",
+            "date": "1982-01-23"
+          },
+          {
+            "name": "Brazilian Grand Prix",
+            "position": "R",
+            "date": "1982-03-21"
+          },
+          {
+            "name": "United States Grand Prix West",
+            "position": "D",
+            "date": "1982-04-04"
+          },
+          {
+            "name": "San Marino Grand Prix",
+            "position": "2",
+            "date": "1982-04-25"
+          },
+          {
+            "name": "Belgian Grand Prix",
+            "position": "W",
+            "date": "1982-05-09"
+          }
+        ]
+      }
+    ]
+  }
+}
