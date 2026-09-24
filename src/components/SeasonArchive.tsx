@@ -1,11 +1,4 @@
-import {
-  ArrowRight,
-  ArrowLeft,
-  Compass,
-  Play,
-  Plus,
-  Minus,
-} from "lucide-react";
+import { ArrowRight, ArrowLeft, Play, Plus, Minus } from "lucide-react";
 import type { Driver } from "../data/drivers";
 import { drivers, getHistory, seasonStory } from "../data/drivers";
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -15,8 +8,7 @@ interface Props {
   setYear: (v: number) => void;
   details: boolean;
   setDetails: (v: boolean | ((previous: boolean) => boolean)) => void;
-  mode: "explore" | "guided";
-  setMode: (v: "explore" | "guided") => void;
+  onStartTour: () => void;
   index: number;
   selectDriver: (v: number) => void;
 }
@@ -26,8 +18,7 @@ export default function SeasonArchive({
   setYear,
   details,
   setDetails,
-  mode,
-  setMode,
+  onStartTour,
   index,
   selectDriver,
 }: Props) {
@@ -135,20 +126,9 @@ export default function SeasonArchive({
         </div>
       )}
       <div className="tour-bar">
-        <div className="mode-toggle">
-          <button
-            className={mode === "explore" ? "active" : ""}
-            onClick={() => setMode("explore")}
-          >
-            <Compass size={15} /> Explore
-          </button>
-          <button
-            className={mode === "guided" ? "active" : ""}
-            onClick={() => setMode("guided")}
-          >
-            <Play size={13} /> Guided tour
-          </button>
-        </div>
+        <button className="tour-start" onClick={onStartTour}>
+          <Play size={14} /> Start guided tour
+        </button>
         <span className="tour-location">
           {driver.number} <span>/ 17</span>
           <span className="small-red">—</span>

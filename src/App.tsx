@@ -16,6 +16,7 @@ import {
   Move,
   Layers,
   Sparkles,
+  Play,
   ExternalLink,
 } from "lucide-react";
 import {
@@ -26,10 +27,13 @@ import {
   seasonStory,
 } from "./data/drivers";
 import { parts } from "./data/engineering";
-import type { PartId } from "./data/engineering";
 import Modal from "./components/Modal";
 import SceneBoundary from "./components/SceneBoundary";
 import { usePreferences } from "./hooks/usePreferences";
+import { useMuseumStore } from "./stores/museumStore";
+import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
+import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
+import GuidedTour from "./features/guided-tour/GuidedTour";
 const Garage = lazy(() => import("./scenes/Garage"));
 const SeasonArchive = lazy(() => import("./components/SeasonArchive"));
 type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
@@ -37,14 +41,25 @@ const disclaimer =
   "ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.";
 const pad = (n: number) => String(n).padStart(2, "0");
 function App() {
-  const [entered, setEntered] = useState(false),
-    [index, setIndex] = useState(10),
-    [year, setYear] = useState(2004),
-    [dialog, setDialog] = useState<Dialog>(null),
-    [mode, setMode] = useState<"explore" | "guided">("guided"),
-    [section, setSection] = useState<"story" | "engineering">("story"),
-    [part, setPart] = useState<PartId | null>(null),
-    [reset, setReset] = useState(0),
+  const {
+    entered,
+    driverIndex: index,
+    year,
+    section,
+    part,
+    setYear,
+    setPart,
+    openStory,
+    openEngineering,
+    leave,
+    resetView,
+  } = useMuseumStore();
+  const touring = useTourStore((s) => s.active);
+  const tourStep = useTourStore((s) => tourSteps[s.stepIndex]);
+  const startTour = useTourStore((s) => s.start);
+  const stopTour = useTourStore((s) => s.stop);
+  useMuseumCamera();
+  const [dialog, setDialog] = useState<Dialog>(null),
     [details, setDetails] = useState(false),
     [query, setQuery] = useState(""),
     [era, setEra] = useState("All eras"),
@@ -58,24 +73,24 @@ function App() {
   const activePart = parts.find((p) => p.id === part);
   const titleRef = useRef<HTMLHeadingElement>(null);
   function selectDriver(i: number) {
-    setIndex(i);
-    setYear(drivers[i].defaultYear);
-    setEntered(true);
+    stopTour();
+    useMuseumStore.getState().selectDriver(i);
     setDialog(null);
-    setPart(null);
     setDetails(false);
     setFocusMode(false);
-    setReset((v) => v + 1);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+  function beginTour() {
+    setDialog(null);
+    setDetails(false);
+    setFocusMode(false);
+    startTour();
+  }
   function enter() {
-    setEntered(true);
+    useMuseumStore.getState().enter();
     window.scrollTo({ top: 0, behavior: "instant" });
     setTimeout(() => titleRef.current?.focus({ preventScroll: true }), 50);
   }
-  useEffect(() => {
-    if (prefs.mobile) setMode("guided");
-  }, [prefs.mobile]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -112,7 +127,7 @@ function App() {
   );
   return (
     <div
-      className={`app ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""}`}
+      className={`app ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""} ${touring ? "tour-active" : ""} ${touring && !tourStep.showStory ? "tour-corridor" : ""}`}
     >
       <a className="skip-link" href="#main">
         Skip to experience
@@ -122,9 +137,8 @@ function App() {
           className="brand"
           aria-label="ROSSO home"
           onClick={() => {
-            setEntered(false);
-            setSection("story");
-            setPart(null);
+            stopTour();
+            leave();
             setFocusMode(false);
           }}
         >
@@ -141,8 +155,7 @@ function App() {
             className={entered && section === "story" ? "active" : ""}
             onClick={() => {
               enter();
-              setSection("story");
-              setPart(null);
+              openStory();
             }}
           >
             The garage
@@ -152,8 +165,7 @@ function App() {
             className={section === "engineering" ? "active" : ""}
             onClick={() => {
               enter();
-              setSection("engineering");
-              setPart("front-wing");
+              openEngineering();
             }}
           >
             Engineering
@@ -207,8 +219,7 @@ function App() {
                     engineering={entered && section === "engineering"}
                     onPart={setPart}
                     selected={part}
-                    reset={reset}
-                    explore={mode === "explore"}
+                    explore={!prefs.mobile}
                     reduced={prefs.reduced}
                     onFailure={() => prefs.setFlat(true)}
                   />
@@ -239,12 +250,17 @@ function App() {
                   <br />
                   Step inside a story written in red.
                 </p>
-                <button className="enter-button" onClick={enter}>
-                  ENTER THE GARAGE
-                  <span>
-                    <ArrowRight size={21} />
-                  </span>
-                </button>
+                <div className="landing-actions">
+                  <button className="enter-button" onClick={enter}>
+                    ENTER THE GARAGE
+                    <span>
+                      <ArrowRight size={21} />
+                    </span>
+                  </button>
+                  <button className="tour-link" onClick={beginTour}>
+                    <Play size={14} /> TAKE THE GUIDED TOUR
+                  </button>
+                </div>
                 <div className="landing-note">
                   <span className="status-dot" />
                   AN INTERACTIVE 3D EXPERIENCE
@@ -277,9 +293,8 @@ function App() {
                 <button
                   className="back-link"
                   onClick={() => {
-                    setEntered(false);
-                    setSection("story");
-                    setPart(null);
+                    stopTour();
+                    leave();
                   }}
                 >
                   <ArrowLeft size={13} /> THE GARAGE
@@ -353,20 +368,14 @@ function App() {
                   <button
                     role="tab"
                     aria-selected={section === "story"}
-                    onClick={() => {
-                      setSection("story");
-                      setPart(null);
-                    }}
+                    onClick={openStory}
                   >
                     THE STORY
                   </button>
                   <button
                     role="tab"
                     aria-selected={section === "engineering"}
-                    onClick={() => {
-                      setSection("engineering");
-                      setPart("front-wing");
-                    }}
+                    onClick={() => openEngineering()}
                   >
                     THE MACHINE <Plus size={12} />
                   </button>
@@ -389,7 +398,7 @@ function App() {
                 <button
                   className="icon-button"
                   aria-label="Reset car view"
-                  onClick={() => setReset((v) => v + 1)}
+                  onClick={resetView}
                 >
                   <RotateCcw size={17} />
                 </button>
@@ -435,6 +444,8 @@ function App() {
               )}
             </>
           )}
+          {/* Mounted on every screen: the tour can start from the landing page. */}
+          <GuidedTour mobile={prefs.mobile} />
         </section>
         {!entered ? (
           <section className="collection">
@@ -506,8 +517,7 @@ function App() {
               setYear={setYear}
               details={details}
               setDetails={setDetails}
-              mode={mode}
-              setMode={setMode}
+              onStartTour={beginTour}
               index={index}
               selectDriver={selectDriver}
             />

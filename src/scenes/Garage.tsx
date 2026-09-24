@@ -1,9 +1,11 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, ContactShadows } from "@react-three/drei";
+import { ContactShadows } from "@react-three/drei";
 import { CanvasTexture, Vector3, SRGBColorSpace } from "three";
-import type { OrbitControls as OrbitType } from "three-stdlib";
 import Car from "./Car";
+import CameraDirector from "../3d/camera/CameraDirector";
+import { useCameraStore } from "../3d/camera/cameraStore";
+import { bayX } from "../3d/camera/poses";
 import { parts } from "../data/engineering";
 import type { PartId } from "../data/engineering";
 import type { Driver } from "../data/drivers";
@@ -38,67 +40,11 @@ function WallLabel({
     </mesh>
   );
 }
-function CameraRig({
-  bay,
-  landing,
-  reset,
-  explore,
-  reduced,
-}: {
-  bay: number;
-  landing: boolean;
-  reset: number;
-  explore: boolean;
-  reduced: boolean;
-}) {
-  const ref = useRef<OrbitType>(null);
-  const { camera, invalidate } = useThree();
-  const anim = useRef(true);
-  useEffect(() => {
-    anim.current = true;
-    invalidate();
-  }, [bay, landing, reset, invalidate]);
-  useFrame((_, dt) => {
-    if (!ref.current || !anim.current) return;
-    const target = new Vector3(bay * 9, 0.5, 0);
-    const end = new Vector3(
-      bay * 9 - (landing ? 6.5 : 5.9),
-      landing ? 2.9 : 3.2,
-      landing ? 8.3 : 7.3,
-    );
-    const t = reduced ? 1 : 1 - Math.exp(-dt * 4);
-    camera.position.lerp(end, t);
-    ref.current.target.lerp(target, t);
-    ref.current.update();
-    if (camera.position.distanceTo(end) < 0.01) {
-      anim.current = false;
-    } else invalidate();
-  });
-  return (
-    <OrbitControls
-      ref={ref}
-      makeDefault
-      enabled={!landing}
-      enablePan={explore}
-      enableZoom
-      minDistance={4}
-      maxDistance={12}
-      minPolarAngle={0.25}
-      maxPolarAngle={Math.PI / 2 - 0.04}
-      enableDamping
-      dampingFactor={0.12}
-      onStart={() => {
-        anim.current = false;
-      }}
-    />
-  );
-}
 function Set({
   bay,
   driver,
   high,
   landing,
-  reset,
   explore,
   reduced,
 }: {
@@ -106,11 +52,10 @@ function Set({
   driver: Driver;
   high: boolean;
   landing: boolean;
-  reset: number;
   explore: boolean;
   reduced: boolean;
 }) {
-  const x = bay * 9;
+  const x = bayX(bay);
   return (
     <>
       <color attach="background" args={["#101112"]} />
@@ -153,7 +98,7 @@ function Set({
         />
       </mesh>
       {[-1, 0, 1].map((i) => (
-        <group key={i} position={[x + i * 9, 0, 0]}>
+        <group key={i} position={[bayX(bay + i), 0, 0]}>
           <mesh position={[0, 2.5, -4]}>
             <boxGeometry args={[8.92, 5, 0.2]} />
             <meshStandardMaterial
@@ -224,11 +169,9 @@ function Set({
         frames={1}
         color="#000000"
       />
-      <CameraRig
-        bay={bay}
-        landing={landing}
-        reset={reset}
-        explore={explore}
+      <CameraDirector
+        enabled={!landing}
+        enablePan={explore}
         reduced={reduced}
       />
     </>
@@ -242,7 +185,6 @@ export default function Garage(props: {
   engineering: boolean;
   onPart: (id: PartId) => void;
   selected: PartId | null;
-  reset: number;
   explore: boolean;
   reduced: boolean;
   onFailure: () => void;
@@ -266,7 +208,8 @@ export default function Garage(props: {
         frameloop="demand"
         dpr={props.high ? [1, 1.5] : [0.8, 1]}
         camera={{
-          position: [props.bay * 9 - 6.5, 2.9, 8.3],
+          // Start where the director will be, so a quality switch does not jump.
+          position: useCameraStore.getState().pose.position,
           fov: 40,
           near: 0.1,
           far: 80,
@@ -342,7 +285,7 @@ function ProjectHotspots({
       const marker = markers.current[i];
       if (!marker) return;
       point
-        .set(p.position[0] + bay * 9, p.position[1] + 0.04, p.position[2])
+        .set(p.position[0] + bayX(bay), p.position[1] + 0.04, p.position[2])
         .project(camera);
       marker.style.left = `${(point.x * 0.5 + 0.5) * size.width}px`;
       marker.style.top = `${(-point.y * 0.5 + 0.5) * size.height}px`;

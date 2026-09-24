@@ -43,13 +43,24 @@ The additional fourteen drivers are archive exhibits, not bespoke editorial expe
 
 ```text
 src/
-  App.tsx                    Experience state, navigation and archive dialogs
+  App.tsx                    Layout, navigation and archive dialogs
+  stores/
+    museumStore.ts           Where the visitor is: driver, year, story/machine, part
+  3d/camera/
+    poses.ts                 Named, bay-relative camera poses
+    cameraStore.ts           Camera requests and arrival events
+    CameraDirector.tsx       The only code that moves the camera
+    useMuseumCamera.ts       Maps museum state to a pose when not touring
+  features/guided-tour/
+    tourSteps.ts             Schumacher tour; narration derived from src/data
+    tourStore.ts             Tour state machine (step, pause, skip, stop)
+    GuidedTour.tsx           Stages steps, waits for camera arrival, tour card UI
   components/
     Modal.tsx                Native modal, keyboard dismissal and focus return
     SceneBoundary.tsx        3D error boundary
     SeasonArchive.tsx        Lazy-loaded timeline, race results and guided controls
   scenes/
-    Garage.tsx               Lazy WebGL scene, camera, lights and hotspot projection
+    Garage.tsx               Lazy WebGL scene, lights and hotspot projection
     Car.tsx                  Original reusable procedural car geometry
   data/
     drivers.ts               Driver metadata, editorial timelines and sources

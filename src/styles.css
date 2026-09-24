@@ -2322,3 +2322,185 @@ footer > button {
     margin-top: 16px;
   }
 }
+/* ------------------------------------------------------------------
+   Guided tour (spec §16)
+   ------------------------------------------------------------------ */
+.landing-actions {
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
+}
+.tour-link,
+.tour-start {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--hit);
+  font-size: var(--fs-sm);
+  letter-spacing: 1.2px;
+  color: var(--text-1);
+  pointer-events: auto;
+}
+.tour-link svg,
+.tour-start svg {
+  color: var(--red);
+}
+.tour-start {
+  border: 1px solid #ffffff24;
+  padding: 0 18px;
+  letter-spacing: 0.4px;
+  font-size: var(--fs-md);
+}
+.tour-start:hover {
+  border-color: var(--red);
+}
+.tour-card {
+  position: absolute;
+  left: 6.7%;
+  bottom: 40px;
+  width: 420px;
+  z-index: 11;
+  padding: 20px 22px 18px;
+  background: #141619f2;
+  border: 1px solid #ffffff1f;
+  border-top: 2px solid var(--red);
+  backdrop-filter: blur(12px);
+  animation: arrive 0.35s ease both;
+}
+.tour-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tour-card-top .eyebrow {
+  color: var(--text-2);
+  margin-right: auto;
+}
+.tour-count {
+  white-space: nowrap;
+  font-family: var(--heading);
+  font-size: var(--fs-lg);
+  color: var(--text-1);
+}
+.tour-count span {
+  color: var(--text-3);
+}
+.tour-card h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 12px 0 8px;
+}
+.tour-card p {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0;
+}
+.tour-progress {
+  display: flex;
+  gap: 4px;
+  margin: 18px 0 14px;
+}
+.tour-progress i {
+  flex: 1;
+  height: 2px;
+  background: #ffffff1c;
+  overflow: hidden;
+}
+.tour-progress b {
+  display: block;
+  height: 100%;
+  background: var(--red);
+  transform-origin: left;
+  transition: transform 0.1s linear;
+}
+.tour-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.tour-secondary,
+.tour-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--hit);
+  padding: 0 16px;
+  font-size: var(--fs-md);
+}
+.tour-secondary {
+  border: 1px solid #ffffff24;
+}
+.tour-secondary:hover {
+  border-color: #ffffff5a;
+}
+.tour-primary {
+  margin-left: auto;
+  background: var(--warm);
+  color: #191a1b;
+  font-weight: 500;
+}
+.tour-primary:hover {
+  background: #fff;
+  color: #000;
+}
+.tour-controls button:disabled {
+  opacity: 0.35;
+}
+.tour-active .car-label,
+.tour-active .scene-tools,
+.tour-active .engineering-panel {
+  display: none;
+}
+/* The tour card takes over the reading column; the scene stays unobstructed. */
+.tour-active .driver-copy {
+  visibility: hidden;
+}
+.tour-corridor .scene-shade {
+  opacity: 0.35;
+}
+.scene-shade {
+  transition: opacity 0.6s ease;
+}
+@media (max-width: 760px) {
+  .tour-active .driver-copy {
+    display: none;
+  }
+  .landing-actions .tour-link {
+    position: absolute;
+    top: 778px;
+    left: 6%;
+  }
+  .tour-card {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    padding: 16px;
+  }
+  .tour-card h2 {
+    font-size: 23px;
+    margin-top: 8px;
+  }
+  .tour-card p {
+    font-size: var(--fs-md);
+  }
+  .tour-progress {
+    margin: 12px 0 10px;
+  }
+}
+@media (max-width: 760px) {
+  .landing .experience {
+    height: 850px;
+    min-height: 850px;
+  }
+}
+@media (max-width: 760px) {
+  /* Lift the whole stage above the archive so the fixed tour card stays on top. */
+  .tour-active .experience {
+    z-index: 20;
+  }
+}

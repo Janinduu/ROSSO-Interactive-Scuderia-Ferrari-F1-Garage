@@ -1,0 +1,61 @@
+import { create } from "zustand";
+import { drivers } from "../data/drivers";
+import type { PartId } from "../data/engineering";
+
+export type Section = "story" | "engineering";
+
+export const SCHUMACHER_INDEX = drivers.findIndex(
+  (d) => d.id === "michael_schumacher",
+);
+
+interface MuseumState {
+  entered: boolean;
+  driverIndex: number;
+  year: number;
+  section: Section;
+  part: PartId | null;
+  /** Bumped to ask the camera to return to the current framing. */
+  viewResets: number;
+  enter: () => void;
+  leave: () => void;
+  selectDriver: (index: number) => void;
+  setYear: (year: number) => void;
+  openStory: () => void;
+  openEngineering: (part?: PartId) => void;
+  setPart: (part: PartId | null) => void;
+  resetView: () => void;
+  /** Used by the guided tour to set the whole scene in one update. */
+  stage: (
+    scene: Partial<
+      Pick<MuseumState, "entered" | "driverIndex" | "year" | "section" | "part">
+    >,
+  ) => void;
+}
+
+// Where the visitor is in the museum (spec §30). Dialogs and filters stay local
+// to the components that own them.
+export const useMuseumStore = create<MuseumState>((set) => ({
+  entered: false,
+  driverIndex: SCHUMACHER_INDEX,
+  year: 2004,
+  section: "story",
+  part: null,
+  viewResets: 0,
+  enter: () => set({ entered: true }),
+  leave: () => set({ entered: false, section: "story", part: null }),
+  selectDriver: (index) =>
+    set((s) => ({
+      entered: true,
+      driverIndex: index,
+      year: drivers[index].defaultYear,
+      part: null,
+      viewResets: s.viewResets + 1,
+    })),
+  setYear: (year) => set({ year }),
+  openStory: () => set({ entered: true, section: "story", part: null }),
+  openEngineering: (part = "front-wing") =>
+    set({ entered: true, section: "engineering", part }),
+  setPart: (part) => set({ part }),
+  resetView: () => set((s) => ({ viewResets: s.viewResets + 1 })),
+  stage: (scene) => set(scene),
+}));
