@@ -8,7 +8,8 @@ import {
 } from "../../data/drivers";
 import { parts } from "../../data/engineering";
 import { resolveCar } from "../../data/cars";
-import { anchorsFor } from "../../3d/cars/anchors";
+import { anchorsFor, CAR_SCALE } from "../../3d/cars/anchors";
+import { explodedOffset } from "../../3d/cars/explode";
 import type { PartId } from "../../data/engineering";
 import { SCHUMACHER_INDEX } from "../../stores/museumStore";
 import type { Section } from "../../stores/museumStore";
@@ -38,6 +39,7 @@ export interface TourStepDefinition {
     year: number;
     section: Section;
     part: PartId | null;
+    exploded: boolean;
   };
   /** Whether the driver story column is shown, or the corridor stays clear. */
   showStory: boolean;
@@ -68,7 +70,13 @@ export function buildSchumacherTour(): TourStepDefinition[] {
   const year = 2004;
   const season = seasonStory(driver, year);
   const diffuser = parts.find((p) => p.id === "diffuser")!;
-  const base = { driverIndex: bay, year, section: "story" as const, part: null };
+  const anchors = anchorsFor(resolveCar(driver, year).spec);
+  const explodedAnchor = (id: PartId) => {
+    const a = anchors[id] ?? [0, 0, 0];
+    const o = explodedOffset(id, 1);
+    return a.map((v, i) => v + o[i] * CAR_SCALE);
+  };
+  const base = { driverIndex: bay, year, section: "story" as const, part: null, exploded: false };
 
   const steps: Omit<TourStepDefinition, "durationMs">[] = [
     {
@@ -128,8 +136,9 @@ export function buildSchumacherTour(): TourStepDefinition[] {
       kicker: "The machine",
       title: diffuser.name,
       narration: `${diffuser.text} (General principle; the exact design varies by era.)`,
-      camera: poses.part(bay, anchorsFor(resolveCar(driver, year).spec).diffuser ?? diffuser.position),
-      scene: { ...base, section: "engineering", part: "diffuser" },
+      camera: poses.part(bay, explodedAnchor("diffuser")),
+      // The car opens up (spec §16.2 "explodeCar") and the camera finds the diffuser.
+      scene: { ...base, section: "engineering", part: "diffuser", exploded: true },
       showStory: true,
       allowSkip: true,
     },

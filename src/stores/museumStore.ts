@@ -14,6 +14,12 @@ interface MuseumState {
   year: number;
   section: Section;
   part: PartId | null;
+  /** Exploded engineering view (spec §12). */
+  exploded: boolean;
+  /** Show only the selected component. */
+  isolate: boolean;
+  /** Bumped when the visitor picks a component, so the camera goes to it. */
+  partFocus: number;
   /** Bumped to ask the camera to return to the current framing. */
   viewResets: number;
   enter: () => void;
@@ -23,11 +29,14 @@ interface MuseumState {
   openStory: () => void;
   openEngineering: (part?: PartId) => void;
   setPart: (part: PartId | null) => void;
+  focusPart: (part: PartId) => void;
+  setExploded: (exploded: boolean) => void;
+  toggleIsolate: () => void;
   resetView: () => void;
   /** Used by the guided tour to set the whole scene in one update. */
   stage: (
     scene: Partial<
-      Pick<MuseumState, "entered" | "driverIndex" | "year" | "section" | "part">
+      Pick<MuseumState, "entered" | "driverIndex" | "year" | "section" | "part" | "exploded">
     >,
   ) => void;
 }
@@ -40,22 +49,32 @@ export const useMuseumStore = create<MuseumState>((set) => ({
   year: 2004,
   section: "story",
   part: null,
+  exploded: false,
+  isolate: false,
+  partFocus: 0,
   viewResets: 0,
   enter: () => set({ entered: true }),
-  leave: () => set({ entered: false, section: "story", part: null }),
+  leave: () =>
+    set({ entered: false, section: "story", part: null, exploded: false, isolate: false }),
   selectDriver: (index) =>
     set((s) => ({
       entered: true,
       driverIndex: index,
       year: drivers[index].defaultYear,
       part: null,
+      exploded: false,
+      isolate: false,
       viewResets: s.viewResets + 1,
     })),
   setYear: (year) => set({ year }),
-  openStory: () => set({ entered: true, section: "story", part: null }),
+  openStory: () =>
+    set({ entered: true, section: "story", part: null, exploded: false, isolate: false }),
   openEngineering: (part = "front-wing") =>
     set({ entered: true, section: "engineering", part }),
   setPart: (part) => set({ part }),
+  focusPart: (part) => set((s) => ({ part, partFocus: s.partFocus + 1 })),
+  setExploded: (exploded) => set({ exploded }),
+  toggleIsolate: () => set((s) => ({ isolate: !s.isolate })),
   resetView: () => set((s) => ({ viewResets: s.viewResets + 1 })),
   stage: (scene) => set(scene),
 }));

@@ -289,6 +289,33 @@ function Suspension({ spec, mats }: { spec: CarSpec; mats: Mats }) {
   );
 }
 
+// The engine and gearbox, normally hidden inside the bodywork; the exploded
+// view lifts it clear. Deliberately generic: a block with two cylinder banks.
+function EngineBlock({ spec, mats }: { spec: CarSpec; mats: Mats }) {
+  const x0 = spec.engineFront ? spec.frontAxle - 0.25 : spec.cockpit.x1 + 0.18;
+  const x1 = spec.engineFront ? spec.cockpit.x0 - 0.15 : spec.rearAxle - 0.1;
+  const mid = (x0 + x1) / 2;
+  const body = widthAt(spec.tub, mid);
+  const w = Math.min(0.34, body.w * 1.5);
+  const y = body.y - 0.02;
+  const len = x1 - x0;
+  return (
+    <group name="power_unit_proxy">
+      <Box size={[len * 0.72, 0.16, w * 0.8]} position={[x0 + len * 0.36, y, 0]} material={mats.engine} />
+      {[-1, 1].map((side) => (
+        <Box
+          key={side}
+          size={[len * 0.66, 0.1, w * 0.42]}
+          position={[x0 + len * 0.36, y + 0.1, side * w * 0.22]}
+          rotation={[side * 0.45, 0, 0]}
+          material={mats.engine}
+        />
+      ))}
+      <Box size={[len * 0.28, 0.12, w * 0.5]} position={[x0 + len * 0.86, y - 0.02, 0]} material={mats.graphite} />
+    </group>
+  );
+}
+
 // A historically informed procedural car assembled from an era CarSpec.
 // Component groups use the node names from spec §11.1 so the exploded view
 // can move them independently.
@@ -520,6 +547,8 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
         </group>
       )}
 
+      {!spec.exposedEngine && <EngineBlock spec={spec} mats={mats} />}
+
       {geos.podL && geos.podR && pods && (
         <>
           {([[geos.podL, 1], [geos.podR, -1]] as const).map(([g, side]) => (
@@ -563,15 +592,18 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
       {spec.frontWing && (
         <>
           <Wing wing={spec.frontWing} mats={mats} material={wingPaint} name="front_wing" />
-          {spec.wingPillars &&
-            [-1, 1].map((side) => (
-              <Box
-                key={side}
-                size={[0.14, nose.y - spec.frontWing!.y, 0.01]}
-                position={[spec.frontWing!.x + 0.12, (nose.y + spec.frontWing!.y) / 2, side * 0.09]}
-                material={mats.carbon}
-              />
-            ))}
+          {spec.wingPillars && (
+            <group name="front_wing_supports">
+              {[-1, 1].map((side) => (
+                <Box
+                  key={side}
+                  size={[0.14, nose.y - spec.frontWing!.y, 0.01]}
+                  position={[spec.frontWing!.x + 0.12, (nose.y + spec.frontWing!.y) / 2, side * 0.09]}
+                  material={mats.carbon}
+                />
+              ))}
+            </group>
+          )}
         </>
       )}
 
@@ -584,11 +616,13 @@ export default function CarModel({ spec, helmet }: { spec: CarSpec; helmet?: Hel
             name="rear_wing"
             plateBottom={spec.rearPylon === "endplate" ? 0.3 : undefined}
           />
-          <Box
-            size={[spec.rearPylon === "central" ? 0.1 : 0.16, spec.rearWing.y - 0.4, 0.025]}
-            position={[spec.rearWing.x - 0.05, (spec.rearWing.y + 0.4) / 2, 0]}
-            material={mats.carbon}
-          />
+          <group name="rear_wing_supports">
+            <Box
+              size={[spec.rearPylon === "central" ? 0.1 : 0.16, spec.rearWing.y - 0.4, 0.025]}
+              position={[spec.rearWing.x - 0.05, (spec.rearWing.y + 0.4) / 2, 0]}
+              material={mats.carbon}
+            />
+          </group>
           {spec.beamWing != null && (
             <group name="beam_wing" position={[spec.rearWing.x - 0.08, spec.beamWing, 0]}>
               <Box size={[0.2, 0.025, spec.rearWing.span * 0.9]} position={[0, 0, 0]} rotation={[0, 0, 0.2]} material={mats.carbon} />

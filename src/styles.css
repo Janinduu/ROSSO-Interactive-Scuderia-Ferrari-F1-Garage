@@ -2661,3 +2661,53 @@ footer > button {
     height: 175px;
   }
 }
+/* ------------------------------------------------------------------
+   Machine controls: explode / isolate / reset (spec §12, §15.2)
+   ------------------------------------------------------------------ */
+.machine-controls {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.explode-button,
+.isolate-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--hit);
+  padding: 0 14px;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.3px;
+}
+.explode-button {
+  flex: 1;
+  justify-content: center;
+  background: var(--red);
+  color: #fff;
+  font-weight: 500;
+}
+.explode-button:hover {
+  background: #f04a4f;
+}
+.explode-button[aria-pressed="true"] {
+  background: var(--warm);
+  color: #191a1b;
+}
+.isolate-button {
+  border: 1px solid #ffffff24;
+  color: var(--text-2);
+}
+.isolate-button[aria-pressed="true"] {
+  border-color: var(--red);
+  color: var(--text-1);
+}
+.isolate-button:disabled {
+  opacity: 0.4;
+}
+.hotspot[hidden] {
+  display: none;
+}
+/* The component panel replaces the car label while in The Machine. */
+.experience:has(.engineering-panel) .car-label {
+  display: none;
+}

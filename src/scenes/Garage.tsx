@@ -2,8 +2,11 @@ import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { ContactShadows } from "@react-three/drei";
 import { Vector3 } from "three";
+import type { Group } from "three";
 import CarModel from "../3d/cars/CarModel";
 import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
+import ExplodeRig from "../3d/cars/ExplodeRig";
+import { explodedOffset } from "../3d/cars/explode";
 import type { ResolvedCar } from "../data/cars";
 import type { HelmetDesign } from "../3d/helmets/helmetArt";
 import Corridor from "../3d/bays/Corridor";
@@ -23,9 +26,17 @@ function Set({
   onSelectDriver,
   car,
   helmet,
+  exploded,
+  isolate,
+  selected,
+  engineering,
 }: {
   car: ResolvedCar;
   helmet: HelmetDesign;
+  exploded: boolean;
+  isolate: boolean;
+  selected: PartId | null;
+  engineering: boolean;
   bay: number;
   high: boolean;
   landing: boolean;
@@ -34,6 +45,7 @@ function Set({
   onSelectDriver: (index: number) => void;
 }) {
   const x = bayX(bay);
+  const carRef = useRef<Group>(null);
   return (
     <>
       <color attach="background" args={["#101112"]} />
@@ -67,9 +79,17 @@ function Set({
       <Corridor current={bay} onSelect={onSelectDriver} />
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
       {/* Slightly larger than life so the car holds the plinth. */}
-      <group position={[x, 0.02, 0]} scale={CAR_SCALE}>
+      <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE}>
         <CarModel key={car.id} spec={car.spec} helmet={helmet} />
       </group>
+      <ExplodeRig
+        root={carRef}
+        exploded={exploded}
+        selected={engineering ? selected : null}
+        isolate={isolate}
+        reduced={reduced}
+        carKey={car.id}
+      />
       <ContactShadows
         key={`${bay}-${high}`}
         position={[x, 0.001, 0]}
@@ -103,12 +123,14 @@ export default function Garage(props: {
   onSelectDriver: (index: number) => void;
   car: ResolvedCar;
   helmet: HelmetDesign;
+  exploded: boolean;
+  isolate: boolean;
 }) {
   const [ready, setReady] = useState(false);
   const { available, anchorList } = useMemo(() => {
     const anchors = anchorsFor(props.car.spec);
     const available = parts.filter((p) => anchors[p.id]);
-    return { available, anchorList: available.map((p) => anchors[p.id]!) };
+    return { available, anchorList: available.map((p) => ({ id: p.id, at: anchors[p.id]! })) };
   }, [props.car.spec]);
   const markers = useRef<(HTMLButtonElement | null)[]>([]);
   return (
@@ -162,6 +184,7 @@ export default function Garage(props: {
                 markers.current[i] = el;
               }}
               className={`hotspot ${props.selected === p.id ? "selected" : ""}`}
+              hidden={props.isolate && !!props.selected && props.selected !== p.id}
               aria-label={`Inspect ${p.name}`}
               onClick={() => props.onPart(p.id)}
             >
@@ -195,7 +218,7 @@ function ProjectHotspots({
   markers: { current: (HTMLButtonElement | null)[] };
   bay: number;
   visible: boolean;
-  anchors: [number, number, number][];
+  anchors: { id: PartId; at: [number, number, number] }[];
 }) {
   const { invalidate } = useThree();
   useEffect(() => {
@@ -204,10 +227,18 @@ function ProjectHotspots({
   const point = useMemo(() => new Vector3(), []);
   useFrame(({ camera, size }) => {
     if (!visible) return;
-    anchors.forEach((a, i) => {
+    // Hotspots ride along with their components in the exploded view.
+    anchors.forEach(({ id, at }, i) => {
       const marker = markers.current[i];
       if (!marker) return;
-      point.set(a[0] + bayX(bay), a[1] + 0.02, a[2]).project(camera);
+      const o = explodedOffset(id);
+      point
+        .set(
+          at[0] + o[0] * CAR_SCALE + bayX(bay),
+          at[1] + o[1] * CAR_SCALE + 0.02,
+          at[2] + o[2] * CAR_SCALE,
+        )
+        .project(camera);
       marker.style.left = `${(point.x * 0.5 + 0.5) * size.width}px`;
       marker.style.top = `${(-point.y * 0.5 + 0.5) * size.height}px`;
       marker.style.visibility =

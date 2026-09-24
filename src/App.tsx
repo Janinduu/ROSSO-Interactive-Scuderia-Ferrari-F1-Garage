@@ -9,6 +9,8 @@ import {
   SlidersHorizontal,
   RotateCcw,
   Maximize2,
+  Minimize2,
+  Focus,
   X,
   BookOpen,
   Plus,
@@ -74,6 +76,11 @@ function App() {
     openEngineering,
     leave,
     resetView,
+    exploded,
+    isolate,
+    setExploded,
+    toggleIsolate,
+    focusPart,
   } = useMuseumStore();
   const touring = useTourStore((s) => s.active);
   const tourStep = useTourStore((s) => tourSteps[s.stepIndex]);
@@ -243,7 +250,9 @@ function App() {
                     high={prefs.quality === "high" && !prefs.mobile}
                     landing={!entered}
                     engineering={entered && section === "engineering"}
-                    onPart={setPart}
+                    onPart={focusPart}
+                    exploded={exploded}
+                    isolate={isolate}
                     selected={part}
                     explore={!prefs.mobile}
                     reduced={prefs.reduced}
@@ -470,12 +479,39 @@ function App() {
                     EXPLORE THE MACHINE{" "}
                     <span>{pad(availableParts.length)} COMPONENTS</span>
                   </div>
+                  <div className="machine-controls">
+                    <button
+                      className="explode-button"
+                      aria-pressed={exploded}
+                      onClick={() => setExploded(!exploded)}
+                    >
+                      {exploded ? <Minimize2 size={16} /> : <Maximize2 size={16} />}
+                      {exploded ? "Collapse car" : "Explode car"}
+                    </button>
+                    <button
+                      className="isolate-button"
+                      aria-pressed={isolate}
+                      disabled={!part}
+                      onClick={toggleIsolate}
+                      title="Show only the selected component"
+                    >
+                      <Focus size={15} /> Isolate
+                    </button>
+                    <button
+                      className="icon-button"
+                      aria-label="Reset engineering view"
+                      onClick={resetView}
+                    >
+                      <RotateCcw size={16} />
+                    </button>
+                  </div>
                   <div className="part-list">
                     {availableParts.map((p) => (
                       <button
                         key={p.id}
                         className={part === p.id ? "active" : ""}
-                        onClick={() => setPart(p.id)}
+                        aria-pressed={part === p.id}
+                        onClick={() => focusPart(p.id)}
                       >
                         <span>{pad(parts.indexOf(p) + 1)}</span>
                         {p.name}

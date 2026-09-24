@@ -1,6 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { drivers } from "../../data/drivers";
+import { resolveCar } from "../../data/cars";
 import { useMuseumStore } from "../../stores/museumStore";
 import { useTourStore } from "../../features/guided-tour/tourStore";
+import { anchorsFor, CAR_SCALE } from "../cars/anchors";
+import { explodedOffset } from "../cars/explode";
 import { useCameraStore } from "./cameraStore";
 import { poses } from "./poses";
 
@@ -10,15 +14,34 @@ export function useMuseumCamera() {
   const entered = useMuseumStore((s) => s.entered);
   const bay = useMuseumStore((s) => s.driverIndex);
   const section = useMuseumStore((s) => s.section);
+  const exploded = useMuseumStore((s) => s.exploded);
+  const partFocus = useMuseumStore((s) => s.partFocus);
   const viewResets = useMuseumStore((s) => s.viewResets);
   const touring = useTourStore((s) => s.active);
+  const lastFocus = useRef(partFocus);
   useEffect(() => {
     if (touring) return;
+    const focused = partFocus !== lastFocus.current;
+    lastFocus.current = partFocus;
+    const { part, year } = useMuseumStore.getState();
+    if (entered && section === "engineering" && focused && part) {
+      // Go to the component where it will be once any explode motion ends.
+      const anchor = anchorsFor(resolveCar(drivers[bay], year).spec)[part];
+      if (anchor) {
+        const o = explodedOffset(part, exploded ? 1 : 0);
+        useCameraStore.getState().go(
+          poses.part(bay, anchor.map((v, i) => v + o[i] * CAR_SCALE)),
+        );
+        return;
+      }
+    }
     const pose = !entered
       ? poses.landing(bay)
       : section === "engineering"
-        ? poses.engineering(bay)
+        ? exploded
+          ? poses.engineeringExploded(bay)
+          : poses.engineering(bay)
         : poses.bay(bay);
     useCameraStore.getState().go(pose);
-  }, [entered, bay, section, viewResets, touring]);
+  }, [entered, bay, section, exploded, partFocus, viewResets, touring]);
 }

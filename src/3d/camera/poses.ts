@@ -26,6 +26,8 @@ export const poses = {
   /** Slightly closer and higher for technical study (spec §15.1). */
   // Panned so the car sits left of the component panel.
   engineering: (bay: number) => relative(bay, [-4.2, 3.8, 7], [1.2, 0.4, 0.85]),
+  /** Wider technical framing while the car is exploded. */
+  engineeringExploded: (bay: number) => relative(bay, [-5.4, 4.8, 8.6], [1.1, 0.5, 0.85]),
   /** Pulled back down the corridor, looking into the bay. */
   corridor: (bay: number) => relative(bay, [-14, 4.2, 11], [1, 0.4, -0.5]),
   /** Threshold between the previous bay and this chapter. */
@@ -37,11 +39,15 @@ export const poses = {
   /** Close on the helmet pedestal (front-right of the plinth). */
   helmet: (bay: number) => relative(bay, [2.0, 1.75, 3.4], [3.75, 1.3, 1.5]),
   /** Close study of one component, approached from its end of the car. */
+  // Rear components are seen from the back-wall side, so the helmet pedestal
+  // (front-right of the plinth) never stands between camera and car.
   part: (bay: number, part: readonly number[]) => {
     const rear = part[0] > 0.5;
     return relative(
       bay,
-      [part[0] + (rear ? 3.2 : -3.2), part[1] + 2, part[2] + 3.4],
+      rear
+        ? [part[0] + 2.3, part[1] + 2.3, Math.min(part[2] - 2.9, -2.4)]
+        : [part[0] - 3.2, part[1] + 2, part[2] + 3.4],
       [part[0], part[1], part[2]],
     );
   },
