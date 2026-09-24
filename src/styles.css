@@ -8,6 +8,19 @@
   --line: #ffffff16;
   --warm: #ece8df;
   --heading: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  /* Type scale. 11px is the floor for any text (spec §18). */
+  --fs-2xs: 11px;
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-md: 14px;
+  --fs-base: 15px;
+  --fs-lg: 16px;
+  /* Text contrast on #101112: primary ≈16:1, secondary ≈8:1, tertiary ≈5.5:1. */
+  --text-1: #eeeae3;
+  --text-2: #aeb2b5;
+  --text-3: #8d9296;
+  /* Minimum interactive target. */
+  --hit: 40px;
 }
 * {
   box-sizing: border-box;
@@ -100,10 +113,10 @@ button svg {
   margin-left: 4px;
 }
 .header-caption {
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   line-height: 1.5;
   letter-spacing: 1.4px;
-  color: #8d8e90;
+  color: var(--text-2);
   border-left: 1px solid #454649;
   padding-left: 22px;
 }
@@ -114,7 +127,7 @@ button svg {
   margin: auto;
 }
 .header nav button {
-  font-size: 12px;
+  font-size: var(--fs-base);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -139,7 +152,7 @@ button svg {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.2px;
   color: #aaacae;
 }
@@ -192,11 +205,11 @@ button svg {
     linear-gradient(0deg, #101112 0%, transparent 22%);
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: var(--fs-xs);
   letter-spacing: 1.8px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #929495;
+  color: var(--text-2);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -208,7 +221,7 @@ button svg {
   display: inline-block;
 }
 .eyebrow-secondary {
-  color: #65696c;
+  color: var(--text-3);
   margin-left: 5px;
 }
 .landing-copy {
@@ -232,15 +245,15 @@ button svg {
 }
 .landing-copy h1 span {
   font-style: normal;
-  font-size: 12px;
+  font-size: var(--fs-base);
   letter-spacing: 0;
   position: absolute;
   top: 7px;
   right: -18px;
-  color: #909193;
+  color: var(--text-2);
 }
 .landing-subtitle {
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 2.15px;
   margin: 0;
   color: #b8b7b3;
@@ -254,8 +267,8 @@ button svg {
   margin: 35px 0 14px;
 }
 .intro {
-  color: #929598;
-  font-size: 12px;
+  color: var(--text-2);
+  font-size: var(--fs-base);
   line-height: 1.75;
   margin: 0;
 }
@@ -268,7 +281,7 @@ button svg {
   background: var(--warm);
   color: #191a1b;
   padding: 0 0 0 21px;
-  font-size: 9px;
+  font-size: var(--fs-xs);
   letter-spacing: 1.5px;
   font-weight: 700;
 }
@@ -295,9 +308,9 @@ button svg {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 7px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1px;
-  color: #767a7c;
+  color: var(--text-3);
 }
 .landing-note .status-dot {
   width: 4px;
@@ -325,25 +338,25 @@ button svg {
 }
 .scene-caption p {
   margin: 10px 0 5px;
-  font-size: 14px;
+  font-size: var(--fs-lg);
   font-weight: 400;
 }
 .fine-print {
-  font-size: 10px !important;
-  color: #747a7f !important;
+  font-size: var(--fs-sm) !important;
+  color: var(--text-3) !important;
   line-height: 1.65;
 }
 .scene-caption .fine-print {
-  font-size: 8px !important;
+  font-size: var(--fs-2xs) !important;
 }
 .vertical-label {
   position: absolute;
   right: 2.7%;
   top: 40%;
   writing-mode: vertical-rl;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 3px;
-  color: #74797e;
+  color: var(--text-3);
 }
 .hero-bottom {
   position: absolute;
@@ -352,9 +365,9 @@ button svg {
   bottom: 22px;
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.6px;
-  color: #656a6e;
+  color: var(--text-3);
 }
 .small-red {
   color: var(--red);
@@ -379,7 +392,7 @@ button svg {
   display: flex;
   align-items: center;
   gap: 17px;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.4px;
 }
 .era-grid {
@@ -405,12 +418,12 @@ button svg {
 }
 .era-item > div:first-child svg {
   margin-left: auto;
-  color: #5d6267;
+  color: var(--text-3);
 }
 .era-num {
   font-family: var(--heading);
   font-size: 40px;
-  color: #494c4f;
+  color: #55595c;
   font-weight: 400;
 }
 .era-item h3 {
@@ -422,8 +435,8 @@ button svg {
 .era-bottom {
   display: flex;
   justify-content: space-between;
-  font-size: 7px;
-  color: #72777b;
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
   letter-spacing: 1.5px;
 }
 .era-item:before {
@@ -461,8 +474,8 @@ footer {
 }
 .footer-brand span {
   display: block;
-  font-size: 6px;
-  color: #777b7d;
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
   letter-spacing: 1.8px;
   font-style: normal;
   margin-top: 6px;
@@ -470,8 +483,8 @@ footer {
 }
 footer p {
   max-width: 450px;
-  font-size: 8px;
-  color: #666c70;
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
   line-height: 1.7;
   margin: 0;
 }
@@ -479,7 +492,7 @@ footer > button {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 7px;
+  font-size: var(--fs-2xs);
   letter-spacing: 0.8px;
   white-space: nowrap;
   margin-left: auto;
@@ -489,8 +502,8 @@ footer > button {
   padding: 11px 12px !important;
 }
 .ask-button > span {
-  font-size: 6px;
-  color: #8c9295;
+  font-size: var(--fs-2xs);
+  color: var(--text-2);
   border-left: 1px solid #393c3e;
   padding-left: 8px;
 }
@@ -501,13 +514,13 @@ footer > button {
   position: relative;
   margin: 0 4.2%;
   padding: 24px 0;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.4px;
-  color: #767c80;
+  color: var(--text-3);
 }
 .back-link,
 .directory-link {
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.3px;
   display: flex;
   align-items: center;
@@ -534,8 +547,8 @@ footer > button {
   letter-spacing: -1.8px;
 }
 .driver-meta {
-  font-size: 9px;
-  color: #929598;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -571,9 +584,9 @@ footer > button {
   font-weight: 400;
 }
 .driver-summary {
-  font-size: 12px;
+  font-size: var(--fs-base);
   line-height: 1.85;
-  color: #929699;
+  color: var(--text-2);
   max-width: 322px;
 }
 .stats {
@@ -602,21 +615,21 @@ footer > button {
   line-height: 1;
 }
 .stats span {
-  font-size: 7px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1px;
-  color: #80858a;
+  color: var(--text-2);
 }
 .data-note {
-  font-size: 6px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.3px;
-  color: #686f74;
+  color: var(--text-3);
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 17px 0 0;
 }
 .snapshot-note {
-  font-size: 9px;
+  font-size: var(--fs-xs);
   color: #9f9481;
 }
 .view-tabs {
@@ -625,12 +638,12 @@ footer > button {
   margin-top: 31px;
 }
 .view-tabs button {
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.5px;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #71777d;
+  color: var(--text-3);
   padding: 12px 0;
   border-bottom: 1px solid transparent;
 }
@@ -666,7 +679,7 @@ footer > button {
 }
 .car-label .eyebrow {
   justify-content: flex-end;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
 }
 .car-label h2 {
   font-family: var(--heading);
@@ -676,8 +689,8 @@ footer > button {
   font-weight: 400;
 }
 .car-label > span:last-child {
-  font-size: 8px;
-  color: #767d82;
+  font-size: var(--fs-2xs);
+  color: var(--text-2);
 }
 .scene-tools {
   position: absolute;
@@ -691,9 +704,9 @@ footer > button {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 7px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1px;
-  color: #7f868c;
+  color: var(--text-2);
   margin-right: 12px;
 }
 .icon-button {
@@ -723,8 +736,8 @@ footer > button {
   gap: 20px;
 }
 .timeline-caption {
-  font-size: 10px;
-  color: #656e74;
+  font-size: var(--fs-sm);
+  color: var(--text-3);
 }
 .timeline {
   display: flex;
@@ -754,8 +767,8 @@ footer > button {
   align-items: center;
   gap: 17px;
   padding: 9px 5px 0;
-  font-size: 13px;
-  color: #7c848a;
+  font-size: var(--fs-base);
+  color: var(--text-2);
 }
 .timeline button i {
   width: 5px;
@@ -779,7 +792,7 @@ footer > button {
 }
 .champion-label {
   height: 12px;
-  font-size: 5px;
+  font-size: var(--fs-2xs);
   letter-spacing: 0.7px;
   color: #897d61;
 }
@@ -800,7 +813,7 @@ footer > button {
 .season-year > span {
   display: block;
   font-family: "Barlow", sans-serif;
-  font-size: 6px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.4px;
   color: #ad9471;
   margin-top: 12px;
@@ -816,8 +829,8 @@ footer > button {
   margin: 0 0 9px;
 }
 .season-story p {
-  font-size: 11px;
-  color: #879097;
+  font-size: var(--fs-md);
+  color: var(--text-2);
   line-height: 1.8;
   margin: 0;
 }
@@ -837,9 +850,9 @@ footer > button {
   font-weight: 400;
 }
 .season-numbers span {
-  font-size: 6px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1.1px;
-  color: #727b82;
+  color: var(--text-3);
   white-space: nowrap;
 }
 .round-button {
@@ -874,9 +887,9 @@ footer > button {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--fs-sm);
   padding: 9px 14px;
-  color: #7f888f;
+  color: var(--text-2);
 }
 .mode-toggle button.active {
   background: #333538;
@@ -886,11 +899,11 @@ footer > button {
   display: flex;
   gap: 8px;
   align-items: center;
-  font-size: 9px;
+  font-size: var(--fs-xs);
   letter-spacing: 0.4px;
 }
 .tour-location > span:first-child {
-  color: #686f75;
+  color: var(--text-3);
 }
 .next-controls {
   display: flex;
@@ -901,7 +914,7 @@ footer > button {
   display: flex;
   gap: 23px;
   align-items: center;
-  font-size: 9px;
+  font-size: var(--fs-xs);
   letter-spacing: 1.5px;
 }
 .next-driver svg {
@@ -926,12 +939,12 @@ footer > button {
   border-bottom: 1px solid var(--line);
   padding: 11px 0;
   gap: 10px;
-  font-size: 11px;
-  color: #969da2;
+  font-size: var(--fs-md);
+  color: var(--text-2);
 }
 .race-grid strong {
   color: #cacbc7;
-  font-size: 10px;
+  font-size: var(--fs-sm);
 }
 .race-grid strong.winner {
   color: var(--red);
@@ -949,11 +962,11 @@ footer > button {
 }
 .engineering-panel > .eyebrow {
   justify-content: space-between;
-  font-size: 7px;
+  font-size: var(--fs-2xs);
 }
 .engineering-panel > .eyebrow span {
-  color: #555e65;
-  font-size: 6px;
+  color: var(--text-3);
+  font-size: var(--fs-2xs);
 }
 .part-list {
   display: grid;
@@ -966,14 +979,14 @@ footer > button {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: var(--fs-xs);
   text-align: left;
   padding: 10px 0;
-  color: #8e979e;
+  color: var(--text-2);
 }
 .part-list button span {
-  font-size: 7px;
-  color: #5c666e;
+  font-size: var(--fs-2xs);
+  color: var(--text-3);
 }
 .part-list button svg {
   margin-left: auto;
@@ -991,7 +1004,7 @@ footer > button {
   margin-top: 17px;
 }
 .part-detail .eyebrow {
-  font-size: 6px;
+  font-size: var(--fs-2xs);
   color: #c1484e;
 }
 .part-detail h3 {
@@ -1001,12 +1014,12 @@ footer > button {
   margin: 9px 0;
 }
 .part-detail p {
-  font-size: 10px;
+  font-size: var(--fs-sm);
   line-height: 1.8;
   color: #9da3a8;
 }
 .part-detail .fine-print {
-  font-size: 8px !important;
+  font-size: var(--fs-2xs) !important;
 }
 .hotspot {
   background: #181b1ded;
@@ -1014,7 +1027,7 @@ footer > button {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  font-size: 8px;
+  font-size: var(--fs-2xs);
   box-shadow: 0 0 0 4px #0002;
   color: #f4ede3;
 }
@@ -1061,15 +1074,15 @@ footer > button {
   color: #cbc8c0;
 }
 .flat-scene > span {
-  font-size: 11px;
-  color: #a49a90;
+  font-size: var(--fs-md);
+  color: var(--text-2);
 }
 .flat-scene p {
-  font-size: 11px;
+  font-size: var(--fs-md);
   line-height: 1.8;
   max-width: 260px;
   text-align: center;
-  color: #8b9195;
+  color: var(--text-2);
 }
 .flat-ring {
   position: absolute;
@@ -1086,8 +1099,8 @@ footer > button {
   align-items: center;
   justify-content: center;
   gap: 13px;
-  font-size: 10px;
-  color: #868b90;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
   letter-spacing: 1px;
 }
 .scene-loading > span {
@@ -1131,12 +1144,12 @@ footer > button {
   letter-spacing: -0.7px;
 }
 .modal p {
-  font-size: 12px;
-  color: #9ba1a6;
+  font-size: var(--fs-base);
+  color: var(--text-2);
   line-height: 1.8;
 }
 .modal h3 {
-  font-size: 14px;
+  font-size: var(--fs-lg);
   font-weight: 500;
   margin-top: 24px;
 }
@@ -1155,7 +1168,7 @@ footer > button {
   border: 1px solid #ffffff1e;
   padding: 12px;
   color: var(--warm);
-  font-size: 11px;
+  font-size: var(--fs-md);
   min-width: 0;
 }
 .directory-filters input {
@@ -1179,13 +1192,13 @@ footer > button {
 }
 .driver-number {
   font-family: var(--heading);
-  color: #646e76;
+  color: var(--text-3);
   font-size: 25px;
   width: 30px;
 }
 .directory-list .eyebrow {
-  font-size: 6px;
-  color: #7d858c;
+  font-size: var(--fs-2xs);
+  color: var(--text-2);
 }
 .directory-list h3 {
   font-family: var(--heading);
@@ -1194,12 +1207,12 @@ footer > button {
   margin: 5px 0 0;
 }
 .directory-years {
-  font-size: 9px;
-  color: #8a939b;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
   margin-left: auto;
 }
 .directory-list svg {
-  color: #66717a;
+  color: var(--text-3);
 }
 .directory-list button.selected svg,
 .directory-list button.selected .driver-number {
@@ -1233,7 +1246,7 @@ footer > button {
 }
 .settings-options p {
   margin: 8px 0 0;
-  font-size: 11px;
+  font-size: var(--fs-md);
 }
 .settings-options > button > svg:last-child {
   margin-left: auto;
@@ -1241,7 +1254,7 @@ footer > button {
 }
 .toggle-status {
   margin-left: auto;
-  font-size: 9px;
+  font-size: var(--fs-xs);
   color: var(--red);
 }
 .large-copy {
@@ -1269,12 +1282,12 @@ footer > button {
   font-weight: 400;
 }
 .about-grid span {
-  font-size: 6px;
+  font-size: var(--fs-2xs);
   letter-spacing: 1px;
-  color: #858c92;
+  color: var(--text-2);
 }
 .disclaimer {
-  font-size: 10px !important;
+  font-size: var(--fs-sm) !important;
   border-top: 1px solid var(--line);
   padding-top: 20px;
   margin-top: 25px;
@@ -1284,7 +1297,7 @@ footer > button {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  font-size: 11px;
+  font-size: var(--fs-md);
   line-height: 1.6;
   border-bottom: 1px solid var(--line);
   padding: 14px 0;
@@ -1301,7 +1314,7 @@ footer > button {
   justify-content: space-between;
   text-align: left;
   gap: 15px;
-  font-size: 12px;
+  font-size: var(--fs-base);
 }
 .curated-answer {
   padding: 20px;
@@ -1313,7 +1326,7 @@ footer > button {
   margin-bottom: 0;
 }
 .curated-answer .eyebrow {
-  font-size: 7px;
+  font-size: var(--fs-2xs);
 }
 @keyframes arrive {
   from {
@@ -1338,7 +1351,7 @@ footer > button {
     margin-top: 40px;
   }
   .intro {
-    font-size: 14px;
+    font-size: var(--fs-lg);
   }
   .enter-button {
     margin-top: 36px;
@@ -1351,7 +1364,7 @@ footer > button {
     max-width: 500px;
   }
   .driver-summary {
-    font-size: 13px;
+    font-size: var(--fs-base);
     max-width: 340px;
   }
   .driver-copy h1 {
@@ -1386,11 +1399,11 @@ footer > button {
     display: none;
   }
   .landing-subtitle {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     letter-spacing: 1.6px;
   }
   .landing-note {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     letter-spacing: 0.5px;
   }
   .scene {
@@ -1408,7 +1421,7 @@ footer > button {
   }
   .driver-summary {
     max-width: 280px;
-    font-size: 11px;
+    font-size: var(--fs-md);
   }
   .in-garage .scene {
     left: 17%;
@@ -1437,7 +1450,7 @@ footer > button {
     font-size: 21px;
   }
   .season-story p {
-    font-size: 10px;
+    font-size: var(--fs-sm);
   }
   .tour-location {
     display: none;
@@ -1449,7 +1462,7 @@ footer > button {
     max-width: 350px;
   }
   footer > button {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .ask-button {
     padding: 9px !important;
@@ -1484,7 +1497,7 @@ footer > button {
     gap: 15px;
   }
   .header nav button {
-    font-size: 10px;
+    font-size: var(--fs-sm);
     padding: 26px 0;
   }
   .header nav button:first-child,
@@ -1527,7 +1540,7 @@ footer > button {
     width: 100%;
   }
   .landing-copy .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
     letter-spacing: 1.3px;
   }
   .landing-copy h1 {
@@ -1536,11 +1549,11 @@ footer > button {
     margin: 24px 0 14px;
   }
   .landing-copy h1 span {
-    font-size: 9px;
+    font-size: var(--fs-xs);
     right: -13px;
   }
   .landing-subtitle {
-    font-size: 5.8px;
+    font-size: var(--fs-2xs);
     letter-spacing: 1.15px;
   }
   .landing-copy h2 {
@@ -1553,7 +1566,7 @@ footer > button {
   .intro {
     position: absolute;
     top: 628px;
-    font-size: 10px;
+    font-size: var(--fs-sm);
   }
   .enter-button {
     position: absolute;
@@ -1578,17 +1591,17 @@ footer > button {
     right: auto;
   }
   .scene-caption p {
-    font-size: 9px;
+    font-size: var(--fs-xs);
     margin-top: 8px;
   }
   .scene-caption .eyebrow {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .scene-caption .fine-print {
-    font-size: 6px !important;
+    font-size: var(--fs-2xs) !important;
   }
   .vertical-label {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     top: 40%;
     right: 5%;
     letter-spacing: 2px;
@@ -1609,10 +1622,10 @@ footer > button {
     max-width: 200px;
   }
   .section-heading .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .text-link {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     gap: 6px;
     margin-top: 23px;
     max-width: 90px;
@@ -1642,7 +1655,7 @@ footer > button {
     font-size: 29px;
   }
   .era-item > .eyebrow {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     padding-left: 46px;
   }
   .era-item h3 {
@@ -1652,10 +1665,10 @@ footer > button {
   }
   .era-bottom {
     padding-left: 46px;
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .era-item > div:first-child .eyebrow {
-    font-size: 8px;
+    font-size: var(--fs-2xs);
   }
   .era-item > div:first-child svg {
     width: 16px;
@@ -1674,13 +1687,13 @@ footer > button {
     order: 4;
     width: 100%;
     max-width: none;
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   footer > button {
     margin: 0;
   }
   footer .ask-button {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .in-garage .experience {
     height: auto;
@@ -1690,14 +1703,14 @@ footer > button {
   .garage-topline {
     margin: 0 6%;
     padding: 19px 0;
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .garage-topline > span {
     display: none;
   }
   .back-link,
   .directory-link {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     letter-spacing: 1px;
   }
   .driver-copy {
@@ -1705,7 +1718,7 @@ footer > button {
     max-width: none;
   }
   .driver-copy > .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .driver-copy h1 {
     font-size: 31px;
@@ -1716,7 +1729,7 @@ footer > button {
     letter-spacing: -1px;
   }
   .driver-meta {
-    font-size: 8px;
+    font-size: var(--fs-2xs);
     gap: 8px;
   }
   .tagline {
@@ -1724,7 +1737,7 @@ footer > button {
     margin-top: 22px;
   }
   .driver-summary {
-    font-size: 11px;
+    font-size: var(--fs-md);
     max-width: 100%;
     margin-bottom: 0;
     line-height: 1.8;
@@ -1740,17 +1753,17 @@ footer > button {
     padding-left: 24px;
   }
   .stats span {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .data-note {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     padding-top: 13px;
   }
   .view-tabs {
     margin-top: 21px;
   }
   .view-tabs button {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .in-garage .scene {
     left: -22%;
@@ -1773,13 +1786,13 @@ footer > button {
     bottom: 66px;
   }
   .car-label .eyebrow {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .car-label h2 {
     font-size: 27px;
   }
   .car-label > span:last-child {
-    font-size: 6px;
+    font-size: var(--fs-2xs);
   }
   .scene-tools {
     bottom: 14px;
@@ -1789,7 +1802,7 @@ footer > button {
   }
   .scene-tools > span {
     margin-right: auto;
-    font-size: 6px;
+    font-size: var(--fs-2xs);
     gap: 7px;
     letter-spacing: 0.6px;
   }
@@ -1809,10 +1822,10 @@ footer > button {
     align-items: flex-start;
   }
   .timeline-heading .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .timeline-caption {
-    font-size: 8px;
+    font-size: var(--fs-2xs);
   }
   .timeline button {
     min-width: 55px;
@@ -1831,7 +1844,7 @@ footer > button {
     align-self: flex-start;
   }
   .season-year > span {
-    font-size: 5px;
+    font-size: var(--fs-2xs);
     letter-spacing: 0.7px;
   }
   .season-story {
@@ -1841,7 +1854,7 @@ footer > button {
     font-size: 22px;
   }
   .season-story p {
-    font-size: 10px;
+    font-size: var(--fs-sm);
   }
   .season-numbers {
     margin-left: 91px;
@@ -1864,7 +1877,7 @@ footer > button {
     padding: 17px 0 23px;
   }
   .mode-toggle button {
-    font-size: 8px;
+    font-size: var(--fs-2xs);
     padding: 8px 10px;
     gap: 7px;
   }
@@ -1879,7 +1892,7 @@ footer > button {
     height: 28px;
   }
   .next-driver {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
     gap: 9px;
     letter-spacing: 0.7px;
   }
@@ -1893,7 +1906,7 @@ footer > button {
   .race-results > .eyebrow {
     align-items: flex-start;
     flex-direction: column;
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .engineering-panel {
     position: relative;
@@ -1915,27 +1928,27 @@ footer > button {
   .hotspot {
     width: 23px;
     height: 23px;
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .part-list {
     grid-template-columns: repeat(3, 1fr);
     gap: 0 11px;
   }
   .part-list button {
-    font-size: 8px;
+    font-size: var(--fs-2xs);
     gap: 4px;
   }
   .part-list button svg {
     display: none;
   }
   .part-detail p {
-    font-size: 11px;
+    font-size: var(--fs-md);
   }
   .part-detail .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .part-detail .fine-print {
-    font-size: 8px !important;
+    font-size: var(--fs-2xs) !important;
   }
   .modal {
     padding: 24px;
@@ -1945,17 +1958,17 @@ footer > button {
     font-size: 35px;
   }
   .modal-head .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .modal p {
-    font-size: 11px;
+    font-size: var(--fs-md);
   }
   .directory-filters {
     gap: 8px;
   }
   .directory-filters input,
   .directory-filters select {
-    font-size: 10px;
+    font-size: var(--fs-sm);
     padding: 11px 9px;
   }
   .directory-list button {
@@ -1970,21 +1983,21 @@ footer > button {
     font-size: 22px;
   }
   .directory-years {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
     max-width: 72px;
   }
   .directory-list svg {
     width: 15px;
   }
   .directory-list .eyebrow {
-    font-size: 5px;
+    font-size: var(--fs-2xs);
   }
   .settings-options > button {
     padding: 15px;
     gap: 13px;
   }
   .settings-options p {
-    font-size: 10px;
+    font-size: var(--fs-sm);
   }
   .large-copy {
     font-size: 26px !important;
@@ -1996,11 +2009,11 @@ footer > button {
     font-size: 60px;
   }
   .flat-scene p {
-    font-size: 9px;
+    font-size: var(--fs-xs);
     max-width: 230px;
   }
   .flat-scene > .eyebrow {
-    font-size: 7px;
+    font-size: var(--fs-2xs);
   }
   .focus-mode .experience {
     height: calc(100svh - 73px);
@@ -2076,12 +2089,12 @@ footer > button {
   padding: 20px 0 4px;
 }
 .exhibit-context p {
-  font-size: 11px;
+  font-size: var(--fs-md);
   color: #a1a6a9;
   line-height: 1.9;
 }
 .exhibit-context .eyebrow {
-  font-size: 8px;
+  font-size: var(--fs-2xs);
 }
 @media (max-width: 760px) {
   .exhibit-context {
@@ -2089,6 +2102,223 @@ footer > button {
     gap: 8px;
   }
   .exhibit-context p {
-    font-size: 10px;
+    font-size: var(--fs-sm);
+  }
+}
+/* ------------------------------------------------------------------
+   Readability pass (spec §18, §33): actionable text and hit targets.
+   Declared last so it also governs the responsive overrides above.
+   ------------------------------------------------------------------ */
+.header nav button {
+  font-size: var(--fs-md);
+}
+.settings-button {
+  font-size: var(--fs-xs);
+  min-height: var(--hit);
+}
+.back-link,
+.directory-link,
+.view-tabs button,
+.text-link,
+.next-driver,
+.enter-button {
+  font-size: var(--fs-sm);
+  letter-spacing: 1.2px;
+  min-height: var(--hit);
+}
+.back-link,
+.directory-link {
+  color: var(--text-2);
+}
+.back-link:hover,
+.directory-link:hover {
+  color: var(--text-1);
+}
+.view-tabs button {
+  color: var(--text-2);
+}
+.data-note {
+  font-size: var(--fs-2xs);
+  color: var(--text-2);
+  min-height: 32px;
+}
+footer > button {
+  font-size: var(--fs-xs);
+  min-height: var(--hit);
+}
+.ask-button > span {
+  font-size: var(--fs-2xs);
+}
+.icon-button,
+.round-button,
+.scene-tools .icon-button,
+.next-controls > .icon-button {
+  width: var(--hit);
+  height: var(--hit);
+}
+.mode-toggle button {
+  min-height: 36px;
+}
+.timeline button {
+  font-size: var(--fs-base);
+  min-height: var(--hit);
+}
+.champion-label {
+  letter-spacing: 0.6px;
+}
+.driver-summary,
+.season-story p,
+.part-detail p,
+.exhibit-context p {
+  font-size: var(--fs-base);
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.driver-meta {
+  font-size: var(--fs-sm);
+}
+.stats span,
+.season-numbers span,
+.about-grid span {
+  letter-spacing: 1px;
+}
+.engineering-panel {
+  width: 340px;
+}
+.part-list button {
+  font-size: var(--fs-sm);
+  min-height: var(--hit);
+}
+.part-list button span {
+  font-size: var(--fs-2xs);
+}
+.hotspot {
+  width: 32px;
+  height: 32px;
+  font-size: var(--fs-xs);
+}
+.directory-list .eyebrow,
+.directory-years {
+  font-size: var(--fs-xs);
+}
+.race-grid > div {
+  font-size: var(--fs-md);
+}
+.race-grid strong {
+  font-size: var(--fs-sm);
+}
+@media (max-width: 1100px) {
+  .engineering-panel {
+    width: 300px;
+  }
+}
+@media (max-width: 760px) {
+  .back-link,
+  .directory-link,
+  .view-tabs button,
+  .next-driver {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.8px;
+  }
+  .text-link {
+    max-width: 120px;
+  }
+  .engineering-panel {
+    width: auto;
+  }
+  .part-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Layout adjustments so the larger type fits a 1366×768 laptop. */
+.driver-copy {
+  padding-top: 26px;
+  max-width: 480px;
+}
+.driver-copy h1 {
+  margin: 16px 0 14px;
+}
+.tagline {
+  margin: 22px 0 10px;
+}
+.driver-summary {
+  max-width: 380px;
+  margin: 0;
+}
+.stats {
+  margin-top: 22px;
+  max-width: 360px;
+}
+.view-tabs {
+  margin-top: 14px;
+}
+.in-garage .experience {
+  height: auto;
+  min-height: max(640px, calc(100svh - 150px));
+  max-height: none;
+  padding-bottom: 24px;
+}
+.engineering-panel {
+  top: 72px;
+}
+.engineering-panel > .eyebrow {
+  white-space: nowrap;
+  letter-spacing: 1.2px;
+}
+.timeline button {
+  min-width: 64px;
+}
+.champion-label {
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  /* On phones the car sits in the flow below the story instead of behind it. */
+  .in-garage .experience {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .in-garage .garage-topline {
+    order: 1;
+  }
+  .in-garage .driver-copy {
+    order: 2;
+  }
+  .in-garage .scene {
+    order: 3;
+    position: relative;
+    inset: auto;
+    height: 355px;
+    margin: 0 -22%;
+  }
+  .in-garage .car-label {
+    order: 4;
+    position: static;
+    margin: -60px 6% 0 auto;
+  }
+  .in-garage .scene-tools {
+    order: 5;
+    position: static;
+    margin: 16px 6% 20px;
+  }
+  .in-garage .engineering-panel {
+    order: 6;
+    margin: 0 6% 24px;
+  }
+  .in-garage .experience:has(.engineering-panel) {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .in-garage .experience:has(.engineering-panel) .scene-tools {
+    display: flex;
+  }
+  .scene-caption {
+    display: none;
+  }
+  .text-link {
+    max-width: none;
+    white-space: nowrap;
+    margin-top: 16px;
   }
 }
