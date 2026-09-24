@@ -1,4 +1,5 @@
 import type { Driver } from "../../data/drivers";
+import { drawFlag } from "./flags";
 
 // 2D artwork for the bay boards and chapter markers, painted into canvas
 // textures. Kept separate from React so the layout can be tuned in one place.
@@ -146,7 +147,6 @@ export function drawBoard(
     portrait,
     focal,
     zoom = 1,
-    emblem,
     state,
   }: {
     driver: Driver;
@@ -154,7 +154,6 @@ export function drawBoard(
     portrait: HTMLImageElement | null;
     focal: [number, number];
     zoom?: number;
-    emblem: HTMLImageElement | null;
     state: BayState;
   },
 ) {
@@ -186,14 +185,6 @@ export function drawBoard(
   ctx.fillStyle = "rgba(255,255,255,0.035)";
   ctx.fillText(driver.number, W - 20, 330);
 
-  if (emblem) {
-    const box = 86;
-    const s = Math.min(box / emblem.width, box / emblem.height);
-    const ew = emblem.width * s;
-    const eh = emblem.height * s;
-    ctx.drawImage(emblem, right - ew, 30 + (box - eh) / 2, ew, eh);
-  }
-
   ctx.textAlign = "left";
   ctx.fillStyle = "#d3323a";
   ctx.fillRect(x0, 52, 34, 3);
@@ -217,16 +208,17 @@ export function drawBoard(
   do {
     ctx.font = `600 ${size}px ${HEADING}`;
     size -= 4;
-  } while (ctx.measureText(last).width > width - (emblem ? 96 : 0) && size > 60);
+  } while (ctx.measureText(last).width > width && size > 60);
   ctx.fillStyle = "#f4f0e9";
   ctx.fillText(last, x0 - 4, 222);
 
+  const flagged = drawFlag(ctx, driver.flag, x0, 244, 33, 22);
   ctx.font = `500 22px ${BODY}`;
   tracking(ctx, 2.5);
   ctx.fillStyle = "#b5b9bc";
   ctx.fillText(
     `${driver.nationality.toUpperCase()}  ·  FERRARI ${driver.ferrariYears}`,
-    x0,
+    x0 + (flagged ? 46 : 0),
     262,
   );
   ctx.fillStyle = "#ffffff1c";
@@ -294,4 +286,41 @@ export function drawChapter(
   ctx.fillText(title.toUpperCase(), 0, 0);
   ctx.restore();
   tracking(ctx, 0);
+}
+
+export const SIGN_W = 1024;
+export const SIGN_H = 256;
+
+// The team wordmark as a backlit wall sign: a warm-white core with a red halo,
+// painted once and shared by every bay.
+export function drawWordmark(ctx: CanvasRenderingContext2D, mark: HTMLImageElement) {
+  const W = SIGN_W;
+  const H = SIGN_H;
+  ctx.clearRect(0, 0, W, H);
+  const aspect = mark.width / mark.height || 4.5;
+  const mw = Math.min(W * 0.78, H * 0.62 * aspect);
+  const mh = mw / aspect;
+  const mx = (W - mw) / 2;
+  const my = (H - mh) / 2;
+  // Tint the mark on a scratch canvas.
+  const tint = (color: string) => {
+    const c = document.createElement("canvas");
+    c.width = W;
+    c.height = H;
+    const t = c.getContext("2d")!;
+    t.drawImage(mark, mx, my, mw, mh);
+    t.globalCompositeOperation = "source-in";
+    t.fillStyle = color;
+    t.fillRect(0, 0, W, H);
+    return c;
+  };
+  ctx.save();
+  ctx.filter = "blur(18px)";
+  ctx.globalAlpha = 0.9;
+  ctx.drawImage(tint("#e3202b"), 0, 0);
+  ctx.filter = "blur(5px)";
+  ctx.globalAlpha = 0.8;
+  ctx.drawImage(tint("#ff4a3d"), 0, 0);
+  ctx.restore();
+  ctx.drawImage(tint("#fff4e8"), 0, 0);
 }

@@ -774,10 +774,14 @@ function App() {
             <>
               <h3>Portrait</h3>
               <div className="source-list">
-                <a href={portrait.credit.sourceUrl} target="_blank" rel="noreferrer">
-                  {portrait.credit.attribution}
-                  <ExternalLink size={14} />
-                </a>
+                {portrait.credit.sourceUrl ? (
+                  <a href={portrait.credit.sourceUrl} target="_blank" rel="noreferrer">
+                    {portrait.credit.attribution}
+                    <ExternalLink size={14} />
+                  </a>
+                ) : (
+                  <p>{portrait.credit.attribution}</p>
+                )}
               </div>
             </>
           )}

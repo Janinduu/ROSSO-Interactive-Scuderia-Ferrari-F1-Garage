@@ -19,6 +19,7 @@ import { drivers, eras } from "../../data/drivers";
 import { helmetPalette } from "../../data/helmets";
 import { bayX } from "../camera/poses";
 import { BayBoard, ChapterMarker } from "./BayBoard";
+import { WallSign, useWallSignTextures } from "./WallSign";
 import type { BayState } from "./boardArt";
 
 type V3 = [number, number, number];
@@ -184,6 +185,7 @@ export default function Corridor({
   onSelect: (index: number) => void;
 }) {
   const kit = useBayKit();
+  const signs = useWallSignTextures();
   const [hovered, setHovered] = useState<number | null>(null);
   const stateOf = (i: number): BayState =>
     i === current ? "selected" : i === hovered ? "hover" : "idle";
@@ -350,6 +352,7 @@ export default function Corridor({
               onPointerOut={out(i)}
               onClick={click(i)}
             />
+            {signs && <WallSign textures={signs} state={stateOf(i)} />}
           </group>
         ) : null,
       )}

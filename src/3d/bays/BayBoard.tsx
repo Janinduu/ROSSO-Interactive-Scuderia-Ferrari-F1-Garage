@@ -3,7 +3,7 @@ import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import { CanvasTexture, SRGBColorSpace } from "three";
 import type { Driver } from "../../data/drivers";
-import { getPortrait, teamEmblemSrc } from "../../data/media";
+import { getPortrait } from "../../data/media";
 import {
   BOARD_H,
   BOARD_W,
@@ -16,7 +16,7 @@ import {
 } from "./boardArt";
 import type { BayState } from "./boardArt";
 
-function useCanvasTexture(width: number, height: number) {
+export function useCanvasTexture(width: number, height: number) {
   const texture = useMemo(() => {
     const canvas = document.createElement("canvas");
     canvas.width = width;
@@ -56,9 +56,8 @@ export function BayBoard({
   const texture = useCanvasTexture(BOARD_W, BOARD_H);
   const [media, setMedia] = useState<{
     portrait: HTMLImageElement | null;
-    emblem: HTMLImageElement | null;
     fonts: boolean;
-  }>({ portrait: null, emblem: null, fonts: false });
+  }>({ portrait: null, fonts: false });
   const record = getPortrait(driver.id);
 
   useEffect(() => {
@@ -66,9 +65,8 @@ export function BayBoard({
     Promise.all([
       loadBoardFonts(),
       record ? loadImage(record.src) : null,
-      teamEmblemSrc ? loadImage(teamEmblemSrc) : null,
-    ]).then(([, portrait, emblem]) => {
-      if (live) setMedia({ portrait, emblem, fonts: true });
+    ]).then(([, portrait]) => {
+      if (live) setMedia({ portrait, fonts: true });
     });
     return () => {
       live = false;
@@ -83,7 +81,6 @@ export function BayBoard({
       portrait: media.portrait,
       focal: record?.focalPoint ?? [0.5, 0.3],
       zoom: record?.zoom,
-      emblem: media.emblem,
       state,
     });
     texture.needsUpdate = true;
