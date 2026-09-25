@@ -54,7 +54,7 @@ import { helmetDesignFor } from "./data/helmetDesigns";
 import { careerTitles, statSources, titleRuns } from "./data/careerStats";
 import { storySources } from "./data/seasonStories";
 import { anchorsFor } from "./3d/cars/anchors";
-import { useMuseumStore } from "./stores/museumStore";
+import { SCHUMACHER_INDEX, useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
@@ -75,6 +75,9 @@ type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
 const disclaimer =
   "ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.";
 const pad = (n: number) => String(n).padStart(2, "0");
+/** Every visit opens on Michael Schumacher and the F2004. */
+const heroIndex = SCHUMACHER_INDEX;
+const HERO_YEAR = 2004;
 const formatCutoff = (iso: string) =>
   new Date(`${iso}T12:00:00Z`).toLocaleDateString("en-GB", {
     day: "numeric",
@@ -449,16 +452,40 @@ function App() {
                   BUILT FOR THE TIFOSI
                 </div>
               </div>
-              <div className="scene-caption">
+              {/* The museum opens on its legend: Schumacher, the F2004 and his numbers in red. */}
+              <button
+                className="scene-caption hero-legend"
+                onClick={() => {
+                  selectDriver(heroIndex);
+                  setYear(HERO_YEAR);
+                }}
+              >
                 <span className="caption-rule" />
                 <div>
-                  <span className="eyebrow">A STUDY IN SPEED</span>
-                  <p>Engineering becomes emotion.</p>
+                  <span className="eyebrow">THE LEGEND IN RED</span>
+                  <p>{drivers[heroIndex].name}</p>
+                  <dl className="hero-stats">
+                    <div>
+                      <dt>Wins</dt>
+                      <dd>{getTotals(drivers[heroIndex].id).wins}</dd>
+                    </div>
+                    <div>
+                      <dt>Titles</dt>
+                      <dd>{drivers[heroIndex].championshipsWithFerrari.length}</dd>
+                    </div>
+                    <div>
+                      <dt>Poles</dt>
+                      <dd>{drivers[heroIndex].polesWithFerrari ?? "—"}</dd>
+                    </div>
+                  </dl>
                   <span className="fine-print">
-                    Original procedural car · inspired by the V10 era
+                    {resolveCar(drivers[heroIndex], HERO_YEAR).officialName} · {HERO_YEAR} · with Ferrari, {drivers[heroIndex].ferrariYears}
+                  </span>
+                  <span className="hero-enter">
+                    Enter his bay <ArrowRight size={14} />
                   </span>
                 </div>
-              </div>
+              </button>
               <div className="vertical-label">PASSIONE. SENZA FINE.</div>
               <div className="hero-bottom">
                 <span>SCROLL TO DISCOVER THE COLLECTION</span>

@@ -4749,3 +4749,60 @@ footer > button {
     display: none;
   }
 }
+/* The legend on the landing page. */
+.hero-legend {
+  text-align: left;
+  pointer-events: auto;
+  padding: 0;
+}
+.hero-legend p {
+  font-family: var(--heading);
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 6px 0 8px;
+}
+.hero-stats {
+  display: flex;
+  gap: 22px;
+  margin: 0 0 8px;
+}
+.hero-stats dt {
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.hero-stats dd {
+  margin: 0;
+  font-family: var(--heading);
+  font-size: 30px;
+  line-height: 1;
+  color: #ffd9d4;
+}
+.hero-enter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: var(--fs-xs);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-1);
+}
+.hero-enter svg {
+  color: var(--red);
+  transition: transform 0.25s;
+}
+.hero-legend:hover .hero-enter svg {
+  transform: translateX(4px);
+}
+.hero-legend:hover p {
+  color: #fff;
+}
+.hero-legend > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

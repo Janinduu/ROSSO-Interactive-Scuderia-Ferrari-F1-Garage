@@ -61,8 +61,18 @@ export const useMuseumStore = create<MuseumState>((set) => ({
   enter: () => set({ entered: true }),
   enterRoom: (room) =>
     set({ entered: true, room, section: "story", part: null, exploded: false, isolate: false }),
+  // The home page always shows the legend: Schumacher's bay and the F2004.
   leave: () =>
-    set({ entered: false, room: "garage", section: "story", part: null, exploded: false, isolate: false }),
+    set({
+      entered: false,
+      room: "garage",
+      driverIndex: SCHUMACHER_INDEX,
+      year: 2004,
+      section: "story",
+      part: null,
+      exploded: false,
+      isolate: false,
+    }),
   selectDriver: (index) =>
     set((s) => ({
       entered: true,
