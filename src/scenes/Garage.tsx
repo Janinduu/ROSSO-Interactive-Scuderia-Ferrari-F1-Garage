@@ -6,6 +6,9 @@ import type { Group } from "three";
 import CarModel from "../3d/cars/CarModel";
 import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
 import ExplodeRig from "../3d/cars/ExplodeRig";
+import EvolutionRoom from "../3d/rooms/EvolutionRoom";
+import { milestones, milestoneAt, useEvolutionStore, yearAt } from "../features/evolution/evolution";
+import { useMuseumStore } from "../stores/museumStore";
 import { explodedOffset } from "../3d/cars/explode";
 import type { ResolvedCar } from "../data/cars";
 import type { HelmetDesign } from "../3d/helmets/helmetArt";
@@ -46,6 +49,11 @@ function Set({
 }) {
   const x = bayX(bay);
   const carRef = useRef<Group>(null);
+  const inEvolution = useMuseumStore((s) => s.entered && s.room === "evolution");
+  // Subscribe to the year and car only, not the clock, so the scene
+  // re-renders about once a second while the sequence plays.
+  const evoYear = useEvolutionStore((s) => yearAt(s.elapsed));
+  const milestone = milestones[useEvolutionStore((s) => milestoneAt(s.elapsed))];
   return (
     <>
       <color attach="background" args={["#101112"]} />
@@ -79,14 +87,18 @@ function Set({
       <Corridor current={bay} onSelect={onSelectDriver} />
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
       {/* Slightly larger than life so the car holds the plinth. */}
-      <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE}>
-        <CarModel
-          key={car.id}
-          spec={car.spec}
-          helmet={helmet}
-          livery={car.livery}
-          number={car.raceNumber}
-        />
+      <EvolutionRoom year={evoYear} milestone={milestone} active={inEvolution} reduced={reduced} />
+      {/* One detailed car at a time: the bay car steps aside in the Evolution room. */}
+      <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE} visible={!inEvolution}>
+        {!inEvolution && (
+          <CarModel
+            key={car.id}
+            spec={car.spec}
+            helmet={helmet}
+            livery={car.livery}
+            number={car.raceNumber}
+          />
+        )}
       </group>
       <ExplodeRig
         root={carRef}

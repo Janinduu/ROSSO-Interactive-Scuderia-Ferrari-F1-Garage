@@ -168,7 +168,7 @@ const eraFamilies: Record<Exclude<FamilyId, "active26">, CarSpec> = {
   wing70s: {
     ...base,
     family: "wing70s",
-    familyLabel: "Winged flat-12 era car, 1970s",
+    familyLabel: "Winged ground-effect era car, 1970s–early 1980s",
     frontAxle: -1.2,
     rearAxle: 1.32,
     trackF: 0.76,

@@ -2799,3 +2799,176 @@ footer > button {
     font-size: var(--fs-xs);
   }
 }
+/* ------------------------------------------------------------------
+   The Evolution room (75 years in 75 seconds)
+   ------------------------------------------------------------------ */
+.evolution-panel {
+  position: relative;
+  z-index: 5;
+  padding: 26px 0 0 6.7%;
+  max-width: 470px;
+  animation: arrive 0.5s ease both;
+}
+.evolution-back {
+  margin-bottom: 18px;
+}
+.evolution-panel h1 {
+  font-family: var(--heading);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.02;
+  margin: 14px 0 18px;
+}
+.evolution-panel h1 strong {
+  display: block;
+  font-weight: 600;
+  font-size: clamp(44px, 4.4vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+.evolution-now {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+.evolution-year {
+  font-family: var(--heading);
+  font-size: 58px;
+  line-height: 1;
+  color: #e7c9a2;
+  min-width: 118px;
+  font-variant-numeric: tabular-nums;
+}
+.evolution-now h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 26px;
+  margin: 0 0 2px;
+}
+.evolution-now p {
+  margin: 0;
+  font-size: var(--fs-md);
+  color: var(--text-2);
+}
+.evolution-controls {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+.evolution-controls .tour-primary {
+  margin-left: 0;
+}
+.evolution-progress {
+  height: 2px;
+  background: #ffffff1c;
+  overflow: hidden;
+}
+.evolution-progress b {
+  display: block;
+  height: 100%;
+  background: var(--red);
+  transform-origin: left;
+}
+.evolution-strip {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+.evolution-strip button {
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  min-height: 44px;
+  border: 1px solid transparent;
+  font-size: var(--fs-2xs);
+  color: var(--text-2);
+  line-height: 1.25;
+}
+.evolution-strip button span {
+  display: block;
+  font-family: var(--heading);
+  font-size: var(--fs-lg);
+  color: var(--text-1);
+}
+.evolution-strip button:hover {
+  border-color: #ffffff24;
+}
+.evolution-strip button[aria-current="true"] {
+  border-color: var(--red);
+  background: #3a121640;
+}
+.evolution-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 24px;
+  width: 100%;
+  text-align: left;
+  padding: 22px 26px;
+  margin-bottom: 26px;
+  border: 1px solid #ffffff1a;
+  background: linear-gradient(90deg, #2a0f12, #141619 60%);
+}
+.evolution-card .eyebrow {
+  grid-column: 1;
+}
+.evolution-card strong {
+  grid-column: 1;
+  font-family: var(--heading);
+  font-size: 34px;
+  font-weight: 500;
+}
+.evolution-card > span:not(.eyebrow) {
+  grid-column: 1;
+  font-size: var(--fs-md);
+  color: var(--text-2);
+}
+.evolution-card svg {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  color: var(--red);
+}
+.evolution-card:hover {
+  border-color: var(--red);
+}
+@media (max-width: 760px) {
+  .in-garage .experience:has(.evolution-panel) {
+    display: flex;
+    flex-direction: column;
+  }
+  .evolution-panel {
+    order: 2;
+    padding: 20px 6% 0;
+    max-width: none;
+  }
+  .evolution-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .evolution-card strong {
+    font-size: 26px;
+  }
+}
+@media (max-width: 760px) {
+  /* On phones: headline and controls, then the room, then the car list. */
+  .evolution-panel {
+    display: contents;
+  }
+  .evolution-panel > * {
+    order: 2;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .evolution-panel > .evolution-back {
+    margin-top: 16px;
+  }
+  .evolution-panel > .evolution-strip {
+    order: 4;
+    margin-top: 18px;
+  }
+}

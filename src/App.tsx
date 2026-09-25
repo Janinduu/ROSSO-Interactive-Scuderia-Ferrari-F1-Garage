@@ -55,6 +55,7 @@ import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
+import EvolutionPanel from "./features/evolution/EvolutionPanel";
 const Garage = lazy(() => import("./scenes/Garage"));
 const SeasonArchive = lazy(() => import("./components/SeasonArchive"));
 type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
@@ -102,6 +103,8 @@ function App() {
     setExploded,
     toggleIsolate,
     focusPart,
+    room,
+    enterRoom,
   } = useMuseumStore();
   const touring = useTourStore((s) => s.active);
   const tourStep = useTourStore((s) => tourSteps[s.stepIndex]);
@@ -260,13 +263,23 @@ function App() {
         </span>
         <nav aria-label="Main navigation">
           <button
-            className={entered && section === "story" ? "active" : ""}
+            className={entered && room === "garage" && section === "story" ? "active" : ""}
             onClick={() => {
               enter();
               openStory();
             }}
           >
             The garage
+          </button>
+          <button
+            className={entered && room === "evolution" ? "active" : ""}
+            onClick={() => {
+              stopTour();
+              enterRoom("evolution");
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }}
+          >
+            Evolution
           </button>
           <button onClick={() => setDialog("directory")}>Driver hall</button>
           <button
@@ -409,6 +422,8 @@ function App() {
                 </span>
               </div>
             </>
+          ) : room === "evolution" ? (
+            <EvolutionPanel onExit={openStory} />
           ) : (
             <>
               <div className="garage-topline">
@@ -662,6 +677,24 @@ function App() {
                 MEET THE DRIVERS <ArrowUpRight size={17} />
               </button>
             </div>
+            <button
+              className="evolution-card"
+              onClick={() => {
+                enterRoom("evolution");
+                window.scrollTo({ top: 0, behavior: "instant" });
+              }}
+            >
+              <span className="eyebrow">
+                <span className="tiny-line" />
+                THE EVOLUTION ROOM
+              </span>
+              <strong>75 years in 75 seconds.</strong>
+              <span>
+                Twenty cars on one turntable, 1951 to 2026, each in its own
+                colours and its own voice.
+              </span>
+              <ArrowRight size={20} />
+            </button>
             <div className="era-grid">
               {[
                 {
@@ -706,7 +739,7 @@ function App() {
               ))}
             </div>
           </section>
-        ) : (
+        ) : room === "evolution" ? null : (
           <Suspense
             fallback={
               <div className="archive-loading">Opening the season archive…</div>

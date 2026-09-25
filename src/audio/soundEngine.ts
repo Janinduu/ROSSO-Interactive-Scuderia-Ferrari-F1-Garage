@@ -192,7 +192,11 @@ function runningCurve(p: EngineProfile): Curve {
  * living idle with blips and revs. The firing frequency follows the cylinder
  * count (rpm / 60 × cylinders / 2). Returns false if audio is unavailable.
  */
-export function playEngine(p: EngineProfile, onEnd?: () => void): boolean {
+export function playEngine(
+  p: EngineProfile,
+  onEnd?: () => void,
+  opts: { once?: boolean } = {},
+): boolean {
   const c = context();
   if (!c || !master || c.state !== "running") return false;
   running?.stop();
@@ -284,20 +288,35 @@ export function playEngine(p: EngineProfile, onEnd?: () => void): boolean {
     scheduledUntil = start + curve[curve.length - 1][0];
   };
   for (const { param, map } of tracks) param.setValueAtTime(map(p.idleRpm * 0.8), t);
-  schedule(startCurve(p));
-  schedule(runningCurve(p));
-  const timer = window.setInterval(() => {
-    if (scheduledUntil - c.currentTime < 3) schedule(runningCurve(p));
-  }, 500);
+  let timer = 0;
+  let stopSelf = () => {};
+  if (opts.once) {
+    // A single rev: pick-up, a pull towards the limiter and back.
+    schedule([
+      [0.25, p.idleRpm * 1.4],
+      [1.3, p.idleRpm + (p.peakRpm - p.idleRpm) * 0.85],
+      [1.55, p.idleRpm + (p.peakRpm - p.idleRpm) * 0.82],
+      [2.3, p.idleRpm * 1.1],
+    ]);
+    // Stops this engine only, never one started after it.
+    timer = window.setTimeout(() => stopSelf(), 2300);
+  } else {
+    schedule(startCurve(p));
+    schedule(runningCurve(p));
+    timer = window.setInterval(() => {
+      if (scheduledUntil - c.currentTime < 3) schedule(runningCurve(p));
+    }, 500);
+  }
 
   for (const s of sources) s.start(t);
   duckWhile(true);
   let stopped = false;
-  running = {
+  const handle = {
     stop: () => {
       if (stopped) return;
       stopped = true;
       window.clearInterval(timer);
+      window.clearTimeout(timer);
       const now = c.currentTime;
       // Settle to idle and fade, like switching the engine off.
       for (const { param, map } of tracks) {
@@ -311,10 +330,12 @@ export function playEngine(p: EngineProfile, onEnd?: () => void): boolean {
       for (const s of sources) s.stop(now + 0.7);
       window.setTimeout(() => out.disconnect(), 900);
       duckWhile(false);
-      running = null;
+      if (running === handle) running = null;
       onEnd?.();
     },
   };
+  running = handle;
+  stopSelf = handle.stop;
   return true;
 }
 

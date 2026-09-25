@@ -12,6 +12,7 @@ import { poses } from "./poses";
 // tour runs it owns the camera instead; when it ends this restores the framing.
 export function useMuseumCamera() {
   const entered = useMuseumStore((s) => s.entered);
+  const room = useMuseumStore((s) => s.room);
   const bay = useMuseumStore((s) => s.driverIndex);
   const section = useMuseumStore((s) => s.section);
   const exploded = useMuseumStore((s) => s.exploded);
@@ -35,6 +36,10 @@ export function useMuseumCamera() {
         return;
       }
     }
+    if (entered && room === "evolution") {
+      useCameraStore.getState().go(poses.evolution());
+      return;
+    }
     const pose = !entered
       ? poses.landing(bay)
       : section === "engineering"
@@ -43,5 +48,5 @@ export function useMuseumCamera() {
           : poses.engineering(bay)
         : poses.bay(bay);
     useCameraStore.getState().go(pose);
-  }, [entered, bay, section, exploded, partFocus, viewResets, touring]);
+  }, [entered, room, bay, section, exploded, partFocus, viewResets, touring]);
 }

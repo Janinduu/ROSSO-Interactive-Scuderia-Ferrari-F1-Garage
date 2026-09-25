@@ -3,6 +3,8 @@ import { drivers } from "../data/drivers";
 import type { PartId } from "../data/engineering";
 
 export type Section = "story" | "engineering";
+/** Special rooms outside the driver bays. */
+export type Room = "garage" | "evolution";
 
 export const SCHUMACHER_INDEX = drivers.findIndex(
   (d) => d.id === "michael_schumacher",
@@ -10,6 +12,7 @@ export const SCHUMACHER_INDEX = drivers.findIndex(
 
 interface MuseumState {
   entered: boolean;
+  room: Room;
   driverIndex: number;
   year: number;
   section: Section;
@@ -23,6 +26,7 @@ interface MuseumState {
   /** Bumped to ask the camera to return to the current framing. */
   viewResets: number;
   enter: () => void;
+  enterRoom: (room: Room) => void;
   leave: () => void;
   selectDriver: (index: number) => void;
   setYear: (year: number) => void;
@@ -45,6 +49,7 @@ interface MuseumState {
 // to the components that own them.
 export const useMuseumStore = create<MuseumState>((set) => ({
   entered: false,
+  room: "garage",
   driverIndex: SCHUMACHER_INDEX,
   year: 2004,
   section: "story",
@@ -54,11 +59,14 @@ export const useMuseumStore = create<MuseumState>((set) => ({
   partFocus: 0,
   viewResets: 0,
   enter: () => set({ entered: true }),
+  enterRoom: (room) =>
+    set({ entered: true, room, section: "story", part: null, exploded: false, isolate: false }),
   leave: () =>
-    set({ entered: false, section: "story", part: null, exploded: false, isolate: false }),
+    set({ entered: false, room: "garage", section: "story", part: null, exploded: false, isolate: false }),
   selectDriver: (index) =>
     set((s) => ({
       entered: true,
+      room: "garage",
       driverIndex: index,
       year: drivers[index].defaultYear,
       part: null,
@@ -68,9 +76,9 @@ export const useMuseumStore = create<MuseumState>((set) => ({
     })),
   setYear: (year) => set({ year }),
   openStory: () =>
-    set({ entered: true, section: "story", part: null, exploded: false, isolate: false }),
+    set({ entered: true, room: "garage", section: "story", part: null, exploded: false, isolate: false }),
   openEngineering: (part = "front-wing") =>
-    set({ entered: true, section: "engineering", part }),
+    set({ entered: true, room: "garage", section: "engineering", part }),
   setPart: (part) => set({ part }),
   focusPart: (part) => set((s) => ({ part, partFocus: s.partFocus + 1 })),
   setExploded: (exploded) => set({ exploded }),

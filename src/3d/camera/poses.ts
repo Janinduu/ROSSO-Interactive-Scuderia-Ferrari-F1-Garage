@@ -9,6 +9,8 @@ export interface CameraPose {
 
 export const BAY_SPACING = 9;
 export const bayX = (bay: number) => bay * BAY_SPACING;
+/** The Evolution room sits before the first bay. */
+export const EVOLUTION_X = -15;
 
 const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
   const x = bayX(bay);
@@ -19,6 +21,12 @@ const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
 };
 
 export const poses = {
+  /** Facing the Evolution room's turntable and year wall. */
+  evolution: (): CameraPose => ({
+    // Looking slightly left of centre keeps the wall clear of the panel.
+    position: [EVOLUTION_X - 8.4, 3.2, 8.4],
+    target: [EVOLUTION_X - 2.6, 1.2, -0.8],
+  }),
   /** Wide cinematic framing behind the landing copy. */
   landing: (bay: number) => relative(bay, [-6.5, 2.9, 8.3], [0, 0.5, 0]),
   /** Default driver-focus framing of the plinth. */
