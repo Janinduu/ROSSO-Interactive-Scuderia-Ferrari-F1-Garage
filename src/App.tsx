@@ -166,8 +166,21 @@ function App() {
   }, []);
   useEffect(() => {
     if (entered) startAmbience();
-    else stopAmbience();
+    else {
+      stopAmbience();
+      stopEngine();
+    }
   }, [entered]);
+  // A different car means a different engine: switch the running one off.
+  useEffect(() => {
+    stopEngine();
+  }, [car.id]);
+  // Don't leave an engine running in a background tab.
+  useEffect(() => {
+    const hide = () => document.hidden && stopEngine();
+    document.addEventListener("visibilitychange", hide);
+    return () => document.removeEventListener("visibilitychange", hide);
+  }, []);
   const firstBay = useRef(true);
   useEffect(() => {
     if (firstBay.current) {
@@ -189,8 +202,8 @@ function App() {
   function startEngine() {
     unlockAudio();
     const profile = engineProfile(car.officialName, year);
-    const seconds = playEngine(profile, () => setEngineCaption(null));
-    if (seconds) setEngineCaption(`${car.officialName ?? "Engine"} · ${profile.label}`);
+    const started = playEngine(profile, () => setEngineCaption(null));
+    if (started) setEngineCaption(`${car.officialName ?? "Engine"} · ${profile.label}`);
   }
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
