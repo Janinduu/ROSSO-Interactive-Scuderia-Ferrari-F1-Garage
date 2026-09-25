@@ -2,6 +2,7 @@ import { ArrowRight, ArrowLeft, Play, Plus, Minus, Activity } from "lucide-react
 import type { Driver } from "../data/drivers";
 import { momentFor, momentStory } from "../features/moments/moments";
 import { labFor } from "../features/racelab/labData";
+import { keyRacesFor } from "../data/seasonStories";
 import { drivers, getHistory, seasonStory } from "../data/drivers";
 const pad = (n: number) => String(n).padStart(2, "0");
 interface Props {
@@ -111,6 +112,24 @@ export default function SeasonArchive({
           {details ? <Minus size={20} /> : <Plus size={20} />}
         </button>
       </div>
+      {keyRacesFor(driver.id).length > 0 && (
+        <div className="key-races">
+          <span className="eyebrow">MOMENTS TO REMEMBER</span>
+          <ol>
+            {keyRacesFor(driver.id).map((r) => (
+              <li key={r.year + r.race} className={r.year === year ? "current" : ""}>
+                <button onClick={() => setYear(r.year)} aria-label={`Open ${r.year}`}>
+                  {r.year}
+                </button>
+                <div>
+                  <strong>{r.race.replace(/^\d{4} /, "")}</strong>
+                  <p>{r.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      )}
       {details && (
         <div className="race-results">
           <div className="eyebrow">
@@ -132,10 +151,7 @@ export default function SeasonArchive({
               <span className="eyebrow">IMPORTANT CARS · FERRARI PERIOD</span>
               <p>{driver.importantCars.join(" / ")}</p>
             </div>
-            <div>
-              <span className="eyebrow">MOMENTS TO REMEMBER</span>
-              <p>{driver.importantRaces.join(" · ")}</p>
-            </div>
+
           </div>
           <p className="fine-print">
             R = retired · D = disqualified · W = withdrawn · F = failed to

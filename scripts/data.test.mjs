@@ -120,3 +120,26 @@ test("Race Lab laps are anchored at both ends and share one lap length", async (
     assert.ok(a.lapTime <= b.lapTime, f + " fastest first");
   }
 });
+
+test("Every Ferrari season before 2026 has a sourced story", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const dir = new URL("../src/data/seasonStories/", import.meta.url);
+  const seasons = {};
+  const sources = {};
+  for (const f of await readdir(dir)) {
+    const j = JSON.parse(await readFile(new URL(f, dir)));
+    for (const [id, s] of Object.entries(j.seasons)) seasons[id] = { ...seasons[id], ...s };
+    Object.assign(sources, j.sources);
+  }
+  // Schumacher, Lauda and Vettel have hand-written stories in drivers.ts.
+  const handWritten = ["michael_schumacher", "lauda", "vettel"];
+  for (const [id, d] of Object.entries(data)) {
+    if (handWritten.includes(id)) continue;
+    for (const s of d.seasons.filter((x) => x.year < 2026)) {
+      const story = seasons[id]?.[s.year];
+      assert.ok(story, `${id} ${s.year} story`);
+      assert.ok(story.sourceIds?.length, `${id} ${s.year} sources`);
+      for (const src of story.sourceIds) assert.ok(sources[src], `${id} ${s.year} source ${src}`);
+    }
+  }
+});

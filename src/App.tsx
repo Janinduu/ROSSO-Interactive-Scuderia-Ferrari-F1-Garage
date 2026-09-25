@@ -52,6 +52,7 @@ import { getPortrait } from "./data/media";
 import { carSourcesFor, resolveCar } from "./data/cars";
 import { helmetDesignFor } from "./data/helmetDesigns";
 import { careerTitles, statSources, titleRuns } from "./data/careerStats";
+import { storySources } from "./data/seasonStories";
 import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
@@ -1124,6 +1125,19 @@ function App() {
               Jolpica · dataset documentation <ExternalLink size={14} />
             </a>
           </div>
+          {storySources(driver.id, year).length > 0 && (
+            <>
+              <h3>Season story and key races</h3>
+              <div className="source-list">
+                {storySources(driver.id, year).map((s) => (
+                  <a key={s.url} href={s.url} target="_blank" rel="noreferrer">
+                    {s.publisher} · {s.title}
+                    <ExternalLink size={14} />
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
           <h3>Poles and world titles</h3>
           <div className="source-list">
             {statSources(driver.id).map((s) => (

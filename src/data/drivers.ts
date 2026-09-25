@@ -1,5 +1,6 @@
 import historyData from "./history.json";
 import { careerFor, currentSeasonFor, CURRENT_SEASON } from "./careerStats";
+import { researchedSeason } from "./seasonStories";
 
 export interface Season {
   year: number;
@@ -498,6 +499,8 @@ export function seasonStory(driver: Driver, year: number) {
     };
   const editorial = extraSeasons[driver.id]?.[year];
   if (editorial) return editorial;
+  const researched = researchedSeason(driver.id, year);
+  if (researched) return researched;
   const s = getHistory(driver.id).seasons.find((x) => x.year === year);
   const champion = driver.championshipsWithFerrari.includes(year);
   const defaultCars: Record<string, string> = {

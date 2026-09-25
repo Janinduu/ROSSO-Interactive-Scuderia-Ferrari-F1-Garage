@@ -4684,3 +4684,49 @@ footer > button {
 .show-action svg {
   color: var(--accent);
 }
+/* Key races under the season (spec §14: highlights first). */
+.key-races {
+  border-top: 1px solid var(--line);
+  padding: 18px 0 20px;
+}
+.key-races ol {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.key-races li {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #ffffff05;
+  border-left: 2px solid #ffffff1a;
+}
+.key-races li.current {
+  border-left-color: var(--red);
+  background: #3a121630;
+}
+.key-races button {
+  font-family: var(--heading);
+  font-size: 26px;
+  line-height: 1;
+  color: #e7c9a2;
+  align-self: flex-start;
+  min-height: 0;
+}
+.key-races button:hover {
+  color: var(--text-1);
+}
+.key-races strong {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: var(--fs-lg);
+}
+.key-races p {
+  margin: 4px 0 0;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--text-2);
+}
