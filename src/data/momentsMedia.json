@@ -1,0 +1,341 @@
+{
+  "moments": {
+    "spain-1996": {
+      "photos": [
+        {
+          "src": "/moments/spain-1996-1.jpg",
+          "alt": "Silver two-handled winner's trophy engraved 'Gran Premio Marlboro de España, Catalunya 1996, Winning Driver' in a display case",
+          "caption": "The winner's trophy, Catalunya 1996 (photographed 2019)",
+          "focalPoint": [
+            0.5,
+            0.45
+          ],
+          "credit": {
+            "creator": "Morio",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spanish_GP_1996_winner's_trophy_2019_Michael_Schumacher_Private_Collection.jpg",
+            "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 4.0"
+          }
+        }
+      ],
+      "quote": {
+        "text": "Where was Michael's advantage? Everywhere! He was much quicker in the corners, and that's all there was to it.",
+        "speaker": "Jacques Villeneuve",
+        "context": "Post-race, after finishing third",
+        "sourceIds": [
+          "autosport-1996-first-ferrari-win"
+        ]
+      },
+      "stat": {
+        "label": "Winning margin",
+        "value": "45.302 s",
+        "sourceIds": [
+          "jolpica-1996-7-results"
+        ]
+      }
+    },
+    "japan-2000": {
+      "photos": [
+        {
+          "src": "/moments/japan-2000-1.jpg",
+          "alt": "A red Ferrari F1-2000 on display behind a glass case holding the 2000 Japanese Grand Prix winner's trophy",
+          "caption": "F1-2000 and the Suzuka winner's trophy (photographed 2019)",
+          "focalPoint": [
+            0.55,
+            0.55
+          ],
+          "credit": {
+            "creator": "Morio",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ferrari_F1-2000_and_Japanese_GP_2000_winner's_trophy_Michael_Schumacher_Private_Collection.jpg",
+            "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 4.0"
+          }
+        },
+        {
+          "src": "/moments/japan-2000-2.jpg",
+          "alt": "Michael Schumacher's red Marlboro-liveried Bell helmet worn at the 2000 Japanese Grand Prix",
+          "caption": "Schumacher's Suzuka 2000 race helmet (photographed 2019)",
+          "focalPoint": [
+            0.48,
+            0.5
+          ],
+          "credit": {
+            "creator": "Morio",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2000_Japanese_GP_helmet_front-left_2019_Michael_Schumacher_Private_Collection.jpg",
+            "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 4.0"
+          }
+        }
+      ],
+      "quote": {
+        "text": "It's looking good, it's looking good… It's looking bloody good!",
+        "speaker": "Ross Brawn (as recalled by Michael Schumacher)",
+        "context": "Team radio, pit exit after Schumacher's second stop",
+        "sourceIds": [
+          "autosport-2000-race-of-my-life",
+          "motorsport-2000-25-years"
+        ]
+      },
+      "stat": {
+        "label": "Winning margin",
+        "value": "1.837 s",
+        "sourceIds": [
+          "jolpica-2000-16-results"
+        ]
+      }
+    },
+    "france-2004": {
+      "photos": [],
+      "quote": {
+        "text": "We knew it was optimistic, but no risk, no fun. Ross decided for it and it was just brilliant.",
+        "speaker": "Michael Schumacher",
+        "context": "Post-race, on the switch to four stops",
+        "sourceIds": [
+          "autosport-2004-four-stops"
+        ]
+      },
+      "stat": {
+        "label": "Pit stops",
+        "value": "Four, against Renault's three",
+        "sourceIds": [
+          "f1-2004-four-stop-plan",
+          "autosport-2004-four-stops"
+        ]
+      }
+    },
+    "brazil-2007": {
+      "photos": [
+        {
+          "src": "/moments/brazil-2007-1.jpg",
+          "alt": "Kimi Räikkönen raises a fist from the cockpit of his red Ferrari F2007 after winning at Interlagos",
+          "caption": "Räikkönen salutes the title, Interlagos 2007",
+          "focalPoint": [
+            0.45,
+            0.5
+          ],
+          "credit": {
+            "creator": "Morio",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kimi_Raikkonen_won_2007_Brazil_GP_side.jpg",
+            "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 3.0"
+          }
+        },
+        {
+          "src": "/moments/brazil-2007-2.jpg",
+          "alt": "Felipe Massa's and Kimi Räikkönen's Ferraris lead the McLarens of Lewis Hamilton and Fernando Alonso through the S do Senna at the start",
+          "caption": "The Ferraris lead into the S do Senna",
+          "focalPoint": [
+            0.5,
+            0.55
+          ],
+          "credit": {
+            "creator": "Morio",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:2007_Brazilian_GP_4_drivers_at_start.jpg",
+            "attribution": "Photo: Morio / Wikimedia Commons, CC BY-SA 3.0"
+          }
+        }
+      ],
+      "quote": {
+        "text": "This is what I've always wanted and I've got it now so anything that comes after this can only be a plus.",
+        "speaker": "Kimi Räikkönen",
+        "context": "Post-race, after clinching the title",
+        "sourceIds": [
+          "autosport-2007-brazil-review"
+        ]
+      },
+      "stat": {
+        "label": "Title won by",
+        "value": "1 point (110 to 109)",
+        "sourceIds": [
+          "wiki-2007-brazilian-gp",
+          "jolpica-2007-standings"
+        ]
+      }
+    },
+    "italy-2019": {
+      "photos": [
+        {
+          "src": "/moments/italy-2019-1.jpg",
+          "alt": "Charles Leclerc's red Ferrari SF90 side by side with Lewis Hamilton's Mercedes, dust flying as Hamilton runs onto the grass",
+          "caption": "Leclerc holds off Hamilton, Monza 2019",
+          "focalPoint": [
+            0.62,
+            0.6
+          ],
+          "credit": {
+            "creator": "Interceptor73",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Leclerc,_Ferrari_SF90_holds_off_Lewis_Hamilton,_Mercedes_F1_W10,_2019_Italian_Grand_Prix,_Monza,_8th_September.jpg",
+            "attribution": "Photo: Interceptor73 / Wikimedia Commons, CC BY 2.0"
+          }
+        },
+        {
+          "src": "/moments/italy-2019-2.jpg",
+          "alt": "Leclerc's Ferrari leads Hamilton's and Bottas's Mercedes through the Variante Ascari",
+          "caption": "Chased by both Mercedes at Ascari",
+          "focalPoint": [
+            0.7,
+            0.55
+          ],
+          "credit": {
+            "creator": "Eustace Bagge",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charles_Leclerc_and_Lewis_Hamilton_2019_Italian_Grand_Prix.jpg",
+            "attribution": "Photo: Eustace Bagge / Wikimedia Commons, CC BY-SA 4.0"
+          }
+        },
+        {
+          "src": "/moments/italy-2019-3.jpg",
+          "alt": "Leclerc's Ferrari passes grandstands packed with tifosi waving Ferrari flags at Monza",
+          "caption": "The tifosi salute Leclerc, Monza 2019",
+          "focalPoint": [
+            0.4,
+            0.6
+          ],
+          "credit": {
+            "creator": "Sandrino 14",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leclerc_Monza19.jpg",
+            "attribution": "Photo: Sandrino 14 / Wikimedia Commons, CC BY-SA 4.0"
+          }
+        }
+      ],
+      "quote": {
+        "text": "Thank you so much! What a race. I've never been so tired…",
+        "speaker": "Charles Leclerc",
+        "context": "Race day, after the win",
+        "sourceIds": [
+          "f1-2019-italy-race-report"
+        ]
+      },
+      "stat": {
+        "label": "Winning margin",
+        "value": "0.835 s",
+        "sourceIds": [
+          "f1-2019-italy-race-report",
+          "jolpica-2019-14-results"
+        ]
+      }
+    },
+    "barcelona-2026": {
+      "photos": [],
+      "quote": {
+        "text": "I can't begin to describe how amazing it feels to finally win in red. Grazie mille, Scuderia Ferrari.",
+        "speaker": "Lewis Hamilton",
+        "context": "Social media message after the race",
+        "sourceIds": [
+          "motorsport-2026-hamilton-message"
+        ]
+      },
+      "stat": {
+        "label": "Winning margin",
+        "value": "19.561 s",
+        "sourceIds": [
+          "f1-2026-race-report",
+          "jolpica-2026-7-results"
+        ]
+      }
+    }
+  },
+  "sources": {
+    "autosport-1996-first-ferrari-win": {
+      "title": "1996: Schumacher's first Ferrari win",
+      "publisher": "Autosport",
+      "url": "https://www.autosport.com/f1/news/1996-schumachers-first-ferrari-win-5053007/5053007/",
+      "accessedAt": "2026-09-25"
+    },
+    "jolpica-1996-7-results": {
+      "title": "1996 Spanish Grand Prix results",
+      "publisher": "Jolpica-F1 API",
+      "url": "https://api.jolpi.ca/ergast/f1/1996/7/results/",
+      "accessedAt": "2026-09-25"
+    },
+    "autosport-2000-race-of-my-life": {
+      "title": "Race of my life: Michael Schumacher on the 2000 Japanese GP",
+      "publisher": "Autosport",
+      "url": "https://www.autosport.com/f1/news/race-of-my-life-michael-schumacher-on-the-2000-japanese-gp-4982378/4982378/",
+      "accessedAt": "2026-09-25"
+    },
+    "motorsport-2000-25-years": {
+      "title": "25 years ago, Michael Schumacher put Ferrari back on top in Formula 1",
+      "publisher": "Motorsport.com",
+      "url": "https://www.motorsport.com/f1/news/michael-schumacher-ferrari-title-2000/10765277/",
+      "accessedAt": "2026-09-25"
+    },
+    "jolpica-2000-16-results": {
+      "title": "2000 Japanese Grand Prix results",
+      "publisher": "Jolpica-F1 API",
+      "url": "https://api.jolpi.ca/ergast/f1/2000/16/results/",
+      "accessedAt": "2026-09-25"
+    },
+    "autosport-2004-four-stops": {
+      "title": "French GP: Schuey's four stops to heaven",
+      "publisher": "Autosport",
+      "url": "https://www.autosport.com/f1/news/french-gp-schueys-four-stops-to-heaven-5008443/5008443/",
+      "accessedAt": "2026-09-25"
+    },
+    "f1-2004-four-stop-plan": {
+      "title": "Strategic masterstrokes: How Ferrari stole victory from Renault with a secret 4-stop plan at France 2004",
+      "publisher": "Formula1.com",
+      "url": "https://www.formula1.com/en/latest/article/france-2004-how-ferrari-stole-victory-from-renault-with-a-secret-4-stop-plan.7yXeHIzXx8e8JEyBC401ET",
+      "accessedAt": "2026-09-25"
+    },
+    "autosport-2007-brazil-review": {
+      "title": "The Complete 2007 Brazilian GP Review",
+      "publisher": "Autosport",
+      "url": "https://www.autosport.com/general/news/the-complete-2007-brazilian-gp-review-5078616/5078616/",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-2007-brazilian-gp": {
+      "title": "2007 Brazilian Grand Prix",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/2007_Brazilian_Grand_Prix",
+      "accessedAt": "2026-09-25"
+    },
+    "jolpica-2007-standings": {
+      "title": "2007 Drivers' Championship standings",
+      "publisher": "Jolpica-F1 API",
+      "url": "https://api.jolpi.ca/ergast/f1/2007/driverStandings/",
+      "accessedAt": "2026-09-25"
+    },
+    "f1-2019-italy-race-report": {
+      "title": "Italian Grand Prix 2019 race report and highlights: Leclerc defeats Bottas to end Ferrari win-drought in Monza",
+      "publisher": "Formula1.com",
+      "url": "https://www.formula1.com/en/latest/article/race-report-highlight-italian-grand-prix-2019.20aaFWDlFBaXWeCuimUnpR",
+      "accessedAt": "2026-09-25"
+    },
+    "jolpica-2019-14-results": {
+      "title": "2019 Italian Grand Prix results",
+      "publisher": "Jolpica-F1 API",
+      "url": "https://api.jolpi.ca/ergast/f1/2019/14/results/",
+      "accessedAt": "2026-09-25"
+    },
+    "motorsport-2026-hamilton-message": {
+      "title": "Lewis Hamilton shares defiant message after landmark Ferrari F1 win",
+      "publisher": "Motorsport.com",
+      "url": "https://www.motorsport.com/f1/news/lewis-hamilton-shares-defiant-message-after-landmark-ferrari-f1-win/10830635/",
+      "accessedAt": "2026-09-25"
+    },
+    "f1-2026-race-report": {
+      "title": "2026 Barcelona-Catalunya Grand Prix race report and highlights: Lewis Hamilton claims stellar maiden Grand Prix victory for Ferrari as Kimi Antonelli suffers shock retirement",
+      "publisher": "Formula1.com",
+      "url": "https://www.formula1.com/en/latest/article/hamilton-claims-stellar-maiden-grand-prix-victory-for-ferrari-in-barcelona-as-antonelli-suffers-shock-retirement.4yCXiPLHUdcnl2BwNpqUIa",
+      "accessedAt": "2026-09-25"
+    },
+    "jolpica-2026-7-results": {
+      "title": "2026 Barcelona-Catalunya Grand Prix results",
+      "publisher": "Jolpica-F1 API",
+      "url": "https://api.jolpi.ca/ergast/f1/2026/7/results/",
+      "accessedAt": "2026-09-25"
+    }
+  }
+}

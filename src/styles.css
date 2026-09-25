@@ -4284,3 +4284,6 @@ footer > button {
     transform: none;
   }
 }
+.memory-stats {
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+}
