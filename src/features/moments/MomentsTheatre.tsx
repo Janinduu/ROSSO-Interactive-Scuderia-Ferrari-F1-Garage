@@ -13,14 +13,15 @@ import {
 } from "./moments";
 import type { MomentMeta, RaceData } from "./moments";
 import { drawRace, lerpView, overview } from "./raceCanvas";
+import MemoryPanel from "./MemoryPanel";
 import type { View } from "./raceCanvas";
 import { startMusic, stopMusic } from "../../audio/music";
 import { stopEngine } from "../../audio/soundEngine";
 import { drivers } from "../../data/drivers";
 
-/** A full race plays in about 2.5 minutes at 1×. */
+/** A full race plays in about 2.5 minutes at 1×, 5 minutes at the default 0.5×. */
 const PLAYBACK_MS = 150_000;
-const SPEEDS = [1, 2, 4];
+const SPEEDS = [0.5, 1, 2];
 type CameraMode = "cinematic" | "overview" | "follow";
 
 const formatDate = (iso: string) =>
@@ -153,7 +154,8 @@ function Replay({
   const [race, setRace] = useState<RaceData | null>(null);
   const [phase, setPhase] = useState<"title" | "playing" | "finished">("title");
   const [playing, setPlaying] = useState(false);
-  const [speed, setSpeed] = useState(1);
+  // Half speed by default, so the Ferraris can be followed comfortably.
+  const [speed, setSpeed] = useState(0.5);
   const [camera, setCamera] = useState<CameraMode>("cinematic");
   const [hud, setHud] = useState({ t: 0 });
   const canvas = useRef<HTMLCanvasElement>(null);
@@ -302,6 +304,7 @@ function Replay({
           </div>
         </div>
       )}
+      {phase === "title" && <MemoryPanel race={race} driverId={meta.driverId} />}
 
       {phase !== "title" && (
         <>

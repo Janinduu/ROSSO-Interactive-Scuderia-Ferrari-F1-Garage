@@ -10,6 +10,7 @@ import {
   RotateCcw,
   Maximize2,
   Minimize2,
+  Map as MapIcon,
   Volume2,
   VolumeX,
   Power,
@@ -56,6 +57,8 @@ import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
+import MuseumMap from "./features/map/MuseumMap";
+import type { MapDestination } from "./features/map/MuseumMap";
 import EvolutionPanel from "./features/evolution/EvolutionPanel";
 import HallPanel from "./features/hall/HallPanel";
 import LegacyPanel from "./features/legacy/LegacyPanel";
@@ -121,6 +124,7 @@ function App() {
   useMuseumCamera();
   // Legendary Moments: closed, the gallery (null) or a race id.
   const [theatre, setTheatre] = useState<{ initial: string | null } | null>(null);
+  const [mapOpen, setMapOpen] = useState(false);
   const [dialog, setDialog] = useState<Dialog>(null),
     [details, setDetails] = useState(false),
     [query, setQuery] = useState(""),
@@ -152,6 +156,33 @@ function App() {
     setFocusMode(false);
     window.scrollTo({ top: 0, behavior: "instant" });
   }
+  function goTo(d: MapDestination) {
+    setMapOpen(false);
+    stopTour();
+    setTheatre(null);
+    window.scrollTo({ top: 0, behavior: "instant" });
+    if (d.kind === "theatre") setTheatre({ initial: null });
+    else if (d.kind === "machine") {
+      enter();
+      openEngineering();
+    } else if (d.kind === "bay") {
+      if (d.index === index && entered && room === "garage") openStory();
+      else selectDriver(d.index);
+    } else {
+      if (d.room === "legacy") useLegacyStore.getState().select(null);
+      enterRoom(d.room);
+    }
+  }
+  // "M" opens the map anywhere outside text fields.
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() !== "m" || e.metaKey || e.ctrlKey || e.altKey) return;
+      if ((e.target as HTMLElement).closest("input, select, textarea, dialog[open]")) return;
+      setMapOpen((o) => !o);
+    };
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, []);
   /** Open a champion's bay on one of their title seasons. */
   function openTitle(champion: Champion, titleYear: number) {
     selectDriver(champion.index);
@@ -285,68 +316,21 @@ function App() {
           <br />
           EXPRESSION OF PASSION
         </span>
+        {/* Three ways in; every room lives on the museum map. */}
         <nav aria-label="Main navigation">
           <button
-            className={entered && room === "garage" && section === "story" ? "active" : ""}
+            className={entered && room === "garage" && !theatre ? "active" : ""}
             onClick={() => {
+              setTheatre(null);
               enter();
               openStory();
             }}
           >
             The garage
           </button>
-          <button
-            className={entered && room === "evolution" ? "active" : ""}
-            onClick={() => {
-              stopTour();
-              enterRoom("evolution");
-              window.scrollTo({ top: 0, behavior: "instant" });
-            }}
-          >
-            Evolution
-          </button>
           <button onClick={() => setDialog("directory")}>Driver hall</button>
-          <button
-            className={theatre ? "active" : ""}
-            onClick={() => {
-              stopTour();
-              setTheatre({ initial: null });
-            }}
-          >
-            Moments
-          </button>
-          <button
-            className={entered && room === "hall" ? "active" : ""}
-            onClick={() => {
-              stopTour();
-              enterRoom("hall");
-              window.scrollTo({ top: 0, behavior: "instant" });
-            }}
-          >
-            Champions
-          </button>
-          <button
-            className={entered && room === "legacy" ? "active" : ""}
-            onClick={() => {
-              stopTour();
-              useLegacyStore.getState().select(null);
-              enterRoom("legacy");
-              window.scrollTo({ top: 0, behavior: "instant" });
-            }}
-          >
-            Legacy
-          </button>
-          <button
-            className={section === "engineering" ? "active" : ""}
-            onClick={() => {
-              enter();
-              openEngineering();
-            }}
-          >
-            Engineering
-          </button>
-          <button onClick={() => setDialog("about")}>
-            The project <ArrowUpRight size={13} />
+          <button className={`map-button ${mapOpen ? "active" : ""}`} onClick={() => setMapOpen(true)}>
+            <MapIcon size={15} /> Museum map
           </button>
         </nav>
         <button
@@ -877,6 +861,13 @@ function App() {
           </Suspense>
         )}
       </main>
+      {mapOpen && (
+        <MuseumMap
+          where={{ entered, room, bay: index, theatre: !!theatre }}
+          onGo={goTo}
+          onClose={() => setMapOpen(false)}
+        />
+      )}
       {theatre && (
         <Suspense fallback={null}>
           <MomentsTheatre
@@ -898,6 +889,9 @@ function App() {
           ROSSO<span>PASSIONE, SENZA FINE.</span>
         </div>
         <p>{disclaimer}</p>
+        <button onClick={() => setDialog("about")}>
+          THE PROJECT <ArrowUpRight size={12} />
+        </button>
         <button onClick={() => setDialog("sources")}>
           SOURCES & CREDITS <ArrowUpRight size={12} />
         </button>
