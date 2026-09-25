@@ -59,6 +59,10 @@ The Hall of Champions and the Legacy room each have calm generative music (slow 
 
 Six races replayed from the lap times recorded that day (`src/features/moments`): Barcelona 1996, Suzuka 2000, Magny-Cours 2004, Interlagos 2007, Monza 2019 and Barcelona 2026. `scripts/fetch-moments.mjs` bundles each race's classification and cumulative lap times (Jolpica) with a simplified circuit outline from bacinger/f1-circuits (MIT, today's layouts, checked to run in race direction). Positions are interpolated within each lap, so gaps are exact at the line. Captions are researched and sourced in `momentsResearch.json`. Open the theatre from the Moments tab, the landing page, or a matching season in a driver's bay.
 
+## Race Lab
+
+Measured telemetry for the two Ferrari drivers' fastest qualifying laps in six sessions from 2023 to 2026 (`src/features/racelab`). `scripts/fetch-racelab.mjs` imports car data (speed, throttle, brake, gear, rpm) and track position from [OpenF1](https://openf1.org), resampled every 8 m along the lap (distance from integrated speed). The lab shows a track map coloured by the faster driver in each mini-sector, a synchronised ghost replay, stacked traces and the running time gap; during playback the engine note follows the recorded rpm. It is labelled as measured telemetry, about four samples a second, interpolated. OpenF1 locks all access while a live session runs; the import waits and retries.
+
 ## Sound
 
 Sound is on by default and can be switched off in the header or settings; the choice is remembered on the device. Browsers start audio only after the first click or key press. Everything is synthesised with the Web Audio API (`src/audio`): a quiet garage room tone, soft transition and servo cues, and an engine note per car whose firing rhythm follows the sourced engine layout (cylinder count, turbo, hybrid). Engine notes are captioned as synthesised impressions, not recordings. No audio files are downloaded.

@@ -10,7 +10,8 @@ export type MapDestination =
   | { kind: "room"; room: Exclude<Room, "garage"> }
   | { kind: "bay"; index: number }
   | { kind: "machine" }
-  | { kind: "theatre" };
+  | { kind: "theatre" }
+  | { kind: "lab" };
 
 /** Split a label into lines of at most `max` characters. */
 function wrapWords(text: string, max: number) {
@@ -49,7 +50,7 @@ export default function MuseumMap({
   onClose,
 }: {
   /** Current location: a room, or a bay index when in the garage. */
-  where: { entered: boolean; room: Room; bay: number; theatre: boolean };
+  where: { entered: boolean; room: Room; bay: number; theatre: boolean; lab?: boolean };
   onGo: (d: MapDestination) => void;
   onClose: () => void;
 }) {
@@ -65,8 +66,10 @@ export default function MuseumMap({
   }, [onClose]);
 
   const here =
-    where.theatre
-      ? { x: 350, y: 423 }
+    where.lab
+      ? { x: 460, y: 423 }
+      : where.theatre
+      ? { x: 262, y: 423 }
       : !where.entered
         ? { x: 70, y: 380 }
         : where.room === "evolution"
@@ -180,8 +183,9 @@ export default function MuseumMap({
         {roomRect("evolution", 34, 150, 104, 160, "EVOLUTION", "75 years · 75 s", "plain", { kind: "room", room: "evolution" })}
         {roomRect("hall", 742, 150, 116, 160, "CHAMPIONS", "Drivers' titles", "gold", { kind: "room", room: "hall" })}
         {roomRect("legacy", 866, 110, 102, 240, "LEGACY", "Constructors' titles", "red", { kind: "room", room: "legacy" })}
-        {roomRect("theatre", 330, 398, 220, 50, "THEATRE", "Legendary Moments", "red", { kind: "theatre" })}
-        {roomRect("machine", 580, 398, 150, 50, "THE MACHINE", "Engineering study", "plain", { kind: "machine" })}
+        {roomRect("theatre", 250, 398, 190, 50, "THEATRE", "Legendary Moments", "red", { kind: "theatre" })}
+        {roomRect("lab", 450, 398, 150, 50, "RACE LAB", "Telemetry, 2023 on", "plain", { kind: "lab" })}
+        {roomRect("machine", 610, 398, 120, 50, "THE MACHINE", "Engineering", "plain", { kind: "machine" })}
         {/* Entrance. */}
         <g className="map-entrance">
           <line x1="40" x2="100" y1="390" y2="390" />
@@ -199,6 +203,7 @@ export default function MuseumMap({
         <button onClick={() => onGo({ kind: "room", room: "hall" })}>Hall of Champions</button>
         <button onClick={() => onGo({ kind: "room", room: "legacy" })}>Legacy room</button>
         <button onClick={() => onGo({ kind: "theatre" })}>Legendary Moments</button>
+        <button onClick={() => onGo({ kind: "lab" })}>Race Lab</button>
         <button onClick={() => onGo({ kind: "machine" })}>The Machine</button>
       </nav>
     </div>

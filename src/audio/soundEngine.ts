@@ -201,6 +201,14 @@ export function playServo(opening: boolean) {
 }
 
 let running: { stop: () => void } | null = null;
+let liveTracks: { param: AudioParam; map: (rpm: number) => number }[] | null = null;
+
+/** Set the rpm of an engine started with `live: true`. */
+export function setEngineRpm(rpm: number) {
+  if (!ctx || !liveTracks) return;
+  const now = ctx.currentTime;
+  for (const { param, map } of liveTracks) param.setTargetAtTime(map(Math.max(1500, rpm)), now, 0.04);
+}
 
 type Curve = [number, number][];
 
@@ -244,7 +252,7 @@ function runningCurve(p: EngineProfile): Curve {
 export function playEngine(
   p: EngineProfile,
   onEnd?: () => void,
-  opts: { once?: boolean } = {},
+  opts: { once?: boolean; live?: boolean } = {},
 ): boolean {
   const c = context();
   if (!c || !master || c.state !== "running") return false;
@@ -339,7 +347,10 @@ export function playEngine(
   for (const { param, map } of tracks) param.setValueAtTime(map(p.idleRpm * 0.8), t);
   let timer = 0;
   let stopSelf = () => {};
-  if (opts.once) {
+  if (opts.live) {
+    // Driven from outside, e.g. by recorded telemetry (see setEngineRpm).
+    liveTracks = tracks;
+  } else if (opts.once) {
     // A single rev: pick-up, a pull towards the limiter and back.
     schedule([
       [0.25, p.idleRpm * 1.4],
@@ -379,7 +390,10 @@ export function playEngine(
       for (const s of sources) s.stop(now + 0.7);
       window.setTimeout(() => out.disconnect(), 900);
       duckWhile(false);
-      if (running === handle) running = null;
+      if (running === handle) {
+        running = null;
+        liveTracks = null;
+      }
       onEnd?.();
     },
   };

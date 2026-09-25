@@ -1,6 +1,7 @@
-import { ArrowRight, ArrowLeft, Play, Plus, Minus } from "lucide-react";
+import { ArrowRight, ArrowLeft, Play, Plus, Minus, Activity } from "lucide-react";
 import type { Driver } from "../data/drivers";
 import { momentFor, momentStory } from "../features/moments/moments";
+import { labFor } from "../features/racelab/labData";
 import { drivers, getHistory, seasonStory } from "../data/drivers";
 const pad = (n: number) => String(n).padStart(2, "0");
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
   setDetails: (v: boolean | ((previous: boolean) => boolean)) => void;
   onStartTour: () => void;
   onWatchMoment: (id: string) => void;
+  onOpenLab: (id: string) => void;
   index: number;
   selectDriver: (v: number) => void;
 }
@@ -22,13 +24,15 @@ export default function SeasonArchive({
   setDetails,
   onStartTour,
   onWatchMoment,
+  onOpenLab,
   index,
   selectDriver,
 }: Props) {
   const history = getHistory(driver.id),
     season = history.seasons.find((s) => s.year === year),
     story = seasonStory(driver, year),
-    moment = momentFor(driver.id, year);
+    moment = momentFor(driver.id, year),
+    lab = labFor(driver.id, year);
   return (
     <section className="archive-panel">
       <div className="timeline-heading">
@@ -78,6 +82,11 @@ export default function SeasonArchive({
           {moment && (
             <button className="watch-moment" onClick={() => onWatchMoment(moment.id)}>
               <Play size={13} /> Watch the race: {momentStory(moment.id)?.title ?? moment.fallbackTitle}
+            </button>
+          )}
+          {lab && (
+            <button className="watch-moment lab-season" onClick={() => onOpenLab(lab)}>
+              <Activity size={13} /> Race Lab: qualifying telemetry
             </button>
           )}
         </div>

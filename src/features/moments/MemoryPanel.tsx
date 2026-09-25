@@ -165,9 +165,7 @@ export default function MemoryPanel({
               <a href={photo.credit.sourceUrl} target="_blank" rel="noreferrer">
                 {photo.credit.attribution}
               </a>
-            ) : (
-              <em>{photo.credit.attribution}</em>
-            )}
+            ) : null /* The owner's own photos need no credit line. */}
           </p>
         )}
         {photos.length > 1 && (

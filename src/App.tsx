@@ -64,6 +64,7 @@ import HallPanel from "./features/hall/HallPanel";
 import LegacyPanel from "./features/legacy/LegacyPanel";
 import { momentList } from "./features/moments/moments";
 const MomentsTheatre = lazy(() => import("./features/moments/MomentsTheatre"));
+const RaceLab = lazy(() => import("./features/racelab/RaceLab"));
 import { titles as constructorsTitles, useLegacyStore } from "./features/legacy/legacy";
 import { champions, inWords, titleCount } from "./features/hall/champions";
 import type { Champion } from "./features/hall/champions";
@@ -125,6 +126,7 @@ function App() {
   // Legendary Moments: closed, the gallery (null) or a race id.
   const [theatre, setTheatre] = useState<{ initial: string | null } | null>(null);
   const [mapOpen, setMapOpen] = useState(false);
+  const [lab, setLab] = useState<{ initial: string | null } | null>(null);
   const [dialog, setDialog] = useState<Dialog>(null),
     [details, setDetails] = useState(false),
     [query, setQuery] = useState(""),
@@ -160,8 +162,10 @@ function App() {
     setMapOpen(false);
     stopTour();
     setTheatre(null);
+    setLab(null);
     window.scrollTo({ top: 0, behavior: "instant" });
     if (d.kind === "theatre") setTheatre({ initial: null });
+    else if (d.kind === "lab") setLab({ initial: null });
     else if (d.kind === "machine") {
       enter();
       openEngineering();
@@ -222,13 +226,17 @@ function App() {
   }, [entered]);
   // Each room has its own music; the corridor keeps its quiet room tone.
   useEffect(() => {
-    // The theatre plays its own music while open.
+    // The theatre plays its own music while open; the lab is quiet.
     if (theatre) return;
+    if (lab) {
+      stopMusic();
+      return;
+    }
     if (entered && room === "hall") startMusic("hall");
     else if (entered && room === "legacy") startMusic("legacy");
     else stopMusic();
     return undefined;
-  }, [entered, room, theatre]);
+  }, [entered, room, theatre, lab]);
   // A different car means a different engine: switch the running one off.
   useEffect(() => {
     stopEngine();
@@ -797,6 +805,18 @@ function App() {
               </span>
               <ArrowRight size={20} />
             </button>
+            <button className="evolution-card lab-landing" onClick={() => setLab({ initial: null })}>
+              <span className="eyebrow">
+                <span className="tiny-line" />
+                RACE LAB
+              </span>
+              <strong>Two Ferraris. One lap each.</strong>
+              <span>
+                Measured speed, throttle, brakes and gears from qualifying,
+                2023 to 2026: see where the time was won.
+              </span>
+              <ArrowRight size={20} />
+            </button>
             <div className="era-grid">
               {[
                 {
@@ -855,6 +875,7 @@ function App() {
               setDetails={setDetails}
               onStartTour={beginTour}
               onWatchMoment={(id) => setTheatre({ initial: id })}
+              onOpenLab={(id) => setLab({ initial: id })}
               index={index}
               selectDriver={selectDriver}
             />
@@ -863,10 +884,15 @@ function App() {
       </main>
       {mapOpen && (
         <MuseumMap
-          where={{ entered, room, bay: index, theatre: !!theatre }}
+          where={{ entered, room, bay: index, theatre: !!theatre, lab: !!lab }}
           onGo={goTo}
           onClose={() => setMapOpen(false)}
         />
+      )}
+      {lab && (
+        <Suspense fallback={null}>
+          <RaceLab initial={lab.initial} onClose={() => setLab(null)} />
+        </Suspense>
       )}
       {theatre && (
         <Suspense fallback={null}>
