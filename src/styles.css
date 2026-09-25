@@ -3105,3 +3105,206 @@ footer > button {
     margin-right: 6%;
   }
 }
+/* ------------------------------------------------------------------
+   The Legacy room (constructors' championships)
+   ------------------------------------------------------------------ */
+.legacy-panel {
+  position: relative;
+  z-index: 5;
+  padding: 26px 0 24px 6.7%;
+  max-width: 470px;
+  animation: arrive 0.5s ease both;
+}
+.legacy-back {
+  margin-bottom: 18px;
+}
+.legacy-panel .eyebrow {
+  color: #d9b86e;
+}
+.legacy-panel .tiny-line {
+  background: #d9b86e;
+}
+.legacy-panel h1 {
+  font-family: var(--heading);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.02;
+  margin: 14px 0 12px;
+}
+.legacy-panel h1 strong {
+  display: block;
+  font-weight: 600;
+  font-size: clamp(44px, 4.4vw, 64px);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  background: linear-gradient(180deg, #fff0c8, #d9a64a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.legacy-intro {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0 0 16px;
+}
+.legacy-years {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3px;
+  margin-bottom: 16px;
+}
+.legacy-years button {
+  min-height: 36px;
+  font-family: var(--heading);
+  font-size: var(--fs-md);
+  color: #e7c98c;
+  border: 1px solid #b8924c40;
+  background: #1c0a0b99;
+}
+.legacy-years button:hover {
+  border-color: #d9b86e;
+}
+.legacy-years button[aria-pressed="true"] {
+  background: #7a0d15;
+  border-color: #d9b86e;
+  color: #fff4dd;
+}
+.legacy-detail {
+  border-top: 1px solid #b8924c60;
+  padding-top: 14px;
+  animation: arrive 0.3s ease both;
+}
+.legacy-detail-head {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.legacy-year {
+  font-family: var(--heading);
+  font-size: 54px;
+  line-height: 1;
+  color: #e7c98c;
+}
+.legacy-detail h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 26px;
+  margin: 0;
+}
+.legacy-detail-head p {
+  margin: 2px 0 0;
+  font-size: var(--fs-md);
+  color: var(--text-2);
+}
+.legacy-note {
+  font-size: var(--fs-md);
+  line-height: 1.55;
+  color: var(--text-2);
+  margin: 12px 0 0;
+}
+.legacy-detail dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  margin: 14px 0 0;
+  font-size: var(--fs-md);
+}
+.legacy-detail dt {
+  color: #d9b86e;
+  font-size: var(--fs-xs);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 2px;
+}
+.legacy-detail dd {
+  margin: 0;
+  color: var(--text-1);
+}
+.legacy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--text-1);
+  text-decoration: underline;
+  text-decoration-color: #d9b86e80;
+  text-underline-offset: 3px;
+}
+.legacy-link svg {
+  color: #d9b86e;
+}
+.legacy-dream {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-left: 2px solid #d9b86e;
+  background: #2a0d0e80;
+}
+.legacy-dream p {
+  margin: 6px 0 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  line-height: 1.6;
+}
+.legacy-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 12px;
+}
+.legacy-sources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  text-decoration: none;
+}
+.legacy-sources a:hover {
+  color: var(--text-1);
+}
+.legacy-card {
+  background: linear-gradient(90deg, #4a0a10, #1a0c0d 55%, #141619);
+  border-color: #b8924c55;
+}
+.legacy-card .tiny-line {
+  background: #d9b86e;
+}
+.legacy-card svg {
+  color: #d9b86e;
+}
+.legacy-card:hover {
+  border-color: #d9b86e;
+}
+@media (max-width: 760px) {
+  .in-garage .experience:has(.legacy-panel) {
+    display: flex;
+    flex-direction: column;
+  }
+  .legacy-panel {
+    display: contents;
+  }
+  .legacy-panel > * {
+    order: 2;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .legacy-panel > .legacy-back {
+    margin-top: 16px;
+  }
+  .legacy-panel > .legacy-detail,
+  .legacy-panel > .fine-print {
+    order: 4;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  .legacy-panel > h1 {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .header nav button:nth-child(5) {
+    display: flex;
+  }
+  .header nav {
+    gap: 12px;
+  }
+}

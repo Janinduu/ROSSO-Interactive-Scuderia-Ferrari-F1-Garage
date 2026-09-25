@@ -31,8 +31,28 @@ function context() {
 /** Call from any user gesture; safe to call repeatedly. */
 export function unlockAudio() {
   const c = context();
-  if (c && c.state === "suspended") void c.resume();
-  if (wantAmbience) startAmbience();
+  if (c && c.state === "suspended")
+    void c.resume().then(() => {
+      if (wantAmbience) startAmbience();
+      onUnlock?.();
+    });
+  else {
+    if (wantAmbience) startAmbience();
+    onUnlock?.();
+  }
+}
+
+let onUnlock: (() => void) | null = null;
+/** Lets the music module start anything it was waiting on. */
+export function setUnlockListener(fn: () => void) {
+  onUnlock = fn;
+}
+
+/** The running context and master bus, for other audio modules. */
+export function audioOutput() {
+  const c = context();
+  if (!c || !master || c.state !== "running") return null;
+  return { ctx: c, destination: master as AudioNode };
 }
 
 export function setSoundEnabled(on: boolean) {

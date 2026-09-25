@@ -13,6 +13,8 @@ export const bayX = (bay: number) => bay * BAY_SPACING;
 export const EVOLUTION_X = -15;
 /** The Hall of Champions closes the corridor, after the last bay. */
 export const HALL_X = 17 * BAY_SPACING + 8;
+/** The Legacy room lies beyond the Hall of Champions. */
+export const LEGACY_X = HALL_X + 34;
 
 const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
   const x = bayX(bay);
@@ -23,6 +25,16 @@ const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
 };
 
 export const poses = {
+  /** The Legacy room from its entrance, framed right of the panel. */
+  legacy: (): CameraPose => ({
+    position: [LEGACY_X - 7.5, 3.6, 12.5],
+    target: [LEGACY_X - 1.2, 2.6, -2.4],
+  }),
+  /** Close on one constructors' trophy. */
+  legacyTrophy: (p: { x: number; y: number; z: number }): CameraPose => ({
+    position: [p.x - 1.9, p.y + 2.1, p.z + 4.2],
+    target: [p.x + 0.5, p.y + 1.3, p.z],
+  }),
   /** The Hall of Champions from its entrance. */
   hall: (): CameraPose => ({
     // Off-centre, so the whole arc sits clear of the panel on the left.

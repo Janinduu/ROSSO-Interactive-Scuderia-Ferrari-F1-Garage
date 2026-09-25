@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
-import { LatheGeometry, MeshPhysicalMaterial, MeshStandardMaterial, TorusGeometry, Vector2 } from "three";
+import { MeshStandardMaterial } from "three";
 import Helmet from "../helmets/Helmet";
 import { useCanvasTexture } from "../bays/BayBoard";
 import { loadBoardFonts } from "../bays/boardArt";
 import { studioEnvironment } from "../studio";
+import Trophy, { trophyStyleFor } from "./Trophy";
+import { trophyEras } from "../../features/legacy/legacy";
 import { HALL_X } from "../camera/poses";
 import { helmetDesignFor } from "../../data/helmetDesigns";
 import { champions, inWords, titleCount } from "../../features/hall/champions";
@@ -20,7 +22,9 @@ function stationPose(i: number): { x: number; z: number; ry: number } {
   const t = n === 1 ? 0 : i / (n - 1) - 0.5;
   const angle = t * 1.2;
   const radius = 11.5;
-  return { x: HALL_X + Math.sin(angle) * radius, z: 6 - Math.cos(angle) * radius, ry: -angle };
+  // The arc bows towards the title wall but its centre stays well in front
+  // of it (the wall is at z = -5.2).
+  return { x: HALL_X + Math.sin(angle) * radius, z: 9 - Math.cos(angle) * radius, ry: -angle };
 }
 
 function drawPlaque(ctx: CanvasRenderingContext2D, c: Champion, hover: boolean) {
@@ -83,38 +87,15 @@ function Plaque({ champion, hover }: { champion: Champion; hover: boolean }) {
 function useHallKit() {
   const { gl } = useThree();
   const env = useMemo(() => studioEnvironment(gl), [gl]);
-  const kit = useMemo(() => {
-    // A classic cup: foot, stem, knop, bowl, lip.
-    const cup = new LatheGeometry(
-      [
-        [0.001, 0], [0.13, 0], [0.13, 0.03], [0.07, 0.05], [0.035, 0.09],
-        [0.03, 0.2], [0.05, 0.23], [0.03, 0.26], [0.06, 0.3], [0.13, 0.36],
-        [0.155, 0.46], [0.15, 0.52], [0.16, 0.53], [0.14, 0.535], [0.12, 0.43],
-        [0.001, 0.33],
-      ].map(([x, y]) => new Vector2(x, y)),
-      48,
-    );
-    const handle = new TorusGeometry(0.075, 0.012, 8, 24, Math.PI);
-    return {
-      cup,
-      handle,
-      gold: new MeshPhysicalMaterial({
-        color: "#d8b25a",
-        metalness: 1,
-        roughness: 0.22,
-        clearcoat: 0.4,
-        envMap: env,
-        envMapIntensity: 1.4,
-      }),
+  const kit = useMemo(
+    () => ({
       plinth: new MeshStandardMaterial({ color: "#16161a", roughness: 0.3, metalness: 0.5, envMap: env, envMapIntensity: 0.5 }),
       trim: new MeshStandardMaterial({ color: "#b8924c", roughness: 0.3, metalness: 1, envMap: env }),
-    };
-  }, [env]);
+    }),
+    [env],
+  );
   useEffect(
     () => () => {
-      kit.cup.dispose();
-      kit.handle.dispose();
-      kit.gold.dispose();
       kit.plinth.dispose();
       kit.trim.dispose();
     },
@@ -173,10 +154,7 @@ function Station({
         const z = -0.12 - rank * 0.14;
         return (
           <group key={t.year} position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]} scale={0.95 - rank * 0.08}>
-            <mesh geometry={kit.cup} material={kit.gold} castShadow />
-            {[-1, 1].map((h) => (
-              <mesh key={h} geometry={kit.handle} material={kit.gold} position={[h * 0.15, 0.44, 0]} rotation={[0, 0, h * -Math.PI / 2]} />
-            ))}
+            <Trophy style={trophyStyleFor(t.year, trophyEras)} />
           </group>
         );
       })}

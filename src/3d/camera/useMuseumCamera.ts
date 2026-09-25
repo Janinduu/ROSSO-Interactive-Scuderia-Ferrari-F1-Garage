@@ -7,6 +7,8 @@ import { anchorsFor, CAR_SCALE } from "../cars/anchors";
 import { explodedOffset } from "../cars/explode";
 import { useCameraStore } from "./cameraStore";
 import { poses } from "./poses";
+import { titles, useLegacyStore } from "../../features/legacy/legacy";
+import { legacyPlinth } from "../rooms/LegacyRoom";
 
 // Maps where the visitor is in the museum to a camera pose. While the guided
 // tour runs it owns the camera instead; when it ends this restores the framing.
@@ -22,6 +24,7 @@ export function useMuseumCamera() {
   const partFocus = useMuseumStore((s) => s.partFocus);
   const viewResets = useMuseumStore((s) => s.viewResets);
   const touring = useTourStore((s) => s.active);
+  const legacyYear = useLegacyStore((s) => s.selected);
   const lastFocus = useRef(partFocus);
   useEffect(() => {
     if (touring) return;
@@ -39,11 +42,16 @@ export function useMuseumCamera() {
         return;
       }
     }
+    if (entered && room === "legacy" && legacyYear != null) {
+      const i = titles.findIndex((t) => t.year === legacyYear);
+      useCameraStore.getState().go(poses.legacyTrophy(legacyPlinth(i)));
+      return;
+    }
     if (entered && room !== "garage") {
       // Rooms at either end of the corridor: a slower, gliding approach.
-      useCameraStore
-        .getState()
-        .go(room === "evolution" ? poses.evolution() : poses.hall(), { durationMs: reducedGlide() });
+      const pose =
+        room === "evolution" ? poses.evolution() : room === "hall" ? poses.hall() : poses.legacy();
+      useCameraStore.getState().go(pose, { durationMs: reducedGlide() });
       return;
     }
     const pose = !entered
@@ -54,5 +62,5 @@ export function useMuseumCamera() {
           : poses.engineering(bay)
         : poses.bay(bay);
     useCameraStore.getState().go(pose);
-  }, [entered, room, bay, section, exploded, partFocus, viewResets, touring]);
+  }, [entered, room, bay, section, exploded, partFocus, viewResets, touring, legacyYear]);
 }

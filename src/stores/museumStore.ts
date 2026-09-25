@@ -4,7 +4,7 @@ import type { PartId } from "../data/engineering";
 
 export type Section = "story" | "engineering";
 /** Special rooms outside the driver bays. */
-export type Room = "garage" | "evolution" | "hall";
+export type Room = "garage" | "evolution" | "hall" | "legacy";
 
 export const SCHUMACHER_INDEX = drivers.findIndex(
   (d) => d.id === "michael_schumacher",

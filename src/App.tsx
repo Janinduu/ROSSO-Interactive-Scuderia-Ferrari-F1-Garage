@@ -46,6 +46,7 @@ import {
   unlockAudio,
 } from "./audio/soundEngine";
 import { engineProfile } from "./audio/engineProfile";
+import { startMusic, stopMusic } from "./audio/music";
 import { getPortrait } from "./data/media";
 import { carSourcesFor, resolveCar } from "./data/cars";
 import { helmetDesignFor } from "./data/helmetDesigns";
@@ -57,6 +58,8 @@ import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
 import EvolutionPanel from "./features/evolution/EvolutionPanel";
 import HallPanel from "./features/hall/HallPanel";
+import LegacyPanel from "./features/legacy/LegacyPanel";
+import { titles as constructorsTitles, useLegacyStore } from "./features/legacy/legacy";
 import { champions, inWords, titleCount } from "./features/hall/champions";
 import type { Champion } from "./features/hall/champions";
 const Garage = lazy(() => import("./scenes/Garage"));
@@ -182,6 +185,13 @@ function App() {
       stopEngine();
     }
   }, [entered]);
+  // Each room has its own music; the corridor keeps its quiet room tone.
+  useEffect(() => {
+    if (entered && room === "hall") startMusic("hall");
+    else if (entered && room === "legacy") startMusic("legacy");
+    else stopMusic();
+    return undefined;
+  }, [entered, room]);
   // A different car means a different engine: switch the running one off.
   useEffect(() => {
     stopEngine();
@@ -299,6 +309,17 @@ function App() {
             }}
           >
             Champions
+          </button>
+          <button
+            className={entered && room === "legacy" ? "active" : ""}
+            onClick={() => {
+              stopTour();
+              useLegacyStore.getState().select(null);
+              enterRoom("legacy");
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }}
+          >
+            Legacy
           </button>
           <button
             className={section === "engineering" ? "active" : ""}
@@ -444,6 +465,14 @@ function App() {
             <EvolutionPanel onExit={openStory} />
           ) : room === "hall" ? (
             <HallPanel onExit={openStory} onOpen={openTitle} />
+          ) : room === "legacy" ? (
+            <LegacyPanel
+              onExit={openStory}
+              onOpenBay={(bay, y) => {
+                selectDriver(bay);
+                setYear(y);
+              }}
+            />
           ) : (
             <>
               <div className="garage-topline">
@@ -732,6 +761,28 @@ function App() {
               <span>
                 At the end of the corridor: every drivers' world championship
                 won in a Ferrari, 1952 to 2007.
+              </span>
+              <ArrowRight size={20} />
+            </button>
+            <button
+              className="evolution-card legacy-card"
+              onClick={() => {
+                useLegacyStore.getState().select(null);
+                enterRoom("legacy");
+                window.scrollTo({ top: 0, behavior: "instant" });
+              }}
+            >
+              <span className="eyebrow">
+                <span className="tiny-line" />
+                THE LEGACY ROOM
+              </span>
+              <strong>
+                {inWords(constructorsTitles.length)} constructors' championships.
+              </strong>
+              <span>
+                The team's titles, {constructorsTitles[0].year} to{" "}
+                {constructorsTitles.at(-1)!.year}: the cars, the people and the
+                dream team behind the record.
               </span>
               <ArrowRight size={20} />
             </button>

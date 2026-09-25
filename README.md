@@ -47,6 +47,14 @@ A room before the first bay plays Ferrari's cars from 1951 to 2026 on a turntabl
 
 The corridor ends in a gilded room with a station for every Ferrari drivers' world champion: their helmet, one gold trophy per title and a plaque with years and cars (`src/features/hall`). The list comes from the sourced career titles, so it updates with the data. Choosing a title opens that driver's bay on the championship season.
 
+## The Legacy room
+
+Beyond the Hall of Champions, a red-lacquered room under a gilded "16" holds every constructors' championship (`src/features/legacy`). Points, wins and the drivers of each title season come from `scripts/fetch-constructors.mjs` (Jolpica, standings from 1958). Cars, team leadership, notes and the era trophy styles come from the researched `constructorsLegacy.json`, with sources. Trophies in both rooms change shape by era (cup, lidded goblet, modern spire); they are era-inspired, not replicas.
+
+## Room music
+
+The Hall of Champions and the Legacy room each have calm generative music (slow pad chords, a soft bell melody and synthetic reverb) that fades in on arrival and out on leaving. It follows the sound switch.
+
 ## Sound
 
 Sound is on by default and can be switched off in the header or settings; the choice is remembered on the device. Browsers start audio only after the first click or key press. Everything is synthesised with the Web Audio API (`src/audio`): a quiet garage room tone, soft transition and servo cues, and an engine note per car whose firing rhythm follows the sourced engine layout (cylinder count, turbo, hybrid). Engine notes are captioned as synthesised impressions, not recordings. No audio files are downloaded.

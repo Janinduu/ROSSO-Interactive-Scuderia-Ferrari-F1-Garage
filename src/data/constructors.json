@@ -1,0 +1,812 @@
+{
+  "source": "https://api.jolpi.ca/ergast/f1/{year}/constructors/ferrari/constructorStandings/",
+  "driversSource": "https://api.jolpi.ca/ergast/f1/{year}/constructors/ferrari/drivers/",
+  "cutoffYear": 2026,
+  "seasons": [
+    {
+      "year": 1958,
+      "position": 2,
+      "points": 40,
+      "wins": 2,
+      "round": 11
+    },
+    {
+      "year": 1959,
+      "position": 2,
+      "points": 32,
+      "wins": 2,
+      "round": 9
+    },
+    {
+      "year": 1960,
+      "position": 3,
+      "points": 26,
+      "wins": 1,
+      "round": 10
+    },
+    {
+      "year": 1961,
+      "position": 1,
+      "points": 45,
+      "wins": 5,
+      "round": 8
+    },
+    {
+      "year": 1962,
+      "position": 6,
+      "points": 18,
+      "wins": 0,
+      "round": 9
+    },
+    {
+      "year": 1963,
+      "position": 4,
+      "points": 26,
+      "wins": 1,
+      "round": 10
+    },
+    {
+      "year": 1964,
+      "position": 1,
+      "points": 45,
+      "wins": 3,
+      "round": 10
+    },
+    {
+      "year": 1965,
+      "position": 4,
+      "points": 26,
+      "wins": 0,
+      "round": 10
+    },
+    {
+      "year": 1966,
+      "position": 2,
+      "points": 31,
+      "wins": 2,
+      "round": 9
+    },
+    {
+      "year": 1967,
+      "position": 5,
+      "points": 20,
+      "wins": 0,
+      "round": 11
+    },
+    {
+      "year": 1968,
+      "position": 4,
+      "points": 32,
+      "wins": 1,
+      "round": 12
+    },
+    {
+      "year": 1969,
+      "position": 6,
+      "points": 7,
+      "wins": 0,
+      "round": 11
+    },
+    {
+      "year": 1970,
+      "position": 2,
+      "points": 55,
+      "wins": 4,
+      "round": 13
+    },
+    {
+      "year": 1971,
+      "position": 4,
+      "points": 33,
+      "wins": 2,
+      "round": 11
+    },
+    {
+      "year": 1972,
+      "position": 4,
+      "points": 33,
+      "wins": 1,
+      "round": 12
+    },
+    {
+      "year": 1973,
+      "position": 6,
+      "points": 12,
+      "wins": 0,
+      "round": 15
+    },
+    {
+      "year": 1974,
+      "position": 2,
+      "points": 65,
+      "wins": 3,
+      "round": 15
+    },
+    {
+      "year": 1975,
+      "position": 1,
+      "points": 72.5,
+      "wins": 6,
+      "round": 14
+    },
+    {
+      "year": 1976,
+      "position": 1,
+      "points": 83,
+      "wins": 6,
+      "round": 16
+    },
+    {
+      "year": 1977,
+      "position": 1,
+      "points": 84,
+      "wins": 4,
+      "round": 17
+    },
+    {
+      "year": 1978,
+      "position": 2,
+      "points": 58,
+      "wins": 5,
+      "round": 16
+    },
+    {
+      "year": 1979,
+      "position": 1,
+      "points": 113,
+      "wins": 6,
+      "round": 15
+    },
+    {
+      "year": 1980,
+      "position": 10,
+      "points": 8,
+      "wins": 0,
+      "round": 14
+    },
+    {
+      "year": 1981,
+      "position": 5,
+      "points": 34,
+      "wins": 2,
+      "round": 15
+    },
+    {
+      "year": 1982,
+      "position": 1,
+      "points": 74,
+      "wins": 3,
+      "round": 16
+    },
+    {
+      "year": 1983,
+      "position": 1,
+      "points": 89,
+      "wins": 4,
+      "round": 15
+    },
+    {
+      "year": 1984,
+      "position": 2,
+      "points": 57.5,
+      "wins": 1,
+      "round": 16
+    },
+    {
+      "year": 1985,
+      "position": 2,
+      "points": 82,
+      "wins": 2,
+      "round": 16
+    },
+    {
+      "year": 1986,
+      "position": 4,
+      "points": 37,
+      "wins": 0,
+      "round": 16
+    },
+    {
+      "year": 1987,
+      "position": 4,
+      "points": 53,
+      "wins": 2,
+      "round": 16
+    },
+    {
+      "year": 1988,
+      "position": 2,
+      "points": 65,
+      "wins": 1,
+      "round": 16
+    },
+    {
+      "year": 1989,
+      "position": 3,
+      "points": 59,
+      "wins": 3,
+      "round": 16
+    },
+    {
+      "year": 1990,
+      "position": 2,
+      "points": 110,
+      "wins": 6,
+      "round": 16
+    },
+    {
+      "year": 1991,
+      "position": 3,
+      "points": 55.5,
+      "wins": 0,
+      "round": 16
+    },
+    {
+      "year": 1992,
+      "position": 4,
+      "points": 21,
+      "wins": 0,
+      "round": 16
+    },
+    {
+      "year": 1993,
+      "position": 4,
+      "points": 28,
+      "wins": 0,
+      "round": 16
+    },
+    {
+      "year": 1994,
+      "position": 3,
+      "points": 71,
+      "wins": 1,
+      "round": 16
+    },
+    {
+      "year": 1995,
+      "position": 3,
+      "points": 73,
+      "wins": 1,
+      "round": 17
+    },
+    {
+      "year": 1996,
+      "position": 2,
+      "points": 70,
+      "wins": 3,
+      "round": 16
+    },
+    {
+      "year": 1997,
+      "position": 2,
+      "points": 102,
+      "wins": 5,
+      "round": 17
+    },
+    {
+      "year": 1998,
+      "position": 2,
+      "points": 133,
+      "wins": 6,
+      "round": 16
+    },
+    {
+      "year": 1999,
+      "position": 1,
+      "points": 128,
+      "wins": 6,
+      "round": 16
+    },
+    {
+      "year": 2000,
+      "position": 1,
+      "points": 170,
+      "wins": 10,
+      "round": 17
+    },
+    {
+      "year": 2001,
+      "position": 1,
+      "points": 179,
+      "wins": 9,
+      "round": 17
+    },
+    {
+      "year": 2002,
+      "position": 1,
+      "points": 221,
+      "wins": 15,
+      "round": 17
+    },
+    {
+      "year": 2003,
+      "position": 1,
+      "points": 158,
+      "wins": 8,
+      "round": 16
+    },
+    {
+      "year": 2004,
+      "position": 1,
+      "points": 262,
+      "wins": 15,
+      "round": 18
+    },
+    {
+      "year": 2005,
+      "position": 3,
+      "points": 100,
+      "wins": 1,
+      "round": 19
+    },
+    {
+      "year": 2006,
+      "position": 2,
+      "points": 201,
+      "wins": 9,
+      "round": 18
+    },
+    {
+      "year": 2007,
+      "position": 1,
+      "points": 204,
+      "wins": 9,
+      "round": 17
+    },
+    {
+      "year": 2008,
+      "position": 1,
+      "points": 172,
+      "wins": 8,
+      "round": 18
+    },
+    {
+      "year": 2009,
+      "position": 4,
+      "points": 70,
+      "wins": 1,
+      "round": 17
+    },
+    {
+      "year": 2010,
+      "position": 3,
+      "points": 396,
+      "wins": 5,
+      "round": 19
+    },
+    {
+      "year": 2011,
+      "position": 3,
+      "points": 375,
+      "wins": 1,
+      "round": 19
+    },
+    {
+      "year": 2012,
+      "position": 2,
+      "points": 400,
+      "wins": 3,
+      "round": 20
+    },
+    {
+      "year": 2013,
+      "position": 3,
+      "points": 354,
+      "wins": 2,
+      "round": 19
+    },
+    {
+      "year": 2014,
+      "position": 4,
+      "points": 216,
+      "wins": 0,
+      "round": 19
+    },
+    {
+      "year": 2015,
+      "position": 2,
+      "points": 428,
+      "wins": 3,
+      "round": 19
+    },
+    {
+      "year": 2016,
+      "position": 3,
+      "points": 398,
+      "wins": 0,
+      "round": 21
+    },
+    {
+      "year": 2017,
+      "position": 2,
+      "points": 522,
+      "wins": 5,
+      "round": 20
+    },
+    {
+      "year": 2018,
+      "position": 2,
+      "points": 571,
+      "wins": 6,
+      "round": 21
+    },
+    {
+      "year": 2019,
+      "position": 2,
+      "points": 504,
+      "wins": 3,
+      "round": 21
+    },
+    {
+      "year": 2020,
+      "position": 6,
+      "points": 131,
+      "wins": 0,
+      "round": 17
+    },
+    {
+      "year": 2021,
+      "position": 3,
+      "points": 323.5,
+      "wins": 0,
+      "round": 22
+    },
+    {
+      "year": 2022,
+      "position": 2,
+      "points": 554,
+      "wins": 4,
+      "round": 22
+    },
+    {
+      "year": 2023,
+      "position": 3,
+      "points": 406,
+      "wins": 1,
+      "round": 22
+    },
+    {
+      "year": 2024,
+      "position": 2,
+      "points": 652,
+      "wins": 5,
+      "round": 24
+    },
+    {
+      "year": 2025,
+      "position": 4,
+      "points": 398,
+      "wins": 0,
+      "round": 24
+    },
+    {
+      "year": 2026,
+      "position": 2,
+      "points": 358,
+      "wins": 2,
+      "round": 14
+    }
+  ],
+  "titles": [
+    {
+      "year": 1961,
+      "position": 1,
+      "points": 45,
+      "wins": 5,
+      "round": 8,
+      "drivers": [
+        {
+          "id": "baghetti",
+          "name": "Giancarlo Baghetti"
+        },
+        {
+          "id": "gendebien",
+          "name": "Olivier Gendebien"
+        },
+        {
+          "id": "ginther",
+          "name": "Richie Ginther"
+        },
+        {
+          "id": "phil_hill",
+          "name": "Phil Hill"
+        },
+        {
+          "id": "mairesse",
+          "name": "Willy Mairesse"
+        },
+        {
+          "id": "ricardo_rodriguez",
+          "name": "Ricardo Rodríguez"
+        },
+        {
+          "id": "trips",
+          "name": "Wolfgang von Trips"
+        }
+      ]
+    },
+    {
+      "year": 1964,
+      "position": 1,
+      "points": 45,
+      "wins": 3,
+      "round": 10,
+      "drivers": [
+        {
+          "id": "bandini",
+          "name": "Lorenzo Bandini"
+        },
+        {
+          "id": "rodriguez",
+          "name": "Pedro Rodríguez"
+        },
+        {
+          "id": "scarfiotti",
+          "name": "Ludovico Scarfiotti"
+        },
+        {
+          "id": "surtees",
+          "name": "John Surtees"
+        }
+      ]
+    },
+    {
+      "year": 1975,
+      "position": 1,
+      "points": 72.5,
+      "wins": 6,
+      "round": 14,
+      "drivers": [
+        {
+          "id": "lauda",
+          "name": "Niki Lauda"
+        },
+        {
+          "id": "regazzoni",
+          "name": "Clay Regazzoni"
+        }
+      ]
+    },
+    {
+      "year": 1976,
+      "position": 1,
+      "points": 83,
+      "wins": 6,
+      "round": 16,
+      "drivers": [
+        {
+          "id": "lauda",
+          "name": "Niki Lauda"
+        },
+        {
+          "id": "regazzoni",
+          "name": "Clay Regazzoni"
+        },
+        {
+          "id": "reutemann",
+          "name": "Carlos Reutemann"
+        }
+      ]
+    },
+    {
+      "year": 1977,
+      "position": 1,
+      "points": 84,
+      "wins": 4,
+      "round": 17,
+      "drivers": [
+        {
+          "id": "lauda",
+          "name": "Niki Lauda"
+        },
+        {
+          "id": "reutemann",
+          "name": "Carlos Reutemann"
+        },
+        {
+          "id": "gilles_villeneuve",
+          "name": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "year": 1979,
+      "position": 1,
+      "points": 113,
+      "wins": 6,
+      "round": 15,
+      "drivers": [
+        {
+          "id": "scheckter",
+          "name": "Jody Scheckter"
+        },
+        {
+          "id": "gilles_villeneuve",
+          "name": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "year": 1982,
+      "position": 1,
+      "points": 74,
+      "wins": 3,
+      "round": 16,
+      "drivers": [
+        {
+          "id": "mario_andretti",
+          "name": "Mario Andretti"
+        },
+        {
+          "id": "pironi",
+          "name": "Didier Pironi"
+        },
+        {
+          "id": "tambay",
+          "name": "Patrick Tambay"
+        },
+        {
+          "id": "gilles_villeneuve",
+          "name": "Gilles Villeneuve"
+        }
+      ]
+    },
+    {
+      "year": 1983,
+      "position": 1,
+      "points": 89,
+      "wins": 4,
+      "round": 15,
+      "drivers": [
+        {
+          "id": "arnoux",
+          "name": "René Arnoux"
+        },
+        {
+          "id": "tambay",
+          "name": "Patrick Tambay"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "position": 1,
+      "points": 128,
+      "wins": 6,
+      "round": 16,
+      "drivers": [
+        {
+          "id": "irvine",
+          "name": "Eddie Irvine"
+        },
+        {
+          "id": "salo",
+          "name": "Mika Salo"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "position": 1,
+      "points": 170,
+      "wins": 10,
+      "round": 17,
+      "drivers": [
+        {
+          "id": "barrichello",
+          "name": "Rubens Barrichello"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "position": 1,
+      "points": 179,
+      "wins": 9,
+      "round": 17,
+      "drivers": [
+        {
+          "id": "barrichello",
+          "name": "Rubens Barrichello"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "position": 1,
+      "points": 221,
+      "wins": 15,
+      "round": 17,
+      "drivers": [
+        {
+          "id": "barrichello",
+          "name": "Rubens Barrichello"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2003,
+      "position": 1,
+      "points": 158,
+      "wins": 8,
+      "round": 16,
+      "drivers": [
+        {
+          "id": "barrichello",
+          "name": "Rubens Barrichello"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2004,
+      "position": 1,
+      "points": 262,
+      "wins": 15,
+      "round": 18,
+      "drivers": [
+        {
+          "id": "barrichello",
+          "name": "Rubens Barrichello"
+        },
+        {
+          "id": "michael_schumacher",
+          "name": "Michael Schumacher"
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "position": 1,
+      "points": 204,
+      "wins": 9,
+      "round": 17,
+      "drivers": [
+        {
+          "id": "massa",
+          "name": "Felipe Massa"
+        },
+        {
+          "id": "raikkonen",
+          "name": "Kimi Räikkönen"
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "position": 1,
+      "points": 172,
+      "wins": 8,
+      "round": 18,
+      "drivers": [
+        {
+          "id": "massa",
+          "name": "Felipe Massa"
+        },
+        {
+          "id": "raikkonen",
+          "name": "Kimi Räikkönen"
+        }
+      ]
+    }
+  ]
+}
