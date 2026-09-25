@@ -1,28 +1,28 @@
 import { poses } from "../../3d/camera/poses";
 import type { CameraPose } from "../../3d/camera/poses";
-import {
-  drivers,
-  getHistory,
-  getTotals,
-  seasonStory,
-} from "../../data/drivers";
+import { drivers, eras, getTotals, seasonStory } from "../../data/drivers";
 import { parts } from "../../data/engineering";
 import { resolveCar } from "../../data/cars";
+import { careerTitles } from "../../data/careerStats";
 import { anchorsFor, CAR_SCALE } from "../../3d/cars/anchors";
 import { explodedOffset } from "../../3d/cars/explode";
 import type { PartId } from "../../data/engineering";
-import { SCHUMACHER_INDEX } from "../../stores/museumStore";
-import type { Section } from "../../stores/museumStore";
+import type { Room, Section } from "../../stores/museumStore";
+import { champions, inWords, titleCount } from "../hall/champions";
+import { longestRun, titles as constructorsTitles } from "../legacy/legacy";
 
 export type TourStepId =
   | "intro"
-  | "chapter_intro"
-  | "approach_bay"
-  | "driver_identity"
+  | "evolution"
+  | "pioneers"
+  | "racing_spirit"
+  | "schumacher"
   | "car_reveal"
   | "engineering_demo"
   | "season_moment"
-  | "exit_bay"
+  | "present_day"
+  | "hall"
+  | "legacy"
   | "complete";
 
 export interface TourStepDefinition {
@@ -35,100 +35,107 @@ export interface TourStepDefinition {
   durationMs: number;
   /** Museum state this step stages (spec §16.2 uiMode + action). */
   scene: {
+    room: Room;
     driverIndex: number;
     year: number;
     section: Section;
     part: PartId | null;
     exploded: boolean;
   };
-  /** Whether the driver story column is shown, or the corridor stays clear. */
-  showStory: boolean;
   allowSkip: boolean;
 }
 
 // Reading time: roughly 230 words per minute plus time to look at the scene.
-const dwell = (text: string) =>
-  Math.min(12000, Math.max(4500, 2500 + text.split(/\s+/).length * 260));
+const dwell = (text: string) => Math.min(13000, Math.max(5000, 2500 + text.split(/\s+/).length * 260));
 
-const word = (n: number) =>
-  [
-    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
-    "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
-    "sixteen", "seventeen",
-  ][n] ?? String(n);
+const bayOf = (id: string) => drivers.findIndex((d) => d.id === id);
+const chapterOf = (i: number) => String(eras.indexOf(drivers[i].era) + 1).padStart(2, "0");
 
-const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
-
-// Spec §16.4: one excellent Schumacher mini-tour. Every factual statement is
-// derived from the sourced archive in src/data rather than written here.
-export function buildSchumacherTour(): TourStepDefinition[] {
-  const bay = SCHUMACHER_INDEX;
-  const driver = drivers[bay];
-  const totals = getTotals(driver.id);
-  const seasons = getHistory(driver.id).seasons.length;
-  const titles = driver.championshipsWithFerrari;
+// The museum tour (spec §16): from the Evolution room through the chapters to
+// the Hall of Champions and the Legacy room. Every factual line is derived
+// from the sourced data in src/data, never written here.
+export function buildMuseumTour(): TourStepDefinition[] {
+  const schumacher = bayOf("michael_schumacher");
+  const ascari = bayOf("ascari");
+  const lauda = bayOf("lauda");
+  const hamilton = bayOf("hamilton");
+  const msc = drivers[schumacher];
+  const totals = getTotals(msc.id);
   const year = 2004;
-  const season = seasonStory(driver, year);
+  const season = seasonStory(msc, year);
   const diffuser = parts.find((p) => p.id === "diffuser")!;
-  const anchors = anchorsFor(resolveCar(driver, year).spec);
+  const anchors = anchorsFor(resolveCar(msc, year).spec);
   const explodedAnchor = (id: PartId) => {
     const a = anchors[id] ?? [0, 0, 0];
     const o = explodedOffset(id, 1);
     return a.map((v, i) => v + o[i] * CAR_SCALE);
   };
-  const base = { driverIndex: bay, year, section: "story" as const, part: null, exploded: false };
+  const scene = (room: Room, driverIndex: number, y: number) => ({
+    room,
+    driverIndex,
+    year: y,
+    section: "story" as Section,
+    part: null as PartId | null,
+    exploded: false,
+  });
+  // A driver's bay on one season, told with that season's sourced story.
+  const bayStep = (id: TourStepId, index: number, y: number): Omit<TourStepDefinition, "durationMs"> => {
+    const d = drivers[index];
+    const s = seasonStory(d, y);
+    return {
+      id,
+      kicker: `Chapter ${chapterOf(index)} · ${d.era}`,
+      title: `${d.name}, ${y}: ${s.title.replace(/\.$/, "")}`,
+      narration: s.story,
+      camera: poses.bay(index),
+      scene: scene("garage", index, y),
+      allowSkip: true,
+    };
+  };
+  const firstTitle = careerTitles("ascari").find((t) => t.team === "Ferrari");
+  const hamiltonNow = seasonStory(drivers[hamilton], 2026);
+  const run = longestRun[1] - longestRun[0] + 1;
 
-  const steps: Omit<TourStepDefinition, "durationMs">[] = [
+  const steps: (Omit<TourStepDefinition, "durationMs"> & { durationMs?: number })[] = [
     {
       id: "intro",
       kicker: "Guided tour",
-      title: "Welcome to the garage.",
+      title: "Welcome to ROSSO.",
       narration:
-        "A short walk through one bay of the museum: a driver’s Ferrari years, the car study of a defining season and one piece of its engineering. Pause, skip or leave whenever you like.",
-      camera: poses.corridor(bay),
-      scene: base,
-      showStory: false,
+        "A walk through the museum: the cars, the drivers of each chapter, one car taken apart, and the rooms where the titles are kept. Pause, skip or leave whenever you like.",
+      camera: poses.evolution(),
+      scene: scene("evolution", schumacher, year),
       allowSkip: true,
     },
     {
-      id: "chapter_intro",
-      kicker: `Chapter 04 · ${driver.ferrariYears}`,
-      title: `${driver.era}.`,
-      narration: `${driver.name} drove for Ferrari from ${driver.ferrariYears.replace("–", " to ")}: ${word(seasons)} seasons and ${word(titles.length)} drivers’ world championships, won from ${titles[0]} to ${titles.at(-1)}.`,
-      camera: poses.chapterEntrance(bay),
-      scene: base,
-      showStory: false,
-      allowSkip: true,
-    },
-    {
-      id: "approach_bay",
-      kicker: `Bay ${driver.number}`,
-      title: "Entering the bay.",
+      id: "evolution",
+      kicker: "The Evolution room",
+      title: "Seventy-five years on one turntable.",
       narration:
-        "As you step in, the rest of the garage falls away. Each bay holds one driver’s story, their seasons and a study of the car they raced.",
-      camera: poses.bay(bay),
-      scene: base,
-      showStory: true,
+        "Twenty cars, 1951 to 2026, each in its own colours and with its own engine note: front engines give way to wings, ground effect, V10s and hybrids.",
+      camera: poses.evolution(),
+      scene: scene("evolution", schumacher, year),
+      durationMs: 16000,
       allowSkip: true,
     },
+    bayStep("pioneers", ascari, firstTitle?.year ?? 1952),
+    bayStep("racing_spirit", lauda, 1975),
     {
-      id: "driver_identity",
-      kicker: "Driver identity",
-      title: driver.tagline,
-      narration: `${totals.wins} Grand Prix wins and ${totals.podiums} podiums in red, counted from Ferrari Grand Prix results only — sprints and other teams are excluded.`,
-      camera: poses.identity(bay),
-      scene: base,
-      showStory: true,
+      id: "schumacher",
+      kicker: `Chapter ${chapterOf(schumacher)} · ${msc.era}`,
+      title: msc.tagline,
+      narration: `${msc.name}: ${totals.wins} Grand Prix wins and ${totals.podiums} podiums in red, counted from Ferrari Grand Prix results only.`,
+      camera: poses.identity(schumacher),
+      scene: scene("garage", schumacher, year),
       allowSkip: true,
     },
     {
       id: "car_reveal",
       kicker: `${year} · Car study`,
       title: season.car,
-      narration: `The car of the ${year} season, shown as a historically informed study. The geometry is original project work — an interpretation, not a replica of Ferrari’s design.`,
-      camera: poses.carReveal(bay),
-      scene: base,
-      showStory: true,
+      narration: `The car of the ${year} season, shown as a historically informed study: original geometry, an interpretation rather than a replica.`,
+      camera: poses.carReveal(schumacher),
+      scene: scene("garage", schumacher, year),
       allowSkip: true,
     },
     {
@@ -136,46 +143,60 @@ export function buildSchumacherTour(): TourStepDefinition[] {
       kicker: "The machine",
       title: diffuser.name,
       narration: `${diffuser.text} (General principle; the exact design varies by era.)`,
-      camera: poses.part(bay, explodedAnchor("diffuser")),
+      camera: poses.part(schumacher, explodedAnchor("diffuser")),
       // The car opens up (spec §16.2 "explodeCar") and the camera finds the diffuser.
-      scene: { ...base, section: "engineering", part: "diffuser", exploded: true },
-      showStory: true,
+      scene: { ...scene("garage", schumacher, year), section: "engineering", part: "diffuser", exploded: true },
       allowSkip: true,
     },
     {
       id: "season_moment",
-      kicker: titles.includes(year) ? `${year} · World champion` : `${year}`,
+      kicker: msc.championshipsWithFerrari.includes(year) ? `${year} · World champion` : `${year}`,
       title: season.title,
       narration: season.story,
-      camera: poses.bay(bay),
-      scene: base,
-      showStory: true,
+      camera: poses.bay(schumacher),
+      scene: scene("garage", schumacher, year),
       allowSkip: true,
     },
     {
-      id: "exit_bay",
-      kicker: "The corridor",
-      title: "Back to the garage.",
-      narration: `${capitalize(word(drivers.length - 1))} more bays are waiting, from ${drivers[0].name} to the present day. Use the driver directory or Next driver to continue.`,
-      camera: poses.corridor(bay),
-      scene: base,
-      showStory: false,
+      id: "present_day",
+      kicker: `Chapter ${chapterOf(hamilton)} · ${drivers[hamilton].era}`,
+      title: `${drivers[hamilton].name}, 2026`,
+      narration: hamiltonNow.story,
+      camera: poses.bay(hamilton),
+      scene: scene("garage", hamilton, 2026),
+      allowSkip: true,
+    },
+    {
+      id: "hall",
+      kicker: "The Hall of Champions",
+      title: `${inWords(titleCount)} titles. ${inWords(champions.length)} champions.`,
+      narration: `Every drivers' world championship won in a Ferrari, from ${champions[0].driver.name} in ${champions[0].titles[0].year} to ${champions.at(-1)!.driver.name} in ${champions.at(-1)!.titles.at(-1)!.year}. Each has a station: the helmet, and one trophy for every title.`,
+      camera: poses.hall(),
+      scene: scene("hall", hamilton, 2026),
+      allowSkip: true,
+    },
+    {
+      id: "legacy",
+      kicker: "The Legacy room",
+      title: `${inWords(constructorsTitles.length)} constructors' championships.`,
+      narration: `The team's titles, ${constructorsTitles[0].year} to ${constructorsTitles.at(-1)!.year}, including ${inWords(run).toLowerCase()} in a row from ${longestRun[0]} to ${longestRun[1]}.`,
+      camera: poses.legacy(),
+      scene: scene("legacy", hamilton, 2026),
       allowSkip: true,
     },
     {
       id: "complete",
       kicker: "Tour complete",
-      title: "The garage is yours.",
+      title: "The museum is yours.",
       narration:
-        "Orbit the car, open The Machine to inspect its components, or choose another season from the timeline below.",
-      camera: poses.bay(bay),
-      scene: base,
-      showStory: true,
+        "Walk the corridor bay by bay, relive a race in the Theatre, or compare two Ferraris lap for lap in the Race Lab.",
+      camera: poses.legacy(),
+      scene: scene("legacy", hamilton, 2026),
       allowSkip: false,
     },
   ];
   return steps.map((s) => ({
     ...s,
-    durationMs: s.id === "complete" ? Infinity : dwell(s.narration),
+    durationMs: s.id === "complete" ? Infinity : (s.durationMs ?? dwell(s.narration)),
   }));
 }

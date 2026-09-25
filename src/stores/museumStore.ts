@@ -40,7 +40,7 @@ interface MuseumState {
   /** Used by the guided tour to set the whole scene in one update. */
   stage: (
     scene: Partial<
-      Pick<MuseumState, "entered" | "driverIndex" | "year" | "section" | "part" | "exploded">
+      Pick<MuseumState, "entered" | "room" | "driverIndex" | "year" | "section" | "part" | "exploded">
     >,
   ) => void;
 }

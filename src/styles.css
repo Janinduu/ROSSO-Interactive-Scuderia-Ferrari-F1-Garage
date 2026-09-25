@@ -4730,3 +4730,22 @@ footer > button {
   line-height: 1.5;
   color: var(--text-2);
 }
+/* Tour v2: room panels give way to the tour card; the finale offers the next rooms. */
+.tour-active .evolution-panel,
+.tour-active .hall-panel,
+.tour-active .legacy-panel {
+  visibility: hidden;
+}
+.tour-finale {
+  flex-wrap: wrap;
+}
+.tour-finale .tour-primary {
+  margin-left: auto;
+}
+@media (max-width: 760px) {
+  .tour-active .evolution-panel,
+  .tour-active .hall-panel,
+  .tour-active .legacy-panel {
+    display: none;
+  }
+}

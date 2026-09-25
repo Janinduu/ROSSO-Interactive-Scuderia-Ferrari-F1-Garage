@@ -39,6 +39,14 @@ The production files are generated in `dist/`. No database, API key, GPU compute
 
 The additional fourteen drivers are archive exhibits, not bespoke editorial experiences to the depth of Schumacher. Pole totals remain an explicit dash where not yet independently sourced. The garage is an orbit/pan museum prototype rather than a first-person walking simulator. There are no live 2026 statistics.
 
+## Guided tour
+
+A 12-step tour of the whole museum (`src/features/guided-tour`): the Evolution room, Ascari (1952) and Lauda (1975), Schumacher's bay with the F2004 reveal and exploded diffuser, Hamilton in 2026, the Hall of Champions and the Legacy room, ending with links to Legendary Moments and the Race Lab. Every factual line is derived from the sourced data. Each step waits for the camera to arrive; pause, skip, go back or leave with Esc.
+
+## Season stories
+
+Every Ferrari season has a short sourced story: hand-written for Schumacher, Lauda and Vettel, researched for the other fourteen drivers (`src/data/seasonStories`, checked against the results archive), and built from sourced current-season moments for 2026. Each driver also has three or four key races under their seasons.
+
 ## The Evolution room
 
 A room before the first bay plays Ferrari's cars from 1951 to 2026 on a turntable in 75 seconds (`src/features/evolution`). Each of the twenty cars is a real driver-season, so its name, livery, race number and engine come from the sourced data; each announces itself with a short synthesised rev. Open it from the landing page or the Evolution tab.

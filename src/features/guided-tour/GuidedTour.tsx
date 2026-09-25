@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw, X } from "lucide-react";
+import { Activity, ArrowLeft, ArrowRight, Film, Pause, Play, RotateCcw, X } from "lucide-react";
 import { useCameraStore } from "../../3d/camera/cameraStore";
 import { useMuseumStore } from "../../stores/museumStore";
 import { tourSteps, useTourStore } from "./tourStore";
@@ -9,7 +9,15 @@ const pad = (n: number) => String(n).padStart(2, "0");
 // Runs the tour: stages each step's scene, asks the CameraDirector for its pose,
 // and only starts the dwell clock once the camera has actually arrived. Timing
 // never guesses how long an animation takes (spec §16.3, §48).
-export default function GuidedTour({ mobile }: { mobile: boolean }) {
+export default function GuidedTour({
+  mobile,
+  onMoments,
+  onLab,
+}: {
+  mobile: boolean;
+  onMoments?: () => void;
+  onLab?: () => void;
+}) {
   const { active, stepIndex, paused, stop, next, previous, start, togglePause } =
     useTourStore();
   const arrivedId = useCameraStore((s) => s.arrivedId);
@@ -105,9 +113,31 @@ export default function GuidedTour({ mobile }: { mobile: boolean }) {
         ))}
       </div>
       {last ? (
-        <div className="tour-controls">
-          <button className="tour-secondary" onClick={start}>
-            <RotateCcw size={15} /> Restart tour
+        <div className="tour-controls tour-finale">
+          {onMoments && (
+            <button
+              className="tour-secondary"
+              onClick={() => {
+                stop();
+                onMoments();
+              }}
+            >
+              <Film size={15} /> Legendary Moments
+            </button>
+          )}
+          {onLab && (
+            <button
+              className="tour-secondary"
+              onClick={() => {
+                stop();
+                onLab();
+              }}
+            >
+              <Activity size={15} /> Race Lab
+            </button>
+          )}
+          <button className="tour-secondary" onClick={start} aria-label="Restart tour">
+            <RotateCcw size={15} />
           </button>
           <button className="tour-primary" onClick={stop}>
             Explore freely <ArrowRight size={16} />

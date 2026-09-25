@@ -1,7 +1,7 @@
 import { create } from "zustand";
-import { buildSchumacherTour } from "./tourSteps";
+import { buildMuseumTour } from "./tourSteps";
 
-export const tourSteps = buildSchumacherTour();
+export const tourSteps = buildMuseumTour();
 
 interface TourState {
   active: boolean;

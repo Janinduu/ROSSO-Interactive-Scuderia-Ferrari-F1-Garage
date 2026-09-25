@@ -56,7 +56,7 @@ import { storySources } from "./data/seasonStories";
 import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
 import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
-import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
+import { useTourStore } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
 import MuseumMap from "./features/map/MuseumMap";
 import type { MapDestination } from "./features/map/MuseumMap";
@@ -120,7 +120,6 @@ function App() {
     enterRoom,
   } = useMuseumStore();
   const touring = useTourStore((s) => s.active);
-  const tourStep = useTourStore((s) => tourSteps[s.stepIndex]);
   const startTour = useTourStore((s) => s.start);
   const stopTour = useTourStore((s) => s.stop);
   useMuseumCamera();
@@ -302,7 +301,7 @@ function App() {
   );
   return (
     <div
-      className={`app ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""} ${touring ? "tour-active" : ""} ${touring && !tourStep.showStory ? "tour-corridor" : ""}`}
+      className={`app ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""} ${touring ? "tour-active" : ""}`}
     >
       <a className="skip-link" href="#main">
         Skip to experience
@@ -718,7 +717,11 @@ function App() {
             </>
           )}
           {/* Mounted on every screen: the tour can start from the landing page. */}
-          <GuidedTour mobile={prefs.mobile} />
+          <GuidedTour
+            mobile={prefs.mobile}
+            onMoments={() => setTheatre({ initial: null })}
+            onLab={() => setLab({ initial: null })}
+          />
         </section>
         {!entered ? (
           <section className="collection">
