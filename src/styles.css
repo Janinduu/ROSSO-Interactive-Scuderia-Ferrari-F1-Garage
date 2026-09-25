@@ -4287,3 +4287,17 @@ footer > button {
 .memory-stats {
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 }
+.memory-caption em {
+  font-style: normal;
+  color: #aeb2b5cc;
+}
+.memory-stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+.memory-stats div {
+  flex: 1 1 90px;
+}
+.memory-stats .featured {
+  flex-basis: 100%;
+}

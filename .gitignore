@@ -7,3 +7,4 @@ dist/
 # Trademarked or restricted brand assets are kept local (see src/data/media.ts).
 src/assets/brand/
 src/assets/portraits-local/
+src/assets/moments-local/

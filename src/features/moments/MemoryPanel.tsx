@@ -41,6 +41,59 @@ const files = import.meta.glob<Media>("../../data/momentsMedia.json", {
 });
 const media: Media = Object.values(files)[0] ?? {};
 
+// Owner-supplied photographs, shown before the Commons set on the owner's
+// machine. Their reuse rights are not established, so the folder is
+// git-ignored and they never ship from the public repository.
+const localFiles = import.meta.glob<string>("../../assets/moments-local/*.{jpg,jpeg,png,webp}", {
+  eager: true,
+  import: "default",
+  query: "?url",
+});
+const localCaptions: Record<string, { caption: string; alt: string; focalPoint?: [number, number] }> = {
+  "barcelona-2026-1": {
+    caption: "Hamilton celebrates in parc fermé, Barcelona 2026",
+    alt: "Lewis Hamilton in Ferrari overalls and yellow helmet, fists raised after winning in Barcelona",
+    focalPoint: [0.3, 0.3],
+  },
+  "barcelona-2026-2": {
+    caption: "The winner's trophy, Barcelona 2026",
+    alt: "Lewis Hamilton on the podium holding the Barcelona-Catalunya winner's trophy",
+    focalPoint: [0.55, 0.35],
+  },
+  "barcelona-2026-3": {
+    caption: "Into the arms of the Ferrari crew",
+    alt: "Lewis Hamilton, seen from behind, celebrating with Ferrari team members waving flags",
+    focalPoint: [0.55, 0.4],
+  },
+  "france-2004-1": {
+    caption: "Schumacher takes the flag, Magny-Cours 2004",
+    alt: "Michael Schumacher's Ferrari F2004 crossing the line as the crew cheers from the pit wall",
+    focalPoint: [0.5, 0.6],
+  },
+  "france-2004-2": {
+    caption: "The crew at work: four stops to beat Renault",
+    alt: "Ferrari mechanics changing tyres on the F2004 during a pit stop",
+    focalPoint: [0.45, 0.5],
+  },
+};
+function localPhotos(raceId: string): Photo[] {
+  return Object.entries(localFiles)
+    .map(([path, src]) => ({ name: path.split("/").at(-1)!.replace(/\.\w+$/, ""), src }))
+    .filter((f) => f.name.startsWith(`${raceId}-`))
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((f) => ({
+      src: f.src,
+      alt: localCaptions[f.name]?.alt ?? "Race photograph",
+      caption: localCaptions[f.name]?.caption,
+      focalPoint: localCaptions[f.name]?.focalPoint,
+      credit: {
+        license: "Supplied by the project owner; rights not verified",
+        sourceUrl: "",
+        attribution: "Photo supplied by the project owner (local build only)",
+      },
+    }));
+}
+
 const fmt = (ms: number) => {
   const h = Math.floor(ms / 3_600_000);
   const m = Math.floor((ms % 3_600_000) / 60_000);
@@ -56,7 +109,7 @@ export default function MemoryPanel({
   driverId: string;
 }) {
   const m = media.moments?.[race.id];
-  const photos = m?.photos ?? [];
+  const photos = [...localPhotos(race.id), ...(m?.photos ?? [])];
   const [index, setIndex] = useState(0);
   // A slow Ken Burns slideshow through the photographs.
   useEffect(() => {
@@ -108,9 +161,13 @@ export default function MemoryPanel({
         {photo && (
           <p className="memory-caption">
             {photo.caption && <span>{photo.caption}</span>}
-            <a href={photo.credit.sourceUrl} target="_blank" rel="noreferrer">
-              {photo.credit.attribution}
-            </a>
+            {photo.credit.sourceUrl ? (
+              <a href={photo.credit.sourceUrl} target="_blank" rel="noreferrer">
+                {photo.credit.attribution}
+              </a>
+            ) : (
+              <em>{photo.credit.attribution}</em>
+            )}
           </p>
         )}
         {photos.length > 1 && (

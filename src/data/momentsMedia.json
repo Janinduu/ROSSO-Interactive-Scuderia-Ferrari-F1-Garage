@@ -102,7 +102,8 @@
         "value": "Four, against Renault's three",
         "sourceIds": [
           "f1-2004-four-stop-plan",
-          "autosport-2004-four-stops"
+          "autosport-2004-four-stops",
+          "f1com-france-2004-strategy"
         ]
       }
     },
@@ -335,6 +336,12 @@
       "title": "2026 Barcelona-Catalunya Grand Prix results",
       "publisher": "Jolpica-F1 API",
       "url": "https://api.jolpi.ca/ergast/f1/2026/7/results/",
+      "accessedAt": "2026-09-25"
+    },
+    "f1com-france-2004-strategy": {
+      "title": "Strategic masterstrokes: How Ferrari stole victory from Renault with a secret 4-stop plan at France 2004",
+      "publisher": "Formula1.com",
+      "url": "https://www.formula1.com/en/latest/article/france-2004-how-ferrari-stole-victory-from-renault-with-a-secret-4-stop-plan.7yXeHIzXx8e8JEyBC401ET",
       "accessedAt": "2026-09-25"
     }
   }
