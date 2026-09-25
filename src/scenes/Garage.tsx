@@ -6,8 +6,6 @@ import type { Group } from "three";
 import CarModel from "../3d/cars/CarModel";
 import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
 import ExplodeRig from "../3d/cars/ExplodeRig";
-import DriverFigure from "../3d/figures/DriverFigure";
-import type { SuitDesign } from "../data/liveries";
 import { explodedOffset } from "../3d/cars/explode";
 import type { ResolvedCar } from "../data/cars";
 import type { HelmetDesign } from "../3d/helmets/helmetArt";
@@ -32,11 +30,9 @@ function Set({
   isolate,
   selected,
   engineering,
-  suit,
 }: {
   car: ResolvedCar;
   helmet: HelmetDesign;
-  suit?: SuitDesign;
   exploded: boolean;
   isolate: boolean;
   selected: PartId | null;
@@ -84,14 +80,14 @@ function Set({
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
       {/* Slightly larger than life so the car holds the plinth. */}
       <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE}>
-        <CarModel key={car.id} spec={car.spec} helmet={helmet} livery={car.livery} number={car.raceNumber} />
+        <CarModel
+          key={car.id}
+          spec={car.spec}
+          helmet={helmet}
+          livery={car.livery}
+          number={car.raceNumber}
+        />
       </group>
-      {/* A display figure in the driver's race wear, beside the bay's board. */}
-      {!(engineering && isolate) && (
-        <group position={[x + 3.45, 0, -2.45]} rotation={[0, -2.2, 0]} scale={CAR_SCALE}>
-          <DriverFigure suit={suit} helmet={helmet} wearHelmet={helmet.helmetType !== "full-face"} />
-        </group>
-      )}
       <ExplodeRig
         root={carRef}
         exploded={exploded}
@@ -135,13 +131,15 @@ export default function Garage(props: {
   helmet: HelmetDesign;
   exploded: boolean;
   isolate: boolean;
-  suit?: SuitDesign;
 }) {
   const [ready, setReady] = useState(false);
   const { available, anchorList } = useMemo(() => {
     const anchors = anchorsFor(props.car.spec);
     const available = parts.filter((p) => anchors[p.id]);
-    return { available, anchorList: available.map((p) => ({ id: p.id, at: anchors[p.id]! })) };
+    return {
+      available,
+      anchorList: available.map((p) => ({ id: p.id, at: anchors[p.id]! })),
+    };
   }, [props.car.spec]);
   const markers = useRef<(HTMLButtonElement | null)[]>([]);
   return (
@@ -195,7 +193,9 @@ export default function Garage(props: {
                 markers.current[i] = el;
               }}
               className={`hotspot ${props.selected === p.id ? "selected" : ""}`}
-              hidden={props.isolate && !!props.selected && props.selected !== p.id}
+              hidden={
+                props.isolate && !!props.selected && props.selected !== p.id
+              }
               aria-label={`Inspect ${p.name}`}
               onClick={() => props.onPart(p.id)}
             >

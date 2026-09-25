@@ -35,7 +35,6 @@ import { usePreferences } from "./hooks/usePreferences";
 import { getPortrait } from "./data/media";
 import { carSourcesFor, resolveCar } from "./data/cars";
 import { helmetDesignFor } from "./data/helmetDesigns";
-import { suitFor } from "./data/liveries";
 import { careerTitles, statSources, titleRuns } from "./data/careerStats";
 import { anchorsFor } from "./3d/cars/anchors";
 import { useMuseumStore } from "./stores/museumStore";
@@ -268,7 +267,6 @@ function App() {
                     onSelectDriver={selectDriver}
                     car={car}
                     helmet={helmetDesignFor(driver)}
-                    suit={suitFor(driver.id)}
                   />
                 </Suspense>
               </SceneBoundary>
