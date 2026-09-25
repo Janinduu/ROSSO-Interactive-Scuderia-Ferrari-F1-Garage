@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowLeft, Play, Plus, Minus } from "lucide-react";
 import type { Driver } from "../data/drivers";
+import { momentFor, momentStory } from "../features/moments/moments";
 import { drivers, getHistory, seasonStory } from "../data/drivers";
 const pad = (n: number) => String(n).padStart(2, "0");
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
   details: boolean;
   setDetails: (v: boolean | ((previous: boolean) => boolean)) => void;
   onStartTour: () => void;
+  onWatchMoment: (id: string) => void;
   index: number;
   selectDriver: (v: number) => void;
 }
@@ -19,12 +21,14 @@ export default function SeasonArchive({
   details,
   setDetails,
   onStartTour,
+  onWatchMoment,
   index,
   selectDriver,
 }: Props) {
   const history = getHistory(driver.id),
     season = history.seasons.find((s) => s.year === year),
-    story = seasonStory(driver, year);
+    story = seasonStory(driver, year),
+    moment = momentFor(driver.id, year);
   return (
     <section className="archive-panel">
       <div className="timeline-heading">
@@ -71,6 +75,11 @@ export default function SeasonArchive({
         <div className="season-story">
           <h2>{story?.title}</h2>
           <p>{story?.story}</p>
+          {moment && (
+            <button className="watch-moment" onClick={() => onWatchMoment(moment.id)}>
+              <Play size={13} /> Watch the race: {momentStory(moment.id)?.title ?? moment.fallbackTitle}
+            </button>
+          )}
         </div>
         <div className="season-numbers">
           <div>

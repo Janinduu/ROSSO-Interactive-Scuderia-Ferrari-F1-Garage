@@ -4,7 +4,7 @@ import { audioOutput, setUnlockListener } from "./soundEngine";
 // and a synthetic reverb. Nothing is downloaded; each visit plays a slightly
 // different arrangement of the same progression.
 
-export type Theme = "hall" | "legacy";
+export type Theme = "hall" | "legacy" | "race";
 
 interface ThemeDef {
   /** Chords as MIDI note numbers, lowest first. */
@@ -48,6 +48,21 @@ const themes: Record<Theme, ThemeDef> = {
     padLevel: 0.055,
     bass: true,
     warmth: 1500,
+    pulse: true,
+  },
+  // Race replays: a driving, restrained A minor with a steady pulse.
+  race: {
+    chords: [
+      [45, 57, 60, 64, 69], // Am
+      [41, 57, 60, 65, 69], // F
+      [48, 55, 60, 64, 67], // C
+      [43, 55, 59, 62, 67], // G
+    ],
+    secondsPerChord: 4,
+    melody: [76, 79, 81, 84],
+    padLevel: 0.04,
+    bass: true,
+    warmth: 1800,
     pulse: true,
   },
 };

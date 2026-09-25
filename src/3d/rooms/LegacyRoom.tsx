@@ -3,7 +3,8 @@ import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import { CanvasTexture, MeshStandardMaterial, SRGBColorSpace } from "three";
 import { useCanvasTexture } from "../bays/BayBoard";
-import { loadBoardFonts } from "../bays/boardArt";
+import { loadBoardFonts, loadImage } from "../bays/boardArt";
+import { teamShieldSrc } from "../../data/media";
 import { LEGACY_X } from "../camera/poses";
 import Trophy, { trophyStyleFor } from "./Trophy";
 import { longestRun, titles, useLegacyStore } from "../../features/legacy/legacy";
@@ -23,7 +24,7 @@ export function legacyPlinth(i: number) {
   };
 }
 
-function drawWall(ctx: CanvasRenderingContext2D) {
+function drawWall(ctx: CanvasRenderingContext2D, shield: HTMLImageElement | null) {
   const W = 2048;
   const H = 1024;
   ctx.clearRect(0, 0, W, H);
@@ -33,10 +34,26 @@ function drawWall(ctx: CanvasRenderingContext2D) {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
   ctx.textAlign = "center";
+  // The team shield (installed locally) crowns the wall, with a warm glow.
+  let nameY = 130;
+  if (shield) {
+    const h = 190;
+    const w = (shield.width / shield.height) * h;
+    const glow = ctx.createRadialGradient(W / 2, 125, 10, W / 2, 125, 230);
+    glow.addColorStop(0, "rgba(255,200,90,0.35)");
+    glow.addColorStop(1, "rgba(255,200,90,0)");
+    ctx.fillStyle = glow;
+    ctx.fillRect(W / 2 - 260, 0, 520, 280);
+    ctx.shadowColor = "rgba(0,0,0,0.6)";
+    ctx.shadowBlur = 24;
+    ctx.drawImage(shield, W / 2 - w / 2, 30, w, h);
+    ctx.shadowBlur = 0;
+    nameY = 272;
+  }
   ctx.fillStyle = "#d9b86e";
   ctx.font = `500 52px "Barlow", Arial, sans-serif`;
   if ("letterSpacing" in ctx) ctx.letterSpacing = "20px";
-  ctx.fillText("SCUDERIA FERRARI", W / 2, 130);
+  ctx.fillText("SCUDERIA FERRARI", W / 2, nameY);
   if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
   // The number, monumental and gilded.
   const g = ctx.createLinearGradient(0, 200, 0, 760);
@@ -46,8 +63,9 @@ function drawWall(ctx: CanvasRenderingContext2D) {
   ctx.fillStyle = g;
   ctx.shadowColor = "rgba(255,196,90,0.55)";
   ctx.shadowBlur = 80;
-  ctx.font = `600 600px "Barlow Condensed", "Arial Narrow", sans-serif`;
-  ctx.fillText(String(titles.length), W / 2, 740);
+  // Slightly smaller when the shield takes the top of the wall.
+  ctx.font = `600 ${shield ? 470 : 600}px "Barlow Condensed", "Arial Narrow", sans-serif`;
+  ctx.fillText(String(titles.length), W / 2, shield ? 750 : 740);
   ctx.shadowBlur = 0;
   ctx.fillStyle = "#f3e2bd";
   ctx.font = `600 96px "Barlow Condensed", "Arial Narrow", sans-serif`;
@@ -212,12 +230,14 @@ export default function LegacyRoom({ active }: { active: boolean }) {
     let live = true;
     const paint = () => {
       if (!live) return;
-      drawWall((wall.image as HTMLCanvasElement).getContext("2d")!);
+      drawWall((wall.image as HTMLCanvasElement).getContext("2d")!, shield);
       wall.needsUpdate = true;
       invalidate();
     };
+    let shield: HTMLImageElement | null = null;
     paint();
-    loadBoardFonts().then(() => {
+    Promise.all([loadBoardFonts(), teamShieldSrc ? loadImage(teamShieldSrc) : null]).then(([, img]) => {
+      shield = img;
       paint();
       if (live) setFonts(true);
     });

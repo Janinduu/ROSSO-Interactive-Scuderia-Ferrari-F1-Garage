@@ -59,6 +59,8 @@ import GuidedTour from "./features/guided-tour/GuidedTour";
 import EvolutionPanel from "./features/evolution/EvolutionPanel";
 import HallPanel from "./features/hall/HallPanel";
 import LegacyPanel from "./features/legacy/LegacyPanel";
+import { momentList } from "./features/moments/moments";
+const MomentsTheatre = lazy(() => import("./features/moments/MomentsTheatre"));
 import { titles as constructorsTitles, useLegacyStore } from "./features/legacy/legacy";
 import { champions, inWords, titleCount } from "./features/hall/champions";
 import type { Champion } from "./features/hall/champions";
@@ -117,6 +119,8 @@ function App() {
   const startTour = useTourStore((s) => s.start);
   const stopTour = useTourStore((s) => s.stop);
   useMuseumCamera();
+  // Legendary Moments: closed, the gallery (null) or a race id.
+  const [theatre, setTheatre] = useState<{ initial: string | null } | null>(null);
   const [dialog, setDialog] = useState<Dialog>(null),
     [details, setDetails] = useState(false),
     [query, setQuery] = useState(""),
@@ -187,11 +191,13 @@ function App() {
   }, [entered]);
   // Each room has its own music; the corridor keeps its quiet room tone.
   useEffect(() => {
+    // The theatre plays its own music while open.
+    if (theatre) return;
     if (entered && room === "hall") startMusic("hall");
     else if (entered && room === "legacy") startMusic("legacy");
     else stopMusic();
     return undefined;
-  }, [entered, room]);
+  }, [entered, room, theatre]);
   // A different car means a different engine: switch the running one off.
   useEffect(() => {
     stopEngine();
@@ -300,6 +306,15 @@ function App() {
             Evolution
           </button>
           <button onClick={() => setDialog("directory")}>Driver hall</button>
+          <button
+            className={theatre ? "active" : ""}
+            onClick={() => {
+              stopTour();
+              setTheatre({ initial: null });
+            }}
+          >
+            Moments
+          </button>
           <button
             className={entered && room === "hall" ? "active" : ""}
             onClick={() => {
@@ -786,6 +801,18 @@ function App() {
               </span>
               <ArrowRight size={20} />
             </button>
+            <button className="evolution-card moments-card" onClick={() => setTheatre({ initial: null })}>
+              <span className="eyebrow">
+                <span className="tiny-line" />
+                LEGENDARY MOMENTS
+              </span>
+              <strong>{inWords(momentList.length)} races, relived lap by lap.</strong>
+              <span>
+                Suzuka 2000, Interlagos 2007, Monza 2019 and more, replayed from
+                the lap times recorded that day.
+              </span>
+              <ArrowRight size={20} />
+            </button>
             <div className="era-grid">
               {[
                 {
@@ -843,12 +870,29 @@ function App() {
               details={details}
               setDetails={setDetails}
               onStartTour={beginTour}
+              onWatchMoment={(id) => setTheatre({ initial: id })}
               index={index}
               selectDriver={selectDriver}
             />
           </Suspense>
         )}
       </main>
+      {theatre && (
+        <Suspense fallback={null}>
+          <MomentsTheatre
+            initial={theatre.initial}
+            onClose={() => setTheatre(null)}
+            onVisitBay={(driverId, season) => {
+              setTheatre(null);
+              const i = drivers.findIndex((d) => d.id === driverId);
+              if (i >= 0) {
+                selectDriver(i);
+                setYear(season);
+              }
+            }}
+          />
+        </Suspense>
+      )}
       <footer>
         <div className="footer-brand">
           ROSSO<span>PASSIONE, SENZA FINE.</span>
