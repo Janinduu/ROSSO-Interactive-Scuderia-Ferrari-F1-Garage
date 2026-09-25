@@ -100,3 +100,23 @@ test("Career stats cover all 17 drivers and agree with the Ferrari record", () =
   assert.equal(stats.drivers.michael_schumacher.polesWithFerrari, 58);
   assert.equal(stats.drivers.hamilton.careerTitles.length, 7);
 });
+
+test("Race Lab laps are anchored at both ends and share one lap length", async () => {
+  const { readdir } = await import("node:fs/promises");
+  const dir = new URL("../src/data/racelab/", import.meta.url);
+  const files = (await readdir(dir)).filter((f) => f.endsWith(".json"));
+  assert.ok(files.length >= 6);
+  for (const f of files) {
+    const s = JSON.parse(await readFile(new URL(f, dir)));
+    assert.equal(s.drivers.length, 2, f);
+    const [a, b] = s.drivers;
+    assert.equal(a.length, b.length, f + " shared length");
+    for (const d of s.drivers) {
+      assert.equal(d.samples[0][1], 0, f + " starts at t=0");
+      assert.ok(Math.abs(d.samples.at(-1)[1] - d.lapTime * 1000) <= 1, f + " ends at lap time");
+      // Integrated distance stays within 3% of the shared length.
+      assert.ok(Math.abs(d.rawLength - d.length) / d.length < 0.03, f + " distance drift");
+    }
+    assert.ok(a.lapTime <= b.lapTime, f + " fastest first");
+  }
+});
