@@ -25,6 +25,11 @@ const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
 };
 
 export const poses = {
+  /** Close on one champion's station in the Hall, from in front of it. */
+  hallStation: (p: { x: number; z: number; ry: number }): CameraPose => ({
+    position: [p.x + Math.sin(p.ry) * 5.4 - Math.cos(p.ry) * 1.3, 3.1, p.z + Math.cos(p.ry) * 5.4 + Math.sin(p.ry) * 1.3],
+    target: [p.x, 1.25, p.z],
+  }),
   /** The Legacy room from its entrance, framed right of the panel. */
   legacy: (): CameraPose => ({
     position: [LEGACY_X - 7.5, 3.6, 12.5],

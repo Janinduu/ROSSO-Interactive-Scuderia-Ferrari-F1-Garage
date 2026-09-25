@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { X } from "lucide-react";
 import { drivers, eras } from "../../data/drivers";
 import type { Room } from "../../stores/museumStore";
+import { useEscape } from "../../app/useEscape";
 
 // The museum's floor plan: every room and bay in one place, drawn like an
 // architect's plan. Choosing a place closes the map and flies the camera there.
@@ -54,16 +55,14 @@ export default function MuseumMap({
   onGo: (d: MapDestination) => void;
   onClose: () => void;
 }) {
+  useEscape(onClose);
   useEffect(() => {
-    const key = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", key);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      window.removeEventListener("keydown", key);
       document.body.style.overflow = prev;
     };
-  }, [onClose]);
+  }, []);
 
   const here =
     where.lab

@@ -8,6 +8,7 @@ import type { Channel } from "./labCanvas";
 import { playEngine, setEngineRpm, stopEngine } from "../../audio/soundEngine";
 import { engineProfile } from "../../audio/engineProfile";
 import { useSoundStore } from "../../audio/soundStore";
+import { useEscape } from "../../app/useEscape";
 
 const CHANNELS: Channel[] = [
   { key: "speed", label: "Speed", unit: "km/h", min: 50, max: 360, height: 3 },
@@ -30,15 +31,7 @@ export default function RaceLab({ initial, onClose }: { initial: string | null; 
       document.body.style.overflow = prev;
     };
   }, []);
-  useEffect(() => {
-    const key = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      if (id) setId(null);
-      else onClose();
-    };
-    window.addEventListener("keydown", key);
-    return () => window.removeEventListener("keydown", key);
-  }, [id, onClose]);
+  useEscape(() => (id ? setId(null) : onClose()));
   return (
     <div className="theatre lab" role="dialog" aria-modal="true" aria-label="Race Lab">
       {id ? <Lab key={id} id={id} onBack={() => setId(null)} /> : <Picker onPick={setId} onClose={onClose} />}
@@ -187,8 +180,10 @@ function Lab({ id, onBack }: { id: string; onBack: () => void }) {
   const gap = (atDistance(b, here)[COL.t] - atDistance(a, here)[COL.t]) / 1000;
   const scrub = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
-    const left = 64;
-    const frac = Math.max(0, Math.min(1, (e.clientX - r.left - left) / (r.width - left - 14)));
+    // The stage may be scaled: convert the trace margins (layout px) to screen px.
+    const k = r.width / e.currentTarget.clientWidth;
+    const left = 64 * k;
+    const frac = Math.max(0, Math.min(1, (e.clientX - r.left - left) / (r.width - left - 14 * k)));
     const len = Math.min(a.length, b.length);
     tRef.current = atDistance(a, frac * len)[COL.t];
     setT(tRef.current);

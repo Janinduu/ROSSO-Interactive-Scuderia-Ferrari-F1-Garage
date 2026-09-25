@@ -1,3 +1,4 @@
+import { create } from "zustand";
 import { drivers } from "../../data/drivers";
 import type { Driver } from "../../data/drivers";
 import { careerTitles } from "../../data/careerStats";
@@ -29,3 +30,14 @@ export const inWords = (n: number) => {
   const w = words[n] ?? String(n);
   return w[0].toUpperCase() + w.slice(1);
 };
+
+
+interface HallState {
+  /** Index into `champions` of the station being studied, or null for the room. */
+  focus: number | null;
+  setFocus: (focus: number | null) => void;
+}
+export const useHallStore = create<HallState>((set) => ({
+  focus: null,
+  setFocus: (focus) => set({ focus }),
+}));

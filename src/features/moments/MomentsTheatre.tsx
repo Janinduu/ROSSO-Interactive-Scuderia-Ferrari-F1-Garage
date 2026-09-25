@@ -25,6 +25,7 @@ import type { View } from "./raceCanvas";
 import { startMusic, stopMusic } from "../../audio/music";
 import { stopEngine } from "../../audio/soundEngine";
 import { drivers } from "../../data/drivers";
+import { useEscape } from "../../app/useEscape";
 
 /** A full race plays in about 2.5 minutes at 1×, 5 minutes at the default 0.5×. */
 const PLAYBACK_MS = 150_000;
@@ -58,15 +59,7 @@ export default function MomentsTheatre({
       document.body.style.overflow = prev;
     };
   }, []);
-  useEffect(() => {
-    const key = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      if (active) setActive(null);
-      else onClose();
-    };
-    window.addEventListener("keydown", key);
-    return () => window.removeEventListener("keydown", key);
-  }, [active, onClose]);
+  useEscape(() => (active ? setActive(null) : onClose()));
   useEffect(() => {
     startMusic("race");
     return () => stopMusic();

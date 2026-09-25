@@ -304,7 +304,7 @@ function App() {
   );
   return (
     <div
-      className={`app ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""} ${touring ? "tour-active" : ""}`}
+      className={`app room-${entered ? room : "entrance"} ${entered ? "in-garage" : "landing"} ${focusMode ? "focus-mode" : ""} ${touring ? "tour-active" : ""}`}
     >
       <a className="skip-link" href="#main">
         Skip to experience
@@ -445,12 +445,6 @@ function App() {
                     <Play size={14} /> TAKE THE GUIDED TOUR
                   </button>
                 </div>
-                <div className="landing-note">
-                  <span className="status-dot" />
-                  AN INTERACTIVE 3D EXPERIENCE
-                  <span className="note-line" />
-                  BUILT FOR THE TIFOSI
-                </div>
               </div>
               {/* The museum opens on its legend: Schumacher, the F2004 and his numbers in red. */}
               <button
@@ -487,13 +481,6 @@ function App() {
                 </div>
               </button>
               <div className="vertical-label">PASSIONE. SENZA FINE.</div>
-              <div className="hero-bottom">
-                <span>SCROLL TO DISCOVER THE COLLECTION</span>
-                <span>
-                  01 — 07 <span className="small-red">/</span> SEVEN ERAS. ONE
-                  SCUDERIA.
-                </span>
-              </div>
             </>
           ) : room === "evolution" ? (
             <EvolutionPanel onExit={openStory} />
@@ -754,149 +741,69 @@ function App() {
             onLab={() => setLab({ initial: null })}
           />
         </section>
-        {!entered ? (
-          <section className="collection">
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">THE COLLECTION</span>
-                <h2>A legacy, in seven chapters.</h2>
-              </div>
-              <button
-                className="text-link"
-                onClick={() => setDialog("directory")}
-              >
-                MEET THE DRIVERS <ArrowUpRight size={17} />
-              </button>
-            </div>
-            <button
-              className="evolution-card"
-              onClick={() => {
-                enterRoom("evolution");
-                window.scrollTo({ top: 0, behavior: "instant" });
-              }}
-            >
-              <span className="eyebrow">
-                <span className="tiny-line" />
-                THE EVOLUTION ROOM
-              </span>
-              <strong>75 years in 75 seconds.</strong>
-              <span>
-                Twenty cars on one turntable, 1951 to 2026, each in its own
-                colours and its own voice.
-              </span>
-              <ArrowRight size={20} />
-            </button>
-            <button
-              className="evolution-card hall-card"
-              onClick={() => {
-                enterRoom("hall");
-                window.scrollTo({ top: 0, behavior: "instant" });
-              }}
-            >
-              <span className="eyebrow">
-                <span className="tiny-line" />
-                THE HALL OF CHAMPIONS
-              </span>
-              <strong>
-                {inWords(titleCount)} titles. {inWords(champions.length)} champions.
-              </strong>
-              <span>
-                At the end of the corridor: every drivers' world championship
-                won in a Ferrari, 1952 to 2007.
-              </span>
-              <ArrowRight size={20} />
-            </button>
-            <button
-              className="evolution-card legacy-card"
-              onClick={() => {
-                useLegacyStore.getState().select(null);
-                enterRoom("legacy");
-                window.scrollTo({ top: 0, behavior: "instant" });
-              }}
-            >
-              <span className="eyebrow">
-                <span className="tiny-line" />
-                THE LEGACY ROOM
-              </span>
-              <strong>
-                {inWords(constructorsTitles.length)} constructors' championships.
-              </strong>
-              <span>
-                The team's titles, {constructorsTitles[0].year} to{" "}
-                {constructorsTitles.at(-1)!.year}: the cars, the people and the
-                dream team behind the record.
-              </span>
-              <ArrowRight size={20} />
-            </button>
-            <button className="evolution-card moments-card" onClick={() => setTheatre({ initial: null })}>
-              <span className="eyebrow">
-                <span className="tiny-line" />
-                LEGENDARY MOMENTS
-              </span>
-              <strong>{inWords(momentList.length)} races, relived lap by lap.</strong>
-              <span>
-                Suzuka 2000, Interlagos 2007, Monza 2019 and more, replayed from
-                the lap times recorded that day.
-              </span>
-              <ArrowRight size={20} />
-            </button>
-            <button className="evolution-card lab-landing" onClick={() => setLab({ initial: null })}>
-              <span className="eyebrow">
-                <span className="tiny-line" />
-                RACE LAB
-              </span>
-              <strong>Two Ferraris. One lap each.</strong>
-              <span>
-                Measured speed, throttle, brakes and gears from qualifying,
-                2023 to 2026: see where the time was won.
-              </span>
-              <ArrowRight size={20} />
-            </button>
-            <div className="era-grid">
+        {!entered && (
+          <>
+            {/* Every room in the museum, one click from the entrance. */}
+            <nav className="landing-rail" aria-label="Rooms of the museum">
               {[
                 {
                   n: "01",
-                  date: "1950—1969",
-                  title: "Where it all began.",
-                  caption: "THE PIONEERS",
-                  i: 0,
+                  kicker: "The Evolution",
+                  title: "75 years in 75 seconds",
+                  go: () => enterRoom("evolution"),
                 },
                 {
                   n: "02",
-                  date: "1970—1995",
-                  title: "Courage. Without compromise.",
-                  caption: "THE RACING SPIRIT",
-                  i: 5,
+                  kicker: "Legendary Moments",
+                  title: `${inWords(momentList.length)} races, lap by lap`,
+                  go: () => setTheatre({ initial: null }),
                 },
                 {
                   n: "03",
-                  date: "1996—2006",
-                  title: "The making of a dynasty.",
-                  caption: "THE SCHUMACHER ERA",
-                  i: 10,
+                  kicker: "Race Lab",
+                  title: "Two Ferraris, one lap each",
+                  go: () => setLab({ initial: null }),
                 },
-              ].map((e) => (
-                <button
-                  className="era-item"
-                  key={e.n}
-                  onClick={() => selectDriver(e.i)}
-                >
-                  <div>
-                    <span className="era-num">{e.n}</span>
-                    <span className="eyebrow">{e.date}</span>
-                    <ArrowUpRight size={20} />
-                  </div>
-                  <span className="eyebrow">{e.caption}</span>
-                  <h3>{e.title}</h3>
-                  <div className="era-bottom">
-                    <span>EXPLORE THIS CHAPTER</span>
-                    <ArrowRight size={14} />
-                  </div>
+                {
+                  n: "04",
+                  kicker: "Hall of Champions",
+                  title: `${inWords(titleCount)} titles, ${inWords(champions.length).toLowerCase()} champions`,
+                  tone: "gold",
+                  go: () => enterRoom("hall"),
+                },
+                {
+                  n: "05",
+                  kicker: "The Legacy",
+                  title: `${inWords(constructorsTitles.length)} constructors' titles`,
+                  tone: "gold",
+                  go: () => {
+                    useLegacyStore.getState().select(null);
+                    enterRoom("legacy");
+                  },
+                },
+              ].map((d) => (
+                <button key={d.n} className={`rail-item ${d.tone ?? ""}`} onClick={d.go}>
+                  <span className="rail-n">{d.n}</span>
+                  <span className="rail-text">
+                    <span className="rail-kicker">{d.kicker}</span>
+                    <strong>{d.title}</strong>
+                  </span>
+                  <ArrowUpRight size={16} />
                 </button>
               ))}
+            </nav>
+            <div className="landing-foot">
+              <span>{disclaimer}</span>
+              <span className="landing-foot-links">
+                <button onClick={() => setDialog("directory")}>Driver hall</button>
+                <button onClick={() => setDialog("about")}>The project</button>
+                <button onClick={() => setDialog("sources")}>Sources & credits</button>
+                <button onClick={() => setDialog("ask")}>Ask the garage</button>
+              </span>
             </div>
-          </section>
-        ) : room !== "garage" ? null : (
+          </>
+        )}
+        {!entered ? null : room !== "garage" ? null : (
           <Suspense
             fallback={
               <div className="archive-loading">Opening the season archive…</div>

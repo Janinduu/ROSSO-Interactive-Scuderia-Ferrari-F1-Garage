@@ -1,7 +1,16 @@
-import { useEffect, useMemo, useState } from "react";
-import { useThree } from "@react-three/fiber";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
-import { MeshStandardMaterial } from "three";
+import {
+  AdditiveBlending,
+  CanvasTexture,
+  DoubleSide,
+  MeshStandardMaterial,
+  SRGBColorSpace,
+} from "three";
+import type { Group, Texture } from "three";
+import { loadImage } from "../bays/boardArt";
+import { teamShieldSrc } from "../../data/media";
 import Helmet from "../helmets/Helmet";
 import { useCanvasTexture } from "../bays/BayBoard";
 import { loadBoardFonts } from "../bays/boardArt";
@@ -9,14 +18,19 @@ import { studioEnvironment } from "../studio";
 import Trophy, { trophyStyleFor } from "./Trophy";
 import { HALL_X } from "../camera/poses";
 import { helmetDesignFor } from "../../data/helmetDesigns";
-import { champions, inWords, titleCount } from "../../features/hall/champions";
+import {
+  champions,
+  inWords,
+  titleCount,
+  useHallStore,
+} from "../../features/hall/champions";
 import type { Champion } from "../../features/hall/champions";
 
 const PLAQUE_W = 768;
 const PLAQUE_H = 384;
 
 /** Stations stand on a shallow arc facing the entrance. */
-function stationPose(i: number): { x: number; z: number; ry: number } {
+export function stationPose(i: number): { x: number; z: number; ry: number } {
   const n = champions.length;
   const t = n === 1 ? 0 : i / (n - 1) - 0.5;
   const angle = t * 1.2;
@@ -136,13 +150,22 @@ function useHallKit() {
 
 function Station({
   champion,
+  index,
   kit,
   onSelect,
 }: {
   champion: Champion;
+  index: number;
   kit: ReturnType<typeof useHallKit>;
   onSelect: (c: Champion) => void;
 }) {
+  const focused = useHallStore((s) => s.focus === index);
+  // The helmet and trophies are the exhibit: clicking them brings the camera close.
+  const study = (e: ThreeEvent<MouseEvent>) => {
+    e.stopPropagation();
+    if (e.delta > 6) return;
+    useHallStore.getState().setFocus(index);
+  };
   const [hover, setHover] = useState(false);
   const n = champion.titles.length;
   const over = (e: ThreeEvent<PointerEvent>) => {
@@ -161,43 +184,63 @@ function Station({
     onSelect(champion);
   };
   return (
-    <group onPointerOver={over} onPointerOut={out} onClick={click}>
-      <mesh
-        material={kit.plinth}
-        position={[0, 0.5, 0]}
-        castShadow
-        receiveShadow
-      >
-        <boxGeometry args={[1.7, 1, 0.9]} />
-      </mesh>
-      <mesh material={kit.trim} position={[0, 1.005, 0]}>
-        <boxGeometry args={[1.72, 0.012, 0.92]} />
-      </mesh>
-      <mesh material={kit.trim} position={[0, 0.02, 0]}>
-        <boxGeometry args={[1.76, 0.04, 0.96]} />
-      </mesh>
-      <Plaque champion={champion} hover={hover} />
-      {/* The champion's helmet at the centre... */}
-      <group position={[0, 1.24, -0.05]} rotation={[0, 0.5, 0]} scale={0.22}>
-        <Helmet design={helmetDesignFor(champion.driver)} />
+    <group onPointerOver={over} onPointerOut={out}>
+      <group onClick={click}>
+        <mesh
+          material={kit.plinth}
+          position={[0, 0.5, 0]}
+          castShadow
+          receiveShadow
+        >
+          <boxGeometry args={[1.7, 1, 0.9]} />
+        </mesh>
+        <mesh material={kit.trim} position={[0, 1.005, 0]}>
+          <boxGeometry args={[1.72, 0.012, 0.92]} />
+        </mesh>
+        <mesh material={kit.trim} position={[0, 0.02, 0]}>
+          <boxGeometry args={[1.76, 0.04, 0.96]} />
+        </mesh>
+        <Plaque champion={champion} hover={hover} />
       </group>
-      {/* ...flanked by one trophy per Ferrari title. */}
-      {champion.titles.map((t, i) => {
-        const side = i % 2 === 0 ? -1 : 1;
-        const rank = Math.floor(i / 2);
-        const x = side * (0.42 + rank * 0.17);
-        const z = -0.12 - rank * 0.14;
-        return (
-          <group
-            key={t.year}
-            position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]}
-            scale={0.95 - rank * 0.08}
-          >
-            <Trophy style={trophyStyleFor(t.year, "drivers")} year={t.year} />
-          </group>
-        );
-      })}
-      {hover && (
+      <group onClick={study}>
+        {/* The champion's helmet at the centre... */}
+        <group position={[0, 1.24, -0.05]} rotation={[0, 0.5, 0]} scale={0.22}>
+          <Helmet design={helmetDesignFor(champion.driver)} />
+        </group>
+        {/* ...flanked by one trophy per Ferrari title. */}
+        {champion.titles.map((t, i) => {
+          const side = i % 2 === 0 ? -1 : 1;
+          const rank = Math.floor(i / 2);
+          const x = side * (0.42 + rank * 0.17);
+          const z = -0.12 - rank * 0.14;
+          return (
+            <group
+              key={t.year}
+              position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]}
+              scale={0.95 - rank * 0.08}
+            >
+              <Trophy style={trophyStyleFor(t.year, "drivers")} year={t.year} />
+            </group>
+          );
+        })}
+      </group>
+      {focused && (
+        <>
+          <pointLight
+            position={[0.9, 2.1, 1.3]}
+            intensity={7}
+            distance={4}
+            color="#fff0d6"
+          />
+          <pointLight
+            position={[-1, 1.8, 0.9]}
+            intensity={4}
+            distance={4}
+            color="#ffcf8a"
+          />
+        </>
+      )}
+      {hover && !focused && (
         <pointLight
           position={[0, 2.2, 1.2]}
           intensity={6}
@@ -276,7 +319,7 @@ export default function HallRoom({
         <meshBasicMaterial map={title} transparent toneMapped={false} />
       </mesh>
       {[-1, 1].map((side) => (
-        <mesh key={side} position={[x + side * 13, 3, 1]}>
+        <mesh key={side} position={[x + side * 12.6, 3, 1]}>
           <boxGeometry args={[0.3, 6, 12.5]} />
           <meshStandardMaterial
             color="#1a1712"
@@ -296,6 +339,7 @@ export default function HallRoom({
         <meshBasicMaterial color="#b8924c" />
       </mesh>
       {active && <Stations onSelect={onSelect} />}
+      {active && <ShieldBeacon />}
       <pointLight
         position={[x, 5.5, 3]}
         intensity={active ? 40 : 0}
@@ -332,10 +376,130 @@ function Stations({ onSelect }: { onSelect: (c: Champion) => void }) {
             position={[p.x, 0, p.z]}
             rotation={[0, p.ry, 0]}
           >
-            <Station champion={c} kit={kit} onSelect={onSelect} />
+            <Station champion={c} index={i} kit={kit} onSelect={onSelect} />
           </group>
         );
       })}
     </>
+  );
+}
+
+/** Floor position of the Ferrari shield, in front of the stations. */
+export const BEACON = { x: HALL_X - 3.3, z: 6.6 };
+
+// The Ferrari shield floats and turns slowly above a lit disc at the centre of
+// the Hall. The shield artwork is the owner's local copy (git-ignored).
+function ShieldBeacon() {
+  const { invalidate } = useThree();
+  const spin = useRef<Group>(null);
+  const [shield, setShield] = useState<Texture | null>(null);
+  useEffect(() => {
+    if (!teamShieldSrc) return;
+    let live = true;
+    loadImage(teamShieldSrc).then((img) => {
+      if (!img || !live) return;
+      const c = document.createElement("canvas");
+      c.width = img.width;
+      c.height = img.height;
+      c.getContext("2d")!.drawImage(img, 0, 0);
+      const t = new CanvasTexture(c);
+      t.colorSpace = SRGBColorSpace;
+      t.anisotropy = 4;
+      setShield(t);
+    });
+    return () => {
+      live = false;
+    };
+  }, []);
+  useEffect(() => () => shield?.dispose(), [shield]);
+  // A soft golden pool of light on the floor.
+  const pool = useMemo(() => {
+    const c = document.createElement("canvas");
+    c.width = c.height = 256;
+    const ctx = c.getContext("2d")!;
+    const g = ctx.createRadialGradient(128, 128, 4, 128, 128, 128);
+    g.addColorStop(0, "rgba(255,210,130,0.75)");
+    g.addColorStop(0.4, "rgba(255,190,100,0.22)");
+    g.addColorStop(1, "rgba(255,190,100,0)");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, 256, 256);
+    const t = new CanvasTexture(c);
+    t.colorSpace = SRGBColorSpace;
+    return t;
+  }, []);
+  useEffect(() => () => pool.dispose(), [pool]);
+  const reduced = useMemo(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+    [],
+  );
+  useFrame(({ clock }) => {
+    const g = spin.current;
+    if (!g) return;
+    const t = clock.getElapsedTime();
+    if (!reduced) {
+      g.rotation.y = t * 0.6;
+      g.position.y = 1.2 + Math.sin(t * 1.1) * 0.07;
+    }
+    invalidate();
+  });
+  const aspect = shield
+    ? (shield.image as HTMLCanvasElement).width /
+      (shield.image as HTMLCanvasElement).height
+    : 0.75;
+  const h = 1.05;
+  return (
+    <group position={[BEACON.x, 0, BEACON.z]}>
+      <mesh position={[0, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[3.6, 3.6]} />
+        <meshBasicMaterial
+          map={pool}
+          transparent
+          blending={AdditiveBlending}
+          depthWrite={false}
+          toneMapped={false}
+        />
+      </mesh>
+      <mesh position={[0, 0.05, 0]}>
+        <cylinderGeometry args={[0.95, 1.05, 0.1, 64]} />
+        <meshStandardMaterial color="#141214" metalness={0.6} roughness={0.3} />
+      </mesh>
+      <mesh position={[0, 0.101, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <ringGeometry args={[0.86, 0.92, 96]} />
+        <meshBasicMaterial color="#d9b86e" toneMapped={false} />
+      </mesh>
+      {/* A faint column of light rising from the plinth. */}
+      <mesh position={[0, 1.15, 0]}>
+        <cylinderGeometry args={[0.5, 0.85, 2.2, 48, 1, true]} />
+        <meshBasicMaterial
+          color="#ffcf8a"
+          transparent
+          opacity={0.07}
+          blending={AdditiveBlending}
+          depthWrite={false}
+          side={DoubleSide}
+          toneMapped={false}
+        />
+      </mesh>
+      {shield && (
+        <group ref={spin} position={[0, 1.2, 0]}>
+          <mesh>
+            <planeGeometry args={[h * aspect, h]} />
+            <meshBasicMaterial
+              map={shield}
+              transparent
+              alphaTest={0.05}
+              side={DoubleSide}
+              toneMapped={false}
+            />
+          </mesh>
+        </group>
+      )}
+      <pointLight
+        position={[0, 2.6, 1.2]}
+        intensity={10}
+        distance={6}
+        color="#ffe2b0"
+      />
+    </group>
   );
 }

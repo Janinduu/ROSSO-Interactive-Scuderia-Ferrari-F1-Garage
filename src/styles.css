@@ -4806,3 +4806,736 @@ footer > button {
   flex-direction: column;
   align-items: flex-start;
 }
+/* Hall: studying one station. */
+.hall-study {
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-left: 2px solid #d9b86e;
+  background: #1c170fcc;
+  animation: arrive 0.3s ease both;
+}
+.hall-study .eyebrow {
+  color: #c9a45e;
+}
+.hall-study strong {
+  display: block;
+  font-family: var(--heading);
+  font-size: 28px;
+  font-weight: 500;
+  margin: 6px 0 2px;
+}
+.hall-study p {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.hall-study-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.hall-study-actions .tour-primary {
+  margin-left: 0;
+}
+button.hall-name {
+  text-align: left;
+  padding: 4px 0;
+  color: var(--text-1);
+}
+button.hall-name:hover,
+button.hall-name[aria-pressed="true"] {
+  color: #e7c98c;
+}
+/* ==================================================================
+   The fixed stage (1600 × 900, scaled to the window)
+   ================================================================== */
+.stage-viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  background: #101112;
+  transform-origin: center;
+}
+html.staged,
+html.staged body {
+  overflow: hidden;
+  height: 100%;
+}
+/* Native dialogs live outside the stage; scale them to match. */
+html.staged .modal {
+  zoom: var(--stage-scale, 1);
+}
+.staged .app {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.staged .header {
+  height: 72px;
+  flex: none;
+  margin: 0 48px;
+}
+.staged .header-caption {
+  display: none;
+}
+.staged main {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+.staged footer {
+  display: none;
+}
+.staged .experience,
+.staged .in-garage .experience,
+.staged .focus-mode .experience {
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  padding: 0;
+}
+
+/* ---------- Landing: one cinematic frame ---------- */
+.staged .landing .scene {
+  inset: 0 0 132px 30%;
+}
+.staged .landing .scene-shade {
+  background:
+    linear-gradient(90deg, #101112 0%, #101112f2 26%, #10111280 40%, transparent 58%),
+    linear-gradient(0deg, #101112 0%, #101112 17%, transparent 40%),
+    linear-gradient(180deg, #10111299 0%, transparent 12%);
+}
+.staged .landing-copy {
+  position: absolute;
+  left: 96px;
+  top: 44px;
+  width: 640px;
+  padding: 0;
+}
+.staged .landing-copy h1 {
+  font-size: 176px;
+  margin: 18px 0 10px;
+}
+.staged .landing-subtitle {
+  font-size: var(--fs-xs);
+  letter-spacing: 3.2px;
+}
+.staged .landing-copy h2 {
+  font-size: 46px;
+  margin: 30px 0 12px;
+}
+.staged .intro {
+  font-size: var(--fs-base);
+}
+.staged .landing-actions {
+  margin-top: 30px;
+  align-items: center;
+}
+.staged .landing-actions .enter-button {
+  margin-top: 0;
+}
+.staged .hero-legend {
+  position: absolute;
+  right: 96px;
+  left: auto;
+  top: auto;
+  bottom: 168px;
+}
+.staged .vertical-label {
+  right: 40px;
+  top: 36%;
+}
+.landing-rail {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  bottom: 44px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid #ffffff1f;
+}
+.rail-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 18px 16px 0;
+  text-align: left;
+  color: var(--text-1);
+}
+.rail-item + .rail-item {
+  padding-left: 18px;
+  border-left: 1px solid #ffffff12;
+}
+.rail-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.rail-item.gold::before {
+  background: #d9b86e;
+}
+.rail-item:hover::before,
+.rail-item:focus-visible::before {
+  transform: scaleX(1);
+}
+.rail-n {
+  font-family: var(--heading);
+  font-size: 28px;
+  line-height: 1;
+  color: #55595c;
+  transition: color 0.3s;
+}
+.rail-item:hover .rail-n {
+  color: var(--red);
+}
+.rail-item.gold:hover .rail-n {
+  color: #d9b86e;
+}
+.rail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+.rail-kicker {
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.rail-item strong {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.1;
+}
+.rail-item > svg {
+  color: var(--text-3);
+  margin-top: 2px;
+  transition: color 0.3s, transform 0.3s;
+}
+.rail-item:hover > svg {
+  color: var(--text-1);
+  transform: translate(2px, -2px);
+}
+.landing-foot {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: var(--fs-2xs);
+  color: #6f757a;
+}
+.landing-foot-links {
+  display: flex;
+  gap: 20px;
+  flex: none;
+}
+.landing-foot-links button {
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.landing-foot-links button:hover {
+  color: var(--text-1);
+}
+/* Phones (not staged): the rail stacks in the page flow. */
+html:not(.staged) .landing-rail,
+html:not(.staged) .landing-foot {
+  position: static;
+  margin: 20px 6%;
+}
+html:not(.staged) .landing-rail {
+  grid-template-columns: 1fr;
+}
+html:not(.staged) .rail-item + .rail-item {
+  padding-left: 0;
+  border-left: 0;
+  border-top: 1px solid #ffffff12;
+}
+html:not(.staged) .landing-foot {
+  flex-direction: column;
+}
+html:not(.staged) .landing-foot-links {
+  flex-wrap: wrap;
+}
+
+/* ---------- Garage: scene above a season dock ---------- */
+.staged .room-garage .scene {
+  inset: 0 0 208px 26%;
+}
+.staged .room-garage .scene-shade {
+  background:
+    linear-gradient(90deg, #101112 0%, #101112f5 24%, #10111290 34%, transparent 50%),
+    linear-gradient(0deg, #101112 0%, #101112 23%, transparent 34%);
+}
+.staged .garage-topline {
+  margin: 0 48px;
+  padding: 12px 0;
+  min-height: 64px;
+}
+.staged .driver-copy {
+  position: absolute;
+  left: 96px;
+  top: 80px;
+  width: 440px;
+  max-width: none;
+  padding: 0;
+}
+.staged .driver-copy h1 {
+  font-size: 34px;
+  margin: 10px 0 10px;
+}
+.staged .driver-copy h1 strong {
+  font-size: 64px;
+}
+.staged .tagline {
+  font-size: 24px;
+  margin: 14px 0 8px;
+}
+.staged .driver-summary {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 440px;
+}
+.staged .stats {
+  margin-top: 16px;
+}
+.staged .stats strong {
+  font-size: 32px;
+}
+.staged .title-runs {
+  margin-top: 8px;
+}
+.staged .data-note {
+  padding-top: 8px;
+  min-height: 0;
+}
+.staged .view-tabs {
+  margin-top: 6px;
+}
+.staged .car-label {
+  right: 96px;
+  bottom: 276px;
+}
+.staged .scene-tools {
+  right: 96px;
+  bottom: 220px;
+}
+.staged .engine-caption {
+  right: 96px;
+  bottom: 330px;
+}
+.staged .engineering-panel {
+  top: 76px;
+  right: 72px;
+  max-height: 520px;
+  overflow: auto;
+}
+.staged .archive-loading {
+  position: absolute;
+  bottom: 80px;
+  left: 96px;
+}
+
+/* The dock */
+.staged .dock {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  bottom: 0;
+  height: 208px;
+  margin: 0;
+  z-index: 8;
+  border-top: 1px solid #ffffff1a;
+  background: linear-gradient(180deg, #101112f0, #101112);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.dock-timeline {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 12px 48px 0;
+}
+.dock-timeline > .eyebrow {
+  flex: none;
+  gap: 12px;
+}
+.dock-timeline > .eyebrow span {
+  color: var(--text-3);
+}
+.dock .timeline {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.dock .timeline:before {
+  display: none;
+}
+.dock .timeline button {
+  flex: 0 0 auto;
+  min-width: 0;
+  min-height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  font-family: var(--heading);
+  font-size: var(--fs-lg);
+  color: var(--text-3);
+  border: 1px solid transparent;
+}
+.dock .timeline button i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #454c50;
+  box-shadow: none;
+}
+.dock .timeline button.won i {
+  background: #d6b46e;
+}
+.dock .timeline button.won {
+  color: #d6c092;
+}
+.dock .timeline button:hover {
+  color: var(--text-1);
+}
+.dock .timeline button.active {
+  color: var(--text-1);
+  border-color: #ffffff24;
+  background: #ffffff08;
+}
+.dock .timeline button.active i {
+  background: var(--red);
+  box-shadow: none;
+}
+.dock-season {
+  display: grid;
+  grid-template-columns: 150px 1fr auto auto;
+  align-items: center;
+  gap: 36px;
+  padding: 10px 48px 20px;
+  min-height: 0;
+}
+.dock .season-year {
+  font-size: 58px;
+  min-width: 0;
+}
+.dock .season-year span.champion {
+  color: #d6b46e;
+}
+.dock .season-story h2 {
+  font-size: 23px;
+  margin: 0 0 6px;
+}
+.dock .season-story p {
+  font-size: var(--fs-md);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dock .season-numbers {
+  margin: 0;
+  gap: 24px;
+}
+.dock .season-numbers strong {
+  font-size: 34px;
+}
+.dock-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 300px;
+}
+.dock-action {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #ffffff1f;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dock-action svg {
+  color: var(--red);
+  flex: none;
+}
+.dock-action:hover,
+.dock-action[aria-expanded="true"] {
+  border-color: var(--red);
+  color: var(--text-1);
+}
+.dock-action.primary {
+  grid-column: 1 / -1;
+  background: #3a121650;
+  border-color: #e33a3f80;
+  color: var(--text-1);
+}
+.dock-drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  max-height: 440px;
+  overflow: auto;
+  padding: 18px 48px 20px;
+  background: #0d0e10f7;
+  border-top: 2px solid var(--red);
+  box-shadow: 0 -30px 60px #000a;
+  backdrop-filter: blur(10px);
+  animation: arrive 0.3s ease both;
+}
+html:not(.staged) .dock-drawer {
+  position: static;
+  box-shadow: none;
+}
+.dock-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.dock-drawer-head .eyebrow span {
+  color: var(--text-3);
+  margin-left: 10px;
+}
+.dock-drawer .race-grid {
+  margin: 8px 0 10px;
+}
+.key-races-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+.key-races-list li {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #ffffff05;
+  border-left: 2px solid #ffffff1a;
+}
+.key-races-list li.current {
+  border-left-color: var(--red);
+  background: #3a121630;
+}
+.key-races-list button {
+  font-family: var(--heading);
+  font-size: 26px;
+  line-height: 1;
+  color: #e7c9a2;
+  align-self: flex-start;
+}
+.key-races-list strong {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: var(--fs-lg);
+}
+.key-races-list p {
+  margin: 4px 0 0;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.staged .dock .tour-bar {
+  display: none;
+}
+
+/* ---------- Rooms: full-height scene, panel scrolls inside ---------- */
+.staged .room-evolution .scene,
+.staged .room-hall .scene,
+.staged .room-legacy .scene {
+  inset: 0 0 0 24%;
+}
+.staged .evolution-panel,
+.staged .hall-panel,
+.staged .legacy-panel {
+  position: absolute;
+  left: 96px;
+  top: 20px;
+  bottom: 20px;
+  width: 440px;
+  max-width: none;
+  padding: 0 12px 0 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3a3c40 transparent;
+}
+.staged .hall-panel h1,
+.staged .legacy-panel h1,
+.staged .evolution-panel h1 {
+  margin-top: 10px;
+}
+
+/* ---------- Guided tour: the dock steps aside ---------- */
+.staged .tour-active .dock {
+  display: none;
+}
+.staged .tour-active.room-garage .scene {
+  bottom: 0;
+}
+.staged .tour-active .car-label,
+.staged .tour-active .scene-tools {
+  display: none;
+}
+.staged .tour-card {
+  left: 96px;
+  bottom: 40px;
+}
+
+/* ---------- Focus mode: the car fills the frame ---------- */
+.staged .focus-mode .scene {
+  inset: 0;
+}
+.staged .focus-mode .dock {
+  display: none;
+}
+.staged .focus-mode .scene-tools {
+  bottom: 24px;
+}
+.staged .experience:has(.engineering-panel) .scene-tools {
+  display: none;
+}
+
+/* Staged galleries (Legendary Moments, Race Lab): all six cards on one screen. */
+.staged .theatre {
+  overflow: hidden;
+}
+.staged .theatre-gallery {
+  max-width: 1320px;
+  height: 100%;
+  padding: 40px 64px 36px;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  grid-template-rows: auto auto 1fr;
+  column-gap: 48px;
+  align-content: start;
+}
+.staged .theatre-gallery > .eyebrow {
+  grid-column: 1 / -1;
+}
+.staged .theatre-gallery h1 {
+  font-size: 34px;
+  margin: 10px 0 22px;
+}
+.staged .theatre-gallery h1 strong {
+  font-size: 60px;
+}
+.staged .theatre-intro {
+  align-self: end;
+  margin: 0 56px 26px 0;
+  font-size: var(--fs-sm);
+}
+.staged .theatre-close {
+  right: 64px;
+  top: 34px;
+}
+.staged .theatre-gallery .fine-print,
+.staged .theatre-grid {
+  grid-column: 1 / -1;
+}
+.staged .theatre-grid {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  min-height: 0;
+}
+.staged .theatre-grid .show-stage {
+  aspect-ratio: auto;
+  flex: 1;
+  min-height: 0;
+}
+.staged .theatre-grid .show-body {
+  flex: 0 0 auto;
+  padding: 12px 18px 14px;
+  gap: 4px;
+}
+.staged .theatre-grid .show-body strong {
+  font-size: 22px;
+}
+.staged .theatre-grid .show-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.staged .theatre-grid .show-action {
+  padding-top: 6px;
+}
+.staged .theatre-grid .show-year {
+  font-size: 32px;
+}
+.staged .theatre-grid .show-body p {
+  min-height: calc(2 * 1.55em);
+}
+/* Studying a station: the intro and footnote make way for the study card. */
+.staged .hall-panel.studying .hall-intro,
+.staged .hall-panel.studying > .fine-print {
+  display: none;
+}
+.staged .hall-panel.studying h1 {
+  font-size: 30px;
+}
+.staged .hall-panel.studying h1 strong {
+  font-size: 44px;
+}
+.staged .hall-panel.studying .hall-list li {
+  padding: 1px 0;
+}
+.staged .hall-panel.studying .hall-name {
+  font-size: 18px;
+}
+/* Unstaged pages keep the regular footer, so the landing foot would repeat it. */
+html:not(.staged) .landing-foot {
+  display: none;
+}
+@media (min-width: 761px) {
+  html:not(.staged) .landing-copy {
+    width: 72%;
+  }
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  html:not(.staged) footer {
+    flex-wrap: wrap;
+  }
+  html:not(.staged) footer p {
+    order: 5;
+    flex: 1 0 100%;
+    max-width: none;
+  }
+}

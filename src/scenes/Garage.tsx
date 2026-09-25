@@ -182,6 +182,7 @@ export default function Garage(props: {
         key={props.high ? "high" : "performance"}
         shadows={props.high}
         frameloop="demand"
+        resize={{ offsetSize: true }}
         dpr={props.high ? [1, 1.5] : [0.8, 1]}
         camera={{
           // Start where the director will be, so a quality switch does not jump.

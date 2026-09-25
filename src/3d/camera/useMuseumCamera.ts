@@ -9,6 +9,8 @@ import { useCameraStore } from "./cameraStore";
 import { poses } from "./poses";
 import { titles, useLegacyStore } from "../../features/legacy/legacy";
 import { legacyPlinth } from "../rooms/LegacyRoom";
+import { stationPose } from "../rooms/HallRoom";
+import { useHallStore } from "../../features/hall/champions";
 
 // Maps where the visitor is in the museum to a camera pose. While the guided
 // tour runs it owns the camera instead; when it ends this restores the framing.
@@ -25,6 +27,7 @@ export function useMuseumCamera() {
   const viewResets = useMuseumStore((s) => s.viewResets);
   const touring = useTourStore((s) => s.active);
   const legacyYear = useLegacyStore((s) => s.selected);
+  const hallFocus = useHallStore((s) => s.focus);
   const lastFocus = useRef(partFocus);
   useEffect(() => {
     if (touring) return;
@@ -41,6 +44,10 @@ export function useMuseumCamera() {
         );
         return;
       }
+    }
+    if (entered && room === "hall" && hallFocus != null) {
+      useCameraStore.getState().go(poses.hallStation(stationPose(hallFocus)));
+      return;
     }
     if (entered && room === "legacy" && legacyYear != null) {
       const i = titles.findIndex((t) => t.year === legacyYear);
@@ -62,5 +69,5 @@ export function useMuseumCamera() {
           : poses.engineering(bay)
         : poses.bay(bay);
     useCameraStore.getState().go(pose);
-  }, [entered, room, bay, section, exploded, partFocus, viewResets, touring, legacyYear]);
+  }, [entered, room, bay, section, exploded, partFocus, viewResets, touring, legacyYear, hallFocus]);
 }
