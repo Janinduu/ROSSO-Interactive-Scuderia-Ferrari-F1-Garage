@@ -3,6 +3,7 @@ import { ExternalLink, Pause, Play, RotateCcw, X } from "lucide-react";
 import { COL, atDistance, atTime, deltaTrace, fmtLap, labIds, labMeta, loadLab, miniSectors } from "./labData";
 import type { LabSession } from "./labData";
 import { DRIVER_COLOURS, drawTrack, drawTraces } from "./labCanvas";
+import ShowCard, { normalise } from "../moments/ShowCard";
 import type { Channel } from "./labCanvas";
 import { playEngine, setEngineRpm, stopEngine } from "../../audio/soundEngine";
 import { engineProfile } from "../../audio/engineProfile";
@@ -78,19 +79,25 @@ function Picker({ onPick, onClose }: { onPick: (id: string) => void; onClose: ()
           const s = sessions[sid];
           const [a, b] = s?.drivers ?? [];
           return (
-            <button key={sid} className="moment-card lab-card" onClick={() => onPick(sid)}>
-              {s && <TrackThumb session={s} />}
-              <span className="moment-year">{s?.year ?? sid.slice(-4)}</span>
-              <strong>{labMeta[sid]?.title ?? sid}</strong>
-              {a && b && (
-                <span className="moment-meta">
-                  {a.code} {fmtLap(a.lapTime)} · {b.code} +{(b.lapTime - a.lapTime).toFixed(3)}
-                </span>
-              )}
-              <span className="moment-play">
-                <Play size={14} /> Compare
-              </span>
-            </button>
+            <ShowCard
+              key={sid}
+              tone="gold"
+              track={s ? trackOf(s) : null}
+              year={s?.year ?? sid.slice(-4)}
+              chip={labMeta[sid]?.chip}
+              kicker={`${labMeta[sid]?.circuit ?? ""} · Qualifying`}
+              title={labMeta[sid]?.title ?? sid}
+              story={labMeta[sid]?.story}
+              meta={
+                a && b ? (
+                  <>
+                    <b>{a.code}</b> {fmtLap(a.lapTime)} · <b>{b.code}</b> +{(b.lapTime - a.lapTime).toFixed(3)}
+                  </>
+                ) : null
+              }
+              action="Compare the laps"
+              onClick={() => onPick(sid)}
+            />
           );
         })}
       </div>
@@ -98,21 +105,11 @@ function Picker({ onPick, onClose }: { onPick: (id: string) => void; onClose: ()
   );
 }
 
-function TrackThumb({ session }: { session: LabSession }) {
+/** The fastest lap's own x/y positions as a thumbnail outline. */
+function trackOf(session: LabSession): [number, number][] {
   const s = session.drivers[0].samples;
-  const xs = s.map((p) => p[COL.x]);
-  const ys = s.map((p) => p[COL.y]);
-  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
-  const k = 1 / Math.max(x1 - x0, y1 - y0);
-  const pts = s
-    .filter((_, i) => i % 4 === 0)
-    .map((p) => `${((p[COL.x] - x0) * k).toFixed(3)},${(1 - (p[COL.y] - y0) * k).toFixed(3)}`)
-    .join(" ");
-  return (
-    <svg viewBox="-0.05 -0.05 1.1 1.1" aria-hidden="true">
-      <polyline points={pts} fill="none" stroke="currentColor" strokeWidth="0.014" strokeLinejoin="round" />
-    </svg>
-  );
+  // OpenF1 y grows upwards; flip it for the screen.
+  return normalise(s.filter((_, i) => i % 4 === 0).map((p) => [p[COL.x], -p[COL.y]]));
 }
 
 function Lab({ id, onBack }: { id: string; onBack: () => void }) {

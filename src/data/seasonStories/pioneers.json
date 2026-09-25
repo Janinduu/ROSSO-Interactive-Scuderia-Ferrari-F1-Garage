@@ -1,0 +1,285 @@
+{
+  "seasons": {
+    "ascari": {
+      "1950": {
+        "title": "Chasing the Alfa Romeos.",
+        "story": "Ferrari’s first championship season brought Ascari two second places, at Monaco and Monza. The Monza result came in Dorino Serafini’s car, a shared drive, after his own new 4.5-litre Ferrari retired.",
+        "sourceIds": ["wiki-1950-season", "wiki-1950-italian-gp", "wiki-ascari"]
+      },
+      "1951": {
+        "title": "The first victories.",
+        "story": "Wins at the Nürburgring and Monza, his first in the championship, took Ascari to the Spanish finale with a title chance. Tyre trouble there left him fourth, and runner-up to Fangio.",
+        "sourceIds": ["wiki-1951-season", "wiki-ascari"]
+      },
+      "1952": {
+        "title": "Six starts, six victories.",
+        "story": "Ascari missed the Swiss opener to race at the Indianapolis 500, then a championship round, and retired there. He won all six remaining rounds and became Ferrari’s first drivers’ champion.",
+        "sourceIds": ["wiki-1952-season", "wiki-ascari"]
+      },
+      "1953": {
+        "title": "The first to defend it.",
+        "story": "Five wins, from Buenos Aires to Bremgarten, made Ascari the first driver to retain the world title. At Monza he spun on the final corner while fighting for victory.",
+        "sourceIds": ["wiki-1953-season", "wiki-ascari"]
+      },
+      "1954": {
+        "title": "One more race in red.",
+        "story": "Contracted to Lancia, whose D50 was not yet ready, Ascari returned to Ferrari for the Italian Grand Prix. He fought Fangio for the lead at Monza before his engine failed.",
+        "sourceIds": ["wiki-1954-season", "wiki-ascari"]
+      }
+    },
+    "fangio": {
+      "1956": {
+        "title": "The title, with a teammate’s help.",
+        "story": "In the Lancia-Ferrari D50, Fangio won in Argentina, Britain and Germany; the Argentine win came in Luigi Musso’s car. Peter Collins handed over his car at Monaco and Monza, where second place sealed a fourth title.",
+        "sourceIds": ["wiki-1956-season"]
+      }
+    },
+    "hawthorn": {
+      "1953": {
+        "title": "The race of the century.",
+        "story": "In his first Ferrari season, Hawthorn edged Fangio at Reims after a 60-lap duel for his first Grand Prix win. Two more podiums brought fourth place in the championship.",
+        "sourceIds": ["wiki-1953-season", "wiki-1953-french-gp", "wiki-hawthorn", "f1-hof-hawthorn"]
+      },
+      "1954": {
+        "title": "Through fire to Pedralbes.",
+        "story": "Serious burns at the non-championship Syracuse race interrupted his year. Three second places, one shared with José Froilán González at the Nürburgring, preceded victory in the Spanish finale and third overall.",
+        "sourceIds": ["wiki-1954-season", "wiki-1954-spanish-gp", "wiki-hawthorn"]
+      },
+      "1955": {
+        "title": "A brief return.",
+        "story": "Hawthorn began the year with Vanwall and rejoined Ferrari mid-season. None of his three Ferrari starts reached the top five, and at Aintree he shared his car with Eugenio Castellotti.",
+        "sourceIds": ["wiki-1955-season", "wiki-1955-british-gp", "wiki-hawthorn"]
+      },
+      "1957": {
+        "title": "Second to Fangio’s charge.",
+        "story": "Back at Ferrari in the Lancia-Ferrari, Hawthorn did not win a championship race. His best result was second at the Nürburgring, where Fangio passed him on the penultimate lap.",
+        "sourceIds": ["wiki-1957-season", "wiki-1957-german-gp", "wiki-hawthorn"]
+      },
+      "1958": {
+        "title": "Britain’s first world champion.",
+        "story": "One win, at Reims, and five second places made Hawthorn champion by a single point from Stirling Moss. A season marked by the deaths of Luigi Musso and Peter Collins ended with his retirement.",
+        "sourceIds": ["wiki-1958-season", "wiki-hawthorn", "f1-hof-hawthorn"]
+      }
+    },
+    "phil_hill": {
+      "1958": {
+        "title": "In service of a title.",
+        "story": "Hill’s first Ferrari Grand Prix came in a Formula Two Dino at the Nürburgring. Promoted to the works team, he finished third at Monza and in Morocco, where he let Hawthorn through to second.",
+        "sourceIds": ["motorsport-hill", "f1-hof-hill", "wiki-1958-season", "wiki-1958-moroccan-gp"]
+      },
+      "1959": {
+        "title": "A first full season.",
+        "story": "Hill’s first full season with Ferrari brought second places at Reims and Monza and third at AVUS. Ferrari missed the British Grand Prix, and Hill finished fourth in the championship.",
+        "sourceIds": ["wiki-1959-season", "wiki-phil-hill", "motorsport-hill"]
+      },
+      "1960": {
+        "title": "The last front-engined winner.",
+        "story": "Ferrari’s front-engined Dino 246 was outpaced by rear-engined British cars. At a Monza boycotted by the main British teams, Hill led a Ferrari one-two-three: the last championship win for a front-engined car.",
+        "sourceIds": ["wiki-1960-season", "wiki-1960-italian-gp", "wiki-phil-hill"]
+      },
+      "1961": {
+        "title": "Champion, at a cost.",
+        "story": "Wins at Spa and Monza made Hill the first American world champion. The title was settled at Monza, where teammate Wolfgang von Trips was killed in a crash that also killed spectators.",
+        "sourceIds": ["wiki-1961-season", "wiki-1961-italian-gp", "wiki-phil-hill", "f1-hof-hill"]
+      },
+      "1962": {
+        "title": "A defence that faded.",
+        "story": "Hill began his title defence with three podiums, including second at Monaco, then scored no further points. It was his final season with Ferrari before he moved to ATS.",
+        "sourceIds": ["wiki-1962-season", "motorsport-hill", "wiki-phil-hill"]
+      }
+    },
+    "surtees": {
+      "1963": {
+        "title": "From two wheels to red.",
+        "story": "The motorcycle world champion joined Ferrari and won the German Grand Prix, the team’s first victory in two years. Engine failures and a disqualification in Mexico limited the rest of his season.",
+        "sourceIds": ["wiki-1963-season", "wiki-1963-german-gp", "wiki-surtees", "f1-hof-surtees"]
+      },
+      "1964": {
+        "title": "Champion on two and four wheels.",
+        "story": "Wins at the Nürburgring and Monza kept Surtees in contention. At the Mexican finale, in a NART-entered car painted white and blue, Bandini let him through to second and the title by one point.",
+        "sourceIds": ["wiki-1964-season", "wiki-1964-mexican-gp", "wiki-surtees", "f1-hof-surtees"]
+      },
+      "1965": {
+        "title": "A season cut short.",
+        "story": "Without a win, Surtees took second in South Africa and third places in France and Britain. A serious sports car crash at Mosport in September ended his Formula One season early.",
+        "sourceIds": ["wiki-1965-season", "wiki-surtees"]
+      },
+      "1966": {
+        "title": "Victory at Spa, then goodbye.",
+        "story": "In the new three-litre Ferrari, Surtees retired from the lead at Monaco and won a rain-hit Belgian Grand Prix from pole. A dispute with team manager Eugenio Dragoni at Le Mans led him to leave.",
+        "sourceIds": ["wiki-1966-season", "wiki-surtees"]
+      }
+    }
+  },
+  "keyRaces": {
+    "ascari": [
+      {
+        "year": 1951,
+        "race": "1951 German Grand Prix",
+        "text": "Ascari took his first championship victory from pole at the Nürburgring, as the Alfa Romeos struggled with overheating.",
+        "sourceIds": ["wiki-1951-season", "wiki-ascari"]
+      },
+      {
+        "year": 1952,
+        "race": "1952 Belgian Grand Prix",
+        "text": "Pole, victory and fastest lap at Spa began a run in which Ascari won every remaining championship round of 1952.",
+        "sourceIds": ["wiki-1952-season", "wiki-1952-belgian-gp", "wiki-ascari"]
+      },
+      {
+        "year": 1953,
+        "race": "1953 Argentine Grand Prix",
+        "text": "Ascari won by a lap in the first championship race outside Europe, Indianapolis aside, a race marked by a crash that killed spectators.",
+        "sourceIds": ["wiki-1953-season"]
+      },
+      {
+        "year": 1953,
+        "race": "1953 Swiss Grand Prix",
+        "text": "After a long pit stop for carburettor trouble, Ascari rejoined third and passed Hawthorn and Farina to win at Bremgarten.",
+        "sourceIds": ["wiki-1953-season"]
+      }
+    ],
+    "fangio": [
+      {
+        "year": 1956,
+        "race": "1956 Argentine Grand Prix",
+        "text": "After his fuel pump failed, Fangio took over Luigi Musso’s car and won, receiving half points for the shared drive.",
+        "sourceIds": ["wiki-1956-season"]
+      },
+      {
+        "year": 1956,
+        "race": "1956 Monaco Grand Prix",
+        "text": "After damaging a wheel against a wall, Fangio took over Peter Collins’s car and finished second to Stirling Moss.",
+        "sourceIds": ["wiki-1956-season"]
+      },
+      {
+        "year": 1956,
+        "race": "1956 German Grand Prix",
+        "text": "Fangio won from pole at the Nürburgring, ahead of Stirling Moss and Jean Behra.",
+        "sourceIds": ["wiki-1956-season"]
+      },
+      {
+        "year": 1956,
+        "race": "1956 Italian Grand Prix",
+        "text": "With his own car out, Fangio took over Peter Collins’s Ferrari and finished second at Monza to clinch his fourth title.",
+        "sourceIds": ["wiki-1956-season"]
+      }
+    ],
+    "hawthorn": [
+      {
+        "year": 1953,
+        "race": "1953 French Grand Prix",
+        "text": "Hawthorn beat Fangio after a 60-lap duel at Reims; the first four cars finished within five seconds of each other.",
+        "sourceIds": ["wiki-1953-french-gp", "wiki-hawthorn", "f1-hof-hawthorn"]
+      },
+      {
+        "year": 1954,
+        "race": "1954 Spanish Grand Prix",
+        "text": "Hawthorn won the season finale at Pedralbes after several rivals, including Ascari in the new Lancia, retired.",
+        "sourceIds": ["wiki-1954-spanish-gp", "wiki-1954-season"]
+      },
+      {
+        "year": 1957,
+        "race": "1957 German Grand Prix",
+        "text": "Hawthorn led late on but finished second after Fangio repeatedly broke the lap record and passed him on the penultimate lap.",
+        "sourceIds": ["wiki-1957-german-gp", "wiki-1957-season"]
+      },
+      {
+        "year": 1958,
+        "race": "1958 Moroccan Grand Prix",
+        "text": "Second behind Moss at Casablanca, after Phil Hill let him through, made Hawthorn champion by one point.",
+        "sourceIds": ["wiki-1958-moroccan-gp", "wiki-hawthorn"]
+      }
+    ],
+    "phil_hill": [
+      {
+        "year": 1958,
+        "race": "1958 Moroccan Grand Prix",
+        "text": "Running second, Hill slowed on team orders to let Hawthorn through; Hill finished third and Hawthorn took the title.",
+        "sourceIds": ["wiki-1958-moroccan-gp"]
+      },
+      {
+        "year": 1960,
+        "race": "1960 Italian Grand Prix",
+        "text": "Hill’s first Grand Prix win was the first by an American since 1921, excluding Indianapolis, and the last for a front-engined car.",
+        "sourceIds": ["wiki-1960-italian-gp", "wiki-phil-hill"]
+      },
+      {
+        "year": 1961,
+        "race": "1961 Belgian Grand Prix",
+        "text": "Hill won from pole as Ferraris finished first to fourth at Spa, the last time any constructor achieved that result.",
+        "sourceIds": ["wiki-1961-belgian-gp", "wiki-1961-season"]
+      },
+      {
+        "year": 1961,
+        "race": "1961 Italian Grand Prix",
+        "text": "Hill won at Monza and clinched the title in a race where Wolfgang von Trips and spectators were killed.",
+        "sourceIds": ["wiki-1961-italian-gp", "f1-hof-hill"]
+      }
+    ],
+    "surtees": [
+      {
+        "year": 1963,
+        "race": "1963 German Grand Prix",
+        "text": "Surtees passed Jim Clark’s misfiring Lotus to take his first championship win and Ferrari’s first for two years.",
+        "sourceIds": ["wiki-1963-german-gp", "wiki-1963-season", "f1-hof-surtees"]
+      },
+      {
+        "year": 1964,
+        "race": "1964 Italian Grand Prix",
+        "text": "From pole, Surtees won at Monza as Clark and Graham Hill retired, bringing him into the championship fight.",
+        "sourceIds": ["wiki-1964-season"]
+      },
+      {
+        "year": 1964,
+        "race": "1964 Mexican Grand Prix",
+        "text": "Bandini let Surtees through to second on the final lap, giving him the title by one point from Graham Hill.",
+        "sourceIds": ["wiki-1964-mexican-gp", "wiki-1964-season"]
+      },
+      {
+        "year": 1966,
+        "race": "1966 Belgian Grand Prix",
+        "text": "Surtees won from pole at Spa after a first-lap rainstorm eliminated several cars, in his last race for Ferrari.",
+        "sourceIds": ["wiki-1966-season", "wiki-surtees"]
+      }
+    ]
+  },
+  "sources": {
+    "wiki-1950-season": { "title": "1950 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1950_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1951-season": { "title": "1951 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1951_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1952-season": { "title": "1952 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1952_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1953-season": { "title": "1953 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1953_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1954-season": { "title": "1954 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1954_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1955-season": { "title": "1955 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1955_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1956-season": { "title": "1956 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1956_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1957-season": { "title": "1957 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1957_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1958-season": { "title": "1958 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1958_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1959-season": { "title": "1959 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1959_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1960-season": { "title": "1960 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1960_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1961-season": { "title": "1961 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1961_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1962-season": { "title": "1962 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1962_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1963-season": { "title": "1963 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1963_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1964-season": { "title": "1964 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1964_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1965-season": { "title": "1965 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1965_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1966-season": { "title": "1966 Formula One season", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1966_Formula_One_season", "accessedAt": "2026-09-25" },
+    "wiki-1950-italian-gp": { "title": "1950 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1950_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1952-belgian-gp": { "title": "1952 Belgian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1952_Belgian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1953-french-gp": { "title": "1953 French Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1953_French_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1954-spanish-gp": { "title": "1954 Spanish Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1954_Spanish_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1955-british-gp": { "title": "1955 British Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1955_British_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1957-german-gp": { "title": "1957 German Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1957_German_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1958-moroccan-gp": { "title": "1958 Moroccan Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1958_Moroccan_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1960-italian-gp": { "title": "1960 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1960_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1961-belgian-gp": { "title": "1961 Belgian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1961_Belgian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1961-italian-gp": { "title": "1961 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1961_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1963-german-gp": { "title": "1963 German Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1963_German_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-1964-mexican-gp": { "title": "1964 Mexican Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1964_Mexican_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-ascari": { "title": "Alberto Ascari", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Alberto_Ascari", "accessedAt": "2026-09-25" },
+    "wiki-hawthorn": { "title": "Mike Hawthorn", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Mike_Hawthorn", "accessedAt": "2026-09-25" },
+    "wiki-phil-hill": { "title": "Phil Hill", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Phil_Hill", "accessedAt": "2026-09-25" },
+    "wiki-surtees": { "title": "John Surtees", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/John_Surtees", "accessedAt": "2026-09-25" },
+    "f1-hof-hill": { "title": "Phil Hill – Drivers’ Hall of Fame", "publisher": "Formula 1", "url": "https://www.formula1.com/en/information/drivers-hall-of-fame-phil-hill.6lgmSO6KAK9UgCNziJodGB", "accessedAt": "2026-09-25" },
+    "f1-hof-hawthorn": { "title": "Mike Hawthorn – Drivers’ Hall of Fame", "publisher": "Formula 1", "url": "https://www.formula1.com/en/information/drivers-hall-of-fame-mike-hawthorn.1ZhSmpnVlO7Pb8peo23YVd", "accessedAt": "2026-09-25" },
+    "f1-hof-surtees": { "title": "John Surtees – Drivers’ Hall of Fame", "publisher": "Formula 1", "url": "https://www.formula1.com/en/information/drivers-hall-of-fame-john-surtees.7a0aXDMmG4DZeRFpzeN4vz", "accessedAt": "2026-09-25" },
+    "motorsport-hill": { "title": "Phil Hill – America’s first F1 champion and Le Mans legend", "publisher": "Motorsport.com", "url": "https://www.motorsport.com/f1/news/phil-hill-americas-first-formula-1-world-champion/4782983/", "accessedAt": "2026-09-25" }
+  }
+}

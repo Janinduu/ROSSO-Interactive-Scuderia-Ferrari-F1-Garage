@@ -1,0 +1,279 @@
+{
+  "seasons": {
+    "gilles_villeneuve": {
+      "1977": {
+        "title": "A late-season arrival.",
+        "story": "Villeneuve joined Ferrari for the last two races after Lauda’s departure. At Fuji, a collision with Peterson’s Tyrrell sent his car off the track; a marshal and a photographer standing in a prohibited area were killed.",
+        "sourceIds": ["wiki_villeneuve", "wiki_1977_jpn"]
+      },
+      "1978": {
+        "title": "Victory at home.",
+        "story": "Villeneuve’s first full season brought third place in Austria. At the final round, on the new Montreal circuit, he won his home Grand Prix, the first Formula One victory for a Canadian driver.",
+        "sourceIds": ["wiki_villeneuve", "wiki_1978_can"]
+      },
+      "1979": {
+        "title": "Runner-up by four points.",
+        "story": "Three wins, at Kyalami, Long Beach and Watkins Glen, and seven podium finishes. Villeneuve followed Scheckter home at Monza and finished the season runner-up, four points behind his team-mate.",
+        "sourceIds": ["wiki_villeneuve", "wiki_1979_ita", "f1_1979_drivers"]
+      },
+      "1980": {
+        "title": "A difficult year in the T5.",
+        "story": "The 312 T5 had only partial ground effects, and Villeneuve scored six points all season. Two fifth places, at Monaco and in Canada, were his best results.",
+        "sourceIds": ["wiki_villeneuve"]
+      },
+      "1981": {
+        "title": "Turbo power, two wins.",
+        "story": "The turbocharged 126 CK was powerful but difficult to handle. Villeneuve still won at Monaco and at Jarama, where he held off four cars, then took third in the rain in Canada.",
+        "sourceIds": ["wiki_villeneuve", "wiki_1981_mon", "wiki_1981_esp", "mm_1981_can"]
+      },
+      "1982": {
+        "title": "A season cut short.",
+        "story": "Villeneuve finished second at Imola after Pironi passed him on the final lap, against what he understood as team orders. Two weeks later, he was killed in final qualifying at Zolder.",
+        "sourceIds": ["wiki_villeneuve", "wiki_1982_smr", "wiki_1982_bel", "f1_villeneuve_5reasons"]
+      }
+    },
+    "scheckter": {
+      "1979": {
+        "title": "Champion at Monza.",
+        "story": "Wins in Belgium, Monaco and Italy brought Scheckter the drivers’ title, sealed at Monza with Villeneuve following him home. Ferrari would wait 21 years for its next drivers’ champion.",
+        "sourceIds": ["wiki_scheckter", "wiki_1979_ita", "wiki_1979_season"]
+      },
+      "1980": {
+        "title": "The champion steps away.",
+        "story": "In the 312 T5, Scheckter scored only two points and failed to qualify in Canada. The reigning champion retired from Formula One at the end of the season.",
+        "sourceIds": ["wiki_scheckter"]
+      }
+    },
+    "mansell": {
+      "1989": {
+        "title": "A winning debut in red.",
+        "story": "Mansell won on his Ferrari debut in Brazil and again in Hungary, from 12th on the grid. Disqualifications in Canada and Portugal marked a season that ended fourth in the championship.",
+        "sourceIds": ["wiki_mansell", "wiki_1989_bra", "wiki_1989_hun", "wiki_1989_can", "wiki_1989_por", "f1_1989_drivers"]
+      },
+      "1990": {
+        "title": "One win in Portugal.",
+        "story": "Mansell won from pole position in Portugal, his only victory of the season, among five podium finishes. He finished fifth in the championship as team-mate Prost fought Senna for the title.",
+        "sourceIds": ["wiki_mansell", "wiki_1990_por", "f1_1990_drivers"]
+      }
+    },
+    "prost": {
+      "1990": {
+        "title": "Decided at the first corner.",
+        "story": "Five wins, including Ferrari’s 100th Grand Prix victory in France, carried Prost into a title fight with Senna. It ended in a first-corner collision at Suzuka; Prost finished runner-up, seven points behind.",
+        "sourceIds": ["wiki_prost", "wiki_1990_fra", "wiki_1990_jpn", "f1_1990_drivers"]
+      },
+      "1991": {
+        "title": "A partnership ends early.",
+        "story": "Five podium finishes, but no victories, from the 642 and its successor, the 643. After publicly criticising the car, Prost was dismissed before the final race in Australia.",
+        "sourceIds": ["wiki_prost", "wiki_1991_season"]
+      }
+    },
+    "raikkonen": {
+      "2007": {
+        "title": "One point, one title.",
+        "story": "Räikkönen won on his Ferrari debut in Australia and took six victories in all. Seven points behind Hamilton before the final race, he won in Brazil to claim the title by one point.",
+        "sourceIds": ["wiki_2007_season", "wiki_2007_bra", "f1_raikkonen_best_wins"]
+      },
+      "2008": {
+        "title": "Early wins, team honours.",
+        "story": "Wins in Malaysia and Spain came early in a season of nine podium finishes. Räikkönen finished third in the drivers’ standings as Ferrari won the constructors’ championship.",
+        "sourceIds": ["wiki_raikkonen", "f1_2008_drivers", "f1_2008_team"]
+      },
+      "2009": {
+        "title": "A lone win at Spa.",
+        "story": "After no points from the first three races, Räikkönen won from sixth on the grid at Spa, Ferrari’s only victory of the year. Ferrari then bought out his contract’s final year to make way for Alonso.",
+        "sourceIds": ["wiki_2009_bel", "f1_raikkonen_hof"]
+      },
+      "2014": {
+        "title": "A difficult return.",
+        "story": "Räikkönen rejoined Ferrari alongside Alonso for the first season of hybrid turbo power. He did not reach the podium; fourth in Belgium was his best result, and he finished 12th in the standings.",
+        "sourceIds": ["f1_raikkonen_hof", "f1_2014_drivers"]
+      },
+      "2015": {
+        "title": "Alongside a new team-mate.",
+        "story": "Second place in Bahrain was the first of three podiums in Räikkönen’s first season alongside Vettel. Third places in Singapore and Abu Dhabi followed, and he finished fourth in the championship.",
+        "sourceIds": ["wiki_raikkonen", "f1_2015_drivers"]
+      },
+      "2016": {
+        "title": "Consistency without victory.",
+        "story": "Second places in Bahrain and Spain, and third places in Russia and Austria, made four podium finishes for Räikkönen. A first win since his return remained out of reach.",
+        "sourceIds": ["wiki_raikkonen"]
+      },
+      "2017": {
+        "title": "Pole at Monaco.",
+        "story": "Pole position at Monaco, his first since 2008, led to second place behind Vettel. Six more podium finishes followed, including second in Hungary, but a victory remained out of reach.",
+        "sourceIds": ["wiki_2017_mon", "wiki_raikkonen"]
+      },
+      "2018": {
+        "title": "A final win in red.",
+        "story": "Räikkönen’s Monza pole was then the fastest lap in Formula One history, and he won in Austin, his first victory since 2013. Twelve podiums brought third in the championship in his final Ferrari season.",
+        "sourceIds": ["wiki_2018_ita", "wiki_2018_usa", "f1_2018_drivers", "f1_raikkonen_hof"]
+      }
+    }
+  },
+  "keyRaces": {
+    "gilles_villeneuve": [
+      {
+        "year": 1978,
+        "race": "1978 Canadian Grand Prix",
+        "text": "Villeneuve inherited the lead when Jarier’s Lotus retired, winning the first Grand Prix at Montreal for his first Formula One victory.",
+        "sourceIds": ["wiki_1978_can"]
+      },
+      {
+        "year": 1979,
+        "race": "1979 French Grand Prix",
+        "text": "Villeneuve and Arnoux repeatedly touched wheels while fighting for second at Dijon; Villeneuve kept the place by less than a quarter of a second.",
+        "sourceIds": ["wiki_1979_fra", "f1_villeneuve_5reasons"]
+      },
+      {
+        "year": 1981,
+        "race": "1981 Monaco Grand Prix",
+        "text": "Starting second, Villeneuve took the lead when Jones hit a fuel feed problem, giving the turbocharged 126 CK victory in Monaco.",
+        "sourceIds": ["wiki_1981_mon"]
+      },
+      {
+        "year": 1981,
+        "race": "1981 Spanish Grand Prix",
+        "text": "From seventh on the grid, Villeneuve led a five-car train at Jarama and won by 0.22 seconds. It was his final Grand Prix victory.",
+        "sourceIds": ["wiki_1981_esp"]
+      }
+    ],
+    "scheckter": [
+      {
+        "year": 1979,
+        "race": "1979 Monaco Grand Prix",
+        "text": "Scheckter won from pole position and led all 76 laps, finishing 0.44 seconds ahead of Regazzoni’s Williams.",
+        "sourceIds": ["wiki_1979_mon"]
+      },
+      {
+        "year": 1979,
+        "race": "1979 Italian Grand Prix",
+        "text": "Scheckter won at Monza with Villeneuve second, sealing the drivers’ championship and the constructors’ title for Ferrari.",
+        "sourceIds": ["wiki_1979_ita"]
+      },
+      {
+        "year": 1980,
+        "race": "1980 Canadian Grand Prix",
+        "text": "A year after winning the title, Scheckter failed to qualify the 312 T5 in Montreal.",
+        "sourceIds": ["wiki_scheckter"]
+      }
+    ],
+    "mansell": [
+      {
+        "year": 1989,
+        "race": "1989 Brazilian Grand Prix",
+        "text": "On his Ferrari debut, Mansell won from sixth on the grid, the first Grand Prix victory for a car with a semi-automatic gearbox.",
+        "sourceIds": ["wiki_1989_bra", "wiki_1989_season"]
+      },
+      {
+        "year": 1989,
+        "race": "1989 Hungarian Grand Prix",
+        "text": "From 12th on the grid, Mansell passed Senna while they lapped Johansson’s Onyx, then won by nearly 26 seconds.",
+        "sourceIds": ["wiki_1989_hun"]
+      },
+      {
+        "year": 1989,
+        "race": "1989 Portuguese Grand Prix",
+        "text": "Mansell reversed in the pit lane, was black-flagged and then collided with Senna; he was disqualified and excluded from the next race.",
+        "sourceIds": ["wiki_1989_por", "wiki_mansell"]
+      },
+      {
+        "year": 1990,
+        "race": "1990 Portuguese Grand Prix",
+        "text": "From pole, Mansell lost places at the start but passed Senna after the stops and led when the race was stopped after 61 laps.",
+        "sourceIds": ["wiki_1990_por"]
+      }
+    ],
+    "prost": [
+      {
+        "year": 1990,
+        "race": "1990 Mexican Grand Prix",
+        "text": "Starting 13th, Prost worked through the field and passed Senna for the lead on lap 61 of 69 to win.",
+        "sourceIds": ["autosport_prost_mex1990", "wiki_prost"]
+      },
+      {
+        "year": 1990,
+        "race": "1990 French Grand Prix",
+        "text": "Prost passed Capelli’s Leyton House for the lead on lap 77 of 80, giving Ferrari its 100th Formula One victory.",
+        "sourceIds": ["wiki_1990_fra"]
+      },
+      {
+        "year": 1990,
+        "race": "1990 Japanese Grand Prix",
+        "text": "Prost and Senna collided at the first corner and both retired, confirming Senna as champion with one race remaining.",
+        "sourceIds": ["wiki_1990_jpn"]
+      }
+    ],
+    "raikkonen": [
+      {
+        "year": 2007,
+        "race": "2007 Australian Grand Prix",
+        "text": "Räikkönen won his first race for Ferrari, the opening round of the season, at Melbourne.",
+        "sourceIds": ["f1_raikkonen_best_wins", "wiki_raikkonen"]
+      },
+      {
+        "year": 2007,
+        "race": "2007 Brazilian Grand Prix",
+        "text": "Third in the standings before the finale, Räikkönen won at Interlagos and took the title by one point from Hamilton and Alonso.",
+        "sourceIds": ["wiki_2007_bra", "wiki_2007_season"]
+      },
+      {
+        "year": 2009,
+        "race": "2009 Belgian Grand Prix",
+        "text": "From sixth on the grid, Räikkönen passed Fisichella after a safety car restart and won, Ferrari’s only victory of 2009.",
+        "sourceIds": ["wiki_2009_bel", "f1_raikkonen_best_wins"]
+      },
+      {
+        "year": 2018,
+        "race": "2018 United States Grand Prix",
+        "text": "Räikkönen took the lead from Hamilton at the start in Austin and won, his first victory since the 2013 Australian Grand Prix.",
+        "sourceIds": ["wiki_2018_usa", "f1_raikkonen_best_wins"]
+      }
+    ]
+  },
+  "sources": {
+    "wiki_villeneuve": { "title": "Gilles Villeneuve", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Gilles_Villeneuve", "accessedAt": "2026-09-25" },
+    "wiki_1977_jpn": { "title": "1977 Japanese Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1977_Japanese_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1978_can": { "title": "1978 Canadian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1978_Canadian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1979_season": { "title": "1979 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1979_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki_1979_fra": { "title": "1979 French Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1979_French_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1979_mon": { "title": "1979 Monaco Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1979_Monaco_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1979_ita": { "title": "1979 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1979_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_1979_drivers": { "title": "1979 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/1979/drivers", "accessedAt": "2026-09-25" },
+    "wiki_1981_mon": { "title": "1981 Monaco Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1981_Monaco_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1981_esp": { "title": "1981 Spanish Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1981_Spanish_Grand_Prix", "accessedAt": "2026-09-25" },
+    "mm_1981_can": { "title": "F1's forgotten classic: Gilles Villeneuve's genius in mangled Ferrari", "publisher": "Motor Sport Magazine", "url": "https://www.motorsportmagazine.com/articles/single-seaters/f1/f1s-forgotten-classic-gilles-villeneuves-genius-in-mangled-ferrari/", "accessedAt": "2026-09-25" },
+    "wiki_1982_smr": { "title": "1982 San Marino Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1982_San_Marino_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1982_bel": { "title": "1982 Belgian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1982_Belgian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_villeneuve_5reasons": { "title": "5 reasons F1 fans are still in awe of Gilles Villeneuve", "publisher": "Formula 1", "url": "https://www.formula1.com/en/latest/article/5-reasons-f1-fans-are-still-in-awe-of-the-legendary-gilles-villeneuve.6Dvc1Wh0NMPqZNqBIwIZHU", "accessedAt": "2026-09-25" },
+    "wiki_scheckter": { "title": "Jody Scheckter", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Jody_Scheckter", "accessedAt": "2026-09-25" },
+    "wiki_mansell": { "title": "Nigel Mansell", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Nigel_Mansell", "accessedAt": "2026-09-25" },
+    "wiki_1989_season": { "title": "1989 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1989_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki_1989_bra": { "title": "1989 Brazilian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1989_Brazilian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1989_can": { "title": "1989 Canadian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1989_Canadian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1989_hun": { "title": "1989 Hungarian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1989_Hungarian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1989_por": { "title": "1989 Portuguese Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1989_Portuguese_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_1989_drivers": { "title": "1989 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/1989/drivers", "accessedAt": "2026-09-25" },
+    "wiki_prost": { "title": "Alain Prost", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Alain_Prost", "accessedAt": "2026-09-25" },
+    "wiki_1990_fra": { "title": "1990 French Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1990_French_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1990_por": { "title": "1990 Portuguese Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1990_Portuguese_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_1990_jpn": { "title": "1990 Japanese Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1990_Japanese_Grand_Prix", "accessedAt": "2026-09-25" },
+    "autosport_prost_mex1990": { "title": "Race of my life: Alain Prost on the 1990 Mexican GP", "publisher": "Autosport", "url": "https://www.autosport.com/f1/news/race-of-my-life-alain-prost-on-the-1990-mexican-gp-4982358/4982358/", "accessedAt": "2026-09-25" },
+    "f1_1990_drivers": { "title": "1990 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/1990/drivers", "accessedAt": "2026-09-25" },
+    "wiki_1991_season": { "title": "1991 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/1991_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki_raikkonen": { "title": "Kimi Räikkönen", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Kimi_R%C3%A4ikk%C3%B6nen", "accessedAt": "2026-09-25" },
+    "f1_raikkonen_hof": { "title": "Kimi Raikkonen – Drivers Hall of Fame", "publisher": "Formula 1", "url": "https://www.formula1.com/en/information/drivers-hall-of-fame-kimi-raikkonen.4Ykdt9U76gWO40cNbjaMXf", "accessedAt": "2026-09-25" },
+    "f1_raikkonen_best_wins": { "title": "From Malaysia 2003 to Austin 2018 – Ranking Raikkonen's best wins from 10 – 1", "publisher": "Formula 1", "url": "https://www.formula1.com/en/latest/article/from-malaysia-2003-to-austin-2018-ranking-raikkonens-best-wins-from-10-1.5KZkuZ5A6epwFKkG8fgLh1", "accessedAt": "2026-09-25" },
+    "wiki_2007_season": { "title": "2007 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2007_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki_2007_bra": { "title": "2007 Brazilian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2007_Brazilian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_2008_drivers": { "title": "2008 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2008/drivers", "accessedAt": "2026-09-25" },
+    "f1_2008_team": { "title": "2008 Constructors' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2008/team", "accessedAt": "2026-09-25" },
+    "wiki_2009_bel": { "title": "2009 Belgian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2009_Belgian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_2014_drivers": { "title": "2014 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2014/drivers", "accessedAt": "2026-09-25" },
+    "f1_2015_drivers": { "title": "2015 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2015/drivers", "accessedAt": "2026-09-25" },
+    "wiki_2017_mon": { "title": "2017 Monaco Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2017_Monaco_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_2018_ita": { "title": "2018 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2018_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki_2018_usa": { "title": "2018 United States Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2018_United_States_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1_2018_drivers": { "title": "2018 Drivers' Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2018/drivers", "accessedAt": "2026-09-25" }
+  }
+}

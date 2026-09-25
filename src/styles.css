@@ -4542,3 +4542,145 @@ footer > button {
 .lab-landing .tiny-line {
   background: #f1dfb4;
 }
+/* ------------------------------------------------------------------
+   Show cards (Theatre and Race Lab galleries)
+   ------------------------------------------------------------------ */
+.show-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  border: 1px solid #ffffff14;
+  background: #0b0b0d;
+  overflow: hidden;
+  transition:
+    border-color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.show-card:hover,
+.show-card:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 60px #000c;
+}
+.show-card.tone-red {
+  --accent: #e33a3f;
+  --glow: rgba(227, 58, 63, 0.55);
+  --stage: #2a0c10;
+}
+.show-card.tone-gold {
+  --accent: #d9b86e;
+  --glow: rgba(217, 184, 110, 0.45);
+  --stage: #1d170c;
+}
+.show-stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background:
+    radial-gradient(ellipse at 50% 55%, var(--stage), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) 0 0 / 22px 22px,
+    #08080a;
+  border-bottom: 1px solid #ffffff12;
+}
+.show-stage svg {
+  position: absolute;
+  inset: 12% 14% 10%;
+  width: 72%;
+  height: 78%;
+  overflow: visible;
+}
+.show-track-base,
+.show-track-line {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.show-track-base {
+  stroke: #2c2f35;
+  stroke-width: 9;
+}
+.show-track-line {
+  stroke: var(--accent);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 5px var(--glow));
+  transition: stroke-width 0.3s;
+}
+.show-card:hover .show-track-line {
+  stroke-width: 2.8;
+}
+.show-start {
+  fill: #f4f2ec;
+}
+.show-year {
+  position: absolute;
+  left: 16px;
+  bottom: 10px;
+  font-family: var(--heading);
+  font-size: 40px;
+  line-height: 1;
+  color: #ffffff1f;
+  letter-spacing: -0.5px;
+}
+.show-chip {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  padding: 4px 9px;
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-2);
+  border: 1px solid #ffffff1f;
+  background: #0b0b0dcc;
+}
+.show-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 16px 18px 18px;
+}
+.show-kicker {
+  font-size: var(--fs-2xs);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.show-body strong {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.1;
+}
+.show-body p {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  color: var(--text-2);
+}
+.show-meta {
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.show-meta b {
+  color: var(--text-1);
+  font-weight: 500;
+}
+.show-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: var(--fs-xs);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-1);
+}
+.show-action svg {
+  color: var(--accent);
+}

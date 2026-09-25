@@ -40,13 +40,43 @@ export async function loadLab(id: string): Promise<LabSession> {
 }
 
 /** Labels for the session picker. */
-export const labMeta: Record<string, { title: string; circuit: string }> = {
-  "singapore-2023": { title: "Singapore 2023", circuit: "Marina Bay" },
-  "monaco-2024": { title: "Monaco 2024", circuit: "Monte Carlo" },
-  "monza-2024": { title: "Monza 2024", circuit: "Monza" },
-  "hungary-2025": { title: "Hungary 2025", circuit: "Hungaroring" },
-  "barcelona-2026": { title: "Barcelona 2026", circuit: "Barcelona-Catalunya" },
-  "silverstone-2026": { title: "Silverstone 2026", circuit: "Silverstone" },
+export const labMeta: Record<string, { title: string; circuit: string; story: string; chip: string }> = {
+  "singapore-2023": {
+    title: "Singapore 2023",
+    circuit: "Marina Bay",
+    chip: "Night street circuit",
+    story: "Sainz's pole, the night before the only race Red Bull didn't win that year.",
+  },
+  "monaco-2024": {
+    title: "Monaco 2024",
+    circuit: "Monte Carlo",
+    chip: "Street circuit",
+    story: "Leclerc's pole, the day before he finally won his home Grand Prix.",
+  },
+  "monza-2024": {
+    title: "Monza 2024",
+    circuit: "Monza",
+    chip: "Low downforce",
+    story: "Six thousandths apart, the day before Leclerc won at Ferrari's home race.",
+  },
+  "hungary-2025": {
+    title: "Hungary 2025",
+    circuit: "Hungaroring",
+    chip: "Twisty, technical",
+    story: "Leclerc on pole; Hamilton's first Ferrari summer, 0.33 seconds back.",
+  },
+  "barcelona-2026": {
+    title: "Barcelona 2026",
+    circuit: "Barcelona-Catalunya",
+    chip: "All-rounder",
+    story: "The qualifying lap behind Hamilton's first Grand Prix win in red.",
+  },
+  "silverstone-2026": {
+    title: "Silverstone 2026",
+    circuit: "Silverstone",
+    chip: "High speed",
+    story: "The weekend Leclerc delivered Ferrari's 250th Grand Prix victory.",
+  },
 };
 
 /** The sample at a distance (linear between rows). */

@@ -1,0 +1,164 @@
+{
+  "seasons": {
+    "alonso": {
+      "2010": {
+        "title": "Four points short.",
+        "story": "Alonso won on his Ferrari debut in Bahrain and took five victories. He led the championship into the Abu Dhabi finale but finished seventh there, losing the title to Vettel by four points.",
+        "sourceIds": ["wiki-alonso", "wiki-2010-season", "wiki-2010-bahrain", "wiki-2010-abu-dhabi"]
+      },
+      "2011": {
+        "title": "Sixty years on at Silverstone.",
+        "story": "Alonso’s only win of the year came at Silverstone, 60 years after Ferrari’s first world championship victory there. Ten podium finishes brought him fourth place in the drivers’ championship.",
+        "sourceIds": ["wiki-alonso", "wiki-2011-british", "motorsport-2011-silverstone"]
+      },
+      "2012": {
+        "title": "Three points from the title.",
+        "story": "Wins in Malaysia, Valencia and Germany helped Alonso build a 40-point lead. Retirements in Belgium and Japan cost him ground, and he lost the title to Vettel by three points in Brazil.",
+        "sourceIds": ["wiki-alonso", "wiki-2012-season"]
+      },
+      "2013": {
+        "title": "Runner-up once more.",
+        "story": "Victories in China and at home in Spain were Alonso’s only wins of the year. He finished second to Vettel in the drivers’ championship for the third time in four seasons.",
+        "sourceIds": ["wiki-alonso", "wiki-2013-season", "wiki-2013-spanish"]
+      },
+      "2014": {
+        "title": "A final season in red.",
+        "story": "Alonso went without a win in 2014; third in China and second in Hungary were his only podiums. He finished sixth in the championship and left Ferrari at the end of the season.",
+        "sourceIds": ["wiki-alonso", "f1-2014-drivers"]
+      }
+    },
+    "sainz": {
+      "2021": {
+        "title": "A podium in Monaco.",
+        "story": "Sainz replaced Vettel and finished second in Monaco for his first Ferrari podium. Four podium finishes helped him to fifth in the championship, 5.5 points ahead of Leclerc.",
+        "sourceIds": ["wiki-sainz", "wiki-2021-monaco", "f1-2021-drivers"]
+      },
+      "2022": {
+        "title": "A first win at Silverstone.",
+        "story": "Sainz took his first pole position and first Grand Prix victory at Silverstone. Nine podiums came in a season also marked by six retirements, and he finished fifth in the championship.",
+        "sourceIds": ["wiki-sainz", "wiki-2022-british", "f1-2022-drivers"]
+      },
+      "2023": {
+        "title": "Singapore breaks the streak.",
+        "story": "After pole and third place at Monza, Sainz won from pole in Singapore, the only race of 2023 not won by Red Bull. He finished seventh in the drivers’ championship.",
+        "sourceIds": ["wiki-2023-italian", "wiki-2023-singapore", "f1-2023-drivers"]
+      },
+      "2024": {
+        "title": "Two wins to say goodbye.",
+        "story": "Sainz missed Saudi Arabia after appendix surgery, then won in Australia two weeks later. A second win in Mexico City came in his final Ferrari season, and he finished fifth.",
+        "sourceIds": ["wiki-sainz", "wiki-2024-australian", "wiki-2024-mexico-city", "f1-2024-drivers"]
+      }
+    },
+    "leclerc": {
+      "2019": {
+        "title": "Spa, then Monza.",
+        "story": "Leclerc’s first Ferrari season brought seven pole positions and his first wins, in Belgium and Italy. He finished fourth in the championship, 24 points ahead of team-mate Vettel.",
+        "sourceIds": ["wiki-leclerc", "wiki-2019-belgian", "wiki-2019-italian", "f1-2019-drivers"]
+      },
+      "2020": {
+        "title": "A difficult year.",
+        "story": "The SF1000 was rarely competitive. Second in Austria and third at Silverstone were Leclerc’s only podiums, and Ferrari finished sixth in the constructors’ championship, its lowest position since 1980.",
+        "sourceIds": ["wiki-leclerc", "wiki-2020-season", "f1-2020-drivers"]
+      },
+      "2021": {
+        "title": "Pole at home, no start.",
+        "story": "Leclerc took pole in Monaco, but a driveshaft problem prevented him from starting his home race. His only podium of the season came at Silverstone, where he finished second.",
+        "sourceIds": ["wiki-leclerc", "wiki-2021-monaco", "f1-2021-drivers"]
+      },
+      "2022": {
+        "title": "An early lead, then runner-up.",
+        "story": "Wins in Bahrain, Australia and Austria put Leclerc in an early championship lead. Retirements, including a crash from the lead in France, left him runner-up to Verstappen.",
+        "sourceIds": ["wiki-2022-season", "f1-2022-races", "wiki-2022-french", "f1-2022-drivers"]
+      },
+      "2023": {
+        "title": "Podiums without a win.",
+        "story": "Leclerc went without a victory but scored six podiums, including second places in Austria, Las Vegas and Abu Dhabi. He finished fifth in the championship, six points ahead of Sainz.",
+        "sourceIds": ["f1-2023-drivers", "wiki-2023-las-vegas"]
+      },
+      "2024": {
+        "title": "Monaco, at last.",
+        "story": "Leclerc won his home Grand Prix in Monaco, then added victories at Monza and Austin. Thirteen podiums placed him third in the championship, as Ferrari finished 14 points behind McLaren.",
+        "sourceIds": ["wiki-leclerc", "wiki-2024-monaco", "f1-2024-races", "f1-2024-drivers", "f1-2025-ferrari-review"]
+      },
+      "2025": {
+        "title": "Seven podiums, no victory.",
+        "story": "Ferrari went without a Grand Prix win, but Leclerc collected seven podiums, including second places in Monaco and Mexico City. He finished fifth in the drivers’ championship.",
+        "sourceIds": ["f1-2025-ferrari-review", "f1-2025-drivers"]
+      }
+    },
+    "hamilton": {
+      "2025": {
+        "title": "A hard first year.",
+        "story": "Hamilton won the sprint in China, his second weekend with Ferrari, but was disqualified from the Grand Prix. Fourth was his best Grand Prix result, and he finished sixth in the championship.",
+        "sourceIds": ["wiki-2025-chinese", "f1-2025-ferrari-review", "f1-2025-drivers"]
+      }
+    }
+  },
+  "keyRaces": {
+    "alonso": [
+      { "year": 2010, "race": "Bahrain Grand Prix", "text": "Starting third, Alonso won on his Ferrari debut, with Felipe Massa second for a Ferrari one-two.", "sourceIds": ["wiki-2010-bahrain"] },
+      { "year": 2011, "race": "British Grand Prix", "text": "Alonso won from third on the grid, 60 years after José Froilán González gave Ferrari its first championship win at Silverstone.", "sourceIds": ["wiki-2011-british", "motorsport-2011-silverstone"] },
+      { "year": 2012, "race": "European Grand Prix", "text": "From 11th on the grid in Valencia, Alonso won after Vettel and Grosjean retired, becoming the season’s first two-time winner.", "sourceIds": ["wiki-2012-european"] },
+      { "year": 2013, "race": "Spanish Grand Prix", "text": "Starting fifth, Alonso won his home race in Barcelona for his 32nd Grand Prix victory, his last with Ferrari.", "sourceIds": ["wiki-2013-spanish"] }
+    ],
+    "sainz": [
+      { "year": 2022, "race": "British Grand Prix", "text": "Sainz converted his first pole position into his first Grand Prix victory at Silverstone.", "sourceIds": ["wiki-2022-british"] },
+      { "year": 2023, "race": "Singapore Grand Prix", "text": "From pole, Sainz won the only race of 2023 not won by Red Bull, ending their 15-race winning streak.", "sourceIds": ["wiki-2023-singapore"] },
+      { "year": 2024, "race": "Australian Grand Prix", "text": "Two weeks after appendix surgery, Sainz won in Melbourne, leading Leclerc home in a Ferrari one-two.", "sourceIds": ["wiki-2024-australian"] },
+      { "year": 2024, "race": "Mexico City Grand Prix", "text": "Sainz won from pole ahead of Lando Norris and Leclerc, his final victory with Ferrari.", "sourceIds": ["wiki-2024-mexico-city"] }
+    ],
+    "leclerc": [
+      { "year": 2019, "race": "Belgian Grand Prix", "text": "Leclerc won from pole for his first Grand Prix victory, dedicating it to Anthoine Hubert, killed in the Formula 2 race the day before.", "sourceIds": ["wiki-2019-belgian"] },
+      { "year": 2019, "race": "Italian Grand Prix", "text": "A week later, Leclerc won from pole at Monza, Ferrari’s first Italian Grand Prix victory since Alonso in 2010.", "sourceIds": ["wiki-2019-italian"] },
+      { "year": 2022, "race": "Bahrain Grand Prix", "text": "Leclerc won from pole with Sainz second, ending a 45-race winless run for Ferrari.", "sourceIds": ["wiki-2022-bahrain"] },
+      { "year": 2024, "race": "Monaco Grand Prix", "text": "From pole, Leclerc became the first Monégasque driver since Louis Chiron in 1931 to win his home Grand Prix.", "sourceIds": ["wiki-2024-monaco"] }
+    ],
+    "hamilton": [
+      { "year": 2025, "race": "Australian Grand Prix", "text": "Hamilton’s first race as a Ferrari driver, run in changing conditions in Melbourne, ended in tenth place.", "sourceIds": ["wiki-2025-australian"] },
+      { "year": 2025, "race": "Chinese Grand Prix", "text": "Hamilton won the sprint from sprint pole, then was disqualified from the Grand Prix for excessive plank wear.", "sourceIds": ["wiki-2025-chinese", "f1-2025-ferrari-review"] },
+      { "year": 2025, "race": "Emilia Romagna Grand Prix", "text": "From 12th on the grid, Hamilton finished fourth at Imola, his first Grand Prix ahead of Leclerc.", "sourceIds": ["wiki-2025-emilia-romagna"] }
+    ]
+  },
+  "sources": {
+    "wiki-alonso": { "title": "Fernando Alonso", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso", "accessedAt": "2026-09-25" },
+    "wiki-2010-season": { "title": "2010 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2010_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki-2010-bahrain": { "title": "2010 Bahrain Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2010_Bahrain_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2010-abu-dhabi": { "title": "2010 Abu Dhabi Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2010_Abu_Dhabi_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2011-british": { "title": "2011 British Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2011_British_Grand_Prix", "accessedAt": "2026-09-25" },
+    "motorsport-2011-silverstone": { "title": "Alonso's Silverstone win loaded with historical significance", "publisher": "Motorsport.com", "url": "https://www.motorsport.com/f1/news/alonsos-silverstone-win-loaded-with-historical-significance/3218525/", "accessedAt": "2026-09-25" },
+    "wiki-2012-season": { "title": "2012 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2012_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki-2012-european": { "title": "2012 European Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2012_European_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2013-season": { "title": "2013 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2013_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki-2013-spanish": { "title": "2013 Spanish Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2013_Spanish_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1-2014-drivers": { "title": "2014 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2014/drivers", "accessedAt": "2026-09-25" },
+    "wiki-sainz": { "title": "Carlos Sainz Jr.", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr.", "accessedAt": "2026-09-25" },
+    "wiki-2021-monaco": { "title": "2021 Monaco Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2021_Monaco_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2022-british": { "title": "2022 British Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2022_British_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2023-italian": { "title": "2023 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2023_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2023-singapore": { "title": "2023 Singapore Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2023_Singapore_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2024-australian": { "title": "2024 Australian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2024_Australian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2024-mexico-city": { "title": "2024 Mexico City Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2024_Mexico_City_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-leclerc": { "title": "Charles Leclerc", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc", "accessedAt": "2026-09-25" },
+    "wiki-2019-belgian": { "title": "2019 Belgian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2019_Belgian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2019-italian": { "title": "2019 Italian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2019_Italian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2020-season": { "title": "2020 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2020_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki-2022-season": { "title": "2022 Formula One World Championship", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2022_Formula_One_World_Championship", "accessedAt": "2026-09-25" },
+    "wiki-2022-bahrain": { "title": "2022 Bahrain Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2022_Bahrain_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2022-french": { "title": "2022 French Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2022_French_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2023-las-vegas": { "title": "2023 Las Vegas Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2023_Las_Vegas_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2024-monaco": { "title": "2024 Monaco Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2024_Monaco_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2025-australian": { "title": "2025 Australian Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2025-chinese": { "title": "2025 Chinese Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2025_Chinese_Grand_Prix", "accessedAt": "2026-09-25" },
+    "wiki-2025-emilia-romagna": { "title": "2025 Emilia Romagna Grand Prix", "publisher": "Wikipedia", "url": "https://en.wikipedia.org/wiki/2025_Emilia_Romagna_Grand_Prix", "accessedAt": "2026-09-25" },
+    "f1-2019-drivers": { "title": "2019 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2019/drivers", "accessedAt": "2026-09-25" },
+    "f1-2020-drivers": { "title": "2020 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2020/drivers", "accessedAt": "2026-09-25" },
+    "f1-2021-drivers": { "title": "2021 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2021/drivers", "accessedAt": "2026-09-25" },
+    "f1-2022-drivers": { "title": "2022 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2022/drivers", "accessedAt": "2026-09-25" },
+    "f1-2022-races": { "title": "2022 Race Results", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2022/races", "accessedAt": "2026-09-25" },
+    "f1-2023-drivers": { "title": "2023 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2023/drivers", "accessedAt": "2026-09-25" },
+    "f1-2024-drivers": { "title": "2024 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2024/drivers", "accessedAt": "2026-09-25" },
+    "f1-2024-races": { "title": "2024 Race Results", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2024/races", "accessedAt": "2026-09-25" },
+    "f1-2025-drivers": { "title": "2025 Driver Standings", "publisher": "Formula 1", "url": "https://www.formula1.com/en/results/2025/drivers", "accessedAt": "2026-09-25" },
+    "f1-2025-ferrari-review": { "title": "END OF YEAR REPORT: Ferrari’s best and worst moments from 2025 and driver head-to-heads", "publisher": "Formula 1", "url": "https://www.formula1.com/en/latest/article/end-of-year-report-ferraris-best-and-worst-moments-from-2025-and-driver-head.564b84h3H9BTEOAVP2MNxB", "accessedAt": "2026-09-25" }
+  }
+}

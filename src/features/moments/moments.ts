@@ -46,6 +46,9 @@ const loaders = import.meta.glob<RaceData>("../../data/moments/*.json", { import
 export interface MomentMeta {
   id: string;
   season: number;
+  /** One line for the gallery card; consistent with the sourced research. */
+  hook: string;
+  chip: string;
   /** The museum driver the moment belongs to (links the bay). */
   driverId: string;
   fallbackTitle: string;
@@ -53,12 +56,12 @@ export interface MomentMeta {
 }
 
 export const momentList: MomentMeta[] = [
-  { id: "spain-1996", season: 1996, driverId: "michael_schumacher", fallbackTitle: "Barcelona, 1996", circuit: "Barcelona" },
-  { id: "japan-2000", season: 2000, driverId: "michael_schumacher", fallbackTitle: "Suzuka, 2000", circuit: "Suzuka" },
-  { id: "france-2004", season: 2004, driverId: "michael_schumacher", fallbackTitle: "Magny-Cours, 2004", circuit: "Magny-Cours" },
-  { id: "brazil-2007", season: 2007, driverId: "raikkonen", fallbackTitle: "Interlagos, 2007", circuit: "Interlagos" },
-  { id: "italy-2019", season: 2019, driverId: "leclerc", fallbackTitle: "Monza, 2019", circuit: "Monza" },
-  { id: "barcelona-2026", season: 2026, driverId: "hamilton", fallbackTitle: "Barcelona, 2026", circuit: "Barcelona" },
+  { id: "spain-1996", season: 1996, hook: "Schumacher's first Ferrari win, 45 seconds clear in torrential rain.", chip: "Wet", driverId: "michael_schumacher", fallbackTitle: "Barcelona, 1996", circuit: "Barcelona" },
+  { id: "japan-2000", season: 2000, hook: "Victory at Suzuka ends Ferrari's 21-year wait for a drivers' champion.", chip: "Title decider", driverId: "michael_schumacher", fallbackTitle: "Suzuka, 2000", circuit: "Suzuka" },
+  { id: "france-2004", season: 2004, hook: "Unable to pass Alonso on track, Ferrari switch to four stops and win.", chip: "Strategy", driverId: "michael_schumacher", fallbackTitle: "Magny-Cours, 2004", circuit: "Magny-Cours" },
+  { id: "brazil-2007", season: 2007, hook: "Räikkönen wins the race and the title, from third in the standings.", chip: "Title decider", driverId: "raikkonen", fallbackTitle: "Interlagos, 2007", circuit: "Interlagos" },
+  { id: "italy-2019", season: 2019, hook: "Leclerc holds off both Mercedes for Ferrari's first Monza win since 2010.", chip: "Home win", driverId: "leclerc", fallbackTitle: "Monza, 2019", circuit: "Monza" },
+  { id: "barcelona-2026", season: 2026, hook: "Hamilton's first Grand Prix win in red, 19.6 seconds clear.", chip: "First win", driverId: "hamilton", fallbackTitle: "Barcelona, 2026", circuit: "Barcelona" },
 ];
 
 export const momentStory = (id: string) => research.moments?.[id];

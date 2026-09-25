@@ -14,6 +14,13 @@ import {
 import type { MomentMeta, RaceData } from "./moments";
 import { drawRace, lerpView, overview } from "./raceCanvas";
 import MemoryPanel from "./MemoryPanel";
+import ShowCard, { normalise } from "./ShowCard";
+
+/** "Suzuka, 2000: the drought ends" → "The drought ends". */
+const shortTitle = (t: string) => {
+  const s = t.includes(": ") ? t.split(": ").slice(1).join(": ") : t;
+  return s[0].toUpperCase() + s.slice(1);
+};
 import type { View } from "./raceCanvas";
 import { startMusic, stopMusic } from "../../audio/music";
 import { stopEngine } from "../../audio/soundEngine";
@@ -114,27 +121,17 @@ function Gallery({ onPick, onClose }: { onPick: (id: string) => void; onClose: (
           const race = tracks[m.id];
           const driver = drivers.find((d) => d.id === m.driverId);
           return (
-            <button key={m.id} className="moment-card" onClick={() => onPick(m.id)}>
-              <svg viewBox="-0.05 -0.05 1.1 1.1" aria-hidden="true">
-                {race && (
-                  <polygon
-                    points={race.track.map(([x, y]) => `${x},${y}`).join(" ")}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.014"
-                    strokeLinejoin="round"
-                  />
-                )}
-              </svg>
-              <span className="moment-year">{m.season}</span>
-              <strong>{titleOf(m)}</strong>
-              <span className="moment-meta">
-                {driver?.name} · {m.circuit}
-              </span>
-              <span className="moment-play">
-                <Play size={14} /> Watch
-              </span>
-            </button>
+            <ShowCard
+              key={m.id}
+              track={race ? normalise(race.track) : null}
+              year={m.season}
+              chip={m.chip}
+              kicker={`${m.circuit} · ${driver?.name ?? ""}`}
+              title={shortTitle(titleOf(m))}
+              story={m.hook}
+              action="Watch the race"
+              onClick={() => onPick(m.id)}
+            />
           );
         })}
       </div>
