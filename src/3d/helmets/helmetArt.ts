@@ -6,10 +6,23 @@
 // the lower edge.
 
 export type HelmetLayer =
-  | { shape: "band"; v0: number; v1: number; color: string }
+  | { shape: "band"; v0: number; v1: number; color: string; slope?: number }
   | { shape: "crown"; v1: number; color: string }
-  | { shape: "stripe"; u: number; width: number; v0: number; v1: number; color: string }
-  | { shape: "chevron"; v: number; depth: number; thickness: number; color: string }
+  | {
+      shape: "stripe";
+      u: number;
+      width: number;
+      v0: number;
+      v1: number;
+      color: string;
+    }
+  | {
+      shape: "chevron";
+      v: number;
+      depth: number;
+      thickness: number;
+      color: string;
+    }
   | { shape: "star"; u: number; v: number; size: number; color: string }
   | { shape: "circle"; u: number; v: number; size: number; color: string }
   | {
@@ -21,7 +34,14 @@ export type HelmetLayer =
       colors: string[];
       orientation: "horizontal" | "vertical";
     }
-  | { shape: "text"; u: number; v: number; size: number; text: string; color: string };
+  | {
+      shape: "text";
+      u: number;
+      v: number;
+      size: number;
+      text: string;
+      color: string;
+    };
 
 export interface HelmetDesign {
   year?: number;
@@ -29,7 +49,13 @@ export interface HelmetDesign {
   description?: string;
   base: string;
   visorSurround: string;
-  visorTint: "clear" | "dark" | "iridium-blue" | "iridium-gold" | "iridium-red" | "goggles";
+  visorTint:
+    | "clear"
+    | "dark"
+    | "iridium-blue"
+    | "iridium-gold"
+    | "iridium-red"
+    | "goggles";
   /** Colour of a front peak (brim), for open-face helmets of the 1950s. */
   peak?: string;
   layers: HelmetLayer[];
@@ -49,7 +75,10 @@ const tu = (u: number) => (((u + 0.5) % 1) + 1) % 1;
 // The shell's texture spans exactly the painted range, so v maps straight on.
 const tv = (v: number) => v;
 
-export function paintHelmet(ctx: CanvasRenderingContext2D, design: HelmetDesign) {
+export function paintHelmet(
+  ctx: CanvasRenderingContext2D,
+  design: HelmetDesign,
+) {
   const W = HELMET_TEX_W;
   const H = HELMET_TEX_H;
   const theta = design.helmetType === "full-face" ? SHELL_THETA : OPEN_THETA;
@@ -58,7 +87,8 @@ export function paintHelmet(ctx: CanvasRenderingContext2D, design: HelmetDesign)
 
   // Shapes placed at (u, v) are squeezed towards the crown by the sphere
   // mapping; widen them by 1/sin(theta) so they read at their intended size.
-  const stretch = (v: number) => 1 / Math.max(0.35, Math.sin(v * theta * Math.PI));
+  const stretch = (v: number) =>
+    1 / Math.max(0.35, Math.sin(v * theta * Math.PI));
   const around = (u: number, draw: (x: number) => void) => {
     const x = tu(u) * W;
     draw(x);
@@ -76,12 +106,31 @@ export function paintHelmet(ctx: CanvasRenderingContext2D, design: HelmetDesign)
         break;
       case "band":
         ctx.fillStyle = l.color;
-        ctx.fillRect(0, tv(l.v0) * H, W, (tv(l.v1) - tv(l.v0)) * H);
+        if (l.slope) {
+          ctx.beginPath();
+          for (let i = 0; i <= 128; i++) {
+            const u = i / 128;
+            const y = (l.v0 + l.slope * Math.cos(u * Math.PI * 2)) * H;
+            if (i === 0) ctx.moveTo(u * W, y);
+            else ctx.lineTo(u * W, y);
+          }
+          for (let i = 128; i >= 0; i--) {
+            const u = i / 128;
+            ctx.lineTo(u * W, (l.v1 + l.slope * Math.cos(u * Math.PI * 2)) * H);
+          }
+          ctx.closePath();
+          ctx.fill();
+        } else ctx.fillRect(0, tv(l.v0) * H, W, (tv(l.v1) - tv(l.v0)) * H);
         break;
       case "stripe":
         ctx.fillStyle = l.color;
         around(l.u, (x) =>
-          ctx.fillRect(x - (l.width * W) / 2, tv(l.v0) * H, l.width * W, (tv(l.v1) - tv(l.v0)) * H),
+          ctx.fillRect(
+            x - (l.width * W) / 2,
+            tv(l.v0) * H,
+            l.width * W,
+            (tv(l.v1) - tv(l.v0)) * H,
+          ),
         );
         break;
       case "chevron": {
@@ -127,8 +176,19 @@ export function paintHelmet(ctx: CanvasRenderingContext2D, design: HelmetDesign)
           l.colors.forEach((c, i) => {
             ctx.fillStyle = c;
             if (l.orientation === "vertical")
-              ctx.fillRect(x0 + (i * w) / l.colors.length, y0, Math.ceil(w / l.colors.length), h);
-            else ctx.fillRect(x0, y0 + (i * h) / l.colors.length, w, Math.ceil(h / l.colors.length));
+              ctx.fillRect(
+                x0 + (i * w) / l.colors.length,
+                y0,
+                Math.ceil(w / l.colors.length),
+                h,
+              );
+            else
+              ctx.fillRect(
+                x0,
+                y0 + (i * h) / l.colors.length,
+                w,
+                Math.ceil(h / l.colors.length),
+              );
           });
         });
         break;

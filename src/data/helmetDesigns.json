@@ -57,7 +57,7 @@
     ],
     "confidence": "medium",
     "notes": "The Museo Ferrari helmet (1950s, brown with a peak) and a 1954-55 El Grafico colour cover both show a plain tan/brown peaked helmet, and a 1957 photo caption says he wore a 'dark helmet'. I found no photo firmly dated 1956, and one replica seller describes a cream 1955-57 helmet, so the colour is unconfirmed. The peak (brim) over the eyes can't be expressed in this vocabulary. The crown layer is only a slightly lighter wear highlight. The white rim is the cloth liner/ear flaps showing below the shell.",
-    "peak": "#6a4224"
+    "peak": "#71543c"
   },
   "hawthorn": {
     "year": 1958,
@@ -124,7 +124,7 @@
     ],
     "confidence": "medium",
     "notes": "The Commons 1961 drawing and the Museo Ferrari example (late 1950s) both show an unpainted white/off-white shell. The Henry Ford holds a 1961 race-worn helmet, but I couldn't read its catalogue text. The small orange Bell maker's decal on the brow is a brand mark, so it's omitted. The dark band at v 0.58-0.64 is the goggle strap. The peak can't be expressed.",
-    "peak": "#e4dfd2"
+    "peak": "#f4f0e7"
   },
   "surtees": {
     "year": 1964,
@@ -138,7 +138,8 @@
         "shape": "band",
         "v0": 0.44,
         "v1": 0.5,
-        "color": "#1f5bd0"
+        "color": "#1f5bd0",
+        "slope": 0.1
       },
       {
         "shape": "band",
@@ -154,7 +155,8 @@
       "https://commons.wikimedia.org/wiki/File:John_Surtees_helmet_and_racing_goggles_Museo_Ferrari.jpg"
     ],
     "confidence": "medium",
-    "notes": "The Commons 1964 drawing and the Centauria/Spark 1:5 Ferrari helmet-collection model agree on a white shell with one blue band. In reality the band slopes: it sits at about v 0.38 at the front (by the peak strap) and drops to about v 0.58 at the back. A constant-v band is an approximation; a painter that supports tilt should use it. The Museo Ferrari's 1960s Surtees helmet is white with black tape repairs and no blue band, so designs varied. The peak can't be expressed."
+    "notes": "The Commons 1964 drawing and the Centauria/Spark 1:5 Ferrari helmet-collection model agree on a white shell with one blue band. In reality the band slopes: it sits at about v 0.38 at the front (by the peak strap) and drops to about v 0.58 at the back. A constant-v band is an approximation; a painter that supports tilt should use it. The Museo Ferrari's 1960s Surtees helmet is white with black tape repairs and no blue band, so designs varied. The peak can't be expressed.",
+    "peak": "#f1f3ef"
   },
   "lauda": {
     "year": 1975,
@@ -531,7 +533,7 @@
     "year": 2004,
     "helmetType": "full-face",
     "description": "An almost all-over Ferrari-red helmet with faint white stars across the top, thin white pinstripes framing the forehead and chin panels, and a black panel around the eye port; worn with a gold iridium visor.",
-    "base": "#e8401c",
+    "base": "#e33424",
     "visorSurround": "#111111",
     "visorTint": "iridium-gold",
     "layers": [
@@ -610,13 +612,54 @@
         "v": 0.12,
         "size": 0.035,
         "color": "#f6d2c8"
+      },
+      {
+        "shape": "stripe",
+        "u": 0,
+        "width": 0.19,
+        "v0": 0.685,
+        "v1": 0.86,
+        "color": "#f5f1ec"
+      },
+      {
+        "shape": "text",
+        "u": 0,
+        "v": 0.315,
+        "size": 0.047,
+        "text": "Marlboro",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "text",
+        "u": 0,
+        "v": 0.77,
+        "size": 0.043,
+        "text": "Marlboro",
+        "color": "#121212"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.74,
+        "size": 0.032,
+        "text": "MS",
+        "color": "#ffffff"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.74,
+        "size": 0.032,
+        "text": "MS",
+        "color": "#ffffff"
       }
     ],
     "sources": [
       "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_Integralhelm_2004.jpg",
       "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2005_helmet_front-right_2019_Michael_Schumacher_Private_Collection.jpg",
       "https://commons.wikimedia.org/wiki/File:Michael_Schumacher_2002_helmet_front-right1_2019_Michael_Schumacher_Private_Collection.jpg",
-      "https://au.motorsport.com/f1/news/gallery-michael-schumacher-s-f1-helmets-939422/3039765/"
+      "https://au.motorsport.com/f1/news/gallery-michael-schumacher-s-f1-helmets-939422/3039765/",
+      "https://rmsothebys.com/auctions/sc23/lots/n0052-2004-michael-schumacher-schuberth-scuderia-ferrari-formula-1-helmet/"
     ],
     "confidence": "high",
     "notes": "From Monaco 2000 his base was all red, and the old blue top with stars became a red top with faint pale stars. The stars are subtle and pale: use low contrast or partial opacity. Sponsors dominate the look: white Marlboro lettering across the forehead band, a white chevron-roof Marlboro panel on the chin, a white box on each side, and a red strip across the visor top. His white script 'MS' signature sits on the lower sides. The one-off Monza 2004 helmet in Italian green, white and red was a special and isn't used."
@@ -684,6 +727,36 @@
         "v0": 0,
         "v1": 0.22,
         "color": "#e8442a"
+      },
+      {
+        "shape": "text",
+        "u": 0.25,
+        "v": 0.75,
+        "size": 0.045,
+        "text": "ICEMAN",
+        "color": "#e8442a"
+      },
+      {
+        "shape": "text",
+        "u": 0.75,
+        "v": 0.75,
+        "size": 0.045,
+        "text": "ICEMAN",
+        "color": "#e8442a"
+      },
+      {
+        "shape": "chevron",
+        "v": 0.46,
+        "depth": 0.16,
+        "thickness": 0.009,
+        "color": "#c3c6c8"
+      },
+      {
+        "shape": "chevron",
+        "v": 0.49,
+        "depth": 0.17,
+        "thickness": 0.007,
+        "color": "#c3c6c8"
       }
     ],
     "sources": [

@@ -23,10 +23,18 @@ function stationPose(i: number): { x: number; z: number; ry: number } {
   const radius = 11.5;
   // The arc bows towards the title wall but its centre stays well in front
   // of it (the wall is at z = -5.2).
-  return { x: HALL_X + Math.sin(angle) * radius, z: 9 - Math.cos(angle) * radius, ry: -angle };
+  return {
+    x: HALL_X + Math.sin(angle) * radius,
+    z: 9 - Math.cos(angle) * radius,
+    ry: -angle,
+  };
 }
 
-function drawPlaque(ctx: CanvasRenderingContext2D, c: Champion, hover: boolean) {
+function drawPlaque(
+  ctx: CanvasRenderingContext2D,
+  c: Champion,
+  hover: boolean,
+) {
   const W = PLAQUE_W;
   const H = PLAQUE_H;
   ctx.clearRect(0, 0, W, H);
@@ -39,7 +47,13 @@ function drawPlaque(ctx: CanvasRenderingContext2D, c: Champion, hover: boolean) 
   ctx.fillStyle = "#c9a45e";
   ctx.font = `500 30px "Barlow", Arial, sans-serif`;
   if ("letterSpacing" in ctx) ctx.letterSpacing = "8px";
-  ctx.fillText(c.titles.length > 1 ? `${inWords(c.titles.length).toUpperCase()} TITLES` : "WORLD CHAMPION", W / 2, 78);
+  ctx.fillText(
+    c.titles.length > 1
+      ? `${inWords(c.titles.length).toUpperCase()} TITLES`
+      : "WORLD CHAMPION",
+    W / 2,
+    78,
+  );
   if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
   ctx.fillStyle = "#f4ead8";
   let size = 92;
@@ -52,7 +66,9 @@ function drawPlaque(ctx: CanvasRenderingContext2D, c: Champion, hover: boolean) 
   ctx.fillStyle = "#e0c283";
   ctx.font = `600 58px "Barlow Condensed", "Arial Narrow", sans-serif`;
   ctx.fillText(c.titles.map((t) => t.year).join("  ·  "), W / 2, 272);
-  const cars = [...new Set(c.titles.map((t) => t.car).filter(Boolean))].join(" · ");
+  const cars = [...new Set(c.titles.map((t) => t.car).filter(Boolean))].join(
+    " · ",
+  );
   ctx.fillStyle = "#a89a82";
   ctx.font = `500 28px "Barlow", Arial, sans-serif`;
   ctx.fillText(cars, W / 2, 330);
@@ -65,7 +81,11 @@ function Plaque({ champion, hover }: { champion: Champion; hover: boolean }) {
     let live = true;
     const paint = () => {
       if (!live) return;
-      drawPlaque((tex.image as HTMLCanvasElement).getContext("2d")!, champion, hover);
+      drawPlaque(
+        (tex.image as HTMLCanvasElement).getContext("2d")!,
+        champion,
+        hover,
+      );
       tex.needsUpdate = true;
       invalidate();
     };
@@ -88,8 +108,19 @@ function useHallKit() {
   const env = useMemo(() => studioEnvironment(gl), [gl]);
   const kit = useMemo(
     () => ({
-      plinth: new MeshStandardMaterial({ color: "#16161a", roughness: 0.3, metalness: 0.5, envMap: env, envMapIntensity: 0.5 }),
-      trim: new MeshStandardMaterial({ color: "#b8924c", roughness: 0.3, metalness: 1, envMap: env }),
+      plinth: new MeshStandardMaterial({
+        color: "#16161a",
+        roughness: 0.3,
+        metalness: 0.5,
+        envMap: env,
+        envMapIntensity: 0.5,
+      }),
+      trim: new MeshStandardMaterial({
+        color: "#b8924c",
+        roughness: 0.3,
+        metalness: 1,
+        envMap: env,
+      }),
     }),
     [env],
   );
@@ -131,7 +162,12 @@ function Station({
   };
   return (
     <group onPointerOver={over} onPointerOut={out} onClick={click}>
-      <mesh material={kit.plinth} position={[0, 0.5, 0]} castShadow receiveShadow>
+      <mesh
+        material={kit.plinth}
+        position={[0, 0.5, 0]}
+        castShadow
+        receiveShadow
+      >
         <boxGeometry args={[1.7, 1, 0.9]} />
       </mesh>
       <mesh material={kit.trim} position={[0, 1.005, 0]}>
@@ -152,12 +188,23 @@ function Station({
         const x = side * (0.42 + rank * 0.17);
         const z = -0.12 - rank * 0.14;
         return (
-          <group key={t.year} position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]} scale={0.95 - rank * 0.08}>
-            <Trophy style={trophyStyleFor(t.year, "drivers")} />
+          <group
+            key={t.year}
+            position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]}
+            scale={0.95 - rank * 0.08}
+          >
+            <Trophy style={trophyStyleFor(t.year, "drivers")} year={t.year} />
           </group>
         );
       })}
-      {hover && <pointLight position={[0, 2.2, 1.2]} intensity={6} distance={4} color="#ffd9a0" />}
+      {hover && (
+        <pointLight
+          position={[0, 2.2, 1.2]}
+          intensity={6}
+          distance={4}
+          color="#ffd9a0"
+        />
+      )}
     </group>
   );
 }
@@ -183,7 +230,11 @@ function drawTitle(ctx: CanvasRenderingContext2D) {
   ctx.shadowBlur = 0;
   ctx.fillStyle = "#a89a82";
   ctx.font = `500 44px "Barlow", Arial, sans-serif`;
-  ctx.fillText(`${inWords(titleCount)} titles  ·  ${inWords(champions.length)} champions  ·  1952 — 2007`, W / 2, 470);
+  ctx.fillText(
+    `${inWords(titleCount)} titles  ·  ${inWords(champions.length)} champions  ·  1952 — 2007`,
+    W / 2,
+    470,
+  );
 }
 
 // The end of the corridor: a warm, gilded room with one station per champion.
@@ -227,11 +278,17 @@ export default function HallRoom({
       {[-1, 1].map((side) => (
         <mesh key={side} position={[x + side * 13, 3, 1]}>
           <boxGeometry args={[0.3, 6, 12.5]} />
-          <meshStandardMaterial color="#1a1712" metalness={0.4} roughness={0.6} />
+          <meshStandardMaterial
+            color="#1a1712"
+            metalness={0.4}
+            roughness={0.6}
+          />
         </mesh>
       ))}
       <mesh position={[x, 0.012, 0.5]} rotation={[-Math.PI / 2, 0, 0]}>
-        <ringGeometry args={[8.2, 8.26, 128, 1, Math.PI * 1.1, Math.PI * 0.8]} />
+        <ringGeometry
+          args={[8.2, 8.26, 128, 1, Math.PI * 1.1, Math.PI * 0.8]}
+        />
         <meshBasicMaterial color="#b8924c" />
       </mesh>
       <mesh position={[x - 13, 0.012, 1.5]}>
@@ -239,9 +296,24 @@ export default function HallRoom({
         <meshBasicMaterial color="#b8924c" />
       </mesh>
       {active && <Stations onSelect={onSelect} />}
-      <pointLight position={[x, 5.5, 3]} intensity={active ? 40 : 0} color="#ffe2b0" distance={20} />
-      <pointLight position={[x - 7, 3, 0]} intensity={active ? 14 : 0} color="#ffcf8a" distance={12} />
-      <pointLight position={[x + 7, 3, 0]} intensity={active ? 14 : 0} color="#ffcf8a" distance={12} />
+      <pointLight
+        position={[x, 5.5, 3]}
+        intensity={active ? 40 : 0}
+        color="#ffe2b0"
+        distance={20}
+      />
+      <pointLight
+        position={[x - 7, 3, 0]}
+        intensity={active ? 14 : 0}
+        color="#ffcf8a"
+        distance={12}
+      />
+      <pointLight
+        position={[x + 7, 3, 0]}
+        intensity={active ? 14 : 0}
+        color="#ffcf8a"
+        distance={12}
+      />
     </group>
   );
 }
@@ -255,7 +327,11 @@ function Stations({ onSelect }: { onSelect: (c: Champion) => void }) {
       {champions.map((c, i) => {
         const p = stationPose(i);
         return (
-          <group key={c.driver.id} position={[p.x, 0, p.z]} rotation={[0, p.ry, 0]}>
+          <group
+            key={c.driver.id}
+            position={[p.x, 0, p.z]}
+            rotation={[0, p.ry, 0]}
+          >
             <Station champion={c} kit={kit} onSelect={onSelect} />
           </group>
         );

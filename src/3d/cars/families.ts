@@ -27,6 +27,8 @@ export interface WingSpec {
 }
 
 export interface CarSpec {
+  year?: number;
+  engineCylinders?: number;
   family: FamilyId;
   familyLabel: string;
   frontAxle: number;
@@ -581,6 +583,32 @@ export function specForYear(
   const spec = families[family];
   return {
     ...spec,
+    year,
+    airbox: family === "wing70s" && year >= 1976 ? "none" : spec.airbox,
+    engineCylinders:
+      year <= 1951
+        ? 12
+        : year <= 1955
+          ? 4
+          : year <= 1960
+            ? year >= 1958
+              ? 6
+              : 8
+            : year <= 1963
+              ? 6
+              : year === 1964
+                ? 8
+                : year <= 1980
+                  ? 12
+                  : year <= 1988
+                    ? 6
+                    : year <= 1995
+                      ? 12
+                      : year <= 2005
+                        ? 10
+                        : year <= 2013
+                          ? 8
+                          : 6,
     grooved: year >= 1998 && year <= 2008,
     halo: year >= 2018,
     grille:

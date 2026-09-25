@@ -55,11 +55,13 @@ export const poses = {
   // Panned so the car sits left of the component panel.
   engineering: (bay: number) => relative(bay, [-4.2, 3.8, 7], [1.2, 0.4, 0.85]),
   /** Wider technical framing while the car is exploded. */
-  engineeringExploded: (bay: number) => relative(bay, [-5.4, 4.8, 8.6], [1.1, 0.5, 0.85]),
+  engineeringExploded: (bay: number) =>
+    relative(bay, [-6.5, 5.7, 10.5], [1.7, 0.7, 1.3]),
   /** Pulled back down the corridor, looking into the bay. */
   corridor: (bay: number) => relative(bay, [-14, 4.2, 11], [1, 0.4, -0.5]),
   /** Threshold between the previous bay and this chapter. */
-  chapterEntrance: (bay: number) => relative(bay, [-10.5, 2.6, 7.5], [-1, 1, -1]),
+  chapterEntrance: (bay: number) =>
+    relative(bay, [-10.5, 2.6, 7.5], [-1, 1, -1]),
   /** Facing the bay's name wall. */
   identity: (bay: number) => relative(bay, [-1.2, 2.9, 4.6], [0, 2.3, -3.7]),
   /** Low three-quarter front view of the car. */
@@ -76,7 +78,10 @@ export const poses = {
       rear
         ? [part[0] + 2.3, part[1] + 2.3, Math.min(part[2] - 2.9, -2.4)]
         : [part[0] - 3.2, part[1] + 2, part[2] + 3.4],
-      [part[0], part[1], part[2]],
+      // Keep the assembly in the visible space beside the existing controls.
+      rear
+        ? [part[0] - 0.7, part[1], part[2] - 0.55]
+        : [part[0] + 0.65, part[1], part[2] + 0.61],
     );
   },
 };

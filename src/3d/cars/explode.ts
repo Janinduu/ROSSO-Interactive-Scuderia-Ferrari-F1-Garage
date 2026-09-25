@@ -19,16 +19,16 @@ export const EXPLODE: Record<string, { offset: V3; delay: number }> = {
   brake_fr: { offset: [-0.04, 0, -0.36], delay: 0.14 },
   brake_rl: { offset: [0.04, 0, 0.36], delay: 0.16 },
   brake_rr: { offset: [0.04, 0, -0.36], delay: 0.16 },
-  sidepod_left: { offset: [0, 0.04, 0.62], delay: 0.18 },
-  sidepod_right: { offset: [0, 0.04, -0.62], delay: 0.18 },
+  sidepod_left: { offset: [0, 0.25, 0.9], delay: 0.18 },
+  sidepod_right: { offset: [0, 0.25, -0.9], delay: 0.18 },
   panniers: { offset: [0, 0.4, 0], delay: 0.18 },
   bargeboards: { offset: [-0.3, 0.22, 0], delay: 0.2 },
-  floor: { offset: [0, -0.42, 0], delay: 0.22 },
-  diffuser: { offset: [0.5, -0.3, 0], delay: 0.24 },
-  engine_cover: { offset: [0.1, 0.8, 0], delay: 0.26 },
-  airbox: { offset: [0, 0.7, 0], delay: 0.26 },
+  floor: { offset: [0, 0.035, 0], delay: 0.22 },
+  diffuser: { offset: [0.65, 0.08, 0], delay: 0.24 },
+  engine_cover: { offset: [0.15, 1.25, 0], delay: 0.26 },
+  airbox: { offset: [0, 1.1, 0], delay: 0.26 },
   halo: { offset: [0, 0.55, 0], delay: 0.28 },
-  power_unit_proxy: { offset: [0, 0.5, 0], delay: 0.32 },
+  power_unit_proxy: { offset: [0, 0.62, 0], delay: 0.32 },
   steering_wheel: { offset: [-0.18, 0.45, 0], delay: 0.34 },
 };
 
@@ -36,7 +36,8 @@ export const EXPLODE: Record<string, { offset: V3; delay: number }> = {
 const SPREAD = 0.34;
 export const EXPLODE_MS = 1100;
 
-const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
+const ease = (t: number) =>
+  t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 
 /** How far a group has travelled at overall progress p (0..1). */
 export function groupProgress(name: string, p: number) {

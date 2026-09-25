@@ -4,7 +4,13 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { Color, Vector3 } from "three";
 import type { Group, Material, Mesh, Object3D } from "three";
 import type { PartId } from "../../data/engineering";
-import { EXPLODE, EXPLODE_MS, PART_GROUPS, explodeState, groupProgress } from "./explode";
+import {
+  EXPLODE,
+  EXPLODE_MS,
+  PART_GROUPS,
+  explodeState,
+  groupProgress,
+} from "./explode";
 
 const KNOWN = Object.keys(EXPLODE);
 const HIGHLIGHT = new Color("#ff5a3c");
@@ -40,7 +46,8 @@ export default function ExplodeRig({
     const p = explodeState.progress;
     if (p !== goal) {
       const step = reduced ? 1 : Math.min(delta, 1 / 30) / (EXPLODE_MS / 1000);
-      explodeState.progress = goal > p ? Math.min(goal, p + step) : Math.max(goal, p - step);
+      explodeState.progress =
+        goal > p ? Math.min(goal, p + step) : Math.max(goal, p - step);
       invalidate();
     }
     // Apply offsets every frame the car is open: a React re-render may have
@@ -64,7 +71,10 @@ export default function ExplodeRig({
     const restore = () => {
       originals.current.forEach((mat, mesh) => {
         const current = mesh.material as Material;
-        if (current !== mat) current.dispose();
+        if (current !== mat) {
+          if (Array.isArray(current)) current.forEach((m) => m.dispose());
+          else current.dispose();
+        }
         mesh.material = mat;
       });
       originals.current.clear();
@@ -96,14 +106,19 @@ export default function ExplodeRig({
           if (!mesh.isMesh) return;
           originals.current.set(mesh, mesh.material);
           const tint = (m: Material) => {
-            const c = m.clone() as Material & { emissive?: Color; emissiveIntensity?: number };
+            const c = m.clone() as Material & {
+              emissive?: Color;
+              emissiveIntensity?: number;
+            };
             if (c.emissive) {
               c.emissive = HIGHLIGHT.clone();
               c.emissiveIntensity = 0.16;
             }
             return c;
           };
-          mesh.material = Array.isArray(mesh.material) ? mesh.material.map(tint) : tint(mesh.material);
+          mesh.material = Array.isArray(mesh.material)
+            ? mesh.material.map(tint)
+            : tint(mesh.material);
         });
       }
     invalidate();

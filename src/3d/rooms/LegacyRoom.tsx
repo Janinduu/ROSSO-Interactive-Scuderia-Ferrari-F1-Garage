@@ -7,14 +7,18 @@ import { loadBoardFonts, loadImage } from "../bays/boardArt";
 import { teamShieldSrc } from "../../data/media";
 import { LEGACY_X } from "../camera/poses";
 import Trophy, { trophyStyleFor } from "./Trophy";
-import { longestRun, titles, useLegacyStore } from "../../features/legacy/legacy";
+import {
+  longestRun,
+  titles,
+  useLegacyStore,
+} from "../../features/legacy/legacy";
 import { inWords } from "../../features/hall/champions";
 
 /** Plinth position for the i-th title: the eras before 1999 stand on a raised
  * back tier, the dream-team era and after on the front tier. */
 export function legacyPlinth(i: number) {
   const back = titles[i].year < 1999;
-  const row = titles.filter((t) => (t.year < 1999) === back);
+  const row = titles.filter((t) => t.year < 1999 === back);
   const k = row.findIndex((t) => t.year === titles[i].year);
   const spacing = 1.7;
   return {
@@ -24,11 +28,21 @@ export function legacyPlinth(i: number) {
   };
 }
 
-function drawWall(ctx: CanvasRenderingContext2D, shield: HTMLImageElement | null) {
+function drawWall(
+  ctx: CanvasRenderingContext2D,
+  shield: HTMLImageElement | null,
+) {
   const W = 2048;
   const H = 1024;
   ctx.clearRect(0, 0, W, H);
-  const bg = ctx.createRadialGradient(W / 2, H * 0.45, 40, W / 2, H * 0.5, W * 0.6);
+  const bg = ctx.createRadialGradient(
+    W / 2,
+    H * 0.45,
+    40,
+    W / 2,
+    H * 0.5,
+    W * 0.6,
+  );
   bg.addColorStop(0, "#7a0d15");
   bg.addColorStop(1, "#1c0406");
   ctx.fillStyle = bg;
@@ -147,7 +161,13 @@ function Banners({ fonts }: { fonts: boolean }) {
             rotation={[0, left ? Math.PI / 2 : -Math.PI / 2, 0]}
           >
             <planeGeometry args={[1, 3]} />
-            <meshStandardMaterial map={tex} transparent roughness={0.9} emissive="#3a0508" emissiveIntensity={0.4} />
+            <meshStandardMaterial
+              map={tex}
+              transparent
+              roughness={0.9}
+              emissive="#3a0508"
+              emissiveIntensity={0.4}
+            />
           </mesh>
         );
       })}
@@ -203,7 +223,11 @@ function Plinth({ index }: { index: number }) {
     >
       <mesh position={[0, 0.5, 0]} castShadow receiveShadow>
         <boxGeometry args={[0.9, 1, 0.9]} />
-        <meshStandardMaterial color={lit ? "#241a14" : "#161214"} roughness={0.3} metalness={0.5} />
+        <meshStandardMaterial
+          color={lit ? "#241a14" : "#161214"}
+          roughness={0.3}
+          metalness={0.5}
+        />
       </mesh>
       <mesh position={[0, 1.005, 0]}>
         <boxGeometry args={[0.92, 0.012, 0.92]} />
@@ -214,9 +238,16 @@ function Plinth({ index }: { index: number }) {
         <meshBasicMaterial map={plate} toneMapped={false} />
       </mesh>
       <group position={[0, 1.01, 0]} scale={1.15}>
-        <Trophy style={style} />
+        <Trophy style={style} year={title.year} />
       </group>
-      {lit && <pointLight position={[0, 2.4, 0.9]} intensity={selected ? 9 : 5} distance={4} color="#ffe0a8" />}
+      {lit && (
+        <pointLight
+          position={[0, 2.4, 0.9]}
+          intensity={selected ? 9 : 5}
+          distance={4}
+          color="#ffe0a8"
+        />
+      )}
     </group>
   );
 }
@@ -236,7 +267,10 @@ export default function LegacyRoom({ active }: { active: boolean }) {
     };
     let shield: HTMLImageElement | null = null;
     paint();
-    Promise.all([loadBoardFonts(), teamShieldSrc ? loadImage(teamShieldSrc) : null]).then(([, img]) => {
+    Promise.all([
+      loadBoardFonts(),
+      teamShieldSrc ? loadImage(teamShieldSrc) : null,
+    ]).then(([, img]) => {
       shield = img;
       paint();
       if (live) setFonts(true);
@@ -247,7 +281,12 @@ export default function LegacyRoom({ active }: { active: boolean }) {
   }, [wall, invalidate]);
   useEffect(() => () => void (document.body.style.cursor = ""), []);
   const lacquer = useMemo(
-    () => new MeshStandardMaterial({ color: "#2a0709", roughness: 0.28, metalness: 0.35 }),
+    () =>
+      new MeshStandardMaterial({
+        color: "#2a0709",
+        roughness: 0.28,
+        metalness: 0.35,
+      }),
     [],
   );
   useEffect(() => () => lacquer.dispose(), [lacquer]);
@@ -269,19 +308,32 @@ export default function LegacyRoom({ active }: { active: boolean }) {
           <boxGeometry args={[0.3, 8, 13.5]} />
         </mesh>
       ))}
-      <mesh position={[x, -0.09, 0]} rotation={[-Math.PI / 2, 0, 0]} material={lacquer} receiveShadow>
+      <mesh
+        position={[x, -0.09, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        material={lacquer}
+        receiveShadow
+      >
         <planeGeometry args={[26, 14]} />
       </mesh>
       {/* Gold inlay rings on the floor and a raised back tier. */}
       {[3.2, 3.28, 5.6].map((r) => (
-        <mesh key={r} position={[x, 0.002, 2.4]} rotation={[-Math.PI / 2, 0, 0]}>
+        <mesh
+          key={r}
+          position={[x, 0.002, 2.4]}
+          rotation={[-Math.PI / 2, 0, 0]}
+        >
           <ringGeometry args={[r, r + 0.03, 128]} />
           <meshBasicMaterial color="#b8924c" />
         </mesh>
       ))}
       <mesh position={[x, 0.35, -3.4]} receiveShadow>
         <boxGeometry args={[15, 0.7, 1.6]} />
-        <meshStandardMaterial color="#180c0c" roughness={0.35} metalness={0.4} />
+        <meshStandardMaterial
+          color="#180c0c"
+          roughness={0.35}
+          metalness={0.4}
+        />
       </mesh>
       <mesh position={[x, 0.705, -2.6]}>
         <boxGeometry args={[15, 0.012, 0.03]} />
@@ -299,10 +351,30 @@ export default function LegacyRoom({ active }: { active: boolean }) {
           ))}
         </>
       )}
-      <pointLight position={[x, 6.5, 4]} intensity={active ? 34 : 0} color="#ffdca0" distance={22} />
-      <pointLight position={[x - 8, 2.5, 1]} intensity={active ? 16 : 0} color="#e3202b" distance={12} />
-      <pointLight position={[x + 8, 2.5, 1]} intensity={active ? 16 : 0} color="#e3202b" distance={12} />
-      <pointLight position={[x, 3, -5.5]} intensity={active ? 12 : 0} color="#ffc670" distance={8} />
+      <pointLight
+        position={[x, 6.5, 4]}
+        intensity={active ? 34 : 0}
+        color="#ffdca0"
+        distance={22}
+      />
+      <pointLight
+        position={[x - 8, 2.5, 1]}
+        intensity={active ? 16 : 0}
+        color="#e3202b"
+        distance={12}
+      />
+      <pointLight
+        position={[x + 8, 2.5, 1]}
+        intensity={active ? 16 : 0}
+        color="#e3202b"
+        distance={12}
+      />
+      <pointLight
+        position={[x, 3, -5.5]}
+        intensity={active ? 12 : 0}
+        color="#ffc670"
+        distance={8}
+      />
     </group>
   );
 }

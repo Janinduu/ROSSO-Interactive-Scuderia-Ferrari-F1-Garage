@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { useThree } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import {
   BoxGeometry,
@@ -13,7 +13,11 @@ import {
   Object3D,
   RingGeometry,
 } from "three";
-import type { BufferGeometry as Geometry, InstancedMesh, Material } from "three";
+import type {
+  BufferGeometry as Geometry,
+  InstancedMesh,
+  Material,
+} from "three";
 import { drivers, eras } from "../../data/drivers";
 import { helmetDesignFor } from "../../data/helmetDesigns";
 import Helmet from "../helmets/Helmet";
@@ -146,12 +150,28 @@ function Instances({
 // car before any car is loaded (spec §7.2).
 const outlineTemplate = (() => {
   const body: [number, number][] = [
-    [-2.45, 0.08], [-1.2, 0.2], [-0.5, 0.35], [-0.2, 0.72], [0.9, 0.72],
-    [1.5, 0.45], [2.2, 0.5], [2.2, -0.5], [1.5, -0.45], [0.9, -0.72],
-    [-0.2, -0.72], [-0.5, -0.35], [-1.2, -0.2], [-2.45, -0.08],
+    [-2.45, 0.08],
+    [-1.2, 0.2],
+    [-0.5, 0.35],
+    [-0.2, 0.72],
+    [0.9, 0.72],
+    [1.5, 0.45],
+    [2.2, 0.5],
+    [2.2, -0.5],
+    [1.5, -0.45],
+    [0.9, -0.72],
+    [-0.2, -0.72],
+    [-0.5, -0.35],
+    [-1.2, -0.2],
+    [-2.45, -0.08],
   ];
   const rect = (x0: number, z0: number, x1: number, z1: number) =>
-    [[x0, z0], [x1, z0], [x1, z1], [x0, z1]] as [number, number][];
+    [
+      [x0, z0],
+      [x1, z0],
+      [x1, z1],
+      [x0, z1],
+    ] as [number, number][];
   const loops = [
     body,
     rect(-2.52, -1.0, -2.12, 1.0),
@@ -178,6 +198,17 @@ export default function Corridor({
   onSelect: (index: number) => void;
 }) {
   const kit = useBayKit();
+  const backdrop = useRef<import("three").Group>(null);
+  const identities = useRef<import("three").Group>(null);
+  // A museum cutaway: remove the obstructing wall before the camera enters it.
+  // Hysteresis avoids flicker at the boundary; the floor and exhibits remain.
+  const cutAway = useRef(false);
+  useFrame(({ camera }) => {
+    const z = camera.position.z;
+    cutAway.current = cutAway.current ? z < -2.9 : z < -3.15;
+    if (backdrop.current) backdrop.current.visible = !cutAway.current;
+    if (identities.current) identities.current.visible = !cutAway.current;
+  });
   const signs = useWallSignTextures();
   const [hovered, setHovered] = useState<number | null>(null);
   const stateOf = (i: number): BayState =>
@@ -215,7 +246,11 @@ export default function Corridor({
     (e: E) =>
       e.instanceId !== undefined && handler(e.instanceId)(e);
 
-  const at = (i: number, local: V3): V3 => [bayX(i) + local[0], local[1], local[2]];
+  const at = (i: number, local: V3): V3 => [
+    bayX(i) + local[0],
+    local[1],
+    local[2],
+  ];
   const each = (local: V3, extra: Omit<Placement, "p"> = {}) =>
     drivers.map((_, i) => ({ p: at(i, local), ...extra }));
 
@@ -286,44 +321,101 @@ export default function Corridor({
   const { geo, mat } = kit;
   return (
     <group>
-      <mesh position={[bayX(8), -0.1, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+      <mesh
+        position={[bayX(8), -0.1, 0]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        receiveShadow
+      >
         <planeGeometry args={[200, 45]} />
         <meshStandardMaterial color="#24262a" metalness={0.4} roughness={0.6} />
       </mesh>
-      <Instances geometry={geo.wall} material={mat.wall} items={s.wall} />
-      <Instances geometry={geo.pillar} material={mat.pillar} items={s.pillar} />
-      <Instances geometry={geo.groove} material={mat.groove} items={s.groove} />
-      <Instances geometry={geo.wallLine} material={mat.wallLine} items={s.wallLine} />
-      <Instances geometry={geo.sideLine} material={mat.sideLine} items={s.sideLine} />
-      <Instances geometry={geo.lightBar} material={mat.lightBar} items={s.lightBar} />
-      <Instances geometry={geo.lightBar} material={mat.lightBarRear} items={s.lightBarRear} />
-      <Instances geometry={geo.backing} material={mat.backing} items={s.backing} />
-      <Instances geometry={geo.threshold} material={mat.threshold} items={s.threshold} />
-      <Instances geometry={geo.plinth} material={mat.plinth} items={s.plinth} {...bayHandlers} />
-      <Instances geometry={geo.pedestal} material={mat.pedestal} items={s.pedestal} {...bayHandlers} />
+      <group ref={backdrop}>
+        <Instances geometry={geo.wall} material={mat.wall} items={s.wall} />
+        <Instances
+          geometry={geo.pillar}
+          material={mat.pillar}
+          items={s.pillar}
+        />
+        <Instances
+          geometry={geo.groove}
+          material={mat.groove}
+          items={s.groove}
+        />
+        <Instances
+          geometry={geo.backing}
+          material={mat.backing}
+          items={s.backing}
+        />
+      </group>
+      <Instances
+        geometry={geo.wallLine}
+        material={mat.wallLine}
+        items={s.wallLine}
+      />
+      <Instances
+        geometry={geo.sideLine}
+        material={mat.sideLine}
+        items={s.sideLine}
+      />
+      <Instances
+        geometry={geo.lightBar}
+        material={mat.lightBar}
+        items={s.lightBar}
+      />
+      <Instances
+        geometry={geo.lightBar}
+        material={mat.lightBarRear}
+        items={s.lightBarRear}
+      />
+
+      <Instances
+        geometry={geo.threshold}
+        material={mat.threshold}
+        items={s.threshold}
+      />
+      <Instances
+        geometry={geo.plinth}
+        material={mat.plinth}
+        items={s.plinth}
+        {...bayHandlers}
+      />
+      <Instances
+        geometry={geo.pedestal}
+        material={mat.pedestal}
+        items={s.pedestal}
+        {...bayHandlers}
+      />
       <Instances geometry={geo.plate} material={mat.plate} items={s.plate} />
       <Instances geometry={geo.glow} material={mat.glow} items={glow} />
       <lineSegments geometry={outlines} material={mat.outline} />
-      {chapterStarts.map((i) => (
-        <ChapterMarker
-          key={i}
-          chapter={chapterOf(i)}
-          title={drivers[i].era}
-          x={bayX(i) - 4.5}
-        />
-      ))}
+      <group ref={identities}>
+        {chapterStarts.map((i) => (
+          <ChapterMarker
+            key={i}
+            chapter={chapterOf(i)}
+            title={drivers[i].era}
+            x={bayX(i) - 4.5}
+          />
+        ))}
+        {drivers.map((d, i) =>
+          Math.abs(i - current) <= BOARD_RANGE ? (
+            <group key={d.id} position={[bayX(i), 0, 0]}>
+              <BayBoard
+                driver={d}
+                chapter={chapterOf(i)}
+                state={stateOf(i)}
+                onPointerOver={over(i)}
+                onPointerOut={out(i)}
+                onClick={click(i)}
+              />
+              {signs && <WallSign textures={signs} state={stateOf(i)} />}
+            </group>
+          ) : null,
+        )}
+      </group>
       {drivers.map((d, i) =>
         Math.abs(i - current) <= BOARD_RANGE ? (
           <group key={d.id} position={[bayX(i), 0, 0]}>
-            <BayBoard
-              driver={d}
-              chapter={chapterOf(i)}
-              state={stateOf(i)}
-              onPointerOver={over(i)}
-              onPointerOut={out(i)}
-              onClick={click(i)}
-            />
-            {signs && <WallSign textures={signs} state={stateOf(i)} />}
             <group
               position={[PEDESTAL[0], HELMET_Y, PEDESTAL[2]]}
               rotation={[0, HELMET_TURN, 0]}

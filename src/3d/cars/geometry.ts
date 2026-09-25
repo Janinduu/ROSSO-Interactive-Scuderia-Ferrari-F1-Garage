@@ -30,6 +30,32 @@ export interface Ring {
 
 /** Loft a smooth closed body through a list of rings, front to back. */
 export function loft(rings: Ring[], segments = 28): BufferGeometry {
+  // Intermediate sections remove the conspicuous straight-sided facets while
+  // retaining the authored cross sections and their end points.
+  const controls = rings;
+  const interpolate = (a: number, b: number, c: number, d: number, t: number) =>
+    0.5 *
+    (2 * b +
+      (-a + c) * t +
+      (2 * a - 5 * b + 4 * c - d) * t * t +
+      (-a + 3 * b - 3 * c + d) * t * t * t);
+  rings = controls.flatMap((r, i) => {
+    if (i === controls.length - 1) return [r];
+    const prev = controls[Math.max(0, i - 1)],
+      next = controls[i + 1],
+      end = controls[Math.min(controls.length - 1, i + 2)];
+    return Array.from({ length: 5 }, (_, j) => {
+      const t = j / 5;
+      return {
+        x: r.x + (next.x - r.x) * t,
+        w: Math.max(0.005, interpolate(prev.w, r.w, next.w, end.w, t)),
+        h: Math.max(0.005, interpolate(prev.h, r.h, next.h, end.h, t)),
+        y: interpolate(prev.y, r.y, next.y, end.y, t),
+        z: interpolate(prev.z ?? 0, r.z ?? 0, next.z ?? 0, end.z ?? 0, t),
+        n: (r.n ?? 2) + ((next.n ?? 2) - (r.n ?? 2)) * t,
+      };
+    });
+  });
   const vertices: number[] = [];
   const indices: number[] = [];
   const signed = (v: number, p: number) => Math.sign(v) * Math.abs(v) ** p;
@@ -76,7 +102,12 @@ export function loft(rings: Ring[], segments = 28): BufferGeometry {
  * An inverted (downforce) aerofoil extruded along Z and centred on the span.
  * The leading edge faces -X.
  */
-export function aerofoil(chord: number, span: number, thickness = 0.1, camber = 0.06) {
+export function aerofoil(
+  chord: number,
+  span: number,
+  thickness = 0.1,
+  camber = 0.06,
+) {
   const shape = new Shape();
   const n = 18;
   const upper: Vector2[] = [];
@@ -84,8 +115,13 @@ export function aerofoil(chord: number, span: number, thickness = 0.1, camber = 
   for (let i = 0; i <= n; i++) {
     const x = (1 - Math.cos((i / n) * Math.PI)) / 2;
     const t =
-      5 * thickness *
-      (0.2969 * Math.sqrt(x) - 0.126 * x - 0.3516 * x ** 2 + 0.2843 * x ** 3 - 0.1036 * x ** 4);
+      5 *
+      thickness *
+      (0.2969 * Math.sqrt(x) -
+        0.126 * x -
+        0.3516 * x ** 2 +
+        0.2843 * x ** 3 -
+        0.1036 * x ** 4);
     // Camber points downwards: the wing pushes the car into the track.
     const c = -camber * 4 * x * (1 - x);
     upper.push(new Vector2(x * chord, (c + t) * chord));
@@ -97,9 +133,33 @@ export function aerofoil(chord: number, span: number, thickness = 0.1, camber = 
     .slice(0, -1)
     .reverse()
     .forEach((p) => shape.lineTo(p.x, p.y));
-  const g = new ExtrudeGeometry(shape, { depth: span, bevelEnabled: false, curveSegments: 1 });
+  const g = new ExtrudeGeometry(shape, {
+    depth: span,
+    steps: 32,
+    bevelEnabled: false,
+    curveSegments: 1,
+  });
   g.translate(-chord / 2, 0, -span / 2);
   g.computeVertexNormals();
+  return g;
+}
+
+/** Planform follows the wheel clearance, floor edge and narrowed rear throat. */
+export function floorPanel(x0: number, x1: number, width: number) {
+  const length = x1 - x0;
+  const shape = new Shape();
+  shape.moveTo(x0, -width * 0.65);
+  shape.lineTo(x0 + length * 0.12, -width);
+  shape.lineTo(x1 - length * 0.21, -width);
+  shape.lineTo(x1, -width * 0.57);
+  shape.lineTo(x1, width * 0.57);
+  shape.lineTo(x1 - length * 0.21, width);
+  shape.lineTo(x0 + length * 0.12, width);
+  shape.lineTo(x0, width * 0.65);
+  shape.closePath();
+  const g = new ExtrudeGeometry(shape, { depth: 0.018, bevelEnabled: false });
+  g.rotateX(Math.PI / 2);
+  g.translate(0, 0.069, 0);
   return g;
 }
 
@@ -123,7 +183,14 @@ export function tyre(radius: number, width: number, rimRadius: number) {
 }
 
 /** A smooth tube through points, e.g. the halo or exhaust pipes. */
-export function tube(points: [number, number, number][], radius: number, closed = false) {
-  const curve = new CatmullRomCurve3(points.map((p) => new Vector3(...p)), closed);
+export function tube(
+  points: [number, number, number][],
+  radius: number,
+  closed = false,
+) {
+  const curve = new CatmullRomCurve3(
+    points.map((p) => new Vector3(...p)),
+    closed,
+  );
   return new TubeGeometry(curve, 48, radius, 10, closed);
 }

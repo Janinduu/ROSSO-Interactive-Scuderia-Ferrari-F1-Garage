@@ -11,7 +11,7 @@ import {
 import type { BufferGeometry, Material, Texture } from "three";
 import { mergeGeometries } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 import { studioEnvironment } from "../studio";
-import { aerofoil, loft, tube, tyre } from "./geometry";
+import { aerofoil, loft, tube, tyre, floorPanel } from "./geometry";
 import type { Ring } from "./geometry";
 import type { CarSpec, WingSpec } from "./families";
 import Helmet from "../helmets/Helmet";
@@ -19,6 +19,9 @@ import type { HelmetDesign } from "../helmets/helmetArt";
 import type { ReactNode } from "react";
 import type { Livery } from "../../data/liveries";
 import { Decal, useLiveryMaterials, useSlotTextures } from "./livery";
+
+import { TyreLettering } from "./TyreLettering";
+import { Powertrain, SteeringDetail } from "./Mechanical";
 
 type V3 = [number, number, number];
 
@@ -33,8 +36,19 @@ function useMaterials(env: Texture) {
       envMap: env,
       envMapIntensity: 0.32,
     });
-    const std = (color: string, roughness: number, metalness: number, envMapIntensity = 0.6) =>
-      new MeshStandardMaterial({ color, roughness, metalness, envMap: env, envMapIntensity });
+    const std = (
+      color: string,
+      roughness: number,
+      metalness: number,
+      envMapIntensity = 0.6,
+    ) =>
+      new MeshStandardMaterial({
+        color,
+        roughness,
+        metalness,
+        envMap: env,
+        envMapIntensity,
+      });
     return {
       paint,
       accent: new MeshPhysicalMaterial({
@@ -64,7 +78,10 @@ function useMaterials(env: Texture) {
       }),
     };
   }, [env]);
-  useEffect(() => () => Object.values(mats).forEach((m) => m.dispose()), [mats]);
+  useEffect(
+    () => () => Object.values(mats).forEach((m) => m.dispose()),
+    [mats],
+  );
   return mats;
 }
 type Mats = ReturnType<typeof useMaterials>;
@@ -76,21 +93,38 @@ function widthAt(rings: Ring[], x: number) {
     const b = rings[i + 1];
     if (x >= a.x && x <= b.x) {
       const t = (x - a.x) / (b.x - a.x);
-      return { w: a.w + (b.w - a.w) * t, y: a.y + (b.y - a.y) * t, h: a.h + (b.h - a.h) * t };
+      return {
+        w: a.w + (b.w - a.w) * t,
+        y: a.y + (b.y - a.y) * t,
+        h: a.h + (b.h - a.h) * t,
+      };
     }
   }
   const r = x < rings[0].x ? rings[0] : rings[rings.length - 1];
   return { w: r.w, y: r.y, h: r.h };
 }
 
-function Rod({ a, b, material, radius = 0.014 }: { a: V3; b: V3; material: Material; radius?: number }) {
+function Rod({
+  a,
+  b,
+  material,
+  radius = 0.014,
+}: {
+  a: V3;
+  b: V3;
+  material: Material;
+  radius?: number;
+}) {
   const start = new Vector3(...a);
   const end = new Vector3(...b);
   const dir = end.clone().sub(start);
   return (
     <mesh
       position={start.clone().add(end).multiplyScalar(0.5)}
-      quaternion={new Quaternion().setFromUnitVectors(new Vector3(0, 1, 0), dir.clone().normalize())}
+      quaternion={new Quaternion().setFromUnitVectors(
+        new Vector3(0, 1, 0),
+        dir.clone().normalize(),
+      )}
       material={material}
     >
       <cylinderGeometry args={[radius, radius, dir.length(), 6]} />
@@ -98,18 +132,41 @@ function Rod({ a, b, material, radius = 0.014 }: { a: V3; b: V3; material: Mater
   );
 }
 
-function Box({ size, position, rotation, material, cast = true }: {
-  size: V3; position: V3; rotation?: V3; material: Material; cast?: boolean;
+function Box({
+  size,
+  position,
+  rotation,
+  material,
+  cast = true,
+}: {
+  size: V3;
+  position: V3;
+  rotation?: V3;
+  material: Material;
+  cast?: boolean;
 }) {
   return (
-    <mesh position={position} rotation={rotation} material={material} castShadow={cast}>
+    <mesh
+      position={position}
+      rotation={rotation}
+      material={material}
+      castShadow={cast}
+    >
       <boxGeometry args={size} />
     </mesh>
   );
 }
 
 /** A painted stripe that follows the top line of a lofted body. */
-function SpineStripe({ rings, width, material }: { rings: Ring[]; width: number; material: Material }) {
+function SpineStripe({
+  rings,
+  width,
+  material,
+}: {
+  rings: Ring[];
+  width: number;
+  material: Material;
+}) {
   return (
     <group>
       {rings.slice(0, -1).map((a, i) => {
@@ -133,7 +190,10 @@ function SpineStripe({ rings, width, material }: { rings: Ring[]; width: number;
 }
 
 /** Geometry is created per spec and disposed when the car changes. */
-function useGeometry<T extends Record<string, BufferGeometry | null>>(build: () => T, deps: unknown[]) {
+function useGeometry<T extends Record<string, BufferGeometry | null>>(
+  build: () => T,
+  deps: unknown[],
+) {
   const g = useMemo(build, deps);
   useEffect(() => () => Object.values(g).forEach((x) => x?.dispose()), [g]);
   return g;
@@ -153,7 +213,12 @@ function Wing({
   material: Material;
   name: string;
   plateMaterial?: Material;
-  decals?: (plate: { length: number; height: number; y: number; x: number }) => ReactNode;
+  decals?: (plate: {
+    length: number;
+    height: number;
+    y: number;
+    x: number;
+  }) => ReactNode;
   /** Absolute height the endplates extend down to (rear wings). */
   plateBottom?: number;
 }) {
@@ -161,11 +226,28 @@ function Wing({
     const out: Record<string, BufferGeometry> = {};
     let chord = wing.chord;
     for (let i = 0; i < wing.elements; i++) {
-      out[`e${i}`] = aerofoil(chord, wing.span, 0.1, 0.08);
+      const g = aerofoil(chord, wing.span, 0.075, 0.08);
+      if (name === "front_wing") {
+        const positions = g.attributes.position;
+        for (let j = 0; j < positions.count; j++) {
+          const span = Math.abs(positions.getZ(j)) / (wing.span / 2);
+          positions.setX(
+            j,
+            positions.getX(j) +
+              (wing.elements >= 3 ? 0.22 : 0.035) * span * span,
+          );
+          positions.setY(
+            j,
+            positions.getY(j) + (wing.sweepUp ?? 0.045) * span ** 4,
+          );
+        }
+        g.computeVertexNormals();
+      }
+      out[`e${i}`] = g;
       chord *= 0.68;
     }
     return out;
-  }, [wing]);
+  }, [wing, name]);
   const elements: { x: number; y: number; rake: number; chord: number }[] = [];
   let chord = wing.chord;
   let x = 0;
@@ -178,8 +260,10 @@ function Wing({
   }
   const total = x + chord;
   const plateLength = Math.max(wing.chord * 1.1, total);
-  const plateHeight = plateBottom != null ? wing.y + 0.12 - plateBottom : wing.endplate;
-  const plateY = plateBottom != null ? 0.12 - plateHeight / 2 : wing.endplate / 2 - 0.04;
+  const plateHeight =
+    plateBottom != null ? wing.y + 0.12 - plateBottom : wing.endplate;
+  const plateY =
+    plateBottom != null ? 0.12 - plateHeight / 2 : wing.endplate / 2 - 0.04;
   return (
     <group name={name} position={[wing.x, wing.y, 0]}>
       {elements.map((e, i) => (
@@ -196,20 +280,33 @@ function Wing({
         <group key={side}>
           <Box
             size={[plateLength, plateHeight, 0.012]}
-            position={[plateLength / 2 - wing.chord / 2, plateY, (side * wing.span) / 2]}
+            position={[
+              plateLength / 2 - wing.chord / 2,
+              plateY,
+              (side * wing.span) / 2,
+            ]}
             material={plateMaterial ?? mats.carbon}
           />
           {wing.sweepUp && (
             <Box
               size={[wing.chord * 0.9, wing.sweepUp, 0.1]}
-              position={[wing.chord * 0.2, wing.sweepUp / 2, side * (wing.span / 2 - 0.06)]}
+              position={[
+                wing.chord * 0.2,
+                wing.sweepUp / 2,
+                side * (wing.span / 2 - 0.06),
+              ]}
               rotation={[side * 0.5, 0, 0]}
               material={material}
             />
           )}
         </group>
       ))}
-      {decals?.({ length: plateLength, height: plateHeight, y: plateY, x: plateLength / 2 - wing.chord / 2 })}
+      {decals?.({
+        length: plateLength,
+        height: plateHeight,
+        y: plateY,
+        x: plateLength / 2 - wing.chord / 2,
+      })}
     </group>
   );
 }
@@ -256,12 +353,23 @@ function Wheel({
   const z = side * (front ? spec.trackF : spec.trackR);
   const outer = (side * t.w) / 2;
   const rimMat =
-    rimOverride ?? (spec.rim === "wire" ? mats.chrome : spec.rim === "cast" ? mats.rim : mats.graphite);
+    rimOverride ??
+    (spec.rim === "wire"
+      ? mats.chrome
+      : spec.rim === "cast"
+        ? mats.rim
+        : mats.graphite);
   const label = `${front ? "f" : "r"}${side < 0 ? "r" : "l"}`;
   return (
     <group position={[x, t.r, z]}>
       <group name={`tyre_${label}`}>
         <mesh geometry={geos.tyre} material={mats.rubber} castShadow />
+        <TyreLettering
+          radius={t.r}
+          width={t.w}
+          side={side}
+          year={spec.year ?? 2004}
+        />
         {spec.grooved &&
           [-0.3, -0.1, 0.1, 0.3].map((g) => (
             <mesh key={g} position={[0, 0, g * t.w]} material={mats.groove}>
@@ -270,11 +378,16 @@ function Wheel({
           ))}
         {/* Rim barrel and face. */}
         <mesh rotation={[Math.PI / 2, 0, 0]} material={rimMat}>
-          <cylinderGeometry args={[spec.rimR, spec.rimR, t.w * 0.9, 32, 1, true]} />
+          <cylinderGeometry
+            args={[spec.rimR, spec.rimR, t.w * 0.9, 32, 1, true]}
+          />
         </mesh>
         <group position={[0, 0, outer * 0.86]}>
           {spec.wheelCovers ? (
-            <mesh material={mats.carbon} rotation={[0, side > 0 ? 0 : Math.PI, 0]}>
+            <mesh
+              material={mats.carbon}
+              rotation={[0, side > 0 ? 0 : Math.PI, 0]}
+            >
               <circleGeometry args={[spec.rimR * 0.98, 40]} />
             </mesh>
           ) : (
@@ -285,15 +398,56 @@ function Wheel({
               {geos.spokes && <mesh geometry={geos.spokes} material={rimMat} />}
             </>
           )}
-          <mesh rotation={[Math.PI / 2, 0, 0]} material={spec.rim === "wire" ? mats.chrome : mats.caliper}>
+          <mesh
+            rotation={[Math.PI / 2, 0, 0]}
+            material={spec.rim === "wire" ? mats.chrome : mats.caliper}
+          >
             <cylinderGeometry args={[0.045, 0.05, 0.05, 12]} />
           </mesh>
         </group>
       </group>
       <group name={`brake_${label}`} position={[0, 0, -side * t.w * 0.18]}>
         <mesh rotation={[Math.PI / 2, 0, 0]} material={mats.brake}>
-          <cylinderGeometry args={[spec.rimR * 0.78, spec.rimR * 0.78, 0.03, 28]} />
+          <cylinderGeometry
+            args={[spec.rimR * 0.78, spec.rimR * 0.78, 0.03, 28]}
+          />
         </mesh>
+        <mesh rotation={[Math.PI / 2, 0, 0]} material={mats.engine}>
+          <cylinderGeometry
+            args={[spec.rimR * 0.36, spec.rimR * 0.36, 0.036, 20]}
+          />
+        </mesh>
+        {Array.from({ length: 16 }, (_, i) => {
+          const a = (i / 16) * Math.PI * 2;
+          return (
+            <group key={i}>
+              <mesh
+                position={[
+                  Math.cos(a) * spec.rimR * 0.63,
+                  Math.sin(a) * spec.rimR * 0.63,
+                  side * 0.016,
+                ]}
+                rotation={[0, side > 0 ? 0 : Math.PI, 0]}
+                material={mats.dark}
+              >
+                <circleGeometry args={[0.008, 6]} />
+              </mesh>
+              {i % 2 === 0 && (
+                <mesh
+                  position={[
+                    Math.cos(a) * spec.rimR * 0.3,
+                    Math.sin(a) * spec.rimR * 0.3,
+                    side * 0.022,
+                  ]}
+                  rotation={[Math.PI / 2, 0, 0]}
+                  material={mats.chrome}
+                >
+                  <cylinderGeometry args={[0.008, 0.008, 0.008, 6]} />
+                </mesh>
+              )}
+            </group>
+          );
+        })}
         <Box
           size={[0.07, 0.14, 0.06]}
           position={[spec.rimR * 0.55, spec.rimR * 0.45, 0]}
@@ -311,17 +465,40 @@ function Suspension({ spec, mats }: { spec: CarSpec; mats: Mats }) {
     const t = front ? spec.tyreF : spec.tyreR;
     const x = front ? spec.frontAxle : spec.rearAxle;
     const track = front ? spec.trackF : spec.trackR;
-    const body = widthAt(spec.tub, Math.min(Math.max(x, spec.tub[0].x), spec.tub[spec.tub.length - 1].x));
+    const body = widthAt(
+      spec.tub,
+      Math.min(Math.max(x, spec.tub[0].x), spec.tub[spec.tub.length - 1].x),
+    );
     const inner = Math.max(0.12, body.w * 0.8);
     ([-1, 1] as const).forEach((side) => {
       const hub = track - t.w / 2 - 0.03;
       const lo = t.r - 0.08;
       const hi = t.r + 0.08;
       rods.push(
-        [[x - 0.18, 0.16, side * inner], [x, lo, side * hub]],
-        [[x + 0.18, 0.16, side * inner], [x, lo, side * hub]],
-        [[x - 0.16, Math.max(0.3, body.y), side * inner], [x, hi, side * hub]],
-        [[x + 0.16, Math.max(0.3, body.y), side * inner], [x, hi, side * hub]],
+        [
+          [x - 0.18, 0.16, side * inner],
+          [x, lo, side * hub],
+        ],
+        [
+          [x + 0.18, 0.16, side * inner],
+          [x, lo, side * hub],
+        ],
+        [
+          [x - 0.16, Math.max(0.3, body.y), side * inner],
+          [x, hi, side * hub],
+        ],
+        [
+          [x + 0.16, Math.max(0.3, body.y), side * inner],
+          [x, hi, side * hub],
+        ],
+        [
+          [x - 0.1, body.y + 0.08, side * inner * 0.65],
+          [x, lo, side * hub],
+        ],
+        [
+          [x + 0.08, 0.25, side * inner],
+          [x + 0.06, t.r, side * hub],
+        ],
       );
     });
   });
@@ -334,36 +511,6 @@ function Suspension({ spec, mats }: { spec: CarSpec; mats: Mats }) {
   );
 }
 
-// The engine and gearbox, normally hidden inside the bodywork; the exploded
-// view lifts it clear. Deliberately generic: a block with two cylinder banks.
-function EngineBlock({ spec, mats }: { spec: CarSpec; mats: Mats }) {
-  const x0 = spec.engineFront ? spec.frontAxle - 0.25 : spec.cockpit.x1 + 0.18;
-  const x1 = spec.engineFront ? spec.cockpit.x0 - 0.15 : spec.rearAxle - 0.1;
-  const mid = (x0 + x1) / 2;
-  const body = widthAt(spec.tub, mid);
-  const w = Math.min(0.34, body.w * 1.5);
-  const y = body.y - 0.02;
-  const len = x1 - x0;
-  return (
-    <group name="power_unit_proxy">
-      <Box size={[len * 0.72, 0.16, w * 0.8]} position={[x0 + len * 0.36, y, 0]} material={mats.engine} />
-      {[-1, 1].map((side) => (
-        <Box
-          key={side}
-          size={[len * 0.66, 0.1, w * 0.42]}
-          position={[x0 + len * 0.36, y + 0.1, side * w * 0.22]}
-          rotation={[side * 0.45, 0, 0]}
-          material={mats.engine}
-        />
-      ))}
-      <Box size={[len * 0.28, 0.12, w * 0.5]} position={[x0 + len * 0.86, y - 0.02, 0]} material={mats.graphite} />
-    </group>
-  );
-}
-
-// A historically informed procedural car assembled from an era CarSpec.
-// Component groups use the node names from spec §11.1 so the exploded view
-// can move them independently.
 export default function CarModel({
   spec,
   helmet,
@@ -380,7 +527,10 @@ export default function CarModel({
   const mats = useMaterials(env);
   const lm = useLiveryMaterials(env, livery);
   // Before the 1980s numbers were painted in white roundels.
-  const roundel = spec.family === "front50s" || spec.family === "rear60s" || spec.family === "wing70s";
+  const roundel =
+    spec.family === "front50s" ||
+    spec.family === "rear60s" ||
+    spec.family === "wing70s";
   const tex = useSlotTextures(livery, number, roundel);
   const stripe = (zone: "noseTop" | "engineCover" | "airbox") =>
     livery.stripes?.find((st) => st.zone === zone)?.color;
@@ -389,11 +539,45 @@ export default function CarModel({
   const geos = useGeometry(() => {
     const podRings = (side: 1 | -1): Ring[] | null =>
       pods && [
-        { x: pods.x0, w: pods.w * 0.85, y: pods.y, h: pods.h * 0.85, z: side * pods.z, n: pods.n },
-        { x: pods.x0 + 0.2, w: pods.w, y: pods.y, h: pods.h, z: side * pods.z, n: pods.n },
-        { x: pods.x0 + (pods.x1 - pods.x0) * 0.55, w: pods.w * 0.9, y: pods.y - 0.01, h: pods.h * 0.95, z: side * pods.z, n: pods.n },
-        { x: pods.x1 - 0.25, w: pods.w * 0.55, y: pods.y - 0.04, h: pods.h * 0.7, z: side * pods.z * 0.85, n: pods.n },
-        { x: pods.x1, w: 0.03, y: pods.y - 0.08, h: 0.05, z: side * pods.z * 0.6 },
+        {
+          x: pods.x0,
+          w: pods.w * 0.85,
+          y: pods.y,
+          h: pods.h * 0.85,
+          z: side * pods.z,
+          n: pods.n,
+        },
+        {
+          x: pods.x0 + 0.2,
+          w: pods.w,
+          y: pods.y,
+          h: pods.h,
+          z: side * pods.z,
+          n: pods.n,
+        },
+        {
+          x: pods.x0 + (pods.x1 - pods.x0) * 0.55,
+          w: pods.w * 0.9,
+          y: pods.y - 0.01,
+          h: pods.h * 0.95,
+          z: side * pods.z,
+          n: pods.n,
+        },
+        {
+          x: pods.x1 - 0.25,
+          w: pods.w * 0.55,
+          y: pods.y - 0.04,
+          h: pods.h * 0.7,
+          z: side * pods.z * 0.85,
+          n: pods.n,
+        },
+        {
+          x: pods.x1,
+          w: 0.03,
+          y: pods.y - 0.08,
+          h: 0.05,
+          z: side * pods.z * 0.6,
+        },
       ];
     const pannier = (side: 1 | -1): Ring[] => [
       { x: -0.75, w: 0.02, y: 0.42, h: 0.02, z: side * 0.47 },
@@ -404,7 +588,29 @@ export default function CarModel({
     const r = pods ? podRings(-1) : null;
     const l = pods ? podRings(1) : null;
     return {
+      tallAirbox: spec.airbox === "tall" ? loft([
+        {x:-.18,w:.17,y:.25,h:.105,n:3},
+        {x:-.06,w:.19,y:.12,h:.25,n:3},
+        {x:.15,w:.15,y:-.02,h:.28,n:2.6},
+        {x:.36,w:.08,y:-.18,h:.17},
+        {x:.47,w:.035,y:-.29,h:.05},
+      ],28) : null,
       tub: loft(spec.tub, 32),
+      floor: spec.floor
+        ? floorPanel(spec.floor.x0, spec.floor.x1, spec.floor.w)
+        : null,
+      cockpitRim: tube(
+        Array.from({ length: 49 }, (_, i) => {
+          const a = (i / 48) * Math.PI * 2;
+          return [
+            (spec.cockpit.x0 + spec.cockpit.x1) / 2 +
+              Math.cos(a) * (spec.cockpit.x1 - spec.cockpit.x0) * 0.51,
+            spec.cockpit.y + 0.016,
+            Math.sin(a) * 0.225,
+          ] as V3;
+        }),
+        0.014,
+      ),
       cover: spec.cover ? loft(spec.cover, 24) : null,
       podL: l ? loft(l, 24) : null,
       podR: r ? loft(r, 24) : null,
@@ -434,29 +640,16 @@ export default function CarModel({
             0.028,
           )
         : null,
-      exhausts: spec.exposedEngine
-        ? mergeGeometries(
-            [-1, 1].flatMap((side) =>
-              [0.12, 0.2].map((z) =>
-                tube(
-                  [
-                    [spec.exposedEngine!.x0 + 0.3, spec.exposedEngine!.y, side * z],
-                    [spec.exposedEngine!.x1, spec.exposedEngine!.y + 0.05, side * (z + 0.03)],
-                    [spec.rearAxle + 0.5, spec.exposedEngine!.y + 0.12, side * (z + 0.02)],
-                  ],
-                  0.022,
-                ),
-              ),
-            ),
-          )
-        : null,
     };
   }, [spec]);
 
   const tubFront = spec.tub[0];
   const cockpitMid = (spec.cockpit.x0 + spec.cockpit.x1) / 2;
   const cockpitWidth = widthAt(spec.tub, cockpitMid).w * 0.72;
-  const nose = widthAt(spec.tub, spec.frontWing ? spec.frontWing.x + 0.3 : tubFront.x);
+  const nose = widthAt(
+    spec.tub,
+    spec.frontWing ? spec.frontWing.x + 0.3 : tubFront.x,
+  );
   const paint = lm.base;
   const wingDefault = spec.accent === "wing" ? mats.carbon : paint;
   const frontWingPaint = lm.zone("frontWing") ?? wingDefault;
@@ -476,7 +669,9 @@ export default function CarModel({
   const cockpitSideX = spec.cockpit.x0 - 0.32;
   const cockpitRing = widthAt(spec.tub, cockpitSideX);
   const coverX = spec.cover ? spec.cover[2].x : spec.rearAxle - 0.7;
-  const coverRing = spec.cover ? widthAt(spec.cover, coverX) : widthAt(spec.tub, coverX);
+  const coverRing = spec.cover
+    ? widthAt(spec.cover, coverX)
+    : widthAt(spec.tub, coverX);
   const sides = [1, -1] as const;
   const face = (side: number) => (side > 0 ? "left" : "right");
 
@@ -485,7 +680,11 @@ export default function CarModel({
       <group name="chassis">
         <mesh geometry={geos.tub} material={paint} castShadow receiveShadow />
         {noseColor && (
-          <mesh position={[tubFront.x + 0.1, tubFront.y, 0]} scale={[0.12, tubFront.h * 1.3, tubFront.w * 1.3]} material={noseColor}>
+          <mesh
+            position={[tubFront.x + 0.1, tubFront.y, 0]}
+            scale={[0.12, tubFront.h * 1.3, tubFront.w * 1.3]}
+            material={noseColor}
+          >
             <sphereGeometry args={[1, 16, 10]} />
           </mesh>
         )}
@@ -496,31 +695,67 @@ export default function CarModel({
             material={lm.paint(stripe("noseTop")!)}
           />
         )}
-        <Decal texture={tex.noseTop} slot="noseTop" height={Math.min(noseTopRing.w * 1.3, 0.26)} position={[noseTopX, top(noseTopX) + 0.006, 0]} facing="up" tilt={noseTilt} />
+        <Decal
+          texture={tex.noseTop}
+          slot="noseTop"
+          height={Math.min(noseTopRing.w * 1.3, 0.26)}
+          position={[noseTopX, top(noseTopX) + 0.006, 0]}
+          facing="up"
+          tilt={noseTilt}
+        />
         {sides.map((side) => (
           <group key={side}>
-            <Decal texture={tex.noseSide} slot="noseSide" height={Math.min(noseRing.h * 1.1, 0.2)} position={[noseX, noseRing.y, side * (noseRing.w + 0.006)]} facing={face(side)} />
-            <Decal texture={tex.cockpitSide} slot="cockpitSide" height={Math.min(cockpitRing.h * 0.8, 0.17)} position={[cockpitSideX, cockpitRing.y + cockpitRing.h * 0.1, side * (cockpitRing.w + 0.006)]} facing={face(side)} />
+            <Decal
+              texture={tex.noseSide}
+              slot="noseSide"
+              height={Math.min(noseRing.h * 1.1, 0.2)}
+              position={[noseX, noseRing.y, side * (noseRing.w + 0.006)]}
+              facing={face(side)}
+            />
+            <Decal
+              texture={tex.cockpitSide}
+              slot="cockpitSide"
+              height={Math.min(cockpitRing.h * 0.8, 0.17)}
+              position={[
+                cockpitSideX,
+                cockpitRing.y + cockpitRing.h * 0.1,
+                side * (cockpitRing.w + 0.006),
+              ]}
+              facing={face(side)}
+            />
           </group>
         ))}
         {spec.grille !== "none" &&
-          (spec.grille === "oval"
-            ? [0]
-            : [-0.065, 0.065]
-          ).map((z) => (
-            <group key={z} position={[tubFront.x - 0.004, tubFront.y, z]} rotation={[0, -Math.PI / 2, 0]}>
-              <mesh scale={[spec.grille === "oval" ? tubFront.w * 0.85 : 0.05, tubFront.h * 0.8, 1]} material={mats.dark}>
+          (spec.grille === "oval" ? [0] : [-0.065, 0.065]).map((z) => (
+            <group
+              key={z}
+              position={[tubFront.x - 0.004, tubFront.y, z]}
+              rotation={[0, -Math.PI / 2, 0]}
+            >
+              <mesh
+                scale={[
+                  spec.grille === "oval" ? tubFront.w * 0.85 : 0.05,
+                  tubFront.h * 0.8,
+                  1,
+                ]}
+                material={mats.dark}
+              >
                 <circleGeometry args={[1, 28]} />
               </mesh>
             </group>
           ))}
-        {spec.roundels && (number == null || livery.numberSlot === "none") &&
+        {spec.roundels &&
+          (number == null || livery.numberSlot === "none") &&
           [-1, 1].map((side) => {
             const at = widthAt(spec.tub, spec.cockpit.x0 - 0.55);
             return (
               <mesh
                 key={side}
-                position={[spec.cockpit.x0 - 0.55, at.y + 0.02, side * (at.w + 0.004)]}
+                position={[
+                  spec.cockpit.x0 - 0.55,
+                  at.y + 0.02,
+                  side * (at.w + 0.004),
+                ]}
                 rotation={[0, side > 0 ? 0 : Math.PI, 0]}
                 material={mats.accent}
               >
@@ -531,16 +766,59 @@ export default function CarModel({
       </group>
 
       <group name="cockpit">
-        <mesh position={[cockpitMid, spec.cockpit.y, 0]} scale={[(spec.cockpit.x1 - spec.cockpit.x0) / 2, 0.035, cockpitWidth]} material={mats.dark}>
+        <mesh geometry={geos.cockpitRim} material={mats.carbon} />
+        {[-1, 1].map((side) => (
+          <group key={side}>
+            <Rod
+              a={[spec.cockpit.x0 - 0.12, spec.cockpit.y - 0.07, side * 0.25]}
+              b={[spec.cockpit.x0 - 0.02, spec.cockpit.y + 0.06, side * 0.45]}
+              material={mats.carbon}
+              radius={0.012}
+            />
+            <mesh
+              position={[
+                spec.cockpit.x0 - 0.02,
+                spec.cockpit.y + 0.065,
+                side * 0.47,
+              ]}
+              scale={[0.055, 0.035, 0.095]}
+              material={paint}
+              castShadow
+            >
+              <sphereGeometry args={[1, 20, 12]} />
+            </mesh>
+            <mesh
+              position={[
+                spec.cockpit.x0 + 0.028,
+                spec.cockpit.y + 0.065,
+                side * 0.47,
+              ]}
+              rotation={[0, Math.PI / 2, 0]}
+              scale={[0.075, 0.024, 1]}
+              material={mats.chrome}
+            >
+              <circleGeometry args={[1, 16]} />
+            </mesh>
+          </group>
+        ))}
+        <mesh
+          position={[cockpitMid, spec.cockpit.y, 0]}
+          scale={[(spec.cockpit.x1 - spec.cockpit.x0) / 2, 0.035, cockpitWidth]}
+          material={mats.dark}
+        >
           <sphereGeometry args={[1, 24, 10]} />
         </mesh>
-        <group name="steering_wheel" position={[spec.cockpit.x0 + 0.1, spec.cockpit.y + 0.04, 0]} rotation={[0, Math.PI / 2, 0]}>
+        <group
+          name="steering_wheel"
+          position={[spec.cockpit.x0 + 0.1, spec.cockpit.y + 0.04, 0]}
+          rotation={[0, Math.PI / 2, 0]}
+        >
           {spec.family === "front50s" || spec.family === "rear60s" ? (
             <mesh material={mats.carbon} rotation={[0.5, 0, 0]}>
               <torusGeometry args={[0.17, 0.012, 6, 32]} />
             </mesh>
           ) : (
-            <Box size={[0.26, 0.12, 0.03]} position={[0, 0, 0]} material={mats.carbon} cast={false} />
+            <SteeringDetail modern={(spec.year ?? 2004) >= 1996} mats={mats} />
           )}
         </group>
         {/* Driver's helmet. */}
@@ -566,9 +844,25 @@ export default function CarModel({
         )}
         {!["front50s", "rear60s"].includes(spec.family) &&
           [-1, 1].map((side) => (
-            <group key={side} position={[spec.cockpit.x0 + 0.08, spec.cockpit.y + 0.05, side * (cockpitWidth + 0.18)]}>
-              <Box size={[0.03, 0.06, 0.12]} position={[0, 0, 0]} material={paint} />
-              <Rod a={[0.02, -0.02, -side * 0.06]} b={[0.02, -0.08, -side * 0.18]} material={mats.carbon} radius={0.008} />
+            <group
+              key={side}
+              position={[
+                spec.cockpit.x0 + 0.08,
+                spec.cockpit.y + 0.05,
+                side * (cockpitWidth + 0.18),
+              ]}
+            >
+              <Box
+                size={[0.03, 0.06, 0.12]}
+                position={[0, 0, 0]}
+                material={paint}
+              />
+              <Rod
+                a={[0.02, -0.02, -side * 0.06]}
+                b={[0.02, -0.08, -side * 0.18]}
+                material={mats.carbon}
+                radius={0.008}
+              />
             </group>
           ))}
       </group>
@@ -582,14 +876,34 @@ export default function CarModel({
 
       {geos.cover && spec.cover && (
         <group name="engine_cover">
-          <mesh geometry={geos.cover} material={lm.zone("engineCover") ?? paint} castShadow />
+          <mesh
+            geometry={geos.cover}
+            material={lm.zone("engineCover") ?? paint}
+            castShadow
+          />
           {stripe("engineCover") && (
-            <SpineStripe rings={spec.cover} width={0.07} material={lm.paint(stripe("engineCover")!)} />
+            <SpineStripe
+              rings={spec.cover}
+              width={0.07}
+              material={lm.paint(stripe("engineCover")!)}
+            />
           )}
           {sides.map((side) => (
-            <Decal key={side} texture={tex.engineCoverSide} slot="engineCoverSide" height={Math.min(coverRing.h * 1.2, 0.2)} position={[coverX, coverRing.y, side * (coverRing.w + 0.006)]} facing={face(side)} />
+            <Decal
+              key={side}
+              texture={tex.engineCoverSide}
+              slot="engineCoverSide"
+              height={Math.min(coverRing.h * 1.2, 0.2)}
+              position={[coverX, coverRing.y, side * (coverRing.w + 0.006)]}
+              facing={face(side)}
+            />
           ))}
-          <mesh position={[spec.cover[0].x - 0.004, spec.cover[0].y, 0]} rotation={[0, -Math.PI / 2, 0]} scale={[spec.cover[0].w * 0.8, spec.cover[0].h * 0.8, 1]} material={mats.dark}>
+          <mesh
+            position={[spec.cover[0].x - 0.004, spec.cover[0].y, 0]}
+            rotation={[0, -Math.PI / 2, 0]}
+            scale={[spec.cover[0].w * 0.8, spec.cover[0].h * 0.8, 1]}
+            material={mats.dark}
+          >
             <circleGeometry args={[1, 24]} />
           </mesh>
           {spec.sharkFin && (
@@ -605,53 +919,90 @@ export default function CarModel({
 
       {spec.airbox === "tall" && (
         <group name="airbox" position={[spec.driver.x + 0.36, 0.86, 0]}>
-          <mesh rotation={[0, Math.PI / 4, 0]} scale={[1, 1, 1]} material={lm.zone("airbox") ?? paint} castShadow>
-            <cylinderGeometry args={[0.36, 0.18, 0.62, 4]} />
-          </mesh>
-          <Box size={[0.012, 0.16, 0.34]} position={[-0.2, 0.2, 0]} rotation={[0, 0, 0.3]} material={mats.dark} cast={false} />
+          <mesh geometry={geos.tallAirbox!} material={lm.zone("airbox") ?? paint} castShadow />
+          <Box
+            size={[0.012, 0.16, 0.34]}
+            position={[-0.2, 0.2, 0]}
+            rotation={[0, 0, 0.3]}
+            material={mats.dark}
+            cast={false}
+          />
           {stripe("airbox") && (
-            <Box size={[0.36, 0.04, 0.52]} position={[0.02, 0.24, 0]} material={lm.paint(stripe("airbox")!)} cast={false} />
+            <Box
+              size={[0.36, 0.04, 0.52]}
+              position={[0.02, 0.24, 0]}
+              material={lm.paint(stripe("airbox")!)}
+              cast={false}
+            />
           )}
         </group>
       )}
 
-      {spec.exposedEngine && (
-        <group name="power_unit_proxy">
-          <Box
-            size={[spec.exposedEngine.x1 - spec.exposedEngine.x0, spec.exposedEngine.h * 2, spec.exposedEngine.w * 2]}
-            position={[(spec.exposedEngine.x0 + spec.exposedEngine.x1) / 2, spec.exposedEngine.y, 0]}
-            material={mats.engine}
-          />
-          {[-1, 1].map((side) => (
-            <Box
-              key={side}
-              size={[spec.exposedEngine!.x1 - spec.exposedEngine!.x0 - 0.1, 0.05, 0.1]}
-              position={[(spec.exposedEngine!.x0 + spec.exposedEngine!.x1) / 2, spec.exposedEngine!.y + spec.exposedEngine!.h + 0.02, side * spec.exposedEngine!.w * 0.55]}
-              material={paint}
-            />
-          ))}
-          <Box
-            size={[spec.rearAxle + 0.35 - spec.exposedEngine.x1, 0.18, 0.28]}
-            position={[(spec.exposedEngine.x1 + spec.rearAxle + 0.35) / 2, spec.exposedEngine.y + 0.02, 0]}
-            material={mats.engine}
-          />
-          {geos.exhausts && <mesh geometry={geos.exhausts} material={mats.chrome} />}
-        </group>
-      )}
-
-      {!spec.exposedEngine && <EngineBlock spec={spec} mats={mats} />}
+      <Powertrain spec={spec} mats={mats} />
 
       {geos.podL && geos.podR && pods && (
         <>
-          {([[geos.podL, 1], [geos.podR, -1]] as const).map(([g, side]) => (
-            <group key={side} name={side > 0 ? "sidepod_left" : "sidepod_right"}>
-              <mesh geometry={g} material={lm.zone("sidepods") ?? paint} castShadow />
-              <Decal texture={tex.sidepodSide} slot="sidepodSide" height={Math.min(pods.h * 1.1, 0.24)} position={[pods.x0 + (pods.x1 - pods.x0) * 0.38, pods.y, side * (pods.z + pods.w * 0.97 + 0.006)]} facing={face(side)} />
-              <mesh position={[pods.x0 - 0.003, pods.y, side * pods.z]} rotation={[0, -Math.PI / 2, 0]} scale={[pods.w * 0.7, pods.h * 0.7, 1]} material={mats.dark}>
+          {(
+            [
+              [geos.podL, 1],
+              [geos.podR, -1],
+            ] as const
+          ).map(([g, side]) => (
+            <group
+              key={side}
+              name={side > 0 ? "sidepod_left" : "sidepod_right"}
+            >
+              <mesh
+                geometry={g}
+                material={lm.zone("sidepods") ?? paint}
+                castShadow
+              />
+              {(spec.year ?? 2004) >= 2000 &&
+                Array.from(
+                  { length: spec.family === "ground22" ? 10 : 5 },
+                  (_, i) => (
+                    <Box
+                      key={i}
+                      size={[0.012, 0.005, pods.w * 0.7]}
+                      position={[
+                        pods.x0 + 0.4 + i * 0.075,
+                        pods.y + pods.h * 0.94,
+                        side * pods.z,
+                      ]}
+                      rotation={[0, side * 0.35, -0.03]}
+                      material={mats.dark}
+                      cast={false}
+                    />
+                  ),
+                )}
+              <Decal
+                texture={tex.sidepodSide}
+                slot="sidepodSide"
+                height={Math.min(pods.h * 1.1, 0.24)}
+                position={[
+                  pods.x0 + (pods.x1 - pods.x0) * 0.38,
+                  pods.y,
+                  side * (pods.z + pods.w * 0.97 + 0.006),
+                ]}
+                facing={face(side)}
+              />
+              <mesh
+                position={[pods.x0 - 0.003, pods.y, side * pods.z]}
+                rotation={[0, -Math.PI / 2, 0]}
+                scale={[pods.w * 0.7, pods.h * 0.7, 1]}
+                material={mats.dark}
+              >
                 <circleGeometry args={[1, 20]} />
               </mesh>
               {spec.periscopes && (
-                <mesh position={[pods.x0 + (pods.x1 - pods.x0) * 0.62, pods.y + pods.h * 0.9, side * (pods.z - 0.05)]} material={mats.carbon}>
+                <mesh
+                  position={[
+                    pods.x0 + (pods.x1 - pods.x0) * 0.62,
+                    pods.y + pods.h * 0.9,
+                    side * (pods.z - 0.05),
+                  ]}
+                  material={mats.carbon}
+                >
                   <cylinderGeometry args={[0.035, 0.045, 0.1, 12]} />
                 </mesh>
               )}
@@ -673,7 +1024,11 @@ export default function CarModel({
               <Box
                 key={`${side}-${i}`}
                 size={[0.16, 0.26 - i * 0.03, 0.008]}
-                position={[pods.x0 - 0.3 + i * 0.09, 0.2, side * (pods.z - 0.02 + i * 0.03)]}
+                position={[
+                  pods.x0 - 0.3 + i * 0.09,
+                  0.2,
+                  side * (pods.z - 0.02 + i * 0.03),
+                ]}
                 rotation={[0, side * 0.12, 0]}
                 material={mats.carbon}
               />
@@ -692,7 +1047,18 @@ export default function CarModel({
             name="front_wing"
             decals={(plate) =>
               sides.map((side) => (
-                <Decal key={side} texture={tex.frontWingEndplate} slot="frontWingEndplate" height={Math.min(plate.height * 0.55, plate.length / 2.8)} position={[plate.x, plate.y, side * (spec.frontWing!.span / 2 + 0.009)]} facing={face(side)} />
+                <Decal
+                  key={side}
+                  texture={tex.frontWingEndplate}
+                  slot="frontWingEndplate"
+                  height={Math.min(plate.height * 0.55, plate.length / 2.8)}
+                  position={[
+                    plate.x,
+                    plate.y,
+                    side * (spec.frontWing!.span / 2 + 0.009),
+                  ]}
+                  facing={face(side)}
+                />
               ))
             }
           />
@@ -702,7 +1068,11 @@ export default function CarModel({
                 <Box
                   key={side}
                   size={[0.14, nose.y - spec.frontWing!.y, 0.01]}
-                  position={[spec.frontWing!.x + 0.12, (nose.y + spec.frontWing!.y) / 2, side * 0.09]}
+                  position={[
+                    spec.frontWing!.x + 0.12,
+                    (nose.y + spec.frontWing!.y) / 2,
+                    side * 0.09,
+                  ]}
                   material={mats.carbon}
                 />
               ))}
@@ -721,9 +1091,33 @@ export default function CarModel({
             decals={(plate) => (
               <>
                 {sides.map((side) => (
-                  <Decal key={side} texture={tex.rearWingEndplate} slot="rearWingEndplate" height={Math.min(plate.height * 0.35, plate.length / 2.4)} position={[plate.x, 0.02, side * (spec.rearWing!.span / 2 + 0.009)]} facing={face(side)} />
+                  <Decal
+                    key={side}
+                    texture={tex.rearWingEndplate}
+                    slot="rearWingEndplate"
+                    height={Math.min(plate.height * 0.35, plate.length / 2.4)}
+                    position={[
+                      plate.x,
+                      0.02,
+                      side * (spec.rearWing!.span / 2 + 0.009),
+                    ]}
+                    facing={face(side)}
+                  />
                 ))}
-                <Decal texture={tex.rearWingTop} slot="rearWingTop" height={Math.min(spec.rearWing!.chord * 0.7, (spec.rearWing!.span * 0.9) / 4.5)} position={[spec.rearWing!.chord * 0.05, spec.rearWing!.chord * 0.09, 0]} facing="back" />
+                <Decal
+                  texture={tex.rearWingTop}
+                  slot="rearWingTop"
+                  height={Math.min(
+                    spec.rearWing!.chord * 0.7,
+                    (spec.rearWing!.span * 0.9) / 4.5,
+                  )}
+                  position={[
+                    spec.rearWing!.chord * 0.05,
+                    spec.rearWing!.chord * 0.09,
+                    0,
+                  ]}
+                  facing="back"
+                />
               </>
             )}
             name="rear_wing"
@@ -731,14 +1125,30 @@ export default function CarModel({
           />
           <group name="rear_wing_supports">
             <Box
-              size={[spec.rearPylon === "central" ? 0.1 : 0.16, spec.rearWing.y - 0.4, 0.025]}
-              position={[spec.rearWing.x - 0.05, (spec.rearWing.y + 0.4) / 2, 0]}
+              size={[
+                spec.rearPylon === "central" ? 0.1 : 0.16,
+                spec.rearWing.y - 0.4,
+                0.025,
+              ]}
+              position={[
+                spec.rearWing.x - 0.05,
+                (spec.rearWing.y + 0.4) / 2,
+                0,
+              ]}
               material={mats.carbon}
             />
           </group>
           {spec.beamWing != null && (
-            <group name="beam_wing" position={[spec.rearWing.x - 0.08, spec.beamWing, 0]}>
-              <Box size={[0.2, 0.025, spec.rearWing.span * 0.9]} position={[0, 0, 0]} rotation={[0, 0, 0.2]} material={mats.carbon} />
+            <group
+              name="beam_wing"
+              position={[spec.rearWing.x - 0.08, spec.beamWing, 0]}
+            >
+              <Box
+                size={[0.2, 0.025, spec.rearWing.span * 0.9]}
+                position={[0, 0, 0]}
+                rotation={[0, 0, 0.2]}
+                material={mats.carbon}
+              />
             </group>
           )}
         </>
@@ -746,22 +1156,57 @@ export default function CarModel({
 
       {spec.floor && (
         <group name="floor">
-          <Box size={[spec.floor.x1 - spec.floor.x0, 0.022, spec.floor.w * 2]} position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.06, 0]} material={lm.zone("floor") ?? mats.carbon} />
-          <Box size={[spec.floor.x1 - spec.floor.x0 - 0.3, 0.012, 0.3]} position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.043, 0]} material={mats.brake} cast={false} />
+          <mesh
+            geometry={geos.floor!}
+            material={lm.zone("floor") ?? mats.carbon}
+            castShadow
+            receiveShadow
+          />
+          <Box
+            size={[spec.floor.x1 - spec.floor.x0 - 0.3, 0.012, 0.3]}
+            position={[(spec.floor.x0 + spec.floor.x1) / 2, 0.043, 0]}
+            material={mats.brake}
+            cast={false}
+          />
         </group>
       )}
       {spec.diffuser && (
-        <group name="diffuser" position={[(spec.diffuser.x0 + spec.diffuser.x1) / 2, 0.06 + spec.diffuser.rise / 2, 0]}>
+        <group
+          name="diffuser"
+          position={[
+            (spec.diffuser.x0 + spec.diffuser.x1) / 2,
+            0.06 + spec.diffuser.rise / 2,
+            0,
+          ]}
+        >
           <Box
-            size={[Math.hypot(spec.diffuser.x1 - spec.diffuser.x0, spec.diffuser.rise), 0.02, spec.diffuser.w * 2]}
+            size={[
+              Math.hypot(
+                spec.diffuser.x1 - spec.diffuser.x0,
+                spec.diffuser.rise,
+              ),
+              0.02,
+              spec.diffuser.w * 2,
+            ]}
             position={[0, 0, 0]}
-            rotation={[0, 0, Math.atan2(spec.diffuser.rise, spec.diffuser.x1 - spec.diffuser.x0)]}
+            rotation={[
+              0,
+              0,
+              Math.atan2(
+                spec.diffuser.rise,
+                spec.diffuser.x1 - spec.diffuser.x0,
+              ),
+            ]}
             material={mats.carbon}
           />
           {[-0.66, -0.22, 0.22, 0.66].map((f) => (
             <Box
               key={f}
-              size={[spec.diffuser!.x1 - spec.diffuser!.x0, spec.diffuser!.rise * 0.9, 0.008]}
+              size={[
+                spec.diffuser!.x1 - spec.diffuser!.x0,
+                spec.diffuser!.rise * 0.9,
+                0.008,
+              ]}
               position={[0.02, 0, f * spec.diffuser!.w]}
               material={mats.carbon}
             />
@@ -771,7 +1216,14 @@ export default function CarModel({
 
       {([true, false] as const).flatMap((front) =>
         ([-1, 1] as const).map((side) => (
-          <Wheel key={`${front}-${side}`} spec={spec} front={front} side={side} mats={mats} rimOverride={lm.rim} />
+          <Wheel
+            key={`${front}-${side}`}
+            spec={spec}
+            front={front}
+            side={side}
+            mats={mats}
+            rimOverride={lm.rim}
+          />
         )),
       )}
       <Suspension spec={spec} mats={mats} />

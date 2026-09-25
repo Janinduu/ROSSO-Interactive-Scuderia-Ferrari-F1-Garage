@@ -710,7 +710,11 @@ function App() {
                     <button
                       className="icon-button"
                       aria-label="Reset engineering view"
-                      onClick={resetView}
+                      onClick={() => {
+                        setExploded(false);
+                        if (isolate) toggleIsolate();
+                        resetView();
+                      }}
                     >
                       <RotateCcw size={16} />
                     </button>
