@@ -2972,3 +2972,136 @@ footer > button {
     margin-top: 18px;
   }
 }
+/* ------------------------------------------------------------------
+   Hall of Champions
+   ------------------------------------------------------------------ */
+.hall-panel {
+  position: relative;
+  z-index: 5;
+  padding: 26px 0 0 6.7%;
+  max-width: 440px;
+  animation: arrive 0.5s ease both;
+}
+.hall-back {
+  margin-bottom: 18px;
+}
+.hall-panel .eyebrow {
+  color: #c9a45e;
+}
+.hall-panel .tiny-line {
+  background: #c9a45e;
+}
+.hall-panel h1 {
+  font-family: var(--heading);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.02;
+  margin: 14px 0 12px;
+}
+.hall-panel h1 strong {
+  display: block;
+  font-weight: 600;
+  font-size: clamp(42px, 4.2vw, 60px);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #e7c98c;
+}
+.hall-intro {
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text-2);
+  margin: 0 0 14px;
+}
+.hall-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  border-top: 1px solid #b8924c40;
+}
+.hall-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #b8924c40;
+  padding: 4px 0;
+}
+.hall-name {
+  font-family: var(--heading);
+  font-size: 21px;
+}
+.hall-years {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 2px;
+}
+.hall-years button {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 36px;
+  padding: 0 7px;
+  font-family: var(--heading);
+  font-size: var(--fs-lg);
+  color: #e7c98c;
+  border: 1px solid transparent;
+}
+.hall-years button svg {
+  color: #b8924c;
+}
+.hall-years button:hover {
+  border-color: #b8924c;
+  color: #fff4dd;
+}
+.hall-card {
+  background: linear-gradient(90deg, #2a2210, #141619 60%);
+}
+.hall-card .tiny-line {
+  background: #c9a45e;
+}
+.hall-card svg {
+  color: #c9a45e;
+}
+.hall-card:hover {
+  border-color: #b8924c;
+}
+@media (max-width: 760px) {
+  .in-garage .experience:has(.hall-panel) {
+    display: flex;
+    flex-direction: column;
+  }
+  .hall-panel {
+    display: contents;
+  }
+  .hall-panel > * {
+    order: 2;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  .hall-panel > .hall-back {
+    margin-top: 16px;
+  }
+  .hall-panel > .hall-list,
+  .hall-panel > .fine-print {
+    order: 4;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 760px) {
+  /* Phones: the two rooms in the header; the driver directory stays one tap
+     away inside the garage and on the landing page. */
+  .header nav button {
+    display: none;
+  }
+  .header nav button:nth-child(2),
+  .header nav button:nth-child(4) {
+    display: flex;
+  }
+  /* Room panels: headings sit inside the page margin like everything else. */
+  .evolution-panel > h1,
+  .hall-panel > h1 {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}

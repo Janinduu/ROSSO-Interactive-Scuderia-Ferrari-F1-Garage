@@ -7,6 +7,7 @@ import CarModel from "../3d/cars/CarModel";
 import { anchorsFor, CAR_SCALE } from "../3d/cars/anchors";
 import ExplodeRig from "../3d/cars/ExplodeRig";
 import EvolutionRoom from "../3d/rooms/EvolutionRoom";
+import HallRoom from "../3d/rooms/HallRoom";
 import { milestones, milestoneAt, useEvolutionStore, yearAt } from "../features/evolution/evolution";
 import { useMuseumStore } from "../stores/museumStore";
 import { explodedOffset } from "../3d/cars/explode";
@@ -50,6 +51,8 @@ function Set({
   const x = bayX(bay);
   const carRef = useRef<Group>(null);
   const inEvolution = useMuseumStore((s) => s.entered && s.room === "evolution");
+  const inHall = useMuseumStore((s) => s.entered && s.room === "hall");
+  const inRoom = inEvolution || inHall;
   // Subscribe to the year and car only, not the clock, so the scene
   // re-renders about once a second while the sequence plays.
   const evoYear = useEvolutionStore((s) => yearAt(s.elapsed));
@@ -88,9 +91,16 @@ function Set({
       {/* Only the selected bay holds a detailed car (spec §11.3). */}
       {/* Slightly larger than life so the car holds the plinth. */}
       <EvolutionRoom year={evoYear} milestone={milestone} active={inEvolution} reduced={reduced} />
-      {/* One detailed car at a time: the bay car steps aside in the Evolution room. */}
-      <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE} visible={!inEvolution}>
-        {!inEvolution && (
+      <HallRoom
+        active={inHall}
+        onSelect={(c) => {
+          onSelectDriver(c.index);
+          useMuseumStore.getState().setYear(c.titles[0].year);
+        }}
+      />
+      {/* One detailed car at a time: the bay car steps aside in the rooms. */}
+      <group ref={carRef} position={[x, 0.02, 0]} scale={CAR_SCALE} visible={!inRoom}>
+        {!inRoom && (
           <CarModel
             key={car.id}
             spec={car.spec}

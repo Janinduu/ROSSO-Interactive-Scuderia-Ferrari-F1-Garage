@@ -56,6 +56,9 @@ import { useMuseumCamera } from "./3d/camera/useMuseumCamera";
 import { useTourStore, tourSteps } from "./features/guided-tour/tourStore";
 import GuidedTour from "./features/guided-tour/GuidedTour";
 import EvolutionPanel from "./features/evolution/EvolutionPanel";
+import HallPanel from "./features/hall/HallPanel";
+import { champions, inWords, titleCount } from "./features/hall/champions";
+import type { Champion } from "./features/hall/champions";
 const Garage = lazy(() => import("./scenes/Garage"));
 const SeasonArchive = lazy(() => import("./components/SeasonArchive"));
 type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
@@ -141,6 +144,11 @@ function App() {
     setDetails(false);
     setFocusMode(false);
     window.scrollTo({ top: 0, behavior: "instant" });
+  }
+  /** Open a champion's bay on one of their title seasons. */
+  function openTitle(champion: Champion, titleYear: number) {
+    selectDriver(champion.index);
+    setYear(titleYear);
   }
   function beginTour() {
     setDialog(null);
@@ -283,6 +291,16 @@ function App() {
           </button>
           <button onClick={() => setDialog("directory")}>Driver hall</button>
           <button
+            className={entered && room === "hall" ? "active" : ""}
+            onClick={() => {
+              stopTour();
+              enterRoom("hall");
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }}
+          >
+            Champions
+          </button>
+          <button
             className={section === "engineering" ? "active" : ""}
             onClick={() => {
               enter();
@@ -424,6 +442,8 @@ function App() {
             </>
           ) : room === "evolution" ? (
             <EvolutionPanel onExit={openStory} />
+          ) : room === "hall" ? (
+            <HallPanel onExit={openStory} onOpen={openTitle} />
           ) : (
             <>
               <div className="garage-topline">
@@ -695,6 +715,26 @@ function App() {
               </span>
               <ArrowRight size={20} />
             </button>
+            <button
+              className="evolution-card hall-card"
+              onClick={() => {
+                enterRoom("hall");
+                window.scrollTo({ top: 0, behavior: "instant" });
+              }}
+            >
+              <span className="eyebrow">
+                <span className="tiny-line" />
+                THE HALL OF CHAMPIONS
+              </span>
+              <strong>
+                {inWords(titleCount)} titles. {inWords(champions.length)} champions.
+              </strong>
+              <span>
+                At the end of the corridor: every drivers' world championship
+                won in a Ferrari, 1952 to 2007.
+              </span>
+              <ArrowRight size={20} />
+            </button>
             <div className="era-grid">
               {[
                 {
@@ -739,7 +779,7 @@ function App() {
               ))}
             </div>
           </section>
-        ) : room === "evolution" ? null : (
+        ) : room !== "garage" ? null : (
           <Suspense
             fallback={
               <div className="archive-loading">Opening the season archive…</div>

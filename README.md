@@ -43,6 +43,10 @@ The additional fourteen drivers are archive exhibits, not bespoke editorial expe
 
 A room before the first bay plays Ferrari's cars from 1951 to 2026 on a turntable in 75 seconds (`src/features/evolution`). Each of the twenty cars is a real driver-season, so its name, livery, race number and engine come from the sourced data; each announces itself with a short synthesised rev. Open it from the landing page or the Evolution tab.
 
+## The Hall of Champions
+
+The corridor ends in a gilded room with a station for every Ferrari drivers' world champion: their helmet, one gold trophy per title and a plaque with years and cars (`src/features/hall`). The list comes from the sourced career titles, so it updates with the data. Choosing a title opens that driver's bay on the championship season.
+
 ## Sound
 
 Sound is on by default and can be switched off in the header or settings; the choice is remembered on the device. Browsers start audio only after the first click or key press. Everything is synthesised with the Web Audio API (`src/audio`): a quiet garage room tone, soft transition and servo cues, and an engine note per car whose firing rhythm follows the sourced engine layout (cylinder count, turbo, hybrid). Engine notes are captioned as synthesised impressions, not recordings. No audio files are downloaded.

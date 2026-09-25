@@ -128,6 +128,35 @@ export function playTransition() {
   src.stop(t + 1.2);
 }
 
+/** A warm, bell-like chord for arriving in the Hall of Champions. */
+export function playChime() {
+  const c = context();
+  if (!c || !master || c.state !== "running") return;
+  const t = c.currentTime;
+  [261.63, 329.63, 392, 523.25].forEach((f, i) => {
+    const start = t + i * 0.12;
+    const osc = c.createOscillator();
+    osc.type = "sine";
+    osc.frequency.value = f;
+    const partial = c.createOscillator();
+    partial.type = "sine";
+    partial.frequency.value = f * 2.76; // a bell's inharmonic overtone
+    const pg = c.createGain();
+    pg.gain.value = 0.25;
+    const gain = c.createGain();
+    gain.gain.setValueAtTime(0, start);
+    gain.gain.linearRampToValueAtTime(0.07, start + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, start + 3.2);
+    osc.connect(gain);
+    partial.connect(pg).connect(gain);
+    gain.connect(master!);
+    osc.start(start);
+    partial.start(start);
+    osc.stop(start + 3.3);
+    partial.stop(start + 3.3);
+  });
+}
+
 /** A short mechanical servo for the exploded view. */
 export function playServo(opening: boolean) {
   const c = context();

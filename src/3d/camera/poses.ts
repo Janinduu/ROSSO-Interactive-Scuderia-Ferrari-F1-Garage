@@ -11,6 +11,8 @@ export const BAY_SPACING = 9;
 export const bayX = (bay: number) => bay * BAY_SPACING;
 /** The Evolution room sits before the first bay. */
 export const EVOLUTION_X = -15;
+/** The Hall of Champions closes the corridor, after the last bay. */
+export const HALL_X = 17 * BAY_SPACING + 8;
 
 const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
   const x = bayX(bay);
@@ -21,6 +23,12 @@ const relative = (bay: number, position: Vec3, target: Vec3): CameraPose => {
 };
 
 export const poses = {
+  /** The Hall of Champions from its entrance. */
+  hall: (): CameraPose => ({
+    // Off-centre, so the whole arc sits clear of the panel on the left.
+    position: [HALL_X - 9.5, 4.6, 13.6],
+    target: [HALL_X - 2.4, 1.6, -1.6],
+  }),
   /** Facing the Evolution room's turntable and year wall. */
   evolution: (): CameraPose => ({
     // Looking slightly left of centre keeps the wall clear of the panel.

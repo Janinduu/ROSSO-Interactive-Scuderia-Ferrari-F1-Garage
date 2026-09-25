@@ -10,6 +10,9 @@ import { poses } from "./poses";
 
 // Maps where the visitor is in the museum to a camera pose. While the guided
 // tour runs it owns the camera instead; when it ends this restores the framing.
+const reducedGlide = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3200;
+
 export function useMuseumCamera() {
   const entered = useMuseumStore((s) => s.entered);
   const room = useMuseumStore((s) => s.room);
@@ -36,8 +39,11 @@ export function useMuseumCamera() {
         return;
       }
     }
-    if (entered && room === "evolution") {
-      useCameraStore.getState().go(poses.evolution());
+    if (entered && room !== "garage") {
+      // Rooms at either end of the corridor: a slower, gliding approach.
+      useCameraStore
+        .getState()
+        .go(room === "evolution" ? poses.evolution() : poses.hall(), { durationMs: reducedGlide() });
       return;
     }
     const pose = !entered
