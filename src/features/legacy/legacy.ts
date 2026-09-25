@@ -2,7 +2,6 @@ import { create } from "zustand";
 import record from "../../data/constructors.json";
 import { drivers } from "../../data/drivers";
 import { carNameFor } from "../../data/cars";
-import type { TrophyStyle } from "../../3d/rooms/Trophy";
 
 // Ferrari's constructors' world championships. Points, wins and drivers come
 // from the Jolpica import (constructors.json); leadership, cars, notes and
@@ -11,14 +10,22 @@ import type { TrophyStyle } from "../../3d/rooms/Trophy";
 interface Person {
   name: string;
   role: string;
+  note?: string;
 }
 interface Research {
   titles?: Record<
     string,
-    { car?: string[]; teamPrincipal?: Person; technicalLeads?: Person[]; note?: string; sourceIds?: string[] }
+    {
+      car?: string[];
+      carNote?: string;
+      teamPrincipal?: Person;
+      technicalLeads?: Person[];
+      note?: string;
+      sourceIds?: string[];
+    }
   >;
-  trophyEras?: { from: number; to: number; shape?: string; material?: string; description?: string; style?: TrophyStyle }[];
   dreamTeam?: (Person & { sourceIds?: string[] })[];
+  championshipName?: { note: string; sourceIds?: string[] };
   sources?: Record<string, { title: string; publisher: string; url: string }>;
 }
 const files = import.meta.glob<Research>("../../data/constructorsLegacy.json", {
@@ -33,6 +40,9 @@ export interface ConstructorsTitle {
   wins: number;
   drivers: { id: string; name: string; bay: number | null }[];
   car: string[];
+  carNote?: string;
+  /** The award's name that season. */
+  award: string;
   teamPrincipal?: Person;
   technicalLeads: Person[];
   note?: string;
@@ -61,6 +71,9 @@ export const titles: ConstructorsTitle[] = record.titles.map((t) => {
             .filter((c): c is string => !!c),
         ),
       ],
+    carNote: r?.carNote,
+    // Renamed from the International Cup for F1 Manufacturers in 1981.
+    award: t.year < 1981 ? "International Cup for F1 Manufacturers" : "World Constructors' Championship",
     teamPrincipal: r?.teamPrincipal,
     technicalLeads: r?.technicalLeads ?? [],
     note: r?.note,
@@ -68,8 +81,9 @@ export const titles: ConstructorsTitle[] = record.titles.map((t) => {
   };
 });
 
-export const trophyEras = research.trophyEras ?? [];
-export const dreamTeam = research.dreamTeam ?? [];
+// Only members whom the sources explicitly name as part of the "dream team";
+// entries the research flagged with a caveat note are left out.
+export const dreamTeam = (research.dreamTeam ?? []).filter((p) => !p.note);
 export const legacySource = record.source;
 
 /** "1999–2004": the longest run of consecutive titles. */

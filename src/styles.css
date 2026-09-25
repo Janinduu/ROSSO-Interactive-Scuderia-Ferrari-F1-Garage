@@ -3308,3 +3308,32 @@ footer > button {
     gap: 12px;
   }
 }
+.legacy-award {
+  margin: 10px 0 0;
+  font-size: var(--fs-xs);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #d9b86e;
+}
+.legacy-carnote {
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+}
+.legacy-role {
+  color: var(--text-3);
+  font-size: var(--fs-sm);
+}
+.legacy-dream ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+}
+.legacy-dream strong {
+  color: var(--text-1);
+  font-weight: 500;
+  margin-right: 4px;
+}

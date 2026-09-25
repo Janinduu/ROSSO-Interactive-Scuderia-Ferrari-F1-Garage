@@ -1,0 +1,1173 @@
+{
+  "asOf": "2026-09-25",
+  "titleCount": 16,
+  "titleCountSourceIds": [
+    "wiki-wcc-list",
+    "wiki-scuderia-ferrari",
+    "f1com-ferrari-year-by-year",
+    "ferrari-year-2008"
+  ],
+  "championshipName": {
+    "note": "The title was first awarded in 1958 as the International Cup for Formula One Manufacturers. It was officially renamed the World Constructors' Championship in 1981, so Ferrari's titles from 1961 to 1979 were awarded under the International Cup name. Until 1978, only the highest-placed car of each constructor scored points; from 1979, all cars counted.",
+    "sourceIds": [
+      "wiki-wcc-list"
+    ]
+  },
+  "titles": {
+    "1961": {
+      "car": [
+        "156 F1"
+      ],
+      "teamPrincipal": {
+        "name": "Romolo Tavoni",
+        "role": "Sporting director (direttore sportivo)"
+      },
+      "technicalLeads": [
+        {
+          "name": "Carlo Chiti",
+          "role": "Chief designer"
+        }
+      ],
+      "note": "Ferrari's first constructors' title, clinched at the British Grand Prix (round 5 of 8); the 156 F1 won five of the season's eight Grands Prix.",
+      "sourceIds": [
+        "ferrari-year-1961",
+        "ferrari-car-156-f1",
+        "wiki-wcc-list",
+        "wiki-ferrari-156",
+        "wiki-carlo-chiti",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1964": {
+      "car": [
+        "158 F1",
+        "512 F1",
+        "156 F1-63"
+      ],
+      "carNote": "Ferrari says it raced three models in 1964: the 158 F1, the 156 F1-63 and the flat-12 512 F1 (also known as the 1512), which debuted at the US GP.",
+      "teamPrincipal": {
+        "name": "Eugenio Dragoni",
+        "role": "Sporting director / team manager"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mauro Forghieri",
+          "role": "Designer (158 F1 and the 512 F1 flat-12 engine)"
+        }
+      ],
+      "note": "Decided at the final round in Mexico; Ferrari's last two races were entered by the American importer NART in white and blue, as a protest against the Italian sporting authorities.",
+      "sourceIds": [
+        "ferrari-year-1964",
+        "ferrari-car-158-f1",
+        "ferrari-car-512-f1",
+        "wiki-wcc-list",
+        "wiki-ferrari-158",
+        "wiki-mauro-forghieri",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses"
+      ]
+    },
+    "1975": {
+      "car": [
+        "312 T"
+      ],
+      "carNote": "The older 312 B3 started the first two races of 1975; the 312 T debuted at the South African GP.",
+      "teamPrincipal": {
+        "name": "Luca Cordero di Montezemolo",
+        "role": "Sporting director (team manager), 1974-1975"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; designer of the 312 T series"
+        }
+      ],
+      "note": "Clinched at the Italian Grand Prix at Monza, where Clay Regazzoni won on the day Niki Lauda became world champion; Ferrari's first title in 11 years.",
+      "sourceIds": [
+        "ferrari-year-1975",
+        "ferrari-car-312-t",
+        "wiki-wcc-list",
+        "wiki-ferrari-312t",
+        "wiki-mauro-forghieri",
+        "wiki-luca-di-montezemolo",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1976": {
+      "car": [
+        "312 T",
+        "312 T2"
+      ],
+      "carNote": "The 312 T won the first races; the 312 T2 debuted at the Spanish GP.",
+      "teamPrincipal": {
+        "name": "Daniele Audetto",
+        "role": "Team manager"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; designer of the 312 T series"
+        }
+      ],
+      "note": "Won despite Niki Lauda's fiery crash at the Nürburgring on 1 August; the title was secured at the United States Grand Prix, round 15 of 16.",
+      "sourceIds": [
+        "ferrari-year-1976",
+        "ferrari-car-312-t2",
+        "wiki-wcc-list",
+        "wiki-ferrari-312t",
+        "wiki-mauro-forghieri",
+        "wiki-daniele-audetto",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1977": {
+      "car": [
+        "312 T2"
+      ],
+      "carNote": "Ferrari calls the 1977 car the 312 T2; Wikipedia lists the uprated 1977 specification as the 312T2B.",
+      "teamPrincipal": {
+        "name": "Roberto Nosetto",
+        "role": "Sporting director"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; designer of the 312 T series"
+        }
+      ],
+      "note": "Third constructors' title in a row, clinched at the Italian Grand Prix (round 14 of 17); Lauda also won the drivers' title before leaving the team.",
+      "sourceIds": [
+        "ferrari-year-1977",
+        "ferrari-car-312-t2",
+        "wiki-wcc-list",
+        "wiki-ferrari-312t",
+        "wiki-mauro-forghieri",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1979": {
+      "car": [
+        "312 T4",
+        "312 T3"
+      ],
+      "carNote": "The 312 T3 was used for the first two races; the 312 T4 debuted in South Africa.",
+      "teamPrincipal": {
+        "name": "Marco Piccinini",
+        "role": "Sporting director and F1 team principal, 1978-1988"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; designer of the 312 T series"
+        }
+      ],
+      "note": "Clinched at the Italian Grand Prix at Monza, where Jody Scheckter also sealed the drivers' title; Ferrari scored 113 points and six wins.",
+      "sourceIds": [
+        "ferrari-year-1979",
+        "ferrari-car-312-t4",
+        "wiki-wcc-list",
+        "wiki-ferrari-312t",
+        "wiki-mauro-forghieri",
+        "wiki-marco-piccinini",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1982": {
+      "car": [
+        "126 C2"
+      ],
+      "teamPrincipal": {
+        "name": "Marco Piccinini",
+        "role": "Sporting director and F1 team principal, 1978-1988"
+      },
+      "technicalLeads": [
+        {
+          "name": "Harvey Postlethwaite",
+          "role": "Chief designer (chassis)"
+        },
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; chief engine designer"
+        }
+      ],
+      "note": "Won in a tragic year: Gilles Villeneuve was killed in qualifying at Zolder and Didier Pironi's career ended in Germany; the title was decided at the final round, Caesars Palace.",
+      "sourceIds": [
+        "ferrari-year-1982",
+        "ferrari-car-126-c2",
+        "wiki-wcc-list",
+        "wiki-ferrari-126c",
+        "wiki-harvey-postlethwaite",
+        "wiki-marco-piccinini",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1983": {
+      "car": [
+        "126 C2B",
+        "126 C3"
+      ],
+      "carNote": "The 126 C2B started the season; the carbon-fibre 126 C3 debuted at the British GP.",
+      "teamPrincipal": {
+        "name": "Marco Piccinini",
+        "role": "Sporting director and F1 team principal, 1978-1988"
+      },
+      "technicalLeads": [
+        {
+          "name": "Harvey Postlethwaite",
+          "role": "Chief designer (chassis)"
+        },
+        {
+          "name": "Mauro Forghieri",
+          "role": "Technical director; chief engine designer"
+        }
+      ],
+      "note": "Second consecutive title, decided at the final round in South Africa, with four wins shared by René Arnoux and Patrick Tambay.",
+      "sourceIds": [
+        "ferrari-year-1983",
+        "ferrari-car-126-c3",
+        "wiki-wcc-list",
+        "wiki-ferrari-126c",
+        "wiki-marco-piccinini",
+        "f1com-ferrari-year-by-year",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "1999": {
+      "car": [
+        "F399"
+      ],
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "Ferrari's first constructors' title since 1983, decided at the final round at Suzuka; Mika Salo stood in for six races after Michael Schumacher broke his leg at Silverstone.",
+      "sourceIds": [
+        "ferrari-year-1999",
+        "ferrari-car-f399",
+        "wiki-wcc-list",
+        "wiki-ferrari-f399",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2000": {
+      "car": [
+        "F1-2000"
+      ],
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "Clinched at the final round in Malaysia, with 10 wins and 170 points; Schumacher also brought the drivers' title back to Maranello after 21 years.",
+      "sourceIds": [
+        "ferrari-year-2000",
+        "ferrari-car-f1-2000",
+        "wiki-wcc-list",
+        "wiki-ferrari-f1-2000",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2001": {
+      "car": [
+        "F2001"
+      ],
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "Clinched with a Schumacher-Barrichello one-two at the Hungaroring, round 13 of 17.",
+      "sourceIds": [
+        "ferrari-year-2001",
+        "ferrari-car-f2001",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2001",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2002": {
+      "car": [
+        "F2002",
+        "F2001"
+      ],
+      "carNote": "Ferrari says the previous year's F2001 started the season's first races before the F2002 took over.",
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "15 wins from 17 races and 221 points, as many as all the other teams combined; the title was secured in Budapest.",
+      "sourceIds": [
+        "ferrari-year-2002",
+        "ferrari-car-f2002",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2002",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2003": {
+      "car": [
+        "F2003-GA",
+        "F2002"
+      ],
+      "carNote": "The F2002 raced early in 2003 before the F2003-GA; 'GA' honours Gianni Agnelli, who died in January 2003.",
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "A record fifth consecutive constructors' title, decided at the final round at Suzuka.",
+      "sourceIds": [
+        "ferrari-year-2003",
+        "ferrari-car-f2003-ga",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2003-ga",
+        "wiki-ferrari-f2002",
+        "f1com-ferrari-year-by-year",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2004": {
+      "car": [
+        "F2004"
+      ],
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Ross Brawn",
+          "role": "Technical director"
+        },
+        {
+          "name": "Rory Byrne",
+          "role": "Chief designer"
+        },
+        {
+          "name": "Paolo Martinelli",
+          "role": "Engine technical director"
+        }
+      ],
+      "note": "Clinched with a one-two at the Hungarian Grand Prix in August; 15 wins from 18 races and 262 points.",
+      "sourceIds": [
+        "ferrari-year-2004",
+        "ferrari-car-f2004",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2004",
+        "wiki-jean-todt",
+        "wiki-ross-brawn",
+        "wiki-rory-byrne",
+        "wiki-paolo-martinelli",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2007": {
+      "car": [
+        "F2007"
+      ],
+      "teamPrincipal": {
+        "name": "Jean Todt",
+        "role": "Team principal (head of the racing division / Gestione Sportiva), 1993-2007"
+      },
+      "technicalLeads": [
+        {
+          "name": "Mario Almondo",
+          "role": "Executive technical director"
+        },
+        {
+          "name": "Aldo Costa",
+          "role": "Design and development director"
+        },
+        {
+          "name": "Nikolas Tombazis",
+          "role": "Chief designer"
+        }
+      ],
+      "note": "Secured after McLaren was excluded from the constructors' standings over the espionage case; Kimi Räikkönen won the drivers' title at the final round in Brazil.",
+      "sourceIds": [
+        "ferrari-year-2007",
+        "ferrari-car-f2007",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2007",
+        "f1com-ferrari-year-by-year",
+        "wiki-jean-todt",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    },
+    "2008": {
+      "car": [
+        "F2008"
+      ],
+      "teamPrincipal": {
+        "name": "Stefano Domenicali",
+        "role": "Team principal"
+      },
+      "technicalLeads": [
+        {
+          "name": "Aldo Costa",
+          "role": "Technical director"
+        },
+        {
+          "name": "Mario Almondo",
+          "role": "Executive technical director"
+        },
+        {
+          "name": "Nikolas Tombazis",
+          "role": "Chief designer"
+        }
+      ],
+      "note": "Ferrari's 16th constructors' title, decided at the final round in Brazil, where Felipe Massa won the race but lost the drivers' title by one point.",
+      "sourceIds": [
+        "ferrari-year-2008",
+        "ferrari-car-f2008",
+        "wiki-wcc-list",
+        "wiki-ferrari-f2008",
+        "wiki-stefano-domenicali",
+        "f1com-ferrari-year-by-year",
+        "wiki-scuderia-ferrari",
+        "motorsport-mag-2023-ferrari-bosses",
+        "motorsport-mag-2014-sporting-directors"
+      ]
+    }
+  },
+  "trophyEras": [
+    {
+      "from": 1950,
+      "to": 1962,
+      "award": "FIA world championship cups (drivers from 1950, constructors from 1958)",
+      "shape": "Small flared beaker/tumbler cup: a plain cylinder-to-cone body, wider at the rim, on a short stepped foot; no handles or lid.",
+      "material": "Polished silver (or silver-coloured metal), engraved text",
+      "description": "Photos of Fangio's 1954-55 FIA drivers' cups show plain engraved beakers. The Commons caption for the BRM cabinet lists BRM's 1962 FIA Constructors' World Championship trophy; the cabinet holds two similar small flared beakers next to Graham Hill's 1962 drivers' trophy. Matching that caption to one of the beakers is our own inference.",
+      "sourceIds": [
+        "commons-fangio-1955-cup",
+        "commons-fia-cups-buenos-aires",
+        "commons-brm-cabinet-1962"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "from": 1963,
+      "to": 1994,
+      "award": "Constructors' title (International Cup for F1 Manufacturers until 1980; World Constructors' Championship from 1981)",
+      "shape": "Unknown",
+      "description": "No reliable source or labelled photo was found for the constructors' award in this period, which includes all of Ferrari's 1964-1983 titles. ESPN says there was no official champion's trophy until one was commissioned in 1995, but the FIA cups photographed from the 1950s-60s contradict that for earlier years. Model this era as a clearly generic placeholder, not a reconstruction.",
+      "sourceIds": [
+        "espn-trophy-2025",
+        "commons-museo-ferrari-trophies"
+      ],
+      "confidence": "low"
+    },
+    {
+      "from": 1995,
+      "to": 2026,
+      "award": "FIA Formula One World Constructors' Championship trophy (perpetual)",
+      "shape": "Tall, trumpet-like flared vase on a narrow waist and a wide round foot; the body is faceted into vertical panels carrying one small enamel badge per champion year; a dark petal-like collar sits at the rim and at the foot, with chequered-flag detail at the waist.",
+      "material": "Silver with enamel badges and gold-coloured details (the published sterling silver, 24 ct gold and enamel spec is for the companion drivers' trophy by the same maker)",
+      "description": "Made by Richard Fox (Fox Silver) in 1995, the same year as the drivers' trophy. It shows the logos of every winning team, from the 1958 champion onwards, instead of signatures. Photos from 2012-2014 show this design; no source was found for later changes.",
+      "sourceIds": [
+        "espn-trophy-2025",
+        "motorsportcom-trophy-2025",
+        "commons-constructors-trophy-2012",
+        "commons-constructors-trophy-2014"
+      ],
+      "confidence": "high"
+    },
+    {
+      "from": 1995,
+      "to": 2026,
+      "award": "FIA Formula One World Drivers' Championship trophy (for context)",
+      "shape": "Tall flared silver vase with a gold spiral band winding up the body, a small globe emblem near the top, and a petal-like collar and wide round foot.",
+      "material": "Sterling silver, 24 ct gold and enamel; 525 mm tall, 4.7 kg",
+      "description": "Designed by Richard Fox and commissioned by Bernie Ecclestone in 1995. It carries facsimile signatures of the champions from 1950, with space up to 2050.",
+      "sourceIds": [
+        "espn-trophy-2025",
+        "motorsportcom-trophy-2025",
+        "goldsmiths-fox-silver",
+        "commons-drivers-trophy-london"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "dreamTeam": [
+    {
+      "name": "Jean Todt",
+      "role": "Team principal / head of the racing division (from 1 July 1993)",
+      "sourceIds": [
+        "wiki-jean-todt",
+        "f1com-schumacher-netflix-2021",
+        "rmsothebys-248f1-2024",
+        "ferraris-online-2000-2004",
+        "wiki-ross-brawn"
+      ]
+    },
+    {
+      "name": "Ross Brawn",
+      "role": "Technical director (joined late 1996 from Benetton)",
+      "sourceIds": [
+        "wiki-ross-brawn",
+        "f1com-schumacher-netflix-2021",
+        "rmsothebys-248f1-2024",
+        "ferraris-online-2000-2004"
+      ]
+    },
+    {
+      "name": "Rory Byrne",
+      "role": "Chief designer (from Benetton; replaced John Barnard)",
+      "sourceIds": [
+        "wiki-rory-byrne",
+        "f1com-schumacher-netflix-2021",
+        "rmsothebys-248f1-2024",
+        "ferraris-online-2000-2004",
+        "wiki-ross-brawn"
+      ]
+    },
+    {
+      "name": "Michael Schumacher",
+      "role": "Driver (1996-2006)",
+      "sourceIds": [
+        "wiki-scuderia-ferrari",
+        "f1com-schumacher-netflix-2021",
+        "rmsothebys-248f1-2024",
+        "wiki-ross-brawn"
+      ]
+    },
+    {
+      "name": "Paolo Martinelli",
+      "role": "Head of the engine department (1994-2006)",
+      "note": "Linked to the 'dream team' by Ferraris Online and by an ANSA headline cited on Wikipedia ('Ferrari dream team steps aside', 2006; the link is now dead). The formula1.com and RM Sotheby's lists do not name him.",
+      "sourceIds": [
+        "wiki-paolo-martinelli",
+        "ferraris-online-2000-2004",
+        "rmsothebys-248f1-2024"
+      ]
+    },
+    {
+      "name": "Luca di Montezemolo",
+      "role": "President of Ferrari (appointed November 1991; resigned 2014)",
+      "note": "Sources say he led the company in this era and appointed Todt. None of the sources checked explicitly names him as a member of the 'dream team'.",
+      "sourceIds": [
+        "wiki-luca-di-montezemolo",
+        "rmsothebys-248f1-2024"
+      ]
+    }
+  ],
+  "sources": {
+    "wiki-wcc-list": {
+      "title": "List of Formula One World Constructors' Champions",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/List_of_Formula_One_World_Constructors%27_Champions",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-scuderia-ferrari": {
+      "title": "Scuderia Ferrari",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
+      "accessedAt": "2026-09-25"
+    },
+    "f1com-ferrari-year-by-year": {
+      "title": "Ferrari - Year by Year",
+      "publisher": "Formula 1 (formula1.com)",
+      "url": "https://www.formula1.com/en/information/ferrari-year-by-year.61yfcjhl05vSlmNJB1SIJ0",
+      "accessedAt": "2026-09-25"
+    },
+    "ferrari-year-1961": {
+      "title": "1961 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1961",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1961",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1964": {
+      "title": "1964 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1964",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1964",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1975": {
+      "title": "1975 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1975",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1975",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1976": {
+      "title": "1976 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1976",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1976",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1977": {
+      "title": "1977 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1977",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1977",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1979": {
+      "title": "1979 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1979",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1979",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1982": {
+      "title": "1982 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1982",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1982",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1983": {
+      "title": "1983 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1983",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1983",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-1999": {
+      "title": "1999 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-1999",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-1999",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2000": {
+      "title": "2000 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2000",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2000",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2001": {
+      "title": "2001 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2001",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2001",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2002": {
+      "title": "2002 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2002",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2002",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2003": {
+      "title": "2003 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2003",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2003",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2004": {
+      "title": "2004 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2004",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2004",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2007": {
+      "title": "2007 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2007",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2007",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-year-2008": {
+      "title": "2008 | History of Scuderia Ferrari Formula 1",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/year-2008",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/year-2008",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-156-f1": {
+      "title": "Ferrari 156 F1 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/156-f1",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/156-f1",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-158-f1": {
+      "title": "Ferrari 158 F1 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/158-f1",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/158-f1",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-512-f1": {
+      "title": "Ferrari 512 F1 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/512-f1",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/512-f1",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-312-t": {
+      "title": "Ferrari 312 T (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/312-t",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-312-t2": {
+      "title": "Ferrari 312 T2 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t2",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/312-t2",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-312-t4": {
+      "title": "Ferrari 312 T4 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/312-t4",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2023/https://www.ferrari.com/en-EN/formula1/312-t4",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-126-c2": {
+      "title": "Ferrari 126 C2 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/126-c2",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/126-c2",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-126-c3": {
+      "title": "Ferrari 126 C3 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/126-c3",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/126-c3",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f399": {
+      "title": "Ferrari F399 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f399",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f399",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f1-2000": {
+      "title": "Ferrari F1-2000 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f1-2000",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f1-2000",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2001": {
+      "title": "Ferrari F2001 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2001",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2001",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2002": {
+      "title": "Ferrari F2002 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2002",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2002",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2003-ga": {
+      "title": "Ferrari F2003-GA (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2003-ga",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2003-ga",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2004": {
+      "title": "Ferrari F2004 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2004",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2004",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2007": {
+      "title": "Ferrari F2007 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2007",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2007",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "ferrari-car-f2008": {
+      "title": "Ferrari F2008 (single-seater page)",
+      "publisher": "Ferrari S.p.A. (ferrari.com)",
+      "url": "https://www.ferrari.com/en-EN/formula1/f2008",
+      "accessedAt": "2026-09-25",
+      "archiveUrl": "https://web.archive.org/web/2025/https://www.ferrari.com/en-EN/formula1/f2008",
+      "note": "Live page is script-rendered and blocks automated fetches; text was read from the Wayback Machine snapshot in archiveUrl."
+    },
+    "wiki-ferrari-156": {
+      "title": "Ferrari 156 F1",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_156_F1",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-158": {
+      "title": "Ferrari 158",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_158",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-312t": {
+      "title": "Ferrari 312T",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_312T",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-126c": {
+      "title": "Ferrari 126C",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_126C",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f399": {
+      "title": "Ferrari F399",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F399",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f1-2000": {
+      "title": "Ferrari F1-2000",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F1-2000",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2001": {
+      "title": "Ferrari F2001",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2001",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2002": {
+      "title": "Ferrari F2002",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2002",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2003-ga": {
+      "title": "Ferrari F2003-GA",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2003-GA",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2004": {
+      "title": "Ferrari F2004",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2004",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2007": {
+      "title": "Ferrari F2007",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2007",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ferrari-f2008": {
+      "title": "Ferrari F2008",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ferrari_F2008",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-carlo-chiti": {
+      "title": "Carlo Chiti",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Carlo_Chiti",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-mauro-forghieri": {
+      "title": "Mauro Forghieri",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mauro_Forghieri",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-harvey-postlethwaite": {
+      "title": "Harvey Postlethwaite",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Harvey_Postlethwaite",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-ross-brawn": {
+      "title": "Ross Brawn",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ross_Brawn",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-rory-byrne": {
+      "title": "Rory Byrne",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Rory_Byrne",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-paolo-martinelli": {
+      "title": "Paolo Martinelli (engineer)",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Paolo_Martinelli_%28engineer%29",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-jean-todt": {
+      "title": "Jean Todt",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Jean_Todt",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-luca-di-montezemolo": {
+      "title": "Luca di Montezemolo",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Luca_di_Montezemolo",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-daniele-audetto": {
+      "title": "Daniele Audetto",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Daniele_Audetto",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-marco-piccinini": {
+      "title": "Marco Piccinini",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Marco_Piccinini",
+      "accessedAt": "2026-09-25"
+    },
+    "wiki-stefano-domenicali": {
+      "title": "Stefano Domenicali",
+      "publisher": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stefano_Domenicali",
+      "accessedAt": "2026-09-25"
+    },
+    "motorsport-mag-2023-ferrari-bosses": {
+      "title": "Ferrari F1 bosses rarely last long in the job (February 2023 issue)",
+      "publisher": "Motor Sport Magazine",
+      "url": "https://www.motorsportmagazine.com/archive/article/february-2023/25/ferrari-f1-bosses-rarely-last-long-in-the-job/",
+      "accessedAt": "2026-09-25"
+    },
+    "motorsport-mag-2014-sporting-directors": {
+      "title": "Ferrari's sporting directors (Paul Fearnley, 2014, updated 2019)",
+      "publisher": "Motor Sport Magazine",
+      "url": "https://www.motorsportmagazine.com/articles/single-seaters/f1/ferraris-sporting-directors/",
+      "accessedAt": "2026-09-25"
+    },
+    "f1com-schumacher-netflix-2021": {
+      "title": "Netflix Michael Schumacher documentary: 8 of the biggest revelations (Greg Stuart, 15 Sep 2021)",
+      "publisher": "Formula 1 (formula1.com)",
+      "url": "https://www.formula1.com/en/latest/article/schumacher-8-of-the-biggest-revelations-from-netflixs-new-documentary-on-the.JrqwQM1VMaNcaxSb2YYMG",
+      "accessedAt": "2026-09-25"
+    },
+    "rmsothebys-248f1-2024": {
+      "title": "The Ferrari That Marked the End of a Dynasty (1 Nov 2024)",
+      "publisher": "RM Sotheby's",
+      "url": "https://rmsothebys.com/all-stories-videos/the-ferrari-that-marked-the-end-of-a-dynasty/",
+      "accessedAt": "2026-09-25"
+    },
+    "ferraris-online-2000-2004": {
+      "title": "Ferrari F1, #8, 2000-2004: The Michael Schumacher Championship Years",
+      "publisher": "Ferraris Online",
+      "url": "https://ferraris-online.com/ferrari-f1-8-2000-2004-the-michael-schumacher-championship-years/",
+      "accessedAt": "2026-09-25"
+    },
+    "motorsportcom-trophy-2025": {
+      "title": "This is what Lando Norris wins for claiming his first F1 drivers' championship (Owen Bellwood, Dec 2025)",
+      "publisher": "Motorsport.com",
+      "url": "https://www.motorsport.com/f1/news/this-is-what-lando-norris-will-win-for-taking-the-f1-drivers-championship/10783173/",
+      "accessedAt": "2026-09-25"
+    },
+    "espn-trophy-2025": {
+      "title": "Lando Norris: Why new F1 champion is lifting his trophy in Uzbekistan",
+      "publisher": "ESPN",
+      "url": "https://www.espn.com/f1/story/_/id/47232840/where-lando-norris-f1-championship-title-2025-trophy-explained-why",
+      "accessedAt": "2026-09-25"
+    },
+    "goldsmiths-fox-silver": {
+      "title": "Silver in the Fast Lane - 40 Years of Fox Silver",
+      "publisher": "The Goldsmiths' Company",
+      "url": "https://www.thegoldsmiths.co.uk/collection-news/silver-in-the-fast-lane",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-brm-cabinet-1962": {
+      "title": "File:BRM Trophy Cabinet at Formula 1 Exhibition, London.jpg (caption lists BRM's 1962 FIA Constructors' World Championship trophy)",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:BRM_Trophy_Cabinet_at_Formula_1_Exhibition,_London.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-fangio-1955-cup": {
+      "title": "File:Formula One drivers' world championship cup 1955 Juan Manuel Fangio Mercedes-Benz Museum.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Formula_One_drivers%27_world_championship_cup_1955_Juan_Manuel_Fangio_Mercedes-Benz_Museum.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-fia-cups-buenos-aires": {
+      "title": "File:Museo del automovilismo1.jpg (FIA world championship cups of J. M. Fangio on display)",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Museo_del_automovilismo1.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-constructors-trophy-2012": {
+      "title": "File:Formula One constructors' championship trophy 2012-2013 Red Bull Racing.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Formula_One_constructors%27_championship_trophy_2012-2013_Red_Bull_Racing.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-constructors-trophy-2014": {
+      "title": "File:MotorExpo 2014 MMB 07 Formula One Constructors' Trophy.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:MotorExpo_2014_MMB_07_Formula_One_Constructors%27_Trophy.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-drivers-trophy-london": {
+      "title": "File:World Drivers' Championship Trophy at Formula 1 Exhibition, London.jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:World_Drivers%27_Championship_Trophy_at_Formula_1_Exhibition,_London.jpg",
+      "accessedAt": "2026-09-25"
+    },
+    "commons-museo-ferrari-trophies": {
+      "title": "Category:Trophies in the Museo Ferrari",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/Category:Trophies_in_the_Museo_Ferrari",
+      "accessedAt": "2026-09-25"
+    }
+  }
+}

@@ -1,6 +1,10 @@
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { dreamTeam, legacySource, longestRun, titles, useLegacyStore } from "./legacy";
 import { inWords } from "../hall/champions";
+import { trophyCaption, trophyStyleFor } from "../../3d/rooms/Trophy";
+
+/** "Sporting director and F1 team principal, 1978-1988" → first clause only. */
+const shortRole = (role: string) => role.split(/[,(]/)[0].trim();
 
 // The Legacy room: all constructors' titles, with the story of each season.
 export default function LegacyPanel({
@@ -56,7 +60,9 @@ export default function LegacyPanel({
               </p>
             </div>
           </div>
+          <p className="legacy-award">{t.award}</p>
           {t.note && <p className="legacy-note">{t.note}</p>}
+          {t.carNote && <p className="legacy-note legacy-carnote">{t.carNote}</p>}
           <dl>
             <dt>Drivers</dt>
             <dd>
@@ -76,25 +82,44 @@ export default function LegacyPanel({
             </dd>
             {t.teamPrincipal && (
               <>
-                <dt>{t.teamPrincipal.role}</dt>
-                <dd>{t.teamPrincipal.name}</dd>
+                <dt>Team</dt>
+                <dd>
+                  {t.teamPrincipal.name}
+                  <span className="legacy-role"> · {shortRole(t.teamPrincipal.role)}</span>
+                </dd>
               </>
             )}
             {t.technicalLeads.length > 0 && (
               <>
                 <dt>Technical</dt>
-                <dd>{t.technicalLeads.map((p) => `${p.name} (${p.role})`).join(", ")}</dd>
+                <dd>
+                  {t.technicalLeads.map((p, i) => (
+                    <span key={p.name}>
+                      {i > 0 && ", "}
+                      {p.name}
+                      <span className="legacy-role"> · {shortRole(p.role)}</span>
+                    </span>
+                  ))}
+                </dd>
               </>
             )}
           </dl>
           {inDreamTeamEra && dreamTeam.length > 0 && (
             <div className="legacy-dream">
               <span className="eyebrow">THE DREAM TEAM</span>
-              <p>{dreamTeam.map((p) => `${p.name} · ${p.role}`).join("  /  ")}</p>
+              <ul>
+                {dreamTeam.map((p) => (
+                  <li key={p.name}>
+                    <strong>{p.name}</strong> {shortRole(p.role)}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
+          <p className="fine-print">{trophyCaption[trophyStyleFor(t.year, "constructors")]}</p>
           <div className="legacy-sources">
-            {t.sources.map((s) => (
+            {/* One link per publisher; the full list is in constructorsLegacy.json. */}
+            {[...new Map(t.sources.map((x) => [x.publisher, x])).values()].map((s) => (
               <a key={s.url} href={s.url} target="_blank" rel="noreferrer">
                 {s.publisher} <ExternalLink size={11} />
               </a>

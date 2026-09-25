@@ -6,7 +6,7 @@ import { useCanvasTexture } from "../bays/BayBoard";
 import { loadBoardFonts } from "../bays/boardArt";
 import { LEGACY_X } from "../camera/poses";
 import Trophy, { trophyStyleFor } from "./Trophy";
-import { longestRun, titles, trophyEras, useLegacyStore } from "../../features/legacy/legacy";
+import { longestRun, titles, useLegacyStore } from "../../features/legacy/legacy";
 import { inWords } from "../../features/hall/champions";
 
 /** Plinth position for the i-th title: the eras before 1999 stand on a raised
@@ -163,7 +163,7 @@ function Plinth({ index }: { index: number }) {
     paint();
     loadBoardFonts().then(paint);
   }, [plate, title.year, invalidate]);
-  const style = trophyStyleFor(title.year, trophyEras);
+  const style = trophyStyleFor(title.year, "constructors");
   const lit = selected || hover;
   return (
     <group

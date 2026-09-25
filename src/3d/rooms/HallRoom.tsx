@@ -7,7 +7,6 @@ import { useCanvasTexture } from "../bays/BayBoard";
 import { loadBoardFonts } from "../bays/boardArt";
 import { studioEnvironment } from "../studio";
 import Trophy, { trophyStyleFor } from "./Trophy";
-import { trophyEras } from "../../features/legacy/legacy";
 import { HALL_X } from "../camera/poses";
 import { helmetDesignFor } from "../../data/helmetDesigns";
 import { champions, inWords, titleCount } from "../../features/hall/champions";
@@ -154,7 +153,7 @@ function Station({
         const z = -0.12 - rank * 0.14;
         return (
           <group key={t.year} position={[n === 1 ? -0.45 : x, 1.01, n === 1 ? -0.1 : z]} scale={0.95 - rank * 0.08}>
-            <Trophy style={trophyStyleFor(t.year, trophyEras)} />
+            <Trophy style={trophyStyleFor(t.year, "drivers")} />
           </group>
         );
       })}

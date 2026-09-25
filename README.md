@@ -49,7 +49,7 @@ The corridor ends in a gilded room with a station for every Ferrari drivers' wor
 
 ## The Legacy room
 
-Beyond the Hall of Champions, a red-lacquered room under a gilded "16" holds every constructors' championship (`src/features/legacy`). Points, wins and the drivers of each title season come from `scripts/fetch-constructors.mjs` (Jolpica, standings from 1958). Cars, team leadership, notes and the era trophy styles come from the researched `constructorsLegacy.json`, with sources. Trophies in both rooms change shape by era (cup, lidded goblet, modern spire); they are era-inspired, not replicas.
+Beyond the Hall of Champions, a red-lacquered room under a gilded "16" holds every constructors' championship (`src/features/legacy`). Points, wins and the drivers of each title season come from `scripts/fetch-constructors.mjs` (Jolpica, standings from 1958). Cars, team leadership, notes and the era trophy styles come from the researched `constructorsLegacy.json`, with sources. Trophies follow the research by era: flared silver FIA beakers to 1962; a deliberately generic cup for 1963–94, where no reliable record of the award was found; and from 1995 the tall silver constructors' vase and the drivers' trophy with its gold spiral. They are simplified interpretations, not replicas, and each season says which applies. The dream-team panel lists only the members the sources name explicitly.
 
 ## Room music
 

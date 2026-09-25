@@ -38,8 +38,8 @@ export const poses = {
   /** The Hall of Champions from its entrance. */
   hall: (): CameraPose => ({
     // Off-centre, so the whole arc sits clear of the panel on the left.
-    position: [HALL_X - 9.5, 4.6, 13.6],
-    target: [HALL_X - 2.4, 1.6, -1.6],
+    position: [HALL_X - 9, 4.8, 15.6],
+    target: [HALL_X - 1.9, 1.5, -1.6],
   }),
   /** Facing the Evolution room's turntable and year wall. */
   evolution: (): CameraPose => ({
