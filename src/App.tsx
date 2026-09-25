@@ -10,6 +10,9 @@ import {
   RotateCcw,
   Maximize2,
   Minimize2,
+  Volume2,
+  VolumeX,
+  Power,
   Focus,
   X,
   BookOpen,
@@ -32,6 +35,17 @@ import { parts } from "./data/engineering";
 import Modal from "./components/Modal";
 import SceneBoundary from "./components/SceneBoundary";
 import { usePreferences } from "./hooks/usePreferences";
+import { useSoundStore } from "./audio/soundStore";
+import {
+  playEngine,
+  playServo,
+  playTransition,
+  startAmbience,
+  stopAmbience,
+  stopEngine,
+  unlockAudio,
+} from "./audio/soundEngine";
+import { engineProfile } from "./audio/engineProfile";
 import { getPortrait } from "./data/media";
 import { carSourcesFor, resolveCar } from "./data/cars";
 import { helmetDesignFor } from "./data/helmetDesigns";
@@ -101,6 +115,9 @@ function App() {
     [answer, setAnswer] = useState(""),
     [focusMode, setFocusMode] = useState(false);
   const prefs = usePreferences();
+  const soundOn = useSoundStore((s) => s.enabled);
+  const toggleSound = useSoundStore((s) => s.toggle);
+  const [engineCaption, setEngineCaption] = useState<string | null>(null);
   const driver = drivers[index];
   const history = getHistory(driver.id);
   const totals = getTotals(driver.id);
@@ -137,6 +154,44 @@ function App() {
     if (section === "engineering" && part && !availableParts.some((p) => p.id === part))
       setPart(availableParts[0]?.id ?? null);
   }, [section, part, availableParts, setPart]);
+  // Browsers allow audio only after a gesture; the first click or key starts it.
+  useEffect(() => {
+    const unlock = () => unlockAudio();
+    window.addEventListener("pointerdown", unlock);
+    window.addEventListener("keydown", unlock);
+    return () => {
+      window.removeEventListener("pointerdown", unlock);
+      window.removeEventListener("keydown", unlock);
+    };
+  }, []);
+  useEffect(() => {
+    if (entered) startAmbience();
+    else stopAmbience();
+  }, [entered]);
+  const firstBay = useRef(true);
+  useEffect(() => {
+    if (firstBay.current) {
+      firstBay.current = false;
+      return;
+    }
+    stopEngine();
+    setEngineCaption(null);
+    playTransition();
+  }, [index]);
+  const firstExplode = useRef(true);
+  useEffect(() => {
+    if (firstExplode.current) {
+      firstExplode.current = false;
+      return;
+    }
+    playServo(exploded);
+  }, [exploded]);
+  function startEngine() {
+    unlockAudio();
+    const profile = engineProfile(car.officialName, year);
+    const seconds = playEngine(profile, () => setEngineCaption(null));
+    if (seconds) setEngineCaption(`${car.officialName ?? "Engine"} · ${profile.label}`);
+  }
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -214,6 +269,15 @@ function App() {
             The project <ArrowUpRight size={13} />
           </button>
         </nav>
+        <button
+          className="sound-toggle"
+          aria-pressed={soundOn}
+          aria-label={soundOn ? "Turn sound off" : "Turn sound on"}
+          title={soundOn ? "Sound on" : "Sound off"}
+          onClick={toggleSound}
+        >
+          {soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
+        </button>
         <button
           className="settings-button"
           aria-label="Experience settings"
@@ -466,6 +530,12 @@ function App() {
                 <h2>{car.officialName ?? car.spec.familyLabel}</h2>
                 <span>{car.accuracyLabel}</span>
               </div>
+              {engineCaption && (
+                <p className="engine-caption" role="status">
+                  <Volume2 size={14} /> {engineCaption} · synthesised impression,
+                  not a recording
+                </p>
+              )}
               <div className="scene-tools">
                 <span>
                   <Move size={14} />
@@ -475,6 +545,16 @@ function App() {
                       ? "DRAG TO ROTATE · PINCH TO ZOOM"
                       : "DRAG TO ORBIT · SCROLL TO ZOOM"}
                 </span>
+                <button
+                  className="engine-button"
+                  onClick={engineCaption ? () => stopEngine() : startEngine}
+                  aria-pressed={!!engineCaption}
+                  disabled={!soundOn}
+                  title={soundOn ? undefined : "Turn sound on to hear the engine"}
+                >
+                  <Power size={15} />
+                  {engineCaption ? "Stop engine" : "Start engine"}
+                </button>
                 <button
                   className="icon-button"
                   aria-label="Reset car view"
@@ -734,6 +814,17 @@ function App() {
                 {prefs.quality === q.id && <Check size={20} />}
               </button>
             ))}
+            <button className={soundOn ? "selected" : ""} onClick={toggleSound}>
+              {soundOn ? <Volume2 size={23} /> : <VolumeX size={23} />}
+              <div>
+                <h3>Sound</h3>
+                <p>
+                  Quiet garage ambience, transition cues and synthesised engine
+                  notes. On by default; your choice is remembered.
+                </p>
+              </div>
+              <span className="toggle-status">{soundOn ? "ON" : "OFF"}</span>
+            </button>
             <button
               className={prefs.flat ? "selected" : ""}
               onClick={() => prefs.setFlat(!prefs.flat)}

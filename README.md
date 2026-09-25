@@ -39,6 +39,10 @@ The production files are generated in `dist/`. No database, API key, GPU compute
 
 The additional fourteen drivers are archive exhibits, not bespoke editorial experiences to the depth of Schumacher. Pole totals remain an explicit dash where not yet independently sourced. The garage is an orbit/pan museum prototype rather than a first-person walking simulator. There are no live 2026 statistics.
 
+## Sound
+
+Sound is on by default and can be switched off in the header or settings; the choice is remembered on the device. Browsers start audio only after the first click or key press. Everything is synthesised with the Web Audio API (`src/audio`): a quiet garage room tone, soft transition and servo cues, and an engine note per car whose firing rhythm follows the sourced engine layout (cylinder count, turbo, hybrid). Engine notes are captioned as synthesised impressions, not recordings. No audio files are downloaded.
+
 ## Architecture
 
 ```text

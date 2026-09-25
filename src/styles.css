@@ -2727,3 +2727,75 @@ footer > button {
 .data-note {
   text-align: left;
 }
+/* ------------------------------------------------------------------
+   Sound (header toggle, engine button, caption)
+   ------------------------------------------------------------------ */
+.sound-toggle {
+  width: var(--hit);
+  height: var(--hit);
+  display: grid;
+  place-items: center;
+  color: var(--text-2);
+  margin-left: auto;
+}
+.sound-toggle[aria-pressed="true"] {
+  color: var(--text-1);
+}
+.header nav + .sound-toggle {
+  margin-left: 0;
+}
+.engine-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--hit);
+  padding: 0 14px;
+  border: 1px solid #ffffff24;
+  font-size: var(--fs-sm);
+  color: var(--text-1);
+  background: #141619b3;
+}
+.engine-button svg {
+  color: var(--red);
+}
+.engine-button:hover {
+  border-color: var(--red);
+}
+.engine-button[aria-pressed="true"] {
+  border-color: var(--red);
+  background: #3a1216;
+}
+.engine-button:disabled {
+  opacity: 0.4;
+}
+.engine-caption {
+  position: absolute;
+  right: 6.7%;
+  bottom: 74px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  animation: arrive 0.3s ease both;
+}
+.engine-caption svg {
+  color: var(--red);
+}
+@media (max-width: 760px) {
+  .engine-caption {
+    position: static;
+    order: 5;
+    margin: 8px 6% 0;
+  }
+}
+.engine-button {
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .engine-button {
+    padding: 0 10px;
+    font-size: var(--fs-xs);
+  }
+}
