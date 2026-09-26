@@ -1,21 +1,14 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { useFrame, useThree } from "@react-three/fiber";
+import { useEffect, useMemo, useState } from "react";
+import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
-import {
-  AdditiveBlending,
-  CanvasTexture,
-  DoubleSide,
-  MeshStandardMaterial,
-  SRGBColorSpace,
-} from "three";
-import type { Group, Texture } from "three";
-import { loadImage } from "../bays/boardArt";
-import { teamShieldSrc } from "../../data/media";
+import { MeshStandardMaterial } from "three";
 import Helmet from "../helmets/Helmet";
 import { useCanvasTexture } from "../bays/BayBoard";
 import { loadBoardFonts } from "../bays/boardArt";
 import { studioEnvironment } from "../studio";
 import Trophy, { trophyStyleFor } from "./Trophy";
+import ShieldBeacon from "./ShieldBeacon";
+import { carpetTexture } from "./carpet";
 import { HALL_X } from "../camera/poses";
 import { helmetDesignFor } from "../../data/helmetDesigns";
 import {
@@ -306,6 +299,22 @@ export default function HallRoom({
   }, [title, invalidate]);
   useEffect(() => () => void (document.body.style.cursor = ""), []);
 
+  const carpet = useMemo(
+    () =>
+      carpetTexture({
+        width: 25,
+        depth: 12.45,
+        base: "#1a1511",
+        runner: "#0d0b0a",
+        runnerWidth: 2.6,
+        focus: { x: BEACON.x - HALL_X, z: BEACON.z - 1 },
+        focusRadius: 1.9,
+        line: "#b8924c",
+      }),
+    [],
+  );
+  useEffect(() => () => carpet.dispose(), [carpet]);
+
   const x = HALL_X;
   return (
     <group>
@@ -328,6 +337,11 @@ export default function HallRoom({
           />
         </mesh>
       ))}
+      {/* A dark carpet with a runner from the entrance to the shield. */}
+      <mesh position={[x, 0.004, 1]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[25, 12.45]} />
+        <meshStandardMaterial map={carpet} roughness={1} metalness={0} />
+      </mesh>
       <mesh position={[x, 0.012, 0.5]} rotation={[-Math.PI / 2, 0, 0]}>
         <ringGeometry
           args={[8.2, 8.26, 128, 1, Math.PI * 1.1, Math.PI * 0.8]}
@@ -339,7 +353,7 @@ export default function HallRoom({
         <meshBasicMaterial color="#b8924c" />
       </mesh>
       {active && <Stations onSelect={onSelect} />}
-      {active && <ShieldBeacon />}
+      {active && <ShieldBeacon x={BEACON.x} z={BEACON.z} />}
       <pointLight
         position={[x, 5.5, 3]}
         intensity={active ? 40 : 0}
@@ -384,122 +398,5 @@ function Stations({ onSelect }: { onSelect: (c: Champion) => void }) {
   );
 }
 
-/** Floor position of the Ferrari shield, in front of the stations. */
-export const BEACON = { x: HALL_X - 3.3, z: 6.6 };
-
-// The Ferrari shield floats and turns slowly above a lit disc at the centre of
-// the Hall. The shield artwork is the owner's local copy (git-ignored).
-function ShieldBeacon() {
-  const { invalidate } = useThree();
-  const spin = useRef<Group>(null);
-  const [shield, setShield] = useState<Texture | null>(null);
-  useEffect(() => {
-    if (!teamShieldSrc) return;
-    let live = true;
-    loadImage(teamShieldSrc).then((img) => {
-      if (!img || !live) return;
-      const c = document.createElement("canvas");
-      c.width = img.width;
-      c.height = img.height;
-      c.getContext("2d")!.drawImage(img, 0, 0);
-      const t = new CanvasTexture(c);
-      t.colorSpace = SRGBColorSpace;
-      t.anisotropy = 4;
-      setShield(t);
-    });
-    return () => {
-      live = false;
-    };
-  }, []);
-  useEffect(() => () => shield?.dispose(), [shield]);
-  // A soft golden pool of light on the floor.
-  const pool = useMemo(() => {
-    const c = document.createElement("canvas");
-    c.width = c.height = 256;
-    const ctx = c.getContext("2d")!;
-    const g = ctx.createRadialGradient(128, 128, 4, 128, 128, 128);
-    g.addColorStop(0, "rgba(255,210,130,0.75)");
-    g.addColorStop(0.4, "rgba(255,190,100,0.22)");
-    g.addColorStop(1, "rgba(255,190,100,0)");
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, 256, 256);
-    const t = new CanvasTexture(c);
-    t.colorSpace = SRGBColorSpace;
-    return t;
-  }, []);
-  useEffect(() => () => pool.dispose(), [pool]);
-  const reduced = useMemo(
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-    [],
-  );
-  useFrame(({ clock }) => {
-    const g = spin.current;
-    if (!g) return;
-    const t = clock.getElapsedTime();
-    if (!reduced) {
-      g.rotation.y = t * 0.6;
-      g.position.y = 1.2 + Math.sin(t * 1.1) * 0.07;
-    }
-    invalidate();
-  });
-  const aspect = shield
-    ? (shield.image as HTMLCanvasElement).width /
-      (shield.image as HTMLCanvasElement).height
-    : 0.75;
-  const h = 1.05;
-  return (
-    <group position={[BEACON.x, 0, BEACON.z]}>
-      <mesh position={[0, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[3.6, 3.6]} />
-        <meshBasicMaterial
-          map={pool}
-          transparent
-          blending={AdditiveBlending}
-          depthWrite={false}
-          toneMapped={false}
-        />
-      </mesh>
-      <mesh position={[0, 0.05, 0]}>
-        <cylinderGeometry args={[0.95, 1.05, 0.1, 64]} />
-        <meshStandardMaterial color="#141214" metalness={0.6} roughness={0.3} />
-      </mesh>
-      <mesh position={[0, 0.101, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <ringGeometry args={[0.86, 0.92, 96]} />
-        <meshBasicMaterial color="#d9b86e" toneMapped={false} />
-      </mesh>
-      {/* A faint column of light rising from the plinth. */}
-      <mesh position={[0, 1.15, 0]}>
-        <cylinderGeometry args={[0.5, 0.85, 2.2, 48, 1, true]} />
-        <meshBasicMaterial
-          color="#ffcf8a"
-          transparent
-          opacity={0.07}
-          blending={AdditiveBlending}
-          depthWrite={false}
-          side={DoubleSide}
-          toneMapped={false}
-        />
-      </mesh>
-      {shield && (
-        <group ref={spin} position={[0, 1.2, 0]}>
-          <mesh>
-            <planeGeometry args={[h * aspect, h]} />
-            <meshBasicMaterial
-              map={shield}
-              transparent
-              alphaTest={0.05}
-              side={DoubleSide}
-              toneMapped={false}
-            />
-          </mesh>
-        </group>
-      )}
-      <pointLight
-        position={[0, 2.6, 1.2]}
-        intensity={10}
-        distance={6}
-        color="#ffe2b0"
-      />
-    </group>
-  );
-}
+/** Floor position of the Ferrari shield: the centre of the Hall floor. */
+export const BEACON = { x: HALL_X, z: 3 };

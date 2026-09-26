@@ -118,8 +118,15 @@ export function stopAmbience() {
   setTimeout(a.stop, 1600);
 }
 
-/** Lower the room tone while an engine runs. */
+let onDuck: ((on: boolean) => void) | null = null;
+/** Lets the music module step back while an engine runs. */
+export function setDuckListener(fn: (on: boolean) => void) {
+  onDuck = fn;
+}
+
+/** Lower the room tone and music while an engine runs. */
 function duckWhile(on: boolean) {
+  onDuck?.(on);
   if (!ctx || !ambience) return;
   const g = ambience.gain.gain;
   g.cancelScheduledValues(ctx.currentTime);

@@ -32,19 +32,22 @@ export const poses = {
   }),
   /** The Legacy room from its entrance, framed right of the panel. */
   legacy: (): CameraPose => ({
-    position: [LEGACY_X - 7.5, 3.6, 12.5],
-    target: [LEGACY_X - 1.2, 2.6, -2.4],
+    // High enough that the floating shield sits below the trophies.
+    position: [LEGACY_X - 7.5, 5.6, 12.5],
+    target: [LEGACY_X - 1.2, 1.9, -2.4],
   }),
   /** Close on one constructors' trophy. */
   legacyTrophy: (p: { x: number; y: number; z: number }): CameraPose => ({
-    position: [p.x - 1.9, p.y + 2.1, p.z + 4.2],
+    // The front row is studied from closer in, ahead of the floating shield.
+    position: [p.x - 1.9, p.y + 2.1, p.z + (p.y > 0 ? 4.2 : 3.4)],
     target: [p.x + 0.5, p.y + 1.3, p.z],
   }),
   /** The Hall of Champions from its entrance. */
   hall: (): CameraPose => ({
-    // Off-centre, so the whole arc sits clear of the panel on the left.
-    position: [HALL_X - 9, 4.8, 15.6],
-    target: [HALL_X - 1.9, 1.5, -1.6],
+    // Off-centre, so the whole arc sits clear of the panel on the left; high
+    // enough that the shield on the floor sits below the plaques.
+    position: [HALL_X - 8.5, 5.4, 15.8],
+    target: [HALL_X - 1.6, 1.2, -1.2],
   }),
   /** Facing the Evolution room's turntable and year wall. */
   evolution: (): CameraPose => ({
@@ -90,3 +93,23 @@ export const poses = {
     );
   },
 };
+
+export interface RoomBounds {
+  min: Vec3;
+  max: Vec3;
+}
+
+/** Where the visitor may take the camera in each room: inside its walls, in
+ * front of its backdrop and below the top of the walls. */
+export function roomBounds(room: "garage" | "evolution" | "hall" | "legacy", bay: number): RoomBounds {
+  switch (room) {
+    case "evolution":
+      return { min: [EVOLUTION_X - 10.5, 0.35, -3.3], max: [EVOLUTION_X + 5.6, 4.6, 12.5] };
+    case "hall":
+      return { min: [HALL_X - 11.9, 0.35, -4.5], max: [HALL_X + 11.9, 5.6, 17.5] };
+    case "legacy":
+      return { min: [LEGACY_X - 12.3, 0.35, -5.8], max: [LEGACY_X + 12.3, 7.4, 15] };
+    default:
+      return { min: [bayX(bay) - 8.5, 0.35, -3], max: [bayX(bay) + 8.5, 4.9, 14] };
+  }
+}

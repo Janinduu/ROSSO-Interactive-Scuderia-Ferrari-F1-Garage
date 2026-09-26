@@ -1,10 +1,10 @@
-import { audioOutput, setUnlockListener } from "./soundEngine";
+import { audioOutput, setDuckListener, setUnlockListener } from "./soundEngine";
 
 // Generative ambient music for the rooms: slow pad chords, a soft bell melody
 // and a synthetic reverb. Nothing is downloaded; each visit plays a slightly
 // different arrangement of the same progression.
 
-export type Theme = "hall" | "legacy" | "race";
+export type Theme = "garage" | "hall" | "legacy" | "race";
 
 interface ThemeDef {
   /** Chords as MIDI note numbers, lowest first. */
@@ -17,9 +17,34 @@ interface ThemeDef {
   /** Lowpass cutoff for the pad: lower is warmer. */
   warmth: number;
   pulse: boolean;
+  /** Pad oscillator: sawtooth is rich, triangle is smooth. */
+  wave?: OscillatorType;
+  /** A soft electric-piano arpeggio on every beat. */
+  keys?: boolean;
+  /** A very quiet shaker on the off-beats. */
+  shaker?: boolean;
 }
 
 const themes: Record<Theme, ThemeDef> = {
+  // The garage: calm and smooth, a slow jazzy progression in F with a soft
+  // electric piano, like a quiet workshop late at night.
+  garage: {
+    chords: [
+      [41, 57, 60, 64, 67], // Fmaj9
+      [40, 55, 59, 62, 64], // Em7
+      [38, 53, 57, 60, 64], // Dm9
+      [36, 52, 55, 59, 62], // Cmaj9
+    ],
+    secondsPerChord: 6.4,
+    melody: [],
+    padLevel: 0.032,
+    bass: true,
+    warmth: 900,
+    pulse: false,
+    wave: "triangle",
+    keys: true,
+    shaker: true,
+  },
   // Calm and warm: D major, gently resolving.
   hall: {
     chords: [
@@ -81,7 +106,16 @@ function reverb(c: AudioContext, seconds = 3.6) {
   return conv;
 }
 
-let current: { theme: Theme; stop: () => void } | null = null;
+let noise: AudioBuffer | null = null;
+function shakerNoise(c: AudioContext) {
+  if (noise && noise.sampleRate === c.sampleRate) return noise;
+  noise = c.createBuffer(1, Math.floor(c.sampleRate * 0.12), c.sampleRate);
+  const d = noise.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  return noise;
+}
+
+let current: { theme: Theme; stop: () => void; duck: (on: boolean) => void } | null = null;
 let pending: Theme | null = null;
 
 /** Start a room's music (or keep it if already playing). */
@@ -128,7 +162,7 @@ export function startMusic(theme: Theme) {
       // Two slightly detuned voices per note make the pad breathe.
       for (const detune of [-7, 6]) {
         const o = c.createOscillator();
-        o.type = i === 0 ? "sine" : "sawtooth";
+        o.type = i === 0 ? "sine" : (def.wave ?? "sawtooth");
         o.frequency.value = hz(n);
         o.detune.value = detune;
         const g = c.createGain();
@@ -154,8 +188,50 @@ export function startMusic(theme: Theme) {
         o.start(t0);
         o.stop(t0 + 1.7);
       }
+    // Electric piano: one chord tone per beat, rising and falling, with the
+    // odd beat left out so it never feels mechanical.
+    if (def.keys) {
+      const beat = dur / 8;
+      const upper = notes.slice(1);
+      const order = [0, 1, 2, 3, 2, 1, 3, 2];
+      order.forEach((k, b) => {
+        if (b > 0 && Math.random() < 0.22) return;
+        const t0 = at + b * beat + (Math.random() - 0.5) * 0.03;
+        const n = upper[k % upper.length] + 12;
+        for (const [ratio, level, decay] of [[1, 0.03, 2.2], [2, 0.012, 0.5], [3.01, 0.004, 0.25]] as const) {
+          const o = c.createOscillator();
+          o.type = "sine";
+          o.frequency.value = hz(n) * ratio;
+          const g = c.createGain();
+          g.gain.setValueAtTime(0, t0);
+          g.gain.linearRampToValueAtTime(level, t0 + 0.006);
+          g.gain.exponentialRampToValueAtTime(0.0001, t0 + decay);
+          o.connect(g).connect(bus);
+          o.start(t0);
+          o.stop(t0 + decay + 0.05);
+        }
+      });
+    }
+    if (def.shaker) {
+      const beat = dur / 8;
+      for (let b = 0; b < 8; b++) {
+        const t0 = at + b * beat + beat / 2;
+        const src = c.createBufferSource();
+        src.buffer = shakerNoise(c);
+        const hp = c.createBiquadFilter();
+        hp.type = "highpass";
+        hp.frequency.value = 6500;
+        const g = c.createGain();
+        g.gain.setValueAtTime(0, t0);
+        g.gain.linearRampToValueAtTime(b % 2 ? 0.01 : 0.006, t0 + 0.01);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.09);
+        src.connect(hp).connect(g).connect(bus);
+        src.start(t0);
+        src.stop(t0 + 0.1);
+      }
+    }
     // Two or three bell notes over each chord, never quite the same.
-    const count = 2 + Math.floor(Math.random() * 2);
+    const count = def.melody.length ? 2 + Math.floor(Math.random() * 2) : 0;
     for (let k = 0; k < count; k++) {
       const t0 = at + 1 + (k * dur) / count + Math.random() * 0.8;
       const n = def.melody[Math.floor(Math.random() * def.melody.length)];
@@ -188,6 +264,11 @@ export function startMusic(theme: Theme) {
 
   current = {
     theme,
+    // Music steps back while an engine runs.
+    duck: (on) => {
+      bus.gain.cancelScheduledValues(c.currentTime);
+      bus.gain.setTargetAtTime(on ? 0.2 : 1, c.currentTime, on ? 0.15 : 1.2);
+    },
     stop: () => {
       window.clearInterval(timer);
       bus.gain.cancelScheduledValues(c.currentTime);
@@ -213,3 +294,4 @@ export function resumePendingMusic() {
 
 // Music waiting for the first gesture starts once audio is unlocked.
 setUnlockListener(resumePendingMusic);
+setDuckListener((on) => current?.duck(on));

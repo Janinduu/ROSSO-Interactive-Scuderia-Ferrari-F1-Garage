@@ -4,9 +4,12 @@ import { OrbitControls } from "@react-three/drei";
 import { Vector3 } from "three";
 import type { OrbitControls as OrbitType } from "three-stdlib";
 import { useCameraStore } from "./cameraStore";
+import type { RoomBounds } from "./poses";
 
 const MIN_DISTANCE = 4;
 const MAX_DISTANCE = 12;
+/** How far round the visitor may swing from straight in front of the room. */
+const MAX_AZIMUTH = 1.35;
 const easeInOutCubic = (t: number) =>
   t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2;
 
@@ -17,7 +20,10 @@ interface Transition {
   toPosition: Vector3;
   toTarget: Vector3;
   start: number;
+  /** Frames rendered before the clock starts (absorbs a new car being built). */
+  primed: number;
   duration: number;
+  onStart?: () => void;
 }
 
 // The single owner of camera motion (spec §17). It eases between requested
@@ -27,10 +33,13 @@ export default function CameraDirector({
   enabled,
   enablePan,
   reduced,
+  bounds,
 }: {
   enabled: boolean;
   enablePan: boolean;
   reduced: boolean;
+  /** Keeps the visitor inside the room. */
+  bounds: RoomBounds | null;
 }) {
   const controls = useRef<OrbitType>(null);
   const transition = useRef<Transition | null>(null);
@@ -65,7 +74,9 @@ export default function CameraDirector({
       toPosition,
       toTarget,
       start: -1,
+      primed: 0,
       duration,
+      onStart: options.onStart,
     };
     invalidate();
     // Only a new request starts a transition; pose/options arrive with it.
@@ -74,9 +85,24 @@ export default function CameraDirector({
   useFrame(() => {
     const move = transition.current;
     const orbit = controls.current;
-    if (!move || !orbit) return;
+    if (!orbit) return;
+    if (!move) {
+      if (bounds) clampToRoom();
+      return;
+    }
+    // Hold the first frame: anything new in the scene (a car, its textures)
+    // is built and uploaded there, and the glide then starts cleanly with its
+    // sound instead of jumping ahead.
+    if (move.start < 0 && move.primed < 1 && move.duration > 0) {
+      move.primed++;
+      invalidate();
+      return;
+    }
     const now = performance.now();
-    if (move.start < 0) move.start = now;
+    if (move.start < 0) {
+      move.start = now;
+      move.onStart?.();
+    }
     const t = move.duration <= 0 ? 1 : Math.min(1, (now - move.start) / move.duration);
     const eased = easeInOutCubic(t);
     camera.position.lerpVectors(move.fromPosition, move.toPosition, eased);
@@ -87,6 +113,30 @@ export default function CameraDirector({
       settle(move.id);
     } else invalidate();
   });
+
+  // Keep the camera between the walls, in front of the backdrop and below the
+  // top of the walls. The box widens to hold the authored pose, so a framing
+  // the museum chose itself is never pushed.
+  const lo = new Vector3();
+  const hi = new Vector3();
+  function clampToRoom() {
+    if (!bounds) return;
+    const [px, py, pz] = pose.position;
+    lo.set(Math.min(bounds.min[0], px), Math.min(bounds.min[1], py), Math.min(bounds.min[2], pz));
+    hi.set(Math.max(bounds.max[0], px), Math.max(bounds.max[1], py), Math.max(bounds.max[2], pz));
+    const p = camera.position;
+    if (p.x < lo.x || p.y < lo.y || p.z < lo.z || p.x > hi.x || p.y > hi.y || p.z > hi.z) {
+      p.clamp(lo, hi);
+      controls.current?.update();
+    }
+  }
+  // Swinging round is limited to the front of the room, unless the authored
+  // pose itself looks from behind (a rear component study).
+  const poseAzimuth = Math.atan2(
+    pose.position[0] - pose.target[0],
+    pose.position[2] - pose.target[2],
+  );
+  const azimuthFree = Math.abs(poseAzimuth) > MAX_AZIMUTH - 0.05;
 
   // Authored poses may sit outside the visitor's zoom range; widen the limits
   // just enough to hold them so OrbitControls does not snap the camera.
@@ -103,6 +153,8 @@ export default function CameraDirector({
       enableZoom
       minDistance={moving ? 0 : Math.min(MIN_DISTANCE, poseDistance)}
       maxDistance={moving ? Infinity : Math.max(MAX_DISTANCE, poseDistance)}
+      minAzimuthAngle={transitioning || azimuthFree ? -Infinity : -MAX_AZIMUTH}
+      maxAzimuthAngle={transitioning || azimuthFree ? Infinity : MAX_AZIMUTH}
       minPolarAngle={0.25}
       maxPolarAngle={Math.PI / 2 - 0.04}
       enableDamping

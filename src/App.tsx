@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import {
   ArrowUpRight,
   ArrowRight,
@@ -40,8 +41,6 @@ import { useSoundStore } from "./audio/soundStore";
 import {
   playEngine,
   playServo,
-  playTransition,
-  startAmbience,
   stopAmbience,
   stopEngine,
   unlockAudio,
@@ -69,6 +68,15 @@ const RaceLab = lazy(() => import("./features/racelab/RaceLab"));
 import { titles as constructorsTitles, useLegacyStore } from "./features/legacy/legacy";
 import { champions, inWords, titleCount } from "./features/hall/champions";
 import type { Champion } from "./features/hall/champions";
+import {
+  autoFullscreen,
+  autoFullscreenOn,
+  canFullscreen,
+  enterFullscreen,
+  exitFullscreen,
+  setAutoFullscreen,
+  useFullscreen,
+} from "./app/fullscreen";
 const Garage = lazy(() => import("./scenes/Garage"));
 const SeasonArchive = lazy(() => import("./components/SeasonArchive"));
 type Dialog = "directory" | "settings" | "about" | "sources" | "ask" | null;
@@ -137,6 +145,8 @@ function App() {
     [answer, setAnswer] = useState(""),
     [focusMode, setFocusMode] = useState(false);
   const prefs = usePreferences();
+  const fullscreen = useFullscreen();
+  const [autoFs, setAutoFs] = useState(autoFullscreenOn);
   const soundOn = useSoundStore((s) => s.enabled);
   const toggleSound = useSoundStore((s) => s.toggle);
   const [engineCaption, setEngineCaption] = useState<string | null>(null);
@@ -162,6 +172,7 @@ function App() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   function goTo(d: MapDestination) {
+    if (!useMuseumStore.getState().entered) autoFullscreen();
     setMapOpen(false);
     stopTour();
     setTheatre(null);
@@ -196,12 +207,15 @@ function App() {
     setYear(titleYear);
   }
   function beginTour() {
+    if (!useMuseumStore.getState().entered) autoFullscreen();
     setDialog(null);
     setDetails(false);
     setFocusMode(false);
     startTour();
   }
   function enter() {
+    // Coming in from the landing page: the museum opens full screen.
+    if (!useMuseumStore.getState().entered) autoFullscreen();
     useMuseumStore.getState().enter();
     window.scrollTo({ top: 0, behavior: "instant" });
     setTimeout(() => titleRef.current?.focus({ preventScroll: true }), 50);
@@ -221,13 +235,14 @@ function App() {
     };
   }, []);
   useEffect(() => {
-    if (entered) startAmbience();
-    else {
+    // Leaving the museum silences everything; the rooms set their music below.
+    if (!entered) {
       stopAmbience();
       stopEngine();
     }
   }, [entered]);
-  // Each room has its own music; the corridor keeps its quiet room tone.
+  // Each room has its own music: calm and smooth in the garage, warm in the
+  // Hall, majestic in the Legacy room. The Evolution room is quiet.
   useEffect(() => {
     // The theatre plays its own music while open; the lab is quiet.
     if (theatre) return;
@@ -235,7 +250,8 @@ function App() {
       stopMusic();
       return;
     }
-    if (entered && room === "hall") startMusic("hall");
+    if (entered && room === "garage") startMusic("garage");
+    else if (entered && room === "hall") startMusic("hall");
     else if (entered && room === "legacy") startMusic("legacy");
     else stopMusic();
     return undefined;
@@ -256,9 +272,9 @@ function App() {
       firstBay.current = false;
       return;
     }
+    // The transition sound starts with the camera glide (useMuseumCamera).
     stopEngine();
     setEngineCaption(null);
-    playTransition();
   }, [index]);
   const firstExplode = useRef(true);
   useEffect(() => {
@@ -353,6 +369,17 @@ function App() {
         >
           {soundOn ? <Volume2 size={18} /> : <VolumeX size={18} />}
         </button>
+        {canFullscreen() && (
+          <button
+            className="sound-toggle fullscreen-toggle"
+            aria-pressed={fullscreen}
+            aria-label={fullscreen ? "Leave full screen" : "Full screen"}
+            title={fullscreen ? "Leave full screen (Esc)" : "Full screen"}
+            onClick={() => (fullscreen ? exitFullscreen() : enterFullscreen())}
+          >
+            {fullscreen ? <Minimize2 size={17} /> : <Maximize2 size={17} />}
+          </button>
+        )}
         <button
           className="settings-button"
           aria-label="Experience settings"
@@ -506,7 +533,11 @@ function App() {
                 >
                   <ArrowLeft size={13} /> THE GARAGE
                 </button>
-                <nav className="bay-stepper" aria-label="Move between driver bays">
+                <nav
+                  className="bay-stepper"
+                  aria-label="Move between driver bays"
+                  style={{ "--bay-progress": (index + 1) / drivers.length } as CSSProperties}
+                >
                   <button
                     onClick={() => selectDriver(previousIndex)}
                     aria-label={`Previous bay: ${drivers[previousIndex].name}`}
@@ -782,7 +813,14 @@ function App() {
                   },
                 },
               ].map((d) => (
-                <button key={d.n} className={`rail-item ${d.tone ?? ""}`} onClick={d.go}>
+                <button
+                  key={d.n}
+                  className={`rail-item ${d.tone ?? ""}`}
+                  onClick={() => {
+                    autoFullscreen();
+                    d.go();
+                  }}
+                >
                   <span className="rail-n">{d.n}</span>
                   <span className="rail-text">
                     <span className="rail-kicker">{d.kicker}</span>
@@ -962,12 +1000,31 @@ function App() {
               <div>
                 <h3>Sound</h3>
                 <p>
-                  Quiet garage ambience, transition cues and synthesised engine
+                  Calm garage music, room themes, transition cues and synthesised engine
                   notes. On by default; your choice is remembered.
                 </p>
               </div>
               <span className="toggle-status">{soundOn ? "ON" : "OFF"}</span>
             </button>
+            {canFullscreen() && (
+              <button
+                className={autoFs ? "selected" : ""}
+                onClick={() => {
+                  setAutoFullscreen(!autoFs);
+                  setAutoFs(!autoFs);
+                }}
+              >
+                <Maximize2 size={23} />
+                <div>
+                  <h3>Full screen</h3>
+                  <p>
+                    The museum opens full screen when you enter it. Press Esc
+                    to return to a normal window.
+                  </p>
+                </div>
+                <span className="toggle-status">{autoFs ? "ON" : "OFF"}</span>
+              </button>
+            )}
             <button
               className={prefs.flat ? "selected" : ""}
               onClick={() => prefs.setFlat(!prefs.flat)}

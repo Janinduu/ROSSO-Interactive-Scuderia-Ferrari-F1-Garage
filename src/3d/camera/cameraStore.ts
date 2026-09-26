@@ -7,6 +7,8 @@ export interface CameraRequestOptions {
   durationMs?: number;
   /** Disable manual orbit while this transition runs (guided tour). */
   lock?: boolean;
+  /** Called when the move visibly begins (after the scene has rendered it). */
+  onStart?: () => void;
 }
 
 interface CameraState {
@@ -44,6 +46,7 @@ export const useCameraStore = create<CameraState>((set, get) => ({
       transitioning: !instant,
       ...(instant ? { arrivedId: requestId } : {}),
     });
+    if (instant) options.onStart?.();
     return requestId;
   },
   settle: (id) =>

@@ -11,9 +11,12 @@ import { titles, useLegacyStore } from "../../features/legacy/legacy";
 import { legacyPlinth } from "../rooms/LegacyRoom";
 import { stationPose } from "../rooms/HallRoom";
 import { useHallStore } from "../../features/hall/champions";
+import { playTransition } from "../../audio/soundEngine";
 
 // Maps where the visitor is in the museum to a camera pose. While the guided
 // tour runs it owns the camera instead; when it ends this restores the framing.
+const bayGlide = () =>
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1200;
 const reducedGlide = () =>
   window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 3200;
 
@@ -29,10 +32,16 @@ export function useMuseumCamera() {
   const legacyYear = useLegacyStore((s) => s.selected);
   const hallFocus = useHallStore((s) => s.focus);
   const lastFocus = useRef(partFocus);
+  const lastBay = useRef(bay);
+  const lastRoom = useRef(room);
   useEffect(() => {
     if (touring) return;
     const focused = partFocus !== lastFocus.current;
     lastFocus.current = partFocus;
+    // Only a move between bays in the garage, not a flight in from a room.
+    const bayChanged = bay !== lastBay.current && room === "garage" && lastRoom.current === "garage";
+    lastBay.current = bay;
+    lastRoom.current = room;
     const { part, year } = useMuseumStore.getState();
     if (entered && section === "engineering" && focused && part) {
       // Go to the component where it will be once any explode motion ends.
@@ -68,6 +77,10 @@ export function useMuseumCamera() {
           ? poses.engineeringExploded(bay)
           : poses.engineering(bay)
         : poses.bay(bay);
-    useCameraStore.getState().go(pose);
+    // Next or previous bay: a short glide, its sound starting with the motion
+    // once the new car is on screen.
+    useCameraStore
+      .getState()
+      .go(pose, bayChanged && entered ? { durationMs: bayGlide(), onStart: playTransition } : {});
   }, [entered, room, bay, section, exploded, partFocus, viewResets, touring, legacyYear, hallFocus]);
 }

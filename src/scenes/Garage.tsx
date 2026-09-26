@@ -17,7 +17,7 @@ import type { HelmetDesign } from "../3d/helmets/helmetArt";
 import Corridor from "../3d/bays/Corridor";
 import CameraDirector from "../3d/camera/CameraDirector";
 import { useCameraStore } from "../3d/camera/cameraStore";
-import { bayX } from "../3d/camera/poses";
+import { bayX, roomBounds } from "../3d/camera/poses";
 import { parts } from "../data/engineering";
 import type { PartId } from "../data/engineering";
 import type { Driver } from "../data/drivers";
@@ -55,6 +55,10 @@ function Set({
   const inHall = useMuseumStore((s) => s.entered && s.room === "hall");
   const inLegacy = useMuseumStore((s) => s.entered && s.room === "legacy");
   const inRoom = inEvolution || inHall || inLegacy;
+  const bounds = useMemo(
+    () => roomBounds(inEvolution ? "evolution" : inHall ? "hall" : inLegacy ? "legacy" : "garage", bay),
+    [inEvolution, inHall, inLegacy, bay],
+  );
   // Subscribe to the year and car only, not the clock, so the scene
   // re-renders about once a second while the sequence plays.
   const evoYear = useEvolutionStore((s) => yearAt(s.elapsed));
@@ -136,6 +140,7 @@ function Set({
         enabled={!landing}
         enablePan={explore}
         reduced={reduced}
+        bounds={landing ? null : bounds}
       />
     </>
   );

@@ -3,16 +3,20 @@ import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import { CanvasTexture, MeshStandardMaterial, SRGBColorSpace } from "three";
 import { useCanvasTexture } from "../bays/BayBoard";
-import { loadBoardFonts, loadImage } from "../bays/boardArt";
-import { teamShieldSrc } from "../../data/media";
+import { loadBoardFonts } from "../bays/boardArt";
 import { LEGACY_X } from "../camera/poses";
 import Trophy, { trophyStyleFor } from "./Trophy";
+import ShieldBeacon from "./ShieldBeacon";
+import { carpetTexture } from "./carpet";
 import {
   longestRun,
   titles,
   useLegacyStore,
 } from "../../features/legacy/legacy";
 import { inWords } from "../../features/hall/champions";
+
+/** The floating shield stands at the centre of the gold floor rings. */
+export const LEGACY_BEACON_Z = 3.3;
 
 /** Plinth position for the i-th title: the eras before 1999 stand on a raised
  * back tier, the dream-team era and after on the front tier. */
@@ -265,13 +269,11 @@ export default function LegacyRoom({ active }: { active: boolean }) {
       wall.needsUpdate = true;
       invalidate();
     };
-    let shield: HTMLImageElement | null = null;
+    // The shield now floats in the room (ShieldBeacon), so the wall carries
+    // the name and the number only.
+    const shield: HTMLImageElement | null = null;
     paint();
-    Promise.all([
-      loadBoardFonts(),
-      teamShieldSrc ? loadImage(teamShieldSrc) : null,
-    ]).then(([, img]) => {
-      shield = img;
+    loadBoardFonts().then(() => {
       paint();
       if (live) setFonts(true);
     });
@@ -290,6 +292,21 @@ export default function LegacyRoom({ active }: { active: boolean }) {
     [],
   );
   useEffect(() => () => lacquer.dispose(), [lacquer]);
+  const carpet = useMemo(
+    () =>
+      carpetTexture({
+        width: 25.7,
+        depth: 13.2,
+        base: "#2a0709",
+        runner: "#5a0b12",
+        runnerWidth: 2.8,
+        focus: { x: 0, z: LEGACY_BEACON_Z - 0.15 },
+        focusRadius: 2.2,
+        line: "#c9a45e",
+      }),
+    [],
+  );
+  useEffect(() => () => carpet.dispose(), [carpet]);
 
   const x = LEGACY_X;
   return (
@@ -316,11 +333,16 @@ export default function LegacyRoom({ active }: { active: boolean }) {
       >
         <planeGeometry args={[26, 14]} />
       </mesh>
+      {/* Oxblood carpet with a red runner from the entrance to the shield. */}
+      <mesh position={[x, -0.004, 0.15]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+        <planeGeometry args={[25.7, 13.2]} />
+        <meshStandardMaterial map={carpet} roughness={1} metalness={0} />
+      </mesh>
       {/* Gold inlay rings on the floor and a raised back tier. */}
-      {[3.2, 3.28, 5.6].map((r) => (
+      {[3.0, 3.08, 5.2].map((r) => (
         <mesh
           key={r}
-          position={[x, 0.002, 2.4]}
+          position={[x, 0.002, LEGACY_BEACON_Z]}
           rotation={[-Math.PI / 2, 0, 0]}
         >
           <ringGeometry args={[r, r + 0.03, 128]} />
@@ -346,6 +368,7 @@ export default function LegacyRoom({ active }: { active: boolean }) {
       {active && (
         <>
           <Banners fonts={fonts} />
+          <ShieldBeacon x={x} z={LEGACY_BEACON_Z} />
           {titles.map((t, i) => (
             <Plinth key={t.year} index={i} />
           ))}

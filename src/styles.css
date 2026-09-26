@@ -5539,3 +5539,111 @@ html:not(.staged) .landing-foot {
     max-width: none;
   }
 }
+
+/* Staged garage: a compact bay stepper on the top line of the driver column,
+   right-aligned with it: two round arrows around the bay number, a thin red
+   progress line along the corridor, and the neighbour's name on hover. */
+.staged .garage-topline {
+  position: static;
+}
+.staged .bay-stepper {
+  left: auto;
+  right: 1064px;
+  top: 13px;
+  bottom: auto;
+  transform: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+.staged .bay-stepper > button {
+  position: relative;
+  width: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  height: 36px;
+  padding: 0;
+  justify-content: center;
+  border: 1px solid #ffffff26;
+  border-radius: 50%;
+  background: #111214cc;
+  transition:
+    border-color 0.25s,
+    background 0.25s,
+    transform 0.25s;
+}
+.staged .bay-stepper > button:hover,
+.staged .bay-stepper > button:focus-visible {
+  border-color: var(--red);
+  background: #e1062418;
+  transform: scale(1.06);
+}
+.staged .bay-stepper > button svg {
+  width: 16px;
+  height: 16px;
+}
+.staged .bay-stepper > button:hover svg {
+  color: var(--text-1);
+}
+.staged .bay-stepper-name {
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 50%;
+  transform: translate(-50%, -3px);
+  padding: 4px 8px;
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  white-space: nowrap;
+  color: var(--text-1);
+  background: #0b0c0ef2;
+  border: 1px solid #ffffff1a;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.staged .bay-stepper > button:hover .bay-stepper-name,
+.staged .bay-stepper > button:focus-visible .bay-stepper-name {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.staged .bay-stepper-current {
+  min-width: 84px;
+  min-height: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  gap: 5px;
+}
+.staged .bay-stepper-current strong {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1;
+}
+.staged .bay-stepper-era {
+  display: none;
+}
+.staged .bay-stepper-current::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--red) calc(var(--bay-progress, 0) * 100%),
+    #ffffff1f 0
+  );
+}
+.staged .focus-mode .bay-stepper {
+  display: none;
+}
+/* Full screen sits beside the sound toggle. */
+.header .fullscreen-toggle {
+  margin-left: -18px;
+}
+@media (max-width: 760px) {
+  .header .fullscreen-toggle {
+    display: none;
+  }
+}
