@@ -8,20 +8,19 @@ import {
 } from "three";
 import type { Group, Texture } from "three";
 import { loadImage } from "../bays/boardArt";
-import { teamShieldSrc } from "../../data/media";
+import { beaconShieldSrc } from "../../data/media";
 
 // The Ferrari shield floats and turns slowly above a lit plinth, the centre
-// piece of the Hall of Champions and the Legacy room. The shield artwork is the
-// owner's local copy (git-ignored), so the public build shows the plinth only.
+// piece of the Hall of Champions and the Legacy room. The owner's local shield
+// is used when present; the public build shows a credited Commons photograph.
 // Its key light belongs to the room (always mounted, see HallRoom, LegacyRoom).
 export default function ShieldBeacon({ x, z }: { x: number; z: number }) {
   const { invalidate } = useThree();
   const spin = useRef<Group>(null);
   const [shield, setShield] = useState<Texture | null>(null);
   useEffect(() => {
-    if (!teamShieldSrc) return;
     let live = true;
-    loadImage(teamShieldSrc).then((img) => {
+    loadImage(beaconShieldSrc).then((img) => {
       if (!img || !live) return;
       const c = document.createElement("canvas");
       c.width = img.width;

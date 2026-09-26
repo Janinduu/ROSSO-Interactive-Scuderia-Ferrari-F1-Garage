@@ -30,7 +30,6 @@ export function useWallSignTextures() {
   }, []);
   useEffect(() => () => halo.dispose(), [halo]);
   useEffect(() => {
-    if (!teamEmblemSrc) return;
     let live = true;
     loadImage(teamEmblemSrc).then((img) => {
       if (!img || !live) return;

@@ -1,0 +1,19 @@
+Brand marks used by the public build of ROSSO
+=============================================
+
+Both marks are trademarks of Ferrari S.p.A. ROSSO is an independent,
+unofficial, non-commercial fan project. It is not affiliated with or endorsed
+by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.
+
+ferrari-wordmark.svg
+  Source:  https://commons.wikimedia.org/wiki/File:Ferrari_wordmark.svg
+  Author:  Ezarate (Wikimedia Commons)
+  Status:  Public domain: a text logo below the threshold of originality.
+           Trademarked. Unmodified.
+
+ferrari-scudetto.webp
+  Source:  https://commons.wikimedia.org/wiki/File:Ferrari_F430_EngineLogo_Scudetto_rosso_noBG.png
+  Author:  Auge=mit (Wikimedia Commons)
+  Licence: CC BY-SA 4.0  https://creativecommons.org/licenses/by-sa/4.0/
+  Changes: resized to 600 px wide, baked drop shadow removed, converted to
+           WebP. This adapted file is shared under CC BY-SA 4.0.

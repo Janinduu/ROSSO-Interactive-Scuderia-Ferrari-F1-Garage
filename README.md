@@ -130,8 +130,9 @@ The scene renders only when something moves, so an idle page costs almost nothin
 - **Circuit outlines:** [bacinger/f1-circuits](https://github.com/bacinger/f1-circuits) (MIT).
 - **Career titles, poles, cars, liveries, helmets and stories:** researched against Ferrari, Formula 1 and other cited sources; every entry records its references in `src/data`.
 - **Portraits and race photographs:** Wikimedia Commons, each under its own licence (public domain, CC0, CC BY or CC BY-SA). The creator, licence and source of every image are listed in the site under **Sources & credits**.
+- **Ferrari marks:** the [Ferrari wordmark](https://commons.wikimedia.org/wiki/File:Ferrari_wordmark.svg) (public domain as a text logo) and a [photograph of the Ferrari shield badge](https://commons.wikimedia.org/wiki/File:Ferrari_F430_EngineLogo_Scudetto_rosso_noBG.png) by Auge=mit (CC BY-SA 4.0; resized and shadow removed, adaptation shared under the same licence), both from Wikimedia Commons. Both remain trademarks of Ferrari S.p.A. Details in [`public/brand/CREDITS.txt`](public/brand/CREDITS.txt).
 
-Cars, helmets and trophies are original procedural models: historically informed interpretations, not replicas. Sponsor names on the cars are set as plain type, not reproduced logo artwork. No team logo is distributed with the code; the owner's local build can add brand artwork from git-ignored folders (`src/assets/brand/`), and the public version shows the museum without it.
+Cars, helmets and trophies are original procedural models: historically informed interpretations, not replicas. Sponsor names on the cars are set as plain type, not reproduced logo artwork.
 
 ## Credits
 

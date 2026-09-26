@@ -68,6 +68,7 @@ const RaceLab = lazy(() => import("./features/racelab/RaceLab"));
 import { titles as constructorsTitles, useLegacyStore } from "./features/legacy/legacy";
 import { champions, inWords, titleCount } from "./features/hall/champions";
 import type { Champion } from "./features/hall/champions";
+import { brandCredits } from "./data/media";
 import {
   autoFullscreen,
   autoFullscreenOn,
@@ -1078,8 +1079,9 @@ function App() {
           <p>
             Every car in this prototype is made from original procedural
             geometry. Era variations are illustrative studies, not exact Ferrari
-            models. There are no official logos, copied liveries or
-            redistributed commercial assets.
+            models. There are no copied liveries or commercial models. The
+            Ferrari marks shown are credited under Sources & credits and remain
+            trademarks of Ferrari S.p.A.
           </p>
           <p className="disclaimer">{disclaimer}</p>
         </Modal>
@@ -1174,14 +1176,28 @@ function App() {
               </div>
             </>
           )}
+          {brandCredits.length > 0 && (
+            <>
+              <h3>Brand marks</h3>
+              <div className="source-list">
+                {brandCredits.map((c) => (
+                  <a key={c.sourceUrl} href={c.sourceUrl} target="_blank" rel="noreferrer">
+                    {c.attribution}
+                    <ExternalLink size={14} />
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
           <h3>Asset credits</h3>
           <p>
-            Car, garage and helmets: original procedural geometry; helmets are
-            abstract studies in national colours, not replicas. Icons: Lucide
-            (ISC). Typography: locally bundled Barlow and Barlow Condensed (SIL
-            Open Font License). Driver portraits come from Wikimedia Commons
-            under the licence credited for each. No Ferrari logos or
-            third-party car models are distributed with the project.
+            Cars, garage, helmets and trophies: original procedural geometry;
+            helmets are painted interpretations of each driver's Ferrari-era
+            design, not replicas. Icons: Lucide (ISC). Typography: locally
+            bundled Barlow and Barlow Condensed (SIL Open Font License). Driver
+            portraits and race photographs come from Wikimedia Commons under the
+            licence credited for each. No third-party car models are
+            distributed with the project.
           </p>
           <p className="fine-print">
             Schumacher, Lauda and Vettel have editorial season-by-season
