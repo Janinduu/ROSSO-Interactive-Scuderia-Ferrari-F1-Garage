@@ -100,8 +100,13 @@ export const longestRun = (() => {
 interface LegacyState {
   selected: number | null;
   select: (year: number | null) => void;
+  /** Title index under the pointer, for the room's shared hover light. */
+  hover: number | null;
+  setHover: (hover: number | null) => void;
 }
 export const useLegacyStore = create<LegacyState>((set) => ({
   selected: null,
   select: (selected) => set({ selected }),
+  hover: null,
+  setHover: (hover) => set({ hover }),
 }));

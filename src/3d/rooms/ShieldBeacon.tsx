@@ -13,16 +13,8 @@ import { teamShieldSrc } from "../../data/media";
 // The Ferrari shield floats and turns slowly above a lit plinth, the centre
 // piece of the Hall of Champions and the Legacy room. The shield artwork is the
 // owner's local copy (git-ignored), so the public build shows the plinth only.
-export default function ShieldBeacon({
-  x,
-  z,
-  light = "#ffe2b0",
-}: {
-  x: number;
-  z: number;
-  /** Colour of the key light on the shield. */
-  light?: string;
-}) {
+// Its key light belongs to the room (always mounted, see HallRoom, LegacyRoom).
+export default function ShieldBeacon({ x, z }: { x: number; z: number }) {
   const { invalidate } = useThree();
   const spin = useRef<Group>(null);
   const [shield, setShield] = useState<Texture | null>(null);
@@ -127,7 +119,6 @@ export default function ShieldBeacon({
           </mesh>
         </group>
       )}
-      <pointLight position={[0, 2.6, 1.2]} intensity={10} distance={6} color={light} />
     </group>
   );
 }

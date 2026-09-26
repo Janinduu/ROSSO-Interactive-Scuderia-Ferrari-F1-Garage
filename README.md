@@ -1,159 +1,142 @@
-# ROSSO
+<h1 align="center">ROSSO</h1>
 
-**The Interactive Scuderia Ferrari F1 Garage**
+<p align="center"><strong>The Interactive Scuderia Ferrari F1 Garage</strong><br>
+A cinematic 3D museum of Ferrari in Formula 1, from Ascari to Hamilton, built in the browser.</p>
 
-An independent, non-commercial fan prototype built with React, TypeScript, Vite, Three.js, React Three Fiber and drei. It includes a cinematic entrance, an original procedural garage, seventeen driver archives, season timelines, guided camera navigation and nine engineering hotspots.
+<p align="center"><img src="docs/readme/landing.jpg" alt="The ROSSO landing page: Michael Schumacher's F2004 on its plinth in a dark garage, with the five rooms of the museum along the bottom" width="100%"></p>
 
-## Run locally
+ROSSO is a personal fan project: a digital museum you walk through rather than a website you scroll. Seventeen driver bays line a garage corridor, each with the driver's Ferrari, helmet and story. At either end are rooms for the cars' evolution, the drivers' champions and the constructors' titles. Six great races replay lap by lap, and a telemetry lab compares two Ferraris on one lap. Every number comes from a sourced dataset, and everything you see and hear is generated in code.
 
-Requires Node.js 22.12+ and npm.
+---
+
+## A walk through the museum
+
+### The garage
+
+Seventeen bays, one for every Ferrari driver in the collection. Each shows the car from that driver's chosen season, their helmet, portrait and a board with their story. The season strip at the bottom opens every year of their career in red, with race results, key races and a link to watch or analyse the races that defined it. Move between bays with the arrows beside the driver's name; the camera glides to the next car.
+
+<p align="center"><img src="docs/readme/garage-tour.gif" alt="Entering the garage and moving from Schumacher's bay to Räikkönen's and Alonso's" width="100%"></p>
+
+### The Machine
+
+Switch to **The Machine** to take the car apart. Nine components (front and rear wing, tyres, brakes, power unit, steering wheel, floor, diffuser and sidepods) separate on command, each with a plain-language explanation. You can isolate one part, or start the engine and hear a synthesised note based on that car's engine layout.
+
+<p align="center"><img src="docs/readme/machine-tour.gif" alt="The F2004 separating into its components and coming back together" width="100%"></p>
+
+### The Evolution: 75 years in 75 seconds
+
+A room before the first bay plays twenty Ferraris from 1951 to 2026 on a turntable. Each car is a real driver-season, so its name, livery, race number and engine come from the data.
+
+<p align="center"><img src="docs/readme/evolution.jpg" alt="The Evolution room: the 246 F1 on a turntable under a glowing 1959" width="100%"></p>
+
+### The Hall of Champions
+
+The corridor ends in a gilded hall with a station for every Ferrari drivers' world champion: their helmet, one trophy per title and a plaque. Click a helmet or trophy to fly to that station and study it; click the plaque to open the driver's bay on a title season. The Ferrari shield turns slowly above a lit plinth at the centre of the floor.
+
+<p align="center"><img src="docs/readme/hall-tour.gif" alt="Arriving in the Hall of Champions and flying to Niki Lauda's station" width="100%"></p>
+
+<p align="center"><img src="docs/readme/hall-study.jpg" alt="Studying Michael Schumacher's station: five trophies and his helmet" width="100%"></p>
+
+### The Legacy
+
+A red-lacquered room under a gilded 16 holds every constructors' championship. The eras before 1999 stand on a raised tier, the dream-team years in front. Choose a trophy to see that season's cars, points, drivers and the team behind it.
+
+<p align="center"><img src="docs/readme/legacy.jpg" alt="The Legacy room: sixteen constructors' trophies under a red wall reading 16" width="100%"></p>
+
+### Legendary Moments
+
+Six races replayed from the lap times recorded that day: Barcelona 1996, Suzuka 2000, Magny-Cours 2004, Interlagos 2007, Monza 2019 and Barcelona 2026. Cars move on the real circuit outline with a live timing tower and sourced captions. Watch at 0.5×, 1× or 2×, with trackside sound: a distant pack, cars passing, the crowd at the flag.
+
+<p align="center"><img src="docs/readme/replay-tour.gif" alt="The 2004 French Grand Prix replaying lap by lap with a timing tower" width="100%"></p>
+
+<p align="center"><img src="docs/readme/moments.jpg" alt="The Legendary Moments gallery of six races" width="100%"></p>
+
+### Race Lab
+
+Measured telemetry for both Ferrari drivers' fastest qualifying laps in six sessions from 2023 to 2026. The track map is coloured by the faster driver in each mini-sector, with speed, throttle, brake, gear and the running gap stacked beside it, and a ghost replay you can scrub.
+
+<p align="center"><img src="docs/readme/racelab.jpg" alt="Race Lab comparing Hamilton and Leclerc at Barcelona 2026" width="100%"></p>
+
+### Finding your way
+
+A museum map (press **M**) jumps to any room or bay, and a twelve-step guided tour visits the highlights. Esc closes anything.
+
+<p align="center"><img src="docs/readme/map.jpg" alt="The museum floor plan with every bay and room" width="100%"></p>
+
+---
+
+## Features
+
+- **One fixed frame.** The whole museum is composed at 1600 × 900 and scaled to fit, so every laptop and desktop sees the same picture with no page scroll. Phones get their own stacked layout.
+- **Full screen.** The museum opens full screen when you enter it on a laptop or desktop; Esc returns to a normal window.
+- **Sound, all synthesised.** Calm music in the garage and each room, engine notes voiced from each car's cylinder count, turbo and hybrid systems, and trackside sound for race replays. No audio files are downloaded.
+- **Stay inside.** The camera can orbit and zoom freely but stops at the walls of each room.
+- **Accessible.** Keyboard navigation, visible focus, HTML alternatives for every 3D hotspot, reduced-motion support and a 2D archive mode that works without WebGL.
+- **Performance and High quality modes**, switchable in settings.
+
+## Built with
+
+[React 19](https://react.dev), TypeScript, [Vite](https://vite.dev), [three.js](https://threejs.org) with [React Three Fiber](https://r3f.docs.pmnd.rs) and [drei](https://github.com/pmndrs/drei), [zustand](https://github.com/pmndrs/zustand), the Web Audio API and [Lucide](https://lucide.dev) icons. There is no backend, database or API key: the data is bundled and the site is fully static.
+
+## Run it locally
+
+Requires Node.js 22.12 or later.
 
 ```sh
 npm ci
-npm run dev
+npm run dev        # http://127.0.0.1:5173
+npm test           # data reconciliation and model checks
+npm run build      # type check and production build into dist/
+npm run preview    # serve the production build
 ```
 
-Open the local address printed in the terminal, normally `http://127.0.0.1:5173`.
-
-```sh
-npm test        # Historical data reconciliation and boundary checks
-npm run build  # TypeScript validation and production output
-npm run preview
-```
-
-The production files are generated in `dist/`. No database, API key, GPU compute toolkit or backend is required. Fonts and historical data are bundled locally. The production site makes no third-party requests except when a visitor deliberately opens a source link.
-
-## What is implemented
-
-- Near-black cinematic landing, responsive museum interface and smooth camera focus changes.
-- One original open-wheel car at a time; illustrative classic, V10/V8 and modern variations. These are generic studies, **not exact Ferrari models**.
-- Complete Schumacher editorial timeline (1996–2006), followed by Lauda (1974–1977) and Vettel (2015–2020).
-- All seventeen requested drivers have searchable, chronological directory entries, Ferrari-specific win/podium totals, championship years, per-season statistics and expandable race classifications.
-- Important cars and memorable races appear in the expanded season archive.
-- Separate present-day section for Leclerc and Hamilton, explicitly using a **completed-2025 snapshot**.
-- Orbit, zoom, optional pan, guided next/previous driver controls, focused car view and reset.
-- Nine projected car hotspots with matching accessible HTML controls and general engineering explanations.
-- Performance/high-quality modes, reduced-motion handling, mobile simplification, a manual 2D archive and error/context-loss fallback.
-- Ask the Garage is a clearly labelled curated-answer preview. No AI API is connected.
-- Local, open-licensed fonts; no official logos, photography, commercial models or copied liveries.
-
-The additional fourteen drivers are archive exhibits, not bespoke editorial experiences to the depth of Schumacher. Pole totals remain an explicit dash where not yet independently sourced. The garage is an orbit/pan museum prototype rather than a first-person walking simulator. There are no live 2026 statistics.
-
-## Guided tour
-
-A 12-step tour of the whole museum (`src/features/guided-tour`): the Evolution room, Ascari (1952) and Lauda (1975), Schumacher's bay with the F2004 reveal and exploded diffuser, Hamilton in 2026, the Hall of Champions and the Legacy room, ending with links to Legendary Moments and the Race Lab. Every factual line is derived from the sourced data. Each step waits for the camera to arrive; pause, skip, go back or leave with Esc.
-
-## Season stories
-
-Every Ferrari season has a short sourced story: hand-written for Schumacher, Lauda and Vettel, researched for the other fourteen drivers (`src/data/seasonStories`, checked against the results archive), and built from sourced current-season moments for 2026. Each driver also has three or four key races under their seasons.
-
-## The Evolution room
-
-A room before the first bay plays Ferrari's cars from 1951 to 2026 on a turntable in 75 seconds (`src/features/evolution`). Each of the twenty cars is a real driver-season, so its name, livery, race number and engine come from the sourced data; each announces itself with a short synthesised rev. Open it from the landing page or the Evolution tab.
-
-## The Hall of Champions
-
-The corridor ends in a gilded room with a station for every Ferrari drivers' world champion: their helmet, one gold trophy per title and a plaque with years and cars (`src/features/hall`). The list comes from the sourced career titles, so it updates with the data. Choosing a title opens that driver's bay on the championship season.
-
-## The Legacy room
-
-Beyond the Hall of Champions, a red-lacquered room under a gilded "16" holds every constructors' championship (`src/features/legacy`). Points, wins and the drivers of each title season come from `scripts/fetch-constructors.mjs` (Jolpica, standings from 1958). Cars, team leadership, notes and the era trophy styles come from the researched `constructorsLegacy.json`, with sources. Trophies follow the research by era: flared silver FIA beakers to 1962; a deliberately generic cup for 1963–94, where no reliable record of the award was found; and from 1995 the tall silver constructors' vase and the drivers' trophy with its gold spiral. They are simplified interpretations, not replicas, and each season says which applies. The dream-team panel lists only the members the sources name explicitly.
-
-## Room music
-
-The Hall of Champions and the Legacy room each have calm generative music (slow pad chords, a soft bell melody and synthetic reverb) that fades in on arrival and out on leaving. It follows the sound switch.
-
-## Legendary Moments
-
-Six races replayed from the lap times recorded that day (`src/features/moments`): Barcelona 1996, Suzuka 2000, Magny-Cours 2004, Interlagos 2007, Monza 2019 and Barcelona 2026. `scripts/fetch-moments.mjs` bundles each race's classification and cumulative lap times (Jolpica) with a simplified circuit outline from bacinger/f1-circuits (MIT, today's layouts, checked to run in race direction). Positions are interpolated within each lap, so gaps are exact at the line. Captions are researched and sourced in `momentsResearch.json`. Open the theatre from the Moments tab, the landing page, or a matching season in a driver's bay.
-
-## Race Lab
-
-Measured telemetry for the two Ferrari drivers' fastest qualifying laps in six sessions from 2023 to 2026 (`src/features/racelab`). `scripts/fetch-racelab.mjs` imports car data (speed, throttle, brake, gear, rpm) and track position from [OpenF1](https://openf1.org), resampled every 8 m along the lap (distance from integrated speed). The lab shows a track map coloured by the faster driver in each mini-sector, a synchronised ghost replay, stacked traces and the running time gap; during playback the engine note follows the recorded rpm. It is labelled as measured telemetry, about four samples a second, interpolated. OpenF1 locks all access while a live session runs; the import waits and retries.
-
-## Sound
-
-Sound is on by default and can be switched off in the header or settings; the choice is remembered on the device. Browsers start audio only after the first click or key press. Everything is synthesised with the Web Audio API (`src/audio`): a quiet garage room tone, soft transition and servo cues, and an engine note per car whose firing rhythm follows the sourced engine layout (cylinder count, turbo, hybrid). Engine notes are captioned as synthesised impressions, not recordings. No audio files are downloaded.
-
-## Architecture
+## Project structure
 
 ```text
 src/
-  App.tsx                    Layout, navigation and archive dialogs
-  stores/
-    museumStore.ts           Where the visitor is: driver, year, story/machine, part
-  3d/camera/
-    poses.ts                 Named, bay-relative camera poses
-    cameraStore.ts           Camera requests and arrival events
-    CameraDirector.tsx       The only code that moves the camera
-    useMuseumCamera.ts       Maps museum state to a pose when not touring
-  features/guided-tour/
-    tourSteps.ts             Schumacher tour; narration derived from src/data
-    tourStore.ts             Tour state machine (step, pause, skip, stop)
-    GuidedTour.tsx           Stages steps, waits for camera arrival, tour card UI
-  components/
-    Modal.tsx                Native modal, keyboard dismissal and focus return
-    SceneBoundary.tsx        3D error boundary
-    SeasonArchive.tsx        Lazy-loaded timeline, race results and guided controls
-  scenes/
-    Garage.tsx               Lazy WebGL scene, lights and hotspot projection
-    Car.tsx                  Original reusable procedural car geometry
-  data/
-    drivers.ts               Driver metadata, editorial timelines and sources
-    history.json             Offline Ferrari-constructor results through 2025
-    engineering.ts           Nine explanatory hotspots and their model positions
-  hooks/
-    usePreferences.ts        Quality, mobile and reduced-motion preferences
-  styles.css                 Shared design tokens and responsive layouts
-scripts/
-  fetch-history.mjs          Reproducible, rate-limited data import
-  data.test.mjs              Dataset reconciliation tests
+  App.tsx              Layout, navigation, landing page and dialogs
+  app/                 Fixed stage, full screen, Esc handling
+  scenes/Garage.tsx    The WebGL scene: lights, rooms, the current car
+  3d/
+    bays/              The corridor, bay boards and wall signs
+    cars/              Procedural car families, liveries, exploded view
+    helmets/           Painted helmet models
+    rooms/             Evolution, Hall of Champions, Legacy, trophies, carpets
+    camera/            Named poses and the director that owns camera motion
+  features/            Guided tour, Evolution, Hall, Legacy, Moments, Race Lab, map
+  audio/               Engine synth, room music, race soundscape
+  data/                Drivers, results, cars, liveries, helmets, stories, sources
+scripts/               Reproducible data imports and tests
 ```
 
-### Design and UX
+## Performance
 
-Near-black `#101112`, warm white `#ece8df`, racing-red accent `#e33a3f`; Barlow for interface text and Barlow Condensed for exhibit headings. The entrance leads into Schumacher’s bay. Visitors can select seasons, open race records, inspect engineering, or jump through the driver directory. Guided navigation is the mobile default. Native buttons, dialogs, visible focus states and a skip link support keyboard navigation; every 3D hotspot has an HTML alternative.
+Measured on the production build with Intel UHD integrated graphics, the kind of GPU in an ordinary laptop, at 1600 × 900:
 
-### Performance decisions
+| | Performance mode | High quality |
+|---|---|---|
+| Orbiting a bay | 46 fps | 45 fps |
+| Orbiting the Legacy room | 43 fps | 38 fps |
+| Hall of Champions (shield turning) | 60 fps | 47 fps |
+| Race replay | 60 fps | 60 fps |
+| Download | 2.6 MB | 2.6 MB |
 
-The renderer uses `frameloop="demand"`: it draws when controls, camera transitions, size or scene state changes rather than running an endless idle animation. Performance mode caps pixel ratio at 1, disables multisample antialiasing and real-time shadows, and uses a one-frame 256px contact-shadow texture. High mode caps pixel ratio at 1.5, enables antialiasing and one 1024px directional shadow, and uses a 512px contact shadow. Mobile forces the lighter rendering settings.
+The scene renders only when something moves, so an idle page costs almost nothing.
 
-Only one car and three small reusable bay structures are mounted. Materials and custom geometry are shared within the car, and are disposed on unmount. There are no particles, real reflections, environment downloads or post-processing chains. Fonts are self-hosted and the 3D and season-view code is loaded separately. Orbit damping requests frames only while moving. The largest download is the Three.js/drei renderer bundle; this is a real 3D engine, not a lightweight image carousel.
+## Data and sources
 
-The interface has been browser-tested at desktop and 390px/360px phone widths. These are functional/layout checks, not an FPS or memory benchmark on every integrated GPU. Performance mode is the recommended default.
+- **Results and standings:** [Jolpica F1](https://github.com/jolpica/jolpica-f1) (the Ergast successor), imported offline by `scripts/fetch-history.mjs`, up to 25 September 2026. Wins and podiums count Grand Prix classifications only, not sprints.
+- **Telemetry:** [OpenF1](https://openf1.org), resampled along each lap by `scripts/fetch-racelab.mjs`.
+- **Circuit outlines:** [bacinger/f1-circuits](https://github.com/bacinger/f1-circuits) (MIT).
+- **Career titles, poles, cars, liveries, helmets and stories:** researched against Ferrari, Formula 1 and other cited sources; every entry records its references in `src/data`.
+- **Portraits and race photographs:** Wikimedia Commons, each under its own licence (public domain, CC0, CC BY or CC BY-SA). The creator, licence and source of every image are listed in the site under **Sources & credits**.
 
-### Replacing the car with a licensed GLB
+Cars, helmets and trophies are original procedural models: historically informed interpretations, not replicas. Sponsor names on the cars are set as plain type, not reproduced logo artwork. No team logo is distributed with the code; the owner's local build can add brand artwork from git-ignored folders (`src/assets/brand/`), and the public version shows the museum without it.
 
-Keep `CarProps` and the parent coordinate system. Replace the procedural content in `src/scenes/Car.tsx` with a `useGLTF`-based component under the existing Suspense boundary. The car points towards negative X; Y is up. Its length is approximately 5 units and width 2.5 units. Reposition `engineering.ts` hotspots for the replacement mesh.
+## Credits
 
-Use a model whose licence permits the intended distribution. Keep its attribution alongside the asset. Prefer Meshopt/Draco where useful, textures at 1K (2K maximum), and one active model at a time. Do not preload all seventeen cars. The procedural model requires no compression, remote textures or licensing clearance from an asset vendor.
+Typography: [Barlow and Barlow Condensed](https://github.com/jpt/barlow) (SIL Open Font License), bundled via Fontsource. Icons: [Lucide](https://lucide.dev/license) (ISC).
 
-## Historical data and editorial limits
+---
 
-`history.json` is generated from [Jolpica / Ergast](https://github.com/jolpica/jolpica-f1) using the `drivers/{id}/constructors/ferrari/results/` filter. The import is capped at the date set in `scripts/fetch-history.mjs` (currently 25 September 2026). It is an offline snapshot, not a live service. Wins and podiums are calculated from the final GP classifications, excluding sprint results and other constructors. An entry can include a non-start and must not be presented as a race start. Shared drives count once per Grand Prix.
-
-Ferrari/F1 primary-source links in `drivers.ts` support the core editorial exhibits and separately verified pole figures. Annual Formula 1 results are also linked. Schumacher’s 72 wins/116 podiums and Vettel’s 14 wins/55 podiums reconcile with Ferrari’s published archive. Hamilton’s China 2025 win is a **sprint** and does not inflate his 2025 Grand Prix wins.
-
-To reproduce the snapshot, run `node scripts/fetch-history.mjs` with network access, then `npm test`. The script uses an identifying user-agent, honours pagination, retries transient failures and writes only after all driver imports succeed. Change `CUTOFF` deliberately and update the tests at the same time. Career-wide world titles, Ferrari pole counts and the current-season summary live in `src/data/careerStats.json`, each with sources.
-
-## Deployment
-
-This delivery is local; nothing has been published. To deploy later:
-
-1. Run `npm ci`, `npm test`, and `npm run build`.
-2. Upload only `dist/` to a static host, or configure a Git-connected static host with build command `npm run build` and output directory `dist`.
-3. Use HTTPS, compression and long-lived caching for hashed assets. Serve `index.html` with revalidation.
-4. For hosting under a subdirectory, set Vite’s `base` to the intended path and rebuild.
-5. Check the deployed landing, 3D load, directory, timeline, settings and phone layout. Keep the unofficial-project disclaimer visible.
-
-No server routes or SPA rewrite rules are required because this version uses a single page. Do not upload `node_modules`, development logs or private environment files. For Sites hosting, register the project and point the static output to `dist` when publication is requested.
-
-### Future Ask the Garage integration
-
-Add a server/serverless endpoint that retrieves this sourced archive, validates questions and returns source-backed answers. Keep all API credentials on the server, apply request limits, and label generated answers. Never put a secret in a `VITE_*` variable: these are compiled into public JavaScript. The current curated preview has no network/API dependency.
-
-## Credits and disclaimer
-
-Geometry, garage, cars, helmets and interface: original project work. Cars are procedural, historically informed studies built from era families (`src/3d/cars`); season-to-car names come from `src/data/carsByYear.json`, where every entry cites Ferrari, Formula 1 or another listed source. Liveries (`src/data/liveries.json`) give each car its researched paint zones, race numbers and sponsor names; sponsor names are set as plain type, not reproduced logo artwork, and each entry records its sources and a confidence level. Helmets reproduce each driver's Ferrari-era colour scheme and layout (`src/data/helmetDesigns.json`, with references) without sponsor marks. Driver portraits: Wikimedia Commons, each under its own licence (public domain, CC0, CC BY or CC BY-SA); the creator, licence and source page for every photo are recorded in `src/data/portraits.json` and shown under Sources & credits. Portraits shown in greyscale or cropped are adaptations of those files. No team logo is distributed; an owner may add one locally at `src/assets/brand/team-emblem.svg` (git-ignored). Icons: [Lucide](https://lucide.dev/license), ISC. Typography: [Barlow](https://github.com/jpt/barlow), SIL Open Font License, bundled via Fontsource. Source data: Jolpica / Ergast. Historical source links are references, not an endorsement or a licence to reuse source-site images.
-
-ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.
+<p align="center"><sub>ROSSO is an independent, unofficial Formula 1 fan project. It is not affiliated with or endorsed by Ferrari S.p.A., Scuderia Ferrari, Formula 1 or the FIA.</sub></p>

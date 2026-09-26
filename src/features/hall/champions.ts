@@ -36,8 +36,13 @@ interface HallState {
   /** Index into `champions` of the station being studied, or null for the room. */
   focus: number | null;
   setFocus: (focus: number | null) => void;
+  /** Station under the pointer, for the room's shared hover light. */
+  hover: number | null;
+  setHover: (hover: number | null) => void;
 }
 export const useHallStore = create<HallState>((set) => ({
   focus: null,
   setFocus: (focus) => set({ focus }),
+  hover: null,
+  setHover: (hover) => set({ hover }),
 }));

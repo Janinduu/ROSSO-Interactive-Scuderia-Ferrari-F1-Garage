@@ -213,10 +213,12 @@ function Plinth({ index }: { index: number }) {
       onPointerOver={(e: ThreeEvent<PointerEvent>) => {
         e.stopPropagation();
         setHover(true);
+        useLegacyStore.getState().setHover(index);
         document.body.style.cursor = "pointer";
       }}
       onPointerOut={() => {
         setHover(false);
+        if (useLegacyStore.getState().hover === index) useLegacyStore.getState().setHover(null);
         document.body.style.cursor = "";
       }}
       onClick={(e: ThreeEvent<MouseEvent>) => {
@@ -244,15 +246,30 @@ function Plinth({ index }: { index: number }) {
       <group position={[0, 1.01, 0]} scale={1.15}>
         <Trophy style={style} year={title.year} />
       </group>
-      {lit && (
-        <pointLight
-          position={[0, 2.4, 0.9]}
-          intensity={selected ? 9 : 5}
-          distance={4}
-          color="#ffe0a8"
-        />
-      )}
     </group>
+  );
+}
+
+// Lights for the selected and hovered trophies: always present, moved or
+// dimmed, so the number of lights (and so the shaders) never changes.
+function TrophyLights({ active }: { active: boolean }) {
+  const selectedYear = useLegacyStore((s) => s.selected);
+  const hover = useLegacyStore((s) => s.hover);
+  const { invalidate } = useThree();
+  useEffect(() => invalidate(), [selectedYear, hover, invalidate]);
+  const selected = selectedYear == null ? -1 : titles.findIndex((t) => t.year === selectedYear);
+  const above = (i: number): [number, number, number] => {
+    const p = legacyPlinth(i);
+    return [p.x, p.y + 2.4, p.z + 0.9];
+  };
+  const away: [number, number, number] = [LEGACY_X, -20, 0];
+  const lit = active && selected >= 0;
+  const hovering = active && hover != null && hover !== selected;
+  return (
+    <>
+      <pointLight position={lit ? above(selected) : away} intensity={lit ? 9 : 0} distance={4} color="#ffe0a8" />
+      <pointLight position={hovering ? above(hover!) : away} intensity={hovering ? 5 : 0} distance={4} color="#ffe0a8" />
+    </>
   );
 }
 
@@ -374,6 +391,13 @@ export default function LegacyRoom({ active }: { active: boolean }) {
           ))}
         </>
       )}
+      <TrophyLights active={active} />
+      <pointLight
+        position={[x, 2.6, LEGACY_BEACON_Z + 1.2]}
+        intensity={active ? 10 : 0}
+        distance={6}
+        color="#ffe2b0"
+      />
       <pointLight
         position={[x, 6.5, 4]}
         intensity={active ? 34 : 0}

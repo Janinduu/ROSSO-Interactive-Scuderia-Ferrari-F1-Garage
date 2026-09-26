@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import { MeshStandardMaterial } from "three";
@@ -152,22 +152,21 @@ function Station({
   kit: ReturnType<typeof useHallKit>;
   onSelect: (c: Champion) => void;
 }) {
-  const focused = useHallStore((s) => s.focus === index);
   // The helmet and trophies are the exhibit: clicking them brings the camera close.
   const study = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation();
     if (e.delta > 6) return;
     useHallStore.getState().setFocus(index);
   };
-  const [hover, setHover] = useState(false);
+  const hover = useHallStore((s) => s.hover === index);
   const n = champion.titles.length;
   const over = (e: ThreeEvent<PointerEvent>) => {
     e.stopPropagation();
-    setHover(true);
+    useHallStore.getState().setHover(index);
     document.body.style.cursor = "pointer";
   };
   const out = () => {
-    setHover(false);
+    if (useHallStore.getState().hover === index) useHallStore.getState().setHover(null);
     document.body.style.cursor = "";
   };
   const click = (e: ThreeEvent<MouseEvent>) => {
@@ -217,31 +216,35 @@ function Station({
           );
         })}
       </group>
-      {focused && (
-        <>
-          <pointLight
-            position={[0.9, 2.1, 1.3]}
-            intensity={7}
-            distance={4}
-            color="#fff0d6"
-          />
-          <pointLight
-            position={[-1, 1.8, 0.9]}
-            intensity={4}
-            distance={4}
-            color="#ffcf8a"
-          />
-        </>
-      )}
-      {hover && !focused && (
-        <pointLight
-          position={[0, 2.2, 1.2]}
-          intensity={6}
-          distance={4}
-          color="#ffd9a0"
-        />
-      )}
     </group>
+  );
+}
+
+/** A point in a station's own frame, in world space. */
+function atStation(i: number, [lx, ly, lz]: [number, number, number]): [number, number, number] {
+  const p = stationPose(i);
+  const c = Math.cos(p.ry);
+  const s = Math.sin(p.ry);
+  return [p.x + lx * c + lz * s, ly, p.z - lx * s + lz * c];
+}
+
+// The lights that pick out a studied or hovered station are always there and
+// simply move or dim: adding and removing lights makes three.js rebuild every
+// material's shader, which stalls the room for seconds while orbiting.
+function StationLights({ active }: { active: boolean }) {
+  const focus = useHallStore((s) => s.focus);
+  const hover = useHallStore((s) => s.hover);
+  const { invalidate } = useThree();
+  useEffect(() => invalidate(), [focus, hover, invalidate]);
+  const away: [number, number, number] = [HALL_X, -20, 0];
+  const lit = active && focus != null;
+  const hovering = active && hover != null && hover !== focus;
+  return (
+    <>
+      <pointLight position={lit ? atStation(focus!, [0.9, 2.1, 1.3]) : away} intensity={lit ? 7 : 0} distance={4} color="#fff0d6" />
+      <pointLight position={lit ? atStation(focus!, [-1, 1.8, 0.9]) : away} intensity={lit ? 4 : 0} distance={4} color="#ffcf8a" />
+      <pointLight position={hovering ? atStation(hover!, [0, 2.2, 1.2]) : away} intensity={hovering ? 6 : 0} distance={4} color="#ffd9a0" />
+    </>
   );
 }
 
@@ -354,6 +357,13 @@ export default function HallRoom({
       </mesh>
       {active && <Stations onSelect={onSelect} />}
       {active && <ShieldBeacon x={BEACON.x} z={BEACON.z} />}
+      <StationLights active={active} />
+      <pointLight
+        position={[BEACON.x, 2.6, BEACON.z + 1.2]}
+        intensity={active ? 10 : 0}
+        distance={6}
+        color="#ffe2b0"
+      />
       <pointLight
         position={[x, 5.5, 3]}
         intensity={active ? 40 : 0}
