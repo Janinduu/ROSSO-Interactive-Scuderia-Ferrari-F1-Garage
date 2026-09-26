@@ -22,7 +22,10 @@ const shortTitle = (t: string) => {
   return s[0].toUpperCase() + s.slice(1);
 };
 import type { View } from "./raceCanvas";
-import { startMusic, stopMusic } from "../../audio/music";
+import { startRaceSound } from "../../audio/raceSound";
+import type { RaceSound } from "../../audio/raceSound";
+import { engineProfile } from "../../audio/engineProfile";
+import { resolveCar } from "../../data/cars";
 import { stopEngine } from "../../audio/soundEngine";
 import { drivers } from "../../data/drivers";
 import { useEscape } from "../../app/useEscape";
@@ -60,10 +63,6 @@ export default function MomentsTheatre({
     };
   }, []);
   useEscape(() => (active ? setActive(null) : onClose()));
-  useEffect(() => {
-    startMusic("race");
-    return () => stopMusic();
-  }, []);
 
   return (
     <div className="theatre" role="dialog" aria-modal="true" aria-label="Legendary Moments">
@@ -151,6 +150,32 @@ function Replay({
   const canvas = useRef<HTMLCanvasElement>(null);
   const clock = useRef({ t: 0, reveal: 0, view: overview() as View, placed: false });
   const story = momentStory(meta.id);
+  // Trackside sound while the race runs: the season's Ferrari engine note,
+  // cars passing, and the crowd at the flag. No music in the theatre.
+  const sound = useRef<RaceSound | null>(null);
+  useEffect(() => {
+    if (phase !== "playing") return;
+    if (!sound.current) {
+      const driver = drivers.find((d) => d.id === meta.driverId);
+      const car = driver ? resolveCar(driver, meta.season) : null;
+      sound.current = startRaceSound(engineProfile(car?.officialName ?? null, meta.season));
+      sound.current.setSpeed(speed);
+    }
+    sound.current.setPlaying(playing);
+  }, [phase, playing, meta.driverId, meta.season, speed]);
+  useEffect(() => sound.current?.setSpeed(speed), [speed]);
+  useEffect(() => {
+    if (phase !== "finished") return;
+    sound.current?.finish();
+    sound.current = null;
+  }, [phase]);
+  useEffect(
+    () => () => {
+      sound.current?.stop();
+      sound.current = null;
+    },
+    [],
+  );
 
   useEffect(() => {
     let live = true;

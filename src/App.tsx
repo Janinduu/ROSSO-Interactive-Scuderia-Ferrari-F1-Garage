@@ -244,9 +244,8 @@ function App() {
   // Each room has its own music: calm and smooth in the garage, warm in the
   // Hall, majestic in the Legacy room. The Evolution room is quiet.
   useEffect(() => {
-    // The theatre plays its own music while open; the lab is quiet.
-    if (theatre) return;
-    if (lab) {
+    // The theatre has trackside sound instead of music; the lab is quiet.
+    if (theatre || lab) {
       stopMusic();
       return;
     }
