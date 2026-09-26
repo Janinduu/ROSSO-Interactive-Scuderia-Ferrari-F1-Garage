@@ -28,3 +28,25 @@ The modern drivers' award is informed by [Fox Silver's original design and manuf
 Helmet improvements include an eye aperture, inner shell, visor tear-off posts and latch, iridescent coating, period peaks, Surtees' sloped blue band, and Raikkonen's silver lines/ICEMAN markings from the existing reference pack. Geometry and fine artwork remain interpretations.
 
 The corridor backdrop and its boards cut away before the orbit camera enters the wall (z < -3.15), then return when the camera comes forward (z > -2.9). The exhibits and floor remain visible. This preserves unrestricted orbit without showing a wall's dark back face. No navigation or museum layout was changed.
+
+
+## Helmet and trophy finishing pass — 26 September 2026
+
+Changes are limited to the shared helmet and trophy models. Claude Code's saved
+room, navigation, car, audio and presentation work remains unchanged.
+
+- Bell HP77 product photograph and construction description:
+  https://www.us.bellracing.com/p/hp77/
+  Used for the swept shield outline, narrow modern eye opening, perimeter gasket
+  and chin profile. Earlier helmets retain their period shell and paint.
+- Fox Silver drivers' award photograph:
+  https://foxsilver.net/projects/fia-formula-1%C2%AE-world-championship-drivers%E2%80%99-trophy
+  Corrected smooth rolled mouth, tapered body, dense gold laurel spiral,
+  silver stepped foot and lower enamel wreath.
+- Matt Buck's 2014 constructors' trophy photograph:
+  https://commons.wikimedia.org/wiki/File:MotorExpo_2014_MMB_07_Formula_One_Constructors%27_Trophy.jpg
+  Used to refine the long body, flared mouth, dark/gold rim and rectangular
+  enamel plaque arrangement. Photographs were consulted, not incorporated.
+
+These remain original procedural interpretations: team plaque artwork and
+historic awards without reliable documentation are not exact replicas.

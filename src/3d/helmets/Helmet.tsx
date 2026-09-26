@@ -3,6 +3,7 @@ import { useThree } from "@react-three/fiber";
 import type { ThreeEvent } from "@react-three/fiber";
 import {
   BackSide,
+  DoubleSide,
   CanvasTexture,
   CylinderGeometry,
   MeshPhysicalMaterial,
@@ -11,6 +12,7 @@ import {
   SRGBColorSpace,
 } from "three";
 import type { BufferGeometry } from "three";
+import { visorGeometry } from "./visorGeometry";
 import { studioEnvironment } from "../studio";
 import { tube } from "../cars/geometry";
 import { loadBoardFonts } from "../bays/boardArt";
@@ -41,6 +43,9 @@ function sculpt(g: BufferGeometry, fullFace: boolean, year = 2004) {
       x = Math.max(-1.17, x * 1.07);
     if (fullFace && y < 0) {
       const low = Math.min(1, -y / 0.85);
+      // Broad, almost vertical chin protection instead of a spherical jaw.
+      const front = Math.max(0, -x / 1.12);
+      x -= .15 * Math.sin(low * Math.PI) * Math.pow(front, 3);
       // Chin bar: the lower front juts forward and narrows.
       if (x < 0) {
         x += 0.22 * low * x;
@@ -118,7 +123,7 @@ export default function Helmet({
     const theta = full ? SHELL_THETA : OPEN_THETA;
     // phiStart = PI puts the texture seam at the back of the helmet.
     const shell = sculpt(
-      new SphereGeometry(1, 64, 36, Math.PI, Math.PI * 2, 0, Math.PI * theta),
+      new SphereGeometry(1, 96, 64, Math.PI, Math.PI * 2, 0, Math.PI * theta),
       full,
       design.year,
     );
@@ -132,44 +137,17 @@ export default function Helmet({
         const x = ids.reduce((v, j) => v + p.getX(j), 0) / 3;
         const y = ids.reduce((v, j) => v + p.getY(j), 0) / 3;
         const z = ids.reduce((v, j) => v + p.getZ(j), 0) / 3;
-        if (!(x < -0.58 && Math.abs(z) < 0.76 && y > 0.07 && y < 0.52))
+        if (!(x < -0.58 && Math.abs(z) < 0.76 && y > 0.08 + 0.10 * Math.pow(Math.abs(z) / 0.76, 5) && y < ((design.year ?? 2004) >= 2018 ? 0.41 : 0.47) - 0.10 * Math.pow(Math.abs(z) / 0.76, 5)))
           kept.push(...ids);
       }
       shell.setIndex(kept);
       shell.computeVertexNormals();
     }
-    const visor = full
-      ? sculpt(
-          new SphereGeometry(
-            1.012,
-            28,
-            6,
-            Math.PI * 2 - 0.95,
-            1.9,
-            Math.PI * theta * 0.42,
-            Math.PI * theta * 0.17,
-          ),
-          true,
-          design.year,
-        )
-      : null;
+    const shield = full ? visorGeometry(design.year ?? 2004) : null;
+    const visor = shield?.shield ?? null;
+    const seal = shield?.gasket ?? null;
     const rimY = Math.cos(Math.PI * theta);
     const rimR = Math.sin(Math.PI * theta);
-    const seal = full
-      ? sculpt(
-          new SphereGeometry(
-            1.016,
-            36,
-            8,
-            Math.PI * 2 - 1.01,
-            2.02,
-            Math.PI * theta * 0.403,
-            Math.PI * theta * 0.204,
-          ),
-          true,
-          design.year,
-        )
-      : null;
     const trim = tube(
       Array.from({ length: 65 }, (_, i) => {
         const a = (i / 64) * Math.PI * 2;
@@ -236,7 +214,8 @@ export default function Helmet({
       visor: new MeshPhysicalMaterial({
         color: tint.color,
         metalness: tint.metalness,
-        roughness: 0.045,
+        side: DoubleSide,
+        roughness: 0.065,
         clearcoat: 1,
         clearcoatRoughness: 0.025,
         iridescence: design.visorTint.startsWith("iridium") ? 0.65 : 0,
@@ -293,7 +272,7 @@ export default function Helmet({
             </mesh>
           ))}
           <mesh
-            position={[-1.145, 0.065, 0.17]}
+            position={[-1.13, 0.045, 0.17]}
             rotation={[0, 0, -0.16]}
             material={mats.frame}
           >
@@ -301,24 +280,24 @@ export default function Helmet({
           </mesh>
           {(design.year ?? 2000) >= 2000 && (
             <mesh
-              position={[0.91, -0.23, 0]}
-              rotation={[0, 0, -0.15]}
+              position={[0.65, -0.23, 0]}
+              rotation={[0, Math.PI / 2, -0.15]}
               material={mats.visor}
             >
-              <boxGeometry args={[0.21, 0.026, 1.12]} />
+              <sphereGeometry args={[0.64, 32, 8, 0, Math.PI, 1.35, 0.22]} />
             </mesh>
           )}
         </>
       )}
       {parts.visor && (
-        <mesh geometry={parts.visor} material={mats.visor} scale={1.012} />
+        <mesh geometry={parts.visor} material={mats.visor} />
       )}
       {full && (
         <>
           {[-1, 1].map((side) => (
             <group key={side}>
               <group
-                position={[-0.6, 0.24, side * 0.765]}
+                position={[-0.59, 0.245, side * 0.775]}
                 rotation={[0, side * 0.5, 0]}
               >
                 <mesh material={mats.lining} rotation={[Math.PI / 2, 0, 0]}>
@@ -335,8 +314,8 @@ export default function Helmet({
                 <mesh
                   key={i}
                   position={[
-                    -1.11 + i * 0.025,
-                    -0.39,
+                    -1.225 + i * 0.018,
+                    -0.31,
                     side * (0.12 + i * 0.085),
                   ]}
                   rotation={[0, -Math.PI / 2, 0]}
@@ -392,10 +371,11 @@ export default function Helmet({
           <group
             key={side}
             position={[-1.02, 0.22, side * 0.27]}
+            scale={[1.15,.82,1]}
             rotation={[0, -Math.PI / 2 + side * 0.25, 0]}
           >
             <mesh material={mats.frame}>
-              <torusGeometry args={[0.17, 0.035, 8, 24]} />
+              <torusGeometry args={[0.17, 0.025, 12, 40]} />
             </mesh>
             <mesh material={mats.lens}>
               <circleGeometry args={[0.17, 24]} />

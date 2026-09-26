@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { useThree } from "@react-three/fiber";
 import {
   BufferGeometry,
+  BoxGeometry,
   Float32BufferAttribute,
   CylinderGeometry,
   TorusGeometry,
@@ -69,21 +70,21 @@ function useTrophyKit() {
     // Fox Silver's award has broad laurel-edged spirals, not a wire coil.
     const helix: Vector3[] = [];
     const leaves: BufferGeometry[] = [];
-    for (let i = 0; i <= 240; i++) {
-      const t = i / 240,
-        y = 0.14 + t * 0.43;
-      const r = 0.041 + 0.088 * t * t + 0.012;
-      const angle = t * Math.PI * 8;
+    for (let i = 0; i <= 640; i++) {
+      const t = i / 640,
+        y = 0.165 + t * 0.365;
+      const r = 0.031 + 0.078 * t * t + 0.006;
+      const angle = t * Math.PI * 20;
       helix.push(new Vector3(Math.cos(angle) * r, y, Math.sin(angle) * r));
-      if (i % 3 === 0)
+      if (i % 4 === 0)
         for (const side of [-1, 1]) {
           const leaf = new SphereGeometry(1, 6, 4);
-          leaf.scale(0.004, 0.011, 0.003);
+          leaf.scale(0.003, 0.0055, 0.002);
           leaf.rotateZ(side * 0.65);
           leaf.rotateY(-angle);
           leaf.translate(
             Math.cos(angle) * (r + 0.004),
-            y + side * 0.012,
+            y + side * 0.006,
             Math.sin(angle) * (r + 0.004),
           );
           leaves.push(leaf);
@@ -95,7 +96,7 @@ function useTrophyKit() {
       vertices: number[] = [],
       indices: number[] = [];
     helix.forEach((v, i) => {
-      vertices.push(v.x, v.y - 0.007, v.z, v.x, v.y + 0.007, v.z);
+      vertices.push(v.x, v.y - 0.0028, v.z, v.x, v.y + 0.0028, v.z);
       if (i < helix.length - 1) {
         const j = i * 2;
         indices.push(j, j + 2, j + 1, j + 2, j + 3, j + 1);
@@ -104,28 +105,19 @@ function useTrophyKit() {
     ribbon.setAttribute("position", new Float32BufferAttribute(vertices, 3));
     ribbon.setIndex(indices);
     ribbon.computeVertexNormals();
-    const crown = lathe(
-      [
-        [0.127, 0.575],
-        [0.139, 0.59],
-        [0.145, 0.617],
-        [0.137, 0.62],
-        [0.128, 0.594],
-      ],
-      96,
-    );
+    // The enamel wreath surrounds the narrow foot, not the mouth.
+    const crown = lathe([[.032,.107],[.046,.12],[.054,.143],[.048,.145],[.034,.119]]);
     const cp = crown.attributes.position;
     for (let i = 0; i < cp.count; i++) {
       const angle = Math.atan2(cp.getZ(i), cp.getX(i));
-      cp.setY(
-        i,
-        cp.getY(i) + Math.pow(Math.max(0, Math.cos(angle * 12)), 2) * 0.035,
-      );
+      cp.setY(i, cp.getY(i) + Math.pow(Math.max(0, Math.cos(angle * 12)), 2) * .017);
     }
     crown.computeVertexNormals();
     return {
       geo: {
         crown,
+        plaque: new BoxGeometry(.018,.028,.002),
+        topWreath: lathe([[.137,.633],[.151,.639],[.151,.665],[.143,.669],[.135,.647]]),
         laurel,
         ribbon,
         rolledRim: new TorusGeometry(0.111, 0.004, 8, 64),
@@ -164,48 +156,31 @@ function useTrophyKit() {
         ]),
         finial: new SphereGeometry(0.03, 16, 12),
         // A trumpet-like vase: wide round foot, narrow waist, flaring body.
-        vase: lathe(
-          [
-            [0.001, 0.04],
-            [0.12, 0.04],
-            [0.12, 0.07],
-            [0.07, 0.1],
-            [0.035, 0.16],
-            [0.04, 0.24],
-            [0.07, 0.4],
-            [0.11, 0.56],
-            [0.14, 0.66],
-            [0.13, 0.665],
-            [0.1, 0.58],
-            [0.001, 0.5],
-          ],
-          48, // gently faceted silver panels
-        ),
-        spiral: lathe(
-          [
-            [0.001, 0.04],
-            [0.12, 0.04],
-            [0.12, 0.07],
-            [0.07, 0.1],
-            [0.04, 0.16],
-            [0.05, 0.3],
-            [0.09, 0.48],
-            [0.125, 0.58],
-            [0.12, 0.585],
-            [0.09, 0.52],
-            [0.001, 0.45],
-          ],
-          48,
-        ),
-        band: new TubeGeometry(new CatmullRomCurve3(helix), 240, 0.0045, 8),
+        vase: lathe([
+          [.001,.025],[.118,.025],[.118,.037],[.092,.045],[.055,.061],
+          [.026,.085],[.048,.125],[.051,.17],[.053,.25],[.059,.35],
+          [.071,.45],[.099,.55],[.143,.645],[.15,.656],[.15,.663],
+          [.143,.667],[.136,.648],[.099,.55],[.072,.45],[.05,.35],[.034,.25],
+          [.026,.17],[.001,.15]
+        ]),
+        spiral: lathe([
+          [.001,.02],[.118,.02],[.118,.035],[.097,.043],[.063,.057],
+          [.027,.08],[.032,.11],[.031,.165],[.036,.255],[.05,.347],
+          [.075,.439],[.109,.53],[.134,.595],[.155,.639],[.16,.647],
+          [.16,.654],[.153,.657],[.146,.64],[.127,.596],[.102,.53],
+          [.068,.439],[.043,.347],[.029,.255],[.024,.165],[.001,.15]
+        ]),
+        mouth: new TorusGeometry(.156, .0035, 12, 96),
+        neck: new SphereGeometry(.033, 24, 16),
+        band: new TubeGeometry(new CatmullRomCurve3(helix), 640, 0.0018, 6),
         globe: new SphereGeometry(0.032, 32, 20),
         collar: new CylinderGeometry(0.15, 0.13, 0.03, 12),
         foot: new CylinderGeometry(0.13, 0.14, 0.04, 48),
         badge: new CylinderGeometry(0.012, 0.012, 0.004, 12),
       } as Record<string, BufferGeometry>,
       mat: {
-        silver: metal("#e2e3df", 0.2),
-        gold: metal("#c49b43", 0.24),
+        silver: metal("#e2e3df", 0.16),
+        gold: metal("#c49b43", 0.2),
         dark: new MeshPhysicalMaterial({
           color: "#16161a",
           roughness: 0.25,
@@ -280,54 +255,43 @@ export default function Trophy({
   if (style === "vase")
     return (
       <group>
-        <mesh geometry={geo.foot} material={mat.dark} position={[0, 0.02, 0]} />
+        <mesh geometry={geo.foot} material={mat.silver} position={[0, 0.02, 0]} scale={[.85,.65,.85]} />
         <mesh geometry={geo.vase} material={mat.silver} castShadow />
         <mesh
           geometry={geo.crown}
           material={mat.dark}
-          position={[0, 0.06, 0]}
+          position={[0, 0, 0]}
         />
         <mesh
           geometry={geo.baseRing}
           material={mat.gold}
-          position={[0, 0.071, 0]}
+          position={[0, 0.028, 0]}
+          scale={0.86}
           rotation={[Math.PI / 2, 0, 0]}
         />
-        <Engraving year={year} y={0.33} radius={0.06} />
-        {Array.from({ length: 12 }, (_, i) => {
-          const a = (i * Math.PI) / 6;
-          return (
-            <mesh
-              key={i}
-              material={mat.gold}
-              position={[Math.cos(a) * 0.096, 0.475, Math.sin(a) * 0.096]}
-              rotation={[0, -a, 0]}
-              scale={[0.004, 0.17, 0.004]}
-            >
-              <sphereGeometry args={[1, 6, 8]} />
-            </mesh>
-          );
+        <mesh geometry={geo.topWreath} material={mat.dark} />
+        {Array.from({length: 32}, (_, i) => {
+          const a = i * Math.PI / 16;
+          return <mesh key={i} material={mat.gold} position={[Math.cos(a)*.148,.651,Math.sin(a)*.148]} rotation={[0,-a,.32]} scale={[.002,.014,.003]}><sphereGeometry args={[1,6,8]} /></mesh>;
         })}
-        {/* One small enamel badge per panel, as the real trophy carries per champion. */}
-        {Array.from({ length: 36 }, (_, i) => {
-          const a = (((i % 12) + 0.5) / 12) * Math.PI * 2;
-          const row = Math.floor(i / 12);
-          const r = 0.083 + row * 0.018;
-          return (
-            <mesh
-              key={i}
-              geometry={geo.badge}
-              material={mat.enamel}
-              position={[Math.cos(a) * r, 0.45 + row * 0.075, Math.sin(a) * r]}
-              rotation={[0, -a, Math.PI / 2 - 0.35]}
-            />
-          );
+        <Engraving year={year} y={0.59} radius={0.119} />
+        {/* Small inset plaques follow the long silver body; the source shows
+            rectangular team emblems rather than large round red studs. */}
+        {Array.from({ length: 56 }, (_, i) => {
+          const a = ((i % 8) / 8) * Math.PI * 2;
+          const row = Math.floor(i / 8);
+          const y = .19 + row * .049;
+          const r = [.052,.054,.056,.059,.063,.069,.080][row];
+          return <group key={i} position={[Math.sin(a)*r,y,Math.cos(a)*r]} rotation={[0,a,0]}>
+            <mesh geometry={geo.plaque} material={mat.gold} />
+            <mesh geometry={geo.plaque} material={i % 3 === 0 ? mat.gold : i % 3 === 1 ? mat.blue : mat.enamel} scale={[.79,.84,1]} position={[0,0,.0012]} />
+          </group>;
         })}
       </group>
     );
   return (
     <group>
-      <mesh geometry={geo.foot} material={mat.dark} position={[0, 0.02, 0]} />
+      <mesh geometry={geo.foot} material={mat.silver} position={[0, 0.016, 0]} scale={[.85,.65,.85]} />
       <mesh geometry={geo.spiral} material={mat.silver} castShadow />
       <mesh geometry={geo.band} material={mat.gold} />
       <mesh geometry={geo.laurel} material={mat.gold} />
@@ -336,10 +300,13 @@ export default function Trophy({
       <mesh
         geometry={geo.baseRing}
         material={mat.gold}
-        position={[0, 0.071, 0]}
+        position={[0, 0.028, 0]}
+          scale={0.86}
         rotation={[Math.PI / 2, 0, 0]}
       />
-      <Engraving year={year} y={0.31} radius={0.06} />
+      <Engraving year={year} y={0.572} radius={0.13} />
+      <mesh geometry={geo.mouth} material={mat.silver} position={[0,.65,0]} rotation={[Math.PI/2,0,0]} />
+      <mesh geometry={geo.neck} material={mat.silver} position={[0,.086,0]} scale={[1,.7,1]} />
       {Array.from({ length: 12 }, (_, i) => {
         const a = (i * Math.PI) / 6;
         return (
@@ -356,13 +323,13 @@ export default function Trophy({
       <mesh
         geometry={geo.globe}
         material={mat.blue}
-        position={[0.035, 0.594, 0.108]}
+        position={[0, 0.584, 0.127]}
       />
       {[0, Math.PI / 2].map((a) => (
         <mesh
           key={a}
           material={mat.gold}
-          position={[0.035, 0.594, 0.108]}
+          position={[0, 0.584, 0.127]}
           rotation={[0, a, 0]}
         >
           <torusGeometry args={[0.0325, 0.0015, 5, 32]} />
