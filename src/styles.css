@@ -5647,3 +5647,8 @@ html:not(.staged) .landing-foot {
     display: none;
   }
 }
+/* Long credit lines must not squash their link icon. */
+.source-list a svg {
+  flex: none;
+  margin-left: 12px;
+}
