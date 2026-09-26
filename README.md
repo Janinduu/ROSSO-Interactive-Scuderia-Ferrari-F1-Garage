@@ -3,6 +3,8 @@
 <p align="center"><strong>The Interactive Scuderia Ferrari F1 Garage</strong><br>
 A cinematic 3D museum of Ferrari in Formula 1, from Ascari to Hamilton, built in the browser.</p>
 
+<p align="center"><a href="https://rosso-interactive-scuderia-ferrari.vercel.app/"><strong>Visit the museum →</strong></a></p>
+
 <p align="center"><img src="docs/readme/landing.jpg" alt="The ROSSO landing page: Michael Schumacher's F2004 on its plinth in a dark garage, with the five rooms of the museum along the bottom" width="100%"></p>
 
 ROSSO is a personal fan project: a digital museum you walk through rather than a website you scroll. Seventeen driver bays line a garage corridor, each with the driver's Ferrari, helmet and story. At either end are rooms for the cars' evolution, the drivers' champions and the constructors' titles. Six great races replay lap by lap, and a telemetry lab compares two Ferraris on one lap. Every number comes from a sourced dataset, and everything you see and hear is generated in code.
